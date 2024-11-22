@@ -4,11 +4,12 @@ import { LanguageService } from '../../shared/services/language.service';
 import { textsDE, textsEN } from './language';
 import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
 import { HeroBannerComponent } from '../hero-banner/hero-banner.component';
+import { HeroSideElementsComponent } from '../hero-side-elements/hero-side-elements.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [NavBarComponent, HeroBannerComponent],
+  imports: [NavBarComponent, HeroBannerComponent, HeroSideElementsComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

@@ -1,0 +1,115 @@
+@use "../../../var" as vars;
+
+.side-elements {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  max-width: 1440px;
+  margin-inline: auto;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    pointer-events: auto;
+
+    .icon {
+      border: 1px solid vars.$green;
+      border-radius: 32px;
+      padding: 18px 15px;
+
+      .arrow-icon {
+        height: 16px;
+        fill: vars.$white;
+        animation: moveDownUp 2s infinite;
+      }
+
+      @keyframes moveDownUp {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    }
+    .vertical-line {
+      width: 1px;
+      height: 240px;
+      background-color: vars.$green;
+      margin-inline: 20px;
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    width: 32px;
+    gap: 24px;
+    pointer-events: auto;
+
+    .mailto {
+      transform: rotate(-90deg);
+      color: vars.$white;
+      font-size: 18px;
+      font-weight: 400px;
+
+      &:hover {
+        color: vars.$green;
+      }
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .icon {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+
+        .icon-icon {
+          fill: vars.$green;
+          transition: fill 175ms ease-in-out;
+          min-height: 32px;
+          min-width: 32px;
+        }
+
+        .icon-dot {
+          fill: transparent;
+          stroke: transparent;
+          min-height: 10px;
+          min-width: 10px;
+        }
+
+        &:hover .icon-icon {
+          fill: vars.$white;
+        }
+
+        &:hover .icon-dot {
+          fill: vars.$green;
+          stroke: vars.$green;
+        }
+      }
+    }
+
+    .vertical-line {
+      width: 1px;
+      height: 186px;
+      background-color: vars.$white;
+      margin-inline: 20px;
+    }
+  }
+}
