@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NavBarComponent } from '../shared/nav-bar/nav-bar.component';
+import { HeroComponent } from './hero/hero.component';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [NavBarComponent],
+  imports: [HeroComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })

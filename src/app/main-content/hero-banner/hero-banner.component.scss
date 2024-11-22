@@ -1,0 +1,44 @@
+@use "../../../var" as vars;
+
+.hero-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  background-color: vars.$white-12;
+  transform: rotate(-3deg);
+  width: 1440px;
+  margin-inline: auto;
+  overflow: hidden;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+
+  .words {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scroll 30s linear infinite;
+  }
+
+  span {
+    font-size: 32px;
+    font-weight: 400;
+    color: vars.$green;
+    white-space: nowrap;
+    margin-inline: 54.73px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
