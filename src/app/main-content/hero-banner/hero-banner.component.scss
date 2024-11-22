@@ -23,22 +23,23 @@
     justify-content: center;
     align-items: center;
     animation: scroll 30s linear infinite;
-  }
+    padding: 13.66px 32.58px;
 
-  span {
-    font-size: 32px;
-    font-weight: 400;
-    color: vars.$green;
-    white-space: nowrap;
-    margin-inline: 54.73px;
-  }
-
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%);
+    span {
+      font-size: 32px;
+      font-weight: 400;
+      color: vars.$green;
+      white-space: nowrap;
+      margin-inline: 54.73px;
     }
-    100% {
-      transform: translateX(-100%);
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
   }
 }
