@@ -1,11 +1,11 @@
-<nav>
-  <div class="language-selector">
-    <button (click)="switchLanguage('de')">DE</button>
-    <button (click)="switchLanguage('en')">EN</button>
+<nav class="nav-bar">
+  <div class="left-side">
+    <app-language-toggle></app-language-toggle>
+    <div class="nav-links">
+      <a href="">{{ texts.aboutMe }}</a>
+      <a href="">{{ texts.skills }}</a>
+      <a href="">{{ texts.projects }}</a>
+    </div>
   </div>
-  <div class="nav-links">
-    <a href="">{{ texts.aboutMe }}</a>
-    <a href="">{{ texts.skills }}</a>
-    <a href="">{{ texts.projects }}</a>
-  </div>
+  <img src="images/logo-MR.svg" alt="" />
 </nav>

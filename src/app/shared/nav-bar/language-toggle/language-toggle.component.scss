@@ -1,0 +1,30 @@
+@use "../../../../var" as vars;
+
+.select-language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid vars.$green;
+  border-radius: 100px;
+
+  & .de,
+  .en {
+    background-color: unset;
+    border: unset;
+    border-radius: 10px;
+    padding: 4.5px 12px;
+    height: 28px;
+    font-size: 16px;
+    font-weight: 400;
+    color: vars.$green;
+    transition: all 175ms ease-in-out;
+    cursor: pointer;
+
+    &.active {
+      background-color: vars.$green;
+      color: vars.$white;
+      font-weight: bold;
+      cursor: default;
+    }
+  }
+}

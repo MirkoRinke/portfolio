@@ -1,0 +1,16 @@
+<div class="select-language">
+  <button
+    class="de"
+    [ngClass]="{ active: currentLanguage === 'de' }"
+    (click)="switchLanguage('de')"
+  >
+    DE
+  </button>
+  <button
+    class="en"
+    [ngClass]="{ active: currentLanguage === 'en' }"
+    (click)="switchLanguage('en')"
+  >
+    EN
+  </button>
+</div>

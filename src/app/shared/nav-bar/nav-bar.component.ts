@@ -1,54 +1,66 @@
 import { Component } from '@angular/core';
-
+import { Subscription } from 'rxjs';
 import { LanguageService } from '../services/language.service';
 import { textsDE, textsEN } from './language';
+import { LanguageToggleComponent } from './language-toggle/language-toggle.component';
 
+/**
+ * Component representing the navigation bar.
+ * Handles language changes and updates text translations accordingly.
+ */
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [],
+  imports: [LanguageToggleComponent],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent {
   texts: any = {};
 
+  /**
+   * Subscription to handle language changes.
+   * This subscription is used to manage and clean up resources related to language changes.
+   * It is initialized when the component is created and unsubscribed when the component is destroyed.
+   */
+  private languageSubscription: Subscription | undefined;
+
+  /**
+   * Constructs an instance of NavBarComponent.
+   * @param {LanguageService} languageService - Service to handle language-related operations.
+   */
   constructor(private languageService: LanguageService) {}
 
   /**
-   * Lifecycle hook that is called after data-bound properties of a directive are initialized.
-   * This method is used to perform any necessary initialization for the component.
-   * In this case, it calls the `loadTexts` method to load necessary texts for the component.
+   * Lifecycle hook that is called after Angular has initialized all data-bound properties of a directive.
+   * Subscribes to the selectedLanguage$ observable from the languageService to load texts based on the selected language.
+   * Also loads texts immediately based on the current language.
    */
   ngOnInit() {
-    this.loadTexts();
+    this.languageSubscription =
+      this.languageService.selectedLanguage$.subscribe((language) => {
+        this.loadTexts(language);
+      });
+    this.loadTexts(this.languageService.getLanguage());
   }
 
   /**
-   * Loads the appropriate text translations based on the selected language.
-   *
-   * This method retrieves the current language setting from the language service.
-   * Depending on the selected language ('de' for German or 'en' for English), it assigns
-   * the corresponding text translations to the `texts` property. If the selected language
-   * is not recognized, it defaults to English translations.
+   * Lifecycle hook that is called when the component is destroyed.
+   * Unsubscribes from the language subscription if it exists to prevent memory leaks.
    */
-  loadTexts() {
-    const selectedLanguage = this.languageService.getLanguage();
-    if (selectedLanguage === 'de') this.texts = textsDE;
-    else if (selectedLanguage === 'en') this.texts = textsEN;
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
+  }
+
+  /**
+   * Loads the appropriate text translations based on the provided language.
+   * @param {string} language - The language code ('de' for German, 'en' for English).
+   */
+  loadTexts(language: string) {
+    if (language === 'de') this.texts = textsDE;
+    else if (language === 'en') this.texts = textsEN;
     else this.texts = textsEN;
-  }
-
-  /**
-   * Switches the application's language.
-   *
-   * This method sets the language using the language service and then reloads the texts
-   * to reflect the change in language.
-   *
-   * @param {string} language - The language code to switch to (e.g., 'en', 'de', 'fr').
-   */
-  switchLanguage(language: string) {
-    this.languageService.setLanguage(language);
-    this.loadTexts();
   }
 }

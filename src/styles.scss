@@ -1,4 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use "./var" as vars;
+
 body {
   background-color: rgb(44, 42, 42);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) rgb(0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  user-select: none;
+}
+
+img {
+  user-select: none;
 }
