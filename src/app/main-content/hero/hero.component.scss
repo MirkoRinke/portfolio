@@ -3,6 +3,7 @@
 .hero {
   height: 100dvh;
   background-image: vars.$hero-background;
+  overflow: hidden;
 
   .hero-content {
     height: calc(100dvh - 98px);

@@ -2,9 +2,9 @@ export const textsDE = {
   whoIAm: 'Wer ich bin',
   aboutMe: 'Über mich',
   introduction:
-    'Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in München. Motiviert von den grenzenlosen Möglichkeiten in der IT, freue ich mich darauf, visuell ansprechende und intuitive Websites und Anwendungen zu gestalten.',
+    'Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Hildesheim. Motiviert von den grenzenlosen Möglichkeiten in der IT, freue ich mich darauf, visuell ansprechende und intuitive Websites und Anwendungen zu gestalten.',
   workEnvironment:
-    'Flexibel in Bezug auf Arbeitsumgebungen, kann ich sowohl vor Ort in München als auch remote effektiv arbeiten.',
+    'Flexibel in Bezug auf Arbeitsumgebungen, kann ich sowohl vor Ort in Hildesheim als auch remote effektiv arbeiten.',
   personalGrowth:
     'Ich bin aufgeschlossen und suche immer nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.',
   problemSolving:
@@ -15,9 +15,9 @@ export const textsEN = {
   whoIAm: 'Who I Am',
   aboutMe: 'About me',
   introduction:
-    'Hi, I’m a german speaking Frontend Developer based in Munich. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.',
+    'Hi, I’m a german speaking Frontend Developer based in Hildesheim. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.',
   workEnvironment:
-    'Flexible in terms of working environments, I can work effectively both on-site in Munich and remotely.',
+    'Flexible in terms of working environments, I can work effectively both on-site in Hildesheim and remotely.',
   personalGrowth:
     'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills',
   problemSolving:
