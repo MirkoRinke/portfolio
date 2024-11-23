@@ -20,7 +20,34 @@
       gap: 24px;
 
       & a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         color: vars.$white;
+        position: relative;
+
+        &.active {
+          color: vars.$green;
+          &::after {
+            visibility: visible;
+          }
+        }
+
+        &::after {
+          content: "•";
+          position: absolute;
+          color: vars.$green;
+          font-size: 30px;
+          height: 30px;
+          visibility: hidden;
+          bottom: -15px;
+        }
+
+        &:hover {
+          &::after {
+            visibility: visible;
+          }
+        }
       }
     }
   }

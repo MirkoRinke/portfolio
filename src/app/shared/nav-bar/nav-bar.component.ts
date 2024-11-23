@@ -16,6 +16,7 @@ import { LanguageToggleComponent } from './language-toggle/language-toggle.compo
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent {
+  activeLink: string | null = null;
   texts: any = {};
 
   /**
@@ -30,6 +31,14 @@ export class NavBarComponent {
    * @param {LanguageService} languageService - Service to handle language-related operations.
    */
   constructor(private languageService: LanguageService) {}
+
+  /**
+   * Sets the active link in the navigation bar.
+   * @param link - The link to be set as active.
+   */
+  setActiveLink(link: string): void {
+    this.activeLink = link;
+  }
 
   /**
    * Lifecycle hook that is called after Angular has initialized all data-bound properties of a directive.

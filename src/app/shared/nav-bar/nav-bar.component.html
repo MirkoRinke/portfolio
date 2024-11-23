@@ -2,9 +2,24 @@
   <div class="left-side">
     <app-language-toggle></app-language-toggle>
     <div class="nav-links">
-      <a href="">{{ texts.aboutMe }}</a>
-      <a href="">{{ texts.skills }}</a>
-      <a href="">{{ texts.projects }}</a>
+      <a
+        href="#about-me"
+        (click)="setActiveLink('aboutMe')"
+        [class.active]="activeLink === 'aboutMe'"
+        >{{ texts.aboutMe }}</a
+      >
+      <a
+        href="#about-me"
+        (click)="setActiveLink('skills')"
+        [class.active]="activeLink === 'skills'"
+        >{{ texts.skills }}</a
+      >
+      <a
+        href="#about-me"
+        (click)="setActiveLink('projects')"
+        [class.active]="activeLink === 'projects'"
+        >{{ texts.projects }}</a
+      >
     </div>
   </div>
   <img src="images/logo-MR.svg" alt="" />
