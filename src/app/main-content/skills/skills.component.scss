@@ -1,0 +1,185 @@
+@use "../../../var" as vars;
+@use "../../../mixins" as mixins;
+
+.skills {
+  background-color: vars.$background;
+  background-image: vars.$skills-background;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+    padding-block: 144px;
+    padding-inline: 96px;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-height: 568px;
+      max-width: 568px;
+
+      .info-heading {
+        font-size: 24px;
+        font-weight: 500;
+        color: vars.$green;
+      }
+
+      .info-box {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid vars.$green;
+        border-radius: 30px;
+        background-color: vars.$green-10;
+        color: vars.$white;
+        padding: 32px;
+        gap: 40px;
+
+        .heading-skill-set {
+          font-family: "FiraCode";
+          font-size: 64px;
+          font-weight: bold;
+          color: vars.$green;
+        }
+
+        .description {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+
+          .textarea {
+            font-size: 18px;
+            font-weight: 400;
+            color: vars.$white-80;
+            text-align: justify;
+
+            &:hover {
+              color: vars.$white;
+            }
+          }
+        }
+
+        .another-skill {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          .heading {
+            font-family: "FiraCode";
+            font-size: 24px;
+            font-weight: bold;
+
+            .highlight {
+              color: vars.$green;
+            }
+          }
+
+          .another-skill-description {
+            font-size: 18px;
+            font-weight: 400;
+            color: vars.$white-80;
+
+            &:hover {
+              color: vars.$white;
+            }
+          }
+        }
+
+        .letsTalk {
+          @include mixins.default-button;
+        }
+      }
+    }
+
+    .skill-icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 632px;
+      padding-top: 48px;
+
+      .skill-icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+
+        .icon {
+          height: 64px;
+          width: 64px;
+        }
+
+        .skill-name {
+          color: vars.$white;
+          text-align: center;
+        }
+
+        &:hover .icon {
+          transition: transform 175ms ease-in-out;
+          transform: scale(1.1);
+        }
+
+        .tooltip {
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          background-color: vars.$white;
+          border-radius: 16px;
+          padding: 8px 10px;
+          position: absolute;
+          top: -110px;
+          transform: translateX(25%);
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 80%;
+            right: 65%;
+            border-width: 15px;
+            border-style: solid;
+            border-color: vars.$white;
+            border-radius: 5px;
+            transform: rotate(45deg);
+            z-index: -1;
+          }
+
+          .tooltip-heading {
+            font-weight: 400;
+            color: vars.$green;
+            text-align: center;
+          }
+
+          .learning-skills {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+
+            .learning-skill {
+              .learning-icon {
+                height: 32px;
+                width: 32px;
+              }
+
+              & h6 {
+                font-size: 12px;
+                font-weight: bold;
+                color: vars.$green;
+              }
+            }
+          }
+        }
+      }
+
+      .skill-icon:last-child {
+        &:hover .tooltip {
+          display: flex;
+        }
+      }
+    }
+  }
+}

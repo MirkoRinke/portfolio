@@ -50,7 +50,7 @@
       min-height: 568px;
       max-width: 568px;
 
-      & h3 {
+      .heading {
         font-size: 24px;
         font-weight: 500;
         color: vars.$green;
@@ -67,11 +67,18 @@
         padding: 32px;
         gap: 32px;
 
-        & h2 {
+        .info-heading {
           font-family: "FiraCode";
           font-size: 64px;
           font-weight: bold;
           color: vars.$green;
+        }
+
+        .info-introduction {
+          font-size: 18px;
+          font-weight: 400;
+          color: vars.$white-80;
+          text-align: justify;
         }
 
         .about-me-section {
@@ -83,7 +90,9 @@
             display: flex;
             gap: 24px;
 
-            & p {
+            .textarea {
+              font-size: 18px;
+              font-weight: 400;
               color: vars.$white-80;
             }
 
@@ -92,7 +101,7 @@
               width: 32px;
             }
 
-            &:hover p {
+            &:hover .textarea {
               color: vars.$white;
             }
           }
