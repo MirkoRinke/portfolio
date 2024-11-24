@@ -1,47 +1,37 @@
 <section class="project-modal">
   <div class="info-box">
     <div class="header">
-      <h2 class="index">01</h2>
-      <h3 class="project-name">Join</h3>
+      <h2 class="index">0{{ projects[currentProject].id }}</h2>
+      <h3 class="project-name">{{ projects[currentProject].name }}</h3>
     </div>
     <div class="infos">
       <div class="info-texts">
-        <h3 class="heading">What is this project about?</h3>
+        <h3 class="heading">{{ projects[currentProject].about }}</h3>
         <p class="textarea">
-          Task manager inspired by the Kanban System. Create and organize tasks
-          using drag and drop functions, assign users and categories.
+          {{ projects[currentProject].description }}
         </p>
       </div>
       <div class="technologies">
+        @for ( technology of projects[currentProject].technologies; track
+        $index) {
         <div class="technology">
-          <img class="icon" src="/images/skills/html-green.svg" alt="HTML" />
-          <span class="name">HTML</span>
+          <img class="icon" src="{{ technology.iconPaths.green }}" alt="HTML" />
+          <span class="name">
+            {{ technology.name }}
+          </span>
         </div>
-        <div class="technology">
-          <img class="icon" src="/images/skills/css-green.svg" alt="CSS" />
-          <span class="name">CSS</span>
-        </div>
-        <div class="technology">
-          <img
-            class="icon"
-            src="/images/skills/javascript-green.svg"
-            alt="JavaScript"
-          />
-          <span class="name">JavaScript</span>
-        </div>
+        }
       </div>
     </div>
     <div class="button-group">
-      <button
-        onclick="window.open('https://github.com/MirkoRinke/Developer-Akademie-Join', '_blank');"
-      >
+      <button (click)="openLink(projects[currentProject].links.github)">
         GitHub<img
           class="arrow"
           src="/images/icons/arrow-outward-green.svg"
           alt="arrow"
         />
       </button>
-      <button onclick="window.open('https://example.com', '_blank');">
+      <button (click)="openLink(projects[currentProject].links.liveTest)">
         Live Test<img
           class="arrow"
           src="/images/icons/arrow-outward-green.svg"
@@ -51,7 +41,7 @@
     </div>
   </div>
   <div class="project-image">
-    <img src="/images/projects/join.jpg" alt="Join" />
+    <img src="{{ projects[currentProject].imagePath }}" alt="Join" />
   </div>
   <button class="close-button">
     <svg class="cross" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
