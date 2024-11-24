@@ -1,0 +1,126 @@
+@use "../../../var" as vars;
+
+.featured-projects {
+  background-color: vars.$background;
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+    padding-block: 144px;
+    padding-inline: 96px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      max-width: 880px;
+      width: 100%;
+      gap: 41px;
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .heading {
+          font-size: 24px;
+          font-weight: 500;
+          color: vars.$green;
+        }
+
+        .title {
+          font-family: "FiraCode";
+          font-size: 64px;
+          font-weight: bold;
+          color: vars.$green;
+        }
+      }
+
+      .description {
+        font-size: 18px;
+        font-weight: 400;
+        color: vars.$white-80;
+        text-align: justify;
+        width: 456px;
+      }
+
+      .projects {
+        display: flex;
+        flex-direction: column;
+
+        .project {
+          display: flex;
+          justify-content: space-between;
+          padding: 40px 32px;
+          border-top: 1px solid vars.$green;
+          position: relative;
+
+          &:last-child {
+            border-bottom: 1px solid vars.$green;
+          }
+
+          &:hover {
+            transition: background-color 175ms ease-in-out;
+            background-color: vars.$green-30;
+            cursor: pointer;
+          }
+
+          &:hover .project-name .arrow {
+            display: block;
+          }
+
+          .project-name {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: vars.$white;
+
+            .arrow {
+              display: none;
+              height: 23px;
+              width: 23px;
+            }
+          }
+
+          .technologies {
+            display: flex;
+
+            .technology {
+              font-size: 18px;
+              font-weight: 400;
+              color: vars.$white-80;
+              padding-inline: 8px;
+              height: fit-content;
+              border-right: 1px solid vars.$green;
+
+              &:last-child {
+                border-right: none;
+              }
+            }
+          }
+
+          .preview {
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateX(150%);
+
+            &.hovered {
+              display: block;
+            }
+
+            .preview-img {
+              height: 192px;
+              width: 295px;
+              aspect-ratio: 16 / 9;
+            }
+          }
+        }
+      }
+    }
+  }
+}

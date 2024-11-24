@@ -1,0 +1,45 @@
+<section class="featured-projects">
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="header">
+        <h3 class="heading">{{ texts.heading }}</h3>
+        <h2 class="title">{{ texts.title }}</h2>
+      </div>
+      <p class="description">
+        {{ texts.description }}
+      </p>
+      <div class="projects">
+        @for (project of projects; track project.id) {
+        <div
+          (mouseover)="onMouseOver(project.id)"
+          (mouseleave)="onMouseLeave()"
+          class="project"
+        >
+          <span class="project-name"
+            >{{ project.name }}
+            <img
+              class="arrow"
+              src="/images/icons/arrow-outward.svg"
+              alt="arrow-outward"
+          /></span>
+          <div class="technologies">
+            @for (technology of project.technologies; track $index) {
+            <span class="technology">{{ technology.name }}</span>
+            }
+          </div>
+          <div
+            [class.hovered]="hoveredProjectId === project.id"
+            class="preview"
+          >
+            <img
+              class="preview-img"
+              src="{{ project.imagePath }}"
+              alt="{{ project.name }}"
+            />
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
