@@ -46,7 +46,7 @@ export const projectsEN = [
     id: 2,
     name: 'El Pollo Loco',
     visibility: true,
-    about: 'What is this second project about?',
+    about: 'What is this project about?',
     description:
       'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
     technologies: [
@@ -82,7 +82,7 @@ export const projectsEN = [
     id: 3,
     name: 'Pokedex',
     visibility: true,
-    about: 'What is this third project about?',
+    about: 'What is this project about?',
     description:
       'Pokedex application to search for Pokemon and get detailed information about them. The data is fetched from an external API.',
     technologies: [
@@ -171,7 +171,7 @@ export const projectsDE = [
     id: 2,
     name: 'El Pollo Loco',
     visibility: true,
-    about: 'Worum geht es bei diesem zweiten Projekt?',
+    about: 'Worum geht es bei diesem Projekt?',
     description:
       'Jump-, Run- und Wurfspiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
     technologies: [
@@ -207,7 +207,7 @@ export const projectsDE = [
     id: 3,
     name: 'Pokedex',
     visibility: true,
-    about: 'Worum geht es bei diesem dritten Projekt?',
+    about: 'Worum geht es bei diesem Projekt?',
     description:
       'Pokedex-Anwendung zum Suchen nach Pokemon und Abrufen detaillierter Informationen über sie. Die Daten werden von einer externen API abgerufen.',
     technologies: [

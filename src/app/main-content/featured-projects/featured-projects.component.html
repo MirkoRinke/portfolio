@@ -14,6 +14,7 @@
         <div
           (mouseover)="onMouseOver(project.id)"
           (mouseleave)="onMouseLeave()"
+          (click)="openProjectModal(project.id)"
           class="project"
         >
           <span class="project-name"
@@ -44,5 +45,9 @@
       </div>
     </div>
   </div>
-  <app-project-modal class="project-modal-wrapper"></app-project-modal>
+  <app-project-modal
+    (click)="closeModal()"
+    [class.active]="projectModalOpen"
+    class="project-modal-wrapper"
+  ></app-project-modal>
 </section>

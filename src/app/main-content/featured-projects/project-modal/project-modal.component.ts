@@ -4,6 +4,8 @@ import { Subscription } from 'rxjs';
 import { LanguageService } from '../../../shared/services/language.service';
 import { projectsEN, projectsDE } from './../projects.data';
 
+import { ProjectService } from '../modal.service';
+
 @Component({
   selector: 'app-project-modal',
   standalone: true,
@@ -13,12 +15,15 @@ import { projectsEN, projectsDE } from './../projects.data';
 })
 export class ProjectModalComponent {
   projects: any = [];
-
   currentProject: number = 0;
 
   private languageSubscription: Subscription | undefined;
+  private projectSubscription: Subscription | undefined;
 
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private projectService: ProjectService
+  ) {}
 
   openLink(url: string) {
     window.open(url, '_blank');
@@ -30,16 +35,34 @@ export class ProjectModalComponent {
         this.loadTexts(language);
       });
     this.loadTexts(this.languageService.getLanguage());
+    this.projectSubscription = this.projectService.currentProject$.subscribe(
+      (projectId) => {
+        this.currentProject = projectId;
+      }
+    );
   }
 
   ngOnDestroy() {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
     }
+    if (this.projectSubscription) {
+      this.projectSubscription.unsubscribe();
+    }
   }
 
   loadTexts(language: string) {
     if (language === 'de') this.projects = projectsDE;
     else if (language === 'en') this.projects = projectsEN;
+  }
+
+  closeModal() {
+    this.projectService.setProjectModalOpen(false);
+  }
+
+  nextProject() {
+    if (this.currentProject < this.projects.length - 1) {
+      this.projectService.setCurrentProject(this.currentProject + 1);
+    }
   }
 }
