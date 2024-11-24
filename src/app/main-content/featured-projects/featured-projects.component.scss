@@ -105,9 +105,10 @@
           .preview {
             display: none;
             position: absolute;
-            top: 0;
+            top: -60px;
             right: 0;
-            transform: translateX(150%);
+            transform: translateX(calc(100% + 72px));
+            max-height: 192px;
 
             &.hovered {
               display: block;
@@ -115,9 +116,34 @@
 
             .preview-img {
               height: 192px;
-              width: 295px;
+              width: auto;
               aspect-ratio: 16 / 9;
+              position: relative;
+              z-index: 2;
+              border-radius: 16px;
             }
+
+            .bg {
+              background: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 9px,
+                vars.$green 5px,
+                vars.$green 10px
+              );
+              height: 192px;
+              transform: translate(25px, -90%);
+              border-radius: 16px;
+              z-index: 1;
+            }
+          }
+
+          .preview--1 {
+            top: -20px;
+          }
+
+          .preview--2 {
+            top: -50px;
           }
         }
       }

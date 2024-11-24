@@ -9,7 +9,8 @@
         {{ texts.description }}
       </p>
       <div class="projects">
-        @for (project of projects; track project.id) {
+        @for (project of projects; track project.id) { @if (project.visibility)
+        {
         <div
           (mouseover)="onMouseOver(project.id)"
           (mouseleave)="onMouseLeave()"
@@ -29,16 +30,17 @@
           </div>
           <div
             [class.hovered]="hoveredProjectId === project.id"
-            class="preview"
+            class="preview preview--{{ project.id }}"
           >
             <img
               class="preview-img"
               src="{{ project.imagePath }}"
               alt="{{ project.name }}"
             />
+            <div class="bg"></div>
           </div>
         </div>
-        }
+        } }
       </div>
     </div>
   </div>
