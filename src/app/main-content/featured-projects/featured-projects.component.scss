@@ -2,6 +2,7 @@
 
 .featured-projects {
   background-color: vars.$background;
+  position: relative;
 
   .content-wrapper {
     display: flex;
@@ -148,5 +149,16 @@
         }
       }
     }
+  }
+
+  .project-modal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

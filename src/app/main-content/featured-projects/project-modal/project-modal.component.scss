@@ -1,0 +1,129 @@
+@use "../../../../var" as vars;
+
+.project-modal {
+  display: flex;
+  justify-content: space-between;
+  background-image: vars.$modal-background;
+  max-height: 656px;
+  height: 100%;
+  max-width: 1248px;
+  width: 100%;
+  border: 1px solid vars.$green;
+  border-radius: 30px;
+  padding: 91px 80px;
+
+  .info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 480px;
+    width: 100%;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .index {
+        font-size: 128px;
+        font-weight: bold;
+        color: vars.$green;
+        letter-spacing: -2%;
+        line-height: 100px;
+      }
+      .project-name {
+        font-size: 64px;
+        font-weight: bold;
+        color: vars.$white;
+        letter-spacing: -3%;
+        line-height: 80px;
+      }
+    }
+
+    .infos {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      .info-texts {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .heading {
+          font-size: 24px;
+          font-weight: bold;
+          color: vars.$green;
+        }
+
+        .textarea {
+          font-size: 18px;
+          font-weight: 400;
+          color: vars.$white;
+        }
+      }
+
+      .technologies {
+        display: flex;
+        gap: 16px;
+
+        .technology {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          .icon {
+            height: 24px;
+            width: 24px;
+          }
+
+          .name {
+            font-weight: 400;
+            color: vars.$white;
+          }
+        }
+      }
+    }
+
+    .button-group {
+      display: flex;
+      gap: 32px;
+
+      & button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        background-color: transparent;
+        border: 1px solid vars.$white;
+        border-radius: 100px;
+        padding: 13px 24px;
+        color: vars.$white;
+        transition: border-color 0ms;
+        width: fit-content;
+
+        &:hover {
+          cursor: pointer;
+          border-color: vars.$green;
+          color: vars.$green;
+          transition: border-color 175ms;
+        }
+
+        &:hover .arrow {
+          transition: transform 175ms ease-in-out;
+          transform: translate(3px, -3px);
+        }
+      }
+    }
+  }
+
+  .project-image {
+    max-width: 520px;
+    width: 100%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

@@ -7,10 +7,34 @@ export const projectsEN = [
     description:
       'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
     technologies: [
-      { name: 'JavaScript', iconPath: './images/skills/javascript.svg' },
-      { name: 'Firebase', iconPath: './images/skills/firebase.svg' },
-      { name: 'HTML', iconPath: './images/skills/html.svg' },
-      { name: 'CSS', iconPath: './images/skills/css.svg' },
+      {
+        name: 'JavaScript',
+        iconPaths: {
+          white: './images/skills/javascript-white.svg',
+          green: './images/skills/javascript-green.svg',
+        },
+      },
+      {
+        name: 'Firebase',
+        iconPaths: {
+          white: './images/skills/firebase-white.svg',
+          green: './images/skills/firebase-green.svg',
+        },
+      },
+      {
+        name: 'HTML',
+        iconPaths: {
+          white: './images/skills/html-white.svg',
+          green: './images/skills/html-green.svg',
+        },
+      },
+      {
+        name: 'CSS',
+        iconPaths: {
+          white: './images/skills/css-white.svg',
+          green: './images/skills/css-green.svg',
+        },
+      },
     ],
     imagePath: './images/projects/join.jpg',
     links: {
@@ -26,9 +50,27 @@ export const projectsEN = [
     description:
       'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
     technologies: [
-      { name: 'JavaScript', iconPath: './images/skills/javascript.svg' },
-      { name: 'HTML', iconPath: './images/skills/html.svg' },
-      { name: 'CSS', iconPath: './images/skills/css.svg' },
+      {
+        name: 'JavaScript',
+        iconPaths: {
+          white: './images/skills/javascript-white.svg',
+          green: './images/skills/javascript-green.svg',
+        },
+      },
+      {
+        name: 'HTML',
+        iconPaths: {
+          white: './images/skills/html-white.svg',
+          green: './images/skills/html-green.svg',
+        },
+      },
+      {
+        name: 'CSS',
+        iconPaths: {
+          white: './images/skills/css-white.svg',
+          green: './images/skills/css-green.svg',
+        },
+      },
     ],
     imagePath: './images/projects/el-pollo-loco.jpg',
     links: {
@@ -44,10 +86,34 @@ export const projectsEN = [
     description:
       'Pokedex application to search for Pokemon and get detailed information about them. The data is fetched from an external API.',
     technologies: [
-      { name: 'JavaScript', iconPath: './images/skills/javascript.svg' },
-      { name: 'HTML', iconPath: './images/skills/html.svg' },
-      { name: 'CSS', iconPath: './images/skills/css.svg' },
-      { name: 'Rest API', iconPath: './images/skills/rest-api.svg' },
+      {
+        name: 'JavaScript',
+        iconPaths: {
+          white: './images/skills/javascript-white.svg',
+          green: './images/skills/javascript-green.svg',
+        },
+      },
+      {
+        name: 'HTML',
+        iconPaths: {
+          white: './images/skills/html-white.svg',
+          green: './images/skills/html-green.svg',
+        },
+      },
+      {
+        name: 'CSS',
+        iconPaths: {
+          white: './images/skills/css-white.svg',
+          green: './images/skills/css-green.svg',
+        },
+      },
+      {
+        name: 'Rest API',
+        iconPaths: {
+          white: './images/skills/rest-api-white.svg',
+          green: './images/skills/rest-api-green.svg',
+        },
+      },
     ],
     imagePath: './images/projects/pokedex.jpg',
     links: {
@@ -66,10 +132,34 @@ export const projectsDE = [
     description:
       'Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
     technologies: [
-      { name: 'JavaScript', iconPath: './images/skills/javascript.svg' },
-      { name: 'Firebase', iconPath: './images/skills/firebase.svg' },
-      { name: 'HTML', iconPath: './images/skills/html.svg' },
-      { name: 'CSS', iconPath: './images/skills/css.svg' },
+      {
+        name: 'JavaScript',
+        iconPaths: {
+          white: './images/skills/javascript-white.svg',
+          green: './images/skills/javascript-green.svg',
+        },
+      },
+      {
+        name: 'Firebase',
+        iconPaths: {
+          white: './images/skills/firebase-white.svg',
+          green: './images/skills/firebase-green.svg',
+        },
+      },
+      {
+        name: 'HTML',
+        iconPaths: {
+          white: './images/skills/html-white.svg',
+          green: './images/skills/html-green.svg',
+        },
+      },
+      {
+        name: 'CSS',
+        iconPaths: {
+          white: './images/skills/css-white.svg',
+          green: './images/skills/css-green.svg',
+        },
+      },
     ],
     imagePath: './images/projects/join.jpg',
     links: {
@@ -85,9 +175,27 @@ export const projectsDE = [
     description:
       'Jump-, Run- und Wurfspiel basierend auf einem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
     technologies: [
-      { name: 'JavaScript', iconPath: './images/skills/javascript.svg' },
-      { name: 'HTML', iconPath: './images/skills/html.svg' },
-      { name: 'CSS', iconPath: './images/skills/css.svg' },
+      {
+        name: 'JavaScript',
+        iconPaths: {
+          white: './images/skills/javascript-white.svg',
+          green: './images/skills/javascript-green.svg',
+        },
+      },
+      {
+        name: 'HTML',
+        iconPaths: {
+          white: './images/skills/html-white.svg',
+          green: './images/skills/html-green.svg',
+        },
+      },
+      {
+        name: 'CSS',
+        iconPaths: {
+          white: './images/skills/css-white.svg',
+          green: './images/skills/css-green.svg',
+        },
+      },
     ],
     imagePath: './images/projects/el-pollo-loco.jpg',
     links: {
@@ -103,10 +211,34 @@ export const projectsDE = [
     description:
       'Pokedex-Anwendung zum Suchen nach Pokemon und Abrufen detaillierter Informationen über sie. Die Daten werden von einer externen API abgerufen.',
     technologies: [
-      { name: 'JavaScript', iconPath: './images/skills/javascript.svg' },
-      { name: 'HTML', iconPath: './images/skills/html.svg' },
-      { name: 'CSS', iconPath: './images/skills/css.svg' },
-      { name: 'Rest API', iconPath: './images/skills/rest-api.svg' },
+      {
+        name: 'JavaScript',
+        iconPaths: {
+          white: './images/skills/javascript-white.svg',
+          green: './images/skills/javascript-green.svg',
+        },
+      },
+      {
+        name: 'HTML',
+        iconPaths: {
+          white: './images/skills/html-white.svg',
+          green: './images/skills/html-green.svg',
+        },
+      },
+      {
+        name: 'CSS',
+        iconPaths: {
+          white: './images/skills/css-white.svg',
+          green: './images/skills/css-green.svg',
+        },
+      },
+      {
+        name: 'Rest API',
+        iconPaths: {
+          white: './images/skills/rest-api-white.svg',
+          green: './images/skills/rest-api-green.svg',
+        },
+      },
     ],
     imagePath: './images/projects/pokedex.jpg',
     links: {

@@ -5,11 +5,12 @@ import { LanguageService } from '../../shared/services/language.service';
 import { textsDE, textsEN } from './language';
 
 import { projectsEN, projectsDE } from './projects.data';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 @Component({
   selector: 'app-featured-projects',
   standalone: true,
-  imports: [],
+  imports: [ProjectModalComponent],
   templateUrl: './featured-projects.component.html',
   styleUrl: './featured-projects.component.scss',
 })
