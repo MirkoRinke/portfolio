@@ -41,10 +41,12 @@ export class FeaturedProjectsComponent {
   openProjectModal(projectId: number) {
     this.projectService.setCurrentProject(projectId - 1);
     this.projectService.setProjectModalOpen(true);
+    document.body.style.overflow = 'hidden';
   }
 
   closeModal() {
     this.projectService.setProjectModalOpen(false);
+    document.body.style.overflow = 'auto';
   }
 
   ngOnInit() {
