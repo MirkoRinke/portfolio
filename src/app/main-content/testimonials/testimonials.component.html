@@ -1,0 +1,33 @@
+<section class="testimonials">
+  <div class="content">
+    <h2 class="heading">{{ texts.heading }}</h2>
+    <div class="carousel">
+      @for (testimonial of testimonials; track testimonials.id) {
+      <div class="testimonial">
+        <p class="textarea">
+          {{ testimonial.text }}
+        </p>
+        <div class="author">
+          <div class="horizontal-line"></div>
+          <p class="name">
+            {{ testimonial.author }} - {{ testimonial.position }}
+          </p>
+        </div>
+      </div>
+      }
+    </div>
+    <div class="navigation">
+      <button class="button-left">
+        <img src="./images/icons/arrow_back-white.svg" alt="" />
+      </button>
+      @for (testimonial of testimonials; track testimonials.id) {
+      <svg class="counter" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="4" cy="4" r="4" />
+      </svg>
+      }
+      <button class="button-right">
+        <img src="./images/icons/arrow_forward-white.svg" alt="" />
+      </button>
+    </div>
+  </div>
+</section>
