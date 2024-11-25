@@ -2,7 +2,7 @@
   <div class="content">
     <h2 class="heading">{{ texts.heading }}</h2>
     <div class="carousel">
-      @for (testimonial of testimonials; track testimonials.id) {
+      @for (testimonial of testimonials; track testimonial.id) {
       <div class="testimonial">
         <p class="textarea">
           {{ testimonial.text }}
@@ -20,7 +20,7 @@
       <button class="button-left">
         <img src="./images/icons/arrow_back-white.svg" alt="" />
       </button>
-      @for (testimonial of testimonials; track testimonials.id) {
+      @for (testimonial of testimonials; track testimonial.id) {
       <svg class="counter" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
         <circle cx="4" cy="4" r="4" />
       </svg>
