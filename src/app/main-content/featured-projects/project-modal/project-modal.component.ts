@@ -65,4 +65,10 @@ export class ProjectModalComponent {
       this.projectService.setCurrentProject(this.currentProject + 1);
     }
   }
+
+  previousProject() {
+    if (this.currentProject > 0) {
+      this.projectService.setCurrentProject(this.currentProject - 1);
+    }
+  }
 }

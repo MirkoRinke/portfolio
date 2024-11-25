@@ -50,12 +50,21 @@
       />
     </svg>
   </button>
-  <button (click)="nextProject()" class="next-project">
-    Next Project
-    <img
-      class="arrow"
-      src="/images/icons/arrow-forward-green.svg"
-      alt="arrow"
-    />
-  </button>
+
+  <div class="nav-buttons">
+    <button (click)="previousProject()" class="previous-project">
+      <img
+        class="arrow-left"
+        src="/images/icons/arrow-forward-green.svg"
+        alt="arrow"
+      />
+    </button>
+    <button (click)="nextProject()" class="next-project">
+      <img
+        class="arrow-right"
+        src="/images/icons/arrow-forward-green.svg"
+        alt="arrow"
+      />
+    </button>
+  </div>
 </section>
