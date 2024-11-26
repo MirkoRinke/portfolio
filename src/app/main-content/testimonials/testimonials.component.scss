@@ -97,7 +97,31 @@
         align-items: center;
         background: unset;
         border: unset;
-        cursor: pointer;
+
+        .arrow-left,
+        .arrow-right {
+          height: 18px;
+          width: 18px;
+          fill: vars.$white;
+          transition: fill 175ms ease-in-out, transform 175ms ease-in-out;
+        }
+
+        &:hover {
+          .arrow-left,
+          .arrow-right {
+            cursor: pointer;
+            fill: vars.$green;
+            transition: fill 175ms ease-in-out, transform 175ms ease-in-out;
+          }
+
+          .arrow-left {
+            transform: scale(1.1) translateX(-5px);
+          }
+
+          .arrow-right {
+            transform: scale(1.1) translateX(5px);
+          }
+        }
       }
 
       .counter {
