@@ -1,0 +1,68 @@
+@use "../../../var" as vars;
+
+.contact {
+  display: flex;
+  background-color: vars.$background;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+    padding-block: 144px;
+    padding-inline: 96px;
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .title {
+          font-size: 24px;
+          font-weight: 500;
+          color: vars.$green;
+        }
+
+        .subtitle {
+          font-size: 64px;
+          font-weight: bold;
+          color: vars.$green;
+        }
+      }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .question {
+          font-size: 24px;
+          font-weight: bold;
+          color: vars.$green;
+        }
+
+        .description {
+          font-weight: 400;
+          color: vars.$white;
+
+          .highlight {
+            font-weight: bold;
+            color: vars.$green;
+          }
+        }
+      }
+    }
+
+    .contact-form-wrapper {
+      max-width: 616px;
+      width: 100%;
+    }
+  }
+}

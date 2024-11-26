@@ -4,6 +4,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FeaturedProjectsComponent } from './featured-projects/featured-projects.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { ContactComponent } from './contact/contact.component';
 
 @Component({
   selector: 'app-main-content',
@@ -14,6 +15,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
     SkillsComponent,
     FeaturedProjectsComponent,
     TestimonialsComponent,
+    ContactComponent,
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
