@@ -2,9 +2,9 @@
   <div class="content">
     <h2 class="heading">{{ texts.heading }}</h2>
     <div class="carousel">
-      @for (testimonial of testimonials; track testimonial.id; let i = $index) {
+      @for (testimonial of carouselTestimonials; track $index) {
       <div class="testimonial" [ngStyle]="{ transform: getTransform() }">
-        <h1>{{ i }}</h1>
+        <!-- <h1>{{ $index }}</h1> -->
         <p class="textarea">{{ testimonial.text }}</p>
         <div class="author">
           <div class="horizontal-line"></div>
@@ -19,7 +19,7 @@
       <button class="button-left" (click)="prev()">
         <img src="./images/icons/arrow_back-white.svg" alt="" />
       </button>
-      @for (testimonial of testimonials; track testimonial.id) {
+      @for (testimonial of testimonials; track $index) {
       <svg
         class="counter"
         [class.active]="currentIndex === $index"

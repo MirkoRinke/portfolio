@@ -15,8 +15,9 @@ import { testimonialsEN, testimonialsDE } from './testimonials.data';
 })
 export class TestimonialsComponent {
   testimonials: any = [];
+  carouselTestimonials: any = [];
   texts: Texts = textsDE;
-  currentIndex: number = 1; // Index of the currently displayed testimonial (0-based)
+  currentIndex: number = 0; // Index of the currently displayed testimonial (0-based)
 
   private languageSubscription: Subscription | undefined;
 
@@ -46,6 +47,12 @@ export class TestimonialsComponent {
     } else {
       this.texts = textsEN;
     }
+
+    this.carouselTestimonials = [
+      this.testimonials[this.testimonials.length - 1],
+      ...this.testimonials,
+      this.testimonials[0],
+    ];
   }
 
   next() {
@@ -63,6 +70,7 @@ export class TestimonialsComponent {
   }
 
   getTransform() {
-    return `translateX(-${this.currentIndex * 696}px)`;
+    // Adjust the transform to account for the extra elements in carouselTestimonials
+    return `translateX(-${(this.currentIndex + 1) * 696}px)`;
   }
 }
