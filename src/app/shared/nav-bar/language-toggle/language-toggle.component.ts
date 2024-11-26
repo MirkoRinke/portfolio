@@ -14,16 +14,19 @@ import { LanguageService } from '../../services/language.service';
 })
 export class LanguageToggleComponent {
   /**
-   * The current language of the application.
-   * Default is set to 'de' (German).
+   * Represents the current language selected in the application.
    */
-  currentLanguage: string = 'de';
+  currentLanguage: string;
 
   /**
    * Constructs an instance of LanguageToggleComponent.
-   * @param {LanguageService} languageService - Service to handle language operations.
+   * Initializes the current language from localStorage or defaults to 'de'.
+   *
+   * @param {LanguageService} languageService - The service used for language operations.
    */
-  constructor(private languageService: LanguageService) {}
+  constructor(private languageService: LanguageService) {
+    this.currentLanguage = localStorage.getItem('selectedLanguage') || 'de';
+  }
 
   /**
    * Switches the application's language.
