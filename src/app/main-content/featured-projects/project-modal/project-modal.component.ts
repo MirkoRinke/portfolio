@@ -58,7 +58,7 @@ export class ProjectModalComponent {
 
   closeModal() {
     this.projectService.setProjectModalOpen(false);
-    document.body.style.overflow = 'auto';
+    this.projectService.enableScroll();
   }
 
   nextProject() {
