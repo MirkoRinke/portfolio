@@ -40,7 +40,10 @@
       </button>
     </div>
   </div>
-  <div class="project-image">
+  <div
+    (click)="openLink(projects[currentProject].links.liveTest)"
+    class="project-image"
+  >
     <img src="{{ projects[currentProject].imagePath }}" alt="Join" />
   </div>
   <button (click)="closeModal()" class="close-button">

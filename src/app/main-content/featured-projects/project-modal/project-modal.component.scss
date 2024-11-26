@@ -124,6 +124,10 @@
     max-width: 520px;
     width: 100%;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     img {
       width: 100%;
       aspect-ratio: 16 / 9;
