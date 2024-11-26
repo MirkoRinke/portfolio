@@ -64,12 +64,16 @@ export class ProjectModalComponent {
   nextProject() {
     if (this.currentProject < this.projects.length - 1) {
       this.projectService.setCurrentProject(this.currentProject + 1);
+    } else {
+      this.projectService.setCurrentProject(0);
     }
   }
 
   previousProject() {
     if (this.currentProject > 0) {
       this.projectService.setCurrentProject(this.currentProject - 1);
+    } else {
+      this.projectService.setCurrentProject(this.projects.length - 1);
     }
   }
 }
