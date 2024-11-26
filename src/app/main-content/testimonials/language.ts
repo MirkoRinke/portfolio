@@ -1,3 +1,7 @@
+export interface Texts {
+  heading: string;
+}
+
 export const textsDE = {
   heading: 'Was meine Kollegen über mich sagen',
 };

@@ -8,7 +8,7 @@
   .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     gap: 50px;
     max-width: 1440px;
     width: 100%;
@@ -21,11 +21,16 @@
       font-size: 32px;
       font-weight: bold;
       color: vars.$green;
+      margin-inline: auto;
     }
 
     .carousel {
       display: flex;
+      justify-content: start;
       gap: 64px;
+      overflow: hidden;
+
+      padding-left: 316px;
 
       .testimonial {
         display: flex;
@@ -35,7 +40,7 @@
         border: 1px solid vars.$green;
         border-radius: 32px;
         padding: 48px 40px;
-        width: 632px;
+        min-width: 632px;
 
         transition: transform 0.5s ease-in-out;
 
