@@ -17,7 +17,8 @@ export class TestimonialsComponent {
   testimonials: any = [];
   carouselTestimonials: any = [];
   texts: Texts = textsDE;
-  currentIndex: number = 0; // Index of the currently displayed testimonial (0-based)
+  currentIndex: number = 0;
+  playAnimation = true;
 
   private languageSubscription: Subscription | undefined;
 
@@ -52,25 +53,35 @@ export class TestimonialsComponent {
       this.testimonials[this.testimonials.length - 1],
       ...this.testimonials,
       this.testimonials[0],
+      this.testimonials[1],
     ];
   }
 
   next() {
     this.currentIndex++;
-    if (this.currentIndex >= this.testimonials.length) {
-      this.currentIndex = 0; // Set to first element
+    if (this.currentIndex >= this.testimonials.length + 1) {
+      this.currentIndex = 0;
+      this.playAnimation = false;
+      setTimeout(() => {
+        this.currentIndex = 1;
+        this.playAnimation = true;
+      }, 50);
     }
   }
 
   prev() {
     this.currentIndex--;
     if (this.currentIndex < 0) {
-      this.currentIndex = this.testimonials.length - 1; // Set to last element
+      this.currentIndex = this.testimonials.length;
+      this.playAnimation = false;
+      setTimeout(() => {
+        this.currentIndex = this.testimonials.length - 1;
+        this.playAnimation = true;
+      }, 50);
     }
   }
 
   getTransform() {
-    // Adjust the transform to account for the extra elements in carouselTestimonials
     return `translateX(-${(this.currentIndex + 1) * 696}px)`;
   }
 }
