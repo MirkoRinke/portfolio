@@ -96,6 +96,7 @@
             border: none;
             background-color: transparent;
             transition: border-color 0.3s;
+            caret-color: vars.$green;
 
             &::placeholder {
               font-size: 18px;
@@ -112,6 +113,12 @@
               &::placeholder {
                 color: vars.$invalid;
               }
+            }
+
+            &:-webkit-autofill {
+              -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+              transition: background-color 5000s ease-in-out 0s;
+              -webkit-text-fill-color: vars.$white-80;
             }
           }
         }
