@@ -68,11 +68,15 @@
           <label class="form-privacy">
             <input
               (change)="onPrivacyPolicyChange($event)"
+              [(ngModel)]="privacyPolicyChecked"
               type="checkbox"
               id="privacy-policy"
               name="privacy-policy"
             />
-            <span class="custom-checkbox"></span>
+            <span
+              class="custom-checkbox"
+              [class.notChecked]="privacyPolicyChecked === false"
+            ></span>
             <span class="agree-text">
               I've read the
               <a href="#" class="privacy-link">privacy policy</a> and agree to
@@ -82,7 +86,6 @@
           <button
             type="submit"
             class="form-submit"
-            [disabled]="!isFormValid(contactForm)"
             [class.disabled]="!isFormValid(contactForm)"
           >
             <span>Say Hello ;)</span>
@@ -92,3 +95,5 @@
     </div>
   </div>
 </section>
+
+<!-- [disabled]="!isFormValid(contactForm)" -->

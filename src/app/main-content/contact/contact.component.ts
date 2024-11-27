@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -18,7 +19,11 @@ export class ContactComponent {
   placeholderEmailClass: string = 'placeholder-valid';
   placeholderMessageClass: string = 'placeholder-valid';
 
-  privacyPolicyChecked = false;
+  privacyPolicyChecked?: boolean;
+
+  http = inject(HttpClient);
+
+  mailTest = true;
 
   contactData = {
     name: '',
@@ -26,12 +31,48 @@ export class ContactComponent {
     message: '',
   };
 
-  onSubmit(NgForm: NgForm) {
-    if (NgForm.valid && NgForm.submitted) {
-      console.log('Form Submitted Successfully');
-    } else {
-      this.updatePlaceholders(NgForm);
+  post = {
+    endPoint: 'https://mirkorinke.dev/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (!this.privacyPolicyChecked) {
+      this.privacyPolicyChecked = false;
+      return;
     }
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+      console.log('Form Submitted Successfully (Test Mode)');
+      ngForm.resetForm();
+      this.clearForm();
+    } else {
+      this.updatePlaceholders(ngForm);
+    }
+  }
+
+  clearForm() {
+    this.privacyPolicyChecked;
+    this.placeholderNameClass = 'placeholder-valid';
+    this.placeholderEmailClass = 'placeholder-valid';
+    this.placeholderMessageClass = 'placeholder-valid';
   }
 
   updatePlaceholders(form: NgForm) {
@@ -56,7 +97,7 @@ export class ContactComponent {
     this.privacyPolicyChecked = (event.target as HTMLInputElement).checked;
   }
 
-  isFormValid(form: NgForm): boolean {
+  isFormValid(form: NgForm): boolean | undefined {
     return !!form.valid && this.privacyPolicyChecked;
   }
 }
