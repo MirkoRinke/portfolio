@@ -4,15 +4,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   background-color: transparent;
   border: 1px solid vars.$white;
   border-radius: 100px;
   padding: 13px 24px;
   color: vars.$white;
   transition: border-color 0ms;
-  overflow: hidden;
   width: fit-content;
+  overflow: hidden;
 
   &:hover {
     cursor: pointer;
@@ -21,8 +20,8 @@
   }
 
   &:hover span {
-    animation: scroll-text 2s linear infinite;
-    transition: color 2s ease-in-out;
+    animation: scroll-text 1.5s linear infinite;
+    transition: color 1.5s ease-in-out;
     color: vars.$green;
   }
 
@@ -30,8 +29,14 @@
     0% {
       transform: translateX(0%);
     }
+    49.99% {
+      transform: translateX(-150%);
+    }
+    50% {
+      transform: translateX(150%);
+    }
     100% {
-      transform: translateX(-200%);
+      transform: translateX(0%);
     }
   }
 }
