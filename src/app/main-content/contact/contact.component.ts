@@ -18,6 +18,8 @@ export class ContactComponent {
   placeholderEmailClass: string = 'placeholder-valid';
   placeholderMessageClass: string = 'placeholder-valid';
 
+  privacyPolicyChecked = false;
+
   contactData = {
     name: '',
     email: '',
@@ -48,5 +50,9 @@ export class ContactComponent {
       this.contactData.message = '';
       this.placeholderMessageClass = 'placeholder-invalid';
     }
+  }
+
+  onPrivacyPolicyChange(event: Event) {
+    this.privacyPolicyChecked = (event.target as HTMLInputElement).checked;
   }
 }
