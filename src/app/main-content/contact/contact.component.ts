@@ -3,6 +3,10 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
+import { Subscription } from 'rxjs';
+import { LanguageService } from '../../shared/services/language.service';
+import { textsDE, textsEN } from './language';
+
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -11,9 +15,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  placeholderName: string = 'Your name goes here';
-  placeholderEmail: string = 'youremail@email.com';
-  placeholderMessage: string = 'Hello Lukas, I am interested in...';
+  texts: any = {};
+  private languageSubscription: Subscription | undefined;
+
+  placeholderName: string = '';
+  placeholderEmail: string = '';
+  placeholderMessage: string = '';
 
   placeholderNameClass: string = 'placeholder-valid';
   placeholderEmailClass: string = 'placeholder-valid';
@@ -41,6 +48,34 @@ export class ContactComponent {
       },
     },
   };
+
+  constructor(private languageService: LanguageService) {}
+
+  ngOnInit() {
+    this.languageSubscription =
+      this.languageService.selectedLanguage$.subscribe((language) => {
+        this.loadTexts(language);
+      });
+    this.loadTexts(this.languageService.getLanguage());
+  }
+
+  ngOnDestroy() {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
+  }
+
+  loadTexts(language: string) {
+    if (language === 'de') (this.texts = textsDE), this.setPlaceholders();
+    else if (language === 'en') (this.texts = textsEN), this.setPlaceholders();
+    else this.texts = textsEN;
+  }
+
+  setPlaceholders() {
+    this.placeholderName = this.texts.placeholderName;
+    this.placeholderEmail = this.texts.placeholderEmail;
+    this.placeholderMessage = this.texts.placeholderMessage;
+  }
 
   onSubmit(ngForm: NgForm) {
     if (!this.privacyPolicyChecked) {
@@ -77,17 +112,17 @@ export class ContactComponent {
 
   updatePlaceholders(form: NgForm) {
     if (form.controls['name'].invalid) {
-      this.placeholderName = 'Name is required';
+      this.placeholderName = this.texts.requiredName;
       this.contactData.name = '';
       this.placeholderNameClass = 'placeholder-invalid';
     }
     if (form.controls['email'].invalid) {
-      this.placeholderEmail = 'Valid email is required';
+      this.placeholderEmail = this.texts.requiredEmail;
       this.contactData.email = '';
       this.placeholderEmailClass = 'placeholder-invalid';
     }
     if (form.controls['message'].invalid) {
-      this.placeholderMessage = 'Message is required';
+      this.placeholderMessage = this.texts.requiredMessage;
       this.contactData.message = '';
       this.placeholderMessageClass = 'placeholder-invalid';
     }
