@@ -8,7 +8,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 64px;
     max-width: 1440px;
     width: 100%;
     margin-inline: auto;
@@ -40,6 +39,7 @@
     .links {
       display: flex;
       flex-direction: column;
+      padding-top: 42px;
       gap: 8px;
 
       & a {
