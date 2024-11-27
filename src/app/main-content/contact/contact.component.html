@@ -82,7 +82,8 @@
           <button
             type="submit"
             class="form-submit"
-            [disabled]="!privacyPolicyChecked"
+            [disabled]="!isFormValid(contactForm)"
+            [class.disabled]="!isFormValid(contactForm)"
           >
             <span>Say Hello ;)</span>
           </button>

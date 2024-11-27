@@ -183,6 +183,24 @@
           .form-submit {
             @include mixins.default-button;
             margin-inline: auto;
+
+            &.disabled {
+              &:hover {
+                // cursor: not-allowed;
+                border-color: vars.$invalid;
+                transition: border-color 0ms;
+              }
+
+              &:hover span {
+                color: vars.$invalid;
+              }
+
+              span {
+                animation: none;
+                transition: color 0ms;
+                color: vars.$white;
+              }
+            }
           }
         }
       }

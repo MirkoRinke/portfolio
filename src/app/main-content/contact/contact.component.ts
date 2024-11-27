@@ -55,4 +55,8 @@ export class ContactComponent {
   onPrivacyPolicyChange(event: Event) {
     this.privacyPolicyChecked = (event.target as HTMLInputElement).checked;
   }
+
+  isFormValid(form: NgForm): boolean {
+    return !!form.valid && this.privacyPolicyChecked;
+  }
 }
