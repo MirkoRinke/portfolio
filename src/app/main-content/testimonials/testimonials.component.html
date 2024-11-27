@@ -6,7 +6,7 @@
       <div
         class="testimonial"
         [ngStyle]="{
-          transform: getTransform(),
+          transform: getTransform($index),
           transition: playAnimation ? 'transform 0.5s ease-in-out' : 'none'
         }"
       >

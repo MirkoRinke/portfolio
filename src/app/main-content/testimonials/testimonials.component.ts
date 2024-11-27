@@ -81,7 +81,9 @@ export class TestimonialsComponent {
     }
   }
 
-  getTransform() {
+  getTransform(index: number) {
+    if (index - 1 !== this.currentIndex)
+      return `translateX(-${(this.currentIndex + 1) * 696}px) scale(0.9)`;
     return `translateX(-${(this.currentIndex + 1) * 696}px)`;
   }
 }
