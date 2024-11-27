@@ -32,7 +32,7 @@ export class ContactComponent {
   };
 
   post = {
-    endPoint: 'https://mirkorinke.dev/sendMail.php',
+    endPoint: './sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
