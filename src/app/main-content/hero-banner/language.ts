@@ -1,3 +1,10 @@
+export interface Texts {
+  remoteWork: string;
+  jobDescription: string;
+  basedIn: string;
+  openToWork: string;
+}
+
 export const textsDE = {
   remoteWork: 'Verfügbar für Remote-Arbeit',
   jobDescription: 'Frontend Developer',

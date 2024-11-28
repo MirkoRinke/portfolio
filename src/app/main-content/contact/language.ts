@@ -1,3 +1,25 @@
+export interface Texts {
+  contactInfoTitle: string;
+  contactInfoSubtitle: string;
+  contactInfoQuestion: string;
+  contactInfoDescription: string;
+  contactInfoFrontendDeveloper: string;
+  contactInfoDescriptionHighlight: string;
+  contactFormName: string;
+  contactFormEmail: string;
+  contactFormMessage: string;
+  contactFormPrivacyPolicyText1: string;
+  contactFormPrivacyPolicyText2: string;
+  contactFormPrivacyPolicyText3: string;
+  contactFormSubmit: string;
+  placeholderName: string;
+  placeholderEmail: string;
+  placeholderMessage: string;
+  requiredName: string;
+  requiredEmail: string;
+  requiredMessage: string;
+}
+
 export const textsDE = {
   contactInfoTitle: 'Kontaktiere mich',
   contactInfoSubtitle: 'Lass uns \n zusammenarbeiten',

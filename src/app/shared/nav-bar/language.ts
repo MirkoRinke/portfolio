@@ -1,3 +1,9 @@
+export interface Texts {
+  aboutMe: string;
+  skills: string;
+  projects: string;
+}
+
 export const textsDE = {
   aboutMe: 'Über mich',
   skills: 'Fähigkeiten',

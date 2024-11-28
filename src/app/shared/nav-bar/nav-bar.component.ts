@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../services/language.service';
-import { textsDE, textsEN } from './language';
+import { Texts, textsDE, textsEN } from './language';
 import { LanguageToggleComponent } from './language-toggle/language-toggle.component';
 
 /**
@@ -17,7 +17,7 @@ import { LanguageToggleComponent } from './language-toggle/language-toggle.compo
 })
 export class NavBarComponent {
   activeLink: string | null = null;
-  texts: any = {};
+  texts: Texts = textsDE;
 
   /**
    * Subscription to handle language changes.

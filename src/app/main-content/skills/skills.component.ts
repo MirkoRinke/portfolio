@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
-import { textsDE, textsEN } from './language';
+import { Texts, textsDE, textsEN } from './language';
 
-import { TECH_SKILLS, LEARNING_SKILLS } from './skills.data';
+import { Skill, TECH_SKILLS, LEARNING_SKILLS } from './skills.data';
 
 @Component({
   selector: 'app-skills',
@@ -14,10 +14,10 @@ import { TECH_SKILLS, LEARNING_SKILLS } from './skills.data';
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent {
-  skills = TECH_SKILLS;
-  learningSkills = LEARNING_SKILLS;
+  skills: Skill[] = TECH_SKILLS;
+  learningSkills: Skill[] = LEARNING_SKILLS;
 
-  texts: any = {};
+  texts: Texts = textsDE;
   private languageSubscription: Subscription | undefined;
 
   constructor(private languageService: LanguageService) {}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
-import { textsDE, textsEN } from './language';
+import { Texts, textsDE, textsEN } from './language';
 import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
 import { HeroBannerComponent } from '../hero-banner/hero-banner.component';
 import { HeroSideElementsComponent } from '../hero-side-elements/hero-side-elements.component';
@@ -14,7 +14,7 @@ import { HeroSideElementsComponent } from '../hero-side-elements/hero-side-eleme
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  texts: any = {};
+  texts: Texts = textsDE;
   private languageSubscription: Subscription | undefined;
 
   constructor(private languageService: LanguageService) {}

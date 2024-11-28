@@ -4,7 +4,11 @@ import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
 import { Texts, textsDE, textsEN } from './language';
-import { testimonialsEN, testimonialsDE } from './testimonials.data';
+import {
+  Testimonial,
+  testimonialsEN,
+  testimonialsDE,
+} from './testimonials.data';
 
 @Component({
   selector: 'app-testimonials',
@@ -14,8 +18,8 @@ import { testimonialsEN, testimonialsDE } from './testimonials.data';
   styleUrls: ['./testimonials.component.scss'],
 })
 export class TestimonialsComponent {
-  testimonials: any = [];
-  carouselTestimonials: any = [];
+  testimonials: Testimonial[] = testimonialsDE;
+  carouselTestimonials: Testimonial[] = [];
   texts: Texts = textsDE;
   currentIndex: number = 0;
   playAnimation = true;

@@ -1,3 +1,10 @@
+export interface Skill {
+  id: number;
+  name: string;
+  icon: string;
+  alt: string;
+}
+
 export const TECH_SKILLS = [
   {
     id: 0,

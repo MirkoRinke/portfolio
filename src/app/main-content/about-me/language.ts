@@ -1,3 +1,12 @@
+export interface Texts {
+  whoIAm: string;
+  aboutMe: string;
+  introduction: string;
+  workEnvironment: string;
+  personalGrowth: string;
+  problemSolving: string;
+}
+
 export const textsDE = {
   whoIAm: 'Wer ich bin',
   aboutMe: 'Über mich',

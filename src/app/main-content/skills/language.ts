@@ -1,3 +1,14 @@
+export interface Texts {
+  titleTechnologies: string;
+  titleSkillSet: string;
+  descriptionSkillSet: string;
+  titleAnotherSkill: string;
+  anotherSkill: string;
+  descriptionAnotherSkill: string;
+  buttonLetsTalk: string;
+  titleGrowthMindset: string;
+}
+
 export const textsDE = {
   titleTechnologies: 'Technologien',
   titleSkillSet: 'Skill Set',

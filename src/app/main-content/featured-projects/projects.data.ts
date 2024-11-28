@@ -1,3 +1,29 @@
+export interface Project {
+  id: number;
+  name: string;
+  visibility: boolean;
+  about: string;
+  description: string;
+  technologies: Technology[];
+  imagePath: string;
+  links: Links;
+}
+
+interface Technology {
+  name: string;
+  iconPaths: IconPaths;
+}
+
+interface IconPaths {
+  white: string;
+  green: string;
+}
+
+interface Links {
+  github: string;
+  liveTest: string;
+}
+
 export const projectsEN = [
   {
     id: 1,

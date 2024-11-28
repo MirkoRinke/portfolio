@@ -1,3 +1,9 @@
+export interface Texts {
+  heading: string;
+  title: string;
+  description: string;
+}
+
 export const textsDE = {
   heading: 'Portfolio',
   title: 'Ausgewählte Projekte',

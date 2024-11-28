@@ -1,3 +1,10 @@
+export interface Texts {
+  subHeading: string;
+  mainHeading: string;
+  checkMyWork: string;
+  contactMe: string;
+}
+
 export const textsDE = {
   subHeading: 'Frontend Developer',
   mainHeading: 'Mirko Rinke',

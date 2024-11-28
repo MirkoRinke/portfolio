@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
-import { textsDE, textsEN } from './language';
+import { Texts, textsDE, textsEN } from './language';
 
 import { projectsEN, projectsDE } from './projects.data';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
@@ -19,7 +19,7 @@ import { ProjectService } from './modal.service';
 export class FeaturedProjectsComponent {
   hoveredProjectId: number | null = null;
   projectModalOpen: boolean = false;
-  texts: any = {};
+  texts: Texts = textsDE;
   projects: any = [];
 
   private languageSubscription: Subscription | undefined;

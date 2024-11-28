@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
-import { textsDE, textsEN } from './language';
+import { Texts, textsDE, textsEN } from './language';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +15,7 @@ import { textsDE, textsEN } from './language';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  texts: any = {};
+  texts: Texts = textsDE;
   private languageSubscription: Subscription | undefined;
 
   placeholderName: string = '';

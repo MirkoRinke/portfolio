@@ -5,6 +5,7 @@ import { LanguageService } from '../../../shared/services/language.service';
 import { projectsEN, projectsDE } from './../projects.data';
 
 import { ProjectService } from '../modal.service';
+import { Project } from './../projects.data';
 
 @Component({
   selector: 'app-project-modal',
@@ -14,7 +15,7 @@ import { ProjectService } from '../modal.service';
   styleUrl: './project-modal.component.scss',
 })
 export class ProjectModalComponent {
-  projects: any = [];
+  projects: Project[] = projectsDE;
   currentProject: number = 0;
 
   private languageSubscription: Subscription | undefined;

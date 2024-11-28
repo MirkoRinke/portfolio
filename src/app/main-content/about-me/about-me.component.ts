@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
-import { textsDE, textsEN } from './language';
+import { Texts, textsDE, textsEN } from './language';
 
 @Component({
   selector: 'app-about-me',
@@ -13,7 +13,7 @@ import { textsDE, textsEN } from './language';
 })
 export class AboutMeComponent {
   isHovered = false;
-  texts: any = {};
+  texts: Texts = textsDE;
   private languageSubscription: Subscription | undefined;
 
   constructor(private languageService: LanguageService) {}
