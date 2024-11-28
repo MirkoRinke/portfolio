@@ -3,12 +3,12 @@ export interface Texts {
   location: string;
 }
 
-export const textsDE = {
+export const textsDE: Texts = {
   position: 'Web-Entwickler',
   location: 'Hildesheim Deutschland',
 };
 
-export const textsEN = {
+export const textsEN: Texts = {
   position: 'Web Developer',
   location: 'Hildesheim Germany',
 };
