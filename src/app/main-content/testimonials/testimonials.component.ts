@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
 import { Texts, textsDE, textsEN } from './language';
@@ -22,13 +21,13 @@ export class TestimonialsComponent {
   carouselTestimonials: Testimonial[] = [];
   texts: Texts = textsDE;
   currentIndex: number = 0;
-  playAnimation = true;
+  playAnimation: boolean = true;
 
   private languageSubscription: Subscription | undefined;
 
   constructor(private languageService: LanguageService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.languageSubscription =
       this.languageService.selectedLanguage$.subscribe((language) => {
         this.loadTexts(language);
@@ -36,13 +35,13 @@ export class TestimonialsComponent {
     this.loadTexts(this.languageService.getLanguage());
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
     }
   }
 
-  loadTexts(language: string) {
+  loadTexts(language: string): void {
     if (language === 'de') {
       this.texts = textsDE;
       this.testimonials = testimonialsDE;
@@ -52,7 +51,10 @@ export class TestimonialsComponent {
     } else {
       this.texts = textsEN;
     }
+    this.generateCarouselTestimonials();
+  }
 
+  generateCarouselTestimonials(): void {
     this.carouselTestimonials = [
       this.testimonials[this.testimonials.length - 1],
       ...this.testimonials,
@@ -61,7 +63,7 @@ export class TestimonialsComponent {
     ];
   }
 
-  next() {
+  next(): void {
     this.currentIndex++;
     if (this.currentIndex >= this.testimonials.length + 1) {
       this.currentIndex = 0;
@@ -73,7 +75,7 @@ export class TestimonialsComponent {
     }
   }
 
-  prev() {
+  prev(): void {
     this.currentIndex--;
     if (this.currentIndex < 0) {
       this.currentIndex = this.testimonials.length;
@@ -85,7 +87,7 @@ export class TestimonialsComponent {
     }
   }
 
-  getTransform(index: number) {
+  getTransform(index: number): string {
     if (index - 1 !== this.currentIndex)
       return `translateX(-${(this.currentIndex + 1) * 696}px) scale(0.9)`;
     return `translateX(-${(this.currentIndex + 1) * 696}px)`;

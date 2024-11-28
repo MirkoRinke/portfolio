@@ -5,7 +5,7 @@ export interface Testimonial {
   text: string;
 }
 
-export const testimonialsEN = [
+export const testimonialsEN: Testimonial[] = [
   {
     id: 1,
     author: '- H. Janisch',
@@ -38,7 +38,7 @@ export const testimonialsEN = [
   },
 ];
 
-export const testimonialsDE = [
+export const testimonialsDE: Testimonial[] = [
   {
     id: 1,
     author: '- H. Janisch',

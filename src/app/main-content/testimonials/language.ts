@@ -2,10 +2,10 @@ export interface Texts {
   heading: string;
 }
 
-export const textsDE = {
+export const textsDE: Texts = {
   heading: 'Was meine Kollegen über mich sagen',
 };
 
-export const textsEN = {
+export const textsEN: Texts = {
   heading: 'What my colleagues say about me',
 };
