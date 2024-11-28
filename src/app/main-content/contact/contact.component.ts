@@ -2,10 +2,15 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
 import { Texts, textsDE, textsEN } from './language';
+
+interface ContactData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 @Component({
   selector: 'app-contact',
@@ -17,22 +22,17 @@ import { Texts, textsDE, textsEN } from './language';
 export class ContactComponent {
   texts: Texts = textsDE;
   private languageSubscription: Subscription | undefined;
-
   placeholderName: string = '';
   placeholderEmail: string = '';
   placeholderMessage: string = '';
-
   placeholderNameClass: string = 'placeholder-valid';
   placeholderEmailClass: string = 'placeholder-valid';
   placeholderMessageClass: string = 'placeholder-valid';
-
   privacyPolicyChecked?: boolean;
-
   http = inject(HttpClient);
+  mailTest: boolean = true;
 
-  mailTest = true;
-
-  contactData = {
+  contactData: ContactData = {
     name: '',
     email: '',
     message: '',
@@ -51,7 +51,7 @@ export class ContactComponent {
 
   constructor(private languageService: LanguageService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.languageSubscription =
       this.languageService.selectedLanguage$.subscribe((language) => {
         this.loadTexts(language);
@@ -59,25 +59,25 @@ export class ContactComponent {
     this.loadTexts(this.languageService.getLanguage());
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
     }
   }
 
-  loadTexts(language: string) {
+  loadTexts(language: string): void {
     if (language === 'de') (this.texts = textsDE), this.setPlaceholders();
     else if (language === 'en') (this.texts = textsEN), this.setPlaceholders();
     else this.texts = textsEN;
   }
 
-  setPlaceholders() {
+  setPlaceholders(): void {
     this.placeholderName = this.texts.placeholderName;
     this.placeholderEmail = this.texts.placeholderEmail;
     this.placeholderMessage = this.texts.placeholderMessage;
   }
 
-  onSubmit(ngForm: NgForm) {
+  onSubmit(ngForm: NgForm): void {
     if (!this.privacyPolicyChecked) {
       this.privacyPolicyChecked = false;
       return;
@@ -103,32 +103,44 @@ export class ContactComponent {
     }
   }
 
-  clearForm() {
+  clearForm(): void {
     this.privacyPolicyChecked;
     this.placeholderNameClass = 'placeholder-valid';
     this.placeholderEmailClass = 'placeholder-valid';
     this.placeholderMessageClass = 'placeholder-valid';
   }
 
-  updatePlaceholders(form: NgForm) {
+  updatePlaceholders(form: NgForm): void {
     if (form.controls['name'].invalid) {
-      this.placeholderName = this.texts.requiredName;
-      this.contactData.name = '';
-      this.placeholderNameClass = 'placeholder-invalid';
+      this.updatePlaceholdersName();
     }
     if (form.controls['email'].invalid) {
-      this.placeholderEmail = this.texts.requiredEmail;
-      this.contactData.email = '';
-      this.placeholderEmailClass = 'placeholder-invalid';
+      this.updatePlaceholdersEmail();
     }
     if (form.controls['message'].invalid) {
-      this.placeholderMessage = this.texts.requiredMessage;
-      this.contactData.message = '';
-      this.placeholderMessageClass = 'placeholder-invalid';
+      this.updatePlaceholdersMessage();
     }
   }
 
-  onPrivacyPolicyChange(event: Event) {
+  updatePlaceholdersName(): void {
+    this.placeholderName = this.texts.requiredName;
+    this.contactData.name = '';
+    this.placeholderNameClass = 'placeholder-invalid';
+  }
+
+  updatePlaceholdersEmail(): void {
+    this.placeholderEmail = this.texts.requiredEmail;
+    this.contactData.email = '';
+    this.placeholderEmailClass = 'placeholder-invalid';
+  }
+
+  updatePlaceholdersMessage(): void {
+    this.placeholderMessage = this.texts.requiredMessage;
+    this.contactData.message = '';
+    this.placeholderMessageClass = 'placeholder-invalid';
+  }
+
+  onPrivacyPolicyChange(event: Event): void {
     this.privacyPolicyChecked = (event.target as HTMLInputElement).checked;
   }
 

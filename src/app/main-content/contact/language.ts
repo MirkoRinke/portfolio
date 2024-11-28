@@ -20,7 +20,7 @@ export interface Texts {
   requiredMessage: string;
 }
 
-export const textsDE = {
+export const textsDE: Texts = {
   contactInfoTitle: 'Kontaktiere mich',
   contactInfoSubtitle: 'Lass uns \n zusammenarbeiten',
   contactInfoQuestion: 'Hast du ein Problem zu lösen?',
@@ -47,7 +47,7 @@ export const textsDE = {
   requiredMessage: 'Nachricht ist erforderlich',
 };
 
-export const textsEN = {
+export const textsEN: Texts = {
   contactInfoTitle: 'Contact me',
   contactInfoSubtitle: "Let's work \n together",
   contactInfoQuestion: 'Got a problem to solve?',
