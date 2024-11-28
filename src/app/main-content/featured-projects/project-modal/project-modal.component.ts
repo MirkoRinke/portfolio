@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../../shared/services/language.service';
 import { projectsEN, projectsDE } from './../projects.data';
-
 import { ProjectService } from '../modal.service';
 import { Project } from './../projects.data';
 
@@ -26,11 +24,11 @@ export class ProjectModalComponent {
     private projectService: ProjectService
   ) {}
 
-  openLink(url: string) {
+  openLink(url: string): void {
     window.open(url, '_blank');
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.languageSubscription =
       this.languageService.selectedLanguage$.subscribe((language) => {
         this.loadTexts(language);
@@ -43,7 +41,7 @@ export class ProjectModalComponent {
     );
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
     }
@@ -52,17 +50,17 @@ export class ProjectModalComponent {
     }
   }
 
-  loadTexts(language: string) {
+  loadTexts(language: string): void {
     if (language === 'de') this.projects = projectsDE;
     else if (language === 'en') this.projects = projectsEN;
   }
 
-  closeModal() {
+  closeModal(): void {
     this.projectService.setProjectModalOpen(false);
     this.projectService.enableScroll();
   }
 
-  nextProject() {
+  nextProject(): void {
     if (this.currentProject < this.projects.length - 1) {
       this.projectService.setCurrentProject(this.currentProject + 1);
     } else {
@@ -70,7 +68,7 @@ export class ProjectModalComponent {
     }
   }
 
-  previousProject() {
+  previousProject(): void {
     if (this.currentProject > 0) {
       this.projectService.setCurrentProject(this.currentProject - 1);
     } else {

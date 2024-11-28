@@ -4,14 +4,14 @@ export interface Texts {
   description: string;
 }
 
-export const textsDE = {
+export const textsDE: Texts = {
   heading: 'Portfolio',
   title: 'Ausgewählte Projekte',
   description:
     'Erkunde hier eine Auswahl meiner Arbeit - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.',
 };
 
-export const textsEN = {
+export const textsEN: Texts = {
   heading: 'Portfolio',
   title: 'Featured Projects',
   description:

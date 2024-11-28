@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
 import { Texts, textsDE, textsEN } from './language';
-
 import { projectsEN, projectsDE } from './projects.data';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
-
 import { ProjectService } from './modal.service';
+import { Project } from './projects.data';
 
 @Component({
   selector: 'app-featured-projects',
@@ -20,7 +18,7 @@ export class FeaturedProjectsComponent {
   hoveredProjectId: number | null = null;
   projectModalOpen: boolean = false;
   texts: Texts = textsDE;
-  projects: any = [];
+  projects: Project[] = projectsDE;
 
   private languageSubscription: Subscription | undefined;
   private modalSubscription: Subscription | undefined;
@@ -30,26 +28,26 @@ export class FeaturedProjectsComponent {
     private projectService: ProjectService
   ) {}
 
-  onMouseOver(projectId: number) {
+  onMouseOver(projectId: number): void {
     this.hoveredProjectId = projectId;
   }
 
-  onMouseLeave() {
+  onMouseLeave(): void {
     this.hoveredProjectId = null;
   }
 
-  openProjectModal(projectId: number) {
+  openProjectModal(projectId: number): void {
     this.projectService.setCurrentProject(projectId - 1);
     this.projectService.setProjectModalOpen(true);
     this.projectService.disableScroll();
   }
 
-  closeModal() {
+  closeModal(): void {
     this.projectService.setProjectModalOpen(false);
     this.projectService.enableScroll();
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.languageSubscription =
       this.languageService.selectedLanguage$.subscribe((language) => {
         this.loadTexts(language);
@@ -62,7 +60,7 @@ export class FeaturedProjectsComponent {
     );
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
     }
@@ -71,7 +69,7 @@ export class FeaturedProjectsComponent {
     }
   }
 
-  loadTexts(language: string) {
+  loadTexts(language: string): void {
     if (language === 'de') (this.texts = textsDE), (this.projects = projectsDE);
     else if (language === 'en')
       (this.texts = textsEN), (this.projects = projectsEN);

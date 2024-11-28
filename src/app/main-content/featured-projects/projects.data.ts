@@ -24,7 +24,7 @@ interface Links {
   liveTest: string;
 }
 
-export const projectsEN = [
+export const projectsEN: Project[] = [
   {
     id: 1,
     name: 'Join',
@@ -149,7 +149,7 @@ export const projectsEN = [
   },
 ];
 
-export const projectsDE = [
+export const projectsDE: Project[] = [
   {
     id: 1,
     name: 'Join',
