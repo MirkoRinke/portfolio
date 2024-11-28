@@ -20,6 +20,12 @@
       flex-direction: column;
       gap: 32px;
 
+      .logo {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
       .info {
         display: flex;
         flex-direction: column;
