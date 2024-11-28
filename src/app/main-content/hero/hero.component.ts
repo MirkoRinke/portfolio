@@ -19,7 +19,7 @@ export class HeroComponent {
 
   constructor(private languageService: LanguageService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.languageSubscription =
       this.languageService.selectedLanguage$.subscribe((language) => {
         this.loadTexts(language);
@@ -27,13 +27,13 @@ export class HeroComponent {
     this.loadTexts(this.languageService.getLanguage());
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
     }
   }
 
-  loadTexts(language: string) {
+  loadTexts(language: string): void {
     if (language === 'de') this.texts = textsDE;
     else if (language === 'en') this.texts = textsEN;
     else this.texts = textsEN;

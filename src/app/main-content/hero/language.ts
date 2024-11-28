@@ -5,14 +5,14 @@ export interface Texts {
   contactMe: string;
 }
 
-export const textsDE = {
+export const textsDE: Texts = {
   subHeading: 'Frontend Developer',
   mainHeading: 'Mirko Rinke',
   checkMyWork: 'Meine Arbeiten',
   contactMe: 'Kontaktiere mich',
 };
 
-export const textsEN = {
+export const textsEN: Texts = {
   subHeading: 'Frontend Developer',
   mainHeading: 'Mirko Rinke',
   checkMyWork: 'Check my work',

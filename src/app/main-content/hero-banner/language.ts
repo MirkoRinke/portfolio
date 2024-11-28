@@ -5,14 +5,14 @@ export interface Texts {
   openToWork: string;
 }
 
-export const textsDE = {
+export const textsDE: Texts = {
   remoteWork: 'Verfügbar für Remote-Arbeit',
   jobDescription: 'Frontend Developer',
   basedIn: 'Wohnhaft in Hildesheim',
   openToWork: 'Bereit für eine neue Tätigkeit',
 };
 
-export const textsEN = {
+export const textsEN: Texts = {
   remoteWork: 'Available for remote work',
   jobDescription: 'Frontend Developer',
   basedIn: 'Based in Hildesheim',

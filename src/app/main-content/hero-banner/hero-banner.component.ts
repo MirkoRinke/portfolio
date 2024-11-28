@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
 import { Texts, textsDE, textsEN } from './language';
@@ -12,13 +11,13 @@ import { Texts, textsDE, textsEN } from './language';
   styleUrl: './hero-banner.component.scss',
 })
 export class HeroBannerComponent {
-  items = [1, 2, 3];
+  items: Number[] = [1, 2, 3];
   texts: Texts = textsDE;
   private languageSubscription: Subscription | undefined;
 
   constructor(private languageService: LanguageService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.languageSubscription =
       this.languageService.selectedLanguage$.subscribe((language) => {
         this.loadTexts(language);
@@ -26,13 +25,13 @@ export class HeroBannerComponent {
     this.loadTexts(this.languageService.getLanguage());
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
     }
   }
 
-  loadTexts(language: string) {
+  loadTexts(language: string): void {
     if (language === 'de') this.texts = textsDE;
     else if (language === 'en') this.texts = textsEN;
     else this.texts = textsEN;
