@@ -5,7 +5,7 @@ export interface Skill {
   alt: string;
 }
 
-export const TECH_SKILLS = [
+export const TECH_SKILLS: Skill[] = [
   {
     id: 0,
     name: 'HTML',
@@ -74,7 +74,7 @@ export const TECH_SKILLS = [
   },
 ];
 
-export const LEARNING_SKILLS = [
+export const LEARNING_SKILLS: Skill[] = [
   {
     id: 0,
     name: 'React',

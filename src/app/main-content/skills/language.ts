@@ -9,7 +9,7 @@ export interface Texts {
   titleGrowthMindset: string;
 }
 
-export const textsDE = {
+export const textsDE: Texts = {
   titleTechnologies: 'Technologien',
   titleSkillSet: 'Skill Set',
   descriptionSkillSet:
@@ -22,7 +22,7 @@ export const textsDE = {
   titleGrowthMindset: 'Ich habe ein besonderes Interesse am Lernen',
 };
 
-export const textsEN = {
+export const textsEN: Texts = {
   titleTechnologies: 'Technologies',
   titleSkillSet: 'Skill Set',
   descriptionSkillSet:
