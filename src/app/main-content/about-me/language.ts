@@ -7,7 +7,7 @@ export interface Texts {
   problemSolving: string;
 }
 
-export const textsDE = {
+export const textsDE: Texts = {
   whoIAm: 'Wer ich bin',
   aboutMe: 'Über mich',
   introduction:
@@ -20,7 +20,7 @@ export const textsDE = {
     'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben, sondern um eine kreative Form des Problemlösens. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.',
 };
 
-export const textsEN = {
+export const textsEN: Texts = {
   whoIAm: 'Who I Am',
   aboutMe: 'About me',
   introduction:
