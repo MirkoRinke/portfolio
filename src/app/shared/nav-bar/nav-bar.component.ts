@@ -1,26 +1,42 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../services/language.service';
+import { ScrollService } from '../services/scroll.service';
 import { Texts, textsDE, textsEN } from './language';
 import { LanguageToggleComponent } from './language-toggle/language-toggle.component';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [LanguageToggleComponent],
+  imports: [LanguageToggleComponent, CommonModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })
 export class NavBarComponent {
   activeLink: string | null = null;
   texts: Texts = textsDE;
+  showMenu = false;
 
   private languageSubscription: Subscription | undefined;
 
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private scrollService: ScrollService
+  ) {}
 
   setActiveLink(link: string): void {
     this.activeLink = link;
+  }
+
+  openMenu(): void {
+    this.showMenu = !this.showMenu;
+    this.scrollService.disableScroll();
+  }
+
+  closeMenu(): void {
+    this.showMenu = false;
+    this.scrollService.enableScroll();
   }
 
   ngOnInit(): void {

@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { LanguageService } from '../../../shared/services/language.service';
 import { projectsEN, projectsDE } from './../projects.data';
 import { ProjectService } from '../modal.service';
+import { ScrollService } from '../../../shared/services/scroll.service';
 import { Project } from './../projects.data';
 
 @Component({
@@ -21,7 +22,8 @@ export class ProjectModalComponent {
 
   constructor(
     private languageService: LanguageService,
-    private projectService: ProjectService
+    private projectService: ProjectService,
+    private scrollService: ScrollService
   ) {}
 
   openLink(url: string): void {
@@ -57,7 +59,7 @@ export class ProjectModalComponent {
 
   closeModal(): void {
     this.projectService.setProjectModalOpen(false);
-    this.projectService.enableScroll();
+    this.scrollService.enableScroll();
   }
 
   nextProject(): void {

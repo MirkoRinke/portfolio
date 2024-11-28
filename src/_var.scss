@@ -1,8 +1,10 @@
 /* Colors */
 
 $background: rgb(28, 28, 28);
+$background-50: rgba($background, 0.5);
 $hero-background: linear-gradient(45deg, #1c1c1c 23%, #08463b 100%);
 $modal-background: linear-gradient(45deg, #1c1c1c 23%, #08463b 100%);
+$menu-background: linear-gradient(45deg, #1c1c1c 23%, #08463b 100%);
 $skills-background: radial-gradient(
   circle at 0% 50%,
   rgba(8, 70, 59, 0.3) 0%,
@@ -20,33 +22,33 @@ $invalid: rgba(#ec7b7b, 0.8);
 
 /* @media breakpoints */
 
-/** 1200px oder schmaler */
-$breakpoint-lg: 1200px !default;
+/** 1400px oder schmaler */
+$breakpoint-xl: 1400px !default;
 
 /** 900px oder schmaler */
-$breakpoint-md: 900px !default;
+$breakpoint-lg: 900px !default;
 
 /** 600px oder schmaler */
-$breakpoint-sm: 600px !default;
+$breakpoint-md: 600px !default;
 
 /** 450px oder schmaler */
-$breakpoint-xs: 450px !default;
+$breakpoint-sm: 450px !default;
 
-/** 300px oder schmaler */
-$breakpoint-xxs: 350px !default;
+/** 385px oder schmaler */
+$breakpoint-xs: 385px !default;
 
-/** 1200px oder schmaler */
+/** 1400px oder schmaler */
+// @media (max-width: vars.$breakpoint-xl) {
+// }
+/** 900px oder schmaler */
 // @media (max-width: vars.$breakpoint-lg) {
 // }
-/** 900px oder schmaler */
+/** 600px oder schmaler */
 // @media (max-width: vars.$breakpoint-md) {
 // }
-/** 600px oder schmaler */
+/** 450px oder schmaler */
 // @media (max-width: vars.$breakpoint-sm) {
 // }
-/** 450px oder schmaler */
+/** 385px oder schmaler */
 // @media (max-width: vars.$breakpoint-xs) {
-// }
-/** 350px oder schmaler */
-// @media (max-width: vars.$breakpoint-xxs) {
 // }

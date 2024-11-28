@@ -13,6 +13,10 @@
   left: 0;
   right: 0;
 
+  @media (max-width: vars.$breakpoint-lg) {
+    padding-inline: 16px;
+  }
+
   .scroll-down {
     display: flex;
     flex-direction: column;
@@ -64,6 +68,10 @@
       font-size: 18px;
       font-weight: 400px;
 
+      @media (max-width: vars.$breakpoint-lg) {
+        display: none;
+      }
+
       &:hover {
         color: vars.$green;
       }
@@ -80,6 +88,10 @@
         align-items: center;
         gap: 8px;
         cursor: pointer;
+
+        @media (max-width: vars.$breakpoint-lg) {
+          gap: 4px;
+        }
 
         .icon-icon {
           fill: vars.$green;
@@ -102,6 +114,14 @@
         &:hover .icon-dot {
           fill: vars.$green;
           stroke: vars.$green;
+        }
+      }
+
+      .mailto-icon {
+        display: none;
+
+        @media (max-width: vars.$breakpoint-lg) {
+          display: flex;
         }
       }
     }

@@ -5,6 +5,7 @@ import { Texts, textsDE, textsEN } from './language';
 import { projectsEN, projectsDE } from './projects.data';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { ProjectService } from './modal.service';
+import { ScrollService } from '../../shared/services/scroll.service';
 import { Project } from './projects.data';
 
 @Component({
@@ -25,7 +26,8 @@ export class FeaturedProjectsComponent {
 
   constructor(
     private languageService: LanguageService,
-    private projectService: ProjectService
+    private projectService: ProjectService,
+    private scrollService: ScrollService
   ) {}
 
   onMouseOver(projectId: number): void {
@@ -39,12 +41,12 @@ export class FeaturedProjectsComponent {
   openProjectModal(projectId: number): void {
     this.projectService.setCurrentProject(projectId - 1);
     this.projectService.setProjectModalOpen(true);
-    this.projectService.disableScroll();
+    this.scrollService.disableScroll();
   }
 
   closeModal(): void {
     this.projectService.setProjectModalOpen(false);
-    this.projectService.enableScroll();
+    this.scrollService.enableScroll();
   }
 
   ngOnInit(): void {

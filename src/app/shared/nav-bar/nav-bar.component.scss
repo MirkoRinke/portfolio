@@ -10,14 +10,74 @@
   margin-inline: auto;
   padding-inline: 96px;
 
+  @media (max-width: vars.$breakpoint-lg) {
+    padding-inline: 16px;
+  }
+
+  .logo_small {
+    display: none;
+
+    @media (max-width: vars.$breakpoint-lg) {
+      display: block;
+      height: 50px;
+      width: auto;
+    }
+  }
+
   .left-side {
     display: flex;
     align-items: center;
     gap: 24px;
 
+    &.menu-is-open {
+      background-color: vars.$background-50;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+    }
+
+    .language-toggle {
+      display: block;
+
+      @media (max-width: vars.$breakpoint-lg) {
+        display: none;
+      }
+    }
+
     .nav-links {
       display: flex;
       gap: 24px;
+
+      &.toggle-menu {
+        display: flex;
+      }
+
+      @media (max-width: vars.$breakpoint-lg) {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        border: 1px solid vars.$green;
+        border-radius: 30px;
+        background-image: vars.$menu-background;
+
+        padding: 40px 77px;
+        position: fixed;
+        top: 100px;
+        right: 50px;
+        z-index: 10000;
+      }
+
+      .language-toggle-menu {
+        display: none;
+
+        @media (max-width: vars.$breakpoint-lg) {
+          display: block;
+        }
+      }
 
       & a {
         display: flex;
@@ -41,6 +101,11 @@
           height: 30px;
           visibility: hidden;
           bottom: -15px;
+
+          @media (max-width: vars.$breakpoint-lg) {
+            bottom: 0;
+            right: -20px;
+          }
         }
 
         &:hover {
@@ -49,6 +114,39 @@
           }
         }
       }
+    }
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
+
+    @media (max-width: vars.$breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  .menu {
+    display: none;
+    align-items: center;
+    z-index: 9999;
+
+    & svg {
+      height: 32px;
+      width: auto;
+      fill: vars.$white;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      & svg {
+        fill: vars.$green;
+      }
+    }
+
+    @media (max-width: vars.$breakpoint-lg) {
+      display: flex;
     }
   }
 }

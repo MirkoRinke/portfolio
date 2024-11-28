@@ -24,14 +24,19 @@
     justify-content: center;
     align-items: center;
     animation: scroll 30s linear infinite;
-    padding: 13.66px 32.58px;
+    padding: 13px 32px;
 
     span {
       font-size: 32px;
       font-weight: 400;
       color: vars.$green;
       white-space: nowrap;
-      margin-inline: 54.73px;
+      margin-inline: 55px;
+
+      @media (max-width: vars.$breakpoint-sm) {
+        font-size: 20px;
+        margin-inline: 20px;
+      }
     }
 
     @keyframes scroll {
