@@ -4,13 +4,13 @@ export interface Texts {
   projects: string;
 }
 
-export const textsDE = {
+export const textsDE: Texts = {
   aboutMe: 'Über mich',
   skills: 'Fähigkeiten',
   projects: 'Projekte',
 };
 
-export const textsEN = {
+export const textsEN: Texts = {
   aboutMe: 'About me',
   skills: 'Skills',
   projects: 'Projects',
