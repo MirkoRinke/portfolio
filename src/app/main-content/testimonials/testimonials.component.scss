@@ -91,8 +91,24 @@
         .quotes {
           position: absolute;
           top: -10px;
-          left: -50px;
+          left: -40px;
           z-index: 2;
+
+          @media (max-width: vars.$breakpoint-md) {
+            top: -10px;
+            left: -20px;
+          }
+
+          & svg {
+            height: 50px;
+            width: 90px;
+            fill: vars.$white;
+
+            @media (max-width: vars.$breakpoint-md) {
+              height: 40px;
+              width: 72px;
+            }
+          }
         }
 
         .no-quotes {
