@@ -13,6 +13,28 @@
   padding: 91px 80px;
   position: relative;
 
+  @media (max-width: vars.$breakpoint-xl) {
+    max-height: 550px;
+    max-width: 950px;
+    padding: 60px 40px 40px 40px;
+    gap: 30px;
+  }
+
+  @media (max-width: vars.$breakpoint-lg) {
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    max-height: fit-content;
+    max-width: fit-content;
+  }
+
+  @media (max-width: vars.$breakpoint-sm) {
+    padding: 60px 40px 40px 40px;
+  }
+
+  @media (max-width: vars.$breakpoint-xs) {
+    padding: 50px 20px 20px 20px;
+  }
+
   .info-box {
     display: flex;
     flex-direction: column;
@@ -20,10 +42,22 @@
     max-width: 480px;
     width: 100%;
 
+    @media (max-width: vars.$breakpoint-xl) {
+      gap: 30px;
+    }
+
+    @media (max-width: vars.$breakpoint-xs) {
+      gap: 15px;
+    }
+
     .header {
       display: flex;
       flex-direction: column;
       gap: 24px;
+
+      @media (max-width: vars.$breakpoint-sm) {
+        gap: 0px;
+      }
 
       .index {
         font-size: 128px;
@@ -31,6 +65,20 @@
         color: vars.$green;
         letter-spacing: -2%;
         line-height: 100px;
+
+        @media (max-width: vars.$breakpoint-xl) {
+          font-size: 72px;
+          line-height: 50px;
+        }
+
+        @media (max-width: vars.$breakpoint-sm) {
+          font-size: 48px;
+        }
+
+        @media (max-width: vars.$breakpoint-xs) {
+          font-size: 24px;
+          line-height: 25px;
+        }
       }
       .project-name {
         font-size: 64px;
@@ -38,6 +86,19 @@
         color: vars.$white;
         letter-spacing: -3%;
         line-height: 80px;
+
+        @media (max-width: vars.$breakpoint-xl) {
+          font-size: 56px;
+        }
+
+        @media (max-width: vars.$breakpoint-sm) {
+          font-size: 36px;
+        }
+
+        @media (max-width: vars.$breakpoint-xs) {
+          font-size: 24px;
+          line-height: 50px;
+        }
       }
     }
 
@@ -45,6 +106,14 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
+
+      @media (max-width: vars.$breakpoint-lg) {
+        align-items: center;
+      }
+
+      @media (max-width: vars.$breakpoint-sm) {
+        gap: 16px;
+      }
 
       .info-texts {
         display: flex;
@@ -55,18 +124,52 @@
           font-size: 24px;
           font-weight: bold;
           color: vars.$green;
+
+          @media (max-width: vars.$breakpoint-xl) {
+            font-size: 20px;
+          }
+
+          @media (max-width: vars.$breakpoint-lg) {
+            text-align: center;
+          }
         }
 
         .textarea {
           font-size: 18px;
           font-weight: 400;
           color: vars.$white;
+
+          @media (max-width: vars.$breakpoint-xl) {
+            font-size: 16px;
+          }
+
+          @media (max-width: vars.$breakpoint-lg) {
+            text-align: center;
+          }
+
+          @media (max-width: vars.$breakpoint-sm) {
+            //! #########################
+            min-height: 100px;
+          }
+
+          @media (max-width: vars.$breakpoint-xs) {
+            font-size: 14px;
+          }
         }
       }
 
       .technologies {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         gap: 16px;
+
+        @media (max-width: vars.$breakpoint-xl) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: vars.$breakpoint-sm) {
+          gap: 16px 32px;
+        }
 
         .technology {
           display: flex;
@@ -90,6 +193,15 @@
       display: flex;
       gap: 32px;
 
+      @media (max-width: vars.$breakpoint-lg) {
+        justify-content: center;
+        margin-bottom: 80px;
+      }
+
+      @media (max-width: vars.$breakpoint-xs) {
+        margin-top: 5px;
+      }
+
       & button {
         display: inline-flex;
         align-items: center;
@@ -103,6 +215,10 @@
         color: vars.$white;
         transition: border-color 0ms;
         width: fit-content;
+
+        @media (max-width: vars.$breakpoint-xs) {
+          padding: 10px 12px;
+        }
 
         &:hover {
           cursor: pointer;
@@ -126,6 +242,18 @@
     margin-top: 52px;
     max-width: 520px;
     width: 100%;
+
+    @media (max-width: vars.$breakpoint-xl) {
+      margin-top: 100px;
+      max-width: 380px;
+      margin-right: 20px;
+    }
+
+    @media (max-width: vars.$breakpoint-lg) {
+      flex-direction: column-reverse;
+      margin-top: 0px;
+      margin-inline: auto;
+    }
 
     &:hover {
       cursor: pointer;
@@ -153,6 +281,10 @@
       border-radius: 24px;
       z-index: 1;
       transition: transform 175ms ease-in-out;
+
+      @media (max-width: vars.$breakpoint-lg) {
+        display: none;
+      }
     }
 
     &:hover .bg {
@@ -168,6 +300,21 @@
     position: absolute;
     top: 70px;
     right: 80px;
+
+    @media (max-width: vars.$breakpoint-xl) {
+      top: 30px;
+      right: 40px;
+    }
+
+    @media (max-width: vars.$breakpoint-sm) {
+      top: 20px;
+      right: 30px;
+    }
+
+    @media (max-width: vars.$breakpoint-xs) {
+      top: 15px;
+      right: 20px;
+    }
 
     &:hover {
       cursor: pointer;
@@ -192,6 +339,13 @@
     position: absolute;
     bottom: 55px;
     right: 80px;
+
+    @media (max-width: vars.$breakpoint-lg) {
+      bottom: 30px;
+      right: 50%;
+      transform: translateX(50%);
+      gap: 100px;
+    }
 
     .previous-project img {
       transform: rotate(180deg);
