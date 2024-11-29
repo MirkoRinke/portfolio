@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
@@ -22,6 +22,7 @@ export class TestimonialsComponent {
   texts: Texts = textsDE;
   currentIndex: number = 0;
   playAnimation: boolean = true;
+  adjustedValue: number = 696;
 
   private languageSubscription: Subscription | undefined;
 
@@ -33,6 +34,7 @@ export class TestimonialsComponent {
         this.loadTexts(language);
       });
     this.loadTexts(this.languageService.getLanguage());
+    this.adjustValueBasedOnWidth();
   }
 
   ngOnDestroy(): void {
@@ -87,9 +89,23 @@ export class TestimonialsComponent {
     }
   }
 
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.adjustValueBasedOnWidth();
+  }
+
+  adjustValueBasedOnWidth() {
+    const width = window.innerWidth;
+    if (width > 1450) this.adjustedValue = 696;
+    if (width <= 1450 && width > 1100) this.adjustedValue = 496;
+    if (width <= 1100 && width > 600) this.adjustedValue = 316;
+  }
+
   getTransform(index: number): string {
     if (index - 1 !== this.currentIndex)
-      return `translateX(-${(this.currentIndex + 1) * 696}px) scale(0.9)`;
-    return `translateX(-${(this.currentIndex + 1) * 696}px)`;
+      return `translateX(-${
+        (this.currentIndex + 1) * this.adjustedValue
+      }px) scale(0.9)`;
+    return `translateX(-${(this.currentIndex + 1) * this.adjustedValue}px)`;
   }
 }

@@ -8,7 +8,6 @@
   .content {
     display: flex;
     flex-direction: column;
-    // align-items: center;
     gap: 50px;
     max-width: 1440px;
     width: 100%;
@@ -16,6 +15,16 @@
     padding-block: 144px;
     padding-inline: 96px;
     overflow-x: hidden;
+
+    @media (max-width: vars.$breakpoint-xl) {
+      max-width: 1040px;
+    }
+
+    @media (max-width: vars.$breakpoint-lg) {
+      max-width: 540px;
+      padding-block: 96px;
+      padding-inline: 36px;
+    }
 
     .heading {
       font-size: 32px;
@@ -29,8 +38,19 @@
       justify-content: start;
       gap: 64px;
       overflow: hidden;
+      max-width: 100%;
+      width: 100%;
 
       padding-left: 316px;
+
+      @media (max-width: vars.$breakpoint-xl) {
+        padding-left: 216px;
+      }
+
+      @media (max-width: vars.$breakpoint-lg) {
+        padding-left: 92px;
+        gap: 32px;
+      }
 
       .testimonial {
         display: flex;
@@ -42,6 +62,14 @@
         padding: 48px 40px;
         min-width: 632px;
         margin-block: 10px;
+
+        @media (max-width: vars.$breakpoint-xl) {
+          min-width: 432px;
+        }
+
+        @media (max-width: vars.$breakpoint-lg) {
+          min-width: 284px;
+        }
 
         position: relative;
 
@@ -60,6 +88,10 @@
           font-size: 20px;
           font-weight: 400;
           color: vars.$white;
+
+          @media (max-width: vars.$breakpoint-lg) {
+            font-size: 16px;
+          }
         }
 
         .author {
@@ -79,6 +111,10 @@
             color: vars.$white;
             white-space: nowrap;
             margin-left: 20px;
+
+            @media (max-width: vars.$breakpoint-lg) {
+              font-size: 16px;
+            }
           }
         }
       }
