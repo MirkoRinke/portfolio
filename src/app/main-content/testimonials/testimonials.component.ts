@@ -99,6 +99,7 @@ export class TestimonialsComponent {
     if (width > 1450) this.adjustedValue = 696;
     if (width <= 1450 && width > 1100) this.adjustedValue = 496;
     if (width <= 1100 && width > 600) this.adjustedValue = 316;
+    if (width <= 600) this.adjustedValue = 275;
   }
 
   getTransform(index: number): string {

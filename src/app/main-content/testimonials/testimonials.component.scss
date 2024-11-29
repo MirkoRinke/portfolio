@@ -26,6 +26,12 @@
       padding-inline: 36px;
     }
 
+    @media (max-width: vars.$breakpoint-md) {
+      max-width: 310px;
+      padding-block: 32px;
+      padding-inline: 16px;
+    }
+
     .heading {
       font-size: 32px;
       font-weight: bold;
@@ -52,6 +58,11 @@
         gap: 32px;
       }
 
+      @media (max-width: vars.$breakpoint-md) {
+        padding-left: 14px;
+        gap: 16px;
+      }
+
       .testimonial {
         display: flex;
         flex-direction: column;
@@ -69,6 +80,10 @@
 
         @media (max-width: vars.$breakpoint-lg) {
           min-width: 284px;
+        }
+
+        @media (max-width: vars.$breakpoint-md) {
+          min-width: 259px;
         }
 
         position: relative;
@@ -92,12 +107,22 @@
           @media (max-width: vars.$breakpoint-lg) {
             font-size: 16px;
           }
+
+          @media (max-width: vars.$breakpoint-md) {
+            font-size: 14px;
+          }
         }
 
         .author {
           display: flex;
           align-items: center;
           width: 100%;
+
+          @media (max-width: vars.$breakpoint-md) {
+            flex-direction: column-reverse;
+            align-items: unset;
+            gap: 8px;
+          }
 
           .horizontal-line {
             flex-grow: 1;
@@ -114,6 +139,11 @@
 
             @media (max-width: vars.$breakpoint-lg) {
               font-size: 16px;
+            }
+
+            @media (max-width: vars.$breakpoint-md) {
+              font-size: 14px;
+              margin-left: 0;
             }
           }
         }
