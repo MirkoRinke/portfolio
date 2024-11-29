@@ -54,7 +54,7 @@ export const textsEN: Texts = {
   contactInfoDescription:
     'Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.',
   contactInfoFrontendDeveloper: 'Need a Frontend developer?',
-  contactInfoDescriptionHighlight: 'Let’s talk!',
+  contactInfoDescriptionHighlight: 'Let’s-talk!',
 
   contactFormName: "What's your name?",
   contactFormEmail: "What's your email?",

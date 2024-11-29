@@ -137,7 +137,12 @@
           color: vars.$green;
 
           @media (max-width: vars.$breakpoint-xl) {
+            text-align: center;
             font-size: 56px;
+          }
+
+          @media (max-width: vars.$breakpoint-xs) {
+            font-size: 42px;
           }
         }
 

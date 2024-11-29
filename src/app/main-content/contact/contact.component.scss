@@ -15,6 +15,17 @@
     padding-block: 144px;
     padding-inline: 96px;
 
+    @media (max-width: vars.$breakpoint-lg) {
+      flex-direction: column;
+      padding-block: 100px;
+      max-width: 600px;
+    }
+
+    @media (max-width: vars.$breakpoint-xl) {
+      padding-block: 50px;
+      padding-inline: 16px;
+    }
+
     .contact-info {
       display: flex;
       flex-direction: column;
@@ -29,12 +40,25 @@
           font-size: 24px;
           font-weight: 500;
           color: vars.$green;
+
+          @media (max-width: vars.$breakpoint-xl) {
+            font-size: 18px;
+          }
         }
 
         .subtitle {
           font-size: 64px;
           font-weight: bold;
           color: vars.$green;
+
+          @media (max-width: vars.$breakpoint-xl) {
+            text-align: center;
+            font-size: 56px;
+          }
+
+          @media (max-width: vars.$breakpoint-xs) {
+            font-size: 42px;
+          }
         }
       }
 
@@ -47,15 +71,25 @@
           font-size: 24px;
           font-weight: bold;
           color: vars.$green;
+
+          @media (max-width: vars.$breakpoint-xl) {
+            font-size: 18px;
+            text-align: center;
+          }
         }
 
         .description {
           font-weight: 400;
           color: vars.$white;
 
+          @media (max-width: vars.$breakpoint-xl) {
+            text-align: center;
+          }
+
           .highlight {
             font-weight: bold;
             color: vars.$green;
+            white-space: nowrap;
           }
         }
       }
@@ -85,6 +119,10 @@
             font-size: 24px;
             font-weight: 400;
             color: vars.$green;
+
+            @media (max-width: vars.$breakpoint-xl) {
+              font-size: 20px;
+            }
           }
 
           & input,
@@ -97,6 +135,10 @@
             background-color: transparent;
             transition: border-color 0.3s;
             caret-color: vars.$green;
+
+            @media (max-width: vars.$breakpoint-xl) {
+              font-size: 20px;
+            }
 
             &::placeholder {
               font-size: 18px;
@@ -128,7 +170,7 @@
           flex-direction: column;
           margin-top: 40px;
           margin-bottom: 16px;
-          gap: 16px;
+          gap: 50px;
           margin-inline: auto;
 
           .form-privacy {

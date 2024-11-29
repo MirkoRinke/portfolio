@@ -15,14 +15,13 @@
 
     @media (max-width: vars.$breakpoint-lg) {
       padding-block: 100px;
-      padding-inline: 66px;
+      padding-inline: 16px;
       align-items: center;
       max-width: fit-content;
     }
 
     @media (max-width: vars.$breakpoint-xs) {
       padding-block: 50px;
-      padding-inline: 16px;
     }
 
     .content {
@@ -54,6 +53,7 @@
           color: vars.$green;
 
           @media (max-width: vars.$breakpoint-xl) {
+            text-align: center;
             font-size: 56px;
           }
 
