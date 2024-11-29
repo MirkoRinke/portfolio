@@ -25,8 +25,8 @@ $invalid: rgba(#ec7b7b, 0.8);
 /** 1400px oder schmaler */
 $breakpoint-xl: 1400px !default;
 
-/** 900px oder schmaler */
-$breakpoint-lg: 900px !default;
+/** 1000px oder schmaler */
+$breakpoint-lg: 1000px !default;
 
 /** 600px oder schmaler */
 $breakpoint-md: 600px !default;
@@ -40,7 +40,7 @@ $breakpoint-xs: 385px !default;
 /** 1400px oder schmaler */
 // @media (max-width: vars.$breakpoint-xl) {
 // }
-/** 900px oder schmaler */
+/** 1000px oder schmaler */
 // @media (max-width: vars.$breakpoint-lg) {
 // }
 /** 600px oder schmaler */

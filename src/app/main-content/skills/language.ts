@@ -32,5 +32,5 @@ export const textsEN: Texts = {
   descriptionAnotherSkill:
     'Feel free to contact me. I look forward to expanding on my previous knowledge.',
   buttonLetsTalk: "Let's talk",
-  titleGrowthMindset: 'I have a special interest in learning',
+  titleGrowthMindset: 'I have a special \n interest in learning',
 };
