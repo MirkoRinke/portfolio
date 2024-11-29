@@ -59,16 +59,18 @@
         display: none;
         flex-direction: column;
         align-items: center;
-
         border: 1px solid vars.$green;
         border-radius: 30px;
         background-image: vars.$menu-background;
-
         padding: 40px 77px;
         position: fixed;
         top: 100px;
         right: 50px;
         z-index: 10000;
+
+        @media (max-width: vars.$breakpoint-xs) {
+          right: 30px;
+        }
       }
 
       .language-toggle-menu {

@@ -31,12 +31,12 @@ export class NavBarComponent {
 
   openMenu(): void {
     this.showMenu = !this.showMenu;
-    this.scrollService.disableScroll();
+    this.scrollService.addScrollListeners();
   }
 
   closeMenu(): void {
     this.showMenu = false;
-    this.scrollService.enableScroll();
+    this.scrollService.removeScrollListeners();
   }
 
   ngOnInit(): void {
