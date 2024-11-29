@@ -13,19 +13,19 @@
     >
       <a
         href="#about-me"
-        (click)="setActiveLink('aboutMe')"
+        (click)="setActiveLink('aboutMe'); closeMenu()"
         [class.active]="activeLink === 'aboutMe'"
         >{{ texts.aboutMe }}</a
       >
       <a
         href="#skills"
-        (click)="setActiveLink('skills')"
+        (click)="setActiveLink('skills'); closeMenu()"
         [class.active]="activeLink === 'skills'"
         >{{ texts.skills }}</a
       >
       <a
         href="#featured-project"
-        (click)="setActiveLink('projects')"
+        (click)="setActiveLink('projects'); closeMenu()"
         [class.active]="activeLink === 'projects'"
         >{{ texts.projects }}</a
       >
