@@ -1,52 +1,54 @@
 <section class="skills">
-  <div class="content">
-    <div class="info">
-      <h3 class="info-heading">{{ texts.titleTechnologies }}</h3>
-      <div class="info-box">
-        <h2 class="heading-skill-set">{{ texts.titleSkillSet }}</h2>
-        <div class="description">
-          <p class="textarea">
-            {{ texts.descriptionSkillSet }}
-          </p>
-          <div class="another-skill">
-            <h4 class="heading">
-              {{ texts.titleAnotherSkill }}
-              <span class="highlight">{{ texts.anotherSkill }}</span>
-            </h4>
-            <p class="another-skill-description">
-              {{ texts.descriptionAnotherSkill }}
+  <div class="bg">
+    <div class="content">
+      <div class="info">
+        <h3 class="info-heading">{{ texts.titleTechnologies }}</h3>
+        <div class="info-box">
+          <h2 class="heading-skill-set">{{ texts.titleSkillSet }}</h2>
+          <div class="description">
+            <p class="textarea">
+              {{ texts.descriptionSkillSet }}
             </p>
-          </div>
-        </div>
-        <button onclick="window.location.href='#contact';" class="letsTalk">
-          <span>{{ texts.buttonLetsTalk }}</span>
-        </button>
-      </div>
-    </div>
-    <div class="skill-icons">
-      @for (skill of skills; track skill.id) {
-      <div class="skill-icon">
-        <img class="icon" src="{{ skill.icon }}" alt="{{ skill.name }}" />
-        <h4 class="skill-name">{{ skill.name }}</h4>
-        @if (skill.name === "Growth Mindset") {
-        <div class="tooltip">
-          <h5 class="tooltip-heading">{{ texts.titleGrowthMindset }}</h5>
-          <div class="learning-skills">
-            @for (learningSkill of learningSkills; track learningSkill.id) {
-            <div class="learning-skill">
-              <img
-                class="learning-icon"
-                src="{{ learningSkill.icon }}"
-                alt="{{ learningSkill.name }}"
-              />
-              <h6>{{ learningSkill.name }}</h6>
+            <div class="another-skill">
+              <h4 class="heading">
+                {{ texts.titleAnotherSkill }}
+                <span class="highlight">{{ texts.anotherSkill }}</span>
+              </h4>
+              <p class="another-skill-description">
+                {{ texts.descriptionAnotherSkill }}
+              </p>
             </div>
-            }
           </div>
+          <button onclick="window.location.href='#contact';" class="letsTalk">
+            <span>{{ texts.buttonLetsTalk }}</span>
+          </button>
+        </div>
+      </div>
+      <div class="skill-icons">
+        @for (skill of skills; track skill.id) {
+        <div class="skill-icon">
+          <img class="icon" src="{{ skill.icon }}" alt="{{ skill.name }}" />
+          <h4 class="skill-name">{{ skill.name }}</h4>
+          @if (skill.name === "Growth Mindset") {
+          <div class="tooltip">
+            <h5 class="tooltip-heading">{{ texts.titleGrowthMindset }}</h5>
+            <div class="learning-skills">
+              @for (learningSkill of learningSkills; track learningSkill.id) {
+              <div class="learning-skill">
+                <img
+                  class="learning-icon"
+                  src="{{ learningSkill.icon }}"
+                  alt="{{ learningSkill.name }}"
+                />
+                <h6>{{ learningSkill.name }}</h6>
+              </div>
+              }
+            </div>
+          </div>
+          }
         </div>
         }
       </div>
-      }
     </div>
   </div>
 </section>

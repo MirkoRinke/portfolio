@@ -29,6 +29,10 @@
           font-size: 24px;
           font-weight: 500;
           color: vars.$green;
+
+          @media (max-width: vars.$breakpoint-xl) {
+            font-size: 18px;
+          }
         }
 
         .title {
@@ -36,6 +40,10 @@
           font-size: 64px;
           font-weight: bold;
           color: vars.$green;
+
+          @media (max-width: vars.$breakpoint-xl) {
+            font-size: 56px;
+          }
         }
       }
 
@@ -113,6 +121,10 @@
 
             &.hovered {
               display: block;
+
+              @media (max-width: vars.$breakpoint-xl) {
+                display: none;
+              }
             }
 
             .preview-img {
