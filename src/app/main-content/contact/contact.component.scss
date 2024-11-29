@@ -123,6 +123,10 @@
             @media (max-width: vars.$breakpoint-xl) {
               font-size: 20px;
             }
+
+            @media (max-width: vars.$breakpoint-xs) {
+              font-size: 16px;
+            }
           }
 
           & input,
@@ -138,6 +142,10 @@
 
             @media (max-width: vars.$breakpoint-xl) {
               font-size: 20px;
+            }
+
+            @media (max-width: vars.$breakpoint-xs) {
+              font-size: 16px;
             }
 
             &::placeholder {
