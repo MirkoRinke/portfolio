@@ -147,11 +147,6 @@
             text-align: center;
           }
 
-          @media (max-width: vars.$breakpoint-sm) {
-            //! #########################
-            min-height: 100px;
-          }
-
           @media (max-width: vars.$breakpoint-xs) {
             font-size: 14px;
           }
@@ -341,7 +336,7 @@
     right: 80px;
 
     @media (max-width: vars.$breakpoint-lg) {
-      bottom: 30px;
+      bottom: 20px;
       right: 50%;
       transform: translateX(50%);
       gap: 100px;
