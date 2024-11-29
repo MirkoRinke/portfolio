@@ -30,8 +30,13 @@ export class NavBarComponent {
   }
 
   openMenu(): void {
-    this.showMenu = !this.showMenu;
-    this.scrollService.addScrollListeners();
+    if (this.showMenu) {
+      this.closeMenu();
+      return;
+    } else {
+      this.showMenu = true;
+      this.scrollService.addScrollListeners();
+    }
   }
 
   closeMenu(): void {
