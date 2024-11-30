@@ -20,7 +20,7 @@ export const textsDE: Texts = {
   descriptionAnotherSkill:
     'Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
   buttonLetsTalk: 'Lass uns reden',
-  titleGrowthMindsetFirstPart: 'Ich habe ein besonderes Interesse am Lernen',
+  titleGrowthMindsetFirstPart: 'Ich habe ein besonderes',
   titleGrowthMindsetSecondPart: 'Interesse am Lernen',
 };
 
