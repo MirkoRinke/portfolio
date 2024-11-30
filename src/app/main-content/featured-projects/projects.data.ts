@@ -11,7 +11,7 @@ export interface Project {
 
 interface Technology {
   name: string;
-  iconPaths: IconPaths;
+  icon: string;
 }
 
 interface IconPaths {
@@ -35,31 +35,19 @@ export const projectsEN: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        iconPaths: {
-          white: './images/skills/javascript-white.svg',
-          green: './images/skills/javascript-green.svg',
-        },
+        icon: 'JavaScript',
       },
       {
         name: 'Firebase',
-        iconPaths: {
-          white: './images/skills/firebase-white.svg',
-          green: './images/skills/firebase-green.svg',
-        },
+        icon: 'Firebase',
       },
       {
         name: 'HTML',
-        iconPaths: {
-          white: './images/skills/html-white.svg',
-          green: './images/skills/html-green.svg',
-        },
+        icon: 'HTML',
       },
       {
         name: 'CSS',
-        iconPaths: {
-          white: './images/skills/css-white.svg',
-          green: './images/skills/css-green.svg',
-        },
+        icon: 'CSS',
       },
     ],
     imagePath: './images/projects/join.jpg',
@@ -78,24 +66,15 @@ export const projectsEN: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        iconPaths: {
-          white: './images/skills/javascript-white.svg',
-          green: './images/skills/javascript-green.svg',
-        },
+        icon: 'JavaScript',
       },
       {
         name: 'HTML',
-        iconPaths: {
-          white: './images/skills/html-white.svg',
-          green: './images/skills/html-green.svg',
-        },
+        icon: 'HTML',
       },
       {
         name: 'CSS',
-        iconPaths: {
-          white: './images/skills/css-white.svg',
-          green: './images/skills/css-green.svg',
-        },
+        icon: 'CSS',
       },
     ],
     imagePath: './images/projects/el-pollo-loco.jpg',
@@ -114,31 +93,19 @@ export const projectsEN: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        iconPaths: {
-          white: './images/skills/javascript-white.svg',
-          green: './images/skills/javascript-green.svg',
-        },
+        icon: 'JavaScript',
       },
       {
         name: 'HTML',
-        iconPaths: {
-          white: './images/skills/html-white.svg',
-          green: './images/skills/html-green.svg',
-        },
+        icon: 'HTML',
       },
       {
         name: 'CSS',
-        iconPaths: {
-          white: './images/skills/css-white.svg',
-          green: './images/skills/css-green.svg',
-        },
+        icon: 'CSS',
       },
       {
         name: 'Rest API',
-        iconPaths: {
-          white: './images/skills/rest-api-white.svg',
-          green: './images/skills/rest-api-green.svg',
-        },
+        icon: 'API',
       },
     ],
     imagePath: './images/projects/pokedex.jpg',
@@ -160,31 +127,19 @@ export const projectsDE: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        iconPaths: {
-          white: './images/skills/javascript-white.svg',
-          green: './images/skills/javascript-green.svg',
-        },
+        icon: 'JavaScript',
       },
       {
         name: 'Firebase',
-        iconPaths: {
-          white: './images/skills/firebase-white.svg',
-          green: './images/skills/firebase-green.svg',
-        },
+        icon: 'Firebase',
       },
       {
         name: 'HTML',
-        iconPaths: {
-          white: './images/skills/html-white.svg',
-          green: './images/skills/html-green.svg',
-        },
+        icon: 'HTML',
       },
       {
         name: 'CSS',
-        iconPaths: {
-          white: './images/skills/css-white.svg',
-          green: './images/skills/css-green.svg',
-        },
+        icon: 'CSS',
       },
     ],
     imagePath: './images/projects/join.jpg',
@@ -203,24 +158,15 @@ export const projectsDE: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        iconPaths: {
-          white: './images/skills/javascript-white.svg',
-          green: './images/skills/javascript-green.svg',
-        },
+        icon: 'JavaScript',
       },
       {
         name: 'HTML',
-        iconPaths: {
-          white: './images/skills/html-white.svg',
-          green: './images/skills/html-green.svg',
-        },
+        icon: 'HTML',
       },
       {
         name: 'CSS',
-        iconPaths: {
-          white: './images/skills/css-white.svg',
-          green: './images/skills/css-green.svg',
-        },
+        icon: 'CSS',
       },
     ],
     imagePath: './images/projects/el-pollo-loco.jpg',
@@ -239,31 +185,19 @@ export const projectsDE: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        iconPaths: {
-          white: './images/skills/javascript-white.svg',
-          green: './images/skills/javascript-green.svg',
-        },
+        icon: 'JavaScript',
       },
       {
         name: 'HTML',
-        iconPaths: {
-          white: './images/skills/html-white.svg',
-          green: './images/skills/html-green.svg',
-        },
+        icon: 'HTML',
       },
       {
         name: 'CSS',
-        iconPaths: {
-          white: './images/skills/css-white.svg',
-          green: './images/skills/css-green.svg',
-        },
+        icon: 'CSS',
       },
       {
         name: 'Rest API',
-        iconPaths: {
-          white: './images/skills/rest-api-white.svg',
-          green: './images/skills/rest-api-green.svg',
-        },
+        icon: 'API',
       },
     ],
     imagePath: './images/projects/pokedex.jpg',

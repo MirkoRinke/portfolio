@@ -5,6 +5,8 @@ import { projectsEN, projectsDE } from './../projects.data';
 import { ProjectService } from '../modal.service';
 import { ScrollService } from '../../../shared/services/scroll.service';
 import { Project } from './../projects.data';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { returnIcon } from '../../../shared/services/svg.icons.service';
 
 @Component({
   selector: 'app-project-modal',
@@ -23,8 +25,14 @@ export class ProjectModalComponent {
   constructor(
     private languageService: LanguageService,
     private projectService: ProjectService,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private sanitizer: DomSanitizer
   ) {}
+
+  public returnIcon(type: string): SafeHtml {
+    const iconHtml = returnIcon(type);
+    return this.sanitizer.bypassSecurityTrustHtml(iconHtml);
+  }
 
   openLink(url: string): void {
     window.open(url, '_blank');

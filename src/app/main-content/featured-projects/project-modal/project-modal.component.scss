@@ -176,6 +176,7 @@
           .icon {
             height: 24px;
             width: 24px;
+            fill: vars.$green;
           }
 
           .name {
@@ -222,6 +223,11 @@
           border-color: vars.$green;
           color: vars.$green;
           transition: border-color 175ms;
+        }
+
+        .arrow {
+          min-width: 20px;
+          fill: vars.$green;
         }
 
         &:hover .arrow {
@@ -374,13 +380,13 @@
 
       &:hover .arrow-left {
         transition: transform 175ms ease-in-out;
-        transform: translateX(-3px) scale(1.1) rotate(180deg);
+        transform: translateX(-3px) scale(1.1);
       }
 
       .arrow-left,
       .arrow-right {
-        height: 30px;
-        width: 30px;
+        min-width: 30px;
+        fill: vars.$green;
       }
     }
   }
