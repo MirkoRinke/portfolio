@@ -3,7 +3,7 @@
 
 .hero {
   height: 100dvh;
-  background-image: vars.$hero-background;
+  background-image: var(--hero-background);
   overflow: hidden;
 
   .hero-content {
@@ -33,7 +33,7 @@
           font-family: "FiraCode";
           font-size: 40px;
           font-weight: 400;
-          color: vars.$white-80;
+          color: var(--secondary-color-80);
 
           @media (max-width: vars.$breakpoint-xl) {
             font-size: 32px;
@@ -51,7 +51,7 @@
         .main-heading {
           font-size: 128px;
           font-weight: bold;
-          color: vars.$white-80;
+          color: var(--secondary-color-80);
 
           @media (max-width: vars.$breakpoint-xl) {
             font-size: 96px;

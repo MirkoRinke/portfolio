@@ -2,11 +2,11 @@
 @use "../../../mixins" as mixins;
 
 .skills {
-  background-color: vars.$background;
-  // background-image: vars.$skills-background;
+  background-color: var(--background);
+  // background-image: var(--skills-background);
 
   .bg {
-    background-image: vars.$skills-background;
+    background-image: var(--skills-background);
     display: flex;
     justify-content: center;
     max-width: 1920px;
@@ -58,7 +58,7 @@
         .info-heading {
           font-size: 24px;
           font-weight: 500;
-          color: vars.$green;
+          color: var(--primary-color);
 
           @media (max-width: vars.$breakpoint-xl) {
             padding-top: 0;
@@ -69,10 +69,10 @@
         .info-box {
           display: flex;
           flex-direction: column;
-          border: 1px solid vars.$green;
+          border: 1px solid var(--primary-color);
           border-radius: 30px;
-          background-color: vars.$green-10;
-          color: vars.$white;
+          background-color: var(--primary-color-10);
+          color: var(--secondary-color);
           padding: 32px;
           gap: 40px;
 
@@ -80,7 +80,7 @@
             font-family: "FiraCode";
             font-size: 64px;
             font-weight: bold;
-            color: vars.$green;
+            color: var(--primary-color);
 
             @media (max-width: vars.$breakpoint-xl) {
               text-align: center;
@@ -100,7 +100,7 @@
             .textarea {
               font-size: 18px;
               font-weight: 400;
-              color: vars.$white-80;
+              color: var(--secondary-color-80);
               text-align: justify;
 
               @media (max-width: vars.$breakpoint-xl) {
@@ -108,7 +108,7 @@
               }
 
               &:hover {
-                color: vars.$white;
+                color: var(--secondary-color);
               }
             }
           }
@@ -128,21 +128,21 @@
               }
 
               .highlight {
-                color: vars.$green;
+                color: var(--primary-color);
               }
             }
 
             .another-skill-description {
               font-size: 18px;
               font-weight: 400;
-              color: vars.$white-80;
+              color: var(--secondary-color-80);
 
               @media (max-width: vars.$breakpoint-xl) {
                 font-size: 16px;
               }
 
               &:hover {
-                color: vars.$white;
+                color: var(--secondary-color);
               }
             }
           }
@@ -191,15 +191,15 @@
           .icon {
             height: 64px;
             min-width: 64px;
-            fill: vars.$white;
+            fill: var(--secondary-color);
           }
 
           .GrowthMindset {
-            fill: vars.$green;
+            fill: var(--primary-color);
           }
 
           .skill-name {
-            color: vars.$white;
+            color: var(--secondary-color);
             text-align: center;
           }
 
@@ -214,7 +214,7 @@
             justify-content: center;
             align-items: center;
             gap: 8px;
-            background-color: vars.$white;
+            background-color: var(--secondary-color);
             border-radius: 16px;
             padding: 10px 20px;
             position: absolute;
@@ -229,7 +229,7 @@
               right: 65%;
               border-width: 15px;
               border-style: solid;
-              border-color: vars.$white;
+              border-color: var(--secondary-color);
               border-radius: 5px;
               transform: rotate(45deg);
               z-index: -1;
@@ -237,7 +237,7 @@
 
             .tooltip-heading {
               font-weight: 400;
-              color: vars.$green;
+              color: var(--primary-color);
               text-align: center;
             }
 
@@ -259,7 +259,7 @@
                 & h6 {
                   font-size: 12px;
                   font-weight: bold;
-                  color: vars.$green;
+                  color: var(--primary-color);
                   margin-top: 10px;
                 }
               }

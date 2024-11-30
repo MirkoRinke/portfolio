@@ -5,24 +5,24 @@
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  border: 1px solid vars.$white;
+  border: 1px solid var(--secondary-color);
   border-radius: 100px;
   padding: 13px 24px;
-  color: vars.$white;
+  color: var(--secondary-color);
   transition: border-color 0ms;
   width: fit-content;
   overflow: hidden;
 
   &:hover {
     cursor: pointer;
-    border-color: vars.$green;
+    border-color: var(--primary-color);
     transition: border-color 2s;
   }
 
   &:hover span {
     animation: scroll-text 1.5s linear infinite;
     transition: color 1.5s ease-in-out;
-    color: vars.$green;
+    color: var(--primary-color);
   }
 
   @keyframes scroll-text {

@@ -17,7 +17,7 @@
   .logo-small {
     display: none;
     min-width: 35px;
-    fill: vars.$green;
+    fill: var(--primary-color);
 
     @media (max-width: vars.$breakpoint-lg) {
       display: block;
@@ -32,7 +32,7 @@
     gap: 24px;
 
     &.menu-is-open {
-      background-color: vars.$background-50;
+      background-color: var(--background-50);
       position: absolute;
       top: 0;
       left: 0;
@@ -61,9 +61,9 @@
         display: none;
         flex-direction: column;
         align-items: center;
-        border: 1px solid vars.$green;
+        border: 1px solid var(--primary-color);
         border-radius: 30px;
-        background-image: vars.$menu-background;
+        background-image: var(--menu-background);
         padding: 40px 77px;
         position: fixed;
         top: 100px;
@@ -87,11 +87,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: vars.$white;
+        color: var(--secondary-color);
         position: relative;
 
         &.active {
-          color: vars.$green;
+          color: var(--primary-color);
           &::after {
             visibility: visible;
           }
@@ -100,7 +100,7 @@
         &::after {
           content: "•";
           position: absolute;
-          color: vars.$green;
+          color: var(--primary-color);
           font-size: 30px;
           height: 30px;
           visibility: hidden;
@@ -137,14 +137,14 @@
     .icon {
       height: 32px;
       width: 32px;
-      fill: vars.$white;
+      fill: var(--secondary-color);
     }
 
     &:hover {
       cursor: pointer;
 
       & .icon {
-        fill: vars.$green;
+        fill: var(--primary-color);
       }
     }
 

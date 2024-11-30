@@ -3,7 +3,7 @@
 
 .contact {
   display: flex;
-  background-color: vars.$background;
+  background-color: var(--background);
 
   .content {
     display: flex;
@@ -39,7 +39,7 @@
         .title {
           font-size: 24px;
           font-weight: 500;
-          color: vars.$green;
+          color: var(--primary-color);
 
           @media (max-width: vars.$breakpoint-xl) {
             font-size: 18px;
@@ -49,7 +49,7 @@
         .subtitle {
           font-size: 64px;
           font-weight: bold;
-          color: vars.$green;
+          color: var(--primary-color);
 
           @media (max-width: vars.$breakpoint-xl) {
             text-align: center;
@@ -70,7 +70,7 @@
         .question {
           font-size: 24px;
           font-weight: bold;
-          color: vars.$green;
+          color: var(--primary-color);
 
           @media (max-width: vars.$breakpoint-xl) {
             font-size: 18px;
@@ -80,7 +80,7 @@
 
         .description {
           font-weight: 400;
-          color: vars.$white;
+          color: var(--secondary-color);
 
           @media (max-width: vars.$breakpoint-xl) {
             text-align: center;
@@ -88,7 +88,7 @@
 
           .highlight {
             font-weight: bold;
-            color: vars.$green;
+            color: var(--primary-color);
             white-space: nowrap;
           }
         }
@@ -107,18 +107,18 @@
           display: flex;
           flex-direction: column;
           gap: 16px;
-          border-bottom: 1px solid vars.$green-50;
+          border-bottom: 1px solid var(--primary-color-50);
           padding: 32px;
 
           &:first-child {
-            border-top: 1px solid vars.$green-50;
+            border-top: 1px solid var(--primary-color-50);
           }
 
           & label {
             font-family: "FiraCode";
             font-size: 24px;
             font-weight: 400;
-            color: vars.$green;
+            color: var(--primary-color);
 
             @media (max-width: vars.$breakpoint-xl) {
               font-size: 20px;
@@ -133,12 +133,12 @@
           & textarea {
             font-size: 24px;
             font-weight: 400;
-            color: vars.$white;
+            color: var(--secondary-color);
             outline: none;
             border: none;
             background-color: transparent;
             transition: border-color 0.3s;
-            caret-color: vars.$green;
+            caret-color: var(--primary-color);
 
             @media (max-width: vars.$breakpoint-xl) {
               font-size: 20px;
@@ -155,20 +155,20 @@
 
             &.placeholder-valid {
               &::placeholder {
-                color: vars.$white-80;
+                color: var(--secondary-color-80);
               }
             }
 
             &.placeholder-invalid {
               &::placeholder {
-                color: vars.$invalid;
+                color: var(--invalid);
               }
             }
 
             &:-webkit-autofill {
               -webkit-box-shadow: 0 0 0px 1000px transparent inset;
               transition: background-color 5000s ease-in-out 0s;
-              -webkit-text-fill-color: vars.$white-80;
+              -webkit-text-fill-color: var(--secondary-color-80);
             }
           }
         }
@@ -203,7 +203,7 @@
               justify-content: center;
               align-items: center;
               background-color: transparent;
-              border: 2px solid #00d9c4;
+              border: 2px solid var(--primary-color);
               border-radius: 2px;
               min-width: 18px;
               min-height: 18px;
@@ -213,17 +213,17 @@
               transition: background-color 0.2s ease, border-color 0.2s ease;
 
               &.notChecked {
-                border-color: vars.$invalid;
+                border-color: var(--invalid);
               }
 
               &:hover {
-                background-color: vars.$green-30;
+                background-color: var(--primary-color-30);
               }
 
               &::after {
                 display: none;
                 content: "✔";
-                color: vars.$green;
+                color: var(--primary-color);
                 font-size: 14px;
               }
             }
@@ -231,13 +231,13 @@
             .agree-text {
               font-size: 15px;
               font-weight: 400;
-              color: vars.$white;
+              color: var(--secondary-color);
 
               .privacy-link {
-                color: vars.$green;
+                color: var(--primary-color);
 
                 &:hover {
-                  color: vars.$white;
+                  color: var(--secondary-color);
                 }
               }
             }
@@ -250,18 +250,18 @@
             &.disabled {
               &:hover {
                 // cursor: not-allowed;
-                border-color: vars.$invalid;
+                border-color: var(--invalid);
                 transition: border-color 0ms;
               }
 
               &:hover span {
-                color: vars.$invalid;
+                color: var(--invalid);
               }
 
               span {
                 animation: none;
                 transition: color 0ms;
-                color: vars.$white;
+                color: var(--secondary-color);
               }
             }
           }

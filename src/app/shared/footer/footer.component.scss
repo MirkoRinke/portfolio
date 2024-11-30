@@ -2,7 +2,7 @@
 
 .footer {
   display: flex;
-  background-color: vars.$background;
+  background-color: var(--background);
 
   .content {
     display: flex;
@@ -51,7 +51,7 @@
           gap: 8px;
           font-size: 16px;
           font-weight: 400;
-          color: vars.$white;
+          color: var(--secondary-color);
 
           @media (max-width: vars.$breakpoint-xs) {
             font-size: 14px;
@@ -62,7 +62,7 @@
       .copyright-desktop {
         font-size: 18px;
         font-weight: 400;
-        color: vars.$green;
+        color: var(--primary-color);
 
         @media (max-width: vars.$breakpoint-lg) {
           display: none;
@@ -78,7 +78,7 @@
           text-decoration: none;
           font-size: 16px;
           font-weight: 400;
-          color: vars.$white;
+          color: var(--secondary-color);
           position: relative;
           transition: all 175ms ease-in-out;
 
@@ -89,7 +89,7 @@
           &::after {
             content: "•";
             position: absolute;
-            color: vars.$green;
+            color: var(--primary-color);
             font-size: 30px;
             height: 30px;
             opacity: 0;
@@ -100,7 +100,7 @@
 
           &:hover {
             transition: all 175ms ease-in-out;
-            color: vars.$green;
+            color: var(--primary-color);
             &::after {
               transition: all 175ms ease-in-out;
               opacity: 1;
@@ -114,7 +114,7 @@
       display: none;
       font-size: 18px;
       font-weight: 400;
-      color: vars.$green;
+      color: var(--primary-color);
 
       @media (max-width: vars.$breakpoint-lg) {
         display: inline;

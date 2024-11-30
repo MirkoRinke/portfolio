@@ -3,7 +3,7 @@
 .testimonials {
   display: flex;
   flex-direction: column;
-  background-color: vars.$background;
+  background-color: var(--background);
 
   .content {
     display: flex;
@@ -35,7 +35,7 @@
     .heading {
       font-size: 32px;
       font-weight: bold;
-      color: vars.$green;
+      color: var(--primary-color);
       margin-inline: auto;
       text-align: center;
 
@@ -80,8 +80,8 @@
         display: flex;
         flex-direction: column;
         gap: 44px;
-        background-color: vars.$green-10;
-        border: 1px solid vars.$green;
+        background-color: var(--primary-color-10);
+        border: 1px solid var(--primary-color);
         border-radius: 32px;
         padding: 48px 40px;
         min-width: 632px;
@@ -114,7 +114,7 @@
 
           .quotes {
             min-width: 90px;
-            fill: vars.$white;
+            fill: var(--secondary-color);
 
             @media (max-width: vars.$breakpoint-md) {
               min-width: 50px;
@@ -129,7 +129,7 @@
         .textarea {
           font-size: 20px;
           font-weight: 400;
-          color: vars.$white;
+          color: var(--secondary-color);
 
           @media (max-width: vars.$breakpoint-lg) {
             font-size: 16px;
@@ -154,13 +154,13 @@
           .horizontal-line {
             flex-grow: 1;
             height: 1px;
-            background-color: vars.$white;
+            background-color: var(--secondary-color);
           }
 
           .name {
             font-size: 18px;
             font-weight: 400;
-            color: vars.$white;
+            color: var(--secondary-color);
             white-space: nowrap;
             margin-left: 20px;
 
@@ -196,7 +196,7 @@
         .arrow-right {
           height: 18px;
           width: 18px;
-          fill: vars.$white;
+          fill: var(--secondary-color);
           transition: fill 175ms ease-in-out, transform 175ms ease-in-out;
         }
 
@@ -204,7 +204,7 @@
           .arrow-left,
           .arrow-right {
             cursor: pointer;
-            fill: vars.$green;
+            fill: var(--primary-color);
             transition: fill 175ms ease-in-out, transform 175ms ease-in-out;
           }
 
@@ -221,10 +221,10 @@
       .counter {
         min-height: 15px;
         min-width: 15px;
-        fill: vars.$white;
+        fill: var(--secondary-color);
 
         &.active {
-          fill: vars.$green;
+          fill: var(--primary-color);
         }
       }
     }

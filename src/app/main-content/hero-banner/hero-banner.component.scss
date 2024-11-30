@@ -8,7 +8,7 @@
   overflow: hidden;
   white-space: nowrap;
 
-  background-color: vars.$white-12;
+  background-color: var(--secondary-color-12);
   transform: rotate(-3deg);
   // width: 1440px;
   width: 110%;
@@ -29,7 +29,7 @@
     span {
       font-size: 32px;
       font-weight: 400;
-      color: vars.$green;
+      color: var(--primary-color);
       white-space: nowrap;
       margin-inline: 55px;
 

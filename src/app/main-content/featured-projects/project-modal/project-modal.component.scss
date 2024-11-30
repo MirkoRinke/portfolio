@@ -3,12 +3,12 @@
 .project-modal {
   display: flex;
   justify-content: space-between;
-  background-image: vars.$modal-background;
+  background-image: var(--modal-background);
   max-height: 656px;
   height: 100%;
   max-width: 1248px;
   width: 100%;
-  border: 1px solid vars.$green;
+  border: 1px solid var(--primary-color);
   border-radius: 30px;
   padding: 91px 80px;
   position: relative;
@@ -62,7 +62,7 @@
       .index {
         font-size: 128px;
         font-weight: bold;
-        color: vars.$green;
+        color: var(--primary-color);
         letter-spacing: -2%;
         line-height: 100px;
 
@@ -83,7 +83,7 @@
       .project-name {
         font-size: 64px;
         font-weight: bold;
-        color: vars.$white;
+        color: var(--secondary-color);
         letter-spacing: -3%;
         line-height: 80px;
 
@@ -123,7 +123,7 @@
         .heading {
           font-size: 24px;
           font-weight: bold;
-          color: vars.$green;
+          color: var(--primary-color);
 
           @media (max-width: vars.$breakpoint-xl) {
             font-size: 20px;
@@ -137,7 +137,7 @@
         .textarea {
           font-size: 18px;
           font-weight: 400;
-          color: vars.$white;
+          color: var(--secondary-color);
 
           @media (max-width: vars.$breakpoint-xl) {
             font-size: 16px;
@@ -176,12 +176,12 @@
           .icon {
             height: 24px;
             width: 24px;
-            fill: vars.$green;
+            fill: var(--primary-color);
           }
 
           .name {
             font-weight: 400;
-            color: vars.$white;
+            color: var(--secondary-color);
           }
         }
       }
@@ -207,10 +207,10 @@
         gap: 4px;
 
         background-color: transparent;
-        border: 1px solid vars.$white;
+        border: 1px solid var(--secondary-color);
         border-radius: 100px;
         padding: 13px 24px;
-        color: vars.$white;
+        color: var(--secondary-color);
         transition: border-color 0ms;
         width: fit-content;
 
@@ -220,14 +220,14 @@
 
         &:hover {
           cursor: pointer;
-          border-color: vars.$green;
-          color: vars.$green;
+          border-color: var(--primary-color);
+          color: var(--primary-color);
           transition: border-color 175ms;
         }
 
         .arrow {
           min-width: 20px;
-          fill: vars.$green;
+          fill: var(--primary-color);
         }
 
         &:hover .arrow {
@@ -275,8 +275,8 @@
         -45deg,
         transparent,
         transparent 12px,
-        vars.$green 8px,
-        vars.$green 13px
+        var(--primary-color) 8px,
+        var(--primary-color) 13px
       );
       width: 98%;
       aspect-ratio: 16 / 9;
@@ -324,7 +324,7 @@
     }
 
     &:hover .cross {
-      fill: vars.$green;
+      fill: var(--primary-color);
       transform: scale(1.3);
       transition: transform 175ms ease-in-out;
     }
@@ -332,7 +332,7 @@
     .cross {
       height: 18px;
       width: 18px;
-      fill: vars.$white;
+      fill: var(--secondary-color);
     }
   }
 
@@ -366,11 +366,11 @@
 
       font-size: 18px;
       font-weight: 400;
-      color: vars.$green;
+      color: var(--primary-color);
 
       &:hover {
         cursor: pointer;
-        color: vars.$white;
+        color: var(--secondary-color);
       }
 
       &:hover .arrow-right {
@@ -386,7 +386,7 @@
       .arrow-left,
       .arrow-right {
         min-width: 30px;
-        fill: vars.$green;
+        fill: var(--primary-color);
       }
     }
   }

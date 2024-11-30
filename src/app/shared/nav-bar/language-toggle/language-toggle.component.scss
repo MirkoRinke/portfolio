@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid vars.$green;
+  border: 1px solid var(--primary-color);
   border-radius: 100px;
 
   & .de,
@@ -16,13 +16,13 @@
     height: 28px;
     font-size: 16px;
     font-weight: 400;
-    color: vars.$green;
+    color: var(--primary-color);
     transition: all 175ms ease-in-out;
     cursor: pointer;
 
     &.active {
-      background-color: vars.$green;
-      color: vars.$white;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
       font-weight: bold;
       cursor: default;
     }

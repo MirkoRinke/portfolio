@@ -2,7 +2,7 @@
 
 .about-me {
   display: flex;
-  background-color: vars.$background;
+  background-color: var(--background);
 
   .content {
     display: flex;
@@ -58,8 +58,8 @@
           45deg,
           transparent,
           transparent 28px,
-          vars.$green 5px,
-          vars.$green 30px
+          var(--primary-color) 5px,
+          var(--primary-color) 30px
         );
         border-radius: 30px;
         height: 568px;
@@ -111,7 +111,7 @@
       .heading {
         font-size: 24px;
         font-weight: 500;
-        color: vars.$green;
+        color: var(--primary-color);
         padding-top: 96px;
 
         @media (max-width: vars.$breakpoint-xl) {
@@ -123,10 +123,10 @@
       .info-box {
         display: flex;
         flex-direction: column;
-        border: 1px solid vars.$green;
+        border: 1px solid var(--primary-color);
         border-radius: 30px;
-        background-color: vars.$green-10;
-        color: vars.$white;
+        background-color: var(--primary-color-10);
+        color: var(--secondary-color);
         padding: 32px;
         gap: 32px;
 
@@ -134,7 +134,7 @@
           font-family: "FiraCode";
           font-size: 64px;
           font-weight: bold;
-          color: vars.$green;
+          color: var(--primary-color);
 
           @media (max-width: vars.$breakpoint-xl) {
             text-align: center;
@@ -149,7 +149,7 @@
         .info-introduction {
           font-size: 18px;
           font-weight: 400;
-          color: vars.$white-80;
+          color: var(--secondary-color-80);
           text-align: justify;
 
           @media (max-width: vars.$breakpoint-xl) {
@@ -167,14 +167,14 @@
             gap: 24px;
 
             .icon {
-              fill: vars.$green;
+              fill: var(--primary-color);
               min-width: 32px;
             }
 
             .textarea {
               font-size: 18px;
               font-weight: 400;
-              color: vars.$white-80;
+              color: var(--secondary-color-80);
 
               @media (max-width: vars.$breakpoint-xl) {
                 font-size: 16px;
@@ -187,7 +187,7 @@
             }
 
             &:hover .textarea {
-              color: vars.$white;
+              color: var(--secondary-color);
             }
           }
         }
