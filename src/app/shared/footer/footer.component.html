@@ -2,12 +2,11 @@
   <div class="content">
     <div class="desktop">
       <div class="footer-logo">
-        <img
+        <div
           onclick="window.location.href='#';"
           class="logo"
-          src="./images/logo-MR.svg"
-          alt="logo"
-        />
+          [innerHTML]="returnIcon('logo')"
+        ></div>
         <div class="info">
           <p>{{ texts.position }}</p>
           <p>{{ texts.location }}</p>

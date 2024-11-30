@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
 import { Texts, textsDE, textsEN } from './language';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { returnIcon } from '../../shared/services/svg.icons.service';
 
 @Component({
   selector: 'app-about-me',
@@ -15,7 +17,15 @@ export class AboutMeComponent {
   texts: Texts = textsDE;
   private languageSubscription: Subscription | undefined;
 
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private sanitizer: DomSanitizer
+  ) {}
+
+  public returnIcon(type: string): SafeHtml {
+    const iconHtml = returnIcon(type);
+    return this.sanitizer.bypassSecurityTrustHtml(iconHtml);
+  }
 
   onMouseOver(): void {
     this.isHovered = true;

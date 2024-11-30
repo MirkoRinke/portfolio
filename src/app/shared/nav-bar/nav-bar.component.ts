@@ -5,6 +5,8 @@ import { LanguageService } from '../services/language.service';
 import { ScrollService } from '../services/scroll.service';
 import { Texts, textsDE, textsEN } from './language';
 import { LanguageToggleComponent } from './language-toggle/language-toggle.component';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { returnIcon } from '../../shared/services/svg.icons.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -22,8 +24,14 @@ export class NavBarComponent {
 
   constructor(
     private languageService: LanguageService,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private sanitizer: DomSanitizer
   ) {}
+
+  public returnIcon(type: string): SafeHtml {
+    const iconHtml = returnIcon(type);
+    return this.sanitizer.bypassSecurityTrustHtml(iconHtml);
+  }
 
   setActiveLink(link: string): void {
     this.activeLink = link;

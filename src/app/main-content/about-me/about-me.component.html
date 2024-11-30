@@ -18,19 +18,19 @@
         </p>
         <div class="about-me-section">
           <div class="text-wrapper">
-            <img src="./images/about-me-1.svg" alt="about-me-1" />
+            <div class="icon" [innerHTML]="returnIcon('location')"></div>
             <p class="textarea">
               {{ texts.workEnvironment }}
             </p>
           </div>
           <div class="text-wrapper">
-            <img src="./images/about-me-2.svg" alt="about-me-2" />
+            <div class="icon" [innerHTML]="returnIcon('cognition')"></div>
             <p class="textarea">
               {{ texts.personalGrowth }}
             </p>
           </div>
           <div class="text-wrapper">
-            <img src="./images/about-me-3.svg" alt="about-me-3" />
+            <div class="icon" [innerHTML]="returnIcon('releases')"></div>
             <p class="textarea">
               {{ texts.problemSolving }}
             </p>

@@ -14,8 +14,10 @@
     padding-inline: 16px;
   }
 
-  .logo_small {
+  .logo-small {
     display: none;
+    min-width: 35px;
+    fill: vars.$green;
 
     @media (max-width: vars.$breakpoint-lg) {
       display: block;
@@ -120,8 +122,7 @@
   }
 
   .logo {
-    height: 50px;
-    width: auto;
+    min-width: 132px;
 
     @media (max-width: vars.$breakpoint-lg) {
       display: none;
@@ -133,16 +134,16 @@
     align-items: center;
     z-index: 9999;
 
-    & svg {
+    .icon {
       height: 32px;
-      width: auto;
+      width: 32px;
       fill: vars.$white;
     }
 
     &:hover {
       cursor: pointer;
 
-      & svg {
+      & .icon {
         fill: vars.$green;
       }
     }

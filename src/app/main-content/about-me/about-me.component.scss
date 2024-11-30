@@ -166,6 +166,11 @@
             display: flex;
             gap: 24px;
 
+            .icon {
+              fill: vars.$green;
+              min-width: 32px;
+            }
+
             .textarea {
               font-size: 18px;
               font-weight: 400;
