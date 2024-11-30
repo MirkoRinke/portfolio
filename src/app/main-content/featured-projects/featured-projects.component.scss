@@ -13,10 +13,14 @@
     padding-block: 77px;
     padding-inline: 96px;
 
-    @media (max-width: vars.$breakpoint-lg) {
+    @media (max-width: vars.$breakpoint-xl) {
       padding-block: 100px;
       padding-inline: 16px;
       align-items: center;
+      max-width: 1100px;
+    }
+
+    @media (max-width: vars.$breakpoint-lg) {
       max-width: fit-content;
     }
 
