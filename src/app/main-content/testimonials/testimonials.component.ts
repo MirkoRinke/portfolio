@@ -8,6 +8,8 @@ import {
   testimonialsEN,
   testimonialsDE,
 } from './testimonials.data';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { returnIcon } from '../../shared/services/svg.icons.service';
 
 @Component({
   selector: 'app-testimonials',
@@ -26,7 +28,15 @@ export class TestimonialsComponent {
 
   private languageSubscription: Subscription | undefined;
 
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private sanitizer: DomSanitizer
+  ) {}
+
+  public returnIcon(type: string): SafeHtml {
+    const iconHtml = returnIcon(type);
+    return this.sanitizer.bypassSecurityTrustHtml(iconHtml);
+  }
 
   ngOnInit(): void {
     this.languageSubscription =

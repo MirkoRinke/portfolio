@@ -103,23 +103,21 @@
 
         .quotes {
           position: absolute;
-          top: -10px;
-          left: -40px;
+          top: -5px;
+          left: -22px;
           z-index: 2;
 
           @media (max-width: vars.$breakpoint-md) {
-            top: -10px;
-            left: -20px;
+            top: -5px;
+            left: -7px;
           }
 
-          & svg {
-            height: 50px;
-            width: 90px;
+          .quotes {
+            min-width: 90px;
             fill: vars.$white;
 
             @media (max-width: vars.$breakpoint-md) {
-              height: 40px;
-              width: 72px;
+              min-width: 50px;
             }
           }
         }
@@ -171,7 +169,8 @@
             }
 
             @media (max-width: vars.$breakpoint-md) {
-              font-size: 14px;
+              white-space: unset;
+              font-size: 12px;
               margin-left: 0;
             }
           }
@@ -220,8 +219,8 @@
       }
 
       .counter {
-        height: 8px;
-        width: 8px;
+        min-height: 15px;
+        min-width: 15px;
         fill: vars.$white;
 
         &.active {
