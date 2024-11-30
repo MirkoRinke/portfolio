@@ -3,6 +3,8 @@ import { Subscription } from 'rxjs';
 import { LanguageService } from '../../shared/services/language.service';
 import { Texts, textsDE, textsEN } from './language';
 import { Skill, TECH_SKILLS, LEARNING_SKILLS } from './skills.data';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { returnIcon } from '../../shared/services/svg.icons.service';
 
 @Component({
   selector: 'app-skills',
@@ -18,7 +20,15 @@ export class SkillsComponent {
   texts: Texts = textsDE;
   private languageSubscription: Subscription | undefined;
 
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private sanitizer: DomSanitizer
+  ) {}
+
+  public returnIcon(type: string): SafeHtml {
+    const iconHtml = returnIcon(type);
+    return this.sanitizer.bypassSecurityTrustHtml(iconHtml);
+  }
 
   ngOnInit(): void {
     this.languageSubscription =

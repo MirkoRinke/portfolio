@@ -6,7 +6,8 @@ export interface Texts {
   anotherSkill: string;
   descriptionAnotherSkill: string;
   buttonLetsTalk: string;
-  titleGrowthMindset: string;
+  titleGrowthMindsetFirstPart: string;
+  titleGrowthMindsetSecondPart: string;
 }
 
 export const textsDE: Texts = {
@@ -19,7 +20,8 @@ export const textsDE: Texts = {
   descriptionAnotherSkill:
     'Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
   buttonLetsTalk: 'Lass uns reden',
-  titleGrowthMindset: 'Ich habe ein besonderes Interesse am Lernen',
+  titleGrowthMindsetFirstPart: 'Ich habe ein besonderes Interesse am Lernen',
+  titleGrowthMindsetSecondPart: 'Interesse am Lernen',
 };
 
 export const textsEN: Texts = {
@@ -32,5 +34,6 @@ export const textsEN: Texts = {
   descriptionAnotherSkill:
     'Feel free to contact me. I look forward to expanding on my previous knowledge.',
   buttonLetsTalk: "Let's talk",
-  titleGrowthMindset: 'I have a special \n interest in learning',
+  titleGrowthMindsetFirstPart: 'I have a special',
+  titleGrowthMindsetSecondPart: 'interest in learning',
 };

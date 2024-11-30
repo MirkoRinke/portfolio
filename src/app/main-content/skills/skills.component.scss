@@ -190,7 +190,12 @@
 
           .icon {
             height: 64px;
-            width: 64px;
+            min-width: 64px;
+            fill: vars.$white;
+          }
+
+          .GrowthMindset {
+            fill: vars.$green;
           }
 
           .skill-name {
@@ -215,7 +220,6 @@
             position: absolute;
             top: -110px;
             transform: translateX(25%);
-            white-space: pre-wrap;
             width: max-content;
 
             &::after {
@@ -244,15 +248,19 @@
               gap: 16px;
 
               .learning-skill {
+                display: flex;
+                flex-direction: column;
+
                 .learning-icon {
-                  height: 32px;
                   width: 32px;
+                  height: 32px;
                 }
 
                 & h6 {
                   font-size: 12px;
                   font-weight: bold;
                   color: vars.$green;
+                  margin-top: 10px;
                 }
               }
             }
