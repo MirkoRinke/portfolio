@@ -12,7 +12,7 @@ export interface Texts {
 
 export const textsDE: Texts = {
   titleTechnologies: 'Technologien',
-  titleSkillSet: 'Skill Set',
+  titleSkillSet: 'Fertigkeiten',
   descriptionSkillSet:
     'Meine Reise umfasst die Arbeit an verschiedenen Projekten, die eine Reihe von Frontend-Technologien und Konzepten einsetzen. Ich bin offen dafür, neue Technologien und Methoden zu übernehmen, um meine Fähigkeiten kontinuierlich zu verbessern und im sich ständig verändernden Landschaft des Webentwicklungssektors auf dem Laufenden zu bleiben.',
   titleAnotherSkill: 'Sie benötigen',
