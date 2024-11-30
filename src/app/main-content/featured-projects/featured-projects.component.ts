@@ -7,6 +7,8 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { ProjectService } from './modal.service';
 import { ScrollService } from '../../shared/services/scroll.service';
 import { Project } from './projects.data';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { returnIcon } from '../../shared/services/svg.icons.service';
 
 @Component({
   selector: 'app-featured-projects',
@@ -27,8 +29,14 @@ export class FeaturedProjectsComponent {
   constructor(
     private languageService: LanguageService,
     private projectService: ProjectService,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private sanitizer: DomSanitizer
   ) {}
+
+  public returnIcon(type: string): SafeHtml {
+    const iconHtml = returnIcon(type);
+    return this.sanitizer.bypassSecurityTrustHtml(iconHtml);
+  }
 
   onMouseOver(projectId: number): void {
     this.hoveredProjectId = projectId;

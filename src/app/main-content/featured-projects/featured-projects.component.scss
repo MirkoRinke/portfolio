@@ -123,6 +123,7 @@
               display: none;
               height: 23px;
               width: 23px;
+              fill: vars.$white;
 
               @media (max-width: vars.$breakpoint-xs) {
                 height: 16px;

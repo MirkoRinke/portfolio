@@ -19,11 +19,8 @@
         >
           <span class="project-name"
             >{{ project.name }}
-            <img
-              class="arrow"
-              src="./images/icons/arrow-outward.svg"
-              alt="arrow-outward"
-          /></span>
+            <div class="arrow" [innerHTML]="returnIcon('arrowOutward')"></div
+          ></span>
           <div class="technologies">
             @for (technology of project.technologies; track $index) {
             <span class="technology">{{ technology.name }}</span>
