@@ -22,7 +22,7 @@ export interface Texts {
 
 export const textsDE: Texts = {
   contactInfoTitle: 'Kontaktiere mich',
-  contactInfoSubtitle: 'Lass uns \n zusammenarbeiten',
+  contactInfoSubtitle: 'Lass uns \n zusammen\u00ADarbeiten',
   contactInfoQuestion: 'Hast du ein Problem zu lösen?',
   contactInfoDescription:
     'Kontaktiere mich über dieses Formular, ich bin daran interessiert, von dir zu hören, deine Ideen zu kennen und mit meiner Arbeit zu deinen Projekten beizutragen.',
