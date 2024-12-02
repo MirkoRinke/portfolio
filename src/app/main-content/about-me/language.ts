@@ -1,3 +1,13 @@
+/**
+ * Interface representing text content for different sections of the about-me component.
+ * @interface
+ * @property {string} whoIAm - Text content describing who the person is
+ * @property {string} aboutMe - Text content for the about me section
+ * @property {string} introduction - Text content for the introduction section
+ * @property {string} workEnvironment - Text content describing the work environment
+ * @property {string} personalGrowth - Text content about personal growth
+ * @property {string} problemSolving - Text content about problem solving abilities
+ */
 export interface Texts {
   whoIAm: string;
   aboutMe: string;
@@ -7,6 +17,16 @@ export interface Texts {
   problemSolving: string;
 }
 
+/**
+ * Contains German text content for the About Me section.
+ * @interface Texts
+ * @property {string} whoIAm - Section title "Who I am"
+ * @property {string} aboutMe - Section heading "About me"
+ * @property {string} introduction - Introduction paragraph describing role and location
+ * @property {string} workEnvironment - Description of work environment flexibility
+ * @property {string} personalGrowth - Statement about personal development
+ * @property {string} problemSolving - Description of problem-solving approach
+ */
 export const textsDE: Texts = {
   whoIAm: 'Wer ich bin',
   aboutMe: 'Über mich',
@@ -20,6 +40,16 @@ export const textsDE: Texts = {
     'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben, sondern um eine kreative Form des Problemlösens. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu destillieren. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.',
 };
 
+/**
+ * Object containing English language text content for the About Me section
+ * @interface Texts
+ * @property {string} whoIAm - Section heading for personal introduction
+ * @property {string} aboutMe - About me section title
+ * @property {string} introduction - Personal introduction paragraph describing role and location
+ * @property {string} workEnvironment - Description of work flexibility and location preferences
+ * @property {string} personalGrowth - Statement about personal development and learning attitude
+ * @property {string} problemSolving - Description of approach to programming and problem solving methodology
+ */
 export const textsEN: Texts = {
   whoIAm: 'Who I Am',
   aboutMe: 'About me',

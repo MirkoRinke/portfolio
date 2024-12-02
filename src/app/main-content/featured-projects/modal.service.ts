@@ -1,6 +1,16 @@
+/**
+ * Importing Injectable decorator from @angular/core to mark class as injectable service.
+ */
 import { Injectable } from '@angular/core';
+
+/**
+ * Importing BehaviorSubject from rxjs to create observable state streams with an initial value.
+ */
 import { BehaviorSubject } from 'rxjs';
 
+/**
+ * Service for managing project selection and modal state
+ */
 @Injectable({
   providedIn: 'root',
 })

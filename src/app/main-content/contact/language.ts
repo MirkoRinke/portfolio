@@ -1,3 +1,22 @@
+/**
+ * Interface defining the structure of text content for the contact form and info section.
+ * Used to enforce consistent text properties across languages.
+ *
+ * Properties:
+ * - contactInfoTitle: Main contact section title
+ * - contactInfoSubtitle: Secondary contact heading
+ * - contactInfoQuestion: Question prompt text
+ * - contactInfoDescription: Main description text
+ * - contactInfoFrontendDeveloper: Developer role text
+ * - contactInfoDescriptionHighlight: Highlighted description text
+ * - contactFormName: Name field label
+ * - contactFormEmail: Email field label
+ * - contactFormMessage: Message field label
+ * - contactFormPrivacyPolicyText1-3: Privacy policy text sections
+ * - contactFormSubmit: Submit button text
+ * - placeholderName/Email/Message: Input field placeholder texts
+ * - requiredName/Email/Message: Validation error messages
+ */
 export interface Texts {
   contactInfoTitle: string;
   contactInfoSubtitle: string;
@@ -20,6 +39,29 @@ export interface Texts {
   requiredMessage: string;
 }
 
+/**
+ * German text content for contact component
+ * @typedef {Object} Texts
+ * @property {string} contactInfoTitle - Title for contact section
+ * @property {string} contactInfoSubtitle - Subtitle text
+ * @property {string} contactInfoQuestion - Question text
+ * @property {string} contactInfoDescription - Main description text
+ * @property {string} contactInfoFrontendDeveloper - Developer availability text
+ * @property {string} contactInfoDescriptionHighlight - Call-to-action text
+ * @property {string} contactFormName - Name field label
+ * @property {string} contactFormEmail - Email field label
+ * @property {string} contactFormMessage - Message field label
+ * @property {string} contactFormPrivacyPolicyText1 - First part of privacy policy text
+ * @property {string} contactFormPrivacyPolicyText2 - Privacy policy link text
+ * @property {string} contactFormPrivacyPolicyText3 - Last part of privacy policy text
+ * @property {string} contactFormSubmit - Submit button text
+ * @property {string} placeholderName - Name input placeholder
+ * @property {string} placeholderEmail - Email input placeholder
+ * @property {string} placeholderMessage - Message input placeholder
+ * @property {string} requiredName - Name validation message
+ * @property {string} requiredEmail - Email validation message
+ * @property {string} requiredMessage - Message validation message
+ */
 export const textsDE: Texts = {
   contactInfoTitle: 'Kontaktiere mich',
   contactInfoSubtitle: 'Lass uns \n zusammen\u00ADarbeiten',
@@ -47,6 +89,29 @@ export const textsDE: Texts = {
   requiredMessage: 'Nachricht ist erforderlich',
 };
 
+/**
+ * English text content for contact component
+ * @typedef {Object} Texts
+ * @property {string} contactInfoTitle - Title for contact section
+ * @property {string} contactInfoSubtitle - Subtitle text
+ * @property {string} contactInfoQuestion - Question text
+ * @property {string} contactInfoDescription - Main description text
+ * @property {string} contactInfoFrontendDeveloper - Developer availability text
+ * @property {string} contactInfoDescriptionHighlight - Call-to-action text
+ * @property {string} contactFormName - Name field label
+ * @property {string} contactFormEmail - Email field label
+ * @property {string} contactFormMessage - Message field label
+ * @property {string} contactFormPrivacyPolicyText1 - First part of privacy policy text
+ * @property {string} contactFormPrivacyPolicyText2 - Privacy policy link text
+ * @property {string} contactFormPrivacyPolicyText3 - Last part of privacy policy text
+ * @property {string} contactFormSubmit - Submit button text
+ * @property {string} placeholderName - Name input placeholder
+ * @property {string} placeholderEmail - Email input placeholder
+ * @property {string} placeholderMessage - Message input placeholder
+ * @property {string} requiredName - Name validation message
+ * @property {string} requiredEmail - Email validation message
+ * @property {string} requiredMessage - Message validation message
+ */
 export const textsEN: Texts = {
   contactInfoTitle: 'Contact me',
   contactInfoSubtitle: "Let's work \n together",

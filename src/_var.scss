@@ -1,5 +1,7 @@
 /* Colors */
 
+//! Green turquoise
+
 :root {
   --background: rgb(28, 28, 28);
   --background-50: rgba(28, 28, 28, 0.5);
@@ -20,6 +22,50 @@
   --secondary-color-12: rgba(255, 255, 255, 0.12);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
   --invalid: rgba(236, 123, 123, 0.8);
+
+  //! Blue
+
+  // --background: rgb(15, 20, 40);
+  // --background-50: rgba(15, 20, 40, 0.5);
+  // --hero-background: linear-gradient(45deg, #0f142a 23%, #3a5a87 100%);
+  // --modal-background: linear-gradient(45deg, #0f142a 23%, #3a5a87 100%);
+  // --menu-background: linear-gradient(45deg, #0f142a 23%, #3a5a87 100%);
+  // --skills-background: radial-gradient(
+  //   circle at 20% 50%,
+  //   rgba(58, 90, 135, 0.3) 0%,
+  //   #0f142a 20%
+  // );
+
+  // --primary-color: #4a90e2;
+  // --primary-color-50: rgba(74, 144, 226, 0.5);
+  // --primary-color-30: rgba(74, 144, 226, 0.3);
+  // --primary-color-10: rgba(74, 144, 226, 0.1);
+  // --secondary-color: #fff;
+  // --secondary-color-12: rgba(255, 255, 255, 0.12);
+  // --secondary-color-80: rgba(255, 255, 255, 0.8);
+  // --invalid: rgba(186, 70, 70, 0.8);
+
+  //! dark Violett
+
+  // --background: rgb(10, 10, 15);
+  // --background-50: rgba(10, 10, 15, 0.5);
+  // --hero-background: linear-gradient(45deg, #0a0a0f 23%, #3d2a5b 100%);
+  // --modal-background: linear-gradient(45deg, #0a0a0f 23%, #3d2a5b 100%);
+  // --menu-background: linear-gradient(45deg, #0a0a0f 23%, #3d2a5b 100%);
+  // --skills-background: radial-gradient(
+  //   circle at 20% 50%,
+  //   rgba(61, 42, 91, 0.3) 0%,
+  //   #0a0a0f 20%
+  // );
+
+  // --primary-color: #5c3d8a;
+  // --primary-color-50: rgba(92, 61, 138, 0.5);
+  // --primary-color-30: rgba(92, 61, 138, 0.3);
+  // --primary-color-10: rgba(92, 61, 138, 0.1);
+  // --secondary-color: #fff;
+  // --secondary-color-12: rgba(255, 255, 255, 0.12);
+  // --secondary-color-80: rgba(255, 255, 255, 0.8);
+  // --invalid: rgba(186, 70, 70, 0.8);
 }
 
 /* @media breakpoints */

@@ -1,3 +1,16 @@
+/**
+ * Interface representing a project entity.
+ * @interface Project
+ *
+ * @property {number} id - Unique identifier for the project
+ * @property {string} name - Name of the project
+ * @property {boolean} visibility - Flag indicating if project is visible/public
+ * @property {string} about - Brief description about the project
+ * @property {string} description - Detailed description of the project
+ * @property {Technology[]} technologies - Array of technologies used in the project
+ * @property {string} imagePath - Path to the project's image asset
+ * @property {Links} links - Object containing project-related links
+ */
 export interface Project {
   id: number;
   name: string;
@@ -9,21 +22,43 @@ export interface Project {
   links: Links;
 }
 
+/**
+ * Represents a programming technology or tool.
+ * @interface Technology
+ * @property {string} name - The name of the technology
+ * @property {string} icon - The path or identifier for the technology's icon
+ */
 interface Technology {
   name: string;
   icon: string;
 }
 
-interface IconPaths {
-  white: string;
-  green: string;
-}
-
+/**
+ * Interface representing project links
+ * @property {string} github - GitHub repository URL
+ * @property {string} liveTest - Live demo URL
+ */
 interface Links {
   github: string;
   liveTest: string;
 }
 
+/**
+ * Array of project data in English language
+ * @type {Project[]}
+ *
+ * Each project object contains:
+ * @property {number} id - Unique identifier for the project
+ * @property {string} name - Name of the project
+ * @property {boolean} visibility - Whether the project should be visible
+ * @property {string} about - Brief description about what the project is
+ * @property {string} description - Detailed description of the project
+ * @property {Array<{name: string, icon: string}>} technologies - Technologies used in the project
+ * @property {string} imagePath - Path to the project's image
+ * @property {{github: string, liveTest: string}} links - Object containing project links
+ * @property {string} links.github - GitHub repository URL
+ * @property {string} links.liveTest - Live demo URL
+ */
 export const projectsEN: Project[] = [
   {
     id: 1,
@@ -116,6 +151,22 @@ export const projectsEN: Project[] = [
   },
 ];
 
+/**
+ * Array of project data in German language
+ * @type {Project[]}
+ *
+ * Each project object contains:
+ * @property {number} id - Unique identifier for the project
+ * @property {string} name - Name of the project
+ * @property {boolean} visibility - Whether the project should be visible
+ * @property {string} about - Short description about the project purpose
+ * @property {string} description - Detailed description of the project
+ * @property {Array<{name: string, icon: string}>} technologies - Array of technologies used in the project
+ * @property {string} imagePath - Path to the project's image
+ * @property {{github: string, liveTest: string}} links - Object containing project URLs
+ * @property {string} links.github - GitHub repository URL
+ * @property {string} links.liveTest - Live demo URL
+ */
 export const projectsDE: Project[] = [
   {
     id: 1,

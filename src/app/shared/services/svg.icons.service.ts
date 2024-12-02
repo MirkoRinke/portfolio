@@ -1,5 +1,18 @@
-// <div class="icon" [innerHTML]="returnIcon('menu')"></div>
-
+/**
+ * Returns SVG markup for the specified icon type.
+ * Contains a collection of SVG icons as HTML strings that can be used throughout the application.
+ *
+ * @param {string} type - The type/name of the icon to return (e.g. 'logo', 'github', 'menu', etc.)
+ * @returns {string} The SVG markup as an HTML string, or empty string if icon type not found
+ *
+ * @example
+ * In template:
+ * <div class="icon" [innerHTML]="returnIcon('menu')"></div>
+ *
+ * In component:
+ * returnIcon('github') // Returns SVG markup for github icon
+ * returnIcon('invalid') // Returns empty string
+ */
 export function returnIcon(type: string): string {
   const icons: { [key: string]: string } = {
     logo: /*html*/ `

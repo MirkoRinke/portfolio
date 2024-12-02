@@ -1,9 +1,41 @@
+/**
+ * Importing Component decorator from @angular/core.
+ * Core Angular decorator required to:
+ * - Mark class as an Angular component
+ * - Define component metadata and configuration
+ * - Specify component properties like selector, template, styles
+ * Used to set up the language toggle component
+ */
 import { Component } from '@angular/core';
+
+/**
+ * Importing CommonModule from @angular/common.
+ * Required Angular module that provides:
+ * - Common directives like *ngIf and *ngFor
+ * - Pipes for data transformation
+ * - Basic template functionality
+ * Used to access core Angular features in the language toggle component
+ */
 import { CommonModule } from '@angular/common';
+
+/**
+ * Importing LanguageService to handle language switching functionality.
+ * Service responsible for:
+ * - Managing active language state
+ * - Switching between supported languages (DE/EN)
+ * - Broadcasting language changes to components
+ * - Storing language preference
+ */
 import { LanguageService } from '../../services/language.service';
 
 /**
- * Component for toggling the application's language.
+ * Component decorator configuration for LanguageToggleComponent.
+ * @Component defines the following metadata:
+ * - selector: 'app-language-toggle' - HTML selector for inserting this component
+ * - standalone: true - Component is self-contained without NgModule
+ * - imports: [CommonModule] - Required Angular common directives/pipes
+ * - templateUrl: Points to external HTML template file
+ * - styleUrl: Points to external SCSS styles file
  */
 @Component({
   selector: 'app-language-toggle',

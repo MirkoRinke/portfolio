@@ -1,17 +1,88 @@
+/**
+ * Importing Component decorator and inject function from @angular/core:
+ * - Component: Core decorator to define Angular components and their metadata
+ * - inject: Function to handle dependency injection in a more functional way
+ * Used for component definition and service injection in this contact form component
+ */
 import { Component, inject } from '@angular/core';
+
+/**
+ * Importing form-related modules and types from @angular/forms:
+ * - FormsModule: Required module for template-driven forms functionality
+ * - NgForm: Directive for working with template-driven form instances
+ * Used to implement and validate the contact form in this component
+ */
 import { FormsModule, NgForm } from '@angular/forms';
+
+/**
+ * Importing CommonModule from @angular/common:
+ * - Provides common Angular directives and pipes
+ * - Includes *ngIf, *ngFor, | async, etc.
+ * - Required for basic template functionality
+ * Used to access core Angular template features in this component
+ */
 import { CommonModule } from '@angular/common';
+
+/**
+ * Importing HttpClient from @angular/common/http:
+ * - Provides functionality for making HTTP requests
+ * - Used to send form data to backend server
+ * - Handles request/response lifecycle and error handling
+ * Essential for implementing contact form submission functionality
+ */
 import { HttpClient } from '@angular/common/http';
+
+/**
+ * Importing Subscription from rxjs:
+ * - Used to manage observable subscriptions
+ * - Helps prevent memory leaks through proper subscription cleanup
+ * - Essential for handling asynchronous operations and events
+ * Important for managing component lifecycle and language service subscription
+ */
 import { Subscription } from 'rxjs';
+
+/**
+ * Importing LanguageService to handle language switching functionality:
+ * - Manages translation state between German and English
+ * - Provides methods to switch languages
+ * - Emits language change events for components to react
+ * - Core service for application internationalization
+ */
 import { LanguageService } from '../../shared/services/language.service';
+
+/**
+ * Importing language-related interfaces and constants:
+ * - Texts: Interface defining structure of text content
+ * - textsDE: German translation text content
+ * - textsEN: English translation text content
+ * Used to support multi-language functionality in About Me section
+ */
 import { Texts, textsDE, textsEN } from './language';
 
+/**
+ * Interface representing the contact data.
+ *
+ * @property {string} name - The name of the contact.
+ * @property {string} email - The email address of the contact.
+ * @property {string} message - The message from the contact.
+ */
 interface ContactData {
   name: string;
   email: string;
   message: string;
 }
 
+/**
+ * Component decorator configuration for ContactComponent.
+ * @Component defines the following metadata:
+ * - selector: 'app-contact' - The HTML selector used to insert this component
+ * - standalone: true - Component is self-contained without NgModule
+ * - imports: Required dependencies:
+ *   - FormsModule: For form handling and validation
+ *   - CommonModule: For common Angular directives
+ * - templateUrl: Points to external HTML template file
+ * - styleUrl: Points to external SCSS styles file
+ */
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -20,24 +91,101 @@ interface ContactData {
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
+  /**
+   * Holds the texts to be displayed in the "About Me" section of the main content.
+   * The texts are assigned from the `textsDE` object, which contains the German translations.
+   *
+   * @type {Texts}
+   */
   texts: Texts = textsDE;
+
+  /**
+   * Subscription to track changes in the selected language.
+   * This subscription is used to update the component when the language changes.
+   * It is initialized as undefined and will be assigned when the subscription is created.
+   *
+   * @private
+   */
   private languageSubscription: Subscription | undefined;
+
+  /**
+   * A placeholder string for the name input field in the contact component.
+   * This can be used to display a default text in the input field before the user enters their name.
+   */
   placeholderName: string = '';
+
+  /**
+   * A placeholder string for the email input field in the contact component.
+   * This can be used to provide a hint to the user about the expected input format.
+   */
   placeholderEmail: string = '';
+
+  /**
+   * A placeholder message used in the contact component.
+   * This string can be used to display a default message in the input field.
+   */
   placeholderMessage: string = '';
+
+  /**
+   * A CSS class name used to style the placeholder for the name input field.
+   * The default value is 'placeholder-valid'.
+   */
   placeholderNameClass: string = 'placeholder-valid';
+
+  /**
+   * A CSS class applied to the email input placeholder to indicate its validation state.
+   * The default value is 'placeholder-valid'.
+   */
   placeholderEmailClass: string = 'placeholder-valid';
+
+  /**
+   * A CSS class applied to the placeholder message element.
+   * This class is used to style the placeholder message when it is in a valid state.
+   *
+   * @type {string}
+   */
   placeholderMessageClass: string = 'placeholder-valid';
+
+  /**
+   * Indicates whether the privacy policy has been checked by the user.
+   * This property is optional and can be undefined.
+   */
   privacyPolicyChecked?: boolean;
-  http = inject(HttpClient);
+
+  /**
+   * Injects the HttpClient service to make HTTP requests.
+   *
+   * @type {HttpClient}
+   */
+  http: HttpClient = inject(HttpClient);
+
+  /**
+   * A boolean flag indicating whether the mail test is enabled.
+   * When set to `true`, the mail test is active.
+   */
   mailTest: boolean = true;
 
+  /**
+   * @property {string} name - The name of the contact.
+   * @property {string} email - The email address of the contact.
+   * @property {string} message - The message from the contact.
+   */
   contactData: ContactData = {
     name: '',
     email: '',
     message: '',
   };
 
+  /**
+   * Configuration object for making a POST request to send an email.
+   *
+   * @property {string} endPoint - The endpoint URL to which the POST request will be sent.
+   * @property {(payload: any) => string} body - A function that takes a payload and returns it as a JSON string.
+   * @property {Object} options - Additional options for the POST request.
+   * @property {Object} options.headers - Headers to include in the POST request.
+   * @property {string} options.headers['Content-Type'] - The content type of the request, set to 'text/plain'.
+   * @property {string} options.headers.responseType - The expected response type, set to 'text'.
+   */
   post = {
     endPoint: './sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -49,8 +197,22 @@ export class ContactComponent {
     },
   };
 
+  /**
+   * Constructs an instance of the ContactComponent.
+   *
+   * @param {LanguageService} languageService - The service used for handling language-related operations.
+   */
   constructor(private languageService: LanguageService) {}
 
+  /**
+   * Angular lifecycle hook that is called after the component's view has been fully initialized.
+   *
+   * This method subscribes to the `selectedLanguage$` observable from the `languageService` to
+   * dynamically load texts based on the selected language. It also loads the texts for the
+   * current language immediately upon initialization.
+   *
+   * @returns {void}
+   */
   ngOnInit(): void {
     this.languageSubscription =
       this.languageService.selectedLanguage$.subscribe((language) => {
@@ -59,24 +221,62 @@ export class ContactComponent {
     this.loadTexts(this.languageService.getLanguage());
   }
 
+  /**
+   * Lifecycle hook that is called when the component is destroyed.
+   *
+   * This method unsubscribes from the languageSubscription if it exists,
+   * to prevent memory leaks and ensure proper cleanup.
+   */
   ngOnDestroy(): void {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
     }
   }
 
+  /**
+   * Loads the appropriate text content based on the provided language.
+   *
+   * @param {string} language - The language code to load texts for.
+   *                            Supported values are 'de' for German and 'en' for English.
+   *                            Defaults to English if an unsupported language code is provided.
+   *
+   * @returns {void}
+   */
   loadTexts(language: string): void {
     if (language === 'de') (this.texts = textsDE), this.setPlaceholders();
     else if (language === 'en') (this.texts = textsEN), this.setPlaceholders();
     else this.texts = textsEN;
   }
 
+  /**
+   * Sets the placeholder values for the contact form fields.
+   *
+   * This method assigns the placeholder text for the name, email,
+   * and message fields from the `texts` object to the corresponding
+   * component properties.
+   *
+   * @returns {void}
+   */
   setPlaceholders(): void {
     this.placeholderName = this.texts.placeholderName;
     this.placeholderEmail = this.texts.placeholderEmail;
     this.placeholderMessage = this.texts.placeholderMessage;
   }
 
+  /**
+   * Handles the form submission event.
+   *
+   * @param {NgForm} ngForm - The form to be submitted.
+   *
+   * The function performs the following actions:
+   * - Checks if the privacy policy is accepted. If not, it sets `privacyPolicyChecked` to false and returns.
+   * - If the form is submitted, valid, and not in test mode, it sends a POST request with the contact data.
+   *   - On success, it resets the form.
+   *   - On error, it logs the error to the console.
+   *   - On completion, it logs a completion message to the console.
+   * - If the form is submitted, valid, and in test mode, it logs a success message, resets the form, and clears the form.
+   * - If the form is not valid, it updates the placeholders.
+   */
   onSubmit(ngForm: NgForm): void {
     if (!this.privacyPolicyChecked) {
       this.privacyPolicyChecked = false;
@@ -103,6 +303,10 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * Clears the contact form by resetting the placeholder classes to 'placeholder-valid'.
+   * This method is typically called to reset the form to its initial state.
+   */
   clearForm(): void {
     this.privacyPolicyChecked;
     this.placeholderNameClass = 'placeholder-valid';
@@ -110,6 +314,17 @@ export class ContactComponent {
     this.placeholderMessageClass = 'placeholder-valid';
   }
 
+  /**
+   * Updates the placeholders for the form fields based on their validation status.
+   *
+   * This method checks the validity of the 'name', 'email', and 'message' controls
+   * in the provided form. If any of these controls are invalid, it calls the respective
+   * methods to update their placeholders.
+   *
+   * @param {NgForm} form - The form whose controls' placeholders need to be updated.
+   *
+   * @returns {void}
+   */
   updatePlaceholders(form: NgForm): void {
     if (form.controls['name'].invalid) {
       this.updatePlaceholdersName();
@@ -122,28 +337,62 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * Updates the placeholder for the name input field to indicate that it is required.
+   * Sets the placeholder text to the required name text, clears the contact name data,
+   * and applies the 'placeholder-invalid' CSS class to the placeholder.
+   */
   updatePlaceholdersName(): void {
     this.placeholderName = this.texts.requiredName;
     this.contactData.name = '';
     this.placeholderNameClass = 'placeholder-invalid';
   }
 
+  /**
+   * Updates the email placeholder to indicate that the email field is required.
+   * This method sets the `placeholderEmail` to the required email text,
+   * clears the `contactData.email` field, and applies the 'placeholder-invalid' class
+   * to the `placeholderEmailClass` property.
+   */
   updatePlaceholdersEmail(): void {
     this.placeholderEmail = this.texts.requiredEmail;
     this.contactData.email = '';
     this.placeholderEmailClass = 'placeholder-invalid';
   }
 
+  /**
+   * Updates the placeholders and message for the contact form.
+   *
+   * This method sets the `placeholderMessage` to the required message text,
+   * clears the `contactData.message`, and assigns the 'placeholder-invalid'
+   * class to `placeholderMessageClass`.
+   *
+   * @returns {void}
+   */
   updatePlaceholdersMessage(): void {
     this.placeholderMessage = this.texts.requiredMessage;
     this.contactData.message = '';
     this.placeholderMessageClass = 'placeholder-invalid';
   }
 
+  /**
+   * Handles the change event for the privacy policy checkbox.
+   * Updates the `privacyPolicyChecked` property based on the checkbox state.
+   *
+   * @param {Event} event - The event object from the checkbox change event.
+   */
   onPrivacyPolicyChange(event: Event): void {
     this.privacyPolicyChecked = (event.target as HTMLInputElement).checked;
   }
 
+  /**
+   * Checks if the form is valid and the privacy policy is checked.
+   *
+   * @param {NgForm} form - The form to validate.
+   * @returns {boolean | undefined} - Returns `true` if the form is valid and the privacy policy is checked,
+   *                                  `false` if the form is invalid or the privacy policy is not checked,
+   *                                  or `undefined` if the form is not provided.
+   */
   isFormValid(form: NgForm): boolean | undefined {
     return !!form.valid && this.privacyPolicyChecked;
   }

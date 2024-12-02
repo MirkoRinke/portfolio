@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Email handling script for contact form
+ * 
+ * Processes OPTIONS preflight requests and POST requests to send emails
+ * Accepts JSON payload with email, name and message
+ * Sends HTML formatted email to configured recipient
+ * 
+ * @param string $email Sender's email address
+ * @param string $name Sender's name
+ * @param string $message Message content
+ */
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
         header("Access-Control-Allow-Origin: *");
