@@ -111,7 +111,7 @@
         align-items: center;
       }
 
-      @media (max-width: vars.$breakpoint-sm) {
+      @media (max-width: vars.$breakpoint-xl) {
         gap: 16px;
       }
 
@@ -138,9 +138,11 @@
           font-size: 18px;
           font-weight: 400;
           color: var(--secondary-color);
+          min-height: 88px;
 
           @media (max-width: vars.$breakpoint-xl) {
             font-size: 16px;
+            min-height: 76px;
           }
 
           @media (max-width: vars.$breakpoint-lg) {
