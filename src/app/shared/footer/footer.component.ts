@@ -143,4 +143,13 @@ export class FooterComponent {
     else if (language === 'en') this.texts = textsEN;
     else this.texts = textsEN;
   }
+
+  /**
+   * Gets the current year.
+   *
+   * @returns {number} The current year.
+   */
+  getYear(): number {
+    return new Date().getFullYear();
+  }
 }
