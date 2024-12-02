@@ -19,6 +19,10 @@
     min-width: 35px;
     fill: var(--primary-color);
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @media (max-width: vars.$breakpoint-lg) {
       display: block;
       height: 50px;
@@ -123,6 +127,10 @@
 
   .logo {
     min-width: 132px;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     @media (max-width: vars.$breakpoint-lg) {
       display: none;

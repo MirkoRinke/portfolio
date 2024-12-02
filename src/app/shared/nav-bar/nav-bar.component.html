@@ -1,6 +1,10 @@
 <nav class="nav-bar">
   <!-- <img class="logo_small" src="images/logo-MR-small.svg" alt="" /> -->
-  <div class="logo-small" [innerHTML]="returnIcon('logoSmall')"></div>
+  <div
+    onclick="window.location.href='#';"
+    class="logo-small"
+    [innerHTML]="returnIcon('logoSmall')"
+  ></div>
   <div
     class="left-side"
     (click)="closeMenu()"
@@ -33,7 +37,11 @@
       <app-language-toggle class="language-toggle-menu"></app-language-toggle>
     </div>
   </div>
-  <div class="logo" [innerHTML]="returnIcon('logo')"></div>
+  <div
+    onclick="window.location.href='#';"
+    class="logo"
+    [innerHTML]="returnIcon('logo')"
+  ></div>
   <div (click)="openMenu()" class="menu">
     <div class="icon" [innerHTML]="returnIcon('menu')"></div>
   </div>
