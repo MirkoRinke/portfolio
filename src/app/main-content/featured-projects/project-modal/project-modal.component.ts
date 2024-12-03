@@ -1,12 +1,12 @@
 /**
- * Importing Component decorator from @angular/core.
- * Core Angular decorator used to:
- * - Define component metadata and configuration
- * - Mark a class as an Angular component
- * - Specify component properties like selector, template, styles
- * Required for creating any Angular component
+ * Angular core imports
+ * @module @angular/core
+ *
+ * @description
+ * - Component: Decorator that marks a class as an Angular component and provides configuration metadata.
+ * - HostListener: Decorator that declares a DOM event to listen for and provides a handler method to run when that event occurs.
  */
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 /**
  * Importing Subscription class from RxJS library.
@@ -252,6 +252,25 @@ export class ProjectModalComponent {
       this.projectService.setCurrentProject(this.currentProject - 1);
     } else {
       this.projectService.setCurrentProject(this.projects.length - 1);
+    }
+  }
+
+  @HostListener('window:keydown', ['$event'])
+  /**
+   * Handles the keydown event to navigate between projects.
+   *
+   * @param {KeyboardEvent} event - The keyboard event triggered by the user.
+   * @returns {void}
+   *
+   * @remarks
+   * If the 'ArrowRight' key is pressed, it navigates to the next project.
+   * If the 'ArrowLeft' key is pressed, it navigates to the previous project.
+   */
+  handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'ArrowRight') {
+      this.nextProject();
+    } else if (event.key === 'ArrowLeft') {
+      this.previousProject();
     }
   }
 }
