@@ -15,13 +15,14 @@
 
     @media (max-width: vars.$breakpoint-xl) {
       padding-block: 100px;
-      padding-inline: 16px;
+      padding-inline: 86px;
       align-items: center;
       max-width: 1100px;
     }
 
     @media (max-width: vars.$breakpoint-lg) {
-      max-width: fit-content;
+      max-width: 600px;
+      padding-inline: 16px;
     }
 
     @media (max-width: vars.$breakpoint-xs) {
@@ -34,6 +35,10 @@
       max-width: 880px;
       width: 100%;
       gap: 41px;
+
+      @media (max-width: vars.$breakpoint-xl) {
+        max-width: 100%;
+      }
 
       .header {
         display: flex;
