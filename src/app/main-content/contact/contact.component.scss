@@ -15,15 +15,15 @@
     padding-block: 77px;
     padding-inline: 96px;
 
+    @media (max-width: vars.$breakpoint-xl) {
+      padding-block: 50px;
+    }
+
     @media (max-width: vars.$breakpoint-lg) {
       flex-direction: column;
       padding-block: 100px;
-      max-width: 600px;
-    }
-
-    @media (max-width: vars.$breakpoint-xl) {
-      padding-block: 50px;
       padding-inline: 16px;
+      max-width: 600px;
     }
 
     .contact-info {
@@ -52,8 +52,11 @@
           color: var(--primary-color);
 
           @media (max-width: vars.$breakpoint-xl) {
-            text-align: center;
             font-size: 40px;
+          }
+
+          @media (max-width: vars.$breakpoint-lg) {
+            text-align: center;
           }
 
           @media (max-width: vars.$breakpoint-xs) {
@@ -74,6 +77,9 @@
 
           @media (max-width: vars.$breakpoint-xl) {
             font-size: 18px;
+          }
+
+          @media (max-width: vars.$breakpoint-lg) {
             text-align: center;
           }
         }
@@ -82,7 +88,7 @@
           font-weight: 400;
           color: var(--secondary-color);
 
-          @media (max-width: vars.$breakpoint-xl) {
+          @media (max-width: vars.$breakpoint-lg) {
             text-align: center;
           }
 
