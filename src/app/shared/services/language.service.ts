@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This service manages the application's selected language state using RxJS BehaviorSubject and Observable.
+ */
+
+/**
  * Importing Injectable decorator from @angular/core.
  * Required to:
  * - Mark class as injectable service
@@ -9,14 +13,12 @@
 import { Injectable } from '@angular/core';
 
 /**
- * Importing BehaviorSubject from RxJS library.
- * Used to create an observable stream with an initial value:
- * - Provides current value and emits future changes
- * - Maintains selected language state
- * - Allows components to subscribe to language changes
- * Essential for reactive language state management
+ * Importing BehaviorSubject and Observable from rxjs.
+ *
+ * BehaviorSubject is used to hold the current value of the selected language.
+ * Observable is used to allow other parts of the application to subscribe to language changes.
  */
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 /**
  * Injectable decorator configuration.
@@ -36,7 +38,8 @@ export class LanguageService {
    * - Enables reactive updates to language changes
    * - Only service can modify value directly via next()
    */
-  private selectedLanguageSubject = new BehaviorSubject<string>('de');
+  private selectedLanguageSubject: BehaviorSubject<string> =
+    new BehaviorSubject<string>('de');
 
   /**
    * An observable that emits the currently selected language.
@@ -46,7 +49,8 @@ export class LanguageService {
    *
    * @type {Observable<string>}
    */
-  selectedLanguage$ = this.selectedLanguageSubject.asObservable();
+  selectedLanguage$: Observable<string> =
+    this.selectedLanguageSubject.asObservable();
 
   /**
    * Constructs an instance of the LanguageService.

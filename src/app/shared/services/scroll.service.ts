@@ -1,4 +1,9 @@
 /**
+ * @fileoverview This service provides methods to enable and disable scrolling on the webpage.
+ * It also includes functionality to prevent default scrolling behavior.
+ */
+
+/**
  * Importing Injectable decorator from @angular/core.
  * Required to:
  * - Mark class as injectable service

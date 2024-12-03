@@ -1,4 +1,9 @@
 /**
+ * @fileoverview This file provides a service for returning SVG markup for specified icon types.
+ * It contains a collection of SVG icons as HTML strings that can be used throughout the application.
+ */
+
+/**
  * Returns SVG markup for the specified icon type.
  * Contains a collection of SVG icons as HTML strings that can be used throughout the application.
  *
