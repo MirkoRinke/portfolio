@@ -116,14 +116,6 @@ export class AboutMeComponent {
   }
 
   /**
-   * Handles the mouse over event for a component.
-   * Sets the isHovered flag to true when the mouse enters the component's area.
-   */
-  onMouseOver(): void {
-    this.isHovered = true;
-  }
-
-  /**
    * Lifecycle hook that is called after data-bound properties of a directive are initialized.
    * Subscribes to language changes and loads texts based on the selected language.
    *

@@ -73,12 +73,6 @@
         @media (max-width: vars.$breakpoint-lg) {
           display: none;
         }
-
-        &.hovered {
-          transition: all 175ms ease-in-out;
-          transform: translate(-30px, 30px);
-          z-index: 0;
-        }
       }
 
       .image {
@@ -86,6 +80,12 @@
         height: 100%;
         width: 100%;
         z-index: 1;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          transition: all 300ms ease-in-out;
+          transform: translate(30px, -30px);
+        }
       }
     }
 
