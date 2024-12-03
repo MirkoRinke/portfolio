@@ -260,16 +260,16 @@
       margin-inline: auto;
     }
 
-    &:hover {
-      cursor: pointer;
-    }
-
     img {
       width: 100%;
       aspect-ratio: 16 / 9;
       border-radius: 24px;
       position: relative;
       z-index: 2;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .bg {

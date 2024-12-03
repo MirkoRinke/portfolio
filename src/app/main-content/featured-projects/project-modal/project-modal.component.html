@@ -34,11 +34,12 @@
       </button>
     </div>
   </div>
-  <div
-    (click)="openLink(projects[currentProject].links.liveTest)"
-    class="project-image"
-  >
-    <img src="{{ projects[currentProject].imagePath }}" alt="project image" />
+  <div class="project-image">
+    <img
+      (click)="openLink(projects[currentProject].links.liveTest)"
+      src="{{ projects[currentProject].imagePath }}"
+      alt="project image"
+    />
     <div class="bg"></div>
   </div>
   <button (click)="closeModal()" class="close-button">
