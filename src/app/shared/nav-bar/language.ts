@@ -22,7 +22,7 @@ export interface Texts {
  */
 export const textsDE: Texts = {
   aboutMe: 'Über mich',
-  skills: 'Fähigkeiten',
+  skills: 'Skills',
   projects: 'Projekte',
 };
 

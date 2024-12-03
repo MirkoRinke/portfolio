@@ -41,16 +41,16 @@ export interface Texts {
  */
 export const textsDE: Texts = {
   titleTechnologies: 'Technologien',
-  titleSkillSet: 'Fertigkeiten',
+  titleSkillSet: 'Skills',
   descriptionSkillSet:
-    'Meine Reise umfasst die Arbeit an verschiedenen Projekten, die eine Reihe von Frontend-Technologien und Konzepten einsetzen. Ich bin offen dafür, neue Technologien und Methoden zu übernehmen, um meine Fähigkeiten kontinuierlich zu verbessern und im sich ständig verändernden Landschaft des Webentwicklungssektors auf dem Laufenden zu bleiben.',
-  titleAnotherSkill: 'Sie benötigen',
-  anotherSkill: 'eine weitere Fähigkeit?',
+    'Meine berufliche Reise umfasst die Arbeit an verschiedenen Projekten, bei denen ich eine Vielzahl von Frontend-Technologien und -Konzepten eingesetzt habe. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig verändernden Landschaft der Webentwicklung auf dem neuesten Stand zu bleiben.',
+  titleAnotherSkill: 'Benötigen Sie',
+  anotherSkill: 'eine zusätzliche Fähigkeit?',
   descriptionAnotherSkill:
-    'Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.',
-  buttonLetsTalk: 'Lass uns reden',
-  titleGrowthMindsetFirstPart: 'Ich habe ein besonderes',
-  titleGrowthMindsetSecondPart: 'Interesse am Lernen',
+    'Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern.',
+  buttonLetsTalk: 'Lassen Sie uns sprechen',
+  titleGrowthMindsetFirstPart: 'Ich habe ein ausgeprägtes',
+  titleGrowthMindsetSecondPart: 'Interesse am Lernen und Wachsen',
 };
 
 /**
@@ -69,14 +69,14 @@ export const textsDE: Texts = {
  */
 export const textsEN: Texts = {
   titleTechnologies: 'Technologies',
-  titleSkillSet: 'Skill Set',
+  titleSkillSet: 'Skills',
   descriptionSkillSet:
-    'My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continuously enhance my skills and stay ahead in the ever-evolving landscape of web development.',
-  titleAnotherSkill: 'You need',
-  anotherSkill: 'another skill?',
+    'My professional journey has involved working on diverse projects, utilizing a range of frontend technologies and concepts. I am open to adopting new technologies and methodologies to continuously enhance my skills and stay ahead in the ever-evolving landscape of web development.',
+  titleAnotherSkill: 'Need',
+  anotherSkill: 'an additional skill?',
   descriptionAnotherSkill:
-    'Feel free to contact me. I look forward to expanding on my previous knowledge.',
-  buttonLetsTalk: "Let's talk",
-  titleGrowthMindsetFirstPart: 'I have a special',
-  titleGrowthMindsetSecondPart: 'interest in learning',
+    'Feel free to contact me. I look forward to expanding my knowledge.',
+  buttonLetsTalk: "Let's Talk",
+  titleGrowthMindsetFirstPart: 'I have a strong',
+  titleGrowthMindsetSecondPart: 'interest in learning and growth',
 };

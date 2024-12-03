@@ -64,10 +64,10 @@ export interface Texts {
  */
 export const textsDE: Texts = {
   contactInfoTitle: 'Kontaktiere mich',
-  contactInfoSubtitle: 'Lass uns \n zusammen\u00ADarbeiten',
+  contactInfoSubtitle: 'Lass uns zusammen\u00ADarbeiten',
   contactInfoQuestion: 'Hast du ein Problem zu lösen?',
   contactInfoDescription:
-    'Kontaktiere mich über dieses Formular, ich bin daran interessiert, von dir zu hören, deine Ideen zu kennen und mit meiner Arbeit zu deinen Projekten beizutragen.',
+    'Kontaktiere mich über dieses Formular. Ich bin daran interessiert, von dir zu hören, deine Ideen zu kennen und mit meiner Arbeit zu deinen Projekten beizutragen.',
   contactInfoFrontendDeveloper: 'Brauchst du einen Frontend-Entwickler?',
   contactInfoDescriptionHighlight: 'Lass uns reden!',
 
@@ -78,7 +78,7 @@ export const textsDE: Texts = {
   contactFormPrivacyPolicyText2: 'Datenschutzerklärung',
   contactFormPrivacyPolicyText3:
     'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
-  contactFormSubmit: 'Sag Hallo ;)',
+  contactFormSubmit: 'Absenden',
 
   placeholderName: 'Dein Name kommt hier hin',
   placeholderEmail: 'deinemail@email.com',
@@ -113,22 +113,22 @@ export const textsDE: Texts = {
  * @property {string} requiredMessage - Message validation message
  */
 export const textsEN: Texts = {
-  contactInfoTitle: 'Contact me',
-  contactInfoSubtitle: "Let's work \n together",
-  contactInfoQuestion: 'Got a problem to solve?',
+  contactInfoTitle: 'Contact Me',
+  contactInfoSubtitle: "Let's collaborate",
+  contactInfoQuestion: 'Do you have a problem to solve?',
   contactInfoDescription:
-    'Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.',
-  contactInfoFrontendDeveloper: 'Need a Frontend developer?',
-  contactInfoDescriptionHighlight: 'Let’s-talk!',
+    'Reach out to me through this form. I am interested in hearing from you, knowing your ideas, and contributing to your projects with my work.',
+  contactInfoFrontendDeveloper: 'Need a Frontend Developer?',
+  contactInfoDescriptionHighlight: "Let's talk!",
 
   contactFormName: "What's your name?",
   contactFormEmail: "What's your email?",
   contactFormMessage: 'How can I help you?',
-  contactFormPrivacyPolicyText1: "I've read the",
+  contactFormPrivacyPolicyText1: 'I have read the',
   contactFormPrivacyPolicyText2: 'privacy policy',
   contactFormPrivacyPolicyText3:
-    'and agree to the processing of my data as outlined.',
-  contactFormSubmit: 'Say Hello ;)',
+    'and agree to the processing of my data as described.',
+  contactFormSubmit: 'Submit',
 
   placeholderName: 'Your name goes here',
   placeholderEmail: 'youremail@email.com',

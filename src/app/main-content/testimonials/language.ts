@@ -18,7 +18,7 @@ export interface Texts {
  * @property {string} heading - The testimonials section heading in German
  */
 export const textsDE: Texts = {
-  heading: 'Was meine Kollegen über mich sagen',
+  heading: 'Referenzen meiner Kollegen',
 };
 
 /**
@@ -30,5 +30,5 @@ export const textsDE: Texts = {
  * @property {string} heading - The testimonials section heading in English
  */
 export const textsEN: Texts = {
-  heading: 'What my colleagues say about me',
+  heading: 'Testimonials from my colleagues',
 };

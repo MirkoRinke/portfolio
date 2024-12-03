@@ -27,8 +27,8 @@ export interface Texts {
  * @property {string} privacy - The privacy policy link text in German
  */
 export const textsDE: Texts = {
-  position: 'Web-Entwickler',
-  location: 'Hildesheim Deutschland',
+  position: 'Web Developer',
+  location: 'Hildesheim, Deutschland',
   imprint: 'Impressum',
   privacy: 'Datenschutz',
 };
@@ -46,7 +46,7 @@ export const textsDE: Texts = {
  */
 export const textsEN: Texts = {
   position: 'Web Developer',
-  location: 'Hildesheim Germany',
+  location: 'Hildesheim, Germany',
   imprint: 'Imprint',
   privacy: 'Privacy Policy',
 };

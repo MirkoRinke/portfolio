@@ -26,10 +26,10 @@ export interface Texts {
  * @property {string} contactMe - The text for the "Contact me" button.
  */
 export const textsDE: Texts = {
-  subHeading: 'Frontend Developer',
+  subHeading: 'Frontend-Entwickler',
   mainHeading: 'Mirko Rinke',
-  checkMyWork: 'Meine Arbeiten',
-  contactMe: 'Kontaktiere mich',
+  checkMyWork: 'Meine Projekte',
+  contactMe: 'Kontaktieren Sie mich',
 };
 
 /**
