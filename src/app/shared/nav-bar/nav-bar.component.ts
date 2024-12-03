@@ -9,12 +9,8 @@
 import { Component } from '@angular/core';
 
 /**
- * Importing CommonModule from @angular/common.
- * Core Angular module that provides:
- * - Common directives (*ngIf, *ngFor etc)
- * - Pipes and other shared functionality
- * - Required for basic template features
- * Used to access core Angular features in templates
+ * Imports Angular's CommonModule
+ * @module CommonModule - Provides common Angular directives and pipes like ngIf, ngFor, etc.
  */
 import { CommonModule } from '@angular/common';
 
@@ -84,6 +80,37 @@ import { Texts, textsDE, textsEN } from './language';
 import { returnIcon } from '../../shared/services/svg.icons.service';
 
 /**
+ * Import of the NavigationService which handles application navigation and routing
+ * @module NavigationService
+ * @description Service responsible for managing navigation state and route transitions
+ * @requires '../services/navigation.service'
+ */
+import { NavigationService } from '../services/navigation.service';
+
+/**
+ * Imports Angular routing related modules and services
+ * @module RouterModule - Module for configuring and managing routes
+ * @module Router - Service for navigating between views
+ * @module NavigationEnd - Event emitted when navigation ends successfully
+ */
+import { RouterModule, Router, NavigationEnd } from '@angular/router';
+
+/**
+ * Imports RxJS operator
+ * @module filter - Operator that filters values emitted by source Observable based on predicate function
+ */
+import { filter } from 'rxjs/operators';
+
+/**
+ * Imports ViewportScroller from Angular common package
+ * @module ViewportScroller - Service that provides methods to control scrolling of the viewport
+ * - Enables programmatic scrolling to specific positions
+ * - Supports scrolling to anchors/elements
+ * - Handles scroll position restoration during navigation
+ */
+import { ViewportScroller } from '@angular/common';
+
+/**
  * Component decorator configuration for NavBarComponent.
  * @Component defines the following metadata:
  * - selector: 'app-nav-bar' - The HTML selector used to insert this component
@@ -97,7 +124,7 @@ import { returnIcon } from '../../shared/services/svg.icons.service';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [LanguageToggleComponent, CommonModule],
+  imports: [LanguageToggleComponent, CommonModule, RouterModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })
@@ -115,6 +142,14 @@ export class NavBarComponent {
    * It can be a string indicating the active link or null if no link is active.
    */
   activeLink: string | null = null;
+
+  /**
+   * Subscription to track the active link changes.
+   * This subscription is used to manage and clean up the active link state.
+   *
+   * @private
+   */
+  private activeLinkSubscription: Subscription | undefined;
 
   /**
    * A boolean flag indicating whether the menu should be shown or hidden.
@@ -141,7 +176,10 @@ export class NavBarComponent {
   constructor(
     private languageService: LanguageService,
     private scrollService: ScrollService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    public navigationService: NavigationService,
+    private viewportScroller: ViewportScroller,
+    private router: Router
   ) {}
 
   /**
@@ -159,12 +197,30 @@ export class NavBarComponent {
   }
 
   /**
-   * Sets the active link in the navigation bar.
+   * Sets the active navigation link in the application.
+   * Updates the currently active link through the navigation service.
    *
-   * @param link - The link to be set as active.
+   * @param {string} link - The identifier/path of the link to be set as active
+   * @returns {void}
+   *
+   * @example
+   * setActiveLink('aboutMe'); // Sets the home link as active
    */
   setActiveLink(link: string): void {
-    this.activeLink = link;
+    this.navigationService.setActiveLink(link);
+  }
+
+  /**
+   * Resets the active navigation link to its default state.
+   * Clears the currently active link through the navigation service.
+   *
+   * @returns {void}
+   *
+   * @example
+   * resetActiveLink(); // Resets the active navigation link to default
+   */
+  resetActiveLink(): void {
+    this.navigationService.resetActiveLink();
   }
 
   /**
@@ -204,7 +260,12 @@ export class NavBarComponent {
       this.languageService.selectedLanguage$.subscribe((language) => {
         this.loadTexts(language);
       });
+
+    this.activeLinkSubscription = this.navigationService.activeLink$.subscribe(
+      (link) => (this.activeLink = link)
+    );
     this.loadTexts(this.languageService.getLanguage());
+    this.initRouterEvents();
   }
 
   /**
@@ -216,6 +277,9 @@ export class NavBarComponent {
   ngOnDestroy(): void {
     if (this.languageSubscription) {
       this.languageSubscription.unsubscribe();
+    }
+    if (this.activeLinkSubscription) {
+      this.activeLinkSubscription.unsubscribe();
     }
   }
 
@@ -230,5 +294,70 @@ export class NavBarComponent {
     if (language === 'de') this.texts = textsDE;
     else if (language === 'en') this.texts = textsEN;
     else this.texts = textsEN;
+  }
+
+  /**
+   * Initializes the router events to handle navigation end events.
+   *
+   * This method sets up a subscription to the router's events observable,
+   * filtering for `NavigationEnd` events. When a `NavigationEnd` event occurs,
+   * it checks if the URL contains a fragment (indicated by a `#` symbol).
+   * If a fragment is present, it scrolls to the corresponding anchor in the view
+   * after a short delay.
+   *
+   * @private
+   */
+  private initRouterEvents(): void {
+    this.router.events
+      .pipe(
+        filter(
+          (event): event is NavigationEnd => event instanceof NavigationEnd
+        )
+      )
+      .subscribe(() => {
+        const fragment = this.router.url.split('#')[1];
+        if (fragment) {
+          setTimeout(() => {
+            this.viewportScroller.scrollToAnchor(fragment);
+          }, 100);
+        }
+      });
+  }
+
+  /**
+   * Scrolls to a specific section of the page identified by the given fragment.
+   *
+   * This method first clears any existing fragment in the URL, then sets a new fragment
+   * after a short delay to ensure the page scrolls to the correct section.
+   *
+   * @param {string} fragment - The fragment identifier of the section to scroll to.
+   *
+   * @example
+   * Scroll to the section with the id 'about'
+   * (click)="scrollToSection('contact')"
+   */
+  scrollToSection(fragment: string): void {
+    this.router
+      .navigate([], {
+        fragment: undefined,
+        replaceUrl: true,
+      })
+      .then(() => {
+        setTimeout(() => {
+          this.router.navigate([], {
+            fragment: fragment,
+          });
+          this.viewportScroller.scrollToAnchor(fragment);
+        }, 10);
+      });
+  }
+
+  /**
+   * Checks if the current route is the home route.
+   *
+   * @returns {boolean} `true` if the current route is the home route, otherwise `false`.
+   */
+  isHomeRoute(): boolean {
+    return this.router.url === '/' || this.router.url.startsWith('/#');
   }
 }

@@ -60,6 +60,15 @@ import { LanguageService } from '../../shared/services/language.service';
 import { Texts, textsDE, textsEN } from './language';
 
 /**
+ * Importing RouterModule from @angular/router:
+ * - Provides routing and navigation functionality
+ * - Enables navigation between different views and components
+ * - Required for navigation in Angular applications
+ * Used to navigate to different views in the application
+ */
+import { RouterModule } from '@angular/router';
+
+/**
  * Interface representing the contact data.
  *
  * @property {string} name - The name of the contact.
@@ -86,7 +95,7 @@ interface ContactData {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

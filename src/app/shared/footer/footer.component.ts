@@ -52,10 +52,41 @@ import { Texts, textsDE, textsEN } from './language';
  */
 import { returnIcon } from '../../shared/services/svg.icons.service';
 
+/**
+ * Import of the NavigationService which handles application navigation and routing
+ * @module NavigationService
+ * @description Service responsible for managing navigation state and route transitions
+ * @requires '../services/navigation.service'
+ */
+import { NavigationService } from '../services/navigation.service';
+
+/**
+ * Imports Angular routing related modules and services
+ * @module RouterModule - Module for configuring and managing routes
+ * @module Router - Service for navigating between views
+ * @module NavigationEnd - Event emitted when navigation ends successfully
+ */
+import { RouterModule, Router, NavigationEnd } from '@angular/router';
+
+/**
+ * Imports RxJS operator
+ * @module filter - Operator that filters values emitted by source Observable based on predicate function
+ */
+import { filter } from 'rxjs/operators';
+
+/**
+ * Imports ViewportScroller from Angular common package
+ * @module ViewportScroller - Service that provides methods to control scrolling of the viewport
+ * - Enables programmatic scrolling to specific positions
+ * - Supports scrolling to anchors/elements
+ * - Handles scroll position restoration during navigation
+ */
+import { ViewportScroller } from '@angular/common';
+
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
@@ -85,7 +116,10 @@ export class FooterComponent {
    */
   constructor(
     private languageService: LanguageService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    public navigationService: NavigationService,
+    private viewportScroller: ViewportScroller,
+    private router: Router
   ) {}
 
   /**
@@ -100,6 +134,19 @@ export class FooterComponent {
   public returnIcon(type: string): SafeHtml {
     const iconHtml = returnIcon(type);
     return this.sanitizer.bypassSecurityTrustHtml(iconHtml);
+  }
+
+  /**
+   * Resets the active navigation link to its default state.
+   * Clears the currently active link through the navigation service.
+   *
+   * @returns {void}
+   *
+   * @example
+   * resetActiveLink(); // Resets the active navigation link to default
+   */
+  resetActiveLink(): void {
+    this.navigationService.resetActiveLink();
   }
 
   /**
@@ -151,5 +198,78 @@ export class FooterComponent {
    */
   getYear(): number {
     return new Date().getFullYear();
+  }
+
+  /**
+   * Initializes the router events to handle navigation end events.
+   *
+   * This method sets up a subscription to the router's events observable,
+   * filtering for `NavigationEnd` events. When a `NavigationEnd` event occurs,
+   * it checks if the URL contains a fragment (indicated by a `#` symbol).
+   * If a fragment is present, it scrolls to the corresponding anchor in the view
+   * after a short delay.
+   *
+   * @private
+   */
+  private initRouterEvents(): void {
+    this.router.events
+      .pipe(
+        filter(
+          (event): event is NavigationEnd => event instanceof NavigationEnd
+        )
+      )
+      .subscribe(() => {
+        const fragment = this.router.url.split('#')[1];
+        if (fragment) {
+          setTimeout(() => {
+            this.viewportScroller.scrollToAnchor(fragment);
+          }, 100);
+        }
+      });
+  }
+
+  /**
+   * Scrolls to a specific section of the page identified by the given fragment.
+   *
+   * This method first clears any existing fragment in the URL, then sets a new fragment
+   * after a short delay to ensure the page scrolls to the correct section.
+   *
+   * @param {string} fragment - The fragment identifier of the section to scroll to.
+   *
+   * @example
+   * Scroll to the section with the id 'about'
+   * (click)="scrollToSection('contact')"
+   */
+  scrollToSection(fragment: string): void {
+    this.router
+      .navigate([], {
+        fragment: undefined,
+        replaceUrl: true,
+      })
+      .then(() => {
+        setTimeout(() => {
+          this.router.navigate([], {
+            fragment: fragment,
+          });
+          this.viewportScroller.scrollToAnchor(fragment);
+        }, 10);
+      });
+  }
+
+  /**
+   * Scrolls the viewport to the top of the page.
+   * Utilizes the `viewportScroller` service to scroll to the position [0, 0].
+   */
+  scrollToTop() {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
+
+  /**
+   * Checks if the current route is the home route.
+   *
+   * @returns {boolean} `true` if the current route is the home route, otherwise `false`.
+   */
+  isHomeRoute(): boolean {
+    return this.router.url === '/' || this.router.url.startsWith('/#');
   }
 }

@@ -94,6 +94,10 @@
         color: var(--secondary-color);
         position: relative;
 
+        &:hover {
+          cursor: pointer;
+        }
+
         &.active {
           color: var(--primary-color);
           &::after {

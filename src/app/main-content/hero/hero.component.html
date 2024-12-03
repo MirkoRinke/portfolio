@@ -7,10 +7,10 @@
         <h1 class="main-heading">{{ texts.mainHeading }}</h1>
       </div>
       <div class="button-group">
-        <button onclick="window.location.href='#featured-project';">
+        <button (click)="scrollToSection('featured-project')">
           <span>{{ texts.checkMyWork }}</span>
         </button>
-        <button onclick="window.location.href='#contact';">
+        <button (click)="scrollToSection('contact')">
           <span>{{ texts.contactMe }}</span>
         </button>
       </div>

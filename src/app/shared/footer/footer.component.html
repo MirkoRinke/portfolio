@@ -3,7 +3,8 @@
     <div class="desktop">
       <div class="footer-logo">
         <div
-          onclick="window.location.href='#';"
+          [routerLink]="['']"
+          (click)="scrollToTop(); resetActiveLink()"
           class="logo"
           [innerHTML]="returnIcon('logo')"
         ></div>
@@ -12,15 +13,15 @@
           <p>{{ texts.location }}</p>
         </div>
       </div>
-      <div class="copyright-desktop">© Mirko Rinke 2024</div>
+      <div class="copyright-desktop">© Mirko Rinke {{ getYear() }}</div>
       <div class="links">
         <a href="https://github.com/MirkoRinke" target="_blank">Github</a>
         <a href="https://www.linkedin.com/in/mirkorinke" target="_blank"
           >LinkedIn</a
         >
         <a href="mailto:contact@mirkorinke.dev">Email</a>
-        <a href="./imprint">{{ texts.imprint }}</a>
-        <a href="./privacy">{{ texts.privacy }}</a>
+        <a [routerLink]="['/imprint']">{{ texts.imprint }}</a>
+        <a [routerLink]="['/privacy']">{{ texts.privacy }}</a>
       </div>
     </div>
     <div class="copyright-mobile">© Mirko Rinke {{ getYear() }}</div>

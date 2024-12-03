@@ -63,6 +63,22 @@ import { LanguageService } from '../../shared/services/language.service';
 import { Texts, textsDE, textsEN } from './language';
 
 /**
+ * Imports Router from @angular/router package.
+ * Router enables navigation between views and components in Angular app.
+ * Used to navigate to different sections of the page.
+ */
+import { Router } from '@angular/router';
+
+/**
+ * Imports ViewportScroller from Angular common package
+ * @module ViewportScroller - Service that provides methods to control scrolling of the viewport
+ * - Enables programmatic scrolling to specific positions
+ * - Supports scrolling to anchors/elements
+ * - Handles scroll position restoration during navigation
+ */
+import { ViewportScroller } from '@angular/common';
+
+/**
  * Component decorator configuration for HeroComponent.
  * @Component defines the following metadata:
  * - selector: 'app-hero' - The HTML selector used to insert this component
@@ -102,7 +118,11 @@ export class HeroComponent {
    *
    * @param {LanguageService} languageService - The service used for handling language-related operations.
    */
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private viewportScroller: ViewportScroller,
+    private router: Router
+  ) {}
 
   /**
    * Lifecycle hook that is called after data-bound properties of a directive are initialized.
@@ -141,5 +161,33 @@ export class HeroComponent {
     if (language === 'de') this.texts = textsDE;
     else if (language === 'en') this.texts = textsEN;
     else this.texts = textsEN;
+  }
+
+  /**
+   * Scrolls to a specific section of the page identified by the given fragment.
+   *
+   * This method first clears any existing fragment in the URL, then sets a new fragment
+   * after a short delay to ensure the page scrolls to the correct section.
+   *
+   * @param {string} fragment - The fragment identifier of the section to scroll to.
+   *
+   * @example
+   * Scroll to the section with the id 'about'
+   * (click)="scrollToSection('contact')"
+   */
+  scrollToSection(fragment: string): void {
+    this.router
+      .navigate([], {
+        fragment: undefined,
+        replaceUrl: true,
+      })
+      .then(() => {
+        setTimeout(() => {
+          this.router.navigate([], {
+            fragment: fragment,
+          });
+          this.viewportScroller.scrollToAnchor(fragment);
+        }, 10);
+      });
   }
 }

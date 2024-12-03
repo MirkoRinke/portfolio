@@ -1,7 +1,7 @@
 <nav class="nav-bar">
-  <!-- <img class="logo_small" src="images/logo-MR-small.svg" alt="" /> -->
   <div
-    onclick="window.location.href='#';"
+    [routerLink]="['']"
+    (click)="resetActiveLink()"
     class="logo-small"
     [innerHTML]="returnIcon('logoSmall')"
   ></div>
@@ -10,39 +10,50 @@
     (click)="closeMenu()"
     [ngClass]="{ 'menu-is-open': showMenu }"
   >
+    @if (isHomeRoute()) {
     <app-language-toggle class="language-toggle"></app-language-toggle>
+
     <div
       (click)="$event.stopPropagation()"
       class="nav-links"
       [ngClass]="{ 'toggle-menu': showMenu }"
     >
       <a
-        href="#about-me"
-        (click)="setActiveLink('aboutMe'); closeMenu()"
+        (click)="
+          scrollToSection('about-me'); setActiveLink('aboutMe'); closeMenu()
+        "
         [class.active]="activeLink === 'aboutMe'"
         >{{ texts.aboutMe }}</a
       >
       <a
-        href="#skills"
-        (click)="setActiveLink('skills'); closeMenu()"
+        (click)="
+          scrollToSection('skills'); setActiveLink('skills'); closeMenu()
+        "
         [class.active]="activeLink === 'skills'"
         >{{ texts.skills }}</a
       >
       <a
-        href="#featured-project"
-        (click)="setActiveLink('projects'); closeMenu()"
+        (click)="
+          scrollToSection('featured-project');
+          setActiveLink('projects');
+          closeMenu()
+        "
         [class.active]="activeLink === 'projects'"
         >{{ texts.projects }}</a
       >
       <app-language-toggle class="language-toggle-menu"></app-language-toggle>
     </div>
+    }
   </div>
   <div
-    onclick="window.location.href='#';"
+    [routerLink]="['']"
+    (click)="resetActiveLink()"
     class="logo"
     [innerHTML]="returnIcon('logo')"
   ></div>
+  @if (isHomeRoute()) {
   <div (click)="openMenu()" class="menu">
     <div class="icon" [innerHTML]="returnIcon('menu')"></div>
   </div>
+  }
 </nav>
