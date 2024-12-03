@@ -81,11 +81,10 @@
             font-size: 64px;
             font-weight: bold;
             color: var(--primary-color);
-            word-break: break-all;
 
             @media (max-width: vars.$breakpoint-xl) {
               text-align: center;
-              font-size: 56px;
+              font-size: 40px;
             }
 
             @media (max-width: vars.$breakpoint-xs) {
