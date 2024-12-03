@@ -12,7 +12,6 @@
   >
     @if (isHomeRoute()) {
     <app-language-toggle class="language-toggle"></app-language-toggle>
-
     <div
       (click)="$event.stopPropagation()"
       class="nav-links"
@@ -42,15 +41,21 @@
         >{{ texts.projects }}</a
       >
       <app-language-toggle class="language-toggle-menu"></app-language-toggle>
+      <app-color-toggle class="color-toggle-menu"></app-color-toggle>
     </div>
     }
   </div>
-  <div
-    [routerLink]="['']"
-    (click)="resetActiveLink()"
-    class="logo"
-    [innerHTML]="returnIcon('logo')"
-  ></div>
+
+  <div class="right-side">
+    <app-color-toggle></app-color-toggle>
+    <div
+      [routerLink]="['']"
+      (click)="resetActiveLink()"
+      class="logo"
+      [innerHTML]="returnIcon('logo')"
+    ></div>
+  </div>
+
   @if (isHomeRoute()) {
   <div (click)="openMenu()" class="menu">
     <div class="icon" [innerHTML]="returnIcon('menu')"></div>

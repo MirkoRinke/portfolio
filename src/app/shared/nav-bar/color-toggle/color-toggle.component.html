@@ -1,0 +1,17 @@
+<div class="color-toggle">
+  <span
+    [ngClass]="{ active: currentColor === 'dark-violett' }"
+    (click)="setColor('dark-violett')"
+    class="color dark-violett"
+  ></span>
+  <span
+    [ngClass]="{ active: currentColor === 'blue' }"
+    (click)="setColor('blue')"
+    class="color blue"
+  ></span>
+  <span
+    [ngClass]="{ active: currentColor === null }"
+    (click)="setColor('default')"
+    class="color turquoise"
+  ></span>
+</div>

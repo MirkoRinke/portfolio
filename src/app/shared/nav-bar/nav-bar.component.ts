@@ -115,6 +115,12 @@ import { filter } from 'rxjs/operators';
 import { ViewportScroller } from '@angular/common';
 
 /**
+ * Imports ColorToggleComponent from the local color-toggle directory.
+ * @module ColorToggleComponent - Component that provides functionality to toggle color themes.
+ */
+import { ColorToggleComponent } from './color-toggle/color-toggle.component';
+
+/**
  * Component decorator configuration for NavBarComponent.
  * @Component defines the following metadata:
  * - selector: 'app-nav-bar' - The HTML selector used to insert this component
@@ -128,7 +134,12 @@ import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [LanguageToggleComponent, CommonModule, RouterModule],
+  imports: [
+    LanguageToggleComponent,
+    CommonModule,
+    RouterModule,
+    ColorToggleComponent,
+  ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })
