@@ -1,4 +1,10 @@
 /**
+ * @fileoverview This file defines the FooterComponent for the application.
+ * It handles the display and functionality of the footer section, including
+ * language switching and safe rendering of dynamic HTML content.
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core Angular decorator that:
  * - Defines component metadata and configuration

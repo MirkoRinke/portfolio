@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the structure for navigation text content and provides translations for German and English.
+ */
+
+/**
  * Interface defining navigation text content structure.
  * Used to enforce consistent navigation labels across language versions.
  *

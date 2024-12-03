@@ -1,4 +1,8 @@
 /**
+ * @fileoverview English and German text content for About Me section
+ */
+
+/**
  * Interface representing text content for different sections of the about-me component.
  * @interface
  * @property {string} whoIAm - Text content describing who the person is

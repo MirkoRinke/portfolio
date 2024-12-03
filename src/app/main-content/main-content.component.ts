@@ -1,4 +1,10 @@
 /**
+ * @fileoverview Main content component for the application.
+ * This component serves as the container for various sections of the main content,
+ * including the hero/banner, about me, skills, and featured projects sections.
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core Angular decorator used to:
  * - Define component metadata and configuration

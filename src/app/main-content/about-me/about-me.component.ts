@@ -1,4 +1,8 @@
 /**
+ * @fileoverview Component for displaying the About Me section with language support
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core decorator that defines Angular component metadata:
  * - Required for creating components

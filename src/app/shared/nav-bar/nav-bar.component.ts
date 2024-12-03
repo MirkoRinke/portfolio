@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the NavBarComponent, which is responsible for rendering the navigation bar of the application. It includes functionality for language toggling and smooth scrolling to different sections.
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core Angular decorator used to:
  * - Define component metadata and configuration

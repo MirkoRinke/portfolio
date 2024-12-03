@@ -1,4 +1,10 @@
 /**
+ * @fileoverview This file defines the LanguageToggleComponent, an Angular component
+ * responsible for providing a user interface to switch between supported languages (DE/EN).
+ * It imports necessary Angular modules and services, and sets up the component metadata.
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core Angular decorator required to:
  * - Mark class as an Angular component

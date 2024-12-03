@@ -1,4 +1,8 @@
 /**
+ * @fileoverview Contact form component for handling user inquiries
+ */
+
+/**
  * Importing Component decorator and inject function from @angular/core:
  * - Component: Core decorator to define Angular components and their metadata
  * - inject: Function to handle dependency injection in a more functional way

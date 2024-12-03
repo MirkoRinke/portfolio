@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the Project interface and related types used to represent project data in the application.
+ */
+
+/**
  * Interface representing a project entity.
  * @interface Project
  *

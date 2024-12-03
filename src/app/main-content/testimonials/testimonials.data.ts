@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file contains the definition of the Testimonial interface and an array of testimonials in German.
+ */
+
+/**
  * Interface defining the structure of a testimonial.
  * Represents a single testimonial/review entry with basic metadata.
  *

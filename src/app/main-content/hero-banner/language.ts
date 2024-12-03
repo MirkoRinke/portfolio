@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file contains text translations for various labels used in the hero banner, in both German and English.
+ */
+
+/**
  * Interface defining text content structure for the hero banner.
  * Used to enforce consistent text properties across language versions.
  *

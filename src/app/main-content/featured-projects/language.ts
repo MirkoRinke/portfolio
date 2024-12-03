@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the structure for text content and provides text in German and English for the featured projects section.
+ */
+
+/**
  * Interface defining structure for text content.
  * @property {string} heading - The heading text
  * @property {string} title - The title text

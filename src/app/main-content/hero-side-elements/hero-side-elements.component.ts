@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the HeroSideElementsComponent which displays and manages the side elements in the hero section of the application.
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core Angular decorator used to:
  * - Define component metadata and configuration

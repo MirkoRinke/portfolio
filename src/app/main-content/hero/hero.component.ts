@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the HeroComponent which displays and manages the hero section of the application, including the banner and side elements.
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core Angular decorator that:
  * - Defines metadata for component configuration

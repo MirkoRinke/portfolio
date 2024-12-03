@@ -1,4 +1,11 @@
 /**
+ * @fileoverview This file defines the TestimonialsComponent in Angular,
+ * which handles the display and management of testimonials based on the selected language.
+ * It imports necessary Angular core modules, RxJS for subscription management,
+ * and DomSanitizer for safe HTML rendering.
+ */
+
+/**
  * Importing Angular core decorators and utilities:
  * - Component: Core decorator for defining Angular components
  * - HostListener: Decorator for listening to host element events

@@ -1,4 +1,9 @@
 /**
+ * @fileoverview This file contains the interface and text translations for localization.
+ * It includes German and English translations for the testimonials section.
+ */
+
+/**
  * Interface defining the structure of text content for localization.
  * Used to enforce consistent text properties across language versions.
  *

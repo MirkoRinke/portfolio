@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the Skill interface and an array of technical skills used in the application.
+ */
+
+/**
  * Interface defining the structure of a skill item.
  * Used to ensure consistent skill data across the application.
  *

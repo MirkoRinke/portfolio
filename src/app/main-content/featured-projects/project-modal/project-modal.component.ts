@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file contains the ProjectModalComponent which manages the project modal's state, visibility, and interactions.
+ */
+
+/**
  * Angular core imports
  * @module @angular/core
  *

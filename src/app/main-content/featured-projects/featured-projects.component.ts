@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the FeaturedProjectsComponent which displays a list of featured projects and handles language-specific project data.
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core decorator that configures Angular component behavior:
  * - Required to define a class as an Angular component

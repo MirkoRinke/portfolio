@@ -1,4 +1,8 @@
 /**
+ * @fileoverview English and German text content for contact component
+ */
+
+/**
  * Interface defining the structure of text content for the contact form and info section.
  * Used to enforce consistent text properties across languages.
  *

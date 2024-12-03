@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the SkillsComponent which displays and manages the skills section of the application.
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core Angular decorator that:
  * - Defines component metadata and configuration

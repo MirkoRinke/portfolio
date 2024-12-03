@@ -1,6 +1,5 @@
 /**
- * @fileoverview Contains the ImprintComponent which is responsible for displaying the imprint information
- * @module ImprintComponent
+ * @fileoverview Imprint component for displaying legal information
  */
 
 /**

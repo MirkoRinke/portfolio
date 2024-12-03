@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the structure and translations for text content in the hero section of the main content, in both German and English.
+ */
+
+/**
  * Interface defining the structure of text content for the hero section.
  * Used to enforce consistent text properties across language versions.
  *

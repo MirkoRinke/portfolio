@@ -1,4 +1,9 @@
 /**
+ * @fileoverview This file contains the interface definition for text content structure
+ * for footer elements and provides German and English translations for these texts.
+ */
+
+/**
  * Interface defining text content structure for footer elements.
  * Used to enforce consistent text properties across language versions.
  *

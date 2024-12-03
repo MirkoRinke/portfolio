@@ -1,4 +1,8 @@
 /**
+ * @fileoverview Root component for bootstrapping the Angular application
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core decorator required to:
  * - Mark class as an Angular component
@@ -36,10 +40,4 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  /**
-   * The title of the application.
-   * @type {string}
-   */
-  title: string = 'portfolio';
-}
+export class AppComponent {}

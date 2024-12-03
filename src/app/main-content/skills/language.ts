@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file contains English text strings for various sections and descriptions used in the skills component of the application.
+ */
+
+/**
  * Interface defining the structure of text content for the skills section.
  * Used to enforce consistent text properties across language versions.
  *

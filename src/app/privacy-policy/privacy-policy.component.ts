@@ -1,4 +1,8 @@
 /**
+ * @fileoverview This file defines the PrivacyPolicyComponent, which includes the navigation bar, footer, and handles language-related operations.
+ */
+
+/**
  * Importing Component decorator from @angular/core.
  * Core Angular decorator used to:
  * - Define component metadata and configuration

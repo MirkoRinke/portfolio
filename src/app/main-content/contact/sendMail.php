@@ -1,6 +1,10 @@
 <?php
 
 /**
+ * @fileoverview Email handling script for contact form
+ */
+
+/**
  * Email handling script for contact form
  * 
  * Processes OPTIONS preflight requests and POST requests to send emails
