@@ -87,6 +87,8 @@
         padding: 48px 40px;
         min-width: 632px;
         margin-block: 10px;
+        position: relative;
+        perspective: 1000px;
 
         @media (max-width: vars.$breakpoint-xl) {
           min-width: 432px;
@@ -99,8 +101,6 @@
         @media (max-width: vars.$breakpoint-md) {
           min-width: 259px;
         }
-
-        position: relative;
 
         .quotes {
           position: absolute;

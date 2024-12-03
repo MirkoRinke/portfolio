@@ -303,19 +303,16 @@ export class TestimonialsComponent {
   }
 
   /**
-   * Calculates the CSS transform value for a testimonial card based on its index.
+   * Calculates the CSS transform property value for an element based on its index.
    *
-   * @param index - The index of the testimonial card
-   * @returns CSS transform string containing:
-   * - translateX: Horizontal position based on current index and card width
-   * - scale: 0.9 for non-active cards, 1 for active card
-   * Used to position cards in carousel and apply scaling effect to non-active items
+   * @param {number} index - The index of the element.
+   * @returns {string} The CSS transform property value.
    */
   getTransform(index: number): string {
     if (index - 1 !== this.currentIndex)
       return `translateX(-${
         (this.currentIndex + 1) * this.adjustedValue
-      }px) scale(0.9)`;
+      }px) scale(0.9) rotate(0.2deg)`;
     return `translateX(-${(this.currentIndex + 1) * this.adjustedValue}px)`;
   }
 }
