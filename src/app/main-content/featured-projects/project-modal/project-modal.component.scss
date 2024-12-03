@@ -270,6 +270,10 @@
       &:hover {
         cursor: pointer;
       }
+
+      &:hover + .bg {
+        transform: translate(25px, -90%);
+      }
     }
 
     .bg {
@@ -290,10 +294,6 @@
       @media (max-width: vars.$breakpoint-lg) {
         display: none;
       }
-    }
-
-    &:hover .bg {
-      transform: translate(25px, -90%);
     }
   }
 
