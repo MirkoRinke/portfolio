@@ -166,6 +166,13 @@ export class ContactComponent {
   privacyPolicyChecked?: boolean;
 
   /**
+   * A boolean flag indicating whether to show feedback to the user.
+   * When set to `true`, feedback will be displayed.
+   * When set to `false`, feedback will be hidden.
+   */
+  showFeedback: boolean = false;
+
+  /**
    * Injects the HttpClient service to make HTTP requests.
    *
    * @type {HttpClient}
@@ -281,13 +288,13 @@ export class ContactComponent {
    *
    * @param {NgForm} ngForm - The form to be submitted.
    *
-   * The function performs the following actions:
+   * This method performs the following actions:
    * - Checks if the privacy policy is accepted. If not, it sets `privacyPolicyChecked` to false and returns.
    * - If the form is submitted, valid, and not in test mode, it sends a POST request with the contact data.
-   *   - On success, it resets the form.
+   *   - On success, it resets the form and shows a feedback message.
    *   - On error, it logs the error to the console.
    *   - On completion, it logs a completion message to the console.
-   * - If the form is submitted, valid, and in test mode, it logs a success message, resets the form, and clears the form.
+   * - If the form is submitted, valid, and in test mode, it logs a success message, resets the form, clears the form, and shows a feedback message.
    * - If the form is not valid, it updates the placeholders.
    */
   onSubmit(ngForm: NgForm): void {
@@ -301,6 +308,7 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.showFeedbackMessage();
           },
           error: (error) => {
             console.error(error);
@@ -311,9 +319,25 @@ export class ContactComponent {
       console.log('Form Submitted Successfully (Test Mode)');
       ngForm.resetForm();
       this.clearForm();
+      this.showFeedbackMessage();
     } else {
       this.updatePlaceholders(ngForm);
     }
+  }
+
+  /**
+   * Displays a feedback message for a specified duration.
+   *
+   * This method sets the `showFeedback` property to `true`,
+   * which presumably triggers the display of a feedback message.
+   * After 10 seconds (10000 milliseconds), it sets the `showFeedback`
+   * property back to `false`, hiding the feedback message.
+   */
+  showFeedbackMessage(): void {
+    this.showFeedback = true;
+    setTimeout(() => {
+      this.showFeedback = false;
+    }, 10000);
   }
 
   /**

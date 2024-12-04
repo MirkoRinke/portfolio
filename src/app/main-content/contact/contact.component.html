@@ -86,6 +86,8 @@
               {{ texts.contactFormPrivacyPolicyText3 }}
             </span>
           </label>
+
+          @if (!showFeedback) {
           <button
             type="submit"
             class="form-submit"
@@ -93,6 +95,11 @@
           >
             <span>{{ texts.contactFormSubmit }}</span>
           </button>
+          } @else {
+          <button class="submitted" disabled>
+            <span>{{ texts.contactFormSubmitted }}</span>
+          </button>
+          }
         </div>
       </form>
     </div>

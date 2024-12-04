@@ -35,6 +35,7 @@ export interface Texts {
   contactFormPrivacyPolicyText2: string;
   contactFormPrivacyPolicyText3: string;
   contactFormSubmit: string;
+  contactFormSubmitted: string;
   placeholderName: string;
   placeholderEmail: string;
   placeholderMessage: string;
@@ -59,6 +60,7 @@ export interface Texts {
  * @property {string} contactFormPrivacyPolicyText2 - Privacy policy link text
  * @property {string} contactFormPrivacyPolicyText3 - Last part of privacy policy text
  * @property {string} contactFormSubmit - Submit button text
+ * @property {string} contactFormSubmitted - Submission confirmation text
  * @property {string} placeholderName - Name input placeholder
  * @property {string} placeholderEmail - Email input placeholder
  * @property {string} placeholderMessage - Message input placeholder
@@ -83,6 +85,7 @@ export const textsDE: Texts = {
   contactFormPrivacyPolicyText3:
     'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
   contactFormSubmit: 'Absenden',
+  contactFormSubmitted: 'Nachricht erfolgreich gesendet',
 
   placeholderName: 'Dein Name kommt hier hin',
   placeholderEmail: 'deinemail@email.com',
@@ -109,6 +112,7 @@ export const textsDE: Texts = {
  * @property {string} contactFormPrivacyPolicyText2 - Privacy policy link text
  * @property {string} contactFormPrivacyPolicyText3 - Last part of privacy policy text
  * @property {string} contactFormSubmit - Submit button text
+ * @property {string} contactFormSubmitted - Submitted message
  * @property {string} placeholderName - Name input placeholder
  * @property {string} placeholderEmail - Email input placeholder
  * @property {string} placeholderMessage - Message input placeholder
@@ -133,6 +137,7 @@ export const textsEN: Texts = {
   contactFormPrivacyPolicyText3:
     'and agree to the processing of my data as described.',
   contactFormSubmit: 'Submit',
+  contactFormSubmitted: 'Message sent successfully',
 
   placeholderName: 'Your name goes here',
   placeholderEmail: 'youremail@email.com',

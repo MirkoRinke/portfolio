@@ -271,6 +271,15 @@
               }
             }
           }
+
+          .submitted {
+            @include mixins.default-button;
+            margin-inline: auto;
+
+            &:hover span {
+              animation: unset;
+            }
+          }
         }
       }
     }
