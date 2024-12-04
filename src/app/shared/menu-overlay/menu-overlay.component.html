@@ -1,0 +1,5 @@
+<div
+  [ngClass]="{ 'menu-is-open': navigationService.isMenuOpen() }"
+  (click)="navigationService.closeMenu()"
+  class="menu-overlay"
+></div>

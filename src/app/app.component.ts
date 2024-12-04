@@ -41,12 +41,10 @@ import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 /**
- * Importing NavigationService to handle navigation-related operations.
- * - Provides methods to manage active navigation link
- * - Emits active link changes to components
- * - Core service for navigation in the application
+ * Importing MenuOverlayComponent from shared/menu-overlay/menu-overlay.component.
+ * Component that displays the menu overlay for mobile navigation.
  */
-import { NavigationService } from './shared/services/navigation.service';
+import { MenuOverlayComponent } from './shared/menu-overlay/menu-overlay.component';
 
 /**
  * Component decorator configuration for AppComponent.
@@ -62,10 +60,14 @@ import { NavigationService } from './shared/services/navigation.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBarComponent, FooterComponent, CommonModule],
+  imports: [
+    RouterOutlet,
+    NavBarComponent,
+    FooterComponent,
+    CommonModule,
+    MenuOverlayComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  constructor(public navigationService: NavigationService) {}
-}
+export class AppComponent {}

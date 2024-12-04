@@ -1,8 +1,4 @@
-<div
-  [ngClass]="{ 'menu-is-open': navigationService.isMenuOpen() }"
-  (click)="navigationService.closeMenu()"
-  class="menu-overlay"
-></div>
+<app-menu-overlay></app-menu-overlay>
 <app-nav-bar id="nav"></app-nav-bar>
 <router-outlet />
 <app-footer id="footer"></app-footer>
