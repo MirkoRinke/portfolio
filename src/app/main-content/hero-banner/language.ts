@@ -31,7 +31,7 @@ export const textsDE: Texts = {
   remoteWork: 'Verfügbar für Remote-Arbeit',
   jobDescription: 'Frontend Developer',
   basedIn: 'Wohnhaft in Hildesheim',
-  openToWork: 'Offen für neue berufliche Herausforderungen',
+  openToWork: 'Offen für neue Herausforderungen',
 };
 
 /**
