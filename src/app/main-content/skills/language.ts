@@ -53,8 +53,8 @@ export const textsDE: Texts = {
   descriptionAnotherSkill:
     'Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern.',
   buttonLetsTalk: 'Lassen Sie uns sprechen',
-  titleGrowthMindsetFirstPart: 'Ich habe ein ausgeprägtes',
-  titleGrowthMindsetSecondPart: 'Interesse am Lernen und Wachsen',
+  titleGrowthMindsetFirstPart: 'Ich habe Interesse daran,',
+  titleGrowthMindsetSecondPart: 'neue Fähigkeiten zu erlernen',
 };
 
 /**
@@ -81,6 +81,6 @@ export const textsEN: Texts = {
   descriptionAnotherSkill:
     'Feel free to contact me. I look forward to expanding my knowledge.',
   buttonLetsTalk: "Let's Talk",
-  titleGrowthMindsetFirstPart: 'I have a strong',
-  titleGrowthMindsetSecondPart: 'interest in learning and growth',
+  titleGrowthMindsetFirstPart: 'I am interested in',
+  titleGrowthMindsetSecondPart: 'learning new skills',
 };
