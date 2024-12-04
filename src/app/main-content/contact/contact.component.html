@@ -1,23 +1,6 @@
 <section class="contact">
   <div class="content">
-    <div class="contact-info">
-      <div class="header">
-        <h3 class="title">{{ texts.contactInfoTitle }}</h3>
-        <h2 class="subtitle">{{ texts.contactInfoSubtitle }}</h2>
-      </div>
-      <div class="details">
-        <h3 class="question">{{ texts.contactInfoQuestion }}</h3>
-        <p class="description">
-          {{ texts.contactInfoDescription }}
-          <br />
-          <br />
-          {{ texts.contactInfoFrontendDeveloper }}
-          <span class="highlight">{{
-            texts.contactInfoDescriptionHighlight
-          }}</span>
-        </p>
-      </div>
-    </div>
+    <app-contact-info></app-contact-info>
     <div class="contact-form-wrapper">
       <form
         (ngSubmit)="onSubmit(contactForm)"

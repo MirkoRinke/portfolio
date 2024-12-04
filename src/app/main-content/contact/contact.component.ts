@@ -79,6 +79,15 @@ import { RouterModule } from '@angular/router';
  * @property {string} email - The email address of the contact.
  * @property {string} message - The message from the contact.
  */
+import { ContactInfoComponent } from '../contact-info/contact-info.component';
+
+/**
+ * Interface representing the contact data.
+ *
+ * @property {string} name - The name of the contact.
+ * @property {string} email - The email address of the contact.
+ * @property {string} message - The message from the contact.
+ */
 interface ContactData {
   name: string;
   email: string;
@@ -99,7 +108,7 @@ interface ContactData {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterModule],
+  imports: [FormsModule, CommonModule, RouterModule, ContactInfoComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -163,7 +172,7 @@ export class ContactComponent {
    * Indicates whether the privacy policy has been checked by the user.
    * This property is optional and can be undefined.
    */
-  privacyPolicyChecked?: boolean;
+  privacyPolicyChecked?: boolean = undefined;
 
   /**
    * A boolean flag indicating whether to show feedback to the user.
@@ -265,7 +274,7 @@ export class ContactComponent {
   loadTexts(language: string): void {
     if (language === 'de') (this.texts = textsDE), this.setPlaceholders();
     else if (language === 'en') (this.texts = textsEN), this.setPlaceholders();
-    else this.texts = textsEN;
+    else (this.texts = textsEN), this.setPlaceholders();
   }
 
   /**
@@ -341,11 +350,13 @@ export class ContactComponent {
   }
 
   /**
-   * Clears the contact form by resetting the placeholder classes to 'placeholder-valid'.
-   * This method is typically called to reset the form to its initial state.
+   * Clears the form data and resets the placeholder classes.
+   *
+   * This method resets the `privacyPolicyChecked` property to `undefined`
+   * and updates the placeholder classes for the name, email, and message fields.
    */
   clearForm(): void {
-    this.privacyPolicyChecked;
+    this.privacyPolicyChecked = undefined;
     this.placeholderNameClass = 'placeholder-valid';
     this.placeholderEmailClass = 'placeholder-valid';
     this.placeholderMessageClass = 'placeholder-valid';

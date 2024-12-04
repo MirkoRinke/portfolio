@@ -1,0 +1,76 @@
+@use "../../../var" as vars;
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--primary-color);
+
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: 18px;
+      }
+    }
+
+    .subtitle {
+      font-size: 64px;
+      font-weight: bold;
+      color: var(--primary-color);
+
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: 40px;
+      }
+
+      @media (max-width: vars.$breakpoint-lg) {
+        text-align: center;
+      }
+
+      @media (max-width: vars.$breakpoint-xs) {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .question {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--primary-color);
+
+      @media (max-width: vars.$breakpoint-xl) {
+        font-size: 18px;
+      }
+
+      @media (max-width: vars.$breakpoint-lg) {
+        text-align: center;
+      }
+    }
+
+    .description {
+      font-weight: 400;
+      color: var(--secondary-color);
+
+      @media (max-width: vars.$breakpoint-lg) {
+        text-align: center;
+      }
+
+      .highlight {
+        font-weight: bold;
+        color: var(--primary-color);
+        white-space: nowrap;
+      }
+    }
+  }
+}
