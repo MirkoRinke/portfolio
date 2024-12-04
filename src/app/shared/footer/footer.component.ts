@@ -143,19 +143,6 @@ export class FooterComponent {
   }
 
   /**
-   * Resets the active navigation link to its default state.
-   * Clears the currently active link through the navigation service.
-   *
-   * @returns {void}
-   *
-   * @example
-   * resetActiveLink(); // Resets the active navigation link to default
-   */
-  resetActiveLink(): void {
-    this.navigationService.resetActiveLink();
-  }
-
-  /**
    * Angular lifecycle hook that is called after the component's view has been fully initialized.
    *
    * This method subscribes to the `selectedLanguage$` observable from the `languageService` to
@@ -204,34 +191,6 @@ export class FooterComponent {
    */
   getYear(): number {
     return new Date().getFullYear();
-  }
-
-  /**
-   * Initializes the router events to handle navigation end events.
-   *
-   * This method sets up a subscription to the router's events observable,
-   * filtering for `NavigationEnd` events. When a `NavigationEnd` event occurs,
-   * it checks if the URL contains a fragment (indicated by a `#` symbol).
-   * If a fragment is present, it scrolls to the corresponding anchor in the view
-   * after a short delay.
-   *
-   * @private
-   */
-  private initRouterEvents(): void {
-    this.router.events
-      .pipe(
-        filter(
-          (event): event is NavigationEnd => event instanceof NavigationEnd
-        )
-      )
-      .subscribe(() => {
-        const fragment = this.router.url.split('#')[1];
-        if (fragment) {
-          setTimeout(() => {
-            this.viewportScroller.scrollToAnchor(fragment);
-          }, 100);
-        }
-      });
   }
 
   /**

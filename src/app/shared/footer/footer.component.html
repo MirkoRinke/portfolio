@@ -4,7 +4,7 @@
       <div class="footer-logo">
         <div
           [routerLink]="['']"
-          (click)="scrollToTop(); resetActiveLink()"
+          (click)="scrollToTop(); navigationService.resetActiveLink()"
           class="logo"
           [innerHTML]="returnIcon('logo')"
         ></div>
@@ -22,12 +22,12 @@
         <a href="mailto:contact@mirkorinke.dev">Email</a>
         <a
           [routerLink]="['/imprint']"
-          (click)="scrollToTop(); resetActiveLink()"
+          (click)="scrollToTop(); navigationService.resetActiveLink()"
           >{{ texts.imprint }}</a
         >
         <a
           [routerLink]="['/privacy']"
-          (click)="scrollToTop(); resetActiveLink()"
+          (click)="scrollToTop(); navigationService.resetActiveLink()"
           >{{ texts.privacy }}</a
         >
       </div>

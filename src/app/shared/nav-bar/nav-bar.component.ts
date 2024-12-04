@@ -29,16 +29,6 @@ import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 
 /**
- * Importing ScrollService from shared services.
- * Used to handle scroll-related functionality:
- * - Manages scroll position and behavior
- * - Handles scroll locking/unlocking
- * - Provides scroll event handling
- * - Used for smooth scrolling to sections
- */
-import { ScrollService } from '../services/scroll.service';
-
-/**
  * Importing LanguageToggleComponent from language-toggle subdirectory.
  * Used as a child component to handle language switching:
  * - Provides UI control for toggling between languages
@@ -95,15 +85,8 @@ import { NavigationService } from '../services/navigation.service';
  * Imports Angular routing related modules and services
  * @module RouterModule - Module for configuring and managing routes
  * @module Router - Service for navigating between views
- * @module NavigationEnd - Event emitted when navigation ends successfully
  */
-import { RouterModule, Router, NavigationEnd } from '@angular/router';
-
-/**
- * Imports RxJS operator
- * @module filter - Operator that filters values emitted by source Observable based on predicate function
- */
-import { filter } from 'rxjs/operators';
+import { RouterModule, Router } from '@angular/router';
 
 /**
  * Imports ViewportScroller from Angular common package
@@ -179,12 +162,10 @@ export class NavBarComponent {
    * Constructs an instance of NavBarComponent.
    *
    * @param {LanguageService} languageService - Service to handle language-related operations.
-   * @param {ScrollService} scrollService - Service to handle scroll-related operations.
    * @param {DomSanitizer} sanitizer - Service to sanitize HTML content.
    */
   constructor(
     private languageService: LanguageService,
-    private scrollService: ScrollService,
     private sanitizer: DomSanitizer,
     public navigationService: NavigationService,
     private viewportScroller: ViewportScroller,
@@ -219,12 +200,10 @@ export class NavBarComponent {
       this.languageService.selectedLanguage$.subscribe((language) => {
         this.loadTexts(language);
       });
-
     this.activeLinkSubscription = this.navigationService.activeLink$.subscribe(
       (link) => (this.activeLink = link)
     );
     this.loadTexts(this.languageService.getLanguage());
-    this.initRouterEvents();
   }
 
   /**
@@ -253,34 +232,6 @@ export class NavBarComponent {
     if (language === 'de') this.texts = textsDE;
     else if (language === 'en') this.texts = textsEN;
     else this.texts = textsEN;
-  }
-
-  /**
-   * Initializes the router events to handle navigation end events.
-   *
-   * This method sets up a subscription to the router's events observable,
-   * filtering for `NavigationEnd` events. When a `NavigationEnd` event occurs,
-   * it checks if the URL contains a fragment (indicated by a `#` symbol).
-   * If a fragment is present, it scrolls to the corresponding anchor in the view
-   * after a short delay.
-   *
-   * @private
-   */
-  private initRouterEvents(): void {
-    this.router.events
-      .pipe(
-        filter(
-          (event): event is NavigationEnd => event instanceof NavigationEnd
-        )
-      )
-      .subscribe(() => {
-        const fragment = this.router.url.split('#')[1];
-        if (fragment) {
-          setTimeout(() => {
-            this.viewportScroller.scrollToAnchor(fragment);
-          }, 100);
-        }
-      });
   }
 
   /**

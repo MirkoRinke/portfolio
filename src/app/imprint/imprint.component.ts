@@ -13,20 +13,6 @@
 import { Component } from '@angular/core';
 
 /**
- * Imports the NavBarComponent from the shared navigation bar module
- * @imports {NavBarComponent} Component that renders the navigation bar UI
- * @moduleRelativePath '../shared/nav-bar/nav-bar.component'
- */
-import { NavBarComponent } from '../shared/nav-bar/nav-bar.component';
-
-/**
- * Imports the FooterComponent from the shared footer module
- * @imports {FooterComponent} Component that renders the footer UI
- * @moduleRelativePath '../shared/footer/footer.component'
- */
-import { FooterComponent } from '../shared/footer/footer.component';
-
-/**
  * Imports the Subscription class from the RxJS library
  * @imports {Subscription} Class used to handle and manage subscriptions to observables
  * @module 'rxjs'
@@ -51,7 +37,7 @@ import { LanguageService } from '../shared/services/language.service';
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [NavBarComponent, FooterComponent],
+  imports: [],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss',
 })
