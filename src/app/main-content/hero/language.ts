@@ -33,7 +33,7 @@ export const textsDE: Texts = {
   subHeading: 'Frontend-Entwickler',
   mainHeading: 'Mirko Rinke',
   checkMyWork: 'Meine Projekte',
-  contactMe: 'Kontaktieren mich',
+  contactMe: 'Kontaktiere mich',
 };
 
 /**

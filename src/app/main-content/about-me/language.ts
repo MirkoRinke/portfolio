@@ -41,7 +41,7 @@ export const textsDE: Texts = {
   personalGrowth:
     'Ich bin aufgeschlossen und suche stets nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu verbessern.',
   problemSolving:
-    'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben, sondern auch um eine kreative Form des Problemlösens. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken.',
+    'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben, sondern auch um eine kreative Form des Problemlösens. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. So werden Ziele erreicht und Visionen zum Leben erweckt.',
 };
 
 /**

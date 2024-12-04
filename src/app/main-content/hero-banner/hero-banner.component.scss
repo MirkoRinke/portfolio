@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   overflow: hidden;
   white-space: nowrap;
 
@@ -24,31 +23,38 @@
   }
 
   .words {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
     align-items: center;
-    animation: scroll 30s linear infinite;
-    padding: 13px 32px;
+    animation: scroll 15s linear infinite;
+    padding: 0;
+    padding-block: 13px;
+    margin: 0;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000;
 
     span {
       font-size: 32px;
       font-weight: 400;
       color: var(--primary-color);
       white-space: nowrap;
-      margin-inline: 55px;
+      padding-inline: 55px;
 
       @media (max-width: vars.$breakpoint-sm) {
         font-size: 20px;
-        margin-inline: 20px;
+        padding-inline: 20px;
       }
     }
 
     @keyframes scroll {
       0% {
-        transform: translateX(100%);
+        transform: translate3d(33.334%, 0, 0);
       }
       100% {
-        transform: translateX(-100%);
+        transform: translate3d(-66.666%, 0, 0);
       }
     }
   }

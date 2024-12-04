@@ -48,11 +48,11 @@ export const textsDE: Texts = {
   titleSkillSet: 'Skills',
   descriptionSkillSet:
     'Meine berufliche Reise umfasst die Arbeit an verschiedenen Projekten, bei denen ich eine Vielzahl von Frontend-Technologien und -Konzepten eingesetzt habe. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig verändernden Landschaft der Webentwicklung auf dem neuesten Stand zu bleiben.',
-  titleAnotherSkill: 'Benötigen Sie',
-  anotherSkill: 'eine zusätzliche Fähigkeit?',
+  titleAnotherSkill: 'Zusätzliche Fähigkeiten',
+  anotherSkill: 'benötigt?',
   descriptionAnotherSkill:
-    'Zögern Sie nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen zu erweitern.',
-  buttonLetsTalk: 'Lassen Sie uns sprechen',
+    'Gerne stehe ich für weitere Fragen zur Verfügung und freue mich darauf, mein Wissen zu erweitern.',
+  buttonLetsTalk: 'Lass uns sprechen',
   titleGrowthMindsetFirstPart: 'Ich habe Interesse daran,',
   titleGrowthMindsetSecondPart: 'neue Fähigkeiten zu erlernen',
 };
