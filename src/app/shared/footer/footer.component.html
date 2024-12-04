@@ -20,8 +20,16 @@
           >LinkedIn</a
         >
         <a href="mailto:contact@mirkorinke.dev">Email</a>
-        <a [routerLink]="['/imprint']">{{ texts.imprint }}</a>
-        <a [routerLink]="['/privacy']">{{ texts.privacy }}</a>
+        <a
+          [routerLink]="['/imprint']"
+          (click)="scrollToTop(); resetActiveLink()"
+          >{{ texts.imprint }}</a
+        >
+        <a
+          [routerLink]="['/privacy']"
+          (click)="scrollToTop(); resetActiveLink()"
+          >{{ texts.privacy }}</a
+        >
       </div>
     </div>
     <div class="copyright-mobile">© Mirko Rinke {{ getYear() }}</div>

@@ -7,11 +7,13 @@
  * Used to enforce consistent navigation labels across language versions.
  *
  * @interface Texts
+ * @property {string} Home - Text for Home navigation link
  * @property {string} aboutMe - Text for About Me navigation link
  * @property {string} skills - Text for Skills navigation link
  * @property {string} projects - Text for Projects navigation link
  */
 export interface Texts {
+  home: string;
   aboutMe: string;
   skills: string;
   projects: string;
@@ -25,6 +27,7 @@ export interface Texts {
  * @type {Texts}
  */
 export const textsDE: Texts = {
+  home: 'Startseite',
   aboutMe: 'Über mich',
   skills: 'Skills',
   projects: 'Projekte',
@@ -38,6 +41,7 @@ export const textsDE: Texts = {
  * @type {Texts}
  */
 export const textsEN: Texts = {
+  home: 'Home',
   aboutMe: 'About me',
   skills: 'Skills',
   projects: 'Projects',

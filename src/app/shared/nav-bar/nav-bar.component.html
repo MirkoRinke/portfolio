@@ -10,13 +10,21 @@
     (click)="closeMenu()"
     [ngClass]="{ 'menu-is-open': showMenu }"
   >
-    @if (isHomeRoute()) {
     <app-language-toggle class="language-toggle"></app-language-toggle>
     <div
       (click)="$event.stopPropagation()"
       class="nav-links"
       [ngClass]="{ 'toggle-menu': showMenu }"
     >
+      @if (!isHomeRoute()) {
+      <a
+        [routerLink]="['']"
+        (click)="resetActiveLink(); closeMenu()"
+        [class.active]="activeLink === 'aboutMe'"
+        >{{ texts.home }}</a
+      >
+      }
+
       <a
         (click)="
           scrollToSection('about-me'); setActiveLink('aboutMe'); closeMenu()
@@ -43,9 +51,7 @@
       <app-language-toggle class="language-toggle-menu"></app-language-toggle>
       <app-color-toggle class="color-toggle-menu"></app-color-toggle>
     </div>
-    }
   </div>
-
   <div class="right-side">
     <app-color-toggle></app-color-toggle>
     <div
@@ -55,10 +61,7 @@
       [innerHTML]="returnIcon('logo')"
     ></div>
   </div>
-
-  @if (isHomeRoute()) {
   <div (click)="openMenu()" class="menu">
     <div class="icon" [innerHTML]="returnIcon('menu')"></div>
   </div>
-  }
 </nav>

@@ -342,9 +342,6 @@ export class NavBarComponent {
   /**
    * Scrolls to a specific section of the page identified by the given fragment.
    *
-   * This method first clears any existing fragment in the URL, then sets a new fragment
-   * after a short delay to ensure the page scrolls to the correct section.
-   *
    * @param {string} fragment - The fragment identifier of the section to scroll to.
    *
    * @example
@@ -352,6 +349,35 @@ export class NavBarComponent {
    * (click)="scrollToSection('contact')"
    */
   scrollToSection(fragment: string): void {
+    if (!this.isHomeRoute()) {
+      this.navigateToHomeAndScroll(fragment);
+    } else {
+      this.scrollToFragment(fragment);
+    }
+  }
+
+  /**
+   * Navigates to the home route and then scrolls to the specified fragment.
+   *
+   * @param {string} fragment - The fragment identifier of the section to scroll to.
+   */
+  private navigateToHomeAndScroll(fragment: string): void {
+    this.router.navigate(['/']).then(() => {
+      setTimeout(() => {
+        this.router.navigate([], {
+          fragment: fragment,
+        });
+        this.viewportScroller.scrollToAnchor(fragment);
+      }, 100);
+    });
+  }
+
+  /**
+   * Scrolls directly to the specified fragment.
+   *
+   * @param {string} fragment - The fragment identifier of the section to scroll to.
+   */
+  private scrollToFragment(fragment: string): void {
     this.router
       .navigate([], {
         fragment: undefined,
