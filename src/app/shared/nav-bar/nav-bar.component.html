@@ -1,25 +1,27 @@
 <nav class="nav-bar">
   <div
     [routerLink]="['']"
-    (click)="resetActiveLink()"
+    (click)="navigationService.resetActiveLink()"
     class="logo-small"
     [innerHTML]="returnIcon('logoSmall')"
   ></div>
   <div
     class="left-side"
-    (click)="closeMenu()"
-    [ngClass]="{ 'menu-is-open': showMenu }"
+    (click)="navigationService.closeMenu()"
+    [ngClass]="{ 'menu-is-open': navigationService.isMenuOpen() }"
   >
     <app-language-toggle class="language-toggle"></app-language-toggle>
     <div
       (click)="$event.stopPropagation()"
       class="nav-links"
-      [ngClass]="{ 'toggle-menu': showMenu }"
+      [ngClass]="{ 'toggle-menu': navigationService.isMenuOpen() }"
     >
       @if (!isHomeRoute()) {
       <a
         [routerLink]="['']"
-        (click)="resetActiveLink(); closeMenu()"
+        (click)="
+          navigationService.resetActiveLink(); navigationService.closeMenu()
+        "
         [class.active]="activeLink === 'aboutMe'"
         >{{ texts.home }}</a
       >
@@ -27,14 +29,18 @@
 
       <a
         (click)="
-          scrollToSection('about-me'); setActiveLink('aboutMe'); closeMenu()
+          scrollToSection('about-me');
+          navigationService.setActiveLink('aboutMe');
+          navigationService.closeMenu()
         "
         [class.active]="activeLink === 'aboutMe'"
         >{{ texts.aboutMe }}</a
       >
       <a
         (click)="
-          scrollToSection('skills'); setActiveLink('skills'); closeMenu()
+          scrollToSection('skills');
+          navigationService.setActiveLink('skills');
+          navigationService.closeMenu()
         "
         [class.active]="activeLink === 'skills'"
         >{{ texts.skills }}</a
@@ -42,8 +48,8 @@
       <a
         (click)="
           scrollToSection('featured-project');
-          setActiveLink('projects');
-          closeMenu()
+          navigationService.setActiveLink('projects');
+          navigationService.closeMenu()
         "
         [class.active]="activeLink === 'projects'"
         >{{ texts.projects }}</a
@@ -56,12 +62,12 @@
     <app-color-toggle></app-color-toggle>
     <div
       [routerLink]="['']"
-      (click)="resetActiveLink()"
+      (click)="navigationService.resetActiveLink()"
       class="logo"
       [innerHTML]="returnIcon('logo')"
     ></div>
   </div>
-  <div (click)="openMenu()" class="menu">
+  <div (click)="navigationService.toggleMenu()" class="menu">
     <div class="icon" [innerHTML]="returnIcon('menu')"></div>
   </div>
 </nav>

@@ -22,15 +22,6 @@ import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 /**
- * Importing NavBarComponent from shared components:
- * - Provides navigation bar functionality
- * - Contains links and navigation menu
- * - Used in hero section layout
- * - Part of shared components that can be reused
- */
-import { NavBarComponent } from '../../shared/nav-bar/nav-bar.component';
-
-/**
  * Importing HeroBannerComponent:
  * - Provides hero section banner display
  * - Contains main hero content and animations
@@ -97,7 +88,7 @@ import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [NavBarComponent, HeroBannerComponent, HeroSideElementsComponent],
+  imports: [HeroBannerComponent, HeroSideElementsComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })

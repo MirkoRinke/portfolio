@@ -74,16 +74,6 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { ContactComponent } from './contact/contact.component';
 
 /**
- * Importing FooterComponent from shared components.
- * Used as a child component to display the page footer:
- * - Contains copyright and legal information
- * - Displays social media links and contact info
- * - Part of the shared layout components
- * - Rendered at the bottom of every page
- */
-import { FooterComponent } from '../shared/footer/footer.component';
-
-/**
  * Component decorator configuration for MainContentComponent.
  * @Component defines the following metadata:
  * - selector: 'app-main-content' - HTML selector used to insert this component
@@ -109,7 +99,6 @@ import { FooterComponent } from '../shared/footer/footer.component';
     FeaturedProjectsComponent,
     TestimonialsComponent,
     ContactComponent,
-    FooterComponent,
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',

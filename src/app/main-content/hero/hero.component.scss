@@ -5,6 +5,17 @@
   height: 100dvh;
   background-image: var(--hero-background);
   overflow: hidden;
+  padding-top: 100px;
+
+  .menu-is-open {
+    background-color: var(--background-50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8000;
+  }
 
   .hero-content {
     height: calc(100dvh - 98px);

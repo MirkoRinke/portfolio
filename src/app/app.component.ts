@@ -13,6 +13,12 @@
 import { Component } from '@angular/core';
 
 /**
+ * Imports Angular's CommonModule
+ * @module CommonModule - Provides common Angular directives and pipes like ngIf, ngFor, etc.
+ */
+import { CommonModule } from '@angular/common';
+
+/**
  * Importing RouterOutlet from @angular/router.
  * Core Angular router component that:
  * - Acts as a placeholder for rendering route components
@@ -21,6 +27,26 @@ import { Component } from '@angular/core';
  * - Enables navigation between different views/components
  */
 import { RouterOutlet } from '@angular/router';
+
+/**
+ * Importing NavBarComponent from shared/nav-bar/nav-bar.component.
+ * Component that displays the navigation bar at the top of the page.
+ */
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+
+/**
+ * Importing FooterComponent from shared/footer/footer.component.
+ * Component that displays the footer at the bottom of the page.
+ */
+import { FooterComponent } from './shared/footer/footer.component';
+
+/**
+ * Importing NavigationService to handle navigation-related operations.
+ * - Provides methods to manage active navigation link
+ * - Emits active link changes to components
+ * - Core service for navigation in the application
+ */
+import { NavigationService } from './shared/services/navigation.service';
 
 /**
  * Component decorator configuration for AppComponent.
@@ -36,8 +62,10 @@ import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NavBarComponent, FooterComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor(public navigationService: NavigationService) {}
+}

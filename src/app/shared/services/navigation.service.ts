@@ -13,6 +13,11 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 /**
+ * Importing ScrollService which provides methods to handle scroll-related operations.
+ */
+import { ScrollService } from './scroll.service';
+
+/**
  * Injectable decorator marks this class as available to be provided and injected as a dependency.
  */
 @Injectable({
@@ -36,6 +41,20 @@ export class NavigationService {
    * @type {Observable<string>}
    */
   activeLink$: Observable<string | null> = this.activeLink.asObservable();
+
+  /**
+   * A boolean flag indicating whether the menu should be shown.
+   *
+   * @private
+   */
+  private showMenu: boolean = false;
+
+  /**
+   * Creates an instance of NavigationService.
+   *
+   * @param {ScrollService} scrollService - The service used to handle scrolling functionality.
+   */
+  constructor(private scrollService: ScrollService) {}
 
   /**
    * Retrieves the currently active navigation link.
@@ -62,5 +81,52 @@ export class NavigationService {
    */
   resetActiveLink(): void {
     this.activeLink.next(null);
+  }
+
+  /**
+   * Checks if the menu is currently open.
+   *
+   * @returns {boolean} True if the menu is open, false otherwise.
+   */
+  isMenuOpen(): boolean {
+    return this.showMenu;
+  }
+
+  /**
+   * Opens the menu by setting the `showMenu` property to `true`.
+   * If the menu is not already shown, it also adds scroll listeners
+   * using the `scrollService`.
+   */
+  openMenu(): void {
+    if (!this.showMenu) {
+      this.showMenu = true;
+      this.scrollService.addScrollListeners();
+    }
+  }
+
+  /**
+   * Closes the menu if it is currently open.
+   *
+   * This method sets the `showMenu` property to `false` and removes scroll listeners
+   * using the `scrollService` if the menu is currently shown.
+   */
+  closeMenu(): void {
+    if (this.showMenu) {
+      this.showMenu = false;
+      this.scrollService.removeScrollListeners();
+    }
+  }
+
+  /**
+   * Toggles the visibility of the menu.
+   * If the menu is currently shown, it will be closed.
+   * If the menu is currently hidden, it will be opened.
+   */
+  toggleMenu(): void {
+    if (this.showMenu) {
+      this.closeMenu();
+    } else {
+      this.openMenu();
+    }
   }
 }

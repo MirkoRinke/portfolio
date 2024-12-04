@@ -167,12 +167,6 @@ export class NavBarComponent {
   private activeLinkSubscription: Subscription | undefined;
 
   /**
-   * A boolean flag indicating whether the menu should be shown or hidden.
-   * When set to `true`, the menu is displayed; when set to `false`, the menu is hidden.
-   */
-  showMenu = false;
-
-  /**
    * Subscription to handle language changes.
    * This subscription is used to listen for changes in the application's language settings
    * and update the component accordingly.
@@ -209,56 +203,6 @@ export class NavBarComponent {
   public returnIcon(type: string): SafeHtml {
     const iconHtml = returnIcon(type);
     return this.sanitizer.bypassSecurityTrustHtml(iconHtml);
-  }
-
-  /**
-   * Sets the active navigation link in the application.
-   * Updates the currently active link through the navigation service.
-   *
-   * @param {string} link - The identifier/path of the link to be set as active
-   * @returns {void}
-   *
-   * @example
-   * setActiveLink('aboutMe'); // Sets the home link as active
-   */
-  setActiveLink(link: string): void {
-    this.navigationService.setActiveLink(link);
-  }
-
-  /**
-   * Resets the active navigation link to its default state.
-   * Clears the currently active link through the navigation service.
-   *
-   * @returns {void}
-   *
-   * @example
-   * resetActiveLink(); // Resets the active navigation link to default
-   */
-  resetActiveLink(): void {
-    this.navigationService.resetActiveLink();
-  }
-
-  /**
-   * Toggles the visibility of the menu. If the menu is currently shown, it will be closed.
-   * Otherwise, it will be opened and scroll listeners will be added.
-   */
-  openMenu(): void {
-    if (this.showMenu) {
-      this.closeMenu();
-      return;
-    } else {
-      this.showMenu = true;
-      this.scrollService.addScrollListeners();
-    }
-  }
-
-  /**
-   * Closes the navigation menu by setting the `showMenu` property to `false`
-   * and removes scroll listeners using the `scrollService`.
-   */
-  closeMenu(): void {
-    this.showMenu = false;
-    this.scrollService.removeScrollListeners();
   }
 
   /**

@@ -10,6 +10,12 @@
   margin-inline: auto;
   padding-inline: 96px;
 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
   @media (max-width: vars.$breakpoint-lg) {
     padding-inline: 48px;
   }
@@ -40,7 +46,6 @@
     gap: 24px;
 
     &.menu-is-open {
-      background-color: var(--background-50);
       position: absolute;
       top: 0;
       left: 0;
