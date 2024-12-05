@@ -4,19 +4,27 @@
  */
 
 /**
- * Interface defining text content structure for footer elements.
- * Used to enforce consistent text properties across language versions.
- *
- * @interface Texts
- * @property {string} position - Professional position/role text
- * @property {string} location - Geographic location text
- * @property {string} imprint - Imprint/legal notice text
- * @property {string} privacy - Privacy policy text
+ * Represents a collection of textual elements for displaying important legal or informational sections.
  */
 export interface Texts {
+  /**
+   * The position or job title, typically used to describe the role or occupation.
+   */
   position: string;
+
+  /**
+   * The location, such as city or region, where the entity or person is based.
+   */
   location: string;
+
+  /**
+   * The text for the imprint or legal notice, often required by law on websites.
+   */
   imprint: string;
+
+  /**
+   * The text related to the privacy policy, outlining how personal data is handled.
+   */
   privacy: string;
 }
 

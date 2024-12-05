@@ -3,19 +3,27 @@
  */
 
 /**
- * Interface defining the structure of a testimonial.
- * Represents a single testimonial/review entry with basic metadata.
- *
- * @interface Testimonial
- * @property {number} id - Unique identifier for the testimonial
- * @property {string} author - Name of the person giving the testimonial
- * @property {string} position - Job title/role of the testimonial author
- * @property {string} text - The actual testimonial content/quote
+ * Represents a testimonial with details about the author, their position, and the testimonial text.
  */
 export interface Testimonial {
+  /**
+   * The unique identifier for the testimonial.
+   */
   id: number;
+
+  /**
+   * The name of the person giving the testimonial.
+   */
   author: string;
+
+  /**
+   * The position or role of the author (e.g., "CEO", "Senior Developer").
+   */
   position: string;
+
+  /**
+   * The text of the testimonial or review provided by the author.
+   */
   text: string;
 }
 

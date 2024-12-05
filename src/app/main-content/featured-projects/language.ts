@@ -3,14 +3,22 @@
  */
 
 /**
- * Interface defining structure for text content.
- * @property {string} heading - The heading text
- * @property {string} title - The title text
- * @property {string} description - The descriptive text
+ * Represents a collection of textual elements commonly used in a UI.
  */
 export interface Texts {
+  /**
+   * The heading text, typically used for the main headline of a section or page.
+   */
   heading: string;
+
+  /**
+   * The title text, often used for subtitles or smaller headings.
+   */
   title: string;
+
+  /**
+   * A descriptive text providing more information or context.
+   */
   description: string;
 }
 

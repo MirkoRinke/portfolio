@@ -82,15 +82,22 @@ import { RouterModule } from '@angular/router';
 import { ContactInfoComponent } from '../contact-info/contact-info.component';
 
 /**
- * Interface representing the contact data.
- *
- * @property {string} name - The name of the contact.
- * @property {string} email - The email address of the contact.
- * @property {string} message - The message from the contact.
+ * Represents contact information submitted through a contact form.
  */
-interface ContactData {
+export interface ContactData {
+  /**
+   * The name of the person submitting the contact form.
+   */
   name: string;
+
+  /**
+   * The email address of the person submitting the contact form.
+   */
   email: string;
+
+  /**
+   * The message or inquiry provided in the contact form.
+   */
   message: string;
 }
 

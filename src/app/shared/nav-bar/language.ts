@@ -3,19 +3,27 @@
  */
 
 /**
- * Interface defining navigation text content structure.
- * Used to enforce consistent navigation labels across language versions.
- *
- * @interface Texts
- * @property {string} Home - Text for Home navigation link
- * @property {string} aboutMe - Text for About Me navigation link
- * @property {string} skills - Text for Skills navigation link
- * @property {string} projects - Text for Projects navigation link
+ * Represents a collection of textual elements used in different sections of a website or application.
  */
 export interface Texts {
+  /**
+   * The text for the "Home" section, typically used as a welcome message or introduction.
+   */
   home: string;
+
+  /**
+   * The text for the "About Me" section, usually describing personal background or biography.
+   */
   aboutMe: string;
+
+  /**
+   * The text for the "Skills" section, outlining the abilities and expertise.
+   */
   skills: string;
+
+  /**
+   * The text for the "Projects" section, typically describing past or current projects.
+   */
   projects: string;
 }
 

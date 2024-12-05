@@ -3,19 +3,27 @@
  */
 
 /**
- * Interface defining the structure of a skill item.
- * Used to ensure consistent skill data across the application.
- *
- * @interface Skill
- * @property {number} id - Unique identifier for the skill
- * @property {string} name - Name/title of the skill
- * @property {string} icon - Path or markup for the skill's icon
- * @property {string} alt - Alternative text for the icon for accessibility
+ * Represents a skill with metadata, including its identifier, name, icon, and alternative text.
  */
 export interface Skill {
+  /**
+   * The unique identifier for the skill.
+   */
   id: number;
+
+  /**
+   * The name of the skill.
+   */
   name: string;
+
+  /**
+   * The file path or URL to the icon representing the skill.
+   */
   icon: string;
+
+  /**
+   * The alternative text for the skill's icon, used for accessibility purposes.
+   */
   alt: string;
 }
 

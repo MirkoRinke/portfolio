@@ -3,19 +3,27 @@
  */
 
 /**
- * Interface defining text content structure for the hero banner.
- * Used to enforce consistent text properties across language versions.
- *
- * @interface Texts
- * @property {string} remoteWork - Text indicating remote work availability
- * @property {string} jobDescription - Job title/description text
- * @property {string} basedIn - Location text
- * @property {string} openToWork - Text indicating job seeking status
+ * Represents a collection of textual elements commonly used to describe job-related information.
  */
 export interface Texts {
+  /**
+   * Indicates whether the person is available for remote work.
+   */
   remoteWork: string;
+
+  /**
+   * Provides a description of the job or position.
+   */
   jobDescription: string;
+
+  /**
+   * Specifies the location or region where the person is based.
+   */
   basedIn: string;
+
+  /**
+   * Indicates whether the person is currently open to work opportunities.
+   */
   openToWork: string;
 }
 

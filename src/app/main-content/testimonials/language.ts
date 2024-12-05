@@ -4,13 +4,12 @@
  */
 
 /**
- * Interface defining the structure of text content for localization.
- * Used to enforce consistent text properties across language versions.
- *
- * @interface Texts
- * @property {string} heading - The main heading/title text
+ * Represents a collection of textual elements commonly used in a UI.
  */
 export interface Texts {
+  /**
+   * The heading text, typically used for the main headline of a section or page.
+   */
   heading: string;
 }
 

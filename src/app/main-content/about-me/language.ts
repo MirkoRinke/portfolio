@@ -3,21 +3,37 @@
  */
 
 /**
- * Interface representing text content for different sections of the about-me component.
- * @interface
- * @property {string} whoIAm - Text content describing who the person is
- * @property {string} aboutMe - Text content for the about me section
- * @property {string} introduction - Text content for the introduction section
- * @property {string} workEnvironment - Text content describing the work environment
- * @property {string} personalGrowth - Text content about personal growth
- * @property {string} problemSolving - Text content about problem solving abilities
+ * Represents a collection of textual elements used to describe different aspects of a personal or professional profile.
  */
 export interface Texts {
+  /**
+   * The text for describing who the person is, typically an introduction or personal statement.
+   */
   whoIAm: string;
+
+  /**
+   * The text for the "About Me" section, usually describing background, experience, or personal history.
+   */
   aboutMe: string;
+
+  /**
+   * The text for the introduction section, providing a brief overview or summary.
+   */
   introduction: string;
+
+  /**
+   * The text describing the work environment, including the type of work or team dynamic.
+   */
   workEnvironment: string;
+
+  /**
+   * The text for personal growth, describing the person's commitment to learning and development.
+   */
   personalGrowth: string;
+
+  /**
+   * The text for problem-solving, explaining the person's approach to tackling challenges and finding solutions.
+   */
   problemSolving: string;
 }
 

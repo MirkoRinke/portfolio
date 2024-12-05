@@ -3,29 +3,52 @@
  */
 
 /**
- * Interface defining the structure of text content for the skills section.
- * Used to enforce consistent text properties across language versions.
- *
- * @interface Texts
- * @property {string} titleTechnologies - Title for technologies section
- * @property {string} titleSkillSet - Title for skill set section
- * @property {string} descriptionSkillSet - Description of skill set and experience
- * @property {string} titleAnotherSkill - Title for additional skills section
- * @property {string} anotherSkill - Text for skill inquiry
- * @property {string} descriptionAnotherSkill - Description for additional skills
- * @property {string} buttonLetsTalk - Text for call-to-action button
- * @property {string} titleGrowthMindsetFirstPart - First part of growth mindset title
- * @property {string} titleGrowthMindsetSecondPart - Second part of growth mindset title
+ * Represents a collection of textual elements used in sections related to technologies, skills, and growth mindset.
  */
 export interface Texts {
+  /**
+   * The title text for the technologies section.
+   */
   titleTechnologies: string;
+
+  /**
+   * The title text for the skill set section.
+   */
   titleSkillSet: string;
+
+  /**
+   * The description of the skill set, explaining the abilities and expertise in detail.
+   */
   descriptionSkillSet: string;
+
+  /**
+   * The title text for another skill section, often used to introduce additional skills.
+   */
   titleAnotherSkill: string;
+
+  /**
+   * The name or description of another skill.
+   */
   anotherSkill: string;
+
+  /**
+   * The description of another skill, providing more details about the ability.
+   */
   descriptionAnotherSkill: string;
+
+  /**
+   * The text for a button encouraging the user to initiate contact (e.g., "Let's Talk").
+   */
   buttonLetsTalk: string;
+
+  /**
+   * The first part of the title text for the growth mindset section.
+   */
   titleGrowthMindsetFirstPart: string;
+
+  /**
+   * The second part of the title text for the growth mindset section.
+   */
   titleGrowthMindsetSecondPart: string;
 }
 

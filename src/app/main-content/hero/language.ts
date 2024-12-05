@@ -3,19 +3,27 @@
  */
 
 /**
- * Interface defining the structure of text content for the hero section.
- * Used to enforce consistent text properties across language versions.
- *
- * @interface Texts
- * @property {string} subHeading - The subheading text (e.g. "Frontend Developer")
- * @property {string} mainHeading - The main heading text (e.g. name)
- * @property {string} checkMyWork - Text for the portfolio link button
- * @property {string} contactMe - Text for the contact button
+ * Represents a collection of textual elements used for headings and call-to-action sections.
  */
 export interface Texts {
+  /**
+   * A subheading text typically used to introduce a section or topic.
+   */
   subHeading: string;
+
+  /**
+   * The main heading text, often used as the primary title or attention-grabber.
+   */
   mainHeading: string;
+
+  /**
+   * Text for a call-to-action prompting the user to view work or projects.
+   */
   checkMyWork: string;
+
+  /**
+   * Text for a call-to-action encouraging the user to get in touch or contact.
+   */
   contactMe: string;
 }
 

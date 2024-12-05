@@ -3,47 +3,77 @@
  */
 
 /**
- * Interface representing a project entity.
- * @interface Project
- *
- * @property {number} id - Unique identifier for the project
- * @property {string} name - Name of the project
- * @property {boolean} visibility - Flag indicating if project is visible/public
- * @property {string} about - Brief description about the project
- * @property {string} description - Detailed description of the project
- * @property {Technology[]} technologies - Array of technologies used in the project
- * @property {string} imagePath - Path to the project's image asset
- * @property {Links} links - Object containing project-related links
+ * Represents a project with detailed information, including metadata, description, technologies, and related links.
  */
 export interface Project {
+  /**
+   * The unique identifier of the project.
+   */
   id: number;
+
+  /**
+   * The name of the project.
+   */
   name: string;
+
+  /**
+   * Indicates whether the project is publicly visible or private.
+   */
   visibility: boolean;
+
+  /**
+   * A brief summary or tagline for the project.
+   */
   about: string;
+
+  /**
+   * A detailed description of the project, including its purpose and features.
+   */
   description: string;
+
+  /**
+   * A list of technologies used in the project.
+   */
   technologies: Technology[];
+
+  /**
+   * The file path to the project's representative image.
+   */
   imagePath: string;
+
+  /**
+   * A collection of links related to the project, such as GitHub or a live demo.
+   */
   links: Links;
 }
 
 /**
- * Represents a programming technology or tool.
- * @interface Technology
- * @property {string} name - The name of the technology
- * @property {string} icon - The path or identifier for the technology's icon
+ * Represents a technology or tool used in a project.
  */
-interface Technology {
+export interface Technology {
+  /**
+   * The name of the technology or tool.
+   */
   name: string;
+
+  /**
+   * The file path or URL to the icon representing the technology.
+   */
   icon: string;
 }
 
 /**
- * Interface representing project links
- * @property {string} github - GitHub repository URL
- * @property {string} liveTest - Live demo URL
+ * Represents a collection of related links for a project.
  */
-interface Links {
+export interface Links {
+  /**
+   * The URL to the project's GitHub repository.
+   */
   github: string;
+
+  /**
+   * The URL to the live version or demo of the project.
+   */
   liveTest: string;
 }
 
