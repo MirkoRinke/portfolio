@@ -122,7 +122,7 @@ export const projectsEN: Project[] = [
     imagePath: './images/projects/join.jpg',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
-      liveTest: 'https://example.com',
+      liveTest: 'https://join.mirkorinke.dev',
     },
   },
   {
@@ -149,7 +149,7 @@ export const projectsEN: Project[] = [
     imagePath: './images/projects/el-pollo-loco.jpg',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
-      liveTest: 'https://example.com',
+      liveTest: 'https://el-pollo-loco.mirkorinke.dev',
     },
   },
   {
@@ -180,7 +180,7 @@ export const projectsEN: Project[] = [
     imagePath: './images/projects/pokedex.jpg',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
-      liveTest: 'https://example.com',
+      liveTest: 'https://pokedex.mirkorinke.dev',
     },
   },
 ];
@@ -230,7 +230,7 @@ export const projectsDE: Project[] = [
     imagePath: './images/projects/join.jpg',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
-      liveTest: 'https://example.com',
+      liveTest: 'https://join.mirkorinke.dev',
     },
   },
   {
@@ -257,7 +257,7 @@ export const projectsDE: Project[] = [
     imagePath: './images/projects/el-pollo-loco.jpg',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
-      liveTest: 'https://example.com',
+      liveTest: 'https://el-pollo-loco.mirkorinke.dev',
     },
   },
   {
@@ -288,7 +288,7 @@ export const projectsDE: Project[] = [
     imagePath: './images/projects/pokedex.jpg',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
-      liveTest: 'https://example.com',
+      liveTest: 'https://pokedex.mirkorinke.dev',
     },
   },
 ];

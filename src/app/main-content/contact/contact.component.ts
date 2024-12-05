@@ -199,7 +199,7 @@ export class ContactComponent {
    * A boolean flag indicating whether the mail test is enabled.
    * When set to `true`, the mail test is active.
    */
-  mailTest: boolean = true;
+  mailTest: boolean = false;
 
   /**
    * Holds the contact form data.
