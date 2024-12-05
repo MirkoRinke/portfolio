@@ -346,7 +346,7 @@ export class ContactComponent {
     this.showFeedback = true;
     setTimeout(() => {
       this.showFeedback = false;
-    }, 10000);
+    }, 5000);
   }
 
   /**

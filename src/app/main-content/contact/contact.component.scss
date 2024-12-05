@@ -180,7 +180,6 @@
 
             &.disabled {
               &:hover {
-                // cursor: not-allowed;
                 border-color: var(--invalid);
                 transition: border-color 0ms;
               }
@@ -200,6 +199,8 @@
           .submitted {
             @include mixins.default-button;
             margin-inline: auto;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
 
             &:hover span {
               animation: unset;
