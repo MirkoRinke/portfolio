@@ -52,31 +52,31 @@ export const TECH_SKILLS: Skill[] = [
   {
     id: 2,
     name: 'JavaScript',
-    icon: 'JavaScript',
+    icon: 'javaScript',
     alt: 'JavaScript Logo',
   },
   {
     id: 3,
     name: 'Material Design',
-    icon: 'MaterialDesign',
+    icon: 'materialDesign',
     alt: 'Material Design Logo',
   },
   {
     id: 4,
     name: 'TypeScript',
-    icon: 'TypeScript',
+    icon: 'typeScript',
     alt: 'TypeScript Logo',
   },
   {
     id: 5,
     name: 'Angular',
-    icon: 'Angular',
+    icon: 'angular',
     alt: 'Angular Logo',
   },
   {
     id: 6,
     name: 'Firebase',
-    icon: 'Firebase',
+    icon: 'firebase',
     alt: 'Firebase Logo',
   },
   {
@@ -94,13 +94,13 @@ export const TECH_SKILLS: Skill[] = [
   {
     id: 9,
     name: 'Scrum',
-    icon: 'Scrum',
+    icon: 'scrum',
     alt: 'Scrum Logo',
   },
   {
     id: 10,
     name: 'Growth Mindset',
-    icon: 'GrowthMindset',
+    icon: 'growthMindset',
     alt: 'Growth Mindset Logo',
   },
 ];
@@ -117,13 +117,13 @@ export const LEARNING_SKILLS: Skill[] = [
   {
     id: 0,
     name: 'React',
-    icon: 'React',
+    icon: 'react',
     alt: 'React Logo',
   },
   {
     id: 1,
     name: 'Vue Js',
-    icon: 'Vue',
+    icon: 'vue',
     alt: 'Vue Js Logo',
   },
 ];

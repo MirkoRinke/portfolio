@@ -104,11 +104,11 @@ export const projectsEN: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        icon: 'JavaScript',
+        icon: 'javaScript',
       },
       {
         name: 'Firebase',
-        icon: 'Firebase',
+        icon: 'firebase',
       },
       {
         name: 'HTML',
@@ -135,7 +135,7 @@ export const projectsEN: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        icon: 'JavaScript',
+        icon: 'javaScript',
       },
       {
         name: 'HTML',
@@ -162,7 +162,7 @@ export const projectsEN: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        icon: 'JavaScript',
+        icon: 'javaScript',
       },
       {
         name: 'HTML',
@@ -212,11 +212,11 @@ export const projectsDE: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        icon: 'JavaScript',
+        icon: 'javaScript',
       },
       {
         name: 'Firebase',
-        icon: 'Firebase',
+        icon: 'firebase',
       },
       {
         name: 'HTML',
@@ -243,7 +243,7 @@ export const projectsDE: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        icon: 'JavaScript',
+        icon: 'javaScript',
       },
       {
         name: 'HTML',
@@ -270,7 +270,7 @@ export const projectsDE: Project[] = [
     technologies: [
       {
         name: 'JavaScript',
-        icon: 'JavaScript',
+        icon: 'javaScript',
       },
       {
         name: 'HTML',
