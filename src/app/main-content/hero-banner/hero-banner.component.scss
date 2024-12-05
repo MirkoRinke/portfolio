@@ -9,18 +9,13 @@
 
   background-color: var(--secondary-color-12);
   transform: rotate(-3deg);
-  // width: 1440px;
-  width: 110%;
+  min-width: 100%;
   margin-inline: auto;
   overflow: hidden;
   position: absolute;
-  bottom: 50px;
-  left: 0;
-  right: 0;
-
-  &:hover .words {
-    animation-play-state: paused;
-  }
+  bottom: 60px;
+  left: -10px;
+  right: -10px;
 
   .words {
     display: grid;
@@ -33,14 +28,14 @@
     margin: 0;
     will-change: transform;
     transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000;
 
     span {
       font-size: 32px;
       font-weight: 400;
       color: var(--primary-color);
       white-space: nowrap;
+      padding: 0;
+      margin: 0;
       padding-inline: 55px;
 
       @media (max-width: vars.$breakpoint-sm) {
@@ -50,11 +45,11 @@
     }
 
     @keyframes scroll {
-      0% {
-        transform: translate3d(33.334%, 0, 0);
+      from {
+        transform: translate3d(100%, 0, 0);
       }
-      100% {
-        transform: translate3d(-66.666%, 0, 0);
+      to {
+        transform: translate3d(-100%, 0, 0);
       }
     }
   }
