@@ -102,15 +102,15 @@ export interface ContactData {
 }
 
 /**
- * Component decorator configuration for ContactComponent.
- * @Component defines the following metadata:
- * - selector: 'app-contact' - The HTML selector used to insert this component
- * - standalone: true - Component is self-contained without NgModule
- * - imports: Required dependencies:
- *   - FormsModule: For form handling and validation
- *   - CommonModule: For common Angular directives
- * - templateUrl: Points to external HTML template file
- * - styleUrl: Points to external SCSS styles file
+ * ContactComponent is responsible for displaying the contact section of the application.
+ * It is a standalone component.
+ *
+ * @component
+ * @selector app-contact
+ * @standalone true
+ * @imports [FormsModule, CommonModule, RouterModule, ContactInfoComponent]
+ * @templateUrl ./contact.component.html
+ * @styleUrls ./contact.component.scss
  */
 @Component({
   selector: 'app-contact',
@@ -202,9 +202,11 @@ export class ContactComponent {
   mailTest: boolean = true;
 
   /**
-   * @property {string} name - The name of the contact.
-   * @property {string} email - The email address of the contact.
-   * @property {string} message - The message from the contact.
+   * Holds the contact form data.
+   *
+   * @property {string} name - The name of the person submitting the contact form.
+   * @property {string} email - The email address of the person submitting the contact form.
+   * @property {string} message - The message content from the contact form.
    */
   contactData: ContactData = {
     name: '',
@@ -213,14 +215,14 @@ export class ContactComponent {
   };
 
   /**
-   * Configuration object for making a POST request to send an email.
+   * Configuration object for posting data to the server.
    *
-   * @property {string} endPoint - The endpoint URL to which the POST request will be sent.
-   * @property {(payload: any) => string} body - A function that takes a payload and returns it as a JSON string.
-   * @property {Object} options - Additional options for the POST request.
-   * @property {Object} options.headers - Headers to include in the POST request.
-   * @property {string} options.headers['Content-Type'] - The content type of the request, set to 'text/plain'.
-   * @property {string} options.headers.responseType - The expected response type, set to 'text'.
+   * @property {string} endPoint - The endpoint URL for the POST request.
+   * @property {function} body - Function to convert the payload to a JSON string.
+   * @property {object} options - Options for the POST request.
+   * @property {object} options.headers - Headers for the POST request.
+   * @property {string} options.headers['Content-Type'] - The content type of the request.
+   * @property {string} options.headers.responseType - The response type of the request.
    */
   post = {
     endPoint: './sendMail.php',
@@ -234,18 +236,15 @@ export class ContactComponent {
   };
 
   /**
-   * Constructs an instance of the ContactComponent.
+   * Creates an instance of ContactComponent.
    *
    * @param {LanguageService} languageService - The service used for handling language-related operations.
    */
   constructor(private languageService: LanguageService) {}
 
   /**
-   * Angular lifecycle hook that is called after the component's view has been fully initialized.
-   *
-   * This method subscribes to the `selectedLanguage$` observable from the `languageService` to
-   * dynamically load texts based on the selected language. It also loads the texts for the
-   * current language immediately upon initialization.
+   * Lifecycle hook that is called after the component's view has been initialized.
+   * Subscribes to the language service to listen for language changes and loads the initial texts.
    *
    * @returns {void}
    */
@@ -259,9 +258,9 @@ export class ContactComponent {
 
   /**
    * Lifecycle hook that is called when the component is destroyed.
+   * Unsubscribes from the language subscription to prevent memory leaks.
    *
-   * This method unsubscribes from the languageSubscription if it exists,
-   * to prevent memory leaks and ensure proper cleanup.
+   * @returns {void}
    */
   ngOnDestroy(): void {
     if (this.languageSubscription) {
@@ -270,12 +269,12 @@ export class ContactComponent {
   }
 
   /**
-   * Loads the appropriate text content based on the provided language.
+   * Loads the text content based on the selected language and sets the placeholders.
+   * If the language is 'de', it loads the German texts.
+   * If the language is 'en', it loads the English texts.
+   * If the language is neither 'de' nor 'en', it defaults to English texts.
    *
-   * @param {string} language - The language code to load texts for.
-   *                            Supported values are 'de' for German and 'en' for English.
-   *                            Defaults to English if an unsupported language code is provided.
-   *
+   * @param {string} language - The selected language ('de' or 'en').
    * @returns {void}
    */
   loadTexts(language: string): void {
@@ -285,11 +284,8 @@ export class ContactComponent {
   }
 
   /**
-   * Sets the placeholder values for the contact form fields.
-   *
-   * This method assigns the placeholder text for the name, email,
-   * and message fields from the `texts` object to the corresponding
-   * component properties.
+   * Sets the placeholder texts for the contact form fields.
+   * The placeholders are assigned from the `texts` object, which contains the placeholder text content.
    *
    * @returns {void}
    */
@@ -305,9 +301,9 @@ export class ContactComponent {
    * @param {NgForm} ngForm - The form to be submitted.
    *
    * This method performs the following actions:
-   * - Checks if the privacy policy is accepted. If not, it sets `privacyPolicyChecked` to false and returns.
+   * - Checks if the privacy policy checkbox is checked. If not, it sets `privacyPolicyChecked` to false and returns.
    * - If the form is submitted, valid, and not in test mode, it sends a POST request with the contact data.
-   *   - On success, it resets the form and shows a feedback message.
+   *   - On successful response, it resets the form and shows a feedback message.
    *   - On error, it logs the error to the console.
    *   - On completion, it logs a completion message to the console.
    * - If the form is submitted, valid, and in test mode, it logs a success message, resets the form, clears the form, and shows a feedback message.
@@ -344,10 +340,9 @@ export class ContactComponent {
   /**
    * Displays a feedback message for a specified duration.
    *
-   * This method sets the `showFeedback` property to `true`,
-   * which presumably triggers the display of a feedback message.
-   * After 10 seconds (10000 milliseconds), it sets the `showFeedback`
-   * property back to `false`, hiding the feedback message.
+   * This method sets the `showFeedback` property to `true`, which presumably
+   * triggers the display of a feedback message in the UI. After 5 seconds (5000 milliseconds),
+   * it sets the `showFeedback` property back to `false`, hiding the feedback message.
    */
   showFeedbackMessage(): void {
     this.showFeedback = true;
@@ -357,10 +352,8 @@ export class ContactComponent {
   }
 
   /**
-   * Clears the form data and resets the placeholder classes.
-   *
-   * This method resets the `privacyPolicyChecked` property to `undefined`
-   * and updates the placeholder classes for the name, email, and message fields.
+   * Clears the contact form by resetting the privacy policy checkbox and
+   * setting the placeholder classes for name, email, and message fields to 'placeholder-valid'.
    */
   clearForm(): void {
     this.privacyPolicyChecked = undefined;
@@ -372,13 +365,11 @@ export class ContactComponent {
   /**
    * Updates the placeholders for the form fields based on their validation status.
    *
+   * @param {NgForm} form - The form whose fields' placeholders need to be updated.
+   *
    * This method checks the validity of the 'name', 'email', and 'message' controls
    * in the provided form. If any of these controls are invalid, it calls the respective
    * methods to update their placeholders.
-   *
-   * @param {NgForm} form - The form whose controls' placeholders need to be updated.
-   *
-   * @returns {void}
    */
   updatePlaceholders(form: NgForm): void {
     if (form.controls['name'].invalid) {
@@ -396,6 +387,8 @@ export class ContactComponent {
    * Updates the placeholder for the name input field to indicate that it is required.
    * Sets the placeholder text to the required name text, clears the contact name data,
    * and applies the 'placeholder-invalid' CSS class to the placeholder.
+   *
+   * @returns {void}
    */
   updatePlaceholdersName(): void {
     this.placeholderName = this.texts.requiredName;
@@ -404,10 +397,13 @@ export class ContactComponent {
   }
 
   /**
-   * Updates the email placeholder to indicate that the email field is required.
+   * Updates the email placeholder to indicate that an email is required.
+   *
    * This method sets the `placeholderEmail` to the required email text,
-   * clears the `contactData.email` field, and applies the 'placeholder-invalid' class
-   * to the `placeholderEmailClass` property.
+   * clears the `contactData.email` field, and applies the 'placeholder-invalid'
+   * class to the `placeholderEmailClass` property.
+   *
+   * @returns {void}
    */
   updatePlaceholdersEmail(): void {
     this.placeholderEmail = this.texts.requiredEmail;
@@ -432,9 +428,8 @@ export class ContactComponent {
 
   /**
    * Handles the change event for the privacy policy checkbox.
-   * Updates the `privacyPolicyChecked` property based on the checkbox state.
    *
-   * @param {Event} event - The event object from the checkbox change event.
+   * @param {Event} event - The event triggered by the checkbox change.
    */
   onPrivacyPolicyChange(event: Event): void {
     this.privacyPolicyChecked = (event.target as HTMLInputElement).checked;

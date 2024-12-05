@@ -1,3 +1,8 @@
+/**
+ * Importing Component decorator from Angular core:
+ * - Used to define an Angular component.
+ * - Provides metadata about the component including its selector, template, and styles.
+ */
 import { Component } from '@angular/core';
 
 /**
@@ -27,6 +32,17 @@ import { LanguageService } from '../../shared/services/language.service';
  */
 import { Texts, textsDE, textsEN } from './language';
 
+/**
+ * ContactInfoComponent is responsible for displaying the contact information section of the application.
+ * It is a standalone component.
+ *
+ * @component
+ * @selector app-contact-info
+ * @standalone true
+ * @imports []
+ * @templateUrl ./contact-info.component.html
+ * @styleUrls ./contact-info.component.scss
+ */
 @Component({
   selector: 'app-contact-info',
   standalone: true,

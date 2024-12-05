@@ -82,12 +82,15 @@ import { LanguageService } from '../../../shared/services/language.service';
 import { returnIcon } from '../../../shared/services/svg.icons.service';
 
 /**
- * Component for displaying a modal with project details.
+ * ProjectModalComponent is responsible for displaying the project modal section of the application.
+ * It is a standalone component.
  *
  * @component
  * @selector app-project-modal
+ * @standalone true
+ * @imports []
  * @templateUrl ./project-modal.component.html
- * @styleUrl ./project-modal.component.scss
+ * @styleUrls ./project-modal.component.scss
  */
 @Component({
   selector: 'app-project-modal',
@@ -98,30 +101,34 @@ import { returnIcon } from '../../../shared/services/svg.icons.service';
 })
 export class ProjectModalComponent {
   /**
-   * An array of Project objects initialized with the projectsDE data.
-   * This array represents the featured projects to be displayed in the project modal.
+   * An array of projects to be displayed in the project modal.
+   * This array is initialized with the German projects data.
+   *
+   * @type {Project[]}
    */
   projects: Project[] = projectsDE;
 
   /**
-   * Represents the index of the currently selected project.
+   * The index of the currently selected project.
+   *
    * @type {number}
    */
   currentProject: number = 0;
 
   /**
    * Subscription to track changes in the selected language.
-   * This subscription is used to handle any updates or changes
-   * in the language settings within the application.
+   * This subscription is used to update the component when the language changes.
+   * It is initialized as undefined and will be assigned a value when the subscription is created.
    *
    * @private
+   * @type {Subscription | undefined}
    */
   private languageSubscription: Subscription | undefined;
 
   /**
-   * Subscription to the project observable.
-   * This subscription is used to manage and clean up the observable stream
-   * related to the project data within the ProjectModalComponent.
+   * Subscription object to manage the lifecycle of project-related observables.
+   * This subscription is used to handle the asynchronous operations related to projects
+   * and ensures proper cleanup to prevent memory leaks.
    *
    * @private
    * @type {Subscription | undefined}
@@ -144,13 +151,10 @@ export class ProjectModalComponent {
   ) {}
 
   /**
-   * Returns a sanitized HTML representation of an icon based on the provided type.
+   * Returns a sanitized HTML icon based on the provided type.
    *
-   * @param {string} type - The type/name of the icon to return
-   * @returns {SafeHtml} A sanitized HTML string containing the icon markup
-   *
-   * @example
-   * returnIcon('github') // Returns sanitized HTML for github icon
+   * @param {string} type - The type of icon to return.
+   * @returns {SafeHtml} - The sanitized HTML of the icon.
    */
   public returnIcon(type: string): SafeHtml {
     const iconHtml = returnIcon(type);
@@ -161,6 +165,7 @@ export class ProjectModalComponent {
    * Opens a new browser tab with the specified URL.
    *
    * @param {string} url - The URL to open in a new tab.
+   * @returns {void}
    */
   openLink(url: string): void {
     window.open(url, '_blank');
@@ -168,11 +173,11 @@ export class ProjectModalComponent {
 
   /**
    * Lifecycle hook that is called after Angular has initialized all data-bound properties of a directive.
-   * Subscribes to language changes and project changes to update the component accordingly.
+   * Subscribes to language changes and project changes to update the component state accordingly.
    *
-   * - Subscribes to `selectedLanguage$` observable from `languageService` to load texts based on the selected language.
-   * - Loads texts immediately based on the current language.
-   * - Subscribes to `currentProject$` observable from `projectService` to update the current project.
+   * - Subscribes to the `selectedLanguage$` observable from `languageService` to load texts based on the selected language.
+   * - Loads texts immediately based on the current language from `languageService`.
+   * - Subscribes to the `currentProject$` observable from `projectService` to update the current project ID.
    *
    * @returns {void}
    */
@@ -193,8 +198,10 @@ export class ProjectModalComponent {
    * Lifecycle hook that is called when the component is destroyed.
    *
    * This method performs cleanup by unsubscribing from any active subscriptions
-   * to prevent memory leaks. Specifically, it checks if `languageSubscription`
-   * and `projectSubscription` are active and unsubscribes from them if they are.
+   * to prevent memory leaks.
+   *
+   * - Unsubscribes from `languageSubscription` if it exists.
+   * - Unsubscribes from `projectSubscription` if it exists.
    */
   ngOnDestroy(): void {
     if (this.languageSubscription) {
@@ -217,13 +224,13 @@ export class ProjectModalComponent {
   }
 
   /**
-   * Closes the project modal by setting the modal state to closed
-   * and re-enabling scrolling on the page.
+   * Closes the project modal by setting the modal state to closed and re-enabling scrolling.
    *
-   * This method interacts with the `projectService` to update the modal state
-   * and the `scrollService` to restore the ability to scroll the page.
+   * This method performs the following actions:
+   * 1. Sets the project modal state to closed by calling `setProjectModalOpen(false)` on the `projectService`.
+   * 2. Re-enables scrolling by calling `enableScroll()` on the `scrollService`.
    *
-   * @returns {void}
+   * @returns {void} This method does not return a value.
    */
   closeModal(): void {
     this.projectService.setProjectModalOpen(false);
@@ -247,9 +254,9 @@ export class ProjectModalComponent {
 
   /**
    * Navigates to the previous project in the list.
-   *
    * If the current project is the first one, it wraps around to the last project.
-   * Otherwise, it sets the current project to the previous one.
+   *
+   * @returns {void}
    */
   previousProject(): void {
     if (this.currentProject > 0) {
@@ -259,17 +266,14 @@ export class ProjectModalComponent {
     }
   }
 
-  @HostListener('window:keydown', ['$event'])
   /**
-   * Handles the keydown event to navigate between projects.
+   * Listens for keydown events on the window and handles navigation between projects.
+   * If the right arrow key is pressed, it navigates to the next project.
+   * If the left arrow key is pressed, it navigates to the previous project.
    *
-   * @param {KeyboardEvent} event - The keyboard event triggered by the user.
-   * @returns {void}
-   *
-   * @remarks
-   * If the 'ArrowRight' key is pressed, it navigates to the next project.
-   * If the 'ArrowLeft' key is pressed, it navigates to the previous project.
+   * @param {KeyboardEvent} event - The keyboard event triggered by the keydown action.
    */
+  @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
     if (event.key === 'ArrowRight') {
       this.nextProject();

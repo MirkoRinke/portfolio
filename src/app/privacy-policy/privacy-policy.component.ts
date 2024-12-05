@@ -3,52 +3,56 @@
  */
 
 /**
- * Importing Component decorator from @angular/core.
- * Core Angular decorator used to:
- * - Define component metadata and configuration
- * - Mark class as an Angular component
- * - Specify component properties like selector, template, styles
- * - Required for creating any Angular component
+ * Importing Component decorator from Angular core:
+ * - Used to define an Angular component.
+ * - Provides metadata about the component including its selector, template, and styles.
  */
 import { Component } from '@angular/core';
 
 /**
- * Imports the Subscription class from the RxJS library
- * @imports {Subscription} Class used to handle and manage subscriptions to observables
- * @module 'rxjs'
+ * Importing Subscription from rxjs:
+ * - Used to manage observable subscriptions.
+ * - Helps prevent memory leaks through proper subscription cleanup.
+ * - Essential for handling asynchronous operations and events.
+ * - Important for managing component lifecycle and language service subscription.
  */
 import { Subscription } from 'rxjs';
 
 /**
- * Imports the LanguageService from the shared services module
- * @imports {LanguageService} Service that handles language-related operations
- * @moduleRelativePath '../shared/services/language.service'
+ * Importing LanguageService to handle language switching functionality:
+ * - Manages translation state between different languages.
+ * - Provides methods to switch languages.
+ * - Emits language change events for components to react.
+ * - Core service for application internationalization.
  */
 import { LanguageService } from '../shared/services/language.service';
 
 /**
- * Imports Router from @angular/router package.
- * Router enables navigation between views and components in Angular app.
- * Used to navigate to different sections of the page.
+ * Importing Router from Angular router:
+ * - Used for navigation and routing within the application.
+ * - Provides methods to navigate between different views or components.
+ * - Essential for handling application routing logic.
  */
 import { Router } from '@angular/router';
 
 /**
- * Imports ViewportScroller from Angular common package
- * @module ViewportScroller - Service that provides methods to control scrolling of the viewport
- * - Enables programmatic scrolling to specific positions
- * - Supports scrolling to anchors/elements
- * - Handles scroll position restoration during navigation
+ * Importing ViewportScroller from Angular common:
+ * - Used to control scrolling of the viewport.
+ * - Provides methods to scroll to specific positions or elements.
+ * - Useful for implementing smooth scrolling and navigation.
  */
 import { ViewportScroller } from '@angular/common';
 
 /**
- * @Component Decorator that marks the class as an Angular component and provides metadata about the component.
- * @selector 'app-privacy-policy' The CSS selector that identifies this component in a template.
- * @standalone true Indicates that this component is a standalone component.
- * @imports [NavBarComponent, FooterComponent] The components that this component imports.
- * @templateUrl './privacy-policy.component.html' The URL to the component's template file.
- * @styleUrl './privacy-policy.component.scss' The URL to the component's style file.
+ * PrivacyPolicyComponent is responsible for displaying the privacy policy section of the application.
+ * It is a standalone component.
+ *
+ * @component
+ * @selector app-privacy-policy
+ * @standalone true
+ * @imports []
+ * @templateUrl ./privacy-policy.component.html
+ * @styleUrls ./privacy-policy.component.scss
  */
 @Component({
   selector: 'app-privacy-policy',
@@ -65,20 +69,19 @@ export class PrivacyPolicyComponent {
   language: string = '';
 
   /**
-   * Subscription to track changes in the selected language.
+   * Subscription to track changes in the language settings.
    * This subscription is used to update the component when the language changes.
-   * It is initialized as undefined and will be assigned a value when the subscription is created.
    *
    * @private
    */
   private languageSubscription: Subscription | undefined;
 
   /**
-   * Constructs an instance of PrivacyPolicyComponent.
+   * Constructs the PrivacyPolicyComponent.
    *
-   * @param languageService - Service to handle language-related operations.
-   * @param viewportScroller - Service to control scrolling in the viewport.
-   * @param router - Service to handle navigation and URL manipulation.
+   * @param {LanguageService} languageService - Service to handle language translations.
+   * @param {ViewportScroller} viewportScroller - Service to control scrolling of the viewport.
+   * @param {Router} router - Angular Router service for navigation.
    */
   constructor(
     private languageService: LanguageService,
@@ -87,9 +90,11 @@ export class PrivacyPolicyComponent {
   ) {}
 
   /**
-   * Lifecycle hook that is called after Angular has initialized all data-bound properties of a directive.
-   * Subscribes to the selected language observable from the language service and loads the corresponding texts.
-   * Also loads the texts for the current language immediately upon initialization.
+   * Lifecycle hook that is called after data-bound properties of a directive are initialized.
+   * Initializes the language subscription to update texts based on the selected language.
+   * Also loads the texts for the current language immediately.
+   *
+   * @memberof PrivacyPolicyComponent
    */
   ngOnInit() {
     this.languageSubscription =
@@ -102,8 +107,8 @@ export class PrivacyPolicyComponent {
   /**
    * Lifecycle hook that is called when the component is destroyed.
    *
-   * This method performs cleanup by unsubscribing from the languageSubscription
-   * if it exists, to prevent memory leaks.
+   * This method unsubscribes from the language subscription to prevent memory leaks.
+   * It checks if `languageSubscription` exists and if so, calls the `unsubscribe` method on it.
    */
   ngOnDestroy() {
     if (this.languageSubscription) {
@@ -116,7 +121,7 @@ export class PrivacyPolicyComponent {
    *
    * @param {string} language - The language code to load texts for.
    *                            Accepts 'de' for German and 'en' for English.
-   *                            Defaults to English if an unsupported language code is provided.
+   *                            Defaults to 'EN' if an unsupported language code is provided.
    */
   loadTexts(language: string) {
     if (language === 'de') this.language = 'DE';
@@ -127,14 +132,12 @@ export class PrivacyPolicyComponent {
   /**
    * Scrolls to a specific section of the page identified by the given fragment.
    *
-   * This method first clears any existing fragment in the URL, then sets a new fragment
+   * This method first clears any existing fragment in the URL, then sets the new fragment
    * after a short delay to ensure the page scrolls to the correct section.
    *
    * @param {string} fragment - The fragment identifier of the section to scroll to.
    *
-   * @example
-   * Scroll to the section with the id 'about'
-   * (click)="scrollToSection('contact')"
+   * @returns {void}
    */
   scrollToSection(fragment: string): void {
     this.router

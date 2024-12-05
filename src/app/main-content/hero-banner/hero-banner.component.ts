@@ -39,6 +39,17 @@ import { LanguageService } from '../../shared/services/language.service';
  */
 import { Texts, textsDE, textsEN } from './language';
 
+/**
+ * HeroBannerComponent is responsible for displaying the hero banner section of the application.
+ * It is a standalone component.
+ *
+ * @component
+ * @selector app-hero-banner
+ * @standalone true
+ * @imports []
+ * @templateUrl ./hero-banner.component.html
+ * @styleUrls ./hero-banner.component.scss
+ */
 @Component({
   selector: 'app-hero-banner',
   standalone: true,

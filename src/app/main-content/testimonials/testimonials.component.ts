@@ -80,6 +80,17 @@ import { Texts, textsDE, textsEN } from './language';
  */
 import { returnIcon } from '../../shared/services/svg.icons.service';
 
+/**
+ * TestimonialsComponent is responsible for displaying the testimonials section of the application.
+ * It is a standalone component.
+ *
+ * @component
+ * @selector app-testimonials
+ * @standalone true
+ * @imports [CommonModule]
+ * @templateUrl ./testimonials.component.html
+ * @styleUrls ./testimonials.component.scss
+ */
 @Component({
   selector: 'app-testimonials',
   standalone: true,

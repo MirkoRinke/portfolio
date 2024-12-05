@@ -70,15 +70,8 @@ import { NavigationService } from '../services/navigation.service';
  * Imports Angular routing related modules and services
  * @module RouterModule - Module for configuring and managing routes
  * @module Router - Service for navigating between views
- * @module NavigationEnd - Event emitted when navigation ends successfully
  */
-import { RouterModule, Router, NavigationEnd } from '@angular/router';
-
-/**
- * Imports RxJS operator
- * @module filter - Operator that filters values emitted by source Observable based on predicate function
- */
-import { filter } from 'rxjs/operators';
+import { RouterModule, Router } from '@angular/router';
 
 /**
  * Imports ViewportScroller from Angular common package
@@ -89,6 +82,10 @@ import { filter } from 'rxjs/operators';
  */
 import { ViewportScroller } from '@angular/common';
 
+/**
+ * FooterComponent is responsible for displaying the footer section of the application.
+ * It is a standalone component that imports RouterModule.
+ */
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -115,10 +112,13 @@ export class FooterComponent {
   private languageSubscription: Subscription | undefined;
 
   /**
-   * Constructs an instance of FooterComponent.
+   * Constructs the FooterComponent.
    *
-   * @param {LanguageService} languageService - Service to handle language-related operations.
-   * @param {DomSanitizer} sanitizer - Service to sanitize HTML content.
+   * @param {LanguageService} languageService - Service for handling language-related operations.
+   * @param {DomSanitizer} sanitizer - Service to help sanitize potentially dangerous values.
+   * @param {NavigationService} navigationService - Service for handling navigation operations.
+   * @param {ViewportScroller} viewportScroller - Service for scrolling the viewport.
+   * @param {Router} router - Service for handling navigation and routing.
    */
   constructor(
     private languageService: LanguageService,

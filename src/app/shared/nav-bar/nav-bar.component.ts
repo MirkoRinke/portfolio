@@ -104,15 +104,15 @@ import { ViewportScroller } from '@angular/common';
 import { ColorToggleComponent } from './color-toggle/color-toggle.component';
 
 /**
- * Component decorator configuration for NavBarComponent.
- * @Component defines the following metadata:
- * - selector: 'app-nav-bar' - The HTML selector used to insert this component
- * - standalone: true - Component is self-contained without NgModule
- * - imports: Required dependencies:
- *   - LanguageToggleComponent: For language switching functionality
- *   - CommonModule: For common Angular directives
- * - templateUrl: Points to external HTML template file
- * - styleUrl: Points to external SCSS styles file
+ * NavBarComponent is responsible for displaying the navigation bar of the application.
+ * It is a standalone component.
+ *
+ * @component
+ * @selector app-nav-bar
+ * @standalone true
+ * @imports [LanguageToggleComponent, CommonModule, RouterModule, ColorToggleComponent]
+ * @templateUrl ./nav-bar.component.html
+ * @styleUrls ./nav-bar.component.scss
  */
 @Component({
   selector: 'app-nav-bar',
@@ -128,8 +128,9 @@ import { ColorToggleComponent } from './color-toggle/color-toggle.component';
 })
 export class NavBarComponent {
   /**
-   * Holds the texts to be displayed in the "About Me" section of the main content.
-   * The texts are assigned from the `textsDE` object, which contains the German translations.
+   * Holds the texts to be displayed in the navigation bar.
+   * The texts are assigned from the `textsDE` object, which contains
+   * the German translations for the navigation bar.
    *
    * @type {Texts}
    */
@@ -143,26 +144,30 @@ export class NavBarComponent {
 
   /**
    * Subscription to track the active link changes.
-   * This subscription is used to manage and clean up the active link state.
+   * This subscription is used to manage and clean up the active link state in the navigation bar component.
    *
    * @private
+   * @type {Subscription | undefined}
    */
   private activeLinkSubscription: Subscription | undefined;
 
   /**
-   * Subscription to handle language changes.
-   * This subscription is used to listen for changes in the application's language settings
-   * and update the component accordingly.
+   * Subscription to track changes in the selected language.
+   * This subscription is used to update the component when the language changes.
    *
    * @private
+   * @type {Subscription | undefined}
    */
   private languageSubscription: Subscription | undefined;
 
   /**
    * Constructs an instance of NavBarComponent.
    *
-   * @param {LanguageService} languageService - Service to handle language-related operations.
-   * @param {DomSanitizer} sanitizer - Service to sanitize HTML content.
+   * @param languageService - Service to handle language-related operations.
+   * @param sanitizer - Service to sanitize HTML content.
+   * @param navigationService - Service to manage navigation within the application.
+   * @param viewportScroller - Service to control scrolling of the viewport.
+   * @param router - Service to handle navigation and URL manipulation.
    */
   constructor(
     private languageService: LanguageService,
@@ -173,13 +178,10 @@ export class NavBarComponent {
   ) {}
 
   /**
-   * Returns a sanitized HTML representation of an icon based on the provided type.
+   * Returns a sanitized HTML icon based on the provided type.
    *
-   * @param {string} type - The type/name of the icon to return
-   * @returns {SafeHtml} A sanitized HTML string containing the icon markup
-   *
-   * @example
-   * returnIcon('github') // Returns sanitized HTML for github icon
+   * @param {string} type - The type of the icon to return.
+   * @returns {SafeHtml} - The sanitized HTML of the icon.
    */
   public returnIcon(type: string): SafeHtml {
     const iconHtml = returnIcon(type);
@@ -187,11 +189,12 @@ export class NavBarComponent {
   }
 
   /**
-   * Angular lifecycle hook that is called after the component's view has been fully initialized.
+   * Lifecycle hook that is called after data-bound properties of a directive are initialized.
+   * Initializes subscriptions to language and navigation services to update component state accordingly.
    *
-   * This method subscribes to the `selectedLanguage$` observable from the `languageService` to
-   * listen for changes in the selected language and load the corresponding texts. It also
-   * immediately loads the texts for the current language.
+   * - Subscribes to `selectedLanguage$` observable from `languageService` to load texts based on the selected language.
+   * - Subscribes to `activeLink$` observable from `navigationService` to update the active link state.
+   * - Loads texts based on the current language from `languageService`.
    *
    * @returns {void}
    */
@@ -209,8 +212,11 @@ export class NavBarComponent {
   /**
    * Lifecycle hook that is called when the component is destroyed.
    *
-   * This method performs cleanup by unsubscribing from the languageSubscription
-   * if it exists, to prevent memory leaks.
+   * This method performs cleanup by unsubscribing from any active subscriptions
+   * to prevent memory leaks.
+   *
+   * It checks if `languageSubscription` and `activeLinkSubscription` are defined,
+   * and if so, unsubscribes from them.
    */
   ngOnDestroy(): void {
     if (this.languageSubscription) {
@@ -227,6 +233,7 @@ export class NavBarComponent {
    * @param {string} language - The language code to load texts for.
    *                            Supported values are 'de' for German and 'en' for English.
    *                            Defaults to English if an unsupported language code is provided.
+   * @returns {void}
    */
   loadTexts(language: string): void {
     if (language === 'de') this.texts = textsDE;
@@ -236,12 +243,11 @@ export class NavBarComponent {
 
   /**
    * Scrolls to a specific section of the page identified by the given fragment.
+   * If the current route is not the home route, it navigates to the home route first and then scrolls to the fragment.
+   * Otherwise, it directly scrolls to the fragment.
    *
-   * @param {string} fragment - The fragment identifier of the section to scroll to.
-   *
-   * @example
-   * Scroll to the section with the id 'about'
-   * (click)="scrollToSection('contact')"
+   * @param {string} fragment - The identifier of the section to scroll to.
+   * @returns {void}
    */
   scrollToSection(fragment: string): void {
     if (!this.isHomeRoute()) {
@@ -254,7 +260,8 @@ export class NavBarComponent {
   /**
    * Navigates to the home route and then scrolls to the specified fragment.
    *
-   * @param {string} fragment - The fragment identifier of the section to scroll to.
+   * @param {string} fragment - The fragment identifier to scroll to after navigation.
+   * @returns {void}
    */
   private navigateToHomeAndScroll(fragment: string): void {
     this.router.navigate(['/']).then(() => {
@@ -268,9 +275,14 @@ export class NavBarComponent {
   }
 
   /**
-   * Scrolls directly to the specified fragment.
+   * Scrolls to a specific fragment within the page.
    *
-   * @param {string} fragment - The fragment identifier of the section to scroll to.
+   * This method first navigates to the current route with the fragment set to undefined
+   * and then, after a short delay, navigates again with the specified fragment.
+   * This ensures that the fragment is properly scrolled into view.
+   *
+   * @param {string} fragment - The fragment identifier to scroll to.
+   * @private
    */
   private scrollToFragment(fragment: string): void {
     this.router
@@ -291,7 +303,7 @@ export class NavBarComponent {
   /**
    * Checks if the current route is the home route.
    *
-   * @returns {boolean} `true` if the current route is the home route, otherwise `false`.
+   * @returns {boolean} True if the current route is the home route, otherwise false.
    */
   isHomeRoute(): boolean {
     return this.router.url === '/' || this.router.url.startsWith('/#');
