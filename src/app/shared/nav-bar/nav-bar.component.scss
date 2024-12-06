@@ -1,4 +1,5 @@
 @use "../../../var" as vars;
+@use "../../../mixins" as mixins;
 
 .nav-bar {
   display: flex;
@@ -21,14 +22,9 @@
   }
 
   .logo-small {
+    @include mixins.logo;
     display: none;
-    margin-top: 3px;
-    min-width: 80px;
-    fill: var(--primary-color);
-
-    &:hover {
-      cursor: pointer;
-    }
+    min-width: 60px;
 
     @media (max-width: vars.$breakpoint-lg) {
       display: block;
@@ -146,6 +142,7 @@
   .right-side {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 24px;
 
     @media (max-width: vars.$breakpoint-lg) {
@@ -153,13 +150,8 @@
     }
 
     .logo {
-      margin-top: 13px;
-      min-width: 80px;
-      fill: var(--primary-color);
-
-      &:hover {
-        cursor: pointer;
-      }
+      @include mixins.logo;
+      margin-top: 20px;
     }
   }
 
