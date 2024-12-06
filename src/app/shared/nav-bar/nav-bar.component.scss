@@ -26,7 +26,8 @@
 
   .logo-small {
     display: none;
-    min-width: 35px;
+    margin-top: 3px;
+    min-width: 80px;
     fill: var(--primary-color);
 
     &:hover {
@@ -156,7 +157,9 @@
     }
 
     .logo {
-      min-width: 132px;
+      margin-top: 13px;
+      min-width: 80px;
+      fill: var(--primary-color);
 
       &:hover {
         cursor: pointer;

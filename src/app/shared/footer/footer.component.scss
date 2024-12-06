@@ -39,6 +39,7 @@
 
         .logo {
           width: 100%;
+          fill: var(--primary-color);
 
           @media (max-width: vars.$breakpoint-xs) {
             width: 100px;
