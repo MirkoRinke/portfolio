@@ -17,13 +17,9 @@
     padding-inline: 96px;
 
     @media (max-width: vars.$breakpoint-lg) {
-      padding-inline: 48px;
+      padding-inline: 16px;
       padding-top: 50px;
       padding-bottom: 25px;
-    }
-
-    @media (max-width: vars.$breakpoint-sm) {
-      padding-inline: 16px;
     }
 
     .desktop {
