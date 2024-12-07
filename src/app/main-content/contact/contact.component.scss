@@ -41,6 +41,10 @@
           border-bottom: 1px solid var(--primary-color-50);
           padding: 32px;
 
+          @media (max-width: vars.$breakpoint-lg) {
+            padding: 15px;
+          }
+
           &:first-child {
             border-top: 1px solid var(--primary-color-50);
           }

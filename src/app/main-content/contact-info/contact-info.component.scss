@@ -30,7 +30,7 @@
       }
 
       @media (max-width: vars.$breakpoint-lg) {
-        text-align: center;
+        padding-left: 15px;
       }
 
       @media (max-width: vars.$breakpoint-xs) {
@@ -54,7 +54,7 @@
       }
 
       @media (max-width: vars.$breakpoint-lg) {
-        text-align: center;
+        padding-left: 15px;
       }
     }
 
@@ -63,7 +63,7 @@
       color: var(--secondary-color);
 
       @media (max-width: vars.$breakpoint-lg) {
-        text-align: center;
+        padding-left: 15px;
       }
 
       .highlight {
