@@ -296,22 +296,15 @@ export class ContactComponent {
   }
 
   /**
-   * Handles the form submission event.
+   * Submits the contact form data to the server.
    *
-   * @param {NgForm} ngForm - The form to be submitted.
-   *
-   * This method performs the following actions:
-   * - Checks if the privacy policy checkbox is checked. If not, it sets `privacyPolicyChecked` to false and returns.
-   * - If the form is submitted, valid, and not in test mode, it sends a POST request with the contact data.
-   *   - On successful response, it resets the form and shows a feedback message.
-   *   - On error, it logs the error to the console.
-   *   - On completion, it logs a completion message to the console.
-   * - If the form is submitted, valid, and in test mode, it logs a success message, resets the form, clears the form, and shows a feedback message.
-   * - If the form is not valid, it updates the placeholders.
+   * @param {NgForm} ngForm - The form containing the contact data.
+   * @returns {void}
    */
   onSubmit(ngForm: NgForm): void {
     if (!this.privacyPolicyChecked) {
       this.privacyPolicyChecked = false;
+      this.updatePlaceholders(ngForm);
       return;
     }
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
