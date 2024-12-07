@@ -222,11 +222,14 @@ export class FooterComponent {
   }
 
   /**
-   * Scrolls the viewport to the top of the page.
-   * Utilizes the `viewportScroller` service to scroll to the position [0, 0].
+   * Scrolls to the top of the page.
+   *
+   * This method scrolls to the top of the page by setting the scroll position to `[0, 0]`.
    */
   scrollToTop() {
-    this.viewportScroller.scrollToPosition([0, 0]);
+    setTimeout(() => {
+      this.viewportScroller.scrollToPosition([0, 0]);
+    }, 100);
   }
 
   /**
