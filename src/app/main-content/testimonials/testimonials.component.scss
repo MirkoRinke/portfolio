@@ -213,7 +213,7 @@
           height: 18px;
           width: 18px;
           fill: var(--secondary-color);
-          transition: fill 175ms ease-in-out, transform 175ms ease-in-out;
+          transition: fill 125ms ease-in-out, transform 125ms ease-in-out;
         }
 
         &:hover {
@@ -221,7 +221,7 @@
           .arrow-right {
             cursor: pointer;
             fill: var(--primary-color);
-            transition: fill 175ms ease-in-out, transform 175ms ease-in-out;
+            transition: fill 125ms ease-in-out, transform 125ms ease-in-out;
           }
 
           .arrow-left {

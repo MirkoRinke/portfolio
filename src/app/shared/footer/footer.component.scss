@@ -73,7 +73,7 @@
           font-weight: 400;
           color: var(--secondary-color);
           position: relative;
-          transition: all 175ms ease-in-out;
+          transition: all 125ms ease-in-out;
 
           @media (max-width: vars.$breakpoint-xs) {
             font-size: 14px;
@@ -88,14 +88,14 @@
             opacity: 0;
             top: -8px;
             left: -15px;
-            transition: all 175ms ease-in-out;
+            transition: all 125ms ease-in-out;
           }
 
           &:hover {
-            transition: all 175ms ease-in-out;
+            transition: all 125ms ease-in-out;
             color: var(--primary-color);
             &::after {
-              transition: all 175ms ease-in-out;
+              transition: all 125ms ease-in-out;
               opacity: 1;
             }
           }
