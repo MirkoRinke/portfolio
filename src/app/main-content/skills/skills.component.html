@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="skill-icons">
-        @for (skill of skills; track skill.id) {
+        @for (skill of skills; track $index) { @if (skill.visibility) {
         <div class="skill-icon">
           <div
             class="icon {{ skill.icon }}"
@@ -39,7 +39,7 @@
               {{ texts.titleGrowthMindsetSecondPart }}
             </h5>
             <div class="learning-skills">
-              @for (learningSkill of learningSkills; track learningSkill.id) {
+              @for (learningSkill of learningSkills; track $index) {
               <div class="learning-skill">
                 <div
                   class="learning-icon"
@@ -52,7 +52,7 @@
           </div>
           }
         </div>
-        }
+        } }
       </div>
     </div>
   </div>

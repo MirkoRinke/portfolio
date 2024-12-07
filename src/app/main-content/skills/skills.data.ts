@@ -3,14 +3,9 @@
  */
 
 /**
- * Represents a skill with metadata, including its identifier, name, icon, and alternative text.
+ * Represents a skill with metadata, including its name, icon, alternative text and visibility.
  */
 export interface Skill {
-  /**
-   * The unique identifier for the skill.
-   */
-  id: number;
-
   /**
    * The name of the skill.
    */
@@ -25,105 +20,136 @@ export interface Skill {
    * The alternative text for the skill's icon, used for accessibility purposes.
    */
   alt: string;
+
+  /**
+   * The visibility of the skill
+   *
+   */
+  visibility: boolean;
 }
 
 /**
  * An array of technical skills used in the application.
  * Each skill is represented by an object containing the following properties:
  *
- * @property {number} id - The unique identifier for the skill.
  * @property {string} name - The name of the skill.
  * @property {string} icon - The icon representing the skill.
  * @property {string} alt - The alternative text for the skill icon.
+ * @property {boolean} visibility - The visibility of the skill.
  */
 export const TECH_SKILLS: Skill[] = [
   {
-    id: 0,
     name: 'HTML',
     icon: 'HTML',
     alt: 'HTML Logo',
+    visibility: true,
   },
   {
-    id: 1,
     name: 'CSS',
     icon: 'CSS',
     alt: 'CSS Logo',
+    visibility: false,
   },
   {
-    id: 2,
-    name: 'JavaScript',
-    icon: 'javaScript',
-    alt: 'JavaScript Logo',
+    name: 'SCSS',
+    icon: 'SCSS',
+    alt: 'SCSS Logo',
+    visibility: true,
   },
   {
-    id: 3,
     name: 'Material Design',
     icon: 'materialDesign',
     alt: 'Material Design Logo',
+    visibility: false,
   },
   {
-    id: 4,
+    name: 'JavaScript',
+    icon: 'javaScript',
+    alt: 'JavaScript Logo',
+    visibility: false,
+  },
+  {
     name: 'TypeScript',
     icon: 'typeScript',
     alt: 'TypeScript Logo',
+    visibility: true,
   },
   {
-    id: 5,
     name: 'Angular',
     icon: 'angular',
     alt: 'Angular Logo',
+    visibility: true,
   },
   {
-    id: 6,
     name: 'Firebase',
     icon: 'firebase',
     alt: 'Firebase Logo',
+    visibility: false,
   },
   {
-    id: 7,
     name: 'GIT',
     icon: 'GIT',
     alt: 'GIT Logo',
+    visibility: true,
   },
   {
-    id: 8,
     name: 'REST API',
     icon: 'API',
     alt: 'REST API Logo',
+    visibility: true,
   },
   {
-    id: 9,
-    name: 'Scrum',
-    icon: 'scrum',
-    alt: 'Scrum Logo',
+    name: 'Docker',
+    icon: 'docker',
+    alt: 'Docker Logo',
+    visibility: true,
   },
   {
-    id: 10,
+    name: 'Node js',
+    icon: 'node',
+    alt: 'node js Logo',
+    visibility: false,
+  },
+  {
+    name: 'PHP',
+    icon: 'PHP',
+    alt: 'PHP Logo',
+    visibility: false,
+  },
+  {
+    name: 'Figma',
+    icon: 'figma',
+    alt: 'Figma Logo',
+    visibility: true,
+  },
+  {
     name: 'Growth Mindset',
     icon: 'growthMindset',
     alt: 'Growth Mindset Logo',
+    visibility: true,
   },
 ];
 
 /**
- * An array of learning skills.
- * Each skill object contains the following properties:
- * - `id`: A unique identifier for the skill.
- * - `name`: The name of the skill.
- * - `icon`: The icon representing the skill.
- * - `alt`: The alternative text for the skill icon.
+ * An array of learning skills used in the application.
+ * Each skill is represented by an object containing the following properties:
+ *
+ * @property {string} name - The name of the skill.
+ * @property {string} icon - The icon representing the skill.
+ * @property {string} alt - The alternative text for the skill icon.
+ * @property {boolean} visibility - The visibility of the skill.
  */
 export const LEARNING_SKILLS: Skill[] = [
   {
-    id: 0,
     name: 'React',
     icon: 'react',
     alt: 'React Logo',
+    visibility: true,
   },
   {
-    id: 1,
     name: 'Vue Js',
     icon: 'vue',
     alt: 'Vue Js Logo',
+    visibility: true,
   },
 ];
