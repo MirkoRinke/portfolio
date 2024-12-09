@@ -1,27 +1,31 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+![](https://raw.githubusercontent.com/MirkoRinke/portfolio/refs/heads/main/preview.jpg)
 
-## Development server
+### 📋 Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This is my personal portfolio showcasing a collection of my best projects and skills. It provides an overview of my experience and technical expertise.
 
-## Code scaffolding
+## Sections
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Landing Page**: A brief introduction with two call-to-action buttons (**Check my work** and **Contact me**).
+- **About Me**: A brief introduction about myself.
+- **Skills**: A summary of the technologies I am proficient in.
+- **Featured Projects**: A selection of my key projects with details and links.
+- **Testimonials**: Feedback from colleagues and others I have worked with.
+- **Contact Me**: Ways to get in touch with me.
 
-## Build
+## Technologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This portfolio is built using **Angular 18**.
 
-## Running unit tests
+## Portfolio
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You can view my live portfolio here: 
+- [Portfolio](https://mirkorinke.dev)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## ✍️ Author
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+ - [Webiste](https://mirkorinke.dev)
+ - [Github](https://github.com/MirkoRinke)
