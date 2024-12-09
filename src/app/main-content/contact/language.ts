@@ -111,7 +111,7 @@ export const textsDE: Texts = {
   placeholderEmail: 'deinemail@email.com',
   placeholderMessage: 'Hallo Lukas, ich bin interessiert an...',
 
-  requiredName: 'Mind. 2 Buchst. (A-Z)',
+  requiredName: 'Mind. 2 Buchst. (A-Z, a-z)',
   requiredEmail: 'Gültige E-Mail ist erforderlich',
   requiredMessage: 'Nachricht ist erforderlich',
 };
@@ -149,7 +149,7 @@ export const textsEN: Texts = {
   placeholderEmail: 'youremail@email.com',
   placeholderMessage: 'Hello Lukas, I am interested in...',
 
-  requiredName: 'At least 2 letters (A-Z)',
+  requiredName: 'At least 2 characters (A-Z, a-z)',
   requiredEmail: 'Valid email is required',
   requiredMessage: 'Message is required',
 };
