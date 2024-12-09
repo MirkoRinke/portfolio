@@ -202,6 +202,7 @@
 
           .submitted {
             @include mixins.default-button;
+            cursor: default !important;
             margin-inline: auto;
             color: var(--primary-color);
             border-color: var(--primary-color);
