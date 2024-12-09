@@ -32,6 +32,8 @@
   --secondary-color-12: rgba(255, 255, 255, 0.12);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
   --invalid: rgba(236, 123, 123, 0.8);
+
+  --cursor-url: url("../public/turquoise.svg"), auto;
 }
 
 .blue {
@@ -66,6 +68,8 @@
   --secondary-color-12: rgba(255, 255, 255, 0.12);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
   --invalid: rgba(186, 70, 70, 0.8);
+
+  --cursor-url: url("../public/blue.svg"), auto;
 }
 
 .violett {
@@ -100,6 +104,8 @@
   --secondary-color-12: rgba(255, 255, 255, 0.12);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
   --invalid: rgba(196, 80, 80, 0.8);
+
+  --cursor-url: url("../public/violett.svg"), auto;
 }
 
 /* @media breakpoints */
