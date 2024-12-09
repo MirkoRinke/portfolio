@@ -24,6 +24,11 @@ This portfolio is built using **Angular 18**.
 You can view my live portfolio here: 
 - [Portfolio](https://mirkorinke.dev)
 
+## Documentation
+
+You can find the complete documentation for the project generated with **Compodoc** here:  
+- [Project Documentation](https://mirkorinke.dev/documentation/index.html)
+
 
 ## ✍️ Author
 
