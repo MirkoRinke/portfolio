@@ -313,6 +313,7 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.clearForm();
             this.showFeedbackMessage();
           },
           error: (error) => {
