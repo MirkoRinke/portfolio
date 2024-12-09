@@ -23,6 +23,10 @@ body {
   }
 }
 
+label {
+  cursor: var(--cursor-url);
+}
+
 a {
   text-decoration: none;
 }
