@@ -109,7 +109,7 @@ export const textsDE: Texts = {
 
   placeholderName: 'Dein Name kommt hier hin',
   placeholderEmail: 'deinemail@email.com',
-  placeholderMessage: 'Hallo Lukas, ich bin interessiert an...',
+  placeholderMessage: 'Hallo Mirko, ich bin interessiert an...',
 
   requiredName: 'Mind. 2 Buchst. (A-Z, a-z)',
   requiredEmail: 'Gültige E-Mail ist erforderlich',
@@ -147,7 +147,7 @@ export const textsEN: Texts = {
 
   placeholderName: 'Your name goes here',
   placeholderEmail: 'youremail@email.com',
-  placeholderMessage: 'Hello Lukas, I am interested in...',
+  placeholderMessage: 'Hello Mirko, I am interested in...',
 
   requiredName: 'At least 2 characters (A-Z, a-z)',
   requiredEmail: 'Valid email is required',
