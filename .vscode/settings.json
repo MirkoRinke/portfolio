@@ -26,9 +26,11 @@
     "Janisch",
     "Klickpfade",
     "Lapiello",
+    "linejoin",
     "Logfile",
     "Logfiles",
     "Löschungsfristen",
+    "miterlimit",
     "Montabaur",
     "Pepe",
     "pokedex",
@@ -42,6 +44,7 @@
     "TDDG",
     "Webhosting",
     "Websitebetreiber",
-    "widerrufbar"
+    "widerrufbar",
+    "xlink"
   ]
 }
