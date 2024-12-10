@@ -72,6 +72,7 @@
       color: var(--secondary-color);
       font-size: 18px;
       font-weight: 400px;
+      transition: color 125ms ease-in-out;
 
       @media (max-width: vars.$breakpoint-lg) {
         display: none;
@@ -99,13 +100,14 @@
         }
 
         .icon-icon {
-          fill: var(--primary-color);
           transition: fill 125ms ease-in-out;
+          fill: var(--primary-color);
           min-height: 32px;
           min-width: 32px;
         }
 
         .icon-dot {
+          transition: fill 125ms ease-in-out 0.1s, stroke 125ms ease-in-out 0.1s;
           fill: transparent;
           stroke: transparent;
           min-height: 10px;
@@ -113,10 +115,12 @@
         }
 
         &:hover .icon-icon {
+          transition: fill 125ms ease-in-out;
           fill: var(--secondary-color);
         }
 
         &:hover .icon-dot {
+          transition: fill 125ms ease-in-out 0.1s, stroke 125ms ease-in-out 0.1s;
           fill: var(--primary-color);
           stroke: var(--primary-color);
         }
