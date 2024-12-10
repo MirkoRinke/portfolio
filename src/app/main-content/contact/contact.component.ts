@@ -315,7 +315,6 @@ export class ContactComponent {
             ngForm.resetForm();
             this.clearForm();
             this.showFeedbackMessage();
-            this.updatePlaceholders(ngForm);
           },
           error: (error) => {
             console.error(error);
@@ -355,6 +354,7 @@ export class ContactComponent {
     this.placeholderNameClass = 'placeholder-valid';
     this.placeholderEmailClass = 'placeholder-valid';
     this.placeholderMessageClass = 'placeholder-valid';
+    this.setPlaceholders();
   }
 
   /**
