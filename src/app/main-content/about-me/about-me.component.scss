@@ -85,6 +85,10 @@
         &:hover {
           transition: all 300ms ease-in-out;
           transform: translate(30px, -30px);
+
+          @media (max-width: vars.$breakpoint-lg) {
+            transform: unset;
+          }
         }
       }
     }

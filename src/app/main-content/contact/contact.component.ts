@@ -315,6 +315,7 @@ export class ContactComponent {
             ngForm.resetForm();
             this.clearForm();
             this.showFeedbackMessage();
+            this.updatePlaceholders(ngForm);
           },
           error: (error) => {
             console.error(error);
