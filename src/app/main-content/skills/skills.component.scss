@@ -222,6 +222,10 @@
             transform: translateX(25%);
             width: max-content;
 
+            @media (max-width: vars.$breakpoint-xs) {
+              transform: translateX(30%);
+            }
+
             &::after {
               content: "";
               position: absolute;

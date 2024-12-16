@@ -108,7 +108,7 @@ export const TECH_SKILLS: Skill[] = [
     name: 'Node js',
     icon: 'node',
     alt: 'node js Logo',
-    visibility: false,
+    visibility: true,
   },
   {
     name: 'PHP',
