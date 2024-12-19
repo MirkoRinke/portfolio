@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
+  min-height: calc(100dvh - 310px);
 
   .privacy-Policy-site {
     max-width: 1440px;

@@ -16,6 +16,7 @@
     padding-top: 77px;
     padding-bottom: 64px;
     padding-inline: 96px;
+    min-height: 305px;
 
     @media (max-width: vars.$breakpoint-lg) {
       padding-top: 50px;
