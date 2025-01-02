@@ -1,0 +1,142 @@
+/* Colors */
+
+:root {
+  --background-color: rgb(28, 28, 28);
+  --background-color-50: rgba(28, 28, 28, 0.5);
+  --hero-background: linear-gradient(
+    45deg,
+    rgb(28, 28, 28) 23%,
+    rgb(8, 70, 59) 100%
+  );
+  --modal-background: linear-gradient(
+    45deg,
+    rgb(28, 28, 28) 23%,
+    rgb(8, 70, 59) 100%
+  );
+  --menu-background: linear-gradient(
+    45deg,
+    rgb(28, 28, 28) 23%,
+    rgb(8, 70, 59) 100%
+  );
+  --skills-background: radial-gradient(
+    circle at 20% 50%,
+    rgba(8, 70, 59, 0.3) 0%,
+    #1c1c1c 20%
+  );
+
+  --primary-color: rgb(61, 207, 182);
+  --primary-color-50: rgba(61, 207, 182, 0.5);
+  --primary-color-30: rgba(61, 207, 182, 0.3);
+  --primary-color-10: rgba(61, 207, 182, 0.1);
+  --secondary-color: rgb(255, 255, 255);
+  --secondary-color-12: rgba(255, 255, 255, 0.12);
+  --secondary-color-80: rgba(255, 255, 255, 0.8);
+  --invalid: rgba(236, 123, 123, 0.8);
+
+  --cursor-url: url("../public/turquoise.svg"), auto;
+}
+
+.blue {
+  --background-color: rgb(15, 20, 40);
+  --background-color-50: rgba(15, 20, 40, 0.5);
+  --hero-background: linear-gradient(
+    45deg,
+    rgb(15, 20, 42) 23%,
+    rgb(58, 90, 135) 100%
+  );
+  --modal-background: linear-gradient(
+    45deg,
+    rgb(15, 20, 42) 23%,
+    rgb(58, 90, 135) 100%
+  );
+  --menu-background: linear-gradient(
+    45deg,
+    rgb(15, 20, 42) 23%,
+    rgb(58, 90, 135) 100%
+  );
+  --skills-background: radial-gradient(
+    circle at 20% 50%,
+    rgba(58, 90, 135, 0.3) 0%,
+    #0f142a 20%
+  );
+
+  --primary-color: rgb(74, 144, 226);
+  --primary-color-50: rgba(74, 144, 226, 0.5);
+  --primary-color-30: rgba(74, 144, 226, 0.3);
+  --primary-color-10: rgba(74, 144, 226, 0.1);
+  --secondary-color: rgb(255, 255, 255);
+  --secondary-color-12: rgba(255, 255, 255, 0.12);
+  --secondary-color-80: rgba(255, 255, 255, 0.8);
+  --invalid: rgba(186, 70, 70, 0.8);
+
+  --cursor-url: url("../public/blue.svg"), auto;
+}
+
+.violett {
+  --background-color: rgb(10, 10, 15);
+  --background-color-50: rgba(10, 10, 15, 0.5);
+  --hero-background: linear-gradient(
+    45deg,
+    rgb(10, 10, 15) 23%,
+    rgb(61, 42, 91) 100%
+  );
+  --modal-background: linear-gradient(
+    45deg,
+    rgb(10, 10, 15) 23%,
+    rgb(61, 42, 91) 100%
+  );
+  --menu-background: linear-gradient(
+    45deg,
+    rgb(10, 10, 15) 23%,
+    rgb(61, 42, 91) 100%
+  );
+  --skills-background: radial-gradient(
+    circle at 20% 50%,
+    rgba(61, 42, 91, 0.3) 0%,
+    #0a0a0f 20%
+  );
+
+  --primary-color: rgb(102, 71, 148);
+  --primary-color-50: rgba(102, 71, 148, 0.5);
+  --primary-color-30: rgba(102, 71, 148, 0.3);
+  --primary-color-10: rgba(102, 71, 148, 0.1);
+  --secondary-color: rgb(255, 255, 255);
+  --secondary-color-12: rgba(255, 255, 255, 0.12);
+  --secondary-color-80: rgba(255, 255, 255, 0.8);
+  --invalid: rgba(196, 80, 80, 0.8);
+
+  --cursor-url: url("../public/violett.svg"), auto;
+}
+
+/* @media breakpoints */
+
+/** 1280px oder schmaler */
+$breakpoint-xl: 1280px !default;
+
+/** 1024px oder schmaler */
+$breakpoint-lg: 1024px !default;
+
+/** 768px oder schmaler */
+$breakpoint-md: 768px !default;
+
+/** 640px oder schmaler */
+$breakpoint-sm: 640px !default;
+
+/** 384px oder schmaler */
+$breakpoint-xs: 384px !default;
+
+/** 1280px oder schmaler */
+// @media (max-width: vars.$breakpoint-xl) {
+// }
+/** 1024px oder schmaler */
+// @media (max-width: vars.$breakpoint-lg) {
+// }
+/** 768px oder schmaler */
+// @media (max-width: vars.$breakpoint-md) {
+// }
+/** 640px oder schmaler */
+// @media (max-width: vars.$breakpoint-sm) {
+// }
+/** 384px oder schmaler */
+// @media (max-width: vars.$breakpoint-xs) {
+// }
