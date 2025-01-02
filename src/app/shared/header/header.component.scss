@@ -1,0 +1,22 @@
+@use "../../../var" as vars;
+@use "../../../mixins" as mixins;
+
+header {
+  @include mixins.max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+
+  .left-side {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+}
