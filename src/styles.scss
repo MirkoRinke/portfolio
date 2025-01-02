@@ -1,4 +1,36 @@
+@use "./var" as vars;
+@use "./fonts";
+
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Karla";
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(60, 60, 60) rgb(28, 28, 28);
+}
+
 body {
-  background-color: rgb(31, 31, 31);
+  background-color: var(--background-color);
+  cursor: var(--cursor-url);
+
+  ::selection {
+    background: var(--primary-color-50);
+    color: var(--secondary-color);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  user-select: none;
+}
+
+img {
+  user-select: none;
 }
