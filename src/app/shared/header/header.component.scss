@@ -1,27 +1,24 @@
-@use "../../../var" as vars;
-@use "../../../mixins" as mixins;
+@use "../../../functions" as *;
+@use "../../../mixins" as *;
+@use "../../../var" as *;
 
 header {
-  @include mixins.max-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
+  @include max-content-settings;
+  @include display-flex(center, space-between);
+  height: px-to-rem(100);
 
   .left-side {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    @include display-flex(center);
+    gap: px-to-rem(50);
   }
 
   .right-side {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+    @include display-flex(center);
+    gap: px-to-rem(50);
 
     &::ng-deep .logo {
       fill: var(--secondary-color);
-      height: 65px;
+      height: px-to-rem(40);
     }
   }
 }
