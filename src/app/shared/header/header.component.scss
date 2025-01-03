@@ -20,9 +20,13 @@ header {
     @include display-flex(center);
     gap: px-to-rem(50);
 
-    &::ng-deep .logo {
-      fill: var(--secondary-color);
+    .svg-container {
       height: px-to-rem(40);
+
+      &::ng-deep .logo {
+        fill: var(--secondary-color);
+        height: px-to-rem(40);
+      }
     }
   }
 }
