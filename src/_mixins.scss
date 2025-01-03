@@ -1,6 +1,46 @@
-@mixin max-content {
+@use "./functions" as *;
+
+@mixin max-content-settings {
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  padding-inline: 16px;
+  padding-inline: px-to-rem(16);
+}
+
+@mixin display-flex($align: flex-start, $justify: flex-start, $direction: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin font-settings-default($font-size: 16, $line-height: 16) {
+  font-family: "FiraCode";
+  font-size: px-to-rem($font-size);
+  font-weight: 400;
+  line-height: px-to-rem($line-height);
+  color: var(--secondary-color);
+}
+
+@mixin font-settings-highlight($font-size: 16, $line-height: 16) {
+  font-family: "FiraCode";
+  font-size: px-to-rem($font-size);
+  font-weight: 700;
+  line-height: px-to-rem($line-height);
+  color: var(--primary-color);
+}
+
+@mixin golden-padding($font-size: 16) {
+  $vertical: $font-size / 2;
+  $horizontal: $vertical * 1.618; // Golden ratio
+  padding: px-to-rem($vertical) px-to-rem($horizontal);
+}
+
+@mixin button-preset($padding-factor: 16) {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  @include golden-padding($padding-factor);
 }
