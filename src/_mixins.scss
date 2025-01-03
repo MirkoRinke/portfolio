@@ -14,20 +14,18 @@
   flex-direction: $direction;
 }
 
-@mixin font-settings-default($font-size: 16, $line-height: $font-size * 1.5) {
-  font-family: "FiraCode";
+@mixin font-settings(
+  $font-size: 16,
+  $font-weight: 400,
+  $color: var(--secondary-color),
+  $font-family: "FiraCode",
+  $line-height: $font-size * 1.5
+) {
   font-size: px-to-rem($font-size);
-  font-weight: 400;
+  font-weight: $font-weight;
+  color: $color;
+  font-family: $font-family;
   line-height: px-to-rem($line-height);
-  color: var(--secondary-color);
-}
-
-@mixin font-settings-highlight($font-size: 16, $line-height: $font-size * 1.5) {
-  font-family: "FiraCode";
-  font-size: px-to-rem($font-size);
-  font-weight: 700;
-  line-height: px-to-rem($line-height);
-  color: var(--primary-color);
 }
 
 @mixin golden-padding($font-size: 16) {
