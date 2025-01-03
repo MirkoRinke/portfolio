@@ -1,11 +1,23 @@
 nav {
   ul {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
 
     li {
       list-style-type: none;
-      color: var(--secondary-color);
+
+      a {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--secondary-color);
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: var(--primary-color);
+          transition: color 0.3s ease-in-out;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
