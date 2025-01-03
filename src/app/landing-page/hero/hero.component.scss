@@ -1,0 +1,53 @@
+@use "../../../functions" as *;
+@use "../../../mixins" as *;
+@use "../../../var" as *;
+
+section {
+  background-image: var(--hero-background);
+  height: 100vh;
+
+  .content {
+    @include max-content-settings;
+    @include display-flex(center, center, column);
+    gap: px-to-rem(80);
+
+    .textarea {
+      @include display-flex(center, center, column);
+      gap: px-to-rem(10);
+      padding-top: px-to-rem(300);
+
+      h1 {
+        @include font-settings(48);
+      }
+
+      h2 {
+        @include font-settings(128);
+      }
+    }
+
+    button {
+      @include button-preset;
+      @include display-flex(center);
+      @include font-settings();
+      gap: px-to-rem(10);
+      background-color: var(--primary-color-25);
+      border-radius: px-to-rem(10);
+      color: var(--secondary-color);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+
+      .svg-container {
+        height: px-to-rem(20);
+
+        &::ng-deep .eMail {
+          height: px-to-rem(20);
+          fill: var(--primary-color-25);
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+        }
+      }
+
+      &:hover {
+        background-color: var(--primary-color-10);
+      }
+    }
+  }
+}
