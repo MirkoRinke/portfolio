@@ -6,6 +6,10 @@ header {
   @include max-content-settings;
   @include display-flex(center, space-between);
   height: px-to-rem(100);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
   .left-side {
     @include display-flex(center);
