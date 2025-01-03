@@ -26,7 +26,8 @@
 
   button {
     @include button-preset();
-    @include font-settings-default();
+    @include font-settings(16);
+    line-height: px-to-rem(16);
     color: var(--secondary-color);
     z-index: 1;
   }
