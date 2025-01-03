@@ -18,5 +18,10 @@ header {
     display: flex;
     align-items: center;
     gap: 50px;
+
+    &::ng-deep .logo {
+      fill: var(--secondary-color);
+      height: 65px;
+    }
   }
 }

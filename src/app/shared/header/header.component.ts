@@ -3,6 +3,8 @@ import { SiteNavigationComponent } from '../site-navigation/site-navigation.comp
 import { LanguageToggleComponent } from '../language-toggle/language-toggle.component';
 import { ColorToggleComponent } from '../color-toggle/color-toggle.component';
 
+import { SvgIconsService } from '../services/svg.icons.service';
+
 @Component({
   selector: 'app-header',
   imports: [
@@ -13,4 +15,6 @@ import { ColorToggleComponent } from '../color-toggle/color-toggle.component';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  constructor(public svgIconsService: SvgIconsService) {}
+}
