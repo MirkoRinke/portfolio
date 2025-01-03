@@ -1,9 +1,11 @@
+@use "../../../functions" as *;
+@use "../../../mixins" as *;
+@use "../../../var" as *;
+
 .select-language {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include display-flex(center, center);
   border: 1px solid var(--primary-color);
-  border-radius: 100px;
+  border-radius: px-to-rem(100);
   position: relative;
 
   &::before {
@@ -12,7 +14,7 @@
     height: 105%;
     width: 50%;
     background-color: var(--primary-color);
-    border-radius: 100px;
+    border-radius: px-to-rem(100);
     transition: all 0.3s ease-in-out;
     left: 50%;
   }
@@ -23,15 +25,9 @@
   }
 
   button {
-    background-color: unset;
-    border: unset;
-    padding: 4.5px 12px;
-    height: 28px;
-    font-size: 16px;
-    font-weight: 400;
-    color: white;
-    transition: all 125ms ease-in-out;
-    cursor: pointer;
+    @include button-preset();
+    @include font-settings-default();
+    color: var(--secondary-color);
     z-index: 1;
   }
 }
