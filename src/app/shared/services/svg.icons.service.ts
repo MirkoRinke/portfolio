@@ -7,7 +7,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 export class SvgIconsService {
   constructor(private sanitizer: DomSanitizer) {}
 
-  public returnIcon(type: string, className: string = ''): SafeHtml {
+  public returnIcon(type: string, className: string = type): SafeHtml {
     const icons: { [key: string]: string } = {
       logo: /*html*/ `
         <svg class="${className}" viewBox="0 0 295.000000 168.000000" xmlns="http://www.w3.org/2000/svg">
