@@ -14,7 +14,7 @@
   flex-direction: $direction;
 }
 
-@mixin font-settings-default($font-size: 16, $line-height: 16) {
+@mixin font-settings-default($font-size: 16, $line-height: $font-size * 1.5) {
   font-family: "FiraCode";
   font-size: px-to-rem($font-size);
   font-weight: 400;
@@ -22,7 +22,7 @@
   color: var(--secondary-color);
 }
 
-@mixin font-settings-highlight($font-size: 16, $line-height: 16) {
+@mixin font-settings-highlight($font-size: 16, $line-height: $font-size * 1.5) {
   font-family: "FiraCode";
   font-size: px-to-rem($font-size);
   font-weight: 700;
