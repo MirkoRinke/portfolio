@@ -1,20 +1,22 @@
+@use "../../../functions" as *;
+@use "../../../mixins" as *;
+@use "../../../var" as *;
+
 nav {
   ul {
-    display: flex;
-    gap: 1.875rem;
+    @include display-flex();
+    gap: px-to-rem(30);
 
     li {
       list-style-type: none;
 
       a {
-        font-size: 1rem;
-        font-weight: 500;
-        color: var(--secondary-color);
+        @include font-settings-default;
         transition: color 0.3s ease-in-out;
 
         &:hover {
-          color: var(--primary-color);
           transition: color 0.3s ease-in-out;
+          color: var(--primary-color);
           cursor: pointer;
         }
       }
