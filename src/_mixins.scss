@@ -52,11 +52,13 @@
   box-shadow: 0 0 px-to-rem(10) var(--primary-color);
 }
 
-@mixin title-bar-default-style {
+@mixin title-bar-default-style($min-width: 500) {
   @include display-flex(center, space-between);
   border-bottom: px-to-rem(1) solid var(--primary-color);
   background-color: var(--primary-color-10);
   height: px-to-rem(50);
+  min-width: px-to-rem($min-width);
+  width: 100%;
   padding-inline: px-to-rem(10);
 
   .title {

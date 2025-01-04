@@ -2,27 +2,22 @@
 @use "../../../../mixins" as *;
 @use "../../../../var" as *;
 
-section {
-  @include max-content-settings;
-  padding-block: px-to-rem(100);
+.portrait {
+  @include window-default-style(600);
 
-  .portrait {
-    @include window-default-style(600);
-
-    .title-bar {
-      @include title-bar-default-style;
-    }
-
-    .content {
-      img {
-        @include display-flex(center, center);
-        max-height: 100%;
-        max-width: 100%;
-      }
-    }
+  .title-bar {
+    @include title-bar-default-style(600);
   }
 
-  .desktop-icons {
-    @include desktop-icon;
+  .content {
+    img {
+      @include display-flex(center, center);
+      max-height: 100%;
+      max-width: 100%;
+    }
   }
+}
+
+.desktop-icons {
+  @include desktop-icon;
 }

@@ -1,34 +1,32 @@
-<section>
-  @if (isWindowOpen) {
-  <div class="portrait">
-    <div class="title-bar">
-      <h3 class="title">portrait.bmp</h3>
-      <div class="controls">
-        <span
-          (click)="closePortrait()"
-          [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
-        ></span>
-        <span
-          (click)="openPortrait()"
-          [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-        ></span>
-        <span
-          (click)="closeWindow()"
-          [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
-        ></span>
-      </div>
+@if (isWindowOpen) {
+<div class="portrait">
+  <div class="title-bar">
+    <h3 class="title">portrait.bmp</h3>
+    <div class="controls">
+      <span
+        (click)="closePortrait()"
+        [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
+      ></span>
+      <span
+        (click)="openPortrait()"
+        [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
+      ></span>
+      <span
+        (click)="closeWindow()"
+        [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
+      ></span>
     </div>
-    @if (isPortraitOpen) {
-    <div class="content">
-      <img src="./about-me/portrait.png" alt="" />
-    </div>
-    }
   </div>
-  } @else {
-  <div
-    class="desktop-icons"
-    (click)="openWindow()"
-    [innerHTML]="svgIconsService.returnIcon('portrait', 'desktop-icon')"
-  ></div>
+  @if (isPortraitOpen) {
+  <div class="content">
+    <img src="./about-me/portrait.png" alt="" />
+  </div>
   }
-</section>
+</div>
+} @else {
+<div
+  class="desktop-icons"
+  (click)="openWindow()"
+  [innerHTML]="svgIconsService.returnIcon('portrait', 'desktop-icon')"
+></div>
+}
