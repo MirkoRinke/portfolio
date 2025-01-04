@@ -16,8 +16,8 @@ section {
     .content {
       img {
         @include display-flex(center, center);
-        max-height: px-to-rem(548);
-        max-width: px-to-rem(598);
+        max-height: 100%;
+        max-width: 100%;
       }
     }
   }
