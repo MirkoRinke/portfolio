@@ -20,7 +20,7 @@ header {
     @include display-flex(center);
     gap: px-to-rem(50);
 
-    .svg-container {
+    span {
       height: px-to-rem(40);
 
       &::ng-deep .logo {
