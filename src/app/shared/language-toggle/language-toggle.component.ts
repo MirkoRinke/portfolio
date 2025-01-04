@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { LanguageService } from '../../shared/services/language.service';
+
 @Component({
   selector: 'app-language-toggle',
   imports: [CommonModule],
@@ -8,10 +10,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './language-toggle.component.scss',
 })
 export class LanguageToggleComponent {
-  currentLanguage = 'de';
+  currentLanguage: string;
 
-  switchLanguage(selectedLanguage: string) {
-    this.currentLanguage = selectedLanguage;
-    console.log('Language switched to: ', selectedLanguage);
+  constructor(private languageService: LanguageService) {
+    this.currentLanguage = localStorage.getItem('selectedLanguage') || 'de';
+  }
+
+  switchLanguage(language: string) {
+    this.currentLanguage = language;
+    this.languageService.setLanguage(language);
   }
 }
