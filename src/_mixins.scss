@@ -82,15 +82,19 @@
 }
 
 @mixin desktop-icon {
-  @include display-flex(center, center);
-  height: px-to-rem(100);
-  width: px-to-rem(100);
-  fill: var(--primary-color);
-
   margin-left: calc(px-to-rem(300) - px-to-rem(50));
+  height: fit-content;
+  width: fit-content;
 
-  &:hover {
-    fill: var(--primary-color-50);
-    cursor: pointer;
+  &::ng-deep .desktop-icon {
+    @include display-flex(center, center);
+    height: px-to-rem(100);
+    width: px-to-rem(100);
+    fill: var(--primary-color);
+
+    &:hover {
+      fill: var(--primary-color-50);
+      cursor: pointer;
+    }
   }
 }

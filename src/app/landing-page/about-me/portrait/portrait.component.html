@@ -25,10 +25,10 @@
     }
   </div>
   } @else {
-  <span
-    class="desktop-icon"
+  <div
+    class="desktop-icons"
     (click)="openWindow()"
-    [innerHTML]="svgIconsService.returnIcon('portrait')"
-  ></span>
+    [innerHTML]="svgIconsService.returnIcon('portrait', 'desktop-icon')"
+  ></div>
   }
 </section>
