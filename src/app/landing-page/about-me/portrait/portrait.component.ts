@@ -24,6 +24,7 @@ export class PortraitComponent {
 
   openWindow() {
     this.isWindowOpen = true;
+    this.openPortrait();
   }
 
   closeWindow() {
