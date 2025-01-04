@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { PortraitComponent } from './portrait/portrait.component';
+import { InfoBoxComponent } from './info-box/info-box.component';
 
 @Component({
   selector: 'app-about-me',
-  imports: [PortraitComponent],
+  imports: [PortraitComponent, InfoBoxComponent],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
