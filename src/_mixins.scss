@@ -42,3 +42,55 @@
   user-select: none;
   @include golden-padding($padding-factor);
 }
+
+// Window default styles for components
+
+@mixin window-default-style($max-width: 500) {
+  max-width: px-to-rem($max-width);
+  width: 100%;
+  border: px-to-rem(1) solid var(--primary-color);
+  box-shadow: 0 0 px-to-rem(10) var(--primary-color);
+}
+
+@mixin title-bar-default-style {
+  @include display-flex(center, space-between);
+  border-bottom: px-to-rem(1) solid var(--primary-color);
+  background-color: var(--primary-color-10);
+  height: px-to-rem(50);
+  padding-inline: px-to-rem(10);
+
+  .title {
+    @include font-settings();
+  }
+
+  .controls {
+    @include display-flex(center, end);
+    gap: px-to-rem(10);
+
+    &::ng-deep .icon {
+      @include display-flex(center, center);
+      height: px-to-rem(20);
+      width: px-to-rem(20);
+      fill: var(--primary-color);
+
+      &:hover {
+        fill: var(--primary-color-50);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@mixin desktop-icon {
+  @include display-flex(center, center);
+  height: px-to-rem(100);
+  width: px-to-rem(100);
+  fill: var(--primary-color);
+
+  margin-left: calc(px-to-rem(300) - px-to-rem(50));
+
+  &:hover {
+    fill: var(--primary-color-50);
+    cursor: pointer;
+  }
+}

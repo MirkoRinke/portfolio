@@ -1,0 +1,28 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+section {
+  @include max-content-settings;
+  padding-block: px-to-rem(100);
+
+  .portrait {
+    @include window-default-style(600);
+
+    .title-bar {
+      @include title-bar-default-style;
+    }
+
+    .content {
+      img {
+        @include display-flex(center, center);
+        max-height: px-to-rem(548);
+        max-width: px-to-rem(598);
+      }
+    }
+  }
+
+  .desktop-icon {
+    @include desktop-icon;
+  }
+}
