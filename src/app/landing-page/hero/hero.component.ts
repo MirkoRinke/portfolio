@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { SvgIconsService } from '../../shared/services/svg.icons.service';
+import { LanguageService } from '../../shared/services/language.service';
 
 @Component({
   selector: 'app-hero',
@@ -9,5 +10,8 @@ import { SvgIconsService } from '../../shared/services/svg.icons.service';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  constructor(public svgIconsService: SvgIconsService) {}
+  constructor(
+    public svgIconsService: SvgIconsService,
+    public languageService: LanguageService
+  ) {}
 }

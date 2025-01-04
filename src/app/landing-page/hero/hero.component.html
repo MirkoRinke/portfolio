@@ -22,11 +22,11 @@
         ></span>
       </div>
       <div class="textarea">
-        <h1>Frontend-Developer</h1>
-        <h2>Mirko Rinke</h2>
+        <h1>{{ languageService.texts.hero.subHeading }}</h1>
+        <h2>{{ languageService.texts.hero.mainHeading }}</h2>
         <button>
           <span [innerHTML]="svgIconsService.returnIcon('eMail')"></span>
-          Contact me
+          {{ languageService.texts.hero.contactMe }}
         </button>
       </div>
     </div>
