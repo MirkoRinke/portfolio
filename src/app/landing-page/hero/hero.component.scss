@@ -16,18 +16,32 @@ section {
     &::ng-deep .hero-icons {
       height: px-to-rem(100);
       fill: var(--primary-color-10);
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+      filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
     }
 
     .icons-left {
+      @include display-flex(center, center, column);
+      gap: px-to-rem(150);
+
       &::ng-deep .SCSS {
-        transform: rotate(-10deg) translateY(px-to-rem(50));
+        transform: rotate(-10deg) translateY(px-to-rem(0));
+      }
+
+      &::ng-deep .HTML {
+        transform: rotate(-10deg) translateY(px-to-rem(0));
       }
     }
 
     .icons-right {
-      &::ng-deep .SCSS {
-        transform: rotate(-10deg) translateY(px-to-rem(50));
+      @include display-flex(center, center, column);
+      gap: px-to-rem(150);
+
+      &::ng-deep .react {
+        transform: rotate(15deg) translateY(px-to-rem(50));
+      }
+
+      &::ng-deep .vue {
+        transform: rotate(15deg) translateY(px-to-rem(50));
       }
     }
 
@@ -70,7 +84,7 @@ section {
           background-color: var(--primary-color-25);
           border-radius: px-to-rem(10);
           color: var(--secondary-color);
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+          filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
 
           span {
             height: px-to-rem(20);
@@ -78,7 +92,7 @@ section {
             &::ng-deep .eMail {
               height: px-to-rem(20);
               fill: var(--primary-color-25);
-              filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+              filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
             }
           }
 
