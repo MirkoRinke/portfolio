@@ -1,15 +1,36 @@
 <section>
   <div class="content">
-    <div class="textarea">
-      <h1>Frontend-Developer</h1>
-      <h2>Mirko Rinke</h2>
-    </div>
-    <button>
+    <div class="icons-left">
       <span
-        class="svg-container"
-        [innerHTML]="svgIconsService.returnIcon('eMail')"
+        [innerHTML]="svgIconsService.returnIcon('SCSS', 'SCSS hero-icons')"
       ></span>
-      Contact me
-    </button>
+    </div>
+    <div class="central-section">
+      <div class="icons-top">
+        <span
+          [innerHTML]="
+            svgIconsService.returnIcon('typeScript', 'typeScript hero-icons')
+          "
+        ></span>
+        <span
+          [innerHTML]="
+            svgIconsService.returnIcon('angular', 'angular hero-icons')
+          "
+        ></span>
+      </div>
+      <div class="textarea">
+        <h1>Frontend-Developer</h1>
+        <h2>Mirko Rinke</h2>
+        <button>
+          <span [innerHTML]="svgIconsService.returnIcon('eMail')"></span>
+          Contact me
+        </button>
+      </div>
+    </div>
+    <div class="icons-right">
+      <span
+        [innerHTML]="svgIconsService.returnIcon('react', 'react hero-icons')"
+      ></span>
+    </div>
   </div>
 </section>

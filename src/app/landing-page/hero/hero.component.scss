@@ -8,45 +8,84 @@ section {
 
   .content {
     @include max-content-settings;
-    @include display-flex(center, center, column);
-    gap: px-to-rem(80);
+    @include display-flex(center, center);
+    min-height: 100%;
+    gap: px-to-rem(100);
+    padding-bottom: px-to-rem(100);
 
-    .textarea {
-      @include display-flex(center, center, column);
-      gap: px-to-rem(10);
-      padding-top: px-to-rem(300);
+    &::ng-deep .hero-icons {
+      height: px-to-rem(100);
+      fill: var(--primary-color-10);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+    }
 
-      h1 {
-        @include font-settings(48);
-      }
-
-      h2 {
-        @include font-settings(128);
+    .icons-left {
+      &::ng-deep .SCSS {
+        transform: rotate(-10deg) translateY(px-to-rem(50));
       }
     }
 
-    button {
-      @include button-preset;
-      @include display-flex(center);
-      @include font-settings();
-      gap: px-to-rem(10);
-      background-color: var(--primary-color-25);
-      border-radius: px-to-rem(10);
-      color: var(--secondary-color);
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+    .icons-right {
+      &::ng-deep .SCSS {
+        transform: rotate(-10deg) translateY(px-to-rem(50));
+      }
+    }
 
-      .svg-container {
-        height: px-to-rem(20);
+    .central-section {
+      @include display-flex(center, center, column);
+      gap: px-to-rem(50);
 
-        &::ng-deep .eMail {
-          height: px-to-rem(20);
-          fill: var(--primary-color-25);
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+      .icons-top {
+        @include display-flex(center, space-between);
+        min-width: 85%;
+        padding-left: px-to-rem(100);
+
+        &::ng-deep .typeScript {
+          transform: rotate(-5deg);
+        }
+
+        &::ng-deep .angular {
+          transform: rotate(15deg) translateY(px-to-rem(-25));
         }
       }
 
-      &:hover {
-        background-color: var(--primary-color-10);
+      .textarea {
+        @include display-flex(center, center, column);
+        gap: px-to-rem(10);
+        min-width: 100%;
+
+        h1 {
+          @include font-settings(48);
+        }
+
+        h2 {
+          @include font-settings(128);
+        }
+
+        button {
+          @include button-preset;
+          @include display-flex(center);
+          @include font-settings();
+          gap: px-to-rem(10);
+          background-color: var(--primary-color-25);
+          border-radius: px-to-rem(10);
+          color: var(--secondary-color);
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+
+          span {
+            height: px-to-rem(20);
+
+            &::ng-deep .eMail {
+              height: px-to-rem(20);
+              fill: var(--primary-color-25);
+              filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 1));
+            }
+          }
+
+          &:hover {
+            background-color: var(--primary-color-10);
+          }
+        }
       }
     }
   }
