@@ -1,23 +1,23 @@
-@if (isWindowOpen) {
+@if (windowService.isWindowOpen) {
 <div class="portrait">
   <div class="title-bar">
     <h3 class="title">portrait.bmp</h3>
     <div class="controls">
       <span
-        (click)="closeContent()"
+        (click)="windowService.closeContent()"
         [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
       ></span>
       <span
-        (click)="openContent()"
+        (click)="windowService.openContent()"
         [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
       ></span>
       <span
-        (click)="closeWindow()"
+        (click)="windowService.closeWindow()"
         [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
       ></span>
     </div>
   </div>
-  @if (isContentOpen) {
+  @if (windowService.isContentOpen) {
   <div class="content">
     <img src="./about-me/portrait.png" alt="" />
   </div>
@@ -26,7 +26,7 @@
 } @else {
 <div
   class="desktop-icons"
-  (click)="openWindow()"
+  (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('portrait', 'desktop-icon')"
 ></div>
 }
