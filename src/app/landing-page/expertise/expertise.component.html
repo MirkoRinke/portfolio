@@ -1,0 +1,34 @@
+<section>
+  @if (windowService.isWindowOpen) {
+  <div class="expertise">
+    <div class="title-bar">
+      <h3 class="title">PLACEHOLDER TEXT</h3>
+      <div class="controls">
+        <span
+          (click)="windowService.closeContent()"
+          [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
+        ></span>
+        <span
+          (click)="windowService.openContent()"
+          [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
+        ></span>
+        <span
+          (click)="windowService.closeWindow()"
+          [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
+        ></span>
+      </div>
+    </div>
+    @if (windowService.isContentOpen) {
+    <div class="content">
+      <p>PLACEHOLDER TEXT</p>
+    </div>
+    }
+  </div>
+  } @else {
+  <div
+    class="desktop-icons"
+    (click)="windowService.openWindow()"
+    [innerHTML]="svgIconsService.returnIcon('document', 'desktop-icon')"
+  ></div>
+  }
+</section>
