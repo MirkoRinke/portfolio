@@ -2,24 +2,22 @@
 @use "../../../../mixins" as *;
 @use "../../../../var" as *;
 
-$size: 600;
-
 .portrait {
-  @include window-default-style($size);
+  @include window-default-style();
 
   .title-bar {
-    @include title-bar-default-style($size);
+    @include title-bar-default-style;
   }
 
   .content {
     img {
       @include display-flex(center, center);
-      max-height: 100%;
-      max-width: 100%;
+      height: 100%;
+      width: 100%;
     }
   }
 }
 
 .desktop-icons {
-  @include desktop-icon-style(right, $size);
+  @include desktop-icon-style(right);
 }

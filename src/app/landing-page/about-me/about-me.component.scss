@@ -5,10 +5,23 @@
 section {
   @include max-content-settings;
   @include display-flex(start, space-between);
-  padding-block: px-to-rem(100);
+  gap: px-to-rem(150);
+  padding-top: px-to-rem(100);
+  padding-bottom: px-to-rem(50);
+
+  app-portrait {
+    width: 100%;
+  }
 
   .info {
-    @include display-flex(center, center, column);
+    @include display-flex(start, center, column);
     gap: px-to-rem(30);
+
+    width: 100%;
+
+    app-info-box {
+      @include display-flex(center, end);
+      width: 100%;
+    }
   }
 }

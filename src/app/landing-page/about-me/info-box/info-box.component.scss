@@ -2,13 +2,11 @@
 @use "../../../../mixins" as *;
 @use "../../../../var" as *;
 
-$size: 600;
-
 .info-box {
-  @include window-default-style($size);
+  @include window-default-style();
 
   .title-bar {
-    @include title-bar-default-style($size);
+    @include title-bar-default-style;
   }
 
   .content {
@@ -17,5 +15,5 @@ $size: 600;
 }
 
 .desktop-icons {
-  @include desktop-icon-style(right, $size);
+  @include desktop-icon-style(right);
 }
