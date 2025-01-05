@@ -1,9 +1,17 @@
 <section>
   <app-portrait></app-portrait>
-
   <div class="info">
-    <app-info-box></app-info-box>
-    <app-info-box></app-info-box>
-    <app-info-box></app-info-box>
+    <app-info-box
+      [title]="languageService.texts.aboutMe.infoBox1.title"
+      [textarea]="languageService.texts.aboutMe.infoBox1.textarea"
+    ></app-info-box>
+    <app-info-box
+      [title]="languageService.texts.aboutMe.infoBox2.title"
+      [textarea]="languageService.texts.aboutMe.infoBox2.textarea"
+    ></app-info-box>
+    <app-info-box
+      [title]="languageService.texts.aboutMe.infoBox2.title"
+      [textarea]="languageService.texts.aboutMe.infoBox2.textarea"
+    ></app-info-box>
   </div>
 </section>

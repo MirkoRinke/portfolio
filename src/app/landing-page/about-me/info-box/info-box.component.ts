@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 
@@ -11,6 +11,9 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 export class InfoBoxComponent {
   isWindowOpen = true;
   isContentOpen = true;
+
+  @Input() title!: string;
+  @Input() textarea!: string;
 
   constructor(public svgIconsService: SvgIconsService) {}
 

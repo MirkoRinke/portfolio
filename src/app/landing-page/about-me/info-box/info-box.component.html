@@ -1,7 +1,7 @@
 @if (isWindowOpen) {
 <div class="info-box">
   <div class="title-bar">
-    <h3 class="title">modern_work.txt</h3>
+    <h3 class="title">{{ title }}</h3>
     <div class="controls">
       <span
         (click)="closeContent()"
@@ -20,12 +20,7 @@
   @if (isContentOpen) {
   <div class="content">
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio veritatis
-      saepe totam minus ducimus, ipsa doloremque explicabo, ratione animi omnis
-      aliquam dolorum aperiam alias voluptates impedit odio! Beatae voluptate
-      rerum tempora deleniti modi maiores assumenda, tempore sit inventore odio
-      amet maxime veritatis perferendis, ut libero. Nulla atque iste sapiente
-      quod.
+      {{ textarea }}
     </p>
   </div>
   }
