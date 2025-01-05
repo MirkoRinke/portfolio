@@ -19,6 +19,13 @@
       @include display-flex(center, center, column);
       gap: px-to-rem(10);
       min-width: px-to-rem(150);
+      padding: px-to-rem(20);
+      border-radius: px-to-rem(10);
+
+      &:hover {
+        transition: fill 0.3s ease-in-out;
+        background-color: var(--secondary-color-12);
+      }
 
       &::ng-deep .icon {
         height: px-to-rem(80);
