@@ -63,6 +63,10 @@
 
   .title {
     @include font-settings();
+
+    &:hover {
+      color: var(--secondary-color-80);
+    }
   }
 
   .controls {
@@ -87,6 +91,10 @@
   background-color: var(--primary-color-10);
   color: var(--secondary-color);
   padding: px-to-rem(10);
+
+  &:hover {
+    color: var(--secondary-color-80);
+  }
 }
 
 @mixin desktop-icon-style($position: right, $min-width: 500) {
