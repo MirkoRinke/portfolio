@@ -2,7 +2,11 @@
   @if (windowService.isWindowOpen) {
   <div class="expertise">
     <div class="title-bar">
-      <h3 class="title">PLACEHOLDER TEXT</h3>
+      <div class="taps">
+        <span class="tap">skills_profile</span>
+        <span class="tap">certificates</span>
+      </div>
+
       <div class="controls">
         <span
           (click)="windowService.closeContent()"
@@ -20,7 +24,34 @@
     </div>
     @if (windowService.isContentOpen) {
     <div class="content">
-      <p>PLACEHOLDER TEXT</p>
+      <div class="skills">
+        @for (skill of skills; track $index) { @if (skill.visibility) {
+        <div class="skill-icon">
+          <div
+            [innerHTML]="
+              svgIconsService.returnIcon(skill.icon, skill.icon + ' icon')
+            "
+          ></div>
+          <h4 class="{{ skill.icon + '-name' }} skill-name">
+            {{ skill.name }}
+          </h4>
+        </div>
+        }}
+      </div>
+      <div class="learningSkills">
+        @for (skill of learningSkills; track $index) { @if (skill.visibility) {
+        <div class="skill-icon">
+          <div
+            [innerHTML]="
+              svgIconsService.returnIcon(skill.icon, 'learning icon')
+            "
+          ></div>
+          <h4 class="learning skill-name">
+            {{ skill.name }}
+          </h4>
+        </div>
+        }}
+      </div>
     </div>
     }
   </div>
