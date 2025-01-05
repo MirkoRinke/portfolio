@@ -4,7 +4,7 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 
 import { TapService } from '../../../shared/services/tap.service';
 
-import { type Skill, TECH_SKILLS, LEARNING_SKILLS } from './../skills.data';
+import { type Skill, TECH_SKILLS, LEARNING_SKILLS } from './skills.data';
 
 @Component({
   selector: 'app-skills',
