@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "./functions" as *;
 
 @mixin max-content-settings {
@@ -29,7 +30,7 @@
 }
 
 @mixin golden-padding($font-size: 16) {
-  $vertical: $font-size / 2;
+  $vertical: math.div($font-size, 2);
   $horizontal: $vertical * 1.618; // Golden ratio
   padding: px-to-rem($vertical) px-to-rem($horizontal);
 }
