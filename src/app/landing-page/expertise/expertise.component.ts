@@ -4,6 +4,8 @@ import { SvgIconsService } from '../../shared/services/svg.icons.service';
 
 import { WindowService } from '../../shared/services/window.service';
 
+import { TapService } from '../../shared/services/tap.service';
+
 import { type Skill, TECH_SKILLS, LEARNING_SKILLS } from './skills.data';
 
 @Component({
@@ -19,6 +21,7 @@ export class ExpertiseComponent {
 
   constructor(
     public svgIconsService: SvgIconsService,
-    public windowService: WindowService
+    public windowService: WindowService,
+    public tapService: TapService
   ) {}
 }

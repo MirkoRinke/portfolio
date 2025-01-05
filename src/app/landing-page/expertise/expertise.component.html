@@ -3,8 +3,20 @@
   <div class="expertise">
     <div class="title-bar">
       <div class="taps">
-        <span class="tap">skills_profile</span>
-        <span class="tap">certificates</span>
+        <span
+          class="tap"
+          [class.active]="tapService.isTapActive('skills')"
+          (click)="tapService.activateTap('skills')"
+        >
+          skills_profile
+        </span>
+        <span
+          class="tap"
+          [class.active]="tapService.isTapActive('certificates')"
+          (click)="tapService.activateTap('certificates')"
+        >
+          certificates
+        </span>
       </div>
 
       <div class="controls">
@@ -24,6 +36,7 @@
     </div>
     @if (windowService.isContentOpen) {
     <div class="content">
+      @if (tapService.isTapActive('skills')) {
       <div class="skills">
         @for (skill of skills; track $index) { @if (skill.visibility) {
         <div class="skill-icon">
@@ -52,6 +65,7 @@
         </div>
         }}
       </div>
+      }
     </div>
     }
   </div>
