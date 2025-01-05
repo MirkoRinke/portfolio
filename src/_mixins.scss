@@ -83,15 +83,21 @@
   }
 }
 
-@mixin desktop-icon {
-  margin-left: calc(px-to-rem(300) - px-to-rem(50));
+@mixin window-content {
+  background-color: var(--primary-color-10);
+  color: var(--secondary-color);
+  padding: px-to-rem(10);
+}
+
+@mixin desktop-icon-style($position: right, $min-width: 500) {
+  @include display-flex(start, $position);
+  min-width: px-to-rem($min-width);
   height: fit-content;
-  width: fit-content;
 
   &::ng-deep .desktop-icon {
     @include display-flex(center, center);
-    height: px-to-rem(100);
-    width: px-to-rem(100);
+    height: px-to-rem(50);
+    width: px-to-rem(50);
     fill: var(--primary-color);
 
     &:hover {

@@ -10,21 +10,21 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 })
 export class PortraitComponent {
   isWindowOpen = true;
-  isPortraitOpen = true;
+  isContentOpen = true;
 
   constructor(public svgIconsService: SvgIconsService) {}
 
-  openPortrait() {
-    this.isPortraitOpen = true;
+  openContent() {
+    this.isContentOpen = true;
   }
 
-  closePortrait() {
-    this.isPortraitOpen = false;
+  closeContent() {
+    this.isContentOpen = false;
   }
 
   openWindow() {
     this.isWindowOpen = true;
-    this.openPortrait();
+    this.openContent();
   }
 
   closeWindow() {

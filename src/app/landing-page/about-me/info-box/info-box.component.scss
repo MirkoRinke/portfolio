@@ -1,0 +1,21 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+$size: 600;
+
+.info-box {
+  @include window-default-style($size);
+
+  .title-bar {
+    @include title-bar-default-style($size);
+  }
+
+  .content {
+    @include window-content;
+  }
+}
+
+.desktop-icons {
+  @include desktop-icon-style(right, $size);
+}

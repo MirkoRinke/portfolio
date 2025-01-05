@@ -4,6 +4,11 @@
 
 section {
   @include max-content-settings;
-  @include display-flex(center, space-between);
+  @include display-flex(start, space-between);
   padding-block: px-to-rem(100);
+
+  .info {
+    @include display-flex(center, center, column);
+    gap: px-to-rem(30);
+  }
 }

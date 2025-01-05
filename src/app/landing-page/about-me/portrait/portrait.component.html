@@ -4,11 +4,11 @@
     <h3 class="title">portrait.bmp</h3>
     <div class="controls">
       <span
-        (click)="closePortrait()"
+        (click)="closeContent()"
         [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
       ></span>
       <span
-        (click)="openPortrait()"
+        (click)="openContent()"
         [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
       ></span>
       <span
@@ -17,7 +17,7 @@
       ></span>
     </div>
   </div>
-  @if (isPortraitOpen) {
+  @if (isContentOpen) {
   <div class="content">
     <img src="./about-me/portrait.png" alt="" />
   </div>
