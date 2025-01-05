@@ -2,49 +2,41 @@
 @use "../../../../mixins" as *;
 @use "../../../../var" as *;
 
-.content {
-  @include window-content;
-  @include display-flex(start, space-between, column);
-  min-height: px-to-rem(700);
-  padding: px-to-rem(40);
-  gap: px-to-rem(100) 0;
+.skills,
+.learningSkills {
+  @include display-flex(center, start);
+  gap: px-to-rem(45);
+  flex-wrap: wrap;
 
-  .skills,
-  .learningSkills {
-    @include display-flex(center, start);
-    gap: px-to-rem(45);
-    flex-wrap: wrap;
+  .skill-icon {
+    @include display-flex(center, center, column);
+    gap: px-to-rem(10);
+    min-width: px-to-rem(150);
+    padding: px-to-rem(20);
+    border-radius: px-to-rem(10);
 
-    .skill-icon {
-      @include display-flex(center, center, column);
-      gap: px-to-rem(10);
-      min-width: px-to-rem(150);
-      padding: px-to-rem(20);
-      border-radius: px-to-rem(10);
-
-      &:hover {
-        transition: fill 0.3s ease-in-out;
-        background-color: var(--secondary-color-12);
-      }
-
-      &::ng-deep .icon {
-        height: px-to-rem(80);
-        width: px-to-rem(80);
-        fill: var(--secondary-color);
-      }
-
-      &::ng-deep .learning {
-        fill: var(--primary-color-10);
-      }
+    &:hover {
+      transition: fill 0.3s ease-in-out;
+      background-color: var(--secondary-color-12);
     }
 
-    .skill-name {
-      @include font-settings();
-      color: var(--secondary-color);
+    &::ng-deep .icon {
+      height: px-to-rem(80);
+      width: px-to-rem(80);
+      fill: var(--secondary-color);
     }
 
-    .learning {
-      color: var(--primary-color-10);
+    &::ng-deep .learning {
+      fill: var(--primary-color-10);
     }
+  }
+
+  .skill-name {
+    @include font-settings();
+    color: var(--secondary-color);
+  }
+
+  .learning {
+    color: var(--primary-color-10);
   }
 }

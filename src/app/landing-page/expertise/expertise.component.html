@@ -34,9 +34,14 @@
         ></span>
       </div>
     </div>
-    @if (windowService.isContentOpen) {
-    <app-skills></app-skills>
-    }
+    <div class="content">
+      @if (windowService.isContentOpen) { @if (tapService.isTapActive('skills'))
+      {
+      <app-skills></app-skills>
+      } @if (tapService.isTapActive('certificates')) {
+      <app-certificates></app-certificates>
+      } }
+    </div>
   </div>
   } @else {
   <div

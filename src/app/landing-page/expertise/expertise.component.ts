@@ -7,10 +7,11 @@ import { WindowService } from '../../shared/services/window.service';
 import { TapService } from '../../shared/services/tap.service';
 
 import { SkillsComponent } from './skills/skills.component';
+import { CertificatesComponent } from './certificates/certificates.component';
 
 @Component({
   selector: 'app-expertise',
-  imports: [SkillsComponent],
+  imports: [SkillsComponent, CertificatesComponent],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.scss',
   providers: [WindowService, TapService],
