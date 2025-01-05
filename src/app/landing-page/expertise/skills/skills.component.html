@@ -1,0 +1,30 @@
+<div class="content">
+  @if (tapService.isTapActive('skills')) {
+  <div class="skills">
+    @for (skill of skills; track $index) { @if (skill.visibility) {
+    <div class="skill-icon">
+      <div
+        [innerHTML]="
+          svgIconsService.returnIcon(skill.icon, skill.icon + ' icon')
+        "
+      ></div>
+      <h4 class="{{ skill.icon + '-name' }} skill-name">
+        {{ skill.name }}
+      </h4>
+    </div>
+    }}
+  </div>
+  <div class="learningSkills">
+    @for (skill of learningSkills; track $index) { @if (skill.visibility) {
+    <div class="skill-icon">
+      <div
+        [innerHTML]="svgIconsService.returnIcon(skill.icon, 'learning icon')"
+      ></div>
+      <h4 class="learning skill-name">
+        {{ skill.name }}
+      </h4>
+    </div>
+    }}
+  </div>
+  }
+</div>

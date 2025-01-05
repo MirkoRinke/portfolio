@@ -6,19 +6,16 @@ import { WindowService } from '../../shared/services/window.service';
 
 import { TapService } from '../../shared/services/tap.service';
 
-import { type Skill, TECH_SKILLS, LEARNING_SKILLS } from './skills.data';
+import { SkillsComponent } from './skills/skills.component';
 
 @Component({
   selector: 'app-expertise',
-  imports: [],
+  imports: [SkillsComponent],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.scss',
-  providers: [WindowService],
+  providers: [WindowService, TapService],
 })
 export class ExpertiseComponent {
-  skills: Skill[] = TECH_SKILLS;
-  learningSkills: Skill[] = LEARNING_SKILLS;
-
   constructor(
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
