@@ -97,12 +97,12 @@ export const LEARNING_SKILLS: Skill[] = [
     name: 'React',
     icon: 'react',
     alt: 'React Logo',
-    visibility: true,
+    visibility: false,
   },
   {
     name: 'Vue Js',
     icon: 'vue',
     alt: 'Vue Js Logo',
-    visibility: true,
+    visibility: false,
   },
 ];
