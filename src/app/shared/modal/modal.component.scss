@@ -1,0 +1,37 @@
+@use "../../../functions" as *;
+@use "../../../mixins" as *;
+@use "../../../var" as *;
+
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-color);
+  @include display-flex(center, center);
+
+  .modal-wrapper {
+    @include max-content-settings();
+
+    .modal {
+      @include window-default-style();
+
+      .title-bar {
+        @include title-bar-default-style;
+
+        .title {
+          @include title-default-style();
+        }
+      }
+
+      .content {
+        @include window-content;
+      }
+    }
+
+    .desktop-icons {
+      @include desktop-icon-style(right);
+    }
+  }
+}

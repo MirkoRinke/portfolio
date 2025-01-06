@@ -4,6 +4,8 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 
 import { type Certificate, CERTIFICATES } from './certificates.data';
 
+import { ModalService } from '../../../shared/services/modal.service';
+
 @Component({
   selector: 'app-certificates',
   imports: [],
@@ -13,5 +15,8 @@ import { type Certificate, CERTIFICATES } from './certificates.data';
 export class CertificatesComponent {
   certificates: Certificate[] = CERTIFICATES;
 
-  constructor(public svgIconsService: SvgIconsService) {}
+  constructor(
+    public svgIconsService: SvgIconsService,
+    public modalService: ModalService
+  ) {}
 }
