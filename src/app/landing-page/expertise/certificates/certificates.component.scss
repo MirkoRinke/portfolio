@@ -1,0 +1,39 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+.certificates {
+  @include display-flex(start, space-between);
+  gap: px-to-rem(5);
+  flex-wrap: wrap;
+  width: 100%;
+
+  .certificate {
+    @include button-preset;
+    @include display-flex(center, start);
+    @include font-settings;
+    text-align: left;
+    gap: px-to-rem(20);
+    padding: px-to-rem(10) px-to-rem(20);
+    border-radius: px-to-rem(10);
+    max-width: calc(100% / 2 - px-to-rem(50));
+    width: 100%;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      max-width: 100%;
+    }
+
+    &::ng-deep .icon {
+      @include display-flex(center, center);
+      height: px-to-rem(25);
+      width: px-to-rem(25);
+      fill: var(--secondary-color);
+    }
+
+    &:hover {
+      transition: fill 0.3s ease-in-out;
+      background-color: var(--secondary-color-12);
+      cursor: pointer;
+    }
+  }
+}

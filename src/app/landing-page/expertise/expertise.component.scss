@@ -44,7 +44,7 @@ section {
       @include window-content;
       @include display-flex(start, space-between, column);
       min-height: px-to-rem(700);
-      padding: px-to-rem(40);
+      padding: px-to-rem(20);
 
       app-skills {
         @include display-flex(start, start, column);
