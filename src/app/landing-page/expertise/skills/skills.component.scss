@@ -14,11 +14,13 @@
     min-width: px-to-rem(150);
     padding: px-to-rem(20);
     border-radius: px-to-rem(10);
+
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
-      transition: background-color 0.3s ease-in-out;
+      transition: background-color 0s ease-in-out;
       background-color: var(--secondary-color-12);
+      cursor: pointer;
     }
 
     &::ng-deep .icon {
