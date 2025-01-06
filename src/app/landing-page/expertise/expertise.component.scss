@@ -43,11 +43,10 @@ section {
     .content {
       @include window-content;
       @include display-flex(start, space-between, column);
-      height: px-to-rem(700);
-      padding: px-to-rem(20);
-      overflow-y: auto;
-
       scrollbar-color: var(--primary-color) rgb(28, 28, 28);
+      padding: px-to-rem(20) px-to-rem(10);
+      height: px-to-rem(700);
+      overflow-y: auto;
 
       app-skills {
         @include display-flex(start, start, column);
