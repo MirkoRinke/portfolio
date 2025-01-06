@@ -3,7 +3,7 @@ export interface Certificate {
   icon: string;
   platform: string;
   tutor: string;
-  completedDate: string;
+  date: string;
   visibility: boolean;
 }
 
@@ -12,64 +12,64 @@ export const CERTIFICATES: Certificate[] = [
     title: 'Baue Webseiten mit HTML5 & CSS3.',
     icon: 'HTML',
     platform: 'Udemy',
-    tutor: '',
-    completedDate: '',
+    tutor: 'Jannis Seemann',
+    date: '01.2024',
     visibility: true,
   },
   {
     title: 'Fortgeschrittenes CSS: Animationen, Flexbox, SASS, SVG, 3D.',
     icon: 'CSS',
     platform: 'Udemy',
-    tutor: '',
-    completedDate: '',
+    tutor: 'Jannis Seemann',
+    date: '04.2024',
     visibility: true,
   },
   {
     title: 'Git Komplettkurs: Vom Anfänger zum Profi (inkl. GitHub).',
     icon: 'GIT',
     platform: 'Udemy',
-    tutor: '',
-    completedDate: '',
+    tutor: 'Jannis Seemann',
+    date: '08.2024',
     visibility: true,
   },
   {
     title: 'Sass Grundkurs.',
     icon: 'SCSS',
-    platform: 'Udemy',
-    tutor: '',
-    completedDate: '',
+    platform: 'Linkedin',
+    tutor: 'Florence Maurice',
+    date: '10.2024',
     visibility: true,
   },
   {
     title: 'Die komplette JavaScript Masterclass.',
     icon: 'javaScript',
     platform: 'Udemy',
-    tutor: '',
-    completedDate: '',
+    tutor: 'Jannis Seemann',
+    date: '12.2024',
     visibility: true,
   },
   {
     title: 'Clean Code.',
     icon: 'dot',
     platform: 'Udemy',
-    tutor: '',
-    completedDate: '',
+    tutor: 'Maximilian Schwarzmüller',
+    date: '12.2024',
     visibility: true,
   },
   {
     title: 'Chrome DevTools verstehen und verwenden.',
     icon: 'dot',
     platform: 'Udemy',
-    tutor: '',
-    completedDate: '',
+    tutor: 'Stephan Haewß',
+    date: '',
     visibility: true,
   },
   {
     title: 'Angular – The Complete Guide.',
     icon: 'angular',
     platform: 'Udemy',
-    tutor: '',
-    completedDate: '',
+    tutor: 'Maximilian Schwarzmüller',
+    date: '',
     visibility: true,
   },
   {
@@ -77,7 +77,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -85,7 +85,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -93,7 +93,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -101,7 +101,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -109,7 +109,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -117,7 +117,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -125,7 +125,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -133,7 +133,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -141,7 +141,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -149,7 +149,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -157,7 +157,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -165,7 +165,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -173,7 +173,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -181,7 +181,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -189,7 +189,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -197,7 +197,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -205,7 +205,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
   {
@@ -213,7 +213,7 @@ export const CERTIFICATES: Certificate[] = [
     icon: 'dot',
     platform: 'Udemy',
     tutor: '',
-    completedDate: '',
+    date: '',
     visibility: true,
   },
 ];

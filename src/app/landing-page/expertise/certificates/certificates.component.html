@@ -1,13 +1,20 @@
 <div class="certificates">
   @for (certificate of certificates; track $index) {
-
   <button class="certificate">
-    <div
-      [innerHTML]="
-        svgIconsService.returnIcon(certificate.icon, certificate.icon + ' icon')
-      "
-    ></div>
-    <p>{{ certificate.title }}</p>
+    <div class="course">
+      <div
+        [innerHTML]="
+          svgIconsService.returnIcon(
+            certificate.icon,
+            certificate.icon + ' icon'
+          )
+        "
+      ></div>
+      <p class="title">{{ certificate.title }}</p>
+    </div>
+    <p class="tutor">{{ certificate.tutor }}</p>
+    <p class="platform">{{ certificate.platform }}</p>
+    <p class="date">{{ certificate.date }}</p>
   </button>
   }
 </div>

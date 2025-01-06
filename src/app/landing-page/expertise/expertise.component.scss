@@ -43,12 +43,19 @@ section {
     .content {
       @include window-content;
       @include display-flex(start, space-between, column);
-      min-height: px-to-rem(700);
+      height: px-to-rem(700);
       padding: px-to-rem(20);
+      overflow-y: auto;
+
+      scrollbar-color: var(--primary-color) rgb(28, 28, 28);
 
       app-skills {
         @include display-flex(start, start, column);
         gap: px-to-rem(100);
+      }
+
+      app-certificates {
+        width: 100%;
       }
     }
   }

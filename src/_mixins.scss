@@ -15,6 +15,12 @@
   flex-direction: $direction;
 }
 
+@mixin display-grid($align: stretch, $justify: stretch) {
+  display: grid;
+  align-items: $align;
+  justify-items: $justify;
+}
+
 @mixin font-settings(
   $font-size: 16,
   $font-weight: 400,

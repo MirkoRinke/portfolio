@@ -3,20 +3,20 @@
 @use "../../../../var" as *;
 
 .certificates {
-  @include display-flex(start, space-between);
+  @include display-flex(start, space-between, column);
   gap: px-to-rem(5);
-  flex-wrap: wrap;
   width: 100%;
 
   .certificate {
     @include button-preset;
-    @include display-flex(center, start);
     @include font-settings;
+    @include display-grid(center);
+    grid-template-columns: repeat(5, 1fr);
     text-align: left;
-    gap: px-to-rem(20);
+    gap: px-to-rem(25);
     padding: px-to-rem(10) px-to-rem(20);
     border-radius: px-to-rem(10);
-    max-width: calc(100% / 2 - px-to-rem(50));
+    max-width: calc(100% - px-to-rem(40));
     width: 100%;
 
     transition: background-color 0.3s ease-in-out;
@@ -41,6 +41,12 @@
       transition: fill 0.3s ease-in-out;
       background-color: var(--secondary-color-12);
       cursor: pointer;
+    }
+
+    .course {
+      @include display-flex(center, start);
+      grid-column: span 2;
+      gap: px-to-rem(10);
     }
   }
 }
