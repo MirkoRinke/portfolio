@@ -71,14 +71,6 @@
   height: px-to-rem(50);
   padding-inline: px-to-rem(10);
 
-  .title {
-    @include font-settings();
-
-    &:hover {
-      color: var(--secondary-color-80);
-    }
-  }
-
   .controls {
     @include display-flex(center, end);
     gap: px-to-rem(10);
@@ -97,10 +89,49 @@
   }
 }
 
+@mixin title-default-style() {
+  @include font-settings();
+
+  &:hover {
+    color: var(--secondary-color-80);
+  }
+}
+
+@mixin tap-default-style() {
+  @include button-preset();
+  @include font-settings();
+  @include display-flex(center, space-between);
+
+  background-color: var(--primary-color-10);
+  border-radius: px-to-rem(5);
+  height: px-to-rem(20);
+  max-width: px-to-rem(260);
+  width: 100%;
+
+  &::ng-deep .icon {
+    @include display-flex(center, center);
+    height: px-to-rem(10);
+    width: px-to-rem(10);
+    fill: var(--primary-color);
+    margin-bottom: px-to-rem(10);
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-25);
+  }
+
+  &.active {
+    background-color: var(--primary-color-25);
+  }
+}
+
 @mixin window-content {
   background-color: var(--primary-color-10);
   color: var(--secondary-color);
   padding: px-to-rem(10);
+  scrollbar-color: var(--primary-color) rgb(28, 28, 28);
+  overflow-y: auto;
 
   &:hover p {
     color: var(--secondary-color-80);

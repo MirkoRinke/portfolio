@@ -7,6 +7,10 @@
 
   .title-bar {
     @include title-bar-default-style;
+
+    .title {
+      @include title-default-style();
+    }
   }
 
   .content {

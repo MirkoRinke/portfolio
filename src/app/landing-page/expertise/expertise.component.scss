@@ -19,23 +19,7 @@ section {
         width: 100%;
 
         .tap {
-          @include button-preset();
-          @include font-settings();
-          @include display-flex(center, start);
-          background-color: var(--primary-color-10);
-          border-radius: px-to-rem(5);
-          height: px-to-rem(20);
-          max-width: px-to-rem(260);
-          width: 100%;
-
-          &:hover {
-            cursor: pointer;
-            background-color: var(--primary-color-25);
-          }
-
-          &.active {
-            background-color: var(--primary-color-25);
-          }
+          @include tap-default-style;
         }
       }
     }
@@ -43,10 +27,8 @@ section {
     .content {
       @include window-content;
       @include display-flex(start, space-between, column);
-      scrollbar-color: var(--primary-color) rgb(28, 28, 28);
       padding: px-to-rem(20) px-to-rem(10);
-      height: px-to-rem(700);
-      overflow-y: auto;
+      height: px-to-rem(600);
 
       app-skills {
         @include display-flex(start, start, column);

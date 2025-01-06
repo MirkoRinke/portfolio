@@ -9,6 +9,7 @@
           (click)="tapService.activateTap('skills')"
         >
           skills_profile
+          <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
         </button>
         <button
           class="tap"
@@ -16,22 +17,23 @@
           (click)="tapService.activateTap('certificates')"
         >
           certificates
+          <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
         </button>
       </div>
 
       <div class="controls">
-        <span
+        <div
           (click)="windowService.closeContent()"
           [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
-        ></span>
-        <span
+        ></div>
+        <div
           (click)="windowService.openContent()"
           [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-        ></span>
-        <span
+        ></div>
+        <div
           (click)="windowService.closeWindow()"
           [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
-        ></span>
+        ></div>
       </div>
     </div>
     @if (windowService.isContentOpen) {
