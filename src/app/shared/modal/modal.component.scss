@@ -29,9 +29,5 @@ section {
         @include window-content;
       }
     }
-
-    .desktop-icons {
-      @include desktop-icon-style(right);
-    }
   }
 }
