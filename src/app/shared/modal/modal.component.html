@@ -3,7 +3,7 @@
   <div class="modal-wrapper">
     <div class="modal">
       <div class="title-bar">
-        <h3 class="title">{{ modalService.title }}</h3>
+        <h3 [innerHTML]="modalService.title" class="title"></h3>
         <div class="controls">
           <span
             (click)="windowService.closeContent()"
@@ -20,9 +20,7 @@
         </div>
       </div>
       @if (windowService.isContentOpen) {
-      <div class="content">
-        {{ modalService.content }}
-      </div>
+      <div [innerHTML]="modalService.content" class="content"></div>
       }
     </div>
   </div>
