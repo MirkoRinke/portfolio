@@ -20,6 +20,10 @@ export class ModalService {
     this.disabledScroll();
   }
 
+  closeModalWrapper(event: Event) {
+    if (event.target === event.currentTarget) this.closeModal();
+  }
+
   closeModal() {
     this.isModalOpen = false;
     this.enableScroll();

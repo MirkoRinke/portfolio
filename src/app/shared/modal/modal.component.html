@@ -1,5 +1,5 @@
 @if (modalService.isModalOpen) {
-<section>
+<section (click)="modalService.closeModalWrapper($event)">
   <div class="modal-wrapper">
     <div class="modal">
       <div class="title-bar">
@@ -7,14 +7,14 @@
           {{ modalService.modal[modalService.index].title }}
         </h3>
         <div class="controls">
-          <span
+          <!-- <span
             (click)="windowService.closeContent()"
             [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
           ></span>
           <span
             (click)="windowService.openContent()"
             [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-          ></span>
+          ></span> -->
           <span
             (click)="modalService.closeModal()"
             [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
