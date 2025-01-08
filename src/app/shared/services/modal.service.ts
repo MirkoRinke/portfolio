@@ -20,6 +20,20 @@ export class ModalService {
     this.disabledScroll();
   }
 
+  prevModal(modal: Object, index: number, activeModal: string) {
+    if (index < 0) index = this.modal.length - 1;
+    this.modal = modal;
+    this.index = index;
+    this.activeModal = activeModal;
+  }
+
+  nextModal(modal: Object, index: number, activeModal: string) {
+    if (index == this.modal.length) index = 0;
+    this.modal = modal;
+    this.index = index;
+    this.activeModal = activeModal;
+  }
+
   closeModalWrapper(event: Event) {
     if (event.target === event.currentTarget) this.closeModal();
   }

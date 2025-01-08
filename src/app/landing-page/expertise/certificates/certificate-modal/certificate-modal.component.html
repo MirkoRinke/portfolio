@@ -2,7 +2,7 @@
   <span
     class="left"
     (click)="
-      modalService.openModal(modalService.modal, index - 1, 'certificate')
+      modalService.prevModal(modalService.modal, index - 1, 'certificate')
     "
     [innerHTML]="svgIconsService.returnIcon('arrowBackward', 'icon')"
   ></span>
@@ -10,7 +10,7 @@
   <span
     class="right"
     (click)="
-      modalService.openModal(modalService.modal, index + 1, 'certificate')
+      modalService.nextModal(modalService.modal, index + 1, 'certificate')
     "
     [innerHTML]="svgIconsService.returnIcon('arrowForward', 'icon')"
   ></span>

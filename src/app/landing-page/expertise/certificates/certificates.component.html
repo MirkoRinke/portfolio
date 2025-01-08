@@ -1,5 +1,6 @@
 <div class="certificates">
-  @for (certificate of certificates; track $index) {
+  @for (certificate of certificates; track $index) { @if
+  (certificate.visibility) {
   <button
     (click)="modalService.openModal(certificates, $index, 'certificate')"
     class="certificate"
@@ -19,5 +20,6 @@
     <p class="platform">{{ certificate.platform }}</p>
     <p class="date">{{ certificate.date }}</p>
   </button>
-  }
+
+  } }
 </div>
