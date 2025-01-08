@@ -9,6 +9,7 @@ section {
   right: 0;
   bottom: 0;
   @include display-flex(center, center);
+  padding-inline: px-to-rem(20);
 
   .modal-wrapper {
     @include max-content-settings();
@@ -31,6 +32,7 @@ section {
 
       .content {
         @include window-content;
+        padding: 0;
       }
     }
   }
