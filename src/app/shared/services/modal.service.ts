@@ -6,15 +6,15 @@ import { Injectable } from '@angular/core';
 export class ModalService {
   isModalOpen = false;
 
-  title: any;
-  content: any;
+  modal: any;
+  activeModal!: string;
 
   constructor() {}
 
-  openModal(newContent: any, newTitle: string) {
+  openModal(modal: Object, activeModal: any) {
     this.isModalOpen = true;
-    this.content = newContent;
-    this.title = newTitle;
+    this.modal = modal;
+    this.activeModal = activeModal;
   }
 
   closeModal() {

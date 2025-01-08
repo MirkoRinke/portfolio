@@ -1,7 +1,7 @@
 <div class="certificates">
   @for (certificate of certificates; track $index) {
   <button
-    (click)="modalService.openModal('New Content', 'New Title')"
+    (click)="modalService.openModal(certificate, 'certificate')"
     class="certificate"
   >
     <div class="course">
