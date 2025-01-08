@@ -17,9 +17,23 @@ export class ModalService {
     this.modal = modal;
     this.index = index;
     this.activeModal = activeModal;
+    this.disabledScroll();
   }
 
   closeModal() {
     this.isModalOpen = false;
+    this.enableScroll();
+  }
+
+  disabledScroll() {
+    const scrollBarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = `${scrollBarWidth}px`;
+  }
+
+  enableScroll() {
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
   }
 }
