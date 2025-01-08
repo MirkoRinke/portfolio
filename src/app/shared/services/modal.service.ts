@@ -11,7 +11,7 @@ export class ModalService {
 
   constructor() {}
 
-  openModal(modal: Object, activeModal: any) {
+  openModal(modal: Object, activeModal: string) {
     this.isModalOpen = true;
     this.modal = modal;
     this.activeModal = activeModal;
