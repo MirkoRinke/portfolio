@@ -3,7 +3,9 @@
   <div class="modal-wrapper">
     <div class="modal">
       <div class="title-bar">
-        <h3 class="title">{{ modalService.modal.title }}</h3>
+        <h3 class="title">
+          {{ modalService.modal[modalService.index].title }}
+        </h3>
         <div class="controls">
           <span
             (click)="windowService.closeContent()"
@@ -24,6 +26,7 @@
         @if (modalService.activeModal === "certificate") {
         <app-certificate-modal
           [modal]="modalService.modal"
+          [index]="modalService.index"
         ></app-certificate-modal>
         } @else {
         <p>PLACEHOLDER</p>

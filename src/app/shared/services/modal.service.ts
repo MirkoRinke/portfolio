@@ -7,13 +7,15 @@ export class ModalService {
   isModalOpen = false;
 
   modal: any;
+  index!: number;
   activeModal!: string;
 
   constructor() {}
 
-  openModal(modal: Object, activeModal: string) {
+  openModal(modal: Object, index: number, activeModal: string) {
     this.isModalOpen = true;
     this.modal = modal;
+    this.index = index;
     this.activeModal = activeModal;
   }
 

@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CertificateModalComponent {
   @Input() modal!: any;
+  @Input() index!: number;
 }

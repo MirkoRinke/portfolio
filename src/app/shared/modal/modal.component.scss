@@ -8,14 +8,18 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--background-color);
   @include display-flex(center, center);
 
   .modal-wrapper {
     @include max-content-settings();
+    background-color: var(--background-color);
+    padding: 0;
+    width: fit-content;
 
     .modal {
       @include window-default-style();
+      margin-inline: auto;
+      width: fit-content;
 
       .title-bar {
         @include title-bar-default-style;
