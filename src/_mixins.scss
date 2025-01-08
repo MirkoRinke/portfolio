@@ -35,7 +35,7 @@
   line-height: px-to-rem($line-height);
 }
 
-@mixin golden-padding($font-size: 16) {
+@mixin golden-ratio-padding($font-size: 16) {
   $vertical: math.div($font-size, 2);
   $horizontal: $vertical * 1.618; // Golden ratio
   padding: px-to-rem($vertical) px-to-rem($horizontal);
@@ -47,7 +47,7 @@
   cursor: pointer;
   text-align: center;
   user-select: none;
-  @include golden-padding($padding-factor);
+  @include golden-ratio-padding($padding-factor);
 }
 
 // Window default styles for components
