@@ -1,3 +1,17 @@
 <div class="modal-content">
+  <span
+    class="left"
+    (click)="
+      modalService.openModal(modalService.modal, index - 1, 'certificate')
+    "
+    [innerHTML]="svgIconsService.returnIcon('arrowBackward', 'icon')"
+  ></span>
   <img [src]="modal[index].image" alt="Description" />
+  <span
+    class="right"
+    (click)="
+      modalService.openModal(modalService.modal, index + 1, 'certificate')
+    "
+    [innerHTML]="svgIconsService.returnIcon('arrowForward', 'icon')"
+  ></span>
 </div>
