@@ -25,12 +25,15 @@
   );
 
   --primary-color: rgb(61, 207, 182);
+  --primary-color-80: rgba(61, 207, 182, 0.8);
   --primary-color-50: #3dcfb680;
   --primary-color-25: rgba(61, 207, 182, 0.25);
   --primary-color-10: rgba(61, 207, 182, 0.1);
   --secondary-color: rgb(255, 255, 255);
-  --secondary-color-12: rgba(255, 255, 255, 0.12);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
+  --secondary-color-50: rgba(255, 255, 255, 0.5);
+  --secondary-color-25: rgba(255, 255, 255, 0.25);
+  --secondary-color-10: rgba(255, 255, 255, 0.1);
   --invalid: rgba(236, 123, 123, 0.8);
 
   --cursor-url: url("../public/turquoise.svg"), auto;
@@ -63,12 +66,15 @@
   );
 
   --primary-color: rgb(74, 144, 226);
+  --primary-color-80: rgba(74, 144, 226, 0.8);
   --primary-color-50: rgba(74, 144, 226, 0.5);
   --primary-color-25: rgba(74, 144, 226, 0.25);
   --primary-color-10: rgba(74, 144, 226, 0.1);
   --secondary-color: rgb(255, 255, 255);
-  --secondary-color-12: rgba(255, 255, 255, 0.12);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
+  --secondary-color-50: rgba(255, 255, 255, 0.5);
+  --secondary-color-25: rgba(255, 255, 255, 0.25);
+  --secondary-color-10: rgba(255, 255, 255, 0.1);
   --invalid: rgba(186, 70, 70, 0.8);
 
   --cursor-url: url("../public/blue.svg"), auto;
@@ -101,12 +107,15 @@
   );
 
   --primary-color: rgb(102, 71, 148);
+  --primary-color-80: rgba(102, 71, 148, 0.8);
   --primary-color-50: rgba(102, 71, 148, 0.5);
   --primary-color-25: rgba(102, 71, 148, 0.25);
   --primary-color-10: rgba(102, 71, 148, 0.1);
   --secondary-color: rgb(255, 255, 255);
-  --secondary-color-12: rgba(255, 255, 255, 0.12);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
+  --secondary-color-50: rgba(255, 255, 255, 0.5);
+  --secondary-color-25: rgba(255, 255, 255, 0.25);
+  --secondary-color-10: rgba(255, 255, 255, 0.1);
   --invalid: rgba(196, 80, 80, 0.8);
 
   --cursor-url: url("../public/violett.svg"), auto;
