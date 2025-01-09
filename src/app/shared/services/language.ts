@@ -5,6 +5,9 @@ interface HeroTexts {
 }
 
 interface aboutMeTexts {
+  portrait: {
+    title: string;
+  };
   infoBox1: {
     title: string;
     textarea: string;
@@ -31,18 +34,21 @@ export const textsDE: Texts = {
     contactMe: 'Kontaktiere mich',
   },
   aboutMe: {
+    portrait: {
+      title: 'portrait.bmp',
+    },
     infoBox1: {
-      title: 'modern_work.txt',
+      title: 'moderne_arbeit.txt',
       textarea:
         'Derzeit konzentriere ich mich auf die Remote-Arbeit, da sie mir die Flexibilität und das Umfeld bietet, die meine Produktivität steigern. Ich schätze eine gesunde Work-Life-Balance und die Möglichkeit, meine eigene Zeit zu managen, die die Remote-Arbeit bietet.',
     },
     infoBox2: {
-      title: 'personal_growth.txt',
+      title: 'persoenliches_wachstum.txt',
       textarea:
         'Ich bin aufgeschlossen und suche ständig nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.',
     },
     infoBox3: {
-      title: 'programming_philosophy.txt',
+      title: 'programmierphilosophie.txt',
       textarea:
         'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung.',
     },
@@ -56,6 +62,9 @@ export const textsEN: Texts = {
     contactMe: 'Contact me',
   },
   aboutMe: {
+    portrait: {
+      title: 'portrait.bmp',
+    },
     infoBox1: {
       title: 'modern_work.txt',
       textarea:

@@ -1,7 +1,7 @@
 @if (windowService.isWindowOpen) {
 <div class="portrait">
   <div class="title-bar">
-    <h3 class="title">portrait.bmp</h3>
+    <h3 class="title">{{ languageService.texts.aboutMe.portrait.title }}</h3>
     <div class="controls">
       <span
         (click)="windowService.closeContent()"
