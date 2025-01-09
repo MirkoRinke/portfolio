@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 
 import { LanguageService } from '../services/language.service';
 
+import { RouterModule } from '@angular/router';
+
 @Component({
   selector: 'app-site-navigation',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './site-navigation.component.html',
   styleUrl: './site-navigation.component.scss',
 })

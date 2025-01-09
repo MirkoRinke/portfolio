@@ -1,19 +1,29 @@
 <nav>
   <ul>
     <li>
-      <a>{{ languageService.texts.navigation.home }}</a>
+      <a [routerLink]="['']" fragment="hero">{{
+        languageService.texts.navigation.home
+      }}</a>
     </li>
     <li>
-      <a>{{ languageService.texts.navigation.aboutMe }}</a>
+      <a [routerLink]="['']" fragment="about-me">{{
+        languageService.texts.navigation.aboutMe
+      }}</a>
     </li>
     <li>
-      <a>{{ languageService.texts.navigation.skills }}</a>
+      <a [routerLink]="['']" fragment="expertise">{{
+        languageService.texts.navigation.skills
+      }}</a>
     </li>
     <li>
-      <a>{{ languageService.texts.navigation.projects }}</a>
+      <a [routerLink]="['']" fragment="projects">{{
+        languageService.texts.navigation.projects
+      }}</a>
     </li>
     <li>
-      <a>{{ languageService.texts.navigation.contact }}</a>
+      <a [routerLink]="['']" fragment="contact">{{
+        languageService.texts.navigation.contact
+      }}</a>
     </li>
   </ul>
 </nav>
