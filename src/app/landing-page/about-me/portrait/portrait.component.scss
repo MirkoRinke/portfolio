@@ -23,5 +23,6 @@
 }
 
 .desktop-icons {
+  @include button-preset();
   @include desktop-icon-style(right);
 }
