@@ -4,6 +4,14 @@ interface HeroTexts {
   contactMe: string;
 }
 
+interface navigationTexts {
+  home: string;
+  aboutMe: string;
+  skills: string;
+  projects: string;
+  contact: string;
+}
+
 interface aboutMeTexts {
   portrait: {
     title: string;
@@ -23,11 +31,19 @@ interface aboutMeTexts {
 }
 
 export interface Texts {
+  navigation: navigationTexts;
   hero: HeroTexts;
   aboutMe: aboutMeTexts;
 }
 
 export const textsDE: Texts = {
+  navigation: {
+    home: 'Startseite',
+    aboutMe: 'Über mich',
+    skills: 'Fähigkeiten',
+    projects: 'Projekte',
+    contact: 'Kontakt',
+  },
   hero: {
     subHeading: 'Frontend-Entwickler',
     mainHeading: 'Mirko Rinke',
@@ -56,6 +72,13 @@ export const textsDE: Texts = {
 };
 
 export const textsEN: Texts = {
+  navigation: {
+    home: 'Home',
+    aboutMe: 'About me',
+    skills: 'Skills',
+    projects: 'Projects',
+    contact: 'Contact',
+  },
   hero: {
     subHeading: 'Frontend Developer',
     mainHeading: 'Mirko Rinke',
