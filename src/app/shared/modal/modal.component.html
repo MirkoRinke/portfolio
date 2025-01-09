@@ -7,18 +7,18 @@
           {{ modalService.modal[modalService.index].title }}
         </h3>
         <div class="controls">
-          <!-- <span
+          <button
             (click)="windowService.closeContent()"
             [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
-          ></span>
-          <span
+          ></button>
+          <button
             (click)="windowService.openContent()"
             [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-          ></span> -->
-          <span
+          ></button>
+          <button
             (click)="modalService.closeModal()"
             [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
-          ></span>
+          ></button>
         </div>
       </div>
       @if (windowService.isContentOpen) {
