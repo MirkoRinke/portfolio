@@ -13,7 +13,7 @@ export const CERTIFICATES: Certificate[] = [
   {
     titleDE: 'Developer Akademie',
     titleEN: 'Developer Akademie',
-    icon: 'dot',
+    icon: 'developerAkademie',
     platform: 'Developer Akademie',
     tutor: 'Developer Akademie',
     date: '12.2024',
@@ -121,7 +121,7 @@ export const CERTIFICATES: Certificate[] = [
   {
     titleDE: 'Clean Code.',
     titleEN: 'Clean Code.',
-    icon: 'dot',
+    icon: 'cleanCode',
     platform: 'Udemy',
     tutor: 'Maximilian Schwarzmüller',
     date: '12.2024',
