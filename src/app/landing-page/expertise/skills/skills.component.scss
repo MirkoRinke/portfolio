@@ -8,7 +8,8 @@
   gap: px-to-rem(25) px-to-rem(25);
   flex-wrap: wrap;
 
-  .skill-icon {
+  .skill-icon,
+  .learning-icon {
     @include display-flex(center, start, column);
     gap: px-to-rem(10);
     height: px-to-rem(170);
@@ -20,18 +21,13 @@
 
     &:hover {
       transition: background-color 0s ease-in-out;
-      background-color: var(--secondary-color-12);
-      cursor: pointer;
+      background-color: var(--secondary-color-10);
     }
 
     &::ng-deep .icon {
       height: px-to-rem(80);
       width: px-to-rem(80);
       fill: var(--secondary-color);
-    }
-
-    &::ng-deep .learning {
-      fill: var(--primary-color-10);
     }
   }
 
@@ -41,11 +37,17 @@
     text-align: center;
   }
 
-  .learning {
-    color: var(--primary-color-10);
-  }
-}
+  .learning-icon {
+    &::ng-deep .learning {
+      fill: var(--secondary-color-10);
+    }
 
-.learningSkills .skill-icon:hover {
-  background-color: unset;
+    .learning-name {
+      color: var(--secondary-color-10);
+    }
+
+    &:hover {
+      background-color: unset;
+    }
+  }
 }
