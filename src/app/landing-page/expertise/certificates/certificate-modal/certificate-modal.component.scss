@@ -17,28 +17,26 @@
   .left {
     position: absolute;
     top: 50%;
-    left: px-to-rem(20);
+    left: 0;
     transform: translateY(-50%);
+    height: 100%;
+    width: 50%;
+
+    &:hover {
+      cursor: var(--cursor-arrow-back);
+    }
   }
 
   .right {
     position: absolute;
     top: 50%;
-    right: px-to-rem(20);
+    right: 0;
     transform: translateY(-50%);
-  }
-
-  ::ng-deep .icon {
-    @include display-flex(center, center);
-    height: px-to-rem(35);
-    width: px-to-rem(35);
-    fill: transparent;
-    transition: fill 0.3s ease-in-out;
+    height: 100%;
+    width: 50%;
 
     &:hover {
-      transition: fill 0.3s ease-in-out;
-      fill: var(--primary-color);
-      cursor: pointer;
+      cursor: var(--cursor-arrow-forward);
     }
   }
 }

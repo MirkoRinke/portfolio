@@ -4,7 +4,6 @@
     (click)="
       modalService.prevModal(modalService.modal, index - 1, 'certificate')
     "
-    [innerHTML]="svgIconsService.returnIcon('arrowBackward', 'icon')"
   ></span>
   <img [src]="modal[index].image" alt="Description" />
   <span
@@ -12,6 +11,5 @@
     (click)="
       modalService.nextModal(modalService.modal, index + 1, 'certificate')
     "
-    [innerHTML]="svgIconsService.returnIcon('arrowForward', 'icon')"
   ></span>
 </div>
