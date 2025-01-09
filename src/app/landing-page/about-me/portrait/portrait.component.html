@@ -7,19 +7,16 @@
         (click)="windowService.closeContent()"
         [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
         aria-label="Minimize"
-        role="button"
       ></button>
       <button
         (click)="windowService.openContent()"
         [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
         aria-label="Maximize"
-        role="button"
       ></button>
       <button
         (click)="windowService.closeWindow()"
         [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
         aria-label="Close"
-        role="button"
       ></button>
     </div>
   </div>
@@ -35,6 +32,5 @@
   (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('portrait', 'desktop-icon')"
   aria-label="Open Portrait"
-  role="button"
 ></button>
 }
