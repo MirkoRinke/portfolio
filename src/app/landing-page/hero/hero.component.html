@@ -36,7 +36,7 @@
       <div class="textarea">
         <h1>{{ languageService.texts.hero.subHeading }}</h1>
         <h2>{{ languageService.texts.hero.mainHeading }}</h2>
-        <button aria-label="Contact Me">
+        <button [routerLink]="['']" fragment="contact" aria-label="Contact Me">
           <span
             [innerHTML]="svgIconsService.returnIcon('eMail')"
             aria-hidden="true"
