@@ -16,7 +16,7 @@ export const TECH_SKILLS: Skill[] = [
     name: 'CSS',
     icon: 'CSS',
     alt: 'CSS Logo',
-    visibility: false,
+    visibility: true,
   },
   {
     name: 'SCSS',
@@ -28,13 +28,13 @@ export const TECH_SKILLS: Skill[] = [
     name: 'Material Design',
     icon: 'materialDesign',
     alt: 'Material Design Logo',
-    visibility: false,
+    visibility: true,
   },
   {
     name: 'JavaScript',
     icon: 'javaScript',
     alt: 'JavaScript Logo',
-    visibility: false,
+    visibility: true,
   },
   {
     name: 'TypeScript',
@@ -52,7 +52,7 @@ export const TECH_SKILLS: Skill[] = [
     name: 'Firebase',
     icon: 'firebase',
     alt: 'Firebase Logo',
-    visibility: false,
+    visibility: true,
   },
   {
     name: 'GIT',
@@ -76,18 +76,24 @@ export const TECH_SKILLS: Skill[] = [
     name: 'Node js',
     icon: 'node',
     alt: 'node js Logo',
-    visibility: false,
+    visibility: true,
   },
   {
     name: 'PHP',
     icon: 'PHP',
     alt: 'PHP Logo',
-    visibility: false,
+    visibility: true,
   },
   {
     name: 'Figma',
     icon: 'figma',
     alt: 'Figma Logo',
+    visibility: true,
+  },
+  {
+    name: 'Affinity Designer',
+    icon: 'affinityDesigner',
+    alt: 'Affinity Designer',
     visibility: true,
   },
 ];

@@ -79,7 +79,7 @@ export const CERTIFICATES: Certificate[] = [
   },
   {
     title: 'Affinity Designer Grundkurs.',
-    icon: 'dot',
+    icon: 'affinityDesigner',
     platform: 'Linkedin',
     tutor: 'Michael Rüttger',
     date: '12.2024',

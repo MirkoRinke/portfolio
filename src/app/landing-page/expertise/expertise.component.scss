@@ -27,12 +27,11 @@ section {
     .content {
       @include window-content;
       @include display-flex(start, space-between, column);
-      padding: px-to-rem(20) px-to-rem(10);
+      padding: px-to-rem(20) px-to-rem(30);
       height: px-to-rem(600);
 
       app-skills {
         @include display-flex(start, start, column);
-        gap: px-to-rem(100);
       }
 
       app-certificates {
