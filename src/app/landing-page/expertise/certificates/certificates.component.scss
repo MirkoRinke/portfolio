@@ -38,6 +38,10 @@
       fill: var(--secondary-color);
     }
 
+    &::ng-deep .developerAkademie {
+      fill: rgb(253, 91, 79);
+    }
+
     .course {
       @include display-flex(center, start);
       grid-column: span 2;
