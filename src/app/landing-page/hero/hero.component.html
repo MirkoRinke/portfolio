@@ -3,9 +3,15 @@
     <div class="icons-left">
       <span
         [innerHTML]="svgIconsService.returnIcon('SCSS', 'SCSS hero-icons')"
+        aria-hidden="true"
+        role="img"
+        alt="SCSS Icon"
       ></span>
       <span
         [innerHTML]="svgIconsService.returnIcon('HTML', 'HTML hero-icons')"
+        aria-hidden="true"
+        role="img"
+        alt="HTML Icon"
       ></span>
     </div>
     <div class="central-section">
@@ -14,18 +20,27 @@
           [innerHTML]="
             svgIconsService.returnIcon('typeScript', 'typeScript hero-icons')
           "
+          aria-hidden="true"
+          role="img"
+          alt="TypeScript Icon"
         ></span>
         <span
           [innerHTML]="
             svgIconsService.returnIcon('angular', 'angular hero-icons')
           "
+          aria-hidden="true"
+          role="img"
+          alt="Angular Icon"
         ></span>
       </div>
       <div class="textarea">
         <h1>{{ languageService.texts.hero.subHeading }}</h1>
         <h2>{{ languageService.texts.hero.mainHeading }}</h2>
-        <button>
-          <span [innerHTML]="svgIconsService.returnIcon('eMail')"></span>
+        <button aria-label="Contact Me">
+          <span
+            [innerHTML]="svgIconsService.returnIcon('eMail')"
+            aria-hidden="true"
+          ></span>
           {{ languageService.texts.hero.contactMe }}
         </button>
       </div>
@@ -33,9 +48,15 @@
     <div class="icons-right">
       <span
         [innerHTML]="svgIconsService.returnIcon('react', 'react hero-icons')"
+        aria-hidden="true"
+        role="img"
+        alt="React Icon"
       ></span>
       <span
         [innerHTML]="svgIconsService.returnIcon('vue', 'vue hero-icons')"
+        aria-hidden="true"
+        role="img"
+        alt="Vue Icon"
       ></span>
     </div>
   </div>

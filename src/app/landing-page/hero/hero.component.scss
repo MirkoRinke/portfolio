@@ -9,8 +9,8 @@ section {
   .content {
     @include max-content-settings;
     @include display-flex(center, center);
-    min-height: 100%;
     gap: px-to-rem(100);
+    min-height: 100%;
     padding-bottom: px-to-rem(100);
 
     &::ng-deep .hero-icons {
@@ -42,10 +42,9 @@ section {
       .icons-top {
         @include display-flex(center, space-between);
         min-width: 85%;
-        padding-left: px-to-rem(100);
 
         &::ng-deep .typeScript {
-          transform: rotate(-5deg);
+          transform: rotate(-5deg) translateX(px-to-rem(100));
         }
 
         &::ng-deep .angular {
