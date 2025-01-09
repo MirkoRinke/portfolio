@@ -7,6 +7,7 @@
           class="tap"
           [class.active]="tapService.isTapActive('skills')"
           (click)="tapService.activateTap('skills')"
+          [attr.aria-pressed]="tapService.isTapActive('skills')"
         >
           skills_profile
           <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
@@ -15,6 +16,7 @@
           class="tap"
           [class.active]="tapService.isTapActive('certificates')"
           (click)="tapService.activateTap('certificates')"
+          [attr.aria-pressed]="tapService.isTapActive('certificates')"
         >
           certificates
           <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
@@ -25,14 +27,17 @@
         <button
           (click)="windowService.closeContent()"
           [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
+          aria-label="Minimize"
         ></button>
         <button
           (click)="windowService.openContent()"
           [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
+          aria-label="Maximize"
         ></button>
         <button
           (click)="windowService.closeWindow()"
           [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
+          aria-label="Close"
         ></button>
       </div>
     </div>
