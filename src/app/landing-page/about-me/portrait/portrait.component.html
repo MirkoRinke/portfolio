@@ -6,20 +6,26 @@
       <span
         (click)="windowService.closeContent()"
         [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
+        aria-label="Minimize"
+        role="button"
       ></span>
       <span
         (click)="windowService.openContent()"
         [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
+        aria-label="Maximize"
+        role="button"
       ></span>
       <span
         (click)="windowService.closeWindow()"
         [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
+        aria-label="Close"
+        role="button"
       ></span>
     </div>
   </div>
   @if (windowService.isContentOpen) {
-  <div class="content">
-    <img src="./about-me/portrait.png" alt="" />
+  <div class="content" role="main">
+    <img src="./about-me/portrait.webp" alt="Portrait of Mirko Rinke" />
   </div>
   }
 </div>
@@ -28,5 +34,7 @@
   class="desktop-icons"
   (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('portrait', 'desktop-icon')"
+  aria-label="Open Portrait"
+  role="button"
 ></div>
 }
