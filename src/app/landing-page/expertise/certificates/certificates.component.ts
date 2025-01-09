@@ -6,6 +6,8 @@ import { type Certificate, CERTIFICATES } from './certificates.data';
 
 import { ModalService } from '../../../shared/services/modal.service';
 
+import { LanguageService } from '../../../shared/services/language.service';
+
 @Component({
   selector: 'app-certificates',
   imports: [],
@@ -17,6 +19,7 @@ export class CertificatesComponent {
 
   constructor(
     public svgIconsService: SvgIconsService,
-    public modalService: ModalService
+    public modalService: ModalService,
+    public languageService: LanguageService
   ) {}
 }

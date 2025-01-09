@@ -14,7 +14,13 @@
           )
         "
       ></div>
-      <p class="title">{{ certificate.title }}</p>
+      <p class="title">
+        {{
+          languageService.getLanguage() == "de"
+            ? certificate.titleDE
+            : certificate.titleEN
+        }}
+      </p>
     </div>
     <p class="tutor">{{ certificate.tutor }}</p>
     <p class="platform">{{ certificate.platform }}</p>
