@@ -25,7 +25,7 @@
   );
 
   --primary-color: rgb(61, 207, 182);
-  --primary-color-50: rgba(61, 207, 182, 0.5);
+  --primary-color-50: #3dcfb680;
   --primary-color-25: rgba(61, 207, 182, 0.25);
   --primary-color-10: rgba(61, 207, 182, 0.1);
   --secondary-color: rgb(255, 255, 255);
@@ -34,8 +34,8 @@
   --invalid: rgba(236, 123, 123, 0.8);
 
   --cursor-url: url("../public/turquoise.svg"), auto;
-  --cursor-arrow-back: url("../public/arrow_back.svg"), auto;
-  --cursor-arrow-forward: url("../public/arrow_forward.svg"), auto;
+  --cursor-arrow-back: url("../public/arrow-back-turquoise.svg"), auto;
+  --cursor-arrow-forward: url("../public/arrow-forward-turquoise.svg"), auto;
 }
 
 .blue {
@@ -72,8 +72,8 @@
   --invalid: rgba(186, 70, 70, 0.8);
 
   --cursor-url: url("../public/blue.svg"), auto;
-  --cursor-arrow-back: url("../public/arrow_back.svg"), auto;
-  --cursor-arrow-forward: url("../public/arrow_forward.svg"), auto;
+  --cursor-arrow-back: url("../public/arrow-back-blue.svg"), auto;
+  --cursor-arrow-forward: url("../public/arrow-forward-blue.svg"), auto;
 }
 
 .violett {
@@ -110,8 +110,8 @@
   --invalid: rgba(196, 80, 80, 0.8);
 
   --cursor-url: url("../public/violett.svg"), auto;
-  --cursor-arrow-back: url("../public/arrow_back.svg"), auto;
-  --cursor-arrow-forward: url("../public/arrow_forward.svg"), auto;
+  --cursor-arrow-back: url("../public/arrow-back-violett.svg"), auto;
+  --cursor-arrow-forward: url("../public/arrow-forward-violett.svg"), auto;
 }
 
 /* @media breakpoints */
