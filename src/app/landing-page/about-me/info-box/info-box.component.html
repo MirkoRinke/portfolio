@@ -3,18 +3,21 @@
   <div class="title-bar">
     <h3 class="title">{{ title }}</h3>
     <div class="controls">
-      <span
+      <button
         (click)="windowService.closeContent()"
         [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
-      ></span>
-      <span
+        aria-label="Minimize"
+      ></button>
+      <button
         (click)="windowService.openContent()"
         [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-      ></span>
-      <span
+        aria-label="Maximize"
+      ></button>
+      <button
         (click)="windowService.closeWindow()"
         [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
-      ></span>
+        aria-label="Close"
+      ></button>
     </div>
   </div>
   @if (windowService.isContentOpen) {
@@ -26,9 +29,10 @@
   }
 </div>
 } @else {
-<div
+<button
   class="desktop-icons"
   (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('document', 'desktop-icon')"
-></div>
+  aria-label="Open Window"
+></button>
 }
