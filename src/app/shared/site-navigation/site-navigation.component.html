@@ -1,29 +1,44 @@
 <nav>
   <ul>
     <li>
-      <a [routerLink]="['']" fragment="hero">{{
-        languageService.texts.navigation.home
-      }}</a>
+      <a
+        [routerLink]="['']"
+        fragment="hero"
+        [ngClass]="{ active: currentFragment === 'hero' }"
+        >{{ languageService.texts.navigation.home }}</a
+      >
     </li>
     <li>
-      <a [routerLink]="['']" fragment="about-me">{{
-        languageService.texts.navigation.aboutMe
-      }}</a>
+      <a
+        [routerLink]="['']"
+        fragment="about-me"
+        [ngClass]="{ active: currentFragment === 'about-me' }"
+        >{{ languageService.texts.navigation.aboutMe }}</a
+      >
     </li>
     <li>
-      <a [routerLink]="['']" fragment="expertise">{{
-        languageService.texts.navigation.skills
-      }}</a>
+      <a
+        [routerLink]="['']"
+        fragment="expertise"
+        [ngClass]="{ active: currentFragment === 'expertise' }"
+        >{{ languageService.texts.navigation.skills }}</a
+      >
     </li>
     <li>
-      <a [routerLink]="['']" fragment="projects">{{
-        languageService.texts.navigation.projects
-      }}</a>
+      <a
+        [routerLink]="['']"
+        fragment="projects"
+        [ngClass]="{ active: currentFragment === 'projects' }"
+        >{{ languageService.texts.navigation.projects }}</a
+      >
     </li>
     <li>
-      <a [routerLink]="['']" fragment="contact">{{
-        languageService.texts.navigation.contact
-      }}</a>
+      <a
+        [routerLink]="['']"
+        fragment="contact"
+        [ngClass]="{ active: currentFragment === 'contact' }"
+        >{{ languageService.texts.navigation.contact }}</a
+      >
     </li>
   </ul>
 </nav>
