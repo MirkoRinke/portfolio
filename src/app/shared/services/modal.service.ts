@@ -20,15 +20,25 @@ export class ModalService {
     this.disabledScroll();
   }
 
-  prevModal(modal: Object, index: number, activeModal: string) {
-    if (index < 0) index = this.modal.length - 1;
+  prevModal(modal: any, index: number, activeModal: string) {
+    if (index < 0) index = modal.length - 1;
+    if (!modal[index].visibility) {
+      do {
+        index = index - 1;
+      } while (!modal[index].visibility);
+    }
     this.modal = modal;
     this.index = index;
     this.activeModal = activeModal;
   }
 
-  nextModal(modal: Object, index: number, activeModal: string) {
-    if (index == this.modal.length) index = 0;
+  nextModal(modal: any, index: number, activeModal: string) {
+    if (!modal[index].visibility) {
+      do {
+        index = index + 1;
+        if (index == this.modal.length) index = 0;
+      } while (!modal[index].visibility);
+    }
     this.modal = modal;
     this.index = index;
     this.activeModal = activeModal;
