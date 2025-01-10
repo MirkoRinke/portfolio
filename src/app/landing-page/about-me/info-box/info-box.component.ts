@@ -4,6 +4,8 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 
 import { WindowService } from '../../../shared/services/window.service';
 
+import { LanguageService } from '../../../shared/services/language.service';
+
 @Component({
   selector: 'app-info-box',
   imports: [],
@@ -17,6 +19,7 @@ export class InfoBoxComponent {
 
   constructor(
     public svgIconsService: SvgIconsService,
-    public windowService: WindowService
+    public windowService: WindowService,
+    public languageService: LanguageService
   ) {}
 }

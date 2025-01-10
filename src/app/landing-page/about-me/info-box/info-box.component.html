@@ -6,17 +6,17 @@
       <button
         (click)="windowService.closeContent()"
         [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
-        aria-label="Minimize"
+        [attr.aria-label]="languageService.texts.ariaLabels.controls.minimize"
       ></button>
       <button
         (click)="windowService.openContent()"
         [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-        aria-label="Maximize"
+        [attr.aria-label]="languageService.texts.ariaLabels.controls.maximize"
       ></button>
       <button
         (click)="windowService.closeWindow()"
         [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
-        aria-label="Close"
+        [attr.aria-label]="languageService.texts.ariaLabels.controls.close"
       ></button>
     </div>
   </div>
@@ -33,6 +33,8 @@
   class="desktop-icons"
   (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('document', 'desktop-icon')"
-  aria-label="Open Window"
+  [attr.aria-label]="
+    languageService.texts.aboutMe.ariaLabels.infoBox.desktopIcon + ' ' + title
+  "
 ></button>
 }
