@@ -4,17 +4,29 @@
     <app-info-box
       [title]="languageService.texts.aboutMe.infoBox1.title"
       [textarea]="languageService.texts.aboutMe.infoBox1.textarea"
-      aria-label="Information Box 1"
+      [attr.aria-label]="[
+        languageService.texts.aboutMe.ariaLabels.infoBox.description +
+          ' ' +
+          languageService.texts.aboutMe.infoBox1.title
+      ]"
     ></app-info-box>
     <app-info-box
       [title]="languageService.texts.aboutMe.infoBox2.title"
       [textarea]="languageService.texts.aboutMe.infoBox2.textarea"
-      aria-label="Information Box 2"
+      [attr.aria-label]="[
+        languageService.texts.aboutMe.ariaLabels.infoBox.description +
+          ' ' +
+          languageService.texts.aboutMe.infoBox2.title
+      ]"
     ></app-info-box>
     <app-info-box
       [title]="languageService.texts.aboutMe.infoBox3.title"
       [textarea]="languageService.texts.aboutMe.infoBox3.textarea"
-      aria-label="Information Box 3"
+      [attr.aria-label]="[
+        languageService.texts.aboutMe.ariaLabels.infoBox.description +
+          ' ' +
+          languageService.texts.aboutMe.infoBox3.title
+      ]"
     ></app-info-box>
   </div>
 </section>
