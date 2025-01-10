@@ -4,6 +4,13 @@
   <button
     (click)="modalService.openModal(certificates, $index, 'certificate')"
     class="certificate"
+    [attr.aria-label]="
+      languageService.texts.expertise.ariaLabels.certificates.openCertificate +
+      ' ' +
+      (languageService.getLanguage() == 'de'
+        ? certificate.titleDE
+        : certificate.titleEN)
+    "
   >
     <div class="course">
       <div
@@ -12,6 +19,12 @@
             certificate.icon,
             certificate.icon + ' icon'
           )
+        "
+        role="img"
+        [attr.aria-label]="
+          languageService.getLanguage() == 'de'
+            ? certificate.titleDE + ' Icon'
+            : certificate.titleEN + ' Icon'
         "
       ></div>
       <p class="title">
