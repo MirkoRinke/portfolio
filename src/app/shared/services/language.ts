@@ -49,14 +49,26 @@ interface aboutMeTexts {
 
 interface Expertise {
   certificates: {
+    certificateModal: {
+      content: string;
+    };
     taps: {
       skillsTap: string;
       certificatesTap: string;
     };
   };
   ariaLabels: {
-    skillsTap: string;
-    certificatesTap: string;
+    certificates: {
+      openCertificate: string;
+    };
+    certificateModal: {
+      previous: string;
+      next: string;
+    };
+    taps: {
+      skillsTap: string;
+      certificatesTap: string;
+    };
     desktopIcon: string;
   };
 }
@@ -113,14 +125,26 @@ export const textsDE: Texts = {
   },
   expertise: {
     certificates: {
+      certificateModal: {
+        content: 'Zertifikat Bild',
+      },
       taps: {
         skillsTap: 'Fähigkeiten',
         certificatesTap: 'Zertifikate',
       },
     },
     ariaLabels: {
-      skillsTap: 'Öffne Fähigkeiten Tab',
-      certificatesTap: 'Öffne Zertifikate Tab',
+      certificates: {
+        openCertificate: 'Öffnen der Zertifikatsdetails für',
+      },
+      certificateModal: {
+        previous: 'Vorheriges Zertifikat',
+        next: 'Nächstes Zertifikat',
+      },
+      taps: {
+        skillsTap: 'Öffne Fähigkeiten Tab',
+        certificatesTap: 'Öffne Zertifikate Tab',
+      },
       desktopIcon: 'Öffne Expertise Fenster',
     },
   },
@@ -178,14 +202,26 @@ export const textsEN: Texts = {
   },
   expertise: {
     certificates: {
+      certificateModal: {
+        content: 'Certificate Image',
+      },
       taps: {
         skillsTap: 'Skills',
         certificatesTap: 'Certificates',
       },
     },
     ariaLabels: {
-      skillsTap: 'Open Skills Tab',
-      certificatesTap: 'Open Certificates Tab',
+      certificates: {
+        openCertificate: 'Open certificate details for',
+      },
+      certificateModal: {
+        previous: 'Previous Certificate',
+        next: 'Next Certificate',
+      },
+      taps: {
+        skillsTap: 'Open Skills Tab',
+        certificatesTap: 'Open Certificates Tab',
+      },
       desktopIcon: 'Open Expertise  Windows',
     },
   },
