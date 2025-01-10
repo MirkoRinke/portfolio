@@ -1,15 +1,22 @@
-interface HeroTexts {
-  subHeading: string;
-  mainHeading: string;
-  contactMe: string;
+export interface Texts {
+  navigation: navigationTexts;
+  hero: HeroTexts;
+  aboutMe: aboutMeTexts;
+  ariaLabels: AriaLabels;
+  expertise: Expertise;
 }
-
 interface navigationTexts {
   home: string;
   aboutMe: string;
   skills: string;
   projects: string;
   contact: string;
+}
+
+interface HeroTexts {
+  subHeading: string;
+  mainHeading: string;
+  contactMe: string;
 }
 
 interface aboutMeTexts {
@@ -28,12 +35,37 @@ interface aboutMeTexts {
     title: string;
     textarea: string;
   };
+  ariaLabels: {
+    portrait: {
+      desktopIcon: string;
+      content: string;
+    };
+    infoBox: {
+      desktopIcon: string;
+      description: string;
+    };
+  };
 }
 
-export interface Texts {
-  navigation: navigationTexts;
-  hero: HeroTexts;
-  aboutMe: aboutMeTexts;
+interface Expertise {
+  certificates: {
+    taps: {
+      skillsTap: string;
+      certificatesTap: string;
+    };
+  };
+  ariaLabels: {
+    skillsTap: string;
+    certificatesTap: string;
+    desktopIcon: string;
+  };
+}
+export interface AriaLabels {
+  controls: {
+    minimize: string;
+    maximize: string;
+    close: string;
+  };
 }
 
 export const textsDE: Texts = {
@@ -67,6 +99,36 @@ export const textsDE: Texts = {
       title: 'programmierphilosophie.txt',
       textarea:
         'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung.',
+    },
+    ariaLabels: {
+      portrait: {
+        desktopIcon: 'Porträt öffnen',
+        content: 'Portrait von Mirko Rinke',
+      },
+      infoBox: {
+        desktopIcon: 'Fenster öffnen',
+        description: 'Information Box über',
+      },
+    },
+  },
+  expertise: {
+    certificates: {
+      taps: {
+        skillsTap: 'Fähigkeiten',
+        certificatesTap: 'Zertifikate',
+      },
+    },
+    ariaLabels: {
+      skillsTap: 'Öffne Fähigkeiten Tab',
+      certificatesTap: 'Öffne Zertifikate Tab',
+      desktopIcon: 'Öffne Expertise Fenster',
+    },
+  },
+  ariaLabels: {
+    controls: {
+      minimize: 'Minimieren',
+      maximize: 'Maximieren',
+      close: 'Schließen',
     },
   },
 };
@@ -102,6 +164,36 @@ export const textsEN: Texts = {
       title: 'programming_philosophy.txt',
       textarea:
         'In my profession, programming isn’t just about writing code; it’s a creative form of problem-solving.',
+    },
+    ariaLabels: {
+      portrait: {
+        desktopIcon: 'Open Portrait',
+        content: 'Portrait of Mirko Rinke',
+      },
+      infoBox: {
+        desktopIcon: 'Open Window',
+        description: 'Information Box about',
+      },
+    },
+  },
+  expertise: {
+    certificates: {
+      taps: {
+        skillsTap: 'Skills',
+        certificatesTap: 'Certificates',
+      },
+    },
+    ariaLabels: {
+      skillsTap: 'Open Skills Tab',
+      certificatesTap: 'Open Certificates Tab',
+      desktopIcon: 'Open Expertise  Windows',
+    },
+  },
+  ariaLabels: {
+    controls: {
+      minimize: 'Minimize',
+      maximize: 'Maximize',
+      close: 'Close',
     },
   },
 };
