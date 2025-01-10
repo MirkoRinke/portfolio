@@ -2,6 +2,8 @@ import { Component, Input } from '@angular/core';
 
 import { ModalService } from '../../../../shared/services/modal.service';
 
+import { LanguageService } from '../../../../shared/services/language.service';
+
 @Component({
   selector: 'app-certificate-modal',
   imports: [],
@@ -12,5 +14,8 @@ export class CertificateModalComponent {
   @Input() modal!: any;
   @Input() index!: number;
 
-  constructor(public modalService: ModalService) {}
+  constructor(
+    public modalService: ModalService,
+    public languageService: LanguageService
+  ) {}
 }

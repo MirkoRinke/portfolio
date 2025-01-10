@@ -4,12 +4,27 @@
     (click)="
       modalService.prevModal(modalService.modal, index - 1, 'certificate')
     "
+    [attr.aria-label]="
+      languageService.texts.expertise.ariaLabels.certificateModal.previous
+    "
   ></span>
-  <img [src]="modal[index].image" alt="Description" />
+  <img
+    [src]="modal[index].image"
+    [alt]="
+      (languageService.getLanguage() === 'de'
+        ? modal[index].titleDE
+        : modal[index].titleEN) +
+      ' ' +
+      languageService.texts.expertise.certificates.certificateModal.content
+    "
+  />
   <span
     class="right"
     (click)="
       modalService.nextModal(modalService.modal, index + 1, 'certificate')
+    "
+    [attr.aria-label]="
+      languageService.texts.expertise.ariaLabels.certificateModal.next
     "
   ></span>
 </div>
