@@ -9,11 +9,14 @@
           skill.icon + ' ' + skill.status + ' icon'
         )
       "
+      [attr.aria-label]="skill.name + ' icon'"
+      role="img"
     ></div>
     <h4
       class="{{
         skill.status + '-name' + ' ' + skill.icon + '-name'
       }} skill-name"
+      [attr.aria-label]="skill.name"
     >
       {{ skill.name }}
     </h4>
