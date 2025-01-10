@@ -9,6 +9,8 @@ import { TapService } from '../../shared/services/tap.service';
 import { SkillsComponent } from './skills/skills.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 
+import { LanguageService } from '../../shared/services/language.service';
+
 @Component({
   selector: 'app-expertise',
   imports: [SkillsComponent, CertificatesComponent],
@@ -20,6 +22,7 @@ export class ExpertiseComponent {
   constructor(
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
-    public tapService: TapService
+    public tapService: TapService,
+    public languageService: LanguageService
   ) {}
 }

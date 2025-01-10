@@ -8,8 +8,11 @@
           [class.active]="tapService.isTapActive('skills')"
           (click)="tapService.activateTap('skills')"
           [attr.aria-pressed]="tapService.isTapActive('skills')"
+          [attr.aria-label]="
+            languageService.texts.expertise.ariaLabels.taps.skillsTap
+          "
         >
-          skills_profile
+          {{ languageService.texts.expertise.certificates.taps.skillsTap }}
           <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
         </button>
         <button
@@ -17,27 +20,31 @@
           [class.active]="tapService.isTapActive('certificates')"
           (click)="tapService.activateTap('certificates')"
           [attr.aria-pressed]="tapService.isTapActive('certificates')"
+          [attr.aria-label]="
+            languageService.texts.expertise.ariaLabels.taps.certificatesTap
+          "
         >
-          certificates
+          {{
+            languageService.texts.expertise.certificates.taps.certificatesTap
+          }}
           <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
         </button>
       </div>
-
       <div class="controls">
         <button
           (click)="windowService.closeContent()"
           [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
-          aria-label="Minimize"
+          [attr.aria-label]="languageService.texts.ariaLabels.controls.minimize"
         ></button>
         <button
           (click)="windowService.openContent()"
           [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-          aria-label="Maximize"
+          [attr.aria-label]="languageService.texts.ariaLabels.controls.maximize"
         ></button>
         <button
           (click)="windowService.closeWindow()"
           [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
-          aria-label="Close"
+          [attr.aria-label]="languageService.texts.ariaLabels.controls.close"
         ></button>
       </div>
     </div>
@@ -56,6 +63,7 @@
     class="desktop-icons"
     (click)="windowService.openWindow()"
     [innerHTML]="svgIconsService.returnIcon('folder', 'desktop-icon')"
+    [attr.aria-label]="languageService.texts.expertise.ariaLabels.desktopIcon"
   ></button>
   }
 </section>
