@@ -3,15 +3,15 @@
     <div class="icons-left">
       <span
         [innerHTML]="svgIconsService.returnIcon('SCSS', 'SCSS hero-icons')"
-        aria-hidden="true"
-        role="img"
-        alt="SCSS Icon"
+        [attr.aria-hidden]="true"
+        [attr.role]="'img'"
+        [attr.alt]="'SCSS Icon'"
       ></span>
       <span
         [innerHTML]="svgIconsService.returnIcon('HTML', 'HTML hero-icons')"
-        aria-hidden="true"
-        role="img"
-        alt="HTML Icon"
+        [attr.aria-hidden]="true"
+        [attr.role]="'img'"
+        [attr.alt]="'HTML Icon'"
       ></span>
     </div>
     <div class="central-section">
@@ -20,17 +20,17 @@
           [innerHTML]="
             svgIconsService.returnIcon('typeScript', 'typeScript hero-icons')
           "
-          aria-hidden="true"
-          role="img"
-          alt="TypeScript Icon"
+          [attr.aria-hidden]="true"
+          [attr.role]="'img'"
+          [attr.alt]="'TypeScript Icon'"
         ></span>
         <span
           [innerHTML]="
             svgIconsService.returnIcon('angular', 'angular hero-icons')
           "
-          aria-hidden="true"
-          role="img"
-          alt="Angular Icon"
+          [attr.aria-hidden]="true"
+          [attr.role]="'img'"
+          [attr.alt]="'Angular Icon'"
         ></span>
       </div>
       <div class="textarea">
@@ -39,7 +39,7 @@
         <button [routerLink]="['']" fragment="contact" aria-label="Contact Me">
           <span
             [innerHTML]="svgIconsService.returnIcon('eMail')"
-            aria-hidden="true"
+            [attr.aria-hidden]="true"
           ></span>
           {{ languageService.texts.hero.contactMe }}
         </button>
@@ -48,15 +48,15 @@
     <div class="icons-right">
       <span
         [innerHTML]="svgIconsService.returnIcon('react', 'react hero-icons')"
-        aria-hidden="true"
-        role="img"
-        alt="React Icon"
+        [attr.aria-hidden]="true"
+        [attr.role]="'img'"
+        [attr.alt]="'React Icon'"
       ></span>
       <span
         [innerHTML]="svgIconsService.returnIcon('vue', 'vue hero-icons')"
-        aria-hidden="true"
-        role="img"
-        alt="Vue Icon"
+        [attr.aria-hidden]="true"
+        [attr.role]="'img'"
+        [attr.alt]="'Vue Icon'"
       ></span>
     </div>
   </div>
