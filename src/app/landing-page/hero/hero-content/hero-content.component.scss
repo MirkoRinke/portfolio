@@ -1,0 +1,42 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+.textarea {
+  @include display-flex(center, center, column);
+  gap: px-to-rem(10);
+  min-width: 100%;
+
+  h1 {
+    @include font-settings(48);
+  }
+
+  h2 {
+    @include font-settings(128);
+  }
+
+  button {
+    @include button-preset;
+    @include display-flex(center);
+    @include font-settings();
+    gap: px-to-rem(10);
+    background-color: var(--primary-color-25);
+    border-radius: px-to-rem(10);
+    color: var(--secondary-color);
+    filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
+
+    span {
+      height: px-to-rem(20);
+
+      &::ng-deep .eMail {
+        height: px-to-rem(20);
+        fill: var(--primary-color-25);
+        filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
+      }
+    }
+
+    &:hover {
+      background-color: var(--primary-color-10);
+    }
+  }
+}
