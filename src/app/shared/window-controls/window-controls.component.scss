@@ -1,0 +1,7 @@
+@use "../../../functions" as *;
+@use "../../../mixins" as *;
+@use "../../../var" as *;
+
+.controls {
+  @include controls;
+}

@@ -4,10 +4,11 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 import { WindowService } from '../../../shared/services/window.service';
 
 import { LanguageService } from '../../../shared/services/language.service';
+import { WindowControlsComponent } from '../../../shared/window-controls/window-controls.component';
 
 @Component({
   selector: 'app-portrait',
-  imports: [],
+  imports: [WindowControlsComponent],
   templateUrl: './portrait.component.html',
   styleUrl: './portrait.component.scss',
   providers: [WindowService],

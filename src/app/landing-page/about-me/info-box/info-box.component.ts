@@ -5,10 +5,11 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 import { WindowService } from '../../../shared/services/window.service';
 
 import { LanguageService } from '../../../shared/services/language.service';
+import { WindowControlsComponent } from '../../../shared/window-controls/window-controls.component';
 
 @Component({
   selector: 'app-info-box',
-  imports: [],
+  imports: [WindowControlsComponent],
   templateUrl: './info-box.component.html',
   styleUrl: './info-box.component.scss',
   providers: [WindowService],

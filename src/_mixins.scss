@@ -70,25 +70,25 @@
   background-color: var(--primary-color-10);
   height: px-to-rem(50);
   padding-inline: px-to-rem(10);
+}
 
-  .controls {
-    @include display-flex(center, end);
-    gap: px-to-rem(10);
+@mixin controls {
+  @include display-flex(center, end);
+  gap: px-to-rem(10);
 
-    button {
-      @include button-preset();
-      padding: 0;
+  button {
+    @include button-preset();
+    padding: 0;
 
-      &::ng-deep .icon {
-        @include display-flex(center, center);
-        height: px-to-rem(20);
-        width: px-to-rem(20);
-        fill: var(--primary-color);
+    &::ng-deep .icon {
+      @include display-flex(center, center);
+      height: px-to-rem(20);
+      width: px-to-rem(20);
+      fill: var(--primary-color);
 
-        &:hover {
-          fill: var(--primary-color-50);
-          cursor: pointer;
-        }
+      &:hover {
+        fill: var(--primary-color-50);
+        cursor: pointer;
       }
     }
   }

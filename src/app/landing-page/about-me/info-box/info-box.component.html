@@ -3,21 +3,11 @@
   <div class="title-bar">
     <h3 class="title">{{ title }}</h3>
     <div class="controls">
-      <button
-        (click)="windowService.closeContent()"
-        [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
-        [attr.aria-label]="languageService.texts.ariaLabels.controls.minimize"
-      ></button>
-      <button
-        (click)="windowService.openContent()"
-        [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-        [attr.aria-label]="languageService.texts.ariaLabels.controls.maximize"
-      ></button>
-      <button
-        (click)="windowService.closeWindow()"
-        [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
-        [attr.aria-label]="languageService.texts.ariaLabels.controls.close"
-      ></button>
+      <app-window-controls
+        [windowService]="windowService"
+        [svgIconsService]="svgIconsService"
+        [languageService]="languageService"
+      ></app-window-controls>
     </div>
   </div>
   @if (windowService.isContentOpen) {

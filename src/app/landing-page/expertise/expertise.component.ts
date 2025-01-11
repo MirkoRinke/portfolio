@@ -10,10 +10,11 @@ import { SkillsComponent } from './skills/skills.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 
 import { LanguageService } from '../../shared/services/language.service';
+import { WindowControlsComponent } from '../../shared/window-controls/window-controls.component';
 
 @Component({
   selector: 'app-expertise',
-  imports: [SkillsComponent, CertificatesComponent],
+  imports: [SkillsComponent, CertificatesComponent, WindowControlsComponent],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.scss',
   providers: [WindowService, TapService],
