@@ -1,0 +1,8 @@
+@use "../../../functions" as *;
+@use "../../../mixins" as *;
+@use "../../../var" as *;
+
+section {
+  @include max-content-settings;
+  padding-block: px-to-rem(50);
+}

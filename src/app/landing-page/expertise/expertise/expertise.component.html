@@ -1,0 +1,59 @@
+@if (windowService.isWindowOpen) {
+<div class="expertise">
+  <div class="title-bar">
+    <div class="taps">
+      <button
+        class="tap"
+        [class.active]="tapService.isTapActive('skills')"
+        (click)="tapService.activateTap('skills')"
+        [attr.aria-pressed]="tapService.isTapActive('skills')"
+        [attr.aria-label]="
+          languageService.texts.expertise.ariaLabels.taps.skillsTap
+        "
+      >
+        {{ languageService.texts.expertise.certificates.taps.skillsTap }}
+        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
+      </button>
+      <button
+        class="tap"
+        [class.active]="tapService.isTapActive('certificates')"
+        (click)="tapService.activateTap('certificates')"
+        [attr.aria-pressed]="tapService.isTapActive('certificates')"
+        [attr.aria-label]="
+          languageService.texts.expertise.ariaLabels.taps.certificatesTap
+        "
+      >
+        {{ languageService.texts.expertise.certificates.taps.certificatesTap }}
+        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
+      </button>
+    </div>
+    <div class="controls">
+      <app-window-controls
+        [windowService]="windowService"
+        [svgIconsService]="svgIconsService"
+        [languageService]="languageService"
+        [modalService]="modalService"
+        [modal]="'unset'"
+        [index]="0"
+        [activeModal]="'expertise'"
+      ></app-window-controls>
+    </div>
+  </div>
+  @if (windowService.isContentOpen) {
+  <div class="content">
+    @if (tapService.isTapActive('skills')) {
+    <app-skills></app-skills>
+    } @if (tapService.isTapActive('certificates')) {
+    <app-certificates></app-certificates>
+    }
+  </div>
+  }
+</div>
+} @else {
+<button
+  class="desktop-icons"
+  (click)="windowService.openWindow()"
+  [innerHTML]="svgIconsService.returnIcon('folder', 'desktop-icon')"
+  [attr.aria-label]="languageService.texts.expertise.ariaLabels.desktopIcon"
+></button>
+}

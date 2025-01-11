@@ -16,7 +16,7 @@ import { PortraitComponent } from '../../landing-page/about-me/portrait/portrait
 
 import { InfoBoxComponent } from '../../landing-page/about-me/info-box/info-box.component';
 
-import { ExpertiseComponent } from '../../landing-page/expertise/expertise.component';
+import { ExpertiseComponent } from '../../landing-page/expertise/expertise/expertise.component';
 
 @Component({
   selector: 'app-modal',

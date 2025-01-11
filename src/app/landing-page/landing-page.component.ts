@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from './hero/hero.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { ExpertiseComponent } from './expertise/expertise.component';
+import { ExpertiseSectionComponent } from './expertise/expertise-section.component';
 import { ModalComponent } from '../shared/modal/modal.component';
 
 @Component({
@@ -9,7 +9,7 @@ import { ModalComponent } from '../shared/modal/modal.component';
   imports: [
     HeroComponent,
     AboutMeComponent,
-    ExpertiseComponent,
+    ExpertiseSectionComponent,
     ModalComponent,
   ],
   templateUrl: './landing-page.component.html',
