@@ -79,7 +79,7 @@ interface Expertise {
     desktopIcon: string;
   };
 }
-export interface AriaLabels {
+interface AriaLabels {
   controls: {
     minimize: string;
     maximize: string;
