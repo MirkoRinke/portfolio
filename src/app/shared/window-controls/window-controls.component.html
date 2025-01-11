@@ -1,21 +1,24 @@
 <div class="controls">
-  <h1>{{ "ifModalOpen ? " + modalService.ifModalOpen }}</h1>
-  @if (!modalService.ifModalOpen) {
   <button
-    (click)="windowService.closeContent()"
+    (click)="
+      !modalService.ifModalOpen
+        ? windowService.closeContent()
+        : modalService.closeModal()
+    "
     [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
     [attr.aria-label]="languageService.texts.ariaLabels.controls.minimize"
   ></button>
   <button
     (click)="
-      !modalService.ifModalOpen
+      !modalService.ifModalOpen && windowService.ifContentOpen
         ? modalService.openModal(modal, index, activeModal)
+        : windowService.ifContentOpen
+        ? modalService.closeModal()
         : windowService.openContent()
     "
     [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
     [attr.aria-label]="languageService.texts.ariaLabels.controls.maximize"
   ></button>
-  }
   <button
     (click)="
       !modalService.ifModalOpen

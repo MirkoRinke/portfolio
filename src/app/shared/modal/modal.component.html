@@ -23,7 +23,7 @@
           ></app-window-controls>
         </div>
       </div>
-      @if (windowService.isContentOpen) {
+      @if (windowService.ifContentOpen) {
       <div class="content">
         @if (modalService.activeModal === "certificate") {
         <app-certificate-modal

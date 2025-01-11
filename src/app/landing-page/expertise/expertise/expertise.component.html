@@ -1,4 +1,4 @@
-@if (windowService.isWindowOpen) {
+@if (windowService.ifWindowOpen) {
 <div class="expertise">
   <div class="title-bar">
     <div class="taps">
@@ -39,7 +39,7 @@
       ></app-window-controls>
     </div>
   </div>
-  @if (windowService.isContentOpen) {
+  @if (windowService.ifContentOpen) {
   <div class="content">
     @if (tapService.isTapActive('skills')) {
     <app-skills></app-skills>

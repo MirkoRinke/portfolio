@@ -1,4 +1,4 @@
-@if (windowService.isWindowOpen) {
+@if (windowService.ifWindowOpen) {
 <div class="info-box">
   <div class="title-bar">
     <h3 class="title">{{ title }}</h3>
@@ -14,7 +14,7 @@
       ></app-window-controls>
     </div>
   </div>
-  @if (windowService.isContentOpen) {
+  @if (windowService.ifContentOpen) {
   <div class="content">
     <p>
       {{ textarea }}

@@ -1,4 +1,4 @@
-@if (windowService.isWindowOpen) {
+@if (windowService.ifWindowOpen) {
 <div class="portrait">
   <div class="title-bar">
     <h3 class="title">{{ languageService.texts.aboutMe.portrait.title }}</h3>
@@ -14,7 +14,7 @@
       ></app-window-controls>
     </div>
   </div>
-  @if (windowService.isContentOpen) {
+  @if (windowService.ifContentOpen) {
   <app-portrait-content></app-portrait-content>
   }
 </div>

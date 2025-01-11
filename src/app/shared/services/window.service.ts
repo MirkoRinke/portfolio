@@ -4,27 +4,27 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class WindowService {
-  isWindowOpen = true;
-  isContentOpen = true;
+  ifWindowOpen: boolean = true;
+  ifContentOpen: boolean = true;
 
   constructor() {}
 
   openContent() {
-    this.isContentOpen = true;
+    this.ifContentOpen = true;
   }
 
   closeContent() {
-    this.isContentOpen = false;
+    this.ifContentOpen = false;
   }
 
   openWindow() {
     console.log('openWindow');
-    this.isWindowOpen = true;
+    this.ifWindowOpen = true;
     this.openContent();
   }
 
   closeWindow() {
     console.log('closeWindow');
-    this.isWindowOpen = false;
+    this.ifWindowOpen = false;
   }
 }
