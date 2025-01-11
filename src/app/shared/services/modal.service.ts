@@ -33,10 +33,12 @@ export class ModalService {
   }
 
   nextModal(modal: any, index: number, activeModal: string) {
+    if (index == modal.length) index = 0;
+
     if (!modal[index].visibility) {
       do {
         index = index + 1;
-        if (index == this.modal.length) index = 0;
+        if (index == modal.length) index = 0;
       } while (!modal[index].visibility);
     }
     this.modal = modal;
