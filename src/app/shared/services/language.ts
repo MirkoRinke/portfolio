@@ -1,10 +1,17 @@
 export interface Texts {
+  index: IndexTexts;
   navigation: navigationTexts;
   hero: HeroTexts;
   aboutMe: aboutMeTexts;
   ariaLabels: AriaLabels;
   expertise: Expertise;
 }
+
+interface IndexTexts {
+  title: string;
+  description: string;
+}
+
 interface navigationTexts {
   home: string;
   aboutMe: string;
@@ -81,6 +88,11 @@ export interface AriaLabels {
 }
 
 export const textsDE: Texts = {
+  index: {
+    title: 'Portfolio Mirko Rinke',
+    description:
+      'Willkommen auf meinem Portfolio. Hier finden Sie Informationen über meine Projekte, Fähigkeiten und Erfahrungen im Bereich Softwareentwicklung.',
+  },
   navigation: {
     home: 'Startseite',
     aboutMe: 'Über mich',
@@ -158,6 +170,11 @@ export const textsDE: Texts = {
 };
 
 export const textsEN: Texts = {
+  index: {
+    title: 'Portfolio Mirko Rinke',
+    description:
+      'Welcome to my portfolio. Here you will find information about my projects, skills and experiences in software development.',
+  },
   navigation: {
     home: 'Home',
     aboutMe: 'About me',
