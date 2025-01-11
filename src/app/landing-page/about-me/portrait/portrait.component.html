@@ -7,16 +7,15 @@
         [windowService]="windowService"
         [svgIconsService]="svgIconsService"
         [languageService]="languageService"
+        [modalService]="modalService"
+        [modal]="'unset'"
+        [index]="0"
+        [activeModal]="'portrait'"
       ></app-window-controls>
     </div>
   </div>
   @if (windowService.isContentOpen) {
-  <div class="content">
-    <img
-      src="./about-me/portrait.webp"
-      [alt]="languageService.texts.aboutMe.ariaLabels.portrait.content"
-    />
-  </div>
+  <app-portrait-content></app-portrait-content>
   }
 </div>
 } @else {

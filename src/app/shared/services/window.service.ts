@@ -18,11 +18,13 @@ export class WindowService {
   }
 
   openWindow() {
+    console.log('openWindow');
     this.isWindowOpen = true;
     this.openContent();
   }
 
   closeWindow() {
+    console.log('closeWindow');
     this.isWindowOpen = false;
   }
 }

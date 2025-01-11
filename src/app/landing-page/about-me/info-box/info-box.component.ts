@@ -5,6 +5,9 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 import { WindowService } from '../../../shared/services/window.service';
 
 import { LanguageService } from '../../../shared/services/language.service';
+
+import { ModalService } from '../../../shared/services/modal.service';
+
 import { WindowControlsComponent } from '../../../shared/window-controls/window-controls.component';
 
 @Component({
@@ -17,10 +20,12 @@ import { WindowControlsComponent } from '../../../shared/window-controls/window-
 export class InfoBoxComponent {
   @Input() title!: string;
   @Input() textarea!: string;
+  @Input() index!: number;
 
   constructor(
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
-    public languageService: LanguageService
+    public languageService: LanguageService,
+    public modalService: ModalService
   ) {}
 }

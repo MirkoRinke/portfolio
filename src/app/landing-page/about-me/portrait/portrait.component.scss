@@ -12,14 +12,6 @@
       @include title-default-style();
     }
   }
-
-  .content {
-    img {
-      @include display-flex(center, center);
-      height: 100%;
-      width: 100%;
-    }
-  }
 }
 
 .desktop-icons {

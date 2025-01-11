@@ -4,19 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ModalService {
-  isModalOpen = false;
-
   modal: any;
   index!: number;
   activeModal!: string;
 
-  constructor() {}
+  ifModalOpen: boolean = false;
 
-  openModal(modal: Object, index: number, activeModal: string) {
-    this.isModalOpen = true;
+  openModal(modal: Object | string, index: number, activeModal: string) {
+    console.log('openModal');
     this.modal = modal;
-    this.index = index;
+    if (this.modal !== 'unset') this.index = index;
     this.activeModal = activeModal;
+    this.ifModalOpen = true;
     this.disabledScroll();
   }
 
@@ -51,7 +50,8 @@ export class ModalService {
   }
 
   closeModal() {
-    this.isModalOpen = false;
+    console.log('closeModal');
+    this.ifModalOpen = false;
     this.enableScroll();
   }
 

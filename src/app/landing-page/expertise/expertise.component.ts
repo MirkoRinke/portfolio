@@ -10,6 +10,9 @@ import { SkillsComponent } from './skills/skills.component';
 import { CertificatesComponent } from './certificates/certificates.component';
 
 import { LanguageService } from '../../shared/services/language.service';
+
+import { ModalService } from '../../shared/services/modal.service';
+
 import { WindowControlsComponent } from '../../shared/window-controls/window-controls.component';
 
 @Component({
@@ -24,6 +27,7 @@ export class ExpertiseComponent {
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
     public tapService: TapService,
-    public languageService: LanguageService
+    public languageService: LanguageService,
+    public modalService: ModalService
   ) {}
 }

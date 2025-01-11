@@ -1,20 +1,25 @@
-@if (modalService.isModalOpen) {
+@if (modalService.ifModalOpen && modalService.modal !== 'unset') {
 <section (click)="modalService.closeModalWrapper($event)">
   <div class="modal-wrapper">
     <div class="modal">
       <div class="title-bar">
         <h3 class="title">
+          @if (modalService.activeModal === "certificate") {
           {{
             languageService.getLanguage() === "de"
               ? modalService.modal[modalService.index].titleDE
               : modalService.modal[modalService.index].titleEN
           }}
+          } @else {
+          {{ modalService.modal.title }}
+          }
         </h3>
         <div class="controls">
           <app-window-controls
             [windowService]="windowService"
             [svgIconsService]="svgIconsService"
             [languageService]="languageService"
+            [modalService]="modalService"
           ></app-window-controls>
         </div>
       </div>
@@ -31,6 +36,49 @@
       </div>
       }
     </div>
+  </div>
+</section>
+} @else if ( modalService.ifModalOpen && modalService.modal === 'unset') {
+<section (click)="modalService.closeModalWrapper($event)">
+  <div class="modal-wrapper">
+    @if (modalService.activeModal === "portrait") {
+    <app-portrait></app-portrait>
+    } @else if (modalService.activeModal === "infoBox0") {
+    <app-info-box
+      [title]="languageService.texts.aboutMe.infoBox1.title"
+      [textarea]="languageService.texts.aboutMe.infoBox1.textarea"
+      [index]="0"
+      [attr.aria-label]="[
+        languageService.texts.aboutMe.ariaLabels.infoBox.description +
+          ' ' +
+          languageService.texts.aboutMe.infoBox1.title
+      ]"
+    ></app-info-box>
+    } @else if (modalService.activeModal === "infoBox1") {
+    <app-info-box
+      [title]="languageService.texts.aboutMe.infoBox2.title"
+      [textarea]="languageService.texts.aboutMe.infoBox2.textarea"
+      [index]="1"
+      [attr.aria-label]="[
+        languageService.texts.aboutMe.ariaLabels.infoBox.description +
+          ' ' +
+          languageService.texts.aboutMe.infoBox2.title
+      ]"
+    ></app-info-box>
+    } @else if (modalService.activeModal === "infoBox2") {
+    <app-info-box
+      [title]="languageService.texts.aboutMe.infoBox3.title"
+      [textarea]="languageService.texts.aboutMe.infoBox3.textarea"
+      [index]="2"
+      [attr.aria-label]="[
+        languageService.texts.aboutMe.ariaLabels.infoBox.description +
+          ' ' +
+          languageService.texts.aboutMe.infoBox3.title
+      ]"
+    ></app-info-box>
+    } @else if (modalService.activeModal === "expertise") {
+    <app-expertise></app-expertise>
+    }
   </div>
 </section>
 }

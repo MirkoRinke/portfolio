@@ -8,12 +8,25 @@ import { SvgIconsService } from '../../shared/services/svg.icons.service';
 
 import { LanguageService } from '../services/language.service';
 
-import { CertificateModalComponent } from '../../landing-page/expertise/certificates/certificate-modal/certificate-modal.component';
 import { WindowControlsComponent } from '../window-controls/window-controls.component';
+
+import { CertificateModalComponent } from '../../landing-page/expertise/certificates/certificate-modal/certificate-modal.component';
+
+import { PortraitComponent } from '../../landing-page/about-me/portrait/portrait.component';
+
+import { InfoBoxComponent } from '../../landing-page/about-me/info-box/info-box.component';
+
+import { ExpertiseComponent } from '../../landing-page/expertise/expertise.component';
 
 @Component({
   selector: 'app-modal',
-  imports: [CertificateModalComponent, WindowControlsComponent],
+  imports: [
+    WindowControlsComponent,
+    CertificateModalComponent,
+    PortraitComponent,
+    InfoBoxComponent,
+    ExpertiseComponent,
+  ],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',
 })
