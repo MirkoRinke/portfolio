@@ -35,8 +35,7 @@
     }
 
     &.modal-active {
-      min-height: 80dvh;
-      height: 100%;
+      max-height: 80dvh;
     }
   }
 }
