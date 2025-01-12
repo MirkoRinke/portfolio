@@ -11,6 +11,8 @@ section {
   @include display-flex(center, center);
   padding-inline: px-to-rem(20);
 
+  background-color: var(--background-color);
+
   .modal-wrapper {
     @include max-content-settings();
     background-color: var(--background-color);
