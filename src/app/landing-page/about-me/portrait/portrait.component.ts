@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 import { WindowService } from '../../../shared/services/window.service';
@@ -16,6 +16,8 @@ import { PortraitContentComponent } from './portrait-content/portrait-content.co
   providers: [WindowService],
 })
 export class PortraitComponent {
+  @Input() modalActive!: boolean;
+
   constructor(
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,

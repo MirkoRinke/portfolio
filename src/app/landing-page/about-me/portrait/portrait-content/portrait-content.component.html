@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" [ngClass]="{ 'modal-active': modalActive }">
   <img
     src="./about-me/portrait.webp"
     [alt]="languageService.texts.aboutMe.ariaLabels.portrait.content"

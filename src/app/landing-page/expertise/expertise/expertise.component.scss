@@ -5,6 +5,8 @@
 .expertise {
   @include window-default-style();
 
+  width: fit-content;
+
   .title-bar {
     @include title-bar-default-style;
     gap: px-to-rem(20);
@@ -32,6 +34,10 @@
 
     app-certificates {
       width: 100%;
+    }
+
+    &.modal-active {
+      min-height: 80dvh;
     }
   }
 }

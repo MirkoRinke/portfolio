@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { CommonModule } from '@angular/common';
 
 import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 
@@ -17,12 +19,19 @@ import { WindowControlsComponent } from '../../../shared/window-controls/window-
 
 @Component({
   selector: 'app-expertise',
-  imports: [SkillsComponent, CertificatesComponent, WindowControlsComponent],
+  imports: [
+    CommonModule,
+    SkillsComponent,
+    CertificatesComponent,
+    WindowControlsComponent,
+  ],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.scss',
   providers: [WindowService, TapService],
 })
 export class ExpertiseComponent {
+  @Input() modalActive!: boolean;
+
   constructor(
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,

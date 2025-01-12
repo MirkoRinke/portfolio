@@ -15,7 +15,7 @@
     </div>
   </div>
   @if (windowService.ifContentOpen) {
-  <div class="content">
+  <div class="content" [ngClass]="{ 'modal-active': modalActive }">
     <p>
       {{ textarea }}
     </p>

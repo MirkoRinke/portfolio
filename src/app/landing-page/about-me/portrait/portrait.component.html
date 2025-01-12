@@ -15,7 +15,7 @@
     </div>
   </div>
   @if (windowService.ifContentOpen) {
-  <app-portrait-content></app-portrait-content>
+  <app-portrait-content [modalActive]="modalActive"></app-portrait-content>
   }
 </div>
 } @else {

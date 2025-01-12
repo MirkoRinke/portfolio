@@ -42,12 +42,13 @@
 <section (click)="modalService.closeModalWrapper($event)">
   <div class="modal-wrapper">
     @if (modalService.activeModal === "portrait") {
-    <app-portrait></app-portrait>
+    <app-portrait [modalActive]="true"></app-portrait>
     } @else if (modalService.activeModal === "infoBox0") {
     <app-info-box
       [title]="languageService.texts.aboutMe.infoBox1.title"
       [textarea]="languageService.texts.aboutMe.infoBox1.textarea"
       [index]="0"
+      [modalActive]="true"
       [attr.aria-label]="[
         languageService.texts.aboutMe.ariaLabels.infoBox.description +
           ' ' +
@@ -59,6 +60,7 @@
       [title]="languageService.texts.aboutMe.infoBox2.title"
       [textarea]="languageService.texts.aboutMe.infoBox2.textarea"
       [index]="1"
+      [modalActive]="true"
       [attr.aria-label]="[
         languageService.texts.aboutMe.ariaLabels.infoBox.description +
           ' ' +
@@ -70,6 +72,7 @@
       [title]="languageService.texts.aboutMe.infoBox3.title"
       [textarea]="languageService.texts.aboutMe.infoBox3.textarea"
       [index]="2"
+      [modalActive]="true"
       [attr.aria-label]="[
         languageService.texts.aboutMe.ariaLabels.infoBox.description +
           ' ' +
@@ -77,7 +80,7 @@
       ]"
     ></app-info-box>
     } @else if (modalService.activeModal === "expertise") {
-    <app-expertise></app-expertise>
+    <app-expertise [modalActive]="true"></app-expertise>
     }
   </div>
 </section>
