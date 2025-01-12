@@ -10,8 +10,7 @@ section {
   bottom: 0;
   @include display-flex(center, center);
   padding-inline: px-to-rem(20);
-
-  background-color: var(--background-color);
+  z-index: 9999;
 
   .modal-wrapper {
     @include max-content-settings();
