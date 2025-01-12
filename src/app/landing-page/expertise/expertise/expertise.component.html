@@ -36,14 +36,17 @@
         [modal]="'unset'"
         [index]="0"
         [activeModal]="'expertise'"
+        [activeTap]="tapService.activeTap"
+        [tapService]="tapService"
       ></app-window-controls>
     </div>
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @if (tapService.isTapActive('skills') || tapService.isTapActive('home')) {
+    @if ( tapService.activeTap === 'skills' || tapService.activeTap === 'home')
+    {
     <app-skills></app-skills>
-    } @if (tapService.isTapActive('certificates')) {
+    } @if (tapService.activeTap === 'certificates') {
     <app-certificates></app-certificates>
     }
   </div>

@@ -11,7 +11,7 @@
   <button
     (click)="
       !modalService.ifModalOpen && windowService.ifContentOpen
-        ? modalService.openModal(modal, index, activeModal)
+        ? openModal()
         : windowService.ifContentOpen
         ? modalService.closeModal()
         : windowService.openContent()
