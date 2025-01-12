@@ -1,6 +1,6 @@
 @if (modalService.ifModalOpen && modalService.modal !== 'unset') {
 <section (click)="modalService.closeModalWrapper($event)">
-  <div class="modal-wrapper">
+  <div class="modal-wrapper" (click)="modalService.closeModalWrapper($event)">
     <div class="modal">
       <div class="title-bar">
         <h3 class="title">
