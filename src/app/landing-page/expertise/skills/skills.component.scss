@@ -12,8 +12,8 @@
   .learning-icon {
     @include display-flex(center, start, column);
     gap: px-to-rem(10);
-    height: px-to-rem(170);
-    width: px-to-rem(170);
+    height: px-to-rem(165);
+    width: px-to-rem(165);
     padding: px-to-rem(20);
     border-radius: px-to-rem(10);
 
