@@ -12,6 +12,8 @@ section {
   padding-inline: px-to-rem(20);
   z-index: 9999;
 
+  background-color: var(--background-color);
+
   .modal-wrapper {
     @include max-content-settings();
     padding: 0;
