@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class TapService {
-  private activeTap: string | null = 'skills';
+  public activeTap: string = 'home';
 
   constructor() {}
 

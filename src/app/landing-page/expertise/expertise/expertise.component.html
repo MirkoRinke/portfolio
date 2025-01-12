@@ -41,7 +41,7 @@
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @if (tapService.isTapActive('skills')) {
+    @if (tapService.isTapActive('skills') || tapService.isTapActive('home')) {
     <app-skills></app-skills>
     } @if (tapService.isTapActive('certificates')) {
     <app-certificates></app-certificates>
