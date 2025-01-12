@@ -5,8 +5,6 @@
 .expertise {
   @include window-default-style();
 
-  width: fit-content;
-
   .title-bar {
     @include title-bar-default-style;
     gap: px-to-rem(20);
