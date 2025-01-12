@@ -4,9 +4,13 @@
     <div class="taps">
       <button
         class="tap"
-        [class.active]="tapService.isTapActive('skills')"
+        [class.active]="
+          tapService.activeTap === 'skills' || tapService.activeTap === 'home'
+        "
         (click)="tapService.activateTap('skills')"
-        [attr.aria-pressed]="tapService.isTapActive('skills')"
+        [attr.aria-pressed]="
+          tapService.activeTap === 'skills' || tapService.activeTap === 'home'
+        "
         [attr.aria-label]="
           languageService.texts.expertise.ariaLabels.taps.skillsTap
         "
@@ -16,9 +20,9 @@
       </button>
       <button
         class="tap"
-        [class.active]="tapService.isTapActive('certificates')"
+        [class.active]="tapService.activeTap === 'certificates'"
         (click)="tapService.activateTap('certificates')"
-        [attr.aria-pressed]="tapService.isTapActive('certificates')"
+        [attr.aria-pressed]="tapService.activeTap === 'certificates'"
         [attr.aria-label]="
           languageService.texts.expertise.ariaLabels.taps.certificatesTap
         "

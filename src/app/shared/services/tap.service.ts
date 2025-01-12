@@ -11,8 +11,4 @@ export class TapService {
   activateTap(tap: string) {
     this.activeTap = tap;
   }
-
-  isTapActive(tap: string): boolean {
-    return this.activeTap === tap;
-  }
 }
