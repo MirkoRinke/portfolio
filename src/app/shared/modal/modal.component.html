@@ -42,7 +42,10 @@
 <section (click)="modalService.closeModalWrapper($event)">
   <div class="modal-wrapper">
     @if (modalService.activeModal === "portrait") {
-    <app-portrait [modalActive]="true"></app-portrait>
+    <app-portrait
+      (click)="modalService.closeModalWrapper($event)"
+      [modalActive]="true"
+    ></app-portrait>
     } @else if (modalService.activeModal === "infoBox0") {
     <app-info-box
       [title]="languageService.texts.aboutMe.infoBox1.title"

@@ -14,9 +14,7 @@ section {
 
   .modal-wrapper {
     @include max-content-settings();
-    background-color: var(--background-color);
     padding: 0;
-    width: fit-content;
 
     .modal {
       @include window-default-style();

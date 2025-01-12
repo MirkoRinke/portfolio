@@ -53,16 +53,11 @@
 
 // Window default styles for components
 
-@mixin window-default-style($max-width: 100%) {
-  @if $max-width != 100% {
-    max-width: px-to-rem($max-width);
-  }
-  else {
-    max-width: 100%;
-  }
+@mixin window-default-style() {
   width: 100%;
   border: px-to-rem(1) solid var(--primary-color);
   box-shadow: 0 0 px-to-rem(10) var(--primary-color);
+  background-color: var(--background-color);
 }
 
 @mixin title-bar-default-style() {

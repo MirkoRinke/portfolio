@@ -18,7 +18,7 @@
 
     &.modal-active {
       max-height: 80dvh;
-      aspect-ratio: 16 / 9;
+      min-height: 40dvh;
     }
   }
 }
