@@ -10,6 +10,11 @@
   }
 
   &.modal-active {
-    min-height: 80dvh;
+    max-height: fit-content;
+
+    img {
+      max-height: 80dvh;
+      height: 100%;
+    }
   }
 }
