@@ -27,10 +27,6 @@
       cursor: pointer;
     }
 
-    @media screen and (max-width: $breakpoint-sm) {
-      max-width: 100%;
-    }
-
     &::ng-deep .icon {
       @include display-flex(center, center);
       height: px-to-rem(25);
