@@ -4,8 +4,12 @@
 
 .portrait {
   @include window-default-style();
-  max-width: fit-content;
-  margin-inline: auto;
+  max-width: 100%;
+
+  &.modal-active {
+    max-width: fit-content;
+    margin-inline: auto;
+  }
 
   .title-bar {
     @include title-bar-default-style;

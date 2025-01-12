@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
+
 import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 import { WindowService } from '../../../shared/services/window.service';
 import { LanguageService } from '../../../shared/services/language.service';
@@ -10,7 +12,7 @@ import { PortraitContentComponent } from './portrait-content/portrait-content.co
 
 @Component({
   selector: 'app-portrait',
-  imports: [WindowControlsComponent, PortraitContentComponent],
+  imports: [CommonModule, WindowControlsComponent, PortraitContentComponent],
   templateUrl: './portrait.component.html',
   styleUrl: './portrait.component.scss',
   providers: [WindowService],
