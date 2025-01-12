@@ -5,7 +5,8 @@
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  padding-inline: px-to-rem(16);
+  padding-left: px-to-rem(32);
+  padding-right: px-to-rem(21.5);
 }
 
 @mixin display-flex($align: flex-start, $justify: flex-start, $direction: row) {

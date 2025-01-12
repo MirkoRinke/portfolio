@@ -11,7 +11,6 @@ export class ModalService {
   ifModalOpen: boolean = false;
 
   openModal(modal: Object | string, index: number, activeModal: string) {
-    console.log('openModal');
     this.modal = modal;
     if (this.modal !== 'unset') this.index = index;
     this.activeModal = activeModal;
@@ -50,7 +49,6 @@ export class ModalService {
   }
 
   closeModal() {
-    console.log('closeModal');
     this.ifModalOpen = false;
     this.enableScroll();
   }
