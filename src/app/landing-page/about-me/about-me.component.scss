@@ -5,7 +5,7 @@
 section {
   @include max-content-settings;
   @include display-flex(start, space-between);
-  gap: px-to-rem(150);
+  gap: 10%;
   padding-top: px-to-rem(100);
   padding-bottom: px-to-rem(50);
 
