@@ -20,10 +20,4 @@ export class WindowControlsComponent {
   @Input() modal!: any;
   @Input() index!: number;
   @Input() activeModal!: string;
-
-  //! function for later use
-  // openInModal() {
-  //   this.modalService.openModal(this.modal, this.index, this.activeModal);
-  //   this.windowService.closeWindow();
-  // }
 }
