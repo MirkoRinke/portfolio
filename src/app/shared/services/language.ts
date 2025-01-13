@@ -5,6 +5,7 @@ export interface Texts {
   aboutMe: aboutMeTexts;
   ariaLabels: AriaLabels;
   expertise: Expertise;
+  projects: ProjectTexts;
 }
 
 interface IndexTexts {
@@ -79,6 +80,27 @@ interface Expertise {
     desktopIcon: string;
   };
 }
+
+interface ProjectTexts {
+  project: {
+    taps: {
+      tap1: string;
+      tap2: string;
+      tap3: string;
+      tap4: string;
+    };
+  };
+  ariaLabels: {
+    taps: {
+      tap1: string;
+      tap2: string;
+      tap3: string;
+      tap4: string;
+    };
+    desktopIcon: string;
+  };
+}
+
 interface AriaLabels {
   controls: {
     minimize: string;
@@ -158,6 +180,25 @@ export const textsDE: Texts = {
         certificatesTap: 'Öffne Zertifikate Tab',
       },
       desktopIcon: 'Öffne Expertise Fenster',
+    },
+  },
+  projects: {
+    project: {
+      taps: {
+        tap1: 'project1',
+        tap2: 'project2',
+        tap3: 'project3',
+        tap4: 'In Entwicklung',
+      },
+    },
+    ariaLabels: {
+      taps: {
+        tap1: 'Öffne project1 Tab',
+        tap2: 'Öffne project2 Tab',
+        tap3: 'Öffne project3 Tab',
+        tap4: 'Öffne In Entwicklung Tab',
+      },
+      desktopIcon: 'Öffne Projekte Fenster',
     },
   },
   ariaLabels: {
@@ -240,6 +281,25 @@ export const textsEN: Texts = {
         certificatesTap: 'Open Certificates Tab',
       },
       desktopIcon: 'Open Expertise  Windows',
+    },
+  },
+  projects: {
+    project: {
+      taps: {
+        tap1: 'project1',
+        tap2: 'project2',
+        tap3: 'project3',
+        tap4: 'In Development',
+      },
+    },
+    ariaLabels: {
+      taps: {
+        tap1: 'Open project1 Tab',
+        tap2: 'Open project1 Tab',
+        tap3: 'Open project1 Tab',
+        tap4: 'Open In Development Tab',
+      },
+      desktopIcon: 'Open projects  Windows',
     },
   },
   ariaLabels: {

@@ -84,6 +84,8 @@
     ></app-info-box>
     } @else if (modalService.activeModal === "expertise") {
     <app-expertise [modalActive]="true"></app-expertise>
+    } @else if (modalService.activeModal === "projects") {
+    <app-projects [modalActive]="true"></app-projects>
     }
   </div>
 </section>

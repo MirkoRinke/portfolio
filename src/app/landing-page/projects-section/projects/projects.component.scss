@@ -1,0 +1,46 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+.projects {
+  @include window-default-style();
+
+  .title-bar {
+    @include title-bar-default-style;
+    gap: px-to-rem(20);
+
+    .taps {
+      @include display-flex(center, start);
+      gap: 0 px-to-rem(20);
+      width: 100%;
+
+      .tap {
+        @include tap-default-style;
+      }
+    }
+  }
+
+  .content {
+    @include window-content;
+    @include display-flex(start, space-between, column);
+    padding: px-to-rem(20) px-to-rem(30);
+    height: px-to-rem(600);
+
+    app-skills {
+      @include display-flex(start, start, column);
+    }
+
+    app-certificates {
+      width: 100%;
+    }
+
+    &.modal-active {
+      min-height: 80dvh;
+    }
+  }
+}
+
+.desktop-icons {
+  @include button-preset();
+  @include desktop-icon-style(right);
+}

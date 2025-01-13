@@ -1,0 +1,86 @@
+@if (windowService.ifWindowOpen) {
+<div class="projects">
+  <div class="title-bar">
+    <div class="taps">
+      <button
+        class="tap"
+        [class.active]="
+          tapService.activeTap === 'project1' || tapService.activeTap === 'home'
+        "
+        (click)="tapService.activateTap('project1')"
+        [attr.aria-pressed]="
+          tapService.activeTap === 'project1' || tapService.activeTap === 'home'
+        "
+        [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap1"
+      >
+        {{ languageService.texts.projects.project.taps.tap1 }}
+        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
+      </button>
+      <button
+        class="tap"
+        [class.active]="tapService.activeTap === 'project2'"
+        (click)="tapService.activateTap('project2')"
+        [attr.aria-pressed]="tapService.activeTap === 'project2'"
+        [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap2"
+      >
+        {{ languageService.texts.projects.project.taps.tap2 }}
+        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
+      </button>
+      <button
+        class="tap"
+        [class.active]="tapService.activeTap === 'project3'"
+        (click)="tapService.activateTap('project3')"
+        [attr.aria-pressed]="tapService.activeTap === 'project3'"
+        [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap3"
+      >
+        {{ languageService.texts.projects.project.taps.tap3 }}
+        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
+      </button>
+      <button
+        class="tap"
+        [class.active]="tapService.activeTap === 'development'"
+        (click)="tapService.activateTap('development')"
+        [attr.aria-pressed]="tapService.activeTap === 'development'"
+        [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap4"
+      >
+        {{ languageService.texts.projects.project.taps.tap4 }}
+        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
+      </button>
+    </div>
+    <div class="controls">
+      <app-window-controls
+        [windowService]="windowService"
+        [svgIconsService]="svgIconsService"
+        [languageService]="languageService"
+        [modalService]="modalService"
+        [modal]="'unset'"
+        [index]="0"
+        [activeModal]="'projects'"
+        [activeTap]="tapService.activeTap"
+        [tapService]="tapService"
+      ></app-window-controls>
+    </div>
+  </div>
+  @if (windowService.ifContentOpen) {
+  <div class="content" [ngClass]="{ 'modal-active': modalActive }">
+    @if ( tapService.activeTap === 'project1' || tapService.activeTap ===
+    'home') {
+    <h1>project 1</h1>
+    } @if (tapService.activeTap === 'project2') {
+    <h1>project 2</h1>
+    } @if (tapService.activeTap === 'project3') {
+    <h1>project 3</h1>
+    } @if (tapService.activeTap === 'development') {
+    <h1>In Development</h1>
+    }
+  </div>
+  }
+</div>
+} @else {
+<button
+  class="desktop-icons"
+  (click)="windowService.openWindow()"
+  [innerHTML]="svgIconsService.returnIcon('folder', 'desktop-icon')"
+  [attr.aria-label]="languageService.texts.projects.ariaLabels.desktopIcon"
+></button>
+}
