@@ -8,6 +8,9 @@ export interface Project {
   technologies: Technology[];
   imagePath: string;
   links: Links;
+  ariaLabels: {
+    tap: string;
+  };
 }
 
 export interface keyFeatures {
@@ -84,6 +87,9 @@ export const projectsEN: Project[] = [
       github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
       liveTest: 'https://join.mirkorinke.dev',
     },
+    ariaLabels: {
+      tap: 'Open Join Tab',
+    },
   },
   {
     id: 1,
@@ -133,6 +139,9 @@ export const projectsEN: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
       liveTest: 'https://el-pollo-loco.mirkorinke.dev',
+    },
+    ariaLabels: {
+      tap: 'Open El Pollo Loco Tab',
     },
   },
   {
@@ -187,6 +196,9 @@ export const projectsEN: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
       liveTest: 'https://pokedex.mirkorinke.dev',
+    },
+    ariaLabels: {
+      tap: 'Open Pokedex Tab',
     },
   },
 ];
@@ -250,6 +262,9 @@ export const projectsDE: Project[] = [
       github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
       liveTest: 'https://join.mirkorinke.dev',
     },
+    ariaLabels: {
+      tap: 'Öffne Join Tab',
+    },
   },
   {
     id: 1,
@@ -300,6 +315,9 @@ export const projectsDE: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
       liveTest: 'https://el-pollo-loco.mirkorinke.dev',
+    },
+    ariaLabels: {
+      tap: 'Öffne El Pollo Loco Tab',
     },
   },
   {
@@ -355,6 +373,9 @@ export const projectsDE: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
       liveTest: 'https://pokedex.mirkorinke.dev',
+    },
+    ariaLabels: {
+      tap: 'Öffne Pokedex Tab',
     },
   },
 ];
