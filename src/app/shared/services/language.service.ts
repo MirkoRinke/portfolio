@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { type Texts, textsDE, textsEN } from './language';
+import { type Project, projectsDE, projectsEN } from './projects.data';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +14,7 @@ export class LanguageService {
     this.selectedLanguageSubject.asObservable();
 
   texts: Texts = textsDE;
+  projects: Project[] = projectsDE;
 
   constructor() {
     this.loadLanguageFromStorage();
@@ -39,8 +41,9 @@ export class LanguageService {
 
   private updateTexts(): void {
     const language = this.getLanguage();
-    if (language === 'de') this.texts = textsDE;
-    else if (language === 'en') this.texts = textsEN;
-    else this.texts = textsEN;
+    if (language === 'de') (this.texts = textsDE), (this.projects = projectsDE);
+    else if (language === 'en')
+      (this.texts = textsEN), (this.projects = projectsEN);
+    else (this.texts = textsEN), (this.projects = projectsEN);
   }
 }

@@ -5,11 +5,11 @@
       <button
         class="tap"
         [class.active]="
-          tapService.activeTap === 'project1' || tapService.activeTap === 'home'
+          tapService.activeTap === 'project0' || tapService.activeTap === 'home'
         "
-        (click)="tapService.activateTap('project1')"
+        (click)="tapService.activateTap('project0')"
         [attr.aria-pressed]="
-          tapService.activeTap === 'project1' || tapService.activeTap === 'home'
+          tapService.activeTap === 'project0' || tapService.activeTap === 'home'
         "
         [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap1"
       >
@@ -18,9 +18,9 @@
       </button>
       <button
         class="tap"
-        [class.active]="tapService.activeTap === 'project2'"
-        (click)="tapService.activateTap('project2')"
-        [attr.aria-pressed]="tapService.activeTap === 'project2'"
+        [class.active]="tapService.activeTap === 'project1'"
+        (click)="tapService.activateTap('project1')"
+        [attr.aria-pressed]="tapService.activeTap === 'project1'"
         [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap2"
       >
         {{ languageService.texts.projects.project.taps.tap2 }}
@@ -28,9 +28,9 @@
       </button>
       <button
         class="tap"
-        [class.active]="tapService.activeTap === 'project3'"
-        (click)="tapService.activateTap('project3')"
-        [attr.aria-pressed]="tapService.activeTap === 'project3'"
+        [class.active]="tapService.activeTap === 'project2'"
+        (click)="tapService.activateTap('project2')"
+        [attr.aria-pressed]="tapService.activeTap === 'project2'"
         [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap3"
       >
         {{ languageService.texts.projects.project.taps.tap3 }}
@@ -63,13 +63,13 @@
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @if ( tapService.activeTap === 'project1' || tapService.activeTap ===
+    @if ( tapService.activeTap === 'project0' || tapService.activeTap ===
     'home') {
-    <h1>project 1</h1>
+    <h1>{{ languageService.projects[0].title }}</h1>
+    } @if (tapService.activeTap === 'project1') {
+    <h1>{{ languageService.projects[1].title }}</h1>
     } @if (tapService.activeTap === 'project2') {
-    <h1>project 2</h1>
-    } @if (tapService.activeTap === 'project3') {
-    <h1>project 3</h1>
+    <h1>{{ languageService.projects[2].title }}</h1>
     } @if (tapService.activeTap === 'development') {
     <h1>In Development</h1>
     }
