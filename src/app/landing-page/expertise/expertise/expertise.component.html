@@ -4,15 +4,9 @@
     <div class="taps">
       <button
         class="tap"
-        [class.active]="
-          tapService.activeTapExpertise === 'skills' ||
-          tapService.activeTapExpertise === 'home'
-        "
+        [class.active]="tapService.activeTapExpertise === 'skills'"
         (click)="tapService.activateTap('skills', 'expertise')"
-        [attr.aria-pressed]="
-          tapService.activeTapExpertise === 'skills' ||
-          tapService.activeTapExpertise === 'home'
-        "
+        [attr.aria-pressed]="tapService.activeTapExpertise === 'skills'"
         [attr.aria-label]="
           languageService.texts.expertise.ariaLabels.taps.skillsTap
         "
@@ -49,8 +43,7 @@
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @if ( tapService.activeTapExpertise === 'skills' ||
-    tapService.activeTapExpertise === 'home') {
+    @if ( tapService.activeTapExpertise === 'skills') {
     <app-skills></app-skills>
     } @if (tapService.activeTapExpertise === 'certificates') {
     <app-certificates></app-certificates>

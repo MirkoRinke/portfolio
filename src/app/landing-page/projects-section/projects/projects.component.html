@@ -4,15 +4,9 @@
     <div class="taps">
       <button
         class="tap"
-        [class.active]="
-          tapService.activeTapProjects === 'project0' ||
-          tapService.activeTapProjects === 'home'
-        "
+        [class.active]="tapService.activeTapProjects === 'project0'"
         (click)="tapService.activateTap('project0', 'projects')"
-        [attr.aria-pressed]="
-          tapService.activeTapProjects === 'project0' ||
-          tapService.activeTapProjects === 'home'
-        "
+        [attr.aria-pressed]="tapService.activeTapProjects === 'project0'"
         [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap1"
       >
         {{ languageService.texts.projects.project.taps.tap1 }}
