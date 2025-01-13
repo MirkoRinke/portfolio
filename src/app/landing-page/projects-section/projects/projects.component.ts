@@ -19,7 +19,7 @@ import { WindowControlsComponent } from '../../../shared/window-controls/window-
   imports: [CommonModule, WindowControlsComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
-  providers: [WindowService, TapService],
+  providers: [WindowService],
 })
 export class ProjectsComponent {
   @Input() modalActive!: boolean;

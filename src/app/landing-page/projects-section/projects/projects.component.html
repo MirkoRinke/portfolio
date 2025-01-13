@@ -5,11 +5,13 @@
       <button
         class="tap"
         [class.active]="
-          tapService.activeTap === 'project0' || tapService.activeTap === 'home'
+          tapService.activeTapProjects === 'project0' ||
+          tapService.activeTapProjects === 'home'
         "
-        (click)="tapService.activateTap('project0')"
+        (click)="tapService.activateTap('project0', 'projects')"
         [attr.aria-pressed]="
-          tapService.activeTap === 'project0' || tapService.activeTap === 'home'
+          tapService.activeTapProjects === 'project0' ||
+          tapService.activeTapProjects === 'home'
         "
         [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap1"
       >
@@ -18,9 +20,9 @@
       </button>
       <button
         class="tap"
-        [class.active]="tapService.activeTap === 'project1'"
-        (click)="tapService.activateTap('project1')"
-        [attr.aria-pressed]="tapService.activeTap === 'project1'"
+        [class.active]="tapService.activeTapProjects === 'project1'"
+        (click)="tapService.activateTap('project1', 'projects')"
+        [attr.aria-pressed]="tapService.activeTapProjects === 'project1'"
         [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap2"
       >
         {{ languageService.texts.projects.project.taps.tap2 }}
@@ -28,9 +30,9 @@
       </button>
       <button
         class="tap"
-        [class.active]="tapService.activeTap === 'project2'"
-        (click)="tapService.activateTap('project2')"
-        [attr.aria-pressed]="tapService.activeTap === 'project2'"
+        [class.active]="tapService.activeTapProjects === 'project2'"
+        (click)="tapService.activateTap('project2', 'projects')"
+        [attr.aria-pressed]="tapService.activeTapProjects === 'project2'"
         [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap3"
       >
         {{ languageService.texts.projects.project.taps.tap3 }}
@@ -38,9 +40,9 @@
       </button>
       <button
         class="tap"
-        [class.active]="tapService.activeTap === 'development'"
-        (click)="tapService.activateTap('development')"
-        [attr.aria-pressed]="tapService.activeTap === 'development'"
+        [class.active]="tapService.activeTapProjects === 'development'"
+        (click)="tapService.activateTap('development', 'projects')"
+        [attr.aria-pressed]="tapService.activeTapProjects === 'development'"
         [attr.aria-label]="languageService.texts.projects.ariaLabels.taps.tap4"
       >
         {{ languageService.texts.projects.project.taps.tap4 }}
@@ -56,21 +58,21 @@
         [modal]="'unset'"
         [index]="0"
         [activeModal]="'projects'"
-        [activeTap]="tapService.activeTap"
+        [activeTap]="tapService.activeTapProjects"
         [tapService]="tapService"
       ></app-window-controls>
     </div>
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @if ( tapService.activeTap === 'project0' || tapService.activeTap ===
-    'home') {
+    @if ( tapService.activeTapProjects === 'project0' ||
+    tapService.activeTapProjects === 'home') {
     <h1>{{ languageService.projects[0].title }}</h1>
-    } @if (tapService.activeTap === 'project1') {
+    } @if (tapService.activeTapProjects === 'project1') {
     <h1>{{ languageService.projects[1].title }}</h1>
-    } @if (tapService.activeTap === 'project2') {
+    } @if (tapService.activeTapProjects === 'project2') {
     <h1>{{ languageService.projects[2].title }}</h1>
-    } @if (tapService.activeTap === 'development') {
+    } @if (tapService.activeTapProjects === 'development') {
     <h1>In Development</h1>
     }
   </div>

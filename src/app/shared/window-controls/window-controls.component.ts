@@ -28,7 +28,10 @@ export class WindowControlsComponent {
   openModal() {
     this.modalService.openModal(this.modal, this.index, this.activeModal);
     if (this.activeModal === 'expertise') {
-      this.tapService.activateTap(this.activeTap);
+      this.tapService.activateTap(this.activeTap, this.activeTap);
+    }
+    if (this.activeModal === 'projects') {
+      this.tapService.activateTap(this.activeTap, this.activeTap);
     }
   }
 }

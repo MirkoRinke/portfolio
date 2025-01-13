@@ -4,11 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class TapService {
-  public activeTap: string = 'home';
+  public activeTapExpertise: string = 'home';
+  public activeTapProjects: string = 'home';
 
   constructor() {}
 
-  activateTap(tap: string) {
-    this.activeTap = tap;
+  activateTap(tap: string, componente: string) {
+    if (componente === 'expertise') this.activeTapExpertise = tap;
+    if (componente === 'projects') this.activeTapProjects = tap;
   }
 }

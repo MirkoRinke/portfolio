@@ -27,7 +27,7 @@ import { WindowControlsComponent } from '../../../shared/window-controls/window-
   ],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.scss',
-  providers: [WindowService, TapService],
+  providers: [WindowService],
 })
 export class ExpertiseComponent {
   @Input() modalActive!: boolean;

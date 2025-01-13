@@ -5,11 +5,13 @@
       <button
         class="tap"
         [class.active]="
-          tapService.activeTap === 'skills' || tapService.activeTap === 'home'
+          tapService.activeTapExpertise === 'skills' ||
+          tapService.activeTapExpertise === 'home'
         "
-        (click)="tapService.activateTap('skills')"
+        (click)="tapService.activateTap('skills', 'expertise')"
         [attr.aria-pressed]="
-          tapService.activeTap === 'skills' || tapService.activeTap === 'home'
+          tapService.activeTapExpertise === 'skills' ||
+          tapService.activeTapExpertise === 'home'
         "
         [attr.aria-label]="
           languageService.texts.expertise.ariaLabels.taps.skillsTap
@@ -20,9 +22,9 @@
       </button>
       <button
         class="tap"
-        [class.active]="tapService.activeTap === 'certificates'"
-        (click)="tapService.activateTap('certificates')"
-        [attr.aria-pressed]="tapService.activeTap === 'certificates'"
+        [class.active]="tapService.activeTapExpertise === 'certificates'"
+        (click)="tapService.activateTap('certificates', 'expertise')"
+        [attr.aria-pressed]="tapService.activeTapExpertise === 'certificates'"
         [attr.aria-label]="
           languageService.texts.expertise.ariaLabels.taps.certificatesTap
         "
@@ -40,17 +42,17 @@
         [modal]="'unset'"
         [index]="0"
         [activeModal]="'expertise'"
-        [activeTap]="tapService.activeTap"
+        [activeTap]="tapService.activeTapExpertise"
         [tapService]="tapService"
       ></app-window-controls>
     </div>
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @if ( tapService.activeTap === 'skills' || tapService.activeTap === 'home')
-    {
+    @if ( tapService.activeTapExpertise === 'skills' ||
+    tapService.activeTapExpertise === 'home') {
     <app-skills></app-skills>
-    } @if (tapService.activeTap === 'certificates') {
+    } @if (tapService.activeTapExpertise === 'certificates') {
     <app-certificates></app-certificates>
     }
   </div>
