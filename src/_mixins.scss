@@ -95,10 +95,6 @@
 
 @mixin title-default-style() {
   @include font-settings();
-
-  &:hover {
-    color: var(--secondary-color-hover);
-  }
 }
 
 @mixin tap-default-style() {
@@ -137,10 +133,6 @@
   padding: px-to-rem(10);
   scrollbar-color: var(--primary-color) rgb(28, 28, 28);
   overflow-y: auto;
-
-  &:hover p {
-    color: var(--secondary-color-hover);
-  }
 }
 
 @mixin desktop-icon-style($position: center) {
