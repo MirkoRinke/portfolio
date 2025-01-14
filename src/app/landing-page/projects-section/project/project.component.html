@@ -10,18 +10,36 @@
         </div>
       </div>
       <div class="links">
+        @if (languageService.projects[index].title !== 'In Development') {
         <a
           href="{{ languageService.projects[index].links.live }}"
           target="_blank"
-          ><span [innerHTML]="svgIconsService.returnIcon('live')"></span>
+          ><span
+            [innerHTML]="svgIconsService.returnIcon('live', 'icon-link')"
+          ></span>
           Live</a
         >
+        }
         <a
           href="{{ languageService.projects[index].links.github }}"
           target="_blank"
-          ><span [innerHTML]="svgIconsService.returnIcon('github')"></span>
+          ><span
+            [innerHTML]="svgIconsService.returnIcon('github', 'icon-link')"
+          ></span>
           Github</a
         >
+        @if (languageService.projects[index].title === 'In Development') {
+        <a
+          href="{{ languageService.projects[index].links.organization }}"
+          target="_blank"
+          ><span
+            [innerHTML]="
+              svgIconsService.returnIcon('organization', 'icon-link')
+            "
+          ></span>
+          Organization</a
+        >
+        }
       </div>
     </div>
     <div class="right">

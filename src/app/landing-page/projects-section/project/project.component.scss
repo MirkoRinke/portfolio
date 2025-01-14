@@ -46,8 +46,7 @@
           @include font-settings();
           gap: px-to-rem(10);
 
-          &::ng-deep .live,
-          &::ng-deep .github {
+          &::ng-deep .icon-link {
             @include display-flex(center, center);
             height: px-to-rem(30);
             width: px-to-rem(30);
@@ -58,8 +57,7 @@
             color: var(--primary-color-hover);
           }
 
-          &:hover ::ng-deep .live,
-          &:hover ::ng-deep .github {
+          &:hover ::ng-deep .icon-link {
             fill: var(--primary-color-hover);
           }
         }

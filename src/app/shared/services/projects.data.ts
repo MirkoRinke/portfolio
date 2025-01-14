@@ -26,6 +26,7 @@ export interface Technology {
 export interface Links {
   github: string;
   live: string;
+  organization: string;
 }
 
 export const projectsDE: Project[] = [
@@ -81,6 +82,7 @@ export const projectsDE: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
       live: 'https://join.mirkorinke.dev',
+      organization: '',
     },
     ariaLabels: {
       tap: 'Öffne Join Tab',
@@ -133,6 +135,7 @@ export const projectsDE: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
       live: 'https://el-pollo-loco.mirkorinke.dev',
+      organization: '',
     },
     ariaLabels: {
       tap: 'Öffne El Pollo Loco Tab',
@@ -189,6 +192,7 @@ export const projectsDE: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
       live: 'https://pokedex.mirkorinke.dev',
+      organization: '',
     },
     ariaLabels: {
       tap: 'Öffne Pokedex Tab',
@@ -246,6 +250,7 @@ export const projectsDE: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/',
       live: 'https://mirkorinke.dev',
+      organization: 'https://github.com/CodeNex',
     },
     ariaLabels: {
       tap: 'Öffne In Development Tab',
@@ -306,6 +311,7 @@ export const projectsEN: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
       live: 'https://join.mirkorinke.dev',
+      organization: '',
     },
     ariaLabels: {
       tap: 'Open Join Tab',
@@ -358,6 +364,7 @@ export const projectsEN: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
       live: 'https://el-pollo-loco.mirkorinke.dev',
+      organization: '',
     },
     ariaLabels: {
       tap: 'Open El Pollo Loco Tab',
@@ -414,6 +421,7 @@ export const projectsEN: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
       live: 'https://pokedex.mirkorinke.dev',
+      organization: '',
     },
     ariaLabels: {
       tap: 'Open Pokedex Tab',
@@ -468,6 +476,7 @@ export const projectsEN: Project[] = [
     links: {
       github: 'https://github.com/MirkoRinke/',
       live: 'https://mirkorinke.dev',
+      organization: 'https://github.com/CodeNex',
     },
     ariaLabels: {
       tap: 'Open In Development Tab',
