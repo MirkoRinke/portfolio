@@ -34,6 +34,19 @@
   color: $color;
   font-family: $font-family;
   line-height: px-to-rem($line-height);
+  @include dynamic-font();
+}
+
+@mixin dynamic-font(
+  $font-size: 16,
+  $vw: 1.5,
+  $min-font-size: 14,
+  $line-height: 1.5
+) {
+  font-size: clamp(px-to-rem($min-font-size), #{$vw}vw, px-to-rem($font-size));
+  line-height: calc(
+    min(px-to-rem($font-size), px-to-rem($font-size) * $line-height)
+  );
 }
 
 @mixin golden-ratio-padding($font-size: 16) {
@@ -102,6 +115,7 @@
   @include button-preset();
   @include font-settings();
   @include display-flex(center, space-between);
+  white-space: nowrap;
 
   background-color: var(--primary-color-10);
   border-radius: px-to-rem(5);

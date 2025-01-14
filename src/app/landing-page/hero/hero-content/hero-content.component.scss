@@ -9,10 +9,14 @@
 
   h1 {
     @include font-settings(48);
+    @include dynamic-font(48, 4);
+    white-space: nowrap;
   }
 
   h2 {
     @include font-settings(128);
+    @include dynamic-font(128, 10);
+    white-space: nowrap;
   }
 
   button {
