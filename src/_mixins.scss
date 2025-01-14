@@ -26,30 +26,22 @@
   $font-size: 16,
   $font-weight: 400,
   $color: var(--secondary-color),
-  $font-family: "FiraCode",
-  // $line-height: $font-size * 1.5
+  $font-family: "FiraCode"
 ) {
   font-size: px-to-rem($font-size);
   font-weight: $font-weight;
   color: $color;
   font-family: $font-family;
-  // line-height: px-to-rem($line-height);
   @include dynamic-font($font-size);
 }
 
-@mixin dynamic-font(
-  $font-size: 16,
-  $vw: 1.5,
-  $min-font-size: 14,
-  // $line-height: 1.5
-) {
+@mixin dynamic-font($font-size: 16, $vw: 1.5, $min-font-size: 14) {
   font-size: clamp(px-to-rem($min-font-size), #{$vw}vw, px-to-rem($font-size));
-  // line-height: calc(    min(px-to-rem($font-size), px-to-rem($font-size) * $line-height)  );
 }
 
 @mixin golden-ratio-padding($font-size: 16) {
   $vertical: math.div($font-size, 2);
-  $horizontal: $vertical * 1.618; // Golden ratio
+  $horizontal: $vertical * 1.618;
   padding: px-to-rem($vertical) px-to-rem($horizontal);
 }
 
