@@ -2,7 +2,8 @@
 <div class="projects">
   <div class="title-bar">
     <div class="taps">
-      @for (project of languageService.projects; track $index) {
+      @for (project of languageService.projects; track $index) { @if
+      (project.visibility) {
       <button
         class="tap"
         [class.active]="tapService.activeTapProjects === 'project' + $index"
@@ -15,8 +16,8 @@
         {{ languageService.projects[$index].title }}
         <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
       </button>
-      }
-      <button
+      } }
+      <!-- <button
         class="tap"
         [class.active]="tapService.activeTapProjects === 'development'"
         (click)="tapService.activateTap('development', 'projects')"
@@ -25,7 +26,7 @@
       >
         {{ "DEVELOPMENT PLACEHOLDER" }}
         <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
-      </button>
+      </button> -->
     </div>
     <div class="controls">
       <app-window-controls

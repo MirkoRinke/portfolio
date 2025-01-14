@@ -26,11 +26,7 @@
     padding: px-to-rem(20) px-to-rem(30);
     height: px-to-rem(600);
 
-    app-skills {
-      @include display-flex(start, start, column);
-    }
-
-    app-certificates {
+    app-project {
       width: 100%;
     }
 

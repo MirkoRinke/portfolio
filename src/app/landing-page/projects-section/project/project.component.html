@@ -1,1 +1,10 @@
-<p>project works! {{ index }}</p>
+<div class="project">
+  <div class="top">
+    <div class="right">
+      <h1>{{ languageService.projects[index].title }}</h1>
+    </div>
+    <div class="left">
+      <img [src]="languageService.projects[index].imagePath" />
+    </div>
+  </div>
+</div>

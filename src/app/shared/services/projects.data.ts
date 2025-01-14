@@ -94,7 +94,7 @@ export const projectsEN: Project[] = [
   {
     id: 1,
     title: 'El Pollo Loco',
-    visibility: true,
+    visibility: false,
     about: 'What is this project about?',
     description:
       'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -135,7 +135,7 @@ export const projectsEN: Project[] = [
         icon: 'CSS',
       },
     ],
-    imagePath: './images/projects/el-pollo-loco.jpg',
+    imagePath: './projects/el-pollo-loco.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
       liveTest: 'https://el-pollo-loco.mirkorinke.dev',
@@ -147,7 +147,7 @@ export const projectsEN: Project[] = [
   {
     id: 2,
     title: 'Pokedex',
-    visibility: true,
+    visibility: false,
     about: 'What is this project about?',
     description:
       'Pokedex application to search for Pokemon and get detailed information about them. The data is fetched from an external API.',
@@ -192,7 +192,7 @@ export const projectsEN: Project[] = [
         icon: 'API',
       },
     ],
-    imagePath: './images/projects/pokedex.jpg',
+    imagePath: './projects/pokedex.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
       liveTest: 'https://pokedex.mirkorinke.dev',
@@ -269,7 +269,7 @@ export const projectsDE: Project[] = [
   {
     id: 1,
     title: 'El Pollo Loco',
-    visibility: true,
+    visibility: false,
     about: 'Worum geht es in diesem Projekt?',
     description:
       'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
@@ -311,7 +311,7 @@ export const projectsDE: Project[] = [
         icon: 'CSS',
       },
     ],
-    imagePath: './images/projects/el-pollo-loco.jpg',
+    imagePath: './projects/el-pollo-loco.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
       liveTest: 'https://el-pollo-loco.mirkorinke.dev',
@@ -323,7 +323,7 @@ export const projectsDE: Project[] = [
   {
     id: 2,
     title: 'Pokedex',
-    visibility: true,
+    visibility: false,
     about: 'Worum geht es in diesem Projekt?',
     description:
       'Pokedex-Anwendung zum Suchen nach Pokemon und Abrufen detaillierter Informationen über sie. Die Daten werden von einer externen API abgerufen.',
@@ -369,7 +369,7 @@ export const projectsDE: Project[] = [
         icon: 'API',
       },
     ],
-    imagePath: './images/projects/pokedex.jpg',
+    imagePath: './projects/pokedex.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
       liveTest: 'https://pokedex.mirkorinke.dev',
