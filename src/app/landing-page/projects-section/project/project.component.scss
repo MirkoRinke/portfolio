@@ -4,15 +4,14 @@
 
 .project {
   @include display-flex(start, space-between, column);
-  gap: px-to-rem(5);
+  gap: px-to-rem(20);
   max-width: 100%;
-  width: 100%;
+  min-width: 100%;
   height: 100%;
 
   .top {
     @include display-flex(start, space-between);
-    max-width: 100%;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
 
     .left {
@@ -21,7 +20,7 @@
       padding-right: 10%;
       max-width: 50%;
       width: 100%;
-      min-height: 100%;
+      height: 100%;
 
       h2 {
         @include font-settings(48, 700, var(--primary-color));
@@ -82,6 +81,49 @@
         &:hover {
           transition: transform 0.3s ease-in-out;
           transform: rotate(5deg);
+        }
+      }
+    }
+  }
+
+  .middle {
+    @include display-flex();
+    gap: px-to-rem(20);
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+
+    .keyFeature {
+      @include display-flex(start, center, column);
+      @include font-settings();
+      gap: px-to-rem(10);
+      width: calc(50% - 10px);
+
+      h3 {
+        @include font-settings(24, 700, var(--primary-color));
+      }
+    }
+  }
+
+  .bottom {
+    @include display-flex();
+    gap: px-to-rem(20);
+    max-width: 100%;
+    width: 100%;
+
+    .technologies {
+      @include display-flex();
+      gap: px-to-rem(50);
+
+      .technology {
+        @include display-flex(center, center, column);
+
+        &::ng-deep .icon {
+          @include display-flex(center, center);
+          height: px-to-rem(50);
+          width: px-to-rem(50);
+          fill: var(--secondary-color);
         }
       }
     }

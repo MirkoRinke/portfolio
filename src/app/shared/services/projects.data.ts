@@ -28,181 +28,6 @@ export interface Links {
   live: string;
 }
 
-export const projectsEN: Project[] = [
-  {
-    id: 0,
-    title: 'Join',
-    visibility: true,
-    about:
-      'Effortlessly manage your projects with a user-friendly task manager inspired by the Kanban system.',
-    description:
-      'The tool offers an intuitive interface, allowing you to create, organize, and move tasks between columns with simple drag-and-drop functionality.',
-    keyFeatures: [
-      {
-        title: 'Clear Structure',
-        description:
-          'Work with predefined boards and columns that provide a straightforward overview of your tasks and workflows.',
-      },
-      {
-        title: 'Team Collaboration',
-        description:
-          'Assign tasks to team members to define responsibilities clearly.',
-      },
-      {
-        title: 'Categorization and Prioritization',
-        description:
-          'Use categories and visual markers to sort tasks and set priorities.',
-      },
-      {
-        title: 'Simple Management',
-        description:
-          'Move tasks seamlessly between phases like "To-Do," "In Progress," and "Done" with just one click.',
-      },
-      {
-        title: 'Optimized Workflows',
-        description:
-          'Track progress in real-time, stay on top of deadlines, and boost team productivity.',
-      },
-    ],
-    technologies: [
-      {
-        title: 'HTML',
-        icon: 'HTML',
-      },
-      {
-        title: 'SCSS',
-        icon: 'SCSS',
-      },
-      {
-        title: 'JavaScript',
-        icon: 'javaScript',
-      },
-      {
-        title: 'Firebase',
-        icon: 'firebase',
-      },
-    ],
-    imagePath: './projects/join.webp',
-    links: {
-      github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
-      live: 'https://join.mirkorinke.dev',
-    },
-    ariaLabels: {
-      tap: 'Open Join Tab',
-    },
-  },
-  {
-    id: 1,
-    title: 'El Pollo Loco',
-    visibility: true,
-    about: 'What is this project about?',
-    description:
-      'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-    keyFeatures: [
-      {
-        title: 'Gameplay',
-        description: 'Jump, run and throw mechanics',
-      },
-      {
-        title: 'Enemies',
-        description: 'Various types of enemies with unique behaviors',
-      },
-      {
-        title: 'Coin Collection',
-        description: 'Collect coins throughout the levels',
-      },
-      {
-        title: 'Vending Machine',
-        description:
-          'Use collected coins to buy additional tabasco salsa from vending machines',
-      },
-      {
-        title: 'Boss Fight',
-        description: 'Defeat the crazy hen in the end of the game',
-      },
-    ],
-    technologies: [
-      {
-        title: 'JavaScript',
-        icon: 'javaScript',
-      },
-      {
-        title: 'HTML',
-        icon: 'HTML',
-      },
-      {
-        title: 'CSS',
-        icon: 'CSS',
-      },
-    ],
-    imagePath: './projects/el-pollo-loco.webp',
-    links: {
-      github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
-      live: 'https://el-pollo-loco.mirkorinke.dev',
-    },
-    ariaLabels: {
-      tap: 'Open El Pollo Loco Tab',
-    },
-  },
-  {
-    id: 2,
-    title: 'Pokedex',
-    visibility: true,
-    about: 'What is this project about?',
-    description:
-      'Pokedex application to search for Pokemon and get detailed information about them. The data is fetched from an external API.',
-    keyFeatures: [
-      {
-        title: 'Search Functionality',
-        description: 'Search for Pokemon by name',
-      },
-      {
-        title: 'Detailed Information',
-        description:
-          'Get detailed information about each Pokemon, including stats, abilities, and types',
-      },
-      {
-        title: 'Name Assignment',
-        description: 'Enter your name and get assigned a Pokemon',
-      },
-      {
-        title: 'Keyboard Navigation',
-        description: 'Control the entire site using the keyboard',
-      },
-      {
-        title: 'Multilingual Support',
-        description: 'The application supports multiple languages',
-      },
-    ],
-    technologies: [
-      {
-        title: 'JavaScript',
-        icon: 'javaScript',
-      },
-      {
-        title: 'HTML',
-        icon: 'HTML',
-      },
-      {
-        title: 'CSS',
-        icon: 'CSS',
-      },
-      {
-        title: 'Rest API',
-        icon: 'API',
-      },
-    ],
-    imagePath: './projects/pokedex.webp',
-    links: {
-      github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
-      live: 'https://pokedex.mirkorinke.dev',
-    },
-    ariaLabels: {
-      tap: 'Open Pokedex Tab',
-    },
-  },
-];
-
 export const projectsDE: Project[] = [
   {
     id: 0,
@@ -221,12 +46,7 @@ export const projectsDE: Project[] = [
       {
         title: 'Teamzusammenarbeit',
         description:
-          'Weisen Sie Aufgaben Teammitgliedern zu, um Verantwortlichkeiten klar zu definieren.',
-      },
-      {
-        title: 'Kategorisierung und Priorisierung',
-        description:
-          'Verwenden Sie Kategorien und visuelle Marker, um Aufgaben zu sortieren und Prioritäten festzulegen.',
+          'Weisen Sie Aufgaben Teammitgliedern zu, um Verantwortlichkeiten klar zu definieren und halten Sie alle auf dem gleichen Stand.',
       },
       {
         title: 'Einfaches Management',
@@ -276,25 +96,23 @@ export const projectsDE: Project[] = [
     keyFeatures: [
       {
         title: 'Gameplay',
-        description: 'Spring-, Lauf- und Wurfmechaniken',
+        description:
+          'Erlebe ein spannendes Spielerlebnis mit Spring-, Lauf- und Wurfmechaniken. Das Spiel bietet die Elemente eines Sidescrollers, bei dem Geschick und Timing gefragt sind.',
       },
       {
         title: 'Feinde',
         description:
-          'Verschiedene Arten von Feinden mit einzigartigen Verhaltensweisen',
+          'Begegne Feinden mit einzigartigen Verhaltensweisen und Angriffsmustern, die deine Strategie fordern und anpassen lassen.',
       },
       {
         title: 'Münzsammlung',
-        description: 'Sammle Münzen in den Levels',
+        description:
+          'Sammle Münzen in den Levels, um sie gegen zusätzliche Tabasco-Salsa an Verkaufsautomaten einzutauschen.',
       },
       {
         title: 'Verkaufsautomat',
         description:
-          'Verwende gesammelte Münzen, um zusätzliche Tabasco-Salsa aus Verkaufsautomaten zu kaufen',
-      },
-      {
-        title: 'Bosskampf',
-        description: 'Besiege das verrückte Huhn am Ende des Spiels',
+          'Nutze gesammelte Münzen an Verkaufsautomaten, um wichtige Gegenstände wie Tabasco-Salsa zu erwerben und deine Spielfigur zu verbessern.',
       },
     ],
     technologies: [
@@ -330,25 +148,23 @@ export const projectsDE: Project[] = [
     keyFeatures: [
       {
         title: 'Suchfunktion',
-        description: 'Suche nach Pokemon nach Namen',
+        description:
+          'Verwenden Sie die Suchfunktion, um ein Pokémon anhand seines Namens aus einer Liste von 1.025 Pokémon zu finden.',
       },
       {
         title: 'Detaillierte Informationen',
         description:
-          'Abrufen detaillierter Informationen über jedes Pokemon, einschließlich Statistiken, Fähigkeiten und Typen',
+          'Rufen Sie detaillierte Informationen über jedes Pokémon ab, einschließlich Statistiken, Fähigkeiten und Typen.',
       },
       {
         title: 'Namenszuweisung',
         description:
-          'Geben Sie Ihren Namen ein und erhalten Sie ein zugewiesenes Pokemon',
+          'Geben Sie Ihren Namen ein und erhalten Sie ein einzigartiges Pokémon aus einer Liste von 1.025 Pokémon zugewiesen.',
       },
       {
         title: 'Tastaturnavigation',
-        description: 'Steuern Sie die gesamte Website mit der Tastatur',
-      },
-      {
-        title: 'Mehrsprachige Unterstützung',
-        description: 'Die Anwendung unterstützt mehrere Sprachen',
+        description:
+          'Navigieren Sie die gesamte Website mit der Tastatur für eine verbesserte Benutzererfahrung.',
       },
     ],
     technologies: [
@@ -376,6 +192,174 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne Pokedex Tab',
+    },
+  },
+];
+
+export const projectsEN: Project[] = [
+  {
+    id: 0,
+    title: 'Join',
+    visibility: true,
+    about:
+      'Effortlessly manage your projects with a user-friendly task manager inspired by the Kanban system.',
+    description:
+      'The tool offers an intuitive interface, allowing you to create, organize, and move tasks between columns with simple drag-and-drop functionality.',
+    keyFeatures: [
+      {
+        title: 'Clear Structure',
+        description:
+          'Work with predefined boards and columns that provide a clear overview of your tasks and workflows.',
+      },
+      {
+        title: 'Team Collaboration',
+        description:
+          'Assign tasks to team members to clarify responsibilities and keep everyone on the same page.',
+      },
+      {
+        title: 'Simple Management',
+        description:
+          'Seamlessly move tasks between stages like "To-Do," "In Progress," and "Done" with just one click.',
+      },
+      {
+        title: 'Optimized Workflows',
+        description:
+          'Track progress in real-time, stay updated on deadlines, and boost team productivity.',
+      },
+    ],
+    technologies: [
+      {
+        title: 'HTML',
+        icon: 'HTML',
+      },
+      {
+        title: 'SCSS',
+        icon: 'SCSS',
+      },
+      {
+        title: 'JavaScript',
+        icon: 'javaScript',
+      },
+      {
+        title: 'Firebase',
+        icon: 'firebase',
+      },
+    ],
+    imagePath: './projects/join.webp',
+    links: {
+      github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
+      live: 'https://join.mirkorinke.dev',
+    },
+    ariaLabels: {
+      tap: 'Open Join Tab',
+    },
+  },
+  {
+    id: 1,
+    title: 'El Pollo Loco',
+    visibility: true,
+    about: 'What is this project about?',
+    description:
+      'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+    keyFeatures: [
+      {
+        title: 'Gameplay',
+        description:
+          'Experience an exciting gaming adventure with jump, run, and throw mechanics. The game features sidescroller elements where skill and timing are essential.',
+      },
+      {
+        title: 'Enemies',
+        description:
+          'Encounter enemies with unique behaviors and attack patterns that challenge and adapt your strategy.',
+      },
+      {
+        title: 'Coin Collection',
+        description:
+          'Collect coins hidden throughout levels to exchange them for additional Tabasco sauce at vending machines.',
+      },
+      {
+        title: 'Vending Machine',
+        description:
+          'Use collected coins at vending machines to acquire essential items like Tabasco sauce to strengthen your character.',
+      },
+    ],
+    technologies: [
+      {
+        title: 'JavaScript',
+        icon: 'javaScript',
+      },
+      {
+        title: 'HTML',
+        icon: 'HTML',
+      },
+      {
+        title: 'CSS',
+        icon: 'CSS',
+      },
+    ],
+    imagePath: './projects/el-pollo-loco.webp',
+    links: {
+      github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
+      live: 'https://el-pollo-loco.mirkorinke.dev',
+    },
+    ariaLabels: {
+      tap: 'Open El Pollo Loco Tab',
+    },
+  },
+  {
+    id: 2,
+    title: 'Pokedex',
+    visibility: true,
+    about: 'What is this project about?',
+    description:
+      'Pokedex application to search for Pokemon and get detailed information about them. The data is fetched from an external API.',
+    keyFeatures: [
+      {
+        title: 'Search Function',
+        description:
+          'Use the search function to find a Pokémon by its name from a list of 1,025 Pokémon.',
+      },
+      {
+        title: 'Detailed Information',
+        description:
+          'Retrieve detailed information about each Pokémon, including stats, abilities, and types.',
+      },
+      {
+        title: 'Name Assignment',
+        description:
+          'Enter your name to receive a unique Pokémon assigned to you from a list of 1,025 Pokémon.',
+      },
+      {
+        title: 'Keyboard Navigation',
+        description:
+          'Navigate the entire website using the keyboard for an enhanced user experience.',
+      },
+    ],
+    technologies: [
+      {
+        title: 'JavaScript',
+        icon: 'javaScript',
+      },
+      {
+        title: 'HTML',
+        icon: 'HTML',
+      },
+      {
+        title: 'CSS',
+        icon: 'CSS',
+      },
+      {
+        title: 'Rest API',
+        icon: 'API',
+      },
+    ],
+    imagePath: './projects/pokedex.webp',
+    links: {
+      github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
+      live: 'https://pokedex.mirkorinke.dev',
+    },
+    ariaLabels: {
+      tap: 'Open Pokedex Tab',
     },
   },
 ];

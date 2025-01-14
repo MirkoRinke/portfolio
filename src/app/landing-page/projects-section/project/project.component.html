@@ -9,7 +9,6 @@
           <p>{{ languageService.projects[index].description }}</p>
         </div>
       </div>
-
       <div class="links">
         <a
           href="{{ languageService.projects[index].links.live }}"
@@ -29,6 +28,37 @@
       <a href="{{ languageService.projects[index].links.live }}">
         <img [src]="languageService.projects[index].imagePath" />
       </a>
+    </div>
+  </div>
+  <div class="middle">
+    @for (keyFeatures of languageService.projects[index].keyFeatures; track
+    $index) {
+    <div class="keyFeature">
+      <h3>{{ languageService.projects[index].keyFeatures[$index].title }}</h3>
+      <p>
+        {{ languageService.projects[index].keyFeatures[$index].description }}
+      </p>
+    </div>
+    }
+  </div>
+  <div class="bottom">
+    <div class="technologies">
+      @for (technology of languageService.projects[index].technologies; track
+      $index) {
+
+      <div class="technology">
+        <div
+          [innerHTML]="
+            svgIconsService.returnIcon(
+              languageService.projects[index].technologies[$index].icon,
+              'icon'
+            )
+          "
+        ></div>
+        <p>{{ languageService.projects[index].technologies[$index].title }}</p>
+      </div>
+
+      }
     </div>
   </div>
 </div>
