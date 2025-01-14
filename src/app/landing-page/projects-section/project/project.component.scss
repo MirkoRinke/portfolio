@@ -4,7 +4,7 @@
 
 .project {
   @include display-flex(start, space-between, column);
-  gap: px-to-rem(20);
+  gap: px-to-rem(40);
   max-width: 100%;
   min-width: 100%;
   height: 100%;
@@ -124,6 +124,14 @@
           height: px-to-rem(50);
           width: px-to-rem(50);
           fill: var(--secondary-color);
+        }
+
+        &:hover {
+          color: var(--primary-color-hover);
+        }
+
+        &:hover ::ng-deep .icon {
+          fill: var(--primary-color-hover);
         }
       }
     }
