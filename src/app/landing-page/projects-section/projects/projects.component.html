@@ -17,16 +17,6 @@
         <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
       </button>
       } }
-      <!-- <button
-        class="tap"
-        [class.active]="tapService.activeTapProjects === 'development'"
-        (click)="tapService.activateTap('development', 'projects')"
-        [attr.aria-pressed]="tapService.activeTapProjects === 'development'"
-        [attr.aria-label]="'DEVELOPMENT PLACEHOLDER'"
-      >
-        {{ "DEVELOPMENT PLACEHOLDER" }}
-        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
-      </button> -->
     </div>
     <div class="controls">
       <app-window-controls
@@ -50,8 +40,8 @@
     <app-project [index]="1"></app-project>
     } @if (tapService.activeTapProjects === 'project2') {
     <app-project [index]="2"></app-project>
-    } @if (tapService.activeTapProjects === 'development') {
-    <h1>In Development</h1>
+    } @if (tapService.activeTapProjects === 'project3') {
+    <app-project [index]="3"></app-project>
     }
   </div>
   }

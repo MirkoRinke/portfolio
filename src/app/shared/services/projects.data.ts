@@ -194,6 +194,59 @@ export const projectsDE: Project[] = [
       tap: 'Öffne Pokedex Tab',
     },
   },
+  {
+    id: 3,
+    title: 'In Development',
+    visibility: true,
+    about:
+      'Ein strukturiertes und kontinuierlich wachsendes Repository meiner Projekte',
+    description:
+      'Dieses Portfolio zeigt meine laufenden Arbeiten und Projekte. Es umfasst einen Überblick über meine Fähigkeiten und Zertifikate, die meine kontinuierliche Weiterentwicklung im Bereich der Webentwicklung dokumentieren.',
+    keyFeatures: [
+      {
+        title: 'Design ähnlich einem OS',
+        description:
+          'Fenster-ähnliches Design für verschiedene Sektionen und Elemente.',
+      },
+      {
+        title: 'Meine Skills und Zertifikate',
+        description:
+          'Übersichtliche Darstellung meiner Skills und Zertifikate.',
+      },
+      {
+        title: 'Darstellung meiner Projekte',
+        description:
+          'Browser-ähnliches Fenster mit Taps für meine Projekte. Sowie einer Tap für Projekte in Entwicklung.',
+      },
+      {
+        title: 'Interaktive Benutzeroberfläche',
+        description:
+          'Interaktive Benutzeroberfläche Fenster können minimiert, maximiert und geschlossen werden.',
+      },
+    ],
+    technologies: [
+      {
+        title: 'HTML',
+        icon: 'HTML',
+      },
+      {
+        title: 'SCSS',
+        icon: 'SCSS',
+      },
+      {
+        title: 'Angular',
+        icon: 'angular',
+      },
+    ],
+    imagePath: './projects/in-development.webp',
+    links: {
+      github: 'https://github.com/MirkoRinke/',
+      live: 'https://mirkorinke.dev',
+    },
+    ariaLabels: {
+      tap: 'Öffne In Development Tab',
+    },
+  },
 ];
 
 export const projectsEN: Project[] = [
@@ -360,6 +413,56 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open Pokedex Tab',
+    },
+  },
+  {
+    id: 3,
+    title: 'In Development',
+    visibility: true,
+    about: 'A structured and continuously growing repository of my projects',
+    description:
+      'This portfolio showcases my ongoing work and projects. It provides an overview of my skills and certifications, which document my continuous development in the field of web development.',
+    keyFeatures: [
+      {
+        title: 'OS-Like Design',
+        description: 'Window-like design for various sections and elements.',
+      },
+      {
+        title: 'My Skills and Certifications',
+        description: 'Clear representation of my skills and certifications.',
+      },
+      {
+        title: 'Project Showcase',
+        description:
+          'Browser-like window with tabs for my projects, including a tab for projects in development.',
+      },
+      {
+        title: 'Interactive User Interface',
+        description:
+          'Interactive user interface where windows can be minimized, maximized, and closed.',
+      },
+    ],
+    technologies: [
+      {
+        title: 'HTML',
+        icon: 'HTML',
+      },
+      {
+        title: 'SCSS',
+        icon: 'SCSS',
+      },
+      {
+        title: 'Angular',
+        icon: 'angular',
+      },
+    ],
+    imagePath: './projects/in-development.webp',
+    links: {
+      github: 'https://github.com/MirkoRinke/',
+      live: 'https://mirkorinke.dev',
+    },
+    ariaLabels: {
+      tap: 'Open In Development Tab',
     },
   },
 ];
