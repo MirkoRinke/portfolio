@@ -6,6 +6,10 @@ section {
   background-image: var(--hero-background);
   height: 100vh;
 
+  @media (min-height: px-to-rem(1200)) {
+    height: px-to-rem(1200);
+  }
+
   .content {
     @include max-content-settings;
     @include display-flex(center, center);
