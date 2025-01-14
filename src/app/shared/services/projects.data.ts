@@ -237,6 +237,10 @@ export const projectsDE: Project[] = [
         title: 'Angular',
         icon: 'angular',
       },
+      {
+        title: 'Figmar',
+        icon: 'figma',
+      },
     ],
     imagePath: './projects/in-development.webp',
     links: {
@@ -454,6 +458,10 @@ export const projectsEN: Project[] = [
       {
         title: 'Angular',
         icon: 'angular',
+      },
+      {
+        title: 'Figmar',
+        icon: 'figma',
       },
     ],
     imagePath: './projects/in-development.webp',
