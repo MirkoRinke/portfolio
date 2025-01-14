@@ -238,7 +238,7 @@ export const projectsDE: Project[] = [
         icon: 'angular',
       },
       {
-        title: 'Figmar',
+        title: 'Figma',
         icon: 'figma',
       },
     ],
@@ -460,7 +460,7 @@ export const projectsEN: Project[] = [
         icon: 'angular',
       },
       {
-        title: 'Figmar',
+        title: 'Figma',
         icon: 'figma',
       },
     ],
