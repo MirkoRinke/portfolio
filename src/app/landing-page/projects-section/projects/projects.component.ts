@@ -13,10 +13,11 @@ import { LanguageService } from '../../../shared/services/language.service';
 import { ModalService } from '../../../shared/services/modal.service';
 
 import { WindowControlsComponent } from '../../../shared/window-controls/window-controls.component';
+import { ProjectComponent } from '../project/project.component';
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, WindowControlsComponent],
+  imports: [CommonModule, WindowControlsComponent, ProjectComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
   providers: [WindowService],

@@ -43,13 +43,12 @@
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @if ( tapService.activeTapProjects === 'project0' ||
-    tapService.activeTapProjects === 'home') {
-    <h1>{{ languageService.projects[0].title }}</h1>
+    @if ( tapService.activeTapProjects === 'project0') {
+    <app-project [index]="0"></app-project>
     } @if (tapService.activeTapProjects === 'project1') {
-    <h1>{{ languageService.projects[1].title }}</h1>
+    <app-project [index]="1"></app-project>
     } @if (tapService.activeTapProjects === 'project2') {
-    <h1>{{ languageService.projects[2].title }}</h1>
+    <app-project [index]="2"></app-project>
     } @if (tapService.activeTapProjects === 'development') {
     <h1>In Development</h1>
     }
