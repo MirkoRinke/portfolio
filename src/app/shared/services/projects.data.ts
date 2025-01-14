@@ -25,7 +25,7 @@ export interface Technology {
 
 export interface Links {
   github: string;
-  liveTest: string;
+  live: string;
 }
 
 export const projectsEN: Project[] = [
@@ -85,7 +85,7 @@ export const projectsEN: Project[] = [
     imagePath: './projects/join.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
-      liveTest: 'https://join.mirkorinke.dev',
+      live: 'https://join.mirkorinke.dev',
     },
     ariaLabels: {
       tap: 'Open Join Tab',
@@ -94,7 +94,7 @@ export const projectsEN: Project[] = [
   {
     id: 1,
     title: 'El Pollo Loco',
-    visibility: false,
+    visibility: true,
     about: 'What is this project about?',
     description:
       'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
@@ -138,7 +138,7 @@ export const projectsEN: Project[] = [
     imagePath: './projects/el-pollo-loco.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
-      liveTest: 'https://el-pollo-loco.mirkorinke.dev',
+      live: 'https://el-pollo-loco.mirkorinke.dev',
     },
     ariaLabels: {
       tap: 'Open El Pollo Loco Tab',
@@ -147,7 +147,7 @@ export const projectsEN: Project[] = [
   {
     id: 2,
     title: 'Pokedex',
-    visibility: false,
+    visibility: true,
     about: 'What is this project about?',
     description:
       'Pokedex application to search for Pokemon and get detailed information about them. The data is fetched from an external API.',
@@ -195,7 +195,7 @@ export const projectsEN: Project[] = [
     imagePath: './projects/pokedex.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
-      liveTest: 'https://pokedex.mirkorinke.dev',
+      live: 'https://pokedex.mirkorinke.dev',
     },
     ariaLabels: {
       tap: 'Open Pokedex Tab',
@@ -260,7 +260,7 @@ export const projectsDE: Project[] = [
     imagePath: './projects/join.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
-      liveTest: 'https://join.mirkorinke.dev',
+      live: 'https://join.mirkorinke.dev',
     },
     ariaLabels: {
       tap: 'Öffne Join Tab',
@@ -269,7 +269,7 @@ export const projectsDE: Project[] = [
   {
     id: 1,
     title: 'El Pollo Loco',
-    visibility: false,
+    visibility: true,
     about: 'Worum geht es in diesem Projekt?',
     description:
       'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
@@ -314,7 +314,7 @@ export const projectsDE: Project[] = [
     imagePath: './projects/el-pollo-loco.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
-      liveTest: 'https://el-pollo-loco.mirkorinke.dev',
+      live: 'https://el-pollo-loco.mirkorinke.dev',
     },
     ariaLabels: {
       tap: 'Öffne El Pollo Loco Tab',
@@ -323,7 +323,7 @@ export const projectsDE: Project[] = [
   {
     id: 2,
     title: 'Pokedex',
-    visibility: false,
+    visibility: true,
     about: 'Worum geht es in diesem Projekt?',
     description:
       'Pokedex-Anwendung zum Suchen nach Pokemon und Abrufen detaillierter Informationen über sie. Die Daten werden von einer externen API abgerufen.',
@@ -372,7 +372,7 @@ export const projectsDE: Project[] = [
     imagePath: './projects/pokedex.webp',
     links: {
       github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
-      liveTest: 'https://pokedex.mirkorinke.dev',
+      live: 'https://pokedex.mirkorinke.dev',
     },
     ariaLabels: {
       tap: 'Öffne Pokedex Tab',

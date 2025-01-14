@@ -7,27 +7,82 @@
   gap: px-to-rem(5);
   max-width: 100%;
   width: 100%;
+  height: 100%;
 
   .top {
     @include display-flex(start, space-between);
     max-width: 100%;
     width: 100%;
+    height: 100%;
+
+    .left {
+      @include display-flex(flex-start, space-between, column);
+      gap: px-to-rem(30);
+      padding-right: 10%;
+      max-width: 50%;
+      width: 100%;
+      min-height: 100%;
+
+      h2 {
+        @include font-settings(48, 700, var(--primary-color));
+      }
+
+      .description {
+        @include display-flex(start, start, column);
+        gap: px-to-rem(30);
+
+        .textarea {
+          @include display-flex(start, start, column);
+          @include font-settings();
+          gap: px-to-rem(20);
+        }
+      }
+
+      .links {
+        @include display-flex();
+        gap: px-to-rem(60);
+
+        a {
+          @include display-flex(center, center);
+          @include font-settings();
+          gap: px-to-rem(10);
+
+          &::ng-deep .live,
+          &::ng-deep .github {
+            @include display-flex(center, center);
+            height: px-to-rem(30);
+            width: px-to-rem(30);
+            fill: var(--secondary-color);
+          }
+
+          &:hover {
+            color: var(--primary-color-hover);
+          }
+
+          &:hover ::ng-deep .live,
+          &:hover ::ng-deep .github {
+            fill: var(--primary-color-hover);
+          }
+        }
+      }
+    }
 
     .right {
       max-width: 50%;
       width: 100%;
-    }
-
-    .left {
-      max-width: 50%;
-      width: 100%;
+      padding-top: px-to-rem(20);
 
       img {
         @include display-flex(center, center);
         height: 100%;
         width: 100%;
-
         border-radius: px-to-rem(15);
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transition: transform 0.3s ease-in-out;
+          transform: rotate(5deg);
+        }
       }
     }
   }

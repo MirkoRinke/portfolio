@@ -83,7 +83,7 @@
       fill: var(--primary-color);
 
       &:hover {
-        fill: var(--primary-color-50);
+        fill: var(--primary-color-hover);
         cursor: pointer;
       }
     }
@@ -94,7 +94,7 @@
   @include font-settings();
 
   &:hover {
-    color: var(--secondary-color-80);
+    color: var(--secondary-color-hover);
   }
 }
 
@@ -119,11 +119,11 @@
 
   &:hover {
     cursor: pointer;
-    background-color: var(--primary-color-25);
+    background-color: var(--primary-color-hover);
   }
 
   &.active {
-    background-color: var(--primary-color-25);
+    background-color: var(--primary-color-hover);
   }
 }
 
@@ -135,7 +135,7 @@
   overflow-y: auto;
 
   &:hover p {
-    color: var(--secondary-color-80);
+    color: var(--secondary-color-hover);
   }
 }
 
@@ -149,10 +149,10 @@
     @include display-flex(center, center);
     height: px-to-rem(50);
     width: px-to-rem(50);
-    fill: var(--primary-color);
+    fill: var(--secondary-color);
 
     &:hover {
-      fill: var(--primary-color-50);
+      fill: var(--primary-color-hover);
       cursor: pointer;
     }
   }

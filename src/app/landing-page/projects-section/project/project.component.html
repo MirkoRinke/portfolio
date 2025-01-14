@@ -1,10 +1,34 @@
 <div class="project">
   <div class="top">
-    <div class="right">
-      <h1>{{ languageService.projects[index].title }}</h1>
-    </div>
     <div class="left">
-      <img [src]="languageService.projects[index].imagePath" />
+      <div class="description">
+        <h2>{{ languageService.projects[index].title }}</h2>
+
+        <div class="textarea">
+          <p>{{ languageService.projects[index].about }}</p>
+          <p>{{ languageService.projects[index].description }}</p>
+        </div>
+      </div>
+
+      <div class="links">
+        <a
+          href="{{ languageService.projects[index].links.live }}"
+          target="_blank"
+          ><span [innerHTML]="svgIconsService.returnIcon('live')"></span>
+          Live</a
+        >
+        <a
+          href="{{ languageService.projects[index].links.github }}"
+          target="_blank"
+          ><span [innerHTML]="svgIconsService.returnIcon('github')"></span>
+          Github</a
+        >
+      </div>
+    </div>
+    <div class="right">
+      <a href="{{ languageService.projects[index].links.live }}">
+        <img [src]="languageService.projects[index].imagePath" />
+      </a>
     </div>
   </div>
 </div>
