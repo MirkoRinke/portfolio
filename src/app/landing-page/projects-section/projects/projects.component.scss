@@ -24,7 +24,7 @@
     @include window-content;
     @include display-flex(start, space-between, column);
     padding: px-to-rem(20) px-to-rem(30);
-    height: px-to-rem(600);
+    height: px-to-rem(800);
 
     app-project {
       width: 100%;
