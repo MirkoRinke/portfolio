@@ -6,19 +6,19 @@ section {
   background-image: var(--hero-background);
   height: 100vh;
 
-  @media (min-height: px-to-rem(1200)) {
+  @media (min-height: px-to-rem(1200)) and (orientation: landscape) {
     height: px-to-rem(1200);
   }
 
   .content {
     @include max-content-settings;
     @include display-flex(center, center);
-    gap: px-to-rem(100);
+    gap: 5%;
     min-height: 100%;
-    padding-bottom: px-to-rem(100);
+    padding-block: px-to-rem(200);
 
     &::ng-deep .hero-icons {
-      height: px-to-rem(100);
+      height: clamp(px-to-rem(25), 6vw, px-to-rem(100));
       fill: var(--primary-color-10);
       filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
     }
@@ -35,20 +35,20 @@ section {
 
       &::ng-deep .react,
       &::ng-deep .vue {
-        transform: rotate(15deg) translateY(px-to-rem(50));
+        transform: rotate(15deg) translateY(px-to-rem(0));
       }
     }
 
     .central-section {
       @include display-flex(center, center, column);
-      gap: px-to-rem(50);
+      gap: px-to-rem(70);
 
       .icons-top {
         @include display-flex(center, space-between);
         min-width: 85%;
 
         &::ng-deep .typeScript {
-          transform: rotate(-5deg) translateX(px-to-rem(100));
+          transform: rotate(-5deg) translateX(px-to-rem(20));
         }
 
         &::ng-deep .angular {

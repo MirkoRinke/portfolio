@@ -27,6 +27,7 @@
     background-color: var(--primary-color-25);
     border-radius: px-to-rem(10);
     color: var(--secondary-color);
+    margin-top: px-to-rem(100);
     filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
 
     span {
