@@ -30,14 +30,17 @@
         >
         @if (languageService.projects[index].title === 'In Development') {
         <a
-          href="{{ languageService.projects[index].links.organization }}"
+          href="{{ languageService.projects[index].organization.link }}"
           target="_blank"
           ><span
             [innerHTML]="
-              svgIconsService.returnIcon('organization', 'icon-link')
+              svgIconsService.returnIcon(
+                languageService.projects[index].organization.icon,
+                'icon-link'
+              )
             "
           ></span>
-          Organization</a
+          {{ languageService.projects[index].organization.name }}</a
         >
         }
       </div>
