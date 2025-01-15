@@ -60,8 +60,9 @@ interface Expertise {
       content: string;
     };
     taps: {
-      skillsTap: string;
-      certificatesTap: string;
+      [key: string]: string;
+      skills: string;
+      certificates: string;
     };
   };
   ariaLabels: {
@@ -73,8 +74,9 @@ interface Expertise {
       next: string;
     };
     taps: {
-      skillsTap: string;
-      certificatesTap: string;
+      [key: string]: string;
+      skills: string;
+      certificates: string;
     };
     desktopIcon: string;
   };
@@ -142,8 +144,8 @@ export const textsDE: Texts = {
         content: 'Zertifikat Bild',
       },
       taps: {
-        skillsTap: 'Fähigkeiten',
-        certificatesTap: 'Zertifikate',
+        skills: 'Fähigkeiten',
+        certificates: 'Zertifikate',
       },
     },
     ariaLabels: {
@@ -155,8 +157,8 @@ export const textsDE: Texts = {
         next: 'Nächstes Zertifikat',
       },
       taps: {
-        skillsTap: 'Öffne Fähigkeiten Tab',
-        certificatesTap: 'Öffne Zertifikate Tab',
+        skills: 'Öffne Fähigkeiten Tab',
+        certificates: 'Öffne Zertifikate Tab',
       },
       desktopIcon: 'Öffne Expertise Fenster',
     },
@@ -224,8 +226,8 @@ export const textsEN: Texts = {
         content: 'Certificate Image',
       },
       taps: {
-        skillsTap: 'Skills',
-        certificatesTap: 'Certificates',
+        skills: 'Skills',
+        certificates: 'Certificates',
       },
     },
     ariaLabels: {
@@ -237,8 +239,8 @@ export const textsEN: Texts = {
         next: 'Next Certificate',
       },
       taps: {
-        skillsTap: 'Open Skills Tab',
-        certificatesTap: 'Open Certificates Tab',
+        skills: 'Open Skills Tab',
+        certificates: 'Open Certificates Tab',
       },
       desktopIcon: 'Open Expertise  Windows',
     },

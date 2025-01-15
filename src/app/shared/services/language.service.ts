@@ -46,4 +46,8 @@ export class LanguageService {
       (this.texts = textsEN), (this.projects = projectsEN);
     else (this.texts = textsEN), (this.projects = projectsEN);
   }
+
+  objectKeys(obj: any) {
+    return Object.keys(obj);
+  }
 }

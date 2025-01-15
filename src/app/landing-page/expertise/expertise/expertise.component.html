@@ -2,30 +2,20 @@
 <div class="expertise">
   <div class="title-bar">
     <div class="taps">
+      @for (tap of
+      languageService.objectKeys(languageService.texts.expertise.certificates.taps);
+      track $index) {
       <button
         class="tap"
-        [class.active]="tapService.activeTapExpertise === 'skills'"
-        (click)="tapService.activateTap('skills', 'expertise')"
-        [attr.aria-pressed]="tapService.activeTapExpertise === 'skills'"
-        [attr.aria-label]="
-          languageService.texts.expertise.ariaLabels.taps.skillsTap
-        "
+        [class.active]="tapService.activeTapExpertise === tap"
+        (click)="tapService.activateTap(tap, 'expertise')"
+        [attr.aria-pressed]="tapService.activeTapExpertise === tap"
+        [attr.aria-label]="languageService.texts.expertise.ariaLabels.taps[tap]"
       >
-        {{ languageService.texts.expertise.certificates.taps.skillsTap }}
+        {{ languageService.texts.expertise.certificates.taps[tap] }}
         <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
       </button>
-      <button
-        class="tap"
-        [class.active]="tapService.activeTapExpertise === 'certificates'"
-        (click)="tapService.activateTap('certificates', 'expertise')"
-        [attr.aria-pressed]="tapService.activeTapExpertise === 'certificates'"
-        [attr.aria-label]="
-          languageService.texts.expertise.ariaLabels.taps.certificatesTap
-        "
-      >
-        {{ languageService.texts.expertise.certificates.taps.certificatesTap }}
-        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
-      </button>
+      }
     </div>
     <div class="controls">
       <app-window-controls
