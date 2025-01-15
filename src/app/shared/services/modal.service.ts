@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { UtilityService } from './utility.service';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -10,12 +12,14 @@ export class ModalService {
 
   ifModalOpen: boolean = false;
 
+  constructor(public utilityService: UtilityService) {}
+
   openModal(modal: Object | string, index: number, activeModal: string) {
     this.modal = modal;
     if (this.modal !== 'unset') this.index = index;
     this.activeModal = activeModal;
     this.ifModalOpen = true;
-    this.disabledScroll();
+    this.utilityService.disabledScroll();
   }
 
   prevModal(modal: any, index: number, activeModal: string) {
@@ -50,18 +54,6 @@ export class ModalService {
 
   closeModal() {
     this.ifModalOpen = false;
-    this.enableScroll();
-  }
-
-  disabledScroll() {
-    const scrollBarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
-    document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = `${scrollBarWidth}px`;
-  }
-
-  enableScroll() {
-    document.body.style.overflow = '';
-    document.body.style.paddingRight = '';
+    this.utilityService.enableScroll();
   }
 }

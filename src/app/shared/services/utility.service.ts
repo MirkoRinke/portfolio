@@ -4,6 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class UtilityService {
+  disabledScroll() {
+    const scrollBarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = `${scrollBarWidth}px`;
+  }
+
+  enableScroll() {
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+  }
+
   objectKeys(obj: any) {
     return Object.keys(obj);
   }
