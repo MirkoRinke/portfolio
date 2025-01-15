@@ -26,21 +26,29 @@ interface HeroTexts {
   contactMe: string;
 }
 
+interface InfoBox {
+  title: string;
+  textarea: string;
+}
+
 interface aboutMeTexts {
   portrait: {
     title: string;
   };
-  infoBox0: {
-    title: string;
-    textarea: string;
-  };
-  infoBox1: {
-    title: string;
-    textarea: string;
-  };
-  infoBox2: {
-    title: string;
-    textarea: string;
+  infoBox: {
+    [key: string]: InfoBox;
+    infoBox0: {
+      title: string;
+      textarea: string;
+    };
+    infoBox1: {
+      title: string;
+      textarea: string;
+    };
+    infoBox2: {
+      title: string;
+      textarea: string;
+    };
   };
   ariaLabels: {
     portrait: {
@@ -112,20 +120,22 @@ export const textsDE: Texts = {
     portrait: {
       title: 'portrait.bmp',
     },
-    infoBox0: {
-      title: 'moderne_arbeit.txt',
-      textarea:
-        'Derzeit konzentriere ich mich auf die Remote-Arbeit, da sie mir die Flexibilität und das Umfeld bietet, die meine Produktivität steigern. Ich schätze eine gesunde Work-Life-Balance und die Möglichkeit, meine eigene Zeit zu managen, die die Remote-Arbeit bietet.',
-    },
-    infoBox1: {
-      title: 'persoenliches_wachstum.txt',
-      textarea:
-        'Ich bin aufgeschlossen und suche ständig nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.',
-    },
-    infoBox2: {
-      title: 'programmierphilosophie.txt',
-      textarea:
-        'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung.',
+    infoBox: {
+      infoBox0: {
+        title: 'moderne_arbeit.txt',
+        textarea:
+          'Derzeit konzentriere ich mich auf die Remote-Arbeit, da sie mir die Flexibilität und das Umfeld bietet, die meine Produktivität steigern. Ich schätze eine gesunde Work-Life-Balance und die Möglichkeit, meine eigene Zeit zu managen, die die Remote-Arbeit bietet.',
+      },
+      infoBox1: {
+        title: 'persoenliches_wachstum.txt',
+        textarea:
+          'Ich bin aufgeschlossen und suche ständig nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.',
+      },
+      infoBox2: {
+        title: 'programmierphilosophie.txt',
+        textarea:
+          'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung.',
+      },
     },
     ariaLabels: {
       portrait: {
@@ -194,20 +204,22 @@ export const textsEN: Texts = {
     portrait: {
       title: 'portrait.bmp',
     },
-    infoBox0: {
-      title: 'modern_work.txt',
-      textarea:
-        'Currently, I am focusing on remote work, as it provides me with the flexibility and environment that boost my productivity. I value a healthy work-life balance and the ability to manage my own time, which remote work allows.',
-    },
-    infoBox1: {
-      title: 'personal_growth.txt',
-      textarea:
-        'I am open-minded and always looking for new challenges to constantly improve my knowledge and skills.',
-    },
-    infoBox2: {
-      title: 'programming_philosophy.txt',
-      textarea:
-        'In my profession, programming isn’t just about writing code; it’s a creative form of problem-solving.',
+    infoBox: {
+      infoBox0: {
+        title: 'modern_work.txt',
+        textarea:
+          'Currently, I am focusing on remote work, as it provides me with the flexibility and environment that boost my productivity. I value a healthy work-life balance and the ability to manage my own time, which remote work allows.',
+      },
+      infoBox1: {
+        title: 'personal_growth.txt',
+        textarea:
+          'I am open-minded and always looking for new challenges to constantly improve my knowledge and skills.',
+      },
+      infoBox2: {
+        title: 'programming_philosophy.txt',
+        textarea:
+          'In my profession, programming isn’t just about writing code; it’s a creative form of problem-solving.',
+      },
     },
     ariaLabels: {
       portrait: {

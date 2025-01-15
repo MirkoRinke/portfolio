@@ -1,35 +1,21 @@
 <section>
   <app-portrait></app-portrait>
   <div class="info">
+    @for (item of
+    utilityService.objectKeys(languageService.texts.aboutMe.infoBox); track
+    $index) {
     <app-info-box
-      [title]="languageService.texts.aboutMe.infoBox0.title"
-      [textarea]="languageService.texts.aboutMe.infoBox0.textarea"
-      [index]="0"
+      [title]="languageService.texts.aboutMe.infoBox['infoBox' + $index].title"
+      [textarea]="
+        languageService.texts.aboutMe.infoBox['infoBox' + $index].textarea
+      "
+      [index]="$index"
       [attr.aria-label]="[
         languageService.texts.aboutMe.ariaLabels.infoBox.description +
           ' ' +
-          languageService.texts.aboutMe.infoBox0.title
+          languageService.texts.aboutMe.infoBox['infoBox' + $index].title
       ]"
     ></app-info-box>
-    <app-info-box
-      [title]="languageService.texts.aboutMe.infoBox1.title"
-      [textarea]="languageService.texts.aboutMe.infoBox1.textarea"
-      [index]="1"
-      [attr.aria-label]="[
-        languageService.texts.aboutMe.ariaLabels.infoBox.description +
-          ' ' +
-          languageService.texts.aboutMe.infoBox1.title
-      ]"
-    ></app-info-box>
-    <app-info-box
-      [title]="languageService.texts.aboutMe.infoBox2.title"
-      [textarea]="languageService.texts.aboutMe.infoBox2.textarea"
-      [index]="2"
-      [attr.aria-label]="[
-        languageService.texts.aboutMe.ariaLabels.infoBox.description +
-          ' ' +
-          languageService.texts.aboutMe.infoBox2.title
-      ]"
-    ></app-info-box>
+    }
   </div>
 </section>

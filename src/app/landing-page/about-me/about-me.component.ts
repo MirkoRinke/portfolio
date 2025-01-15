@@ -3,6 +3,7 @@ import { PortraitComponent } from './portrait/portrait.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
 
 import { LanguageService } from '../../shared/services/language.service';
+import { UtilityService } from '../../shared/services/utility.service';
 
 @Component({
   selector: 'app-about-me',
@@ -11,5 +12,8 @@ import { LanguageService } from '../../shared/services/language.service';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
-  constructor(public languageService: LanguageService) {}
+  constructor(
+    public languageService: LanguageService,
+    public utilityService: UtilityService
+  ) {}
 }

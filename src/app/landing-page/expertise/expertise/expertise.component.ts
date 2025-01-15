@@ -13,6 +13,8 @@ import { CertificatesComponent } from './../certificates/certificates.component'
 
 import { LanguageService } from '../../../shared/services/language.service';
 
+import { UtilityService } from '../../../shared/services/utility.service';
+
 import { ModalService } from '../../../shared/services/modal.service';
 
 import { WindowControlsComponent } from '../../../shared/window-controls/window-controls.component';
@@ -39,7 +41,8 @@ export class ExpertiseComponent {
     public windowService: WindowService,
     public tapService: TapService,
     public languageService: LanguageService,
-    public modalService: ModalService
+    public modalService: ModalService,
+    public utilityService: UtilityService
   ) {
     this.updateSelectedComponent();
   }
