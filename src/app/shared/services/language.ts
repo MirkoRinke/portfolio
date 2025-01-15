@@ -30,15 +30,15 @@ interface aboutMeTexts {
   portrait: {
     title: string;
   };
+  infoBox0: {
+    title: string;
+    textarea: string;
+  };
   infoBox1: {
     title: string;
     textarea: string;
   };
   infoBox2: {
-    title: string;
-    textarea: string;
-  };
-  infoBox3: {
     title: string;
     textarea: string;
   };
@@ -112,17 +112,17 @@ export const textsDE: Texts = {
     portrait: {
       title: 'portrait.bmp',
     },
-    infoBox1: {
+    infoBox0: {
       title: 'moderne_arbeit.txt',
       textarea:
         'Derzeit konzentriere ich mich auf die Remote-Arbeit, da sie mir die Flexibilität und das Umfeld bietet, die meine Produktivität steigern. Ich schätze eine gesunde Work-Life-Balance und die Möglichkeit, meine eigene Zeit zu managen, die die Remote-Arbeit bietet.',
     },
-    infoBox2: {
+    infoBox1: {
       title: 'persoenliches_wachstum.txt',
       textarea:
         'Ich bin aufgeschlossen und suche ständig nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.',
     },
-    infoBox3: {
+    infoBox2: {
       title: 'programmierphilosophie.txt',
       textarea:
         'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung.',
@@ -194,17 +194,17 @@ export const textsEN: Texts = {
     portrait: {
       title: 'portrait.bmp',
     },
-    infoBox1: {
+    infoBox0: {
       title: 'modern_work.txt',
       textarea:
         'Currently, I am focusing on remote work, as it provides me with the flexibility and environment that boost my productivity. I value a healthy work-life balance and the ability to manage my own time, which remote work allows.',
     },
-    infoBox2: {
+    infoBox1: {
       title: 'personal_growth.txt',
       textarea:
         'I am open-minded and always looking for new challenges to constantly improve my knowledge and skills.',
     },
-    infoBox3: {
+    infoBox2: {
       title: 'programming_philosophy.txt',
       textarea:
         'In my profession, programming isn’t just about writing code; it’s a creative form of problem-solving.',

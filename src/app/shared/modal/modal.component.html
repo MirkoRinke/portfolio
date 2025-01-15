@@ -48,9 +48,21 @@
     ></app-portrait>
     } @else if (modalService.activeModal === "infoBox0") {
     <app-info-box
+      [title]="languageService.texts.aboutMe.infoBox0.title"
+      [textarea]="languageService.texts.aboutMe.infoBox0.textarea"
+      [index]="0"
+      [modalActive]="true"
+      [attr.aria-label]="[
+        languageService.texts.aboutMe.ariaLabels.infoBox.description +
+          ' ' +
+          languageService.texts.aboutMe.infoBox0.title
+      ]"
+    ></app-info-box>
+    } @else if (modalService.activeModal === "infoBox1") {
+    <app-info-box
       [title]="languageService.texts.aboutMe.infoBox1.title"
       [textarea]="languageService.texts.aboutMe.infoBox1.textarea"
-      [index]="0"
+      [index]="1"
       [modalActive]="true"
       [attr.aria-label]="[
         languageService.texts.aboutMe.ariaLabels.infoBox.description +
@@ -58,28 +70,16 @@
           languageService.texts.aboutMe.infoBox1.title
       ]"
     ></app-info-box>
-    } @else if (modalService.activeModal === "infoBox1") {
+    } @else if (modalService.activeModal === "infoBox2") {
     <app-info-box
       [title]="languageService.texts.aboutMe.infoBox2.title"
       [textarea]="languageService.texts.aboutMe.infoBox2.textarea"
-      [index]="1"
-      [modalActive]="true"
-      [attr.aria-label]="[
-        languageService.texts.aboutMe.ariaLabels.infoBox.description +
-          ' ' +
-          languageService.texts.aboutMe.infoBox2.title
-      ]"
-    ></app-info-box>
-    } @else if (modalService.activeModal === "infoBox2") {
-    <app-info-box
-      [title]="languageService.texts.aboutMe.infoBox3.title"
-      [textarea]="languageService.texts.aboutMe.infoBox3.textarea"
       [index]="2"
       [modalActive]="true"
       [attr.aria-label]="[
         languageService.texts.aboutMe.ariaLabels.infoBox.description +
           ' ' +
-          languageService.texts.aboutMe.infoBox3.title
+          languageService.texts.aboutMe.infoBox2.title
       ]"
     ></app-info-box>
     } @else if (modalService.activeModal === "expertise") {
