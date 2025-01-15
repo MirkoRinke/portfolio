@@ -19,12 +19,7 @@ import { WindowControlsComponent } from '../../../shared/window-controls/window-
 
 @Component({
   selector: 'app-expertise',
-  imports: [
-    CommonModule,
-    SkillsComponent,
-    CertificatesComponent,
-    WindowControlsComponent,
-  ],
+  imports: [CommonModule, WindowControlsComponent],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.scss',
   providers: [WindowService],
@@ -32,11 +27,29 @@ import { WindowControlsComponent } from '../../../shared/window-controls/window-
 export class ExpertiseComponent {
   @Input() modalActive!: boolean;
 
+  selectedComponent: any;
+
+  componentMapping: { [key: string]: any } = {
+    skills: SkillsComponent,
+    certificates: CertificatesComponent,
+  };
+
   constructor(
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
     public tapService: TapService,
     public languageService: LanguageService,
     public modalService: ModalService
-  ) {}
+  ) {
+    this.updateSelectedComponent();
+  }
+
+  updateSelectedComponent() {
+    this.selectedComponent =
+      this.componentMapping[this.tapService.activeTapExpertise];
+  }
+
+  ngOnChanges() {
+    this.updateSelectedComponent();
+  }
 }

@@ -8,7 +8,7 @@
       <button
         class="tap"
         [class.active]="tapService.activeTapExpertise === tap"
-        (click)="tapService.activateTap(tap, 'expertise')"
+        (click)="tapService.activateTap(tap, 'expertise'); ngOnChanges()"
         [attr.aria-pressed]="tapService.activeTapExpertise === tap"
         [attr.aria-label]="languageService.texts.expertise.ariaLabels.taps[tap]"
       >
@@ -33,11 +33,7 @@
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @if ( tapService.activeTapExpertise === 'skills') {
-    <app-skills></app-skills>
-    } @if (tapService.activeTapExpertise === 'certificates') {
-    <app-certificates></app-certificates>
-    }
+    <ng-container *ngComponentOutlet="selectedComponent"></ng-container>
   </div>
   }
 </div>
