@@ -34,15 +34,11 @@
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @if ( tapService.activeTapProjects === 'project0') {
-    <app-project [index]="0"></app-project>
-    } @if (tapService.activeTapProjects === 'project1') {
-    <app-project [index]="1"></app-project>
-    } @if (tapService.activeTapProjects === 'project2') {
-    <app-project [index]="2"></app-project>
-    } @if (tapService.activeTapProjects === 'project3') {
-    <app-project [index]="3"></app-project>
-    }
+    @for (project of languageService.projects; track $index) { @if
+    (project.visibility && tapService.activeTapProjects === 'project' + $index)
+    {
+    <app-project [index]="$index"></app-project>
+    } }
   </div>
   }
 </div>
