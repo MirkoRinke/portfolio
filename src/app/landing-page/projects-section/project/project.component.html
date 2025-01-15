@@ -3,7 +3,6 @@
     <div class="left">
       <div class="description">
         <h2>{{ languageService.projects[index].title }}</h2>
-
         <div class="textarea">
           <p>{{ languageService.projects[index].about }}</p>
           <p>{{ languageService.projects[index].description }}</p>
@@ -66,7 +65,6 @@
     <div class="technologies">
       @for (technology of languageService.projects[index].technologies; track
       $index) {
-
       <div class="technology">
         <div
           [innerHTML]="
@@ -78,7 +76,6 @@
         ></div>
         <p>{{ languageService.projects[index].technologies[$index].title }}</p>
       </div>
-
       }
     </div>
   </div>
