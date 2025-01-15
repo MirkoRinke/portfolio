@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { type Texts, textsDE, textsEN } from './language';
-import { type Project, projectsDE, projectsEN } from './projects.data';
+import {
+  type Project,
+  projectsDE,
+  projectsEN,
+} from './../../landing-page/projects-section/project/projects.data';
 
 @Injectable({
   providedIn: 'root',
