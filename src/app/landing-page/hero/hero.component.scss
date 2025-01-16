@@ -15,7 +15,7 @@ section {
     @include display-flex(center, center);
     gap: 5%;
     min-height: 100%;
-    padding-block: px-to-rem(200);
+    padding-block: px-to-rem(100);
 
     &::ng-deep .hero-icons {
       height: clamp(px-to-rem(25), 6vw, px-to-rem(100));
