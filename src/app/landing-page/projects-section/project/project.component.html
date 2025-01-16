@@ -53,6 +53,7 @@ languageService.texts.ariaLabels;
     </div>
     <div class="right">
       <a
+        class="image-wrapper"
         href="{{ project.links.live }} "
         target="_blank"
         [attr.aria-label]="ariaLabels.links.liveLink + ' ' + project.title"
@@ -83,6 +84,7 @@ languageService.texts.ariaLabels;
       <div class="technology">
         <div
           [attr.aria-label]="project.technologies[$index].title + ' icon'"
+          [attr.aria-hidden]="true"
           [innerHTML]="
             svgIconsService.returnIcon(
               project.technologies[$index].icon,
