@@ -1,20 +1,17 @@
+@let ariaLabels = languageService.texts.aboutMe.ariaLabels.infoBox; @let
+infoBoxPath = languageService.texts.aboutMe.infoBox;
+
 <section>
   <app-portrait></app-portrait>
   <div class="info">
     @for (item of
     utilityService.objectKeys(languageService.texts.aboutMe.infoBox); track
-    $index) {
+    $index) { @let infoBox = infoBoxPath['infoBox' + $index];
     <app-info-box
-      [title]="languageService.texts.aboutMe.infoBox['infoBox' + $index].title"
-      [textarea]="
-        languageService.texts.aboutMe.infoBox['infoBox' + $index].textarea
-      "
+      [title]="infoBox.title"
+      [textarea]="infoBox.textarea"
       [index]="$index"
-      [attr.aria-label]="[
-        languageService.texts.aboutMe.ariaLabels.infoBox.description +
-          ' ' +
-          languageService.texts.aboutMe.infoBox['infoBox' + $index].title
-      ]"
+      [attr.aria-label]="[ariaLabels.description + ' ' + infoBox.title]"
     ></app-info-box>
     }
   </div>
