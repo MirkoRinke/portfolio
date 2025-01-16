@@ -3,6 +3,7 @@ export interface Texts {
   navigation: navigationTexts;
   hero: HeroTexts;
   aboutMe: aboutMeTexts;
+  projects: projectsTexts;
   ariaLabels: AriaLabels;
   expertise: Expertise;
 }
@@ -52,17 +53,16 @@ interface aboutMeTexts {
   };
   ariaLabels: {
     portrait: {
-      desktopIcon: string;
       content: string;
     };
     infoBox: {
-      desktopIcon: string;
       description: string;
     };
   };
 }
 
 interface Expertise {
+  title: string;
   certificates: {
     certificateModal: {
       content: string;
@@ -86,8 +86,11 @@ interface Expertise {
       skills: string;
       certificates: string;
     };
-    desktopIcon: string;
   };
+}
+
+interface projectsTexts {
+  title: string;
 }
 
 interface AriaLabels {
@@ -95,6 +98,10 @@ interface AriaLabels {
     minimize: string;
     maximize: string;
     close: string;
+  };
+  desktopIcon: {
+    firstText: string;
+    secondText: string;
   };
 }
 
@@ -139,16 +146,15 @@ export const textsDE: Texts = {
     },
     ariaLabels: {
       portrait: {
-        desktopIcon: 'Porträt öffnen',
         content: 'Portrait von Mirko Rinke',
       },
       infoBox: {
-        desktopIcon: 'Fenster öffnen',
         description: 'Information Box über',
       },
     },
   },
   expertise: {
+    title: 'Expertise',
     certificates: {
       certificateModal: {
         content: 'Zertifikat Bild',
@@ -170,14 +176,20 @@ export const textsDE: Texts = {
         skills: 'Öffne Fähigkeiten Tab',
         certificates: 'Öffne Zertifikate Tab',
       },
-      desktopIcon: 'Öffne Expertise Fenster',
     },
+  },
+  projects: {
+    title: 'Projekte',
   },
   ariaLabels: {
     controls: {
       minimize: 'Minimieren',
       maximize: 'Maximieren',
       close: 'Schließen',
+    },
+    desktopIcon: {
+      firstText: 'Öffnen',
+      secondText: 'Fenster',
     },
   },
 };
@@ -223,16 +235,15 @@ export const textsEN: Texts = {
     },
     ariaLabels: {
       portrait: {
-        desktopIcon: 'Open Portrait',
         content: 'Portrait of Mirko Rinke',
       },
       infoBox: {
-        desktopIcon: 'Open Window',
         description: 'Information Box about',
       },
     },
   },
   expertise: {
+    title: 'Expertise',
     certificates: {
       certificateModal: {
         content: 'Certificate Image',
@@ -254,14 +265,20 @@ export const textsEN: Texts = {
         skills: 'Open Skills Tab',
         certificates: 'Open Certificates Tab',
       },
-      desktopIcon: 'Open Expertise  Windows',
     },
+  },
+  projects: {
+    title: 'Projects',
   },
   ariaLabels: {
     controls: {
       minimize: 'Minimize',
       maximize: 'Maximize',
       close: 'Close',
+    },
+    desktopIcon: {
+      firstText: 'Open',
+      secondText: 'Window',
     },
   },
 };

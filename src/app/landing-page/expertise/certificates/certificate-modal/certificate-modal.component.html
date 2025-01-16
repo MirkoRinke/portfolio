@@ -1,12 +1,14 @@
+@let certificateModal =
+languageService.texts.expertise.certificates.certificateModal; @let ariaLabels =
+languageService.texts.expertise.ariaLabels.certificateModal;
+
 <div class="modal-content">
   <span
     class="left"
     (click)="
       modalService.prevModal(modalService.modal, index - 1, 'certificate')
     "
-    [attr.aria-label]="
-      languageService.texts.expertise.ariaLabels.certificateModal.previous
-    "
+    [attr.aria-label]="ariaLabels.previous"
   ></span>
   <img
     [src]="modal[index].image"
@@ -15,7 +17,7 @@
         ? modal[index].titleDE
         : modal[index].titleEN) +
       ' ' +
-      languageService.texts.expertise.certificates.certificateModal.content
+      certificateModal.content
     "
   />
   <span
@@ -23,8 +25,6 @@
     (click)="
       modalService.nextModal(modalService.modal, index + 1, 'certificate')
     "
-    [attr.aria-label]="
-      languageService.texts.expertise.ariaLabels.certificateModal.next
-    "
+    [attr.aria-label]="ariaLabels.next"
   ></span>
 </div>

@@ -1,3 +1,5 @@
+@let ariaLabels = languageService.texts.expertise.ariaLabels.certificates;
+
 <div class="certificates">
   @for (certificate of certificates; track $index) { @if
   (certificate.visibility) {
@@ -5,7 +7,7 @@
     (click)="modalService.openModal(certificates, $index, 'certificate')"
     class="certificate"
     [attr.aria-label]="
-      languageService.texts.expertise.ariaLabels.certificates.openCertificate +
+      ariaLabels.openCertificate +
       ' ' +
       (languageService.getLanguage() == 'de'
         ? certificate.titleDE

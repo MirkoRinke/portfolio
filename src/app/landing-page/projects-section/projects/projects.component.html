@@ -1,11 +1,9 @@
-<!-- TODO languageService for desktop-icon -->
-
-@if (windowService.ifWindowOpen) {
+@let projects = languageService.projects; @let ariaLabels =
+languageService.texts.ariaLabels.desktopIcon; @if (windowService.ifWindowOpen) {
 <div class="projects">
   <div class="title-bar">
     <div class="taps">
-      @for (project of languageService.projects; track $index) { @if
-      (project.visibility) {
+      @for (project of projects; track $index) { @if (project.visibility) {
       <button
         class="tap"
         [class.active]="tapService.activeTapProjects === 'project' + $index"
@@ -13,9 +11,9 @@
         [attr.aria-pressed]="
           tapService.activeTapProjects === 'project' + $index
         "
-        [attr.aria-label]="languageService.projects[$index].title"
+        [attr.aria-label]="projects[$index].title"
       >
-        {{ languageService.projects[$index].title }}
+        {{ projects[$index].title }}
         <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
       </button>
       } }
@@ -36,9 +34,8 @@
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    @for (project of languageService.projects; track $index) { @if
-    (project.visibility && tapService.activeTapProjects === 'project' + $index)
-    {
+    @for (project of projects; track $index) { @if (project.visibility &&
+    tapService.activeTapProjects === 'project' + $index) {
     <app-project [index]="$index"></app-project>
     } }
   </div>
@@ -50,9 +47,11 @@
   (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('folder', 'desktop-icon')"
   [attr.aria-label]="
-    languageService.getLanguage() === 'de'
-      ? 'Öffne Projects Fenster'
-      : 'Open Projects Window'
+    ariaLabels.firstText +
+    ' ' +
+    languageService.texts.projects.title +
+    ' ' +
+    ariaLabels.secondText
   "
 ></button>
 }

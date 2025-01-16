@@ -1,6 +1,5 @@
+@let ariaLabels = languageService.texts.aboutMe.ariaLabels.portrait;
+
 <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-  <img
-    src="./about-me/portrait.webp"
-    [alt]="languageService.texts.aboutMe.ariaLabels.portrait.content"
-  />
+  <img src="./about-me/portrait.webp" [alt]="ariaLabels.content" />
 </div>

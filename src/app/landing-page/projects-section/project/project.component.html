@@ -1,85 +1,73 @@
 <!-- TODO aria attributes -->
 
+@let project = languageService.projects[index];
+
 <div class="project">
   <div class="top">
     <div class="left">
       <div class="description">
-        <h2>{{ languageService.projects[index].title }}</h2>
+        <h2>{{ project.title }}</h2>
         <div class="textarea">
-          <p>{{ languageService.projects[index].about }}</p>
-          <p>{{ languageService.projects[index].description }}</p>
+          <p>{{ project.about }}</p>
+          <p>{{ project.description }}</p>
         </div>
       </div>
       <div class="links">
-        @if (languageService.projects[index].title !== 'In Development') {
-        <a
-          href="{{ languageService.projects[index].links.live }}"
-          target="_blank"
+        @if (project.title !== 'In Development') {
+        <a href="{{ project.links.live }}" target="_blank"
           ><span
             [innerHTML]="svgIconsService.returnIcon('live', 'icon-link')"
           ></span>
           Live</a
         >
         }
-        <a
-          href="{{ languageService.projects[index].links.github }}"
-          target="_blank"
+        <a href="{{ project.links.github }}" target="_blank"
           ><span
             [innerHTML]="svgIconsService.returnIcon('github', 'icon-link')"
           ></span>
           Github</a
         >
-        @if (languageService.projects[index].title === 'In Development') {
-        <a
-          href="{{ languageService.projects[index].organization.link }}"
-          target="_blank"
+        @if (project.title === 'In Development') {
+        <a href="{{ project.organization.link }}" target="_blank"
           ><span
             [innerHTML]="
-              svgIconsService.returnIcon(
-                languageService.projects[index].organization.icon,
-                'icon-link'
-              )
+              svgIconsService.returnIcon(project.organization.icon, 'icon-link')
             "
           ></span>
-          {{ languageService.projects[index].organization.name }}</a
+          {{ project.organization.name }}</a
         >
         }
       </div>
     </div>
     <div class="right">
-      <a
-        href="{{ languageService.projects[index].links.live }} "
-        target="_blank"
-      >
-        <img [src]="languageService.projects[index].imagePath" />
+      <a href="{{ project.links.live }} " target="_blank">
+        <img [src]="project.imagePath" />
       </a>
     </div>
   </div>
   <div class="middle">
-    @for (keyFeatures of languageService.projects[index].keyFeatures; track
-    $index) {
+    @for (keyFeatures of project.keyFeatures; track $index) {
     <div class="keyFeature">
-      <h3>{{ languageService.projects[index].keyFeatures[$index].title }}</h3>
+      <h3>{{ project.keyFeatures[$index].title }}</h3>
       <p>
-        {{ languageService.projects[index].keyFeatures[$index].description }}
+        {{ project.keyFeatures[$index].description }}
       </p>
     </div>
     }
   </div>
   <div class="bottom">
     <div class="technologies">
-      @for (technology of languageService.projects[index].technologies; track
-      $index) {
+      @for (technology of project.technologies; track $index) {
       <div class="technology">
         <div
           [innerHTML]="
             svgIconsService.returnIcon(
-              languageService.projects[index].technologies[$index].icon,
+              project.technologies[$index].icon,
               'icon'
             )
           "
         ></div>
-        <p>{{ languageService.projects[index].technologies[$index].title }}</p>
+        <p>{{ project.technologies[$index].title }}</p>
       </div>
       }
     </div>
