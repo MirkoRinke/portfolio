@@ -2,7 +2,10 @@
 
 :root {
   --background-color: rgb(28, 28, 28);
+  --background-color-80: rgba(28, 28, 28, 0.8);
   --background-color-50: rgba(28, 28, 28, 0.5);
+  --background-color-25: rgba(28, 28, 28, 0.25);
+  --background-color-10: rgba(28, 28, 28, 0.1);
   --hero-background: linear-gradient(
     45deg,
     rgb(28, 28, 28) 23%,
@@ -45,7 +48,10 @@
 
 .blue {
   --background-color: rgb(15, 20, 40);
+  --background-color-80: rgba(15, 20, 40, 0.8);
   --background-color-50: rgba(15, 20, 40, 0.5);
+  --background-color-25: rgba(15, 20, 40, 0.25);
+  --background-color-10: rgba(15, 20, 40, 0.1);
   --hero-background: linear-gradient(
     45deg,
     rgb(15, 20, 42) 23%,
@@ -88,7 +94,10 @@
 
 .violett {
   --background-color: rgb(10, 10, 15);
+  --background-color-80: rgba(10, 10, 15, 0.8);
   --background-color-50: rgba(10, 10, 15, 0.5);
+  --background-color-25: rgba(10, 10, 15, 0.25);
+  --background-color-10: rgba(10, 10, 15, 0.1);
   --hero-background: linear-gradient(
     45deg,
     rgb(10, 10, 15) 23%,
