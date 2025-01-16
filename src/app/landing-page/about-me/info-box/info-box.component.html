@@ -1,4 +1,5 @@
-@if (windowService.ifWindowOpen) {
+@let ariaLabels = languageService.texts.aboutMe.ariaLabels.infoBox;
+@if(windowService.ifWindowOpen) {
 <div class="info-box">
   <div class="title-bar">
     <h3 class="title">{{ title }}</h3>
@@ -27,8 +28,6 @@
   class="desktop-icons"
   (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('document', 'desktop-icon')"
-  [attr.aria-label]="
-    languageService.texts.aboutMe.ariaLabels.infoBox.desktopIcon + ' ' + title
-  "
+  [attr.aria-label]="ariaLabels.desktopIcon + ' ' + title"
 ></button>
 }
