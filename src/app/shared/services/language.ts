@@ -103,6 +103,12 @@ interface AriaLabels {
     firstText: string;
     secondText: string;
   };
+  links: {
+    liveLink: string;
+    github: string;
+    organization: string;
+  };
+  image: string;
 }
 
 export const textsDE: Texts = {
@@ -191,6 +197,12 @@ export const textsDE: Texts = {
       firstText: 'Öffnen',
       secondText: 'Fenster',
     },
+    links: {
+      liveLink: 'Link zu',
+      github: 'Github Link für',
+      organization: 'Link zu Organisation',
+    },
+    image: 'Bild von',
   },
 };
 
@@ -280,5 +292,11 @@ export const textsEN: Texts = {
       firstText: 'Open',
       secondText: 'Window',
     },
+    links: {
+      liveLink: 'Link to',
+      github: 'Github Link for',
+      organization: 'Link to Organization',
+    },
+    image: 'Image of',
   },
 };

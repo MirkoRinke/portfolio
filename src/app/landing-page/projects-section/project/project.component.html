@@ -1,6 +1,7 @@
 <!-- TODO aria attributes -->
 
-@let project = languageService.projects[index];
+@let project = languageService.projects[index]; @let ariaLabels =
+languageService.texts.ariaLabels;
 
 <div class="project">
   <div class="top">
@@ -14,21 +15,32 @@
       </div>
       <div class="links">
         @if (project.title !== 'In Development') {
-        <a href="{{ project.links.live }}" target="_blank"
+        <a
+          href="{{ project.links.live }}"
+          target="_blank"
+          [attr.aria-label]="ariaLabels.links.liveLink + ' ' + project.title"
           ><span
             [innerHTML]="svgIconsService.returnIcon('live', 'icon-link')"
           ></span>
           Live</a
         >
         }
-        <a href="{{ project.links.github }}" target="_blank"
+        <a
+          href="{{ project.links.github }}"
+          target="_blank"
+          [attr.aria-label]="ariaLabels.links.github + ' ' + project.title"
           ><span
             [innerHTML]="svgIconsService.returnIcon('github', 'icon-link')"
           ></span>
           Github</a
         >
         @if (project.title === 'In Development') {
-        <a href="{{ project.organization.link }}" target="_blank"
+        <a
+          href="{{ project.organization.link }}"
+          target="_blank"
+          [attr.aria-label]="
+            ariaLabels.links.organization + ' ' + project.organization.name
+          "
           ><span
             [innerHTML]="
               svgIconsService.returnIcon(project.organization.icon, 'icon-link')
@@ -40,14 +52,24 @@
       </div>
     </div>
     <div class="right">
-      <a href="{{ project.links.live }} " target="_blank">
-        <img [src]="project.imagePath" />
+      <a
+        href="{{ project.links.live }} "
+        target="_blank"
+        [attr.aria-label]="ariaLabels.links.liveLink + ' ' + project.title"
+      >
+        <img
+          [alt]="ariaLabels.image + ' ' + project.title"
+          [src]="project.imagePath"
+        />
       </a>
     </div>
   </div>
   <div class="middle">
     @for (keyFeatures of project.keyFeatures; track $index) {
-    <div class="keyFeature">
+    <div
+      class="keyFeature"
+      [attr.aria-label]="project.keyFeatures[$index].title"
+    >
       <h3>{{ project.keyFeatures[$index].title }}</h3>
       <p>
         {{ project.keyFeatures[$index].description }}
@@ -60,6 +82,7 @@
       @for (technology of project.technologies; track $index) {
       <div class="technology">
         <div
+          [attr.aria-label]="project.technologies[$index].title + ' icon'"
           [innerHTML]="
             svgIconsService.returnIcon(
               project.technologies[$index].icon,
