@@ -73,16 +73,98 @@
       width: 100%;
       padding-top: px-to-rem(20);
 
-      img {
-        @include display-flex(center, center);
-        height: 100%;
-        width: 100%;
+      & a {
+        position: relative;
+
+        display: block;
+        overflow-y: hidden;
+        border: 0px solid transparent;
         border-radius: px-to-rem(15);
-        transition: transform 0.3s ease-in-out;
 
         &:hover {
-          transition: transform 0.3s ease-in-out;
-          transform: rotate(5deg);
+          &:before,
+          &:after {
+            animation-play-state: paused;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: var(--primary-color-80);
+          mix-blend-mode: color;
+          z-index: 2;
+
+          border: 0px solid transparent;
+          border-radius: px-to-rem(15);
+          transition: opacity 0.5s ease-in-out;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: -50%;
+          left: 0;
+          right: 0;
+          bottom: -50%;
+          background: repeating-linear-gradient(
+            to bottom,
+            var(--background-color),
+            var(--background-color) px-to-rem(3),
+            transparent px-to-rem(3),
+            transparent px-to-rem(9)
+          );
+          z-index: 3;
+          animation: moveHorizontalLine 50s infinite linear;
+
+          border: 0 solid transparent;
+          border-radius: px-to-rem(15);
+          transition: opacity 0.5s ease-in-out;
+        }
+
+        img {
+          @include display-flex(center, center);
+          height: 100%;
+          width: 100%;
+          border-radius: px-to-rem(15);
+
+          position: relative;
+          animation: opacityHologram 3s infinite;
+          z-index: 1;
+        }
+
+        @keyframes moveHorizontalLine {
+          from {
+            transform: translateY(0);
+          }
+
+          50% {
+            transform: translateY(25%);
+          }
+
+          to {
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes opacityHologram {
+          0% {
+            opacity: 1;
+          }
+
+          50% {
+            opacity: 0.9;
+          }
+
+          100% {
+            opacity: 1;
+          }
         }
       }
     }
