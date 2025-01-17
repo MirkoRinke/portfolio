@@ -1,0 +1,132 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+.contact-form {
+  @include display-flex(start, start, column);
+  gap: px-to-rem(30);
+  width: 100%;
+  height: 100%;
+
+  .email-header {
+    @include display-flex(center, start, row);
+    padding: px-to-rem(40) px-to-rem(20) px-to-rem(20) px-to-rem(20);
+    height: px-to-rem(50);
+    gap: px-to-rem(30);
+    width: 100%;
+
+    button {
+      @include button-preset();
+      @include display-flex(center);
+      @include font-settings();
+      @include button-style(true);
+    }
+
+    .name-wrapper,
+    .eMail-wrapper {
+      @include input-field();
+      input {
+        @include input-style();
+      }
+    }
+  }
+
+  .email-body {
+    @include display-flex(start, start, column);
+    padding: px-to-rem(20) px-to-rem(20);
+    gap: px-to-rem(30);
+    width: 100%;
+    flex: 1;
+
+    .to-wrapper {
+      @include input-field();
+
+      p {
+        @include font-settings();
+      }
+    }
+
+    .subject-wrapper {
+      @include input-field();
+      max-width: 100%;
+
+      input {
+        @include input-style();
+      }
+    }
+
+    textarea {
+      @include input-style();
+    }
+  }
+
+  .email-footer {
+    @include display-flex(center, start, row);
+    gap: px-to-rem(10);
+    height: px-to-rem(50);
+    width: 100%;
+    border-top: px-to-rem(1) solid var(--primary-color);
+    padding-inline: px-to-rem(20);
+    position: relative;
+
+    input[type="checkbox"] {
+      opacity: 0;
+      min-width: px-to-rem(18);
+      min-height: px-to-rem(18);
+      position: absolute;
+      cursor: pointer;
+
+      &:checked + .custom-checkbox {
+        &::after {
+          display: block;
+        }
+      }
+    }
+
+    .custom-checkbox {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: 2px solid var(--primary-color);
+      border-radius: 2px;
+      min-width: px-to-rem(18);
+      min-height: px-to-rem(18);
+      max-width: px-to-rem(18);
+      max-height: px-to-rem(18);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+
+      &.notChecked {
+        border-color: var(--invalid);
+      }
+
+      &:hover {
+        background-color: var(--primary-color-30);
+        cursor: pointer;
+      }
+
+      &::after {
+        display: none;
+        content: "✔";
+        color: var(--primary-color);
+        font-size: px-to-rem(14);
+      }
+    }
+
+    .agree-text {
+      @include font-settings();
+
+      .privacy-link {
+        color: var(--primary-color);
+        display: inline-block;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transition: transform 0.3s ease-in-out;
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+}

@@ -128,25 +128,27 @@ languageService.texts.contact; @if(windowService.ifWindowOpen) {
           required
         ></textarea>
       </div>
+      <div class="email-footer">
+        <input
+          (change)="onPrivacyPolicyChange($event)"
+          [(ngModel)]="privacyPolicyChecked"
+          type="checkbox"
+          [id]="modalActive ? 'privacy-policy-modal' : 'privacy-policy'"
+          name="privacy-policy"
+        />
+        <p
+          class="custom-checkbox"
+          [class.notChecked]="privacyPolicyChecked === false"
+        ></p>
+        <p class="agree-text">
+          {{ contact.contactFormPrivacyPolicyText1 }}
+          <a class="privacy-link">{{
+            contact.contactFormPrivacyPolicyText2
+          }}</a>
+          {{ contact.contactFormPrivacyPolicyText3 }}
+        </p>
+      </div>
     </form>
-    <div class="email-footer">
-      <input
-        (change)="onPrivacyPolicyChange($event)"
-        [(ngModel)]="privacyPolicyChecked"
-        type="checkbox"
-        [id]="modalActive ? 'privacy-policy-modal' : 'privacy-policy'"
-        name="privacy-policy"
-      />
-      <p
-        class="custom-checkbox"
-        [class.notChecked]="privacyPolicyChecked === false"
-      ></p>
-      <p class="agree-text">
-        {{ contact.contactFormPrivacyPolicyText1 }}
-        <a class="privacy-link">{{ contact.contactFormPrivacyPolicyText2 }}</a>
-        {{ contact.contactFormPrivacyPolicyText3 }}
-      </p>
-    </div>
   </div>
   }
 </div>

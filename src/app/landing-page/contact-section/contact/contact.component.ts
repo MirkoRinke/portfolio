@@ -23,7 +23,7 @@ export interface ContactData {
   selector: 'app-contact',
   imports: [CommonModule, WindowControlsComponent, FormsModule, RouterModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
+  styleUrls: ['./contact.component.scss', './contact-form.component.scss'],
 })
 export class ContactComponent {
   @Input() modalActive!: boolean;
