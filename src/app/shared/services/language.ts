@@ -95,6 +95,7 @@ interface projectsTexts {
 }
 
 export interface ContactTexts {
+  title: string;
   contactFormName: string;
   contactFormEmail: string;
   contactFormSubject: string;
@@ -208,6 +209,7 @@ export const textsDE: Texts = {
     title: 'Projekte',
   },
   contact: {
+    title: 'windows_live_mail.exe',
     contactFormName: 'Name',
     contactFormEmail: 'Von',
     contactFormSubject: 'Betreff',
@@ -322,6 +324,7 @@ export const textsEN: Texts = {
     title: 'Projects',
   },
   contact: {
+    title: 'windows_live_mail.exe',
     contactFormName: 'Name',
     contactFormEmail: 'From',
     contactFormSubject: 'Subject',
