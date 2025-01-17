@@ -113,6 +113,7 @@ export class ContactComponent {
     if (form.controls['name'].invalid) this.updatePlaceholder('name');
     if (form.controls['email'].invalid) this.updatePlaceholder('email');
     if (form.controls['message'].invalid) this.updatePlaceholder('message');
+    if (form.controls['subject'].invalid) this.updatePlaceholder('subject');
   }
 
   updatePlaceholder(inputField: string) {
