@@ -54,6 +54,30 @@
   @include golden-ratio-padding($padding-factor);
 }
 
+@mixin button-style($icon: false) {
+  gap: px-to-rem(10);
+  background-color: var(--primary-color-25);
+  border-radius: px-to-rem(10);
+  color: var(--secondary-color);
+  filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
+
+  @if ($icon) {
+    div {
+      height: px-to-rem(20);
+
+      &::ng-deep .eMail {
+        height: px-to-rem(20);
+        fill: var(--primary-color-25);
+        filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
+      }
+    }
+  }
+
+  &:hover {
+    background-color: var(--primary-color-10);
+  }
+}
+
 // Window default styles for components
 
 @mixin window-default-style() {
@@ -150,5 +174,42 @@
       fill: var(--primary-color-hover);
       cursor: pointer;
     }
+  }
+}
+
+@mixin input-field() {
+  @include display-flex(center, start, row);
+  gap: px-to-rem(10);
+  border-bottom: px-to-rem(1) solid var(--primary-color);
+  padding-block: px-to-rem(5);
+
+  max-width: px-to-rem(400);
+  width: 100%;
+}
+
+@mixin input-style {
+  @include font-settings();
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+
+  &.placeholder-valid {
+    &::placeholder {
+      color: var(--secondary-color-80);
+    }
+  }
+
+  &.placeholder-invalid {
+    &::placeholder {
+      color: var(--invalid);
+    }
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--secondary-color-80);
   }
 }

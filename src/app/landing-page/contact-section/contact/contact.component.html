@@ -1,5 +1,5 @@
-@let ariaLabels =languageService.texts.ariaLabels.desktopIcon;
-@if(windowService.ifWindowOpen) {
+@let ariaLabels =languageService.texts.ariaLabels.desktopIcon; @let contact =
+languageService.texts.contact; @if(windowService.ifWindowOpen) {
 <div class="contact">
   <div class="title-bar">
     <h3 class="title">windows_live_mail.exe</h3>
@@ -17,7 +17,132 @@
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
-    <p>Contact content</p>
+    <form
+      (ngSubmit)="onSubmit(contactForm)"
+      #contactForm="ngForm"
+      class="contact-form"
+    >
+      <div class="email-header">
+        @if (!showFeedback) {
+        <button
+          type="submit"
+          class="submit-button"
+          [class.disabled]="!ifFormValid(contactForm)"
+        >
+          <div
+            [innerHTML]="svgIconsService.returnIcon('eMail')"
+            [attr.aria-hidden]="true"
+          ></div>
+          {{ contact.contactFormSubmit }}
+        </button>
+        } @else {
+        <button class="submitted-button" disabled>
+          <div
+            [innerHTML]="svgIconsService.returnIcon('eMail')"
+            [attr.aria-hidden]="true"
+          ></div>
+          {{ contact.contactFormSubmitted }}
+        </button>
+        }
+        <div class="name-wrapper">
+          <label for="name">{{ contact.contactFormName }}</label>
+          <input
+            [ngClass]="
+              ifNameValid ? 'placeholder-valid' : 'placeholder-invalid'
+            "
+            [(ngModel)]="contactData.name"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="{{
+              ifNameValid ? contact.placeholderName : contact.requiredName
+            }}"
+            class="form-input"
+            required
+            pattern="[A-Za-z\s]{2,}"
+          />
+        </div>
+        <div class="eMail-wrapper">
+          <label for="email">{{ contact.contactFormEmail }}</label>
+          <input
+            [ngClass]="
+              ifEmailValid ? 'placeholder-valid' : 'placeholder-invalid'
+            "
+            [(ngModel)]="contactData.email"
+            #email="ngModel"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="{{
+              ifEmailValid ? contact.placeholderEmail : contact.requiredEmail
+            }}"
+            class="form-input"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          />
+        </div>
+      </div>
+
+      <div class="email-body">
+        <div class="to-wrapper">
+          <p>To: contact&#64;mirkorinke.dev</p>
+        </div>
+        <div class="subject-wrapper">
+          <label for="subject">{{ contact.contactFormSubject }}</label>
+          <input
+            [ngClass]="
+              ifSubjectValid ? 'placeholder-valid' : 'placeholder-invalid'
+            "
+            [(ngModel)]="contactData.subject"
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="{{
+              ifSubjectValid
+                ? contact.placeholderSubject
+                : contact.requiredSubject
+            }}"
+            class="form-input"
+            required
+            pattern="[A-Za-z\s]{2,}"
+          />
+        </div>
+        <textarea
+          [ngClass]="
+            ifMessageValid ? 'placeholder-valid' : 'placeholder-invalid'
+          "
+          [(ngModel)]="contactData.message"
+          rows="5"
+          id="message"
+          name="message"
+          placeholder="{{
+            ifMessageValid
+              ? contact.placeholderMessage
+              : contact.requiredMessage
+          }}"
+          class="form-textarea"
+          required
+        ></textarea>
+      </div>
+    </form>
+    <div class="email-footer">
+      <input
+        (change)="onPrivacyPolicyChange($event)"
+        [(ngModel)]="privacyPolicyChecked"
+        type="checkbox"
+        id="privacy-policy"
+        name="privacy-policy"
+      />
+      <p
+        class="custom-checkbox"
+        [class.notChecked]="privacyPolicyChecked === false"
+      ></p>
+      <p class="agree-text">
+        {{ contact.contactFormPrivacyPolicyText1 }}
+        <a class="privacy-link">{{ contact.contactFormPrivacyPolicyText2 }}</a>
+        {{ contact.contactFormPrivacyPolicyText3 }}
+      </p>
+    </div>
   </div>
   }
 </div>

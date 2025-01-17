@@ -4,8 +4,9 @@ export interface Texts {
   hero: HeroTexts;
   aboutMe: aboutMeTexts;
   projects: projectsTexts;
-  ariaLabels: AriaLabels;
   expertise: Expertise;
+  contact: ContactTexts;
+  ariaLabels: AriaLabels;
 }
 
 interface IndexTexts {
@@ -91,6 +92,25 @@ interface Expertise {
 
 interface projectsTexts {
   title: string;
+}
+
+export interface ContactTexts {
+  contactFormName: string;
+  contactFormEmail: string;
+  contactFormSubject: string;
+  contactFormPrivacyPolicyText1: string;
+  contactFormPrivacyPolicyText2: string;
+  contactFormPrivacyPolicyText3: string;
+  contactFormSubmit: string;
+  contactFormSubmitted: string;
+  placeholderName: string;
+  placeholderEmail: string;
+  placeholderSubject: string;
+  placeholderMessage: string;
+  requiredName: string;
+  requiredEmail: string;
+  requiredSubject: string;
+  requiredMessage: string;
 }
 
 interface AriaLabels {
@@ -187,6 +207,25 @@ export const textsDE: Texts = {
   projects: {
     title: 'Projekte',
   },
+  contact: {
+    contactFormName: 'Name',
+    contactFormEmail: 'Von',
+    contactFormSubject: 'Betreff',
+    contactFormPrivacyPolicyText1: 'Ich habe die',
+    contactFormPrivacyPolicyText2: 'Datenschutzerklärung',
+    contactFormPrivacyPolicyText3:
+      'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
+    contactFormSubmit: 'Absenden',
+    contactFormSubmitted: 'Nachricht erfolgreich gesendet',
+    placeholderName: 'Dein Name kommt hier hin',
+    placeholderEmail: 'Deine eMail kommt hier hin',
+    placeholderSubject: 'Betreff der Nachricht',
+    placeholderMessage: 'Hallo Mirko, ich bin interessiert an...',
+    requiredName: 'Mind. 2 Buchst. (A-Z, a-z)',
+    requiredEmail: 'Gültige E-Mail ist erforderlich',
+    requiredSubject: 'Betreff ist erforderlich',
+    requiredMessage: 'Nachricht ist erforderlich',
+  },
   ariaLabels: {
     controls: {
       minimize: 'Minimieren',
@@ -282,6 +321,26 @@ export const textsEN: Texts = {
   projects: {
     title: 'Projects',
   },
+  contact: {
+    contactFormName: 'Name',
+    contactFormEmail: 'From',
+    contactFormSubject: 'Subject',
+    contactFormPrivacyPolicyText1: 'I have read the',
+    contactFormPrivacyPolicyText2: 'privacy policy',
+    contactFormPrivacyPolicyText3:
+      'and agree to the processing of my data as described.',
+    contactFormSubmit: 'Submit',
+    contactFormSubmitted: 'Message sent successfully',
+    placeholderName: 'Your name goes here',
+    placeholderEmail: 'Your email goes here',
+    placeholderSubject: 'Subject of the message',
+    placeholderMessage: 'Hello Mirko, I am interested in...',
+    requiredName: 'At least 2 characters (A-Z, a-z)',
+    requiredEmail: 'Valid email is required',
+    requiredSubject: 'Subject is required',
+    requiredMessage: 'Message is required',
+  },
+
   ariaLabels: {
     controls: {
       minimize: 'Minimize',
