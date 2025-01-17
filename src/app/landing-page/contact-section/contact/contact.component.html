@@ -1,0 +1,33 @@
+@let ariaLabels =languageService.texts.ariaLabels.desktopIcon;
+@if(windowService.ifWindowOpen) {
+<div class="contact">
+  <div class="title-bar">
+    <h3 class="title">windows_live_mail.exe</h3>
+    <div class="controls">
+      <app-window-controls
+        [windowService]="windowService"
+        [svgIconsService]="svgIconsService"
+        [languageService]="languageService"
+        [modalService]="modalService"
+        [modal]="'unset'"
+        [index]="0"
+        [activeModal]="'contact'"
+      ></app-window-controls>
+    </div>
+  </div>
+  @if (windowService.ifContentOpen) {
+  <div class="content" [ngClass]="{ 'modal-active': modalActive }">
+    <p>Contact content</p>
+  </div>
+  }
+</div>
+} @else {
+<button
+  class="desktop-icons"
+  (click)="windowService.openWindow()"
+  [innerHTML]="svgIconsService.returnIcon('document', 'desktop-icon')"
+  [attr.aria-label]="
+    ariaLabels.firstText + ' ' + 'PLACEHOLDER' + ' ' + ariaLabels.secondText
+  "
+></button>
+}

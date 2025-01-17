@@ -14,6 +14,7 @@ import { PortraitComponent } from '../../landing-page/about-me-section/portrait/
 import { InfoBoxComponent } from '../../landing-page/about-me-section/info-box/info-box.component';
 import { ExpertiseComponent } from '../../landing-page/expertise-section/expertise/expertise.component';
 import { ProjectsComponent } from '../../landing-page/projects-section/projects/projects.component';
+import { ContactComponent } from '../../landing-page/contact-section/contact/contact.component';
 
 @Component({
   selector: 'app-modal',
@@ -24,6 +25,7 @@ import { ProjectsComponent } from '../../landing-page/projects-section/projects/
     InfoBoxComponent,
     ExpertiseComponent,
     ProjectsComponent,
+    ContactComponent,
   ],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',
