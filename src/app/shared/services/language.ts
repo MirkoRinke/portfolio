@@ -96,6 +96,8 @@ interface projectsTexts {
 
 export interface ContactTexts {
   title: string;
+  sendTo: string;
+  eMail: string;
   contactFormName: string;
   contactFormEmail: string;
   contactFormSubject: string;
@@ -210,17 +212,19 @@ export const textsDE: Texts = {
   },
   contact: {
     title: 'windows_live_mail.exe',
-    contactFormName: 'Name',
-    contactFormEmail: 'Von',
-    contactFormSubject: 'Betreff',
+    sendTo: 'An:',
+    eMail: 'contact@mirkorinke.dev',
+    contactFormName: 'Name:',
+    contactFormEmail: 'Von:',
+    contactFormSubject: 'Betreff:',
     contactFormPrivacyPolicyText1: 'Ich habe die',
     contactFormPrivacyPolicyText2: 'Datenschutzerklärung',
     contactFormPrivacyPolicyText3:
-      'gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.',
+      'gelesen und Stimme der Verarbeitung meiner Daten wie beschrieben zu.',
     contactFormSubmit: 'Absenden',
     contactFormSubmitted: 'Nachricht erfolgreich gesendet',
     placeholderName: 'Dein Name kommt hier hin',
-    placeholderEmail: 'Deine eMail kommt hier hin',
+    placeholderEmail: 'Deine E-Mail kommt hier hin',
     placeholderSubject: 'Betreff der Nachricht',
     placeholderMessage: 'Hallo Mirko, ich bin interessiert an...',
     requiredName: 'Mind. 2 Buchst. (A-Z, a-z)',
@@ -325,9 +329,11 @@ export const textsEN: Texts = {
   },
   contact: {
     title: 'windows_live_mail.exe',
-    contactFormName: 'Name',
-    contactFormEmail: 'From',
-    contactFormSubject: 'Subject',
+    sendTo: 'To:',
+    eMail: 'contact@mirkorinke.dev',
+    contactFormName: 'Name:',
+    contactFormEmail: 'From:',
+    contactFormSubject: 'Subject:',
     contactFormPrivacyPolicyText1: 'I have read the',
     contactFormPrivacyPolicyText2: 'privacy policy',
     contactFormPrivacyPolicyText3:
@@ -335,11 +341,11 @@ export const textsEN: Texts = {
     contactFormSubmit: 'Submit',
     contactFormSubmitted: 'Message sent successfully',
     placeholderName: 'Your name goes here',
-    placeholderEmail: 'Your email goes here',
+    placeholderEmail: 'Your E-Mail goes here',
     placeholderSubject: 'Subject of the message',
     placeholderMessage: 'Hello Mirko, I am interested in...',
     requiredName: 'At least 2 characters (A-Z, a-z)',
-    requiredEmail: 'Valid email is required',
+    requiredEmail: 'Valid E-Mail is required',
     requiredSubject: 'Subject is required',
     requiredMessage: 'Message is required',
   },

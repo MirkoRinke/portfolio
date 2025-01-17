@@ -60,6 +60,10 @@
           p {
             @include font-settings();
           }
+
+          .send {
+            color: var(--primary-color);
+          }
         }
 
         .subject-wrapper {
