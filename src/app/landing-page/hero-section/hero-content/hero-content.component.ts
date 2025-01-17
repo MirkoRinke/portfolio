@@ -5,7 +5,7 @@ import { LanguageService } from '../../../shared/services/language.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-hero-content',
+  selector: 'app-hero-section-content',
   imports: [RouterModule],
   templateUrl: './hero-content.component.html',
   styleUrl: './hero-content.component.scss',

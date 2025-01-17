@@ -6,10 +6,10 @@ import { RouterModule } from '@angular/router';
 import { HeroContentComponent } from './hero-content/hero-content.component';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'app-hero-section',
   imports: [RouterModule, HeroContentComponent],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss',
+  templateUrl: './hero-section.component.html',
+  styleUrl: './hero-section.component.scss',
 })
 export class HeroComponent {
   constructor(

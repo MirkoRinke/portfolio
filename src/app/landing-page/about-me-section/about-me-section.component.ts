@@ -6,10 +6,10 @@ import { LanguageService } from '../../shared/services/language.service';
 import { UtilityService } from '../../shared/services/utility.service';
 
 @Component({
-  selector: 'app-about-me',
+  selector: 'app-about-me-section',
   imports: [PortraitComponent, InfoBoxComponent],
-  templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss',
+  templateUrl: './about-me-section.component.html',
+  styleUrl: './about-me-section.component.scss',
 })
 export class AboutMeComponent {
   constructor(
