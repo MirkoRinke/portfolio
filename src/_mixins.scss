@@ -68,7 +68,11 @@
   border-bottom: px-to-rem(1) solid var(--primary-color);
   background-color: var(--primary-color-10);
   height: px-to-rem(50);
-  padding-inline: px-to-rem(10);
+  padding-inline: px-to-rem(20);
+}
+
+@mixin title-default-style() {
+  @include font-settings();
 }
 
 @mixin controls {
@@ -91,10 +95,6 @@
       }
     }
   }
-}
-
-@mixin title-default-style() {
-  @include font-settings();
 }
 
 @mixin tap-default-style() {
@@ -129,7 +129,7 @@
 @mixin window-content {
   background-color: var(--primary-color-10);
   color: var(--secondary-color);
-  padding: px-to-rem(10);
+  padding: px-to-rem(20) px-to-rem(20);
   scrollbar-color: var(--primary-color) rgb(28, 28, 28);
   overflow-y: auto;
 }
