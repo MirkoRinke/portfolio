@@ -10,8 +10,8 @@ import { WindowControlsComponent } from '../window-controls/window-controls.comp
 
 import { CertificateModalComponent } from '../../landing-page/expertise-section/certificates/certificate-modal/certificate-modal.component';
 
-import { PortraitComponent } from '../../landing-page/about-me/portrait/portrait.component';
-import { InfoBoxComponent } from '../../landing-page/about-me/info-box/info-box.component';
+import { PortraitComponent } from '../../landing-page/about-me-section/portrait/portrait.component';
+import { InfoBoxComponent } from '../../landing-page/about-me-section/info-box/info-box.component';
 import { ExpertiseComponent } from '../../landing-page/expertise-section/expertise/expertise.component';
 import { ProjectsComponent } from '../../landing-page/projects-section/projects/projects.component';
 
