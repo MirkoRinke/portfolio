@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HeroComponent } from './hero/hero.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { ExpertiseSectionComponent } from './expertise/expertise-section.component';
+import { ExpertiseSectionComponent } from './expertise-section/expertise-section.component';
 import { ModalComponent } from '../shared/modal/modal.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 

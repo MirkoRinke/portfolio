@@ -8,11 +8,11 @@ import { UtilityService } from '../services/utility.service';
 
 import { WindowControlsComponent } from '../window-controls/window-controls.component';
 
-import { CertificateModalComponent } from '../../landing-page/expertise/certificates/certificate-modal/certificate-modal.component';
+import { CertificateModalComponent } from '../../landing-page/expertise-section/certificates/certificate-modal/certificate-modal.component';
 
 import { PortraitComponent } from '../../landing-page/about-me/portrait/portrait.component';
 import { InfoBoxComponent } from '../../landing-page/about-me/info-box/info-box.component';
-import { ExpertiseComponent } from '../../landing-page/expertise/expertise/expertise.component';
+import { ExpertiseComponent } from '../../landing-page/expertise-section/expertise/expertise.component';
 import { ProjectsComponent } from '../../landing-page/projects-section/projects/projects.component';
 
 @Component({
