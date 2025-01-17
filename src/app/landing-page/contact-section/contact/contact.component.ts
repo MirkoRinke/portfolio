@@ -23,7 +23,7 @@ export interface ContactData {
   selector: 'app-contact',
   imports: [CommonModule, WindowControlsComponent, FormsModule, RouterModule],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss', './contact-form.component.scss'],
+  styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
   @Input() modalActive!: boolean;
@@ -37,7 +37,7 @@ export class ContactComponent {
   showFeedback: boolean = false;
 
   http: HttpClient = inject(HttpClient);
-  mailTest: boolean = true;
+  mailTest: boolean = false;
 
   contactData: ContactData = {
     name: '',

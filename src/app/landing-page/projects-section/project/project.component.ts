@@ -8,7 +8,7 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
   selector: 'app-project',
   imports: [],
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.scss', './project-image.component.scss'],
+  styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
   @Input() index!: number;
