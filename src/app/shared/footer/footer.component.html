@@ -1,1 +1,35 @@
-
+<footer>
+  <div class="taskbar">
+    <div class="content">
+      <span [innerHTML]="svgIconsService.returnIcon('logo')"></span>
+      <div class="taps">
+        <div class="tap">Imprint</div>
+        <div class="tap">Privacy Policy</div>
+        <div class="tap">snake.exe</div>
+      </div>
+      <div class="links">
+        <span
+          [innerHTML]="svgIconsService.returnIcon('eMail', 'link-icon')"
+        ></span>
+        <span
+          [innerHTML]="svgIconsService.returnIcon('github', 'link-icon')"
+        ></span>
+        <span
+          [innerHTML]="svgIconsService.returnIcon('linkedin', 'link-icon')"
+        ></span>
+      </div>
+      <div class="copyright">
+        <span
+          [innerHTML]="svgIconsService.returnIcon('copyright', 'copyright')"
+        ></span>
+        <p>Mirko Rinke {{ currentYear }}</p>
+      </div>
+      <div class="time-info">
+        <p>{{ currentHours }}</p>
+        <p>
+          {{ languageService.getLanguage() === "de" ? fullDateDE : fullDateEN }}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
