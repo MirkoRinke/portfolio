@@ -1,3 +1,6 @@
+@use "functions" as *;
+@use "mixins" as *;
+
 /* Colors */
 
 :root {
@@ -32,7 +35,7 @@
   --primary-color-50: rgba(61, 207, 182, 0.5);
   --primary-color-25: rgba(61, 207, 182, 0.25);
   --primary-color-10: rgba(61, 207, 182, 0.1);
-  --primary-color-hover: rgba(61, 207, 182, 1);
+  --primary-color-hover: rgba(61, 207, 182, 0.8);
   --secondary-color: rgb(255, 255, 255);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
   --secondary-color-50: rgba(255, 255, 255, 0.5);
@@ -78,7 +81,7 @@
   --primary-color-50: rgba(74, 144, 226, 0.5);
   --primary-color-25: rgba(74, 144, 226, 0.25);
   --primary-color-10: rgba(74, 144, 226, 0.1);
-  --primary-color-hover: rgba(74, 144, 226, 1);
+  --primary-color-hover: rgba(74, 144, 226, 0.8);
   --secondary-color: rgb(255, 255, 255);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
   --secondary-color-50: rgba(255, 255, 255, 0.5);
@@ -124,7 +127,7 @@
   --primary-color-50: rgba(102, 71, 148, 0.5);
   --primary-color-25: rgba(102, 71, 148, 0.25);
   --primary-color-10: rgba(102, 71, 148, 0.1);
-  --primary-color-hover: rgba(102, 71, 148, 1);
+  --primary-color-hover: rgba(102, 71, 148, 0.8);
   --secondary-color: rgb(255, 255, 255);
   --secondary-color-80: rgba(255, 255, 255, 0.8);
   --secondary-color-50: rgba(255, 255, 255, 0.5);
@@ -141,19 +144,19 @@
 /* @media breakpoints */
 
 /** 1280px oder schmaler */
-$breakpoint-xl: 1280px !default;
+$breakpoint-xl: px-to-rem(1280) !default;
 
 /** 1024px oder schmaler */
-$breakpoint-lg: 1024px !default;
+$breakpoint-lg: px-to-rem(1024) !default;
 
 /** 768px oder schmaler */
-$breakpoint-md: 768px !default;
+$breakpoint-md: px-to-rem(768) !default;
 
 /** 640px oder schmaler */
-$breakpoint-sm: 640px !default;
+$breakpoint-sm: px-to-rem(640) !default;
 
 /** 384px oder schmaler */
-$breakpoint-xs: 384px !default;
+$breakpoint-xs: px-to-rem(384) !default;
 
 /** 1280px oder schmaler */
 // @media (max-width: vars.$breakpoint-xl) {

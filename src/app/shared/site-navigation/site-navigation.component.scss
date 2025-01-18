@@ -18,12 +18,12 @@ nav {
 
         &:hover {
           transition: color 0.3s ease-in-out;
-          color: var(--primary-color);
+          color: var(--primary-color-hover);
           cursor: pointer;
         }
 
         &.active {
-          color: var(--primary-color);
+          color: var(--primary-color-hover);
         }
       }
     }

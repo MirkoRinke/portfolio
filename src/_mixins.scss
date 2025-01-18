@@ -60,6 +60,7 @@
   border-radius: px-to-rem(10);
   color: var(--secondary-color);
   filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
+  transition: background-color 0.3s ease-in-out;
 
   @if ($icon) {
     div {
@@ -67,14 +68,14 @@
 
       &::ng-deep .eMail {
         height: px-to-rem(20);
-        fill: var(--primary-color-25);
-        filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
+        fill: var(--secondary-color);
       }
     }
   }
 
   &:hover {
-    background-color: var(--primary-color-10);
+    transition: background-color 0.3s ease-in-out;
+    background-color: var(--primary-color-hover);
   }
 }
 
