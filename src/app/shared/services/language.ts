@@ -222,7 +222,7 @@ export const textsDE: Texts = {
     contactFormPrivacyPolicyText3:
       'gelesen und Stimme der Verarbeitung meiner Daten wie beschrieben zu.',
     contactFormSubmit: 'Absenden',
-    contactFormSubmitted: 'Nachricht erfolgreich gesendet',
+    contactFormSubmitted: 'Gesendet',
     placeholderName: 'Dein Name kommt hier hin',
     placeholderEmail: 'Deine E-Mail kommt hier hin',
     placeholderSubject: 'Betreff der Nachricht',
@@ -339,7 +339,7 @@ export const textsEN: Texts = {
     contactFormPrivacyPolicyText3:
       'and agree to the processing of my data as described.',
     contactFormSubmit: 'Submit',
-    contactFormSubmitted: 'Message sent successfully',
+    contactFormSubmitted: 'Submitted',
     placeholderName: 'Your name goes here',
     placeholderEmail: 'Your E-Mail goes here',
     placeholderSubject: 'Subject of the message',

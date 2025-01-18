@@ -33,9 +33,22 @@
 
         button {
           @include button-preset();
-          @include display-flex(center);
+          @include display-flex(center, center);
           @include font-settings();
           @include button-style(true);
+          min-width: px-to-rem(150);
+          position: relative;
+
+          &::ng-deep .eMail {
+            position: absolute;
+            left: px-to-rem(12);
+          }
+
+          &.disabled {
+            &:hover {
+              background-color: var(--invalid);
+            }
+          }
         }
 
         .name-wrapper,
@@ -61,7 +74,7 @@
             @include font-settings();
           }
 
-          .send {
+          .send-to-me {
             color: var(--primary-color);
           }
         }
@@ -140,11 +153,11 @@
             color: var(--primary-color);
             display: inline-block;
             cursor: pointer;
-            transition: transform 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
 
             &:hover {
-              transition: transform 0.3s ease-in-out;
-              transform: scale(1.03);
+              transition: color 0.3s ease-in-out;
+              color: var(--primary-color-hover);
             }
           }
         }

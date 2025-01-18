@@ -37,7 +37,7 @@ export class ContactComponent {
   showFeedback: boolean = false;
 
   http: HttpClient = inject(HttpClient);
-  mailTest: boolean = false;
+  mailTest: boolean = true;
 
   contactData: ContactData = {
     name: '',
@@ -85,7 +85,7 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log('Form Submitted Successfully (Test Mode)');
+      console.info('Form Submitted Successfully (Test Mode)');
       ngForm.resetForm();
       this.clearForm();
       this.showFeedbackMessage();
@@ -98,7 +98,7 @@ export class ContactComponent {
     this.showFeedback = true;
     setTimeout(() => {
       this.showFeedback = false;
-    }, 5000);
+    }, 10000);
   }
 
   clearForm() {
