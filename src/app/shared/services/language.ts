@@ -114,6 +114,14 @@ export interface ContactTexts {
   requiredEmail: string;
   requiredSubject: string;
   requiredMessage: string;
+  ariaLabels: {
+    privacyPolicy: string;
+    nameInput: string;
+    eMailInput: string;
+    subjectInput: string;
+    messageInput: string;
+    privacyPolicyLink: string;
+  };
 }
 
 interface AriaLabels {
@@ -231,6 +239,14 @@ export const textsDE: Texts = {
     requiredEmail: 'Gültige E-Mail ist erforderlich',
     requiredSubject: 'Betreff ist erforderlich',
     requiredMessage: 'Nachricht ist erforderlich',
+    ariaLabels: {
+      privacyPolicy: 'Datenschutzerklärung akzeptieren',
+      nameInput: 'Name Eingabefeld',
+      eMailInput: 'E-Mail Eingabefeld',
+      subjectInput: 'Betreff Eingabefeld',
+      messageInput: 'Nachricht eingeben Feld',
+      privacyPolicyLink: 'Link zur Datenschutzerklärung',
+    },
   },
   ariaLabels: {
     controls: {
@@ -348,6 +364,14 @@ export const textsEN: Texts = {
     requiredEmail: 'Valid E-Mail is required',
     requiredSubject: 'Subject is required',
     requiredMessage: 'Message is required',
+    ariaLabels: {
+      privacyPolicy: 'Accept Privacy Policy',
+      nameInput: 'Name input field',
+      eMailInput: 'E-Mail input field',
+      subjectInput: 'Subject input field',
+      messageInput: 'Enter message field',
+      privacyPolicyLink: 'Link to Privacy Policy',
+    },
   },
 
   ariaLabels: {
