@@ -1,9 +1,14 @@
-@let hero = languageService.texts.hero;
+@let hero = languageService.texts.hero; @let ariaLabels =
+languageService.texts.hero.ariaLabels;
 
 <div class="textarea">
   <h1>{{ hero.subHeading }}</h1>
   <h2>{{ hero.mainHeading }}</h2>
-  <button [routerLink]="['']" fragment="contact" aria-label="Contact Me">
+  <button
+    [routerLink]="['']"
+    fragment="contact"
+    [attr.aria-label]="ariaLabels.contactMe"
+  >
     <div
       [innerHTML]="svgIconsService.returnIcon('eMail')"
       [attr.aria-hidden]="true"

@@ -1,5 +1,6 @@
-@let projects = languageService.projects; @let ariaLabels =
-languageService.texts.ariaLabels.desktopIcon; @if (windowService.ifWindowOpen) {
+@let projects = languageService.projects; @let generalAriaLabels =
+languageService.texts.ariaLabels.desktopIcon; @let ariaLabels =
+languageService.texts.projects.ariaLabels; @if (windowService.ifWindowOpen) {
 <div class="projects">
   <div class="title-bar">
     <div class="taps">
@@ -11,7 +12,13 @@ languageService.texts.ariaLabels.desktopIcon; @if (windowService.ifWindowOpen) {
         [attr.aria-pressed]="
           tapService.activeTapProjects === 'project' + $index
         "
-        [attr.aria-label]="projects[$index].title"
+        [attr.aria-label]="
+          ariaLabels.taps.firstText +
+          ' ' +
+          projects[$index].title +
+          ' ' +
+          ariaLabels.taps.secondText
+        "
       >
         {{ projects[$index].title }}
         <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
@@ -47,11 +54,11 @@ languageService.texts.ariaLabels.desktopIcon; @if (windowService.ifWindowOpen) {
   (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('folder', 'desktop-icon')"
   [attr.aria-label]="
-    ariaLabels.firstText +
+    generalAriaLabels.firstText +
     ' ' +
     languageService.texts.projects.title +
     ' ' +
-    ariaLabels.secondText
+    generalAriaLabels.secondText
   "
 ></button>
 }

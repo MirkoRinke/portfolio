@@ -26,6 +26,9 @@ interface HeroTexts {
   subHeading: string;
   mainHeading: string;
   contactMe: string;
+  ariaLabels: {
+    contactMe: string;
+  };
 }
 
 interface InfoBox {
@@ -92,6 +95,16 @@ interface Expertise {
 
 interface projectsTexts {
   title: string;
+  ariaLabels: {
+    taps: {
+      firstText: string;
+      secondText: string;
+    };
+    links: {
+      liveLink: string;
+    };
+    keyFeature: string;
+  };
 }
 
 export interface ContactTexts {
@@ -135,7 +148,6 @@ interface AriaLabels {
     secondText: string;
   };
   links: {
-    liveLink: string;
     github: string;
     organization: string;
   };
@@ -159,6 +171,9 @@ export const textsDE: Texts = {
     subHeading: 'Frontend-Entwickler',
     mainHeading: 'Mirko Rinke',
     contactMe: 'Kontaktiere mich',
+    ariaLabels: {
+      contactMe: 'Kontaktiere mich Button',
+    },
   },
   aboutMe: {
     portrait: {
@@ -217,6 +232,16 @@ export const textsDE: Texts = {
   },
   projects: {
     title: 'Projekte',
+    ariaLabels: {
+      taps: {
+        firstText: 'Öffnen',
+        secondText: 'Projekt',
+      },
+      links: {
+        liveLink: 'Link zu',
+      },
+      keyFeature: 'Kernfunktion',
+    },
   },
   contact: {
     title: 'windows_live_mail.exe',
@@ -259,7 +284,6 @@ export const textsDE: Texts = {
       secondText: 'Fenster',
     },
     links: {
-      liveLink: 'Link zu',
       github: 'Github Link für',
       organization: 'Link zu Organisation',
     },
@@ -284,6 +308,9 @@ export const textsEN: Texts = {
     subHeading: 'Frontend Developer',
     mainHeading: 'Mirko Rinke',
     contactMe: 'Contact me',
+    ariaLabels: {
+      contactMe: 'Contact me Button',
+    },
   },
   aboutMe: {
     portrait: {
@@ -342,6 +369,16 @@ export const textsEN: Texts = {
   },
   projects: {
     title: 'Projects',
+    ariaLabels: {
+      taps: {
+        firstText: 'Open',
+        secondText: 'project',
+      },
+      links: {
+        liveLink: 'Link to',
+      },
+      keyFeature: 'Key Feature',
+    },
   },
   contact: {
     title: 'windows_live_mail.exe',
@@ -385,7 +422,6 @@ export const textsEN: Texts = {
       secondText: 'Window',
     },
     links: {
-      liveLink: 'Link to',
       github: 'Github Link for',
       organization: 'Link to Organization',
     },

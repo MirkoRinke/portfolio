@@ -1,4 +1,4 @@
-@let portrait = languageService.texts.aboutMe.portrait; @let ariaLabels
+@let portrait = languageService.texts.aboutMe.portrait; @let generalAriaLabels
 =languageService.texts.ariaLabels.desktopIcon; @if(windowService.ifWindowOpen) {
 <div class="portrait" [ngClass]="{ 'modal-active': modalActive }">
   <div class="title-bar">
@@ -25,7 +25,7 @@
   (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('portrait', 'desktop-icon')"
   [attr.aria-label]="
-    ariaLabels.firstText + portrait.title + ariaLabels.secondText
+    generalAriaLabels.firstText + portrait.title + generalAriaLabels.secondText
   "
 ></button>
 }

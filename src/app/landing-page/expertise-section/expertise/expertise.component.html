@@ -1,5 +1,5 @@
 @let expertise = languageService.texts.expertise; @let taps =
-languageService.texts.expertise.certificates.taps; @let ariaLabels =
+languageService.texts.expertise.certificates.taps; @let generalAriaLabels =
 languageService.texts.ariaLabels.desktopIcon; @if(windowService.ifWindowOpen) {
 <div class="expertise">
   <div class="title-bar">
@@ -43,7 +43,11 @@ languageService.texts.ariaLabels.desktopIcon; @if(windowService.ifWindowOpen) {
   (click)="windowService.openWindow()"
   [innerHTML]="svgIconsService.returnIcon('folder', 'desktop-icon')"
   [attr.aria-label]="
-    ariaLabels.firstText + ' ' + expertise.title + ' ' + ariaLabels.secondText
+    generalAriaLabels.firstText +
+    ' ' +
+    expertise.title +
+    ' ' +
+    generalAriaLabels.secondText
   "
 ></button>
 }
