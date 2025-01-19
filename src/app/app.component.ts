@@ -5,11 +5,11 @@ import { HeaderComponent } from './shared/header/header.component';
 import { Title, Meta } from '@angular/platform-browser';
 
 import { LanguageService } from './shared/services/language.service';
-import { TaskbarComponent } from './shared/taskbar/taskbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, TaskbarComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

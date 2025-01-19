@@ -5,6 +5,7 @@ import { ExpertiseSectionComponent } from './expertise-section/expertise-section
 import { ModalComponent } from '../shared/modal/modal.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { TaskbarComponent } from './taskbar/taskbar.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -15,6 +16,7 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
     ModalComponent,
     ProjectsSectionComponent,
     ContactSectionComponent,
+    TaskbarComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss',
