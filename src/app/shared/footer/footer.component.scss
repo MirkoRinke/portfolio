@@ -10,6 +10,10 @@ footer {
     @include display-flex(center, center);
     gap: 0 px-to-rem(20);
 
+    @media (max-width: $breakpoint-sm) {
+      flex-direction: column;
+    }
+
     .copyright {
       @include display-flex(center, center);
       gap: 0 px-to-rem(5);
@@ -34,6 +38,7 @@ footer {
         fill: var(--primary-color-hover);
       }
     }
+
     .links {
       @include display-flex(center, center);
       @include font-settings();

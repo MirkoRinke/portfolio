@@ -3,29 +3,39 @@
     <div class="content">
       <span [innerHTML]="svgIconsService.returnIcon('logo')"></span>
       <div class="taps">
-        <div class="tap">Placeholder</div>
-        <div class="tap">Placeholder</div>
+        <div class="tap">
+          <span
+            [innerHTML]="svgIconsService.returnIcon('snake', 'tap-icon')"
+          ></span>
+          <p>snake.exe</p>
+        </div>
+        <div class="tap">
+          <span
+            [innerHTML]="svgIconsService.returnIcon('dot', 'tap-icon')"
+          ></span>
+          <p>Placeholder</p>
+        </div>
       </div>
-      <div class="links">
-        <span
-          [innerHTML]="svgIconsService.returnIcon('snake', 'link-icon')"
-        ></span>
-        <span
-          [innerHTML]="svgIconsService.returnIcon('github', 'link-icon')"
-        ></span>
-        <span
-          [innerHTML]="svgIconsService.returnIcon('linkedin', 'link-icon')"
-        ></span>
-      </div>
-      <div class="time-info">
-        <p>{{ dateTimeService.currentHours }}</p>
-        <p>
-          {{
-            languageService.getLanguage() === "de"
-              ? dateTimeService.fullDateDE
-              : dateTimeService.fullDateEN
-          }}
-        </p>
+
+      <div class="short-info">
+        <div class="links">
+          <span
+            [innerHTML]="svgIconsService.returnIcon('linkedin', 'link-icon')"
+          ></span>
+          <span
+            [innerHTML]="svgIconsService.returnIcon('github', 'link-icon')"
+          ></span>
+        </div>
+        <div class="time-info">
+          <p>{{ dateTimeService.currentHours }}</p>
+          <p>
+            {{
+              languageService.getLanguage() === "de"
+                ? dateTimeService.fullDateDE
+                : dateTimeService.fullDateEN
+            }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
