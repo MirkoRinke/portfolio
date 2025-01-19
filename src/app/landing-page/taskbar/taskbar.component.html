@@ -18,9 +18,13 @@
         ></span>
       </div>
       <div class="time-info">
-        <p>{{ currentHours }}</p>
+        <p>{{ dateTimeService.currentHours }}</p>
         <p>
-          {{ languageService.getLanguage() === "de" ? fullDateDE : fullDateEN }}
+          {{
+            languageService.getLanguage() === "de"
+              ? dateTimeService.fullDateDE
+              : dateTimeService.fullDateEN
+          }}
         </p>
       </div>
     </div>

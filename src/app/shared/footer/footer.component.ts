@@ -6,6 +6,7 @@ import { SvgIconsService } from '../../shared/services/svg.icons.service';
 import { WindowService } from '../../shared/services/window.service';
 import { LanguageService } from '../../shared/services/language.service';
 import { ModalService } from '../../shared/services/modal.service';
+import { DateTimeService } from '../../shared/services/date-time.service';
 
 @Component({
   selector: 'app-footer',
@@ -18,6 +19,7 @@ export class FooterComponent {
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
     public languageService: LanguageService,
-    public modalService: ModalService
+    public modalService: ModalService,
+    public dateTimeService: DateTimeService
   ) {}
 }
