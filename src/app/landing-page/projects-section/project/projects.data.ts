@@ -11,6 +11,10 @@ export interface Project {
   organization: Organization;
   ariaLabels: {
     tap: string;
+    github: string;
+    live: string;
+    organization: string;
+    keyFeature: string;
   };
 }
 
@@ -96,6 +100,10 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne Join Tab',
+      github: 'Öffne Join GitHub Repository',
+      live: 'Öffne Join Live Version',
+      organization: '',
+      keyFeature: 'Kernfunktion',
     },
   },
   {
@@ -153,6 +161,10 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne El Pollo Loco Tab',
+      github: 'Öffne El Pollo Loco GitHub Repository',
+      live: 'Öffne El Pollo Loco Live Version',
+      organization: '',
+      keyFeature: 'Kernfunktion',
     },
   },
   {
@@ -214,6 +226,10 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne Pokedex Tab',
+      github: 'Öffne Pokedex GitHub Repository',
+      live: 'Öffne Pokedex Live Version',
+      organization: '',
+      keyFeature: 'Kernfunktion',
     },
   },
   {
@@ -276,6 +292,10 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne In Development Tab',
+      github: 'Öffne In Development GitHub Repository',
+      live: 'Öffne In Development Live Version',
+      organization: '',
+      keyFeature: 'Kernfunktion',
     },
   },
 ];
@@ -341,6 +361,10 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open Join Tab',
+      github: 'Open Join GitHub Repository',
+      live: 'Open Join Live Version',
+      organization: '',
+      keyFeature: 'Kernfunktion',
     },
   },
   {
@@ -398,6 +422,10 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open El Pollo Loco Tab',
+      github: 'Open El Pollo Loco GitHub Repository',
+      live: 'Open El Pollo Loco Live Version',
+      organization: '',
+      keyFeature: 'Key Feature',
     },
   },
   {
@@ -459,6 +487,10 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open Pokedex Tab',
+      github: 'Open Pokedex GitHub Repository',
+      live: 'Open Pokedex Live Version',
+      organization: '',
+      keyFeature: 'Key Feature',
     },
   },
   {
@@ -518,6 +550,10 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open In Development Tab',
+      github: 'Open In Development GitHub Repository',
+      live: 'Open In Development Live Version',
+      organization: 'Open CodeNex GitHub Repository',
+      keyFeature: 'Key Feature',
     },
   },
 ];

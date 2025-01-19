@@ -1,3 +1,7 @@
+@let ariaLabels = languageService.texts.taskbar.ariaLabels; @let generalLinks =
+languageService.texts.general.links; @let generalAriaLabels =
+languageService.texts.general.ariaLabels;
+
 <section class="taskbar-wrapper">
   <div class="taskbar">
     <div class="content">
@@ -9,24 +13,31 @@
           ></span>
           <p>snake.exe</p>
         </div>
-        <div class="tap">
-          <span
-            [innerHTML]="svgIconsService.returnIcon('dot', 'tap-icon')"
-          ></span>
-          <p>Placeholder</p>
-        </div>
       </div>
-
       <div class="short-info">
         <div class="links">
-          <span
+          <a
+            href="{{ generalLinks.linkedin }}"
+            target="_blank"
+            [attr.aria-label]="generalAriaLabels.links.linkedin"
             [innerHTML]="svgIconsService.returnIcon('linkedin', 'link-icon')"
-          ></span>
-          <span
+          ></a>
+          <a
+            href="{{ generalLinks.github }}"
+            target="_blank"
+            [attr.aria-label]="generalAriaLabels.links.github"
             [innerHTML]="svgIconsService.returnIcon('github', 'link-icon')"
-          ></span>
+          ></a>
         </div>
-        <div class="time-info">
+        <div
+          class="time-info"
+          [attr.aria-label]="
+            ariaLabels.currentTime +
+            (languageService.getLanguage() === 'de'
+              ? dateTimeService.fullDateDE
+              : dateTimeService.fullDateEN)
+          "
+        >
           <p>{{ dateTimeService.currentHours }}</p>
           <p>
             {{

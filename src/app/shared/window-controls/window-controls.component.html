@@ -8,7 +8,9 @@
         : modalService.closeModal()
     "
     [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
-    [attr.aria-label]="languageService.texts.ariaLabels.controls.minimize"
+    [attr.aria-label]="
+      languageService.texts.general.ariaLabels.controls.minimize
+    "
   ></button>
   <button
     (click)="
@@ -19,7 +21,9 @@
         : windowService.openContent()
     "
     [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-    [attr.aria-label]="languageService.texts.ariaLabels.controls.maximize"
+    [attr.aria-label]="
+      languageService.texts.general.ariaLabels.controls.maximize
+    "
   ></button>
   <button
     (click)="
@@ -28,6 +32,6 @@
         : modalService.closeModal()
     "
     [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
-    [attr.aria-label]="languageService.texts.ariaLabels.controls.close"
+    [attr.aria-label]="languageService.texts.general.ariaLabels.controls.close"
   ></button>
 </div>

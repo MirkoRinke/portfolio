@@ -6,8 +6,9 @@ export interface Texts {
   projects: projectsTexts;
   expertise: Expertise;
   contact: ContactTexts;
+  taskbar: TaskbarTexts;
   footer: FooterTexts;
-  ariaLabels: AriaLabels;
+  general: GeneralTexts;
 }
 
 interface IndexTexts {
@@ -101,10 +102,6 @@ interface projectsTexts {
       firstText: string;
       secondText: string;
     };
-    links: {
-      liveLink: string;
-    };
-    keyFeature: string;
   };
 }
 
@@ -138,26 +135,40 @@ export interface ContactTexts {
   };
 }
 
+interface TaskbarTexts {
+  ariaLabels: {
+    currentTime: string;
+  };
+}
+
 interface FooterTexts {
   imprint: string;
   privacyPolicy: string;
 }
 
-interface AriaLabels {
-  controls: {
-    minimize: string;
-    maximize: string;
-    close: string;
-  };
-  desktopIcon: {
-    firstText: string;
-    secondText: string;
-  };
+interface GeneralTexts {
   links: {
     github: string;
+    linkedin: string;
     organization: string;
   };
-  image: string;
+  ariaLabels: {
+    controls: {
+      minimize: string;
+      maximize: string;
+      close: string;
+    };
+    desktopIcon: {
+      firstText: string;
+      secondText: string;
+    };
+    links: {
+      github: string;
+      linkedin: string;
+      organization: string;
+    };
+    image: string;
+  };
 }
 
 export const textsDE: Texts = {
@@ -243,10 +254,6 @@ export const textsDE: Texts = {
         firstText: 'Öffnen',
         secondText: 'Projekt',
       },
-      links: {
-        liveLink: 'Link zu',
-      },
-      keyFeature: 'Kernfunktion',
     },
   },
   contact: {
@@ -279,25 +286,38 @@ export const textsDE: Texts = {
       privacyPolicyLink: 'Link zur Datenschutzerklärung',
     },
   },
+  taskbar: {
+    ariaLabels: {
+      currentTime: 'Aktuelle Uhrzeit und Datum',
+    },
+  },
   footer: {
     imprint: 'Impressum',
     privacyPolicy: 'Datenschutzerklärung',
   },
-  ariaLabels: {
-    controls: {
-      minimize: 'Minimieren',
-      maximize: 'Maximieren',
-      close: 'Schließen',
-    },
-    desktopIcon: {
-      firstText: 'Öffnen',
-      secondText: 'Fenster',
-    },
+  general: {
     links: {
-      github: 'Github Link für',
-      organization: 'Link zu Organisation',
+      github: 'https://github.com/MirkoRinke',
+      linkedin: 'https://www.linkedin.com/in/mirkorinke',
+      organization: 'https://github.com/CodeNex',
     },
-    image: 'Bild von',
+    ariaLabels: {
+      controls: {
+        minimize: 'Minimieren',
+        maximize: 'Maximieren',
+        close: 'Schließen',
+      },
+      desktopIcon: {
+        firstText: 'Öffnen',
+        secondText: 'Fenster',
+      },
+      links: {
+        github: 'Link zu meinem Github-Profil',
+        linkedin: 'Link zu meinem LinkedIn-Profil',
+        organization: 'Link zur Organisation',
+      },
+      image: 'Bild von',
+    },
   },
 };
 
@@ -384,10 +404,6 @@ export const textsEN: Texts = {
         firstText: 'Open',
         secondText: 'project',
       },
-      links: {
-        liveLink: 'Link to',
-      },
-      keyFeature: 'Key Feature',
     },
   },
   contact: {
@@ -420,24 +436,37 @@ export const textsEN: Texts = {
       privacyPolicyLink: 'Link to Privacy Policy',
     },
   },
+  taskbar: {
+    ariaLabels: {
+      currentTime: 'Current time and date',
+    },
+  },
   footer: {
     imprint: 'Imprint',
     privacyPolicy: 'Privacy Policy',
   },
-  ariaLabels: {
-    controls: {
-      minimize: 'Minimize',
-      maximize: 'Maximize',
-      close: 'Close',
-    },
-    desktopIcon: {
-      firstText: 'Open',
-      secondText: 'Window',
-    },
+  general: {
     links: {
-      github: 'Github Link for',
-      organization: 'Link to Organization',
+      github: 'https://github.com/MirkoRinke',
+      linkedin: 'https://www.linkedin.com/in/mirkorinke',
+      organization: 'https://github.com/CodeNex',
     },
-    image: 'Image of',
+    ariaLabels: {
+      controls: {
+        minimize: 'Minimize',
+        maximize: 'Maximize',
+        close: 'Close',
+      },
+      desktopIcon: {
+        firstText: 'Open',
+        secondText: 'Window',
+      },
+      links: {
+        github: 'Link to my Github profile',
+        linkedin: 'Link to my LinkedIn profile',
+        organization: 'Link to organization',
+      },
+      image: 'Image of',
+    },
   },
 };

@@ -1,6 +1,6 @@
-@let project = languageService.projects[index]; @let generalAriaLabels =
-languageService.texts.ariaLabels; @let ariaLabels =
-languageService.texts.projects.ariaLabels;
+@let project = languageService.projects[index]; @let ariaLabels =
+languageService.projects[index].ariaLabels; @let generalAriaLabels =
+languageService.texts.general.ariaLabels;
 
 <div class="project">
   <div class="top">
@@ -17,7 +17,7 @@ languageService.texts.projects.ariaLabels;
         <a
           href="{{ project.links.live }}"
           target="_blank"
-          [attr.aria-label]="ariaLabels.links.liveLink + ' ' + project.title"
+          [attr.aria-label]="ariaLabels.live"
           ><span
             [innerHTML]="svgIconsService.returnIcon('live', 'icon-link')"
           ></span>
@@ -27,9 +27,7 @@ languageService.texts.projects.ariaLabels;
         <a
           href="{{ project.links.github }}"
           target="_blank"
-          [attr.aria-label]="
-            generalAriaLabels.links.github + ' ' + project.title
-          "
+          [attr.aria-label]="ariaLabels.github"
           ><span
             [innerHTML]="svgIconsService.returnIcon('github', 'icon-link')"
           ></span>
@@ -40,9 +38,7 @@ languageService.texts.projects.ariaLabels;
           href="{{ project.organization.link }}"
           target="_blank"
           [attr.aria-label]="
-            generalAriaLabels.links.organization +
-            ' ' +
-            project.organization.name
+            ariaLabels.organization + ' ' + project.organization.name
           "
           ><span
             [innerHTML]="
@@ -59,7 +55,7 @@ languageService.texts.projects.ariaLabels;
         class="image-wrapper"
         href="{{ project.links.live }} "
         target="_blank"
-        [attr.aria-label]="ariaLabels.links.liveLink + ' ' + project.title"
+        [attr.aria-label]="ariaLabels.live"
       >
         <img
           [alt]="generalAriaLabels.image + ' ' + project.title"

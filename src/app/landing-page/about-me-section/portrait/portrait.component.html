@@ -1,5 +1,6 @@
 @let portrait = languageService.texts.aboutMe.portrait; @let generalAriaLabels
-=languageService.texts.ariaLabels.desktopIcon; @if(windowService.ifWindowOpen) {
+=languageService.texts.general.ariaLabels.desktopIcon;
+@if(windowService.ifWindowOpen) {
 <div class="portrait" [ngClass]="{ 'modal-active': modalActive }">
   <div class="title-bar">
     <h3 class="title">{{ portrait.title }}</h3>

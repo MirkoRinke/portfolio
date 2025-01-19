@@ -75,13 +75,17 @@
 
       .short-info {
         @include display-flex(center, center);
-        gap: 0 px-to-rem(5);
+        gap: 0 px-to-rem(20);
+
+        @media (max-width: $breakpoint-sm) {
+          gap: 0 px-to-rem(5);
+        }
 
         .links {
           @include display-flex(center, center);
           gap: 0 px-to-rem(10);
 
-          span {
+          a {
             @include display-flex(center, center);
 
             &::ng-deep .link-icon {
