@@ -14,12 +14,8 @@ import { ModalService } from '../../shared/services/modal.service';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  currentHours: string =
-    new Date().getHours() +
-    ':' +
-    new Date().getMinutes() +
-    ':' +
-    new Date().getSeconds();
+  currentHours: string = new Date().getHours() + ':' + new Date().getMinutes();
+
   currentYear = new Date().getFullYear();
 
   fullDateDE = new Date().toLocaleDateString('de-DE');
@@ -32,12 +28,7 @@ export class FooterComponent {
     public modalService: ModalService
   ) {
     setInterval(() => {
-      this.currentHours =
-        new Date().getHours() +
-        ':' +
-        new Date().getMinutes() +
-        ':' +
-        new Date().getSeconds();
+      this.currentHours = new Date().getHours() + ':' + new Date().getMinutes();
       this.fullDateDE = new Date().toLocaleDateString('de-DE');
       this.fullDateEN = new Date().toLocaleDateString('en-EN');
     }, 1000);
