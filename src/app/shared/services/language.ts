@@ -6,6 +6,7 @@ export interface Texts {
   projects: projectsTexts;
   expertise: Expertise;
   contact: ContactTexts;
+  footer: FooterTexts;
   ariaLabels: AriaLabels;
 }
 
@@ -135,6 +136,11 @@ export interface ContactTexts {
     messageInput: string;
     privacyPolicyLink: string;
   };
+}
+
+interface FooterTexts {
+  imprint: string;
+  privacyPolicy: string;
 }
 
 interface AriaLabels {
@@ -273,6 +279,10 @@ export const textsDE: Texts = {
       privacyPolicyLink: 'Link zur Datenschutzerklärung',
     },
   },
+  footer: {
+    imprint: 'Impressum',
+    privacyPolicy: 'Datenschutzerklärung',
+  },
   ariaLabels: {
     controls: {
       minimize: 'Minimieren',
@@ -410,7 +420,10 @@ export const textsEN: Texts = {
       privacyPolicyLink: 'Link to Privacy Policy',
     },
   },
-
+  footer: {
+    imprint: 'Imprint',
+    privacyPolicy: 'Privacy Policy',
+  },
   ariaLabels: {
     controls: {
       minimize: 'Minimize',
