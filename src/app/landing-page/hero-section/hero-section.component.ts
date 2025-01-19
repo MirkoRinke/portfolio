@@ -11,7 +11,7 @@ import { HeroContentComponent } from './hero-content/hero-content.component';
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
 })
-export class HeroComponent {
+export class HeroSectionComponent {
   constructor(
     public svgIconsService: SvgIconsService,
     public languageService: LanguageService

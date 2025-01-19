@@ -8,12 +8,12 @@ import { LanguageService } from '../../shared/services/language.service';
 import { ModalService } from '../../shared/services/modal.service';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-taskbar',
   imports: [CommonModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+  templateUrl: './taskbar.component.html',
+  styleUrl: './taskbar.component.scss',
 })
-export class FooterComponent {
+export class TaskbarComponent {
   currentHours: string = new Date().getHours() + ':' + new Date().getMinutes();
 
   currentYear = new Date().getFullYear();

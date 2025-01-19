@@ -11,7 +11,7 @@ import { UtilityService } from '../../shared/services/utility.service';
   templateUrl: './about-me-section.component.html',
   styleUrl: './about-me-section.component.scss',
 })
-export class AboutMeComponent {
+export class AboutMeSectionComponent {
   constructor(
     public languageService: LanguageService,
     public utilityService: UtilityService

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HeroComponent } from './hero-section/hero-section.component';
-import { AboutMeComponent } from './about-me-section/about-me-section.component';
+import { HeroSectionComponent } from './hero-section/hero-section.component';
+import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 import { ExpertiseSectionComponent } from './expertise-section/expertise-section.component';
 import { ModalComponent } from '../shared/modal/modal.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
@@ -9,8 +9,8 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
 @Component({
   selector: 'app-landing-page',
   imports: [
-    HeroComponent,
-    AboutMeComponent,
+    HeroSectionComponent,
+    AboutMeSectionComponent,
     ExpertiseSectionComponent,
     ModalComponent,
     ProjectsSectionComponent,

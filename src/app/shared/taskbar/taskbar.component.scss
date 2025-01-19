@@ -2,7 +2,7 @@
 @use "../../../mixins" as *;
 @use "../../../var" as *;
 
-footer {
+.taskbar-wrapper {
   @include max-content-settings();
   padding-block: px-to-rem(50);
 

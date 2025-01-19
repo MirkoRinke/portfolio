@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
 
 import { Title, Meta } from '@angular/platform-browser';
 
 import { LanguageService } from './shared/services/language.service';
+import { TaskbarComponent } from './shared/taskbar/taskbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, TaskbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
