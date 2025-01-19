@@ -4,6 +4,7 @@ import { LanguageToggleComponent } from '../language-toggle/language-toggle.comp
 import { ColorToggleComponent } from '../color-toggle/color-toggle.component';
 
 import { SvgIconsService } from '../services/svg.icons.service';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -16,5 +17,8 @@ import { SvgIconsService } from '../services/svg.icons.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(public svgIconsService: SvgIconsService) {}
+  constructor(
+    public svgIconsService: SvgIconsService,
+    public languageService: LanguageService
+  ) {}
 }

@@ -6,6 +6,7 @@ import { SvgIconsService } from '../../shared/services/svg.icons.service';
 import { WindowService } from '../../shared/services/window.service';
 import { LanguageService } from '../../shared/services/language.service';
 import { ModalService } from '../../shared/services/modal.service';
+import { UtilityService } from '../../shared/services/utility.service';
 
 import { DateTimeService } from '../../shared/services/date-time.service';
 
@@ -21,6 +22,7 @@ export class TaskbarComponent {
     public windowService: WindowService,
     public languageService: LanguageService,
     public modalService: ModalService,
-    public dateTimeService: DateTimeService
+    public dateTimeService: DateTimeService,
+    public utilityService: UtilityService
   ) {}
 }

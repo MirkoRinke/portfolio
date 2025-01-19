@@ -1,18 +1,53 @@
-@let ariaLabels = languageService.texts.taskbar.ariaLabels; @let generalLinks =
+@let taskbar = languageService.texts.taskbar; @let ariaLabels =
+languageService.texts.taskbar.ariaLabels; @let generalLinks =
 languageService.texts.general.links; @let generalAriaLabels =
 languageService.texts.general.ariaLabels;
 
 <section class="taskbar-wrapper">
   <div class="taskbar">
     <div class="content">
-      <span [innerHTML]="svgIconsService.returnIcon('logo')"></span>
+      <span
+        [innerHTML]="svgIconsService.returnIcon('logo')"
+        [attr.aria-label]="generalAriaLabels.logo"
+      ></span>
+
       <div class="taps">
-        <div class="tap">
+        @for (item of utilityService.objectKeys(taskbar.taps) ; track $index) {
+        <div
+          (click)="
+            modalService.openModal(
+              'unset',
+              $index,
+              taskbar.taps['tap' + $index]
+            )
+          "
+          class="tap"
+          [attr.aria-label]="
+            ariaLabels.taps.firstText +
+            ' ' +
+            taskbar.taps['tap' + $index] +
+            ' ' +
+            ariaLabels.taps.secondText
+          "
+        >
           <span
-            [innerHTML]="svgIconsService.returnIcon('snake', 'tap-icon')"
+            [innerHTML]="
+              svgIconsService.returnIcon(
+                taskbar.taps['tap' + $index],
+                'tap-icon'
+              )
+            "
+            [attr.aria-label]="
+              ariaLabels.taps.firstText +
+              ' ' +
+              taskbar.taps['tap' + $index] +
+              ' ' +
+              ariaLabels.taps.secondText
+            "
           ></span>
-          <p>snake.exe</p>
+          <p>{{ taskbar.taps["tap" + $index] }}</p>
         </div>
+        }
       </div>
       <div class="short-info">
         <div class="links">

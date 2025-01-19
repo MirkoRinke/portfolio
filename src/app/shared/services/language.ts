@@ -136,8 +136,16 @@ export interface ContactTexts {
 }
 
 interface TaskbarTexts {
+  taps: {
+    [key: string]: string;
+    tap0: string;
+  };
   ariaLabels: {
     currentTime: string;
+    taps: {
+      firstText: string;
+      secondText: string;
+    };
   };
 }
 
@@ -168,6 +176,7 @@ interface GeneralTexts {
       organization: string;
     };
     image: string;
+    logo: string;
   };
 }
 
@@ -287,8 +296,15 @@ export const textsDE: Texts = {
     },
   },
   taskbar: {
+    taps: {
+      tap0: 'snake.exe',
+    },
     ariaLabels: {
       currentTime: 'Aktuelle Uhrzeit und Datum',
+      taps: {
+        firstText: 'Öffnen',
+        secondText: 'Fenster',
+      },
     },
   },
   footer: {
@@ -317,6 +333,7 @@ export const textsDE: Texts = {
         organization: 'Link zur Organisation',
       },
       image: 'Bild von',
+      logo: 'Portfolio Logo',
     },
   },
 };
@@ -437,8 +454,15 @@ export const textsEN: Texts = {
     },
   },
   taskbar: {
+    taps: {
+      tap0: 'snake.exe',
+    },
     ariaLabels: {
       currentTime: 'Current time and date',
+      taps: {
+        firstText: 'Open',
+        secondText: 'Window',
+      },
     },
   },
   footer: {
@@ -467,6 +491,7 @@ export const textsEN: Texts = {
         organization: 'Link to organization',
       },
       image: 'Image of',
+      logo: 'Portfolio Logo',
     },
   },
 };

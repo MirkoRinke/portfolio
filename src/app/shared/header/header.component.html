@@ -1,4 +1,4 @@
-<!-- TODO aria attributes -->
+@let generalAriaLabels = languageService.texts.general.ariaLabels;
 
 <header>
   <div class="left-side">
@@ -7,6 +7,9 @@
   </div>
   <div class="right-side">
     <app-color-toggle></app-color-toggle>
-    <span [innerHTML]="svgIconsService.returnIcon('logo', 'logo')"></span>
+    <span
+      [innerHTML]="svgIconsService.returnIcon('logo', 'logo')"
+      [attr.aria-label]="generalAriaLabels.logo"
+    ></span>
   </div>
 </header>
