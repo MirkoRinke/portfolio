@@ -46,6 +46,7 @@ footer {
 
         span {
           @include display-flex(center, center);
+
           &::ng-deep .link-icon {
             fill: var(--secondary-color);
             height: px-to-rem(30);
