@@ -49,9 +49,12 @@
           justify-content: start;
           gap: 0 px-to-rem(10);
 
+          @media (max-width: $breakpoint-lg) {
+            max-width: fit-content;
+          }
+
           @media (max-width: $breakpoint-sm) {
             padding: px-to-rem(5) px-to-rem(10);
-            max-width: fit-content;
           }
 
           &::ng-deep .tap-icon {
@@ -66,7 +69,7 @@
           }
 
           & p {
-            @media (max-width: $breakpoint-sm) {
+            @media (max-width: $breakpoint-lg) {
               display: none;
             }
           }
