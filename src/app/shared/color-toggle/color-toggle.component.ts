@@ -10,6 +10,13 @@ import { CommonModule } from '@angular/common';
 export class ColorToggleComponent {
   currentColor: string | null = null;
 
+  ngOnInit() {
+    this.currentColor = localStorage.getItem('currentColor');
+    if (this.currentColor) {
+      this.applyColor(this.currentColor);
+    }
+  }
+
   setColor(color: string) {
     if (color === 'default') {
       this.resetColor();
