@@ -1,0 +1,33 @@
+@use "../../../functions" as *;
+@use "../../../mixins" as *;
+@use "../../../var" as *;
+
+.imprint {
+  @include window-default-style();
+
+  .title-bar {
+    @include title-bar-default-style;
+
+    .title {
+      @include title-default-style();
+    }
+  }
+
+  .content {
+    @include window-content;
+
+    p {
+      @include font-settings();
+    }
+
+    &.modal-active {
+      min-height: 80dvh;
+      max-height: 80dvh;
+    }
+  }
+}
+
+.desktop-icons {
+  @include button-preset();
+  @include desktop-icon-style(right);
+}

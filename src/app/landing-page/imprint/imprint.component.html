@@ -1,1 +1,37 @@
-<p>imprint works!</p>
+@let generalAriaLabels =languageService.texts.general.ariaLabels.desktopIcon;
+@if(windowService.ifWindowOpen) {
+<div class="imprint">
+  <div class="title-bar">
+    <h3 class="title">imprint.txt</h3>
+    <div class="controls">
+      <app-window-controls
+        [windowService]="windowService"
+        [svgIconsService]="svgIconsService"
+        [languageService]="languageService"
+        [modalService]="modalService"
+        [modal]="'unset'"
+        [index]="0"
+        [activeModal]="'imprint'"
+      ></app-window-controls>
+    </div>
+  </div>
+  @if (windowService.ifContentOpen) {
+  <div class="content" [ngClass]="{ 'modal-active': modalActive }">
+    <app-imprint-content></app-imprint-content>
+  </div>
+  }
+</div>
+} @else {
+<button
+  class="desktop-icons"
+  (click)="windowService.openWindow()"
+  [innerHTML]="svgIconsService.returnIcon('document', 'desktop-icon')"
+  [attr.aria-label]="
+    generalAriaLabels.firstText +
+    ' ' +
+    ' Placeholder ' +
+    ' ' +
+    generalAriaLabels.secondText
+  "
+></button>
+}

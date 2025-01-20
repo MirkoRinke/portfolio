@@ -1,0 +1,39 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+.privacy-Policy {
+  @include display-flex(center, center, column);
+
+  .privacy-Policy-site {
+    overflow-wrap: break-word;
+    hyphens: auto;
+
+    .header,
+    .address,
+    .representedBy,
+    .contact {
+      margin-block: px-to-rem(10);
+    }
+
+    & a {
+      color: var(--primary-color);
+    }
+
+    & h1,
+    h2,
+    h3,
+    p,
+    ul {
+      margin-top: px-to-rem(15);
+    }
+
+    & ul {
+      margin-left: px-to-rem(20);
+    }
+
+    & li {
+      margin-block: px-to-rem(10);
+    }
+  }
+}
