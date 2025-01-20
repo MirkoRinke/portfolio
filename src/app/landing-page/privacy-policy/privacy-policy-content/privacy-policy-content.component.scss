@@ -25,6 +25,7 @@
     h3,
     p,
     ul {
+      @include font-settings();
       margin-top: px-to-rem(15);
     }
 
@@ -34,6 +35,24 @@
 
     & li {
       margin-block: px-to-rem(10);
+    }
+
+    & h1 {
+      @include font-settings(36, 700);
+      color: var(--primary-color);
+    }
+
+    & h2 {
+      @include font-settings(24, 700);
+      color: var(--primary-color);
+    }
+
+    & h3 {
+      color: var(--primary-color);
+    }
+
+    & a:hover {
+      color: var(--primary-color-hover);
     }
   }
 }

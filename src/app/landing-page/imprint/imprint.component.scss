@@ -16,10 +16,6 @@
   .content {
     @include window-content;
 
-    p {
-      @include font-settings();
-    }
-
     &.modal-active {
       min-height: 80dvh;
       max-height: 80dvh;
