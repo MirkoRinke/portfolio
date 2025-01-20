@@ -20,7 +20,15 @@ languageService.texts.projects.ariaLabels; @if (windowService.ifWindowOpen) {
           ariaLabels.taps.secondText
         "
       >
-        {{ projects[$index].title }}
+        <div class="title-area">
+          <div
+            [innerHTML]="
+              svgIconsService.returnIcon(projects[$index].icon, 'title-icon')
+            "
+          ></div>
+          {{ projects[$index].title }}
+        </div>
+
         <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
       </button>
       } }

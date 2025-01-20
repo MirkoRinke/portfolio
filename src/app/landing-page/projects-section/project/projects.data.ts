@@ -1,6 +1,7 @@
 export interface Project {
   id: number;
   title: string;
+  icon: string;
   visibility: boolean;
   about: string;
   description: string;
@@ -43,6 +44,7 @@ export const projectsDE: Project[] = [
   {
     id: 0,
     title: 'Join',
+    icon: 'join',
     visibility: true,
     about:
       'Verwalten Sie Ihre Projekte mühelos mit einem benutzerfreundlichen Task-Manager, der vom Kanban-System inspiriert ist.',
@@ -109,6 +111,7 @@ export const projectsDE: Project[] = [
   {
     id: 1,
     title: 'El Pollo Loco',
+    icon: 'elPolloLoco',
     visibility: true,
     about: 'Worum geht es in diesem Projekt?',
     description:
@@ -170,6 +173,7 @@ export const projectsDE: Project[] = [
   {
     id: 2,
     title: 'Pokedex',
+    icon: 'pokedex',
     visibility: true,
     about: 'Worum geht es in diesem Projekt?',
     description:
@@ -235,6 +239,7 @@ export const projectsDE: Project[] = [
   {
     id: 3,
     title: 'In Development',
+    icon: 'inDevelopment',
     visibility: true,
     about:
       'Ein strukturiertes und kontinuierlich wachsendes Repository meiner Projekte',
@@ -304,6 +309,7 @@ export const projectsEN: Project[] = [
   {
     id: 0,
     title: 'Join',
+    icon: 'join',
     visibility: true,
     about:
       'Effortlessly manage your projects with a user-friendly task manager inspired by the Kanban system.',
@@ -370,6 +376,7 @@ export const projectsEN: Project[] = [
   {
     id: 1,
     title: 'El Pollo Loco',
+    icon: 'elPolloLoco',
     visibility: true,
     about: 'What is this project about?',
     description:
@@ -431,6 +438,7 @@ export const projectsEN: Project[] = [
   {
     id: 2,
     title: 'Pokedex',
+    icon: 'pokedex',
     visibility: true,
     about: 'What is this project about?',
     description:
@@ -496,6 +504,7 @@ export const projectsEN: Project[] = [
   {
     id: 3,
     title: 'In Development',
+    icon: 'inDevelopment',
     visibility: true,
     about: 'A structured and continuously growing repository of my projects',
     description:

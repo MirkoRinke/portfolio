@@ -135,11 +135,23 @@
   max-width: px-to-rem(200);
   width: 100%;
 
+  .title-area {
+    @include display-flex(center, center);
+    gap: px-to-rem(15);
+  }
+
   &::ng-deep .icon {
     @include display-flex(center, center);
     height: px-to-rem(10);
     width: px-to-rem(10);
     fill: var(--primary-color);
+  }
+
+  &::ng-deep .title-icon {
+    @include display-flex(center, center);
+    height: px-to-rem(20);
+    width: px-to-rem(20);
+    fill: var(--secondary-color);
   }
 
   &:hover {
