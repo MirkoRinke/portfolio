@@ -40,10 +40,12 @@
   .learning-icon {
     &::ng-deep .learning {
       fill: var(--secondary-color-10);
+      filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
     }
 
     .learning-name {
       color: var(--secondary-color-10);
+      text-shadow: px-to-rem(1) px-to-rem(1) px-to-rem(2) rgba(0, 0, 0, 0.5);
     }
 
     &:hover {
