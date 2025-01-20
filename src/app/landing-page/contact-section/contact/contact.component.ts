@@ -37,7 +37,7 @@ export class ContactComponent {
   showFeedback: boolean = false;
 
   http: HttpClient = inject(HttpClient);
-  mailTest: boolean = true;
+  mailTest: boolean = false;
 
   contactData: ContactData = {
     name: '',
