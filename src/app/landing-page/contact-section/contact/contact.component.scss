@@ -96,7 +96,8 @@
       .email-footer {
         @include display-flex(center, start, row);
         gap: px-to-rem(10);
-        height: px-to-rem(50);
+        min-height: px-to-rem(50);
+        padding-block: px-to-rem(10);
         width: 100%;
         border-top: px-to-rem(1) solid var(--primary-color);
         padding-inline: px-to-rem(20);
