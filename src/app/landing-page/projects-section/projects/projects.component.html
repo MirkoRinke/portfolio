@@ -26,10 +26,8 @@ languageService.texts.projects.ariaLabels; @if (windowService.ifWindowOpen) {
               svgIconsService.returnIcon(projects[$index].icon, 'title-icon')
             "
           ></div>
-          {{ projects[$index].title }}
+          <p>{{ projects[$index].title }}</p>
         </div>
-
-        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
       </button>
       } }
     </div>

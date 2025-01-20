@@ -1,5 +1,5 @@
 @let expertise = languageService.texts.expertise; @let taps =
-languageService.texts.expertise.certificates.taps; @let generalAriaLabels =
+languageService.texts.expertise.taps; @let generalAriaLabels =
 languageService.texts.general.ariaLabels.desktopIcon;
 @if(windowService.ifWindowOpen) {
 <div class="expertise">
@@ -11,10 +11,16 @@ languageService.texts.general.ariaLabels.desktopIcon;
         [class.active]="tapService.activeTapExpertise === tap"
         (click)="tapService.activateTap(tap, 'expertise'); ngOnChanges()"
         [attr.aria-pressed]="tapService.activeTapExpertise === tap"
-        [attr.aria-label]="languageService.texts.expertise.ariaLabels.taps[tap]"
+        [attr.aria-label]="expertise.ariaLabels.taps[tap]"
       >
-        {{ languageService.texts.expertise.certificates.taps[tap] }}
-        <div [innerHTML]="svgIconsService.returnIcon('close', 'icon')"></div>
+        <div class="title-area">
+          <div
+            [innerHTML]="
+              svgIconsService.returnIcon(expertise.icons[tap], 'title-icon')
+            "
+          ></div>
+          <p>{{ expertise.taps[tap] }}</p>
+        </div>
       </button>
       }
     </div>

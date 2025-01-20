@@ -73,11 +73,16 @@ interface Expertise {
     certificateModal: {
       content: string;
     };
-    taps: {
-      [key: string]: string;
-      skills: string;
-      certificates: string;
-    };
+  };
+  taps: {
+    [key: string]: string;
+    skills: string;
+    certificates: string;
+  };
+  icons: {
+    [key: string]: string;
+    skills: string;
+    certificates: string;
   };
   ariaLabels: {
     certificates: {
@@ -237,10 +242,14 @@ export const textsDE: Texts = {
       certificateModal: {
         content: 'Zertifikat Bild',
       },
-      taps: {
-        skills: 'Fähigkeiten',
-        certificates: 'Zertifikate',
-      },
+    },
+    taps: {
+      skills: 'Fähigkeiten',
+      certificates: 'Zertifikate',
+    },
+    icons: {
+      skills: 'skills',
+      certificates: 'certificates',
     },
     ariaLabels: {
       certificates: {
@@ -395,10 +404,14 @@ export const textsEN: Texts = {
       certificateModal: {
         content: 'Certificate Image',
       },
-      taps: {
-        skills: 'Skills',
-        certificates: 'Certificates',
-      },
+    },
+    taps: {
+      skills: 'Skills',
+      certificates: 'Certificates',
+    },
+    icons: {
+      skills: 'skills',
+      certificates: 'certificates',
     },
     ariaLabels: {
       certificates: {

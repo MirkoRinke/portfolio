@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "./functions" as *;
+@use "./var" as *;
 
 @mixin max-content-settings {
   max-width: 1440px;
@@ -135,16 +136,20 @@
   max-width: px-to-rem(200);
   width: 100%;
 
+  @media (max-width: $breakpoint-lg) {
+    width: fit-content;
+    gap: 0;
+  }
+
   .title-area {
     @include display-flex(center, center);
     gap: px-to-rem(15);
-  }
 
-  &::ng-deep .icon {
-    @include display-flex(center, center);
-    height: px-to-rem(10);
-    width: px-to-rem(10);
-    fill: var(--primary-color);
+    & p {
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
   }
 
   &::ng-deep .title-icon {
