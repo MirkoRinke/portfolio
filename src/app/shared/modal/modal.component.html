@@ -67,6 +67,10 @@
     <app-projects [modalActive]="true"></app-projects>
     } @else if (modalService.activeModal === "contact") {
     <app-contact [modalActive]="true"></app-contact>
+    } @else if (modalService.activeModal === "imprint") {
+    <app-imprint [modalActive]="true"></app-imprint>
+    } @else if (modalService.activeModal === "privacyPolicy") {
+    <app-privacy-policy [modalActive]="true"></app-privacy-policy>
     }
   </div>
 </section>

@@ -15,6 +15,8 @@ import { InfoBoxComponent } from '../../landing-page/about-me-section/info-box/i
 import { ExpertiseComponent } from '../../landing-page/expertise-section/expertise/expertise.component';
 import { ProjectsComponent } from '../../landing-page/projects-section/projects/projects.component';
 import { ContactComponent } from '../../landing-page/contact-section/contact/contact.component';
+import { ImprintComponent } from '../../landing-page/imprint/imprint.component';
+import { PrivacyPolicyComponent } from '../../landing-page/privacy-policy/privacy-policy.component';
 
 @Component({
   selector: 'app-modal',
@@ -26,6 +28,8 @@ import { ContactComponent } from '../../landing-page/contact-section/contact/con
     ExpertiseComponent,
     ProjectsComponent,
     ContactComponent,
+    ImprintComponent,
+    PrivacyPolicyComponent,
   ],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',
