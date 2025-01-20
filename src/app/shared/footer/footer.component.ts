@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
@@ -14,12 +14,22 @@ import { DateTimeService } from '../../shared/services/date-time.service';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
+  currentYear!: number;
+
   constructor(
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
     public languageService: LanguageService,
     public modalService: ModalService,
-    public dateTimeService: DateTimeService
+    public dateTimeService: DateTimeService,
+    private cdr: ChangeDetectorRef
   ) {}
+
+  ngOnInit(): void {
+    this.dateTimeService.currentYear$.subscribe((year) => {
+      this.currentYear = year;
+      this.cdr.detectChanges();
+    });
+  }
 }

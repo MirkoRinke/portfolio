@@ -1,21 +1,54 @@
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DateTimeService {
-  currentHours: string = new Date().getHours() + ':' + new Date().getMinutes();
+  private currentHoursSubject = new BehaviorSubject<string>(
+    this.getCurrentHours()
+  );
+  currentHours$ = this.currentHoursSubject.asObservable();
 
-  currentYear = new Date().getFullYear();
+  private fullDateDESubject = new BehaviorSubject<string>(this.getFullDateDE());
+  fullDateDE$ = this.fullDateDESubject.asObservable();
 
-  fullDateDE = new Date().toLocaleDateString('de-DE');
-  fullDateEN = new Date().toLocaleDateString('en-EN');
+  private fullDateENSubject = new BehaviorSubject<string>(this.getFullDateEN());
+  fullDateEN$ = this.fullDateENSubject.asObservable();
 
-  constructor() {
-    setInterval(() => {
-      this.currentHours = new Date().getHours() + ':' + new Date().getMinutes();
-      this.fullDateDE = new Date().toLocaleDateString('de-DE');
-      this.fullDateEN = new Date().toLocaleDateString('en-EN');
-    }, 1000);
+  private currentYearSubject = new BehaviorSubject<number>(
+    this.getCurrentYear()
+  );
+  currentYear$ = this.currentYearSubject.asObservable();
+
+  constructor(private ngZone: NgZone) {
+    this.ngZone.runOutsideAngular(() => {
+      setInterval(() => {
+        this.currentHoursSubject.next(this.getCurrentHours());
+        this.fullDateDESubject.next(this.getFullDateDE());
+        this.fullDateENSubject.next(this.getFullDateEN());
+        this.currentYearSubject.next(this.getCurrentYear());
+      }, 1000);
+    });
+  }
+
+  private getCurrentHours(): string {
+    const now = new Date();
+    return now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+  }
+
+  private getFullDateDE(): string {
+    const now = new Date();
+    return now.toLocaleDateString('de-DE');
+  }
+
+  private getFullDateEN(): string {
+    const now = new Date();
+    return now.toLocaleDateString('en-EN');
+  }
+
+  private getCurrentYear(): number {
+    const now = new Date();
+    return now.getFullYear();
   }
 }

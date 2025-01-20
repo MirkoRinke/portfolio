@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
@@ -14,15 +14,36 @@ import { DateTimeService } from '../../shared/services/date-time.service';
   selector: 'app-taskbar',
   imports: [CommonModule],
   templateUrl: './taskbar.component.html',
-  styleUrl: './taskbar.component.scss',
+  styleUrls: ['./taskbar.component.scss'],
 })
-export class TaskbarComponent {
+export class TaskbarComponent implements OnInit {
+  currentHours!: string;
+  fullDateDE!: string;
+  fullDateEN!: string;
+
   constructor(
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
     public languageService: LanguageService,
     public modalService: ModalService,
     public dateTimeService: DateTimeService,
-    public utilityService: UtilityService
+    public utilityService: UtilityService,
+    private cdr: ChangeDetectorRef
   ) {}
+
+  ngOnInit(): void {
+    this.dateTimeService.currentHours$.subscribe((hours) => {
+      this.currentHours = hours;
+      this.cdr.detectChanges();
+    });
+    this.dateTimeService.fullDateDE$.subscribe((date) => {
+      this.fullDateDE = date;
+      this.cdr.detectChanges();
+    });
+
+    this.dateTimeService.fullDateEN$.subscribe((date) => {
+      this.fullDateEN = date;
+      this.cdr.detectChanges();
+    });
+  }
 }

@@ -68,17 +68,13 @@ languageService.texts.general.ariaLabels;
           class="time-info"
           [attr.aria-label]="
             ariaLabels.currentTime +
-            (languageService.getLanguage() === 'de'
-              ? dateTimeService.fullDateDE
-              : dateTimeService.fullDateEN)
+            (languageService.getLanguage() === 'de' ? fullDateDE : fullDateEN)
           "
         >
-          <p>{{ dateTimeService.currentHours }}</p>
+          <p>{{ currentHours }}</p>
           <p>
             {{
-              languageService.getLanguage() === "de"
-                ? dateTimeService.fullDateDE
-                : dateTimeService.fullDateEN
+              languageService.getLanguage() === "de" ? fullDateDE : fullDateEN
             }}
           </p>
         </div>
