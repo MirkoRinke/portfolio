@@ -9,6 +9,7 @@ languageService.texts.general.ariaLabels;
       <span
         [innerHTML]="svgIconsService.returnIcon('logo')"
         [attr.aria-label]="generalAriaLabels.logo"
+        role="img"
       ></span>
 
       <div class="taps">
@@ -44,6 +45,7 @@ languageService.texts.general.ariaLabels;
               ' ' +
               ariaLabels.taps.secondText
             "
+            role="img"
           ></span>
           <p>{{ taskbar.taps["tap" + $index] }}</p>
         </div>

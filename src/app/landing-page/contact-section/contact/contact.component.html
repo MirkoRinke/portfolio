@@ -146,15 +146,13 @@ languageService.texts.contact; @if(windowService.ifWindowOpen) {
           class="custom-checkbox"
           [class.notChecked]="privacyPolicyChecked === false"
         ></p>
-        <p
-          (click)="modalService.openModal('unset', 1, 'privacyPolicy')"
-          class="agree-text"
-        >
+        <p class="agree-text">
           {{ contact.contactFormPrivacyPolicyText1 }}
-          <a
+          <span
+            (click)="modalService.openModal('unset', 1, 'privacyPolicy')"
             class="privacy-link"
             [attr.aria-label]="ariaLabels.privacyPolicyLink"
-            >{{ contact.contactFormPrivacyPolicyText2 }}</a
+            >{{ contact.contactFormPrivacyPolicyText2 }}</span
           >
           {{ contact.contactFormPrivacyPolicyText3 }}
         </p>
