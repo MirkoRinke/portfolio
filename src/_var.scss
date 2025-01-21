@@ -158,17 +158,21 @@ $breakpoint-sm: px-to-rem(640) !default;
 $breakpoint-xs: px-to-rem(384) !default;
 
 /** 1280px oder schmaler */
-// @media (max-width: vars.$breakpoint-xl) {
-// }
+@media (max-width: $breakpoint-xl) {
+}
+
 /** 1024px oder schmaler */
-// @media (max-width: vars.$breakpoint-lg) {
-// }
+@media (max-width: $breakpoint-lg) {
+}
+
 /** 768px oder schmaler */
-// @media (max-width: vars.$breakpoint-md) {
-// }
+@media (max-width: $breakpoint-md) {
+}
+
 /** 640px oder schmaler */
-// @media (max-width: vars.$breakpoint-sm) {
-// }
+@media (max-width: $breakpoint-sm) {
+}
+
 /** 384px oder schmaler */
-// @media (max-width: vars.$breakpoint-xs) {
-// }
+@media (max-width: $breakpoint-xs) {
+}

@@ -3,6 +3,10 @@
 @use "../../../var" as *;
 
 nav {
+  @media (max-width: $breakpoint-lg) {
+    display: none;
+  }
+
   ul {
     @include display-flex();
     gap: px-to-rem(30);
