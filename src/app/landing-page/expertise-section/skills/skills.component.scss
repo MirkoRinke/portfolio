@@ -6,6 +6,7 @@
 .learningSkills {
   @include display-flex(center, start);
   gap: px-to-rem(25) px-to-rem(25);
+  padding: 0 px-to-rem(10);
   flex-wrap: wrap;
 
   .skill-icon,
