@@ -34,7 +34,9 @@ export class DateTimeService {
 
   private getCurrentHours(): string {
     const now = new Date();
-    return now.getHours() + ':' + now.getMinutes();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
   }
 
   private getFullDateDE(): string {
