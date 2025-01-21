@@ -113,7 +113,7 @@
           min-width: px-to-rem(70);
           padding-right: px-to-rem(2);
 
-          @media (max-width: $breakpoint-xs) {
+          @media (max-width: $breakpoint-xxs) {
             display: none;
           }
 

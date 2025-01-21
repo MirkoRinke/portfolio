@@ -9,6 +9,11 @@ section {
   padding-top: px-to-rem(100);
   padding-bottom: px-to-rem(50);
 
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    gap: px-to-rem(50);
+  }
+
   app-portrait {
     width: 100%;
   }

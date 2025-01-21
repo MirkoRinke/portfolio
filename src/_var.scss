@@ -154,8 +154,11 @@ $breakpoint-md: px-to-rem(768) !default;
 /** 640px oder schmaler */
 $breakpoint-sm: px-to-rem(640) !default;
 
+/** 450px oder schmaler */
+$breakpoint-xs: px-to-rem(450) !default;
+
 /** 384px oder schmaler */
-$breakpoint-xs: px-to-rem(384) !default;
+$breakpoint-xxs: px-to-rem(384) !default;
 
 /** 1280px oder schmaler */
 @media (max-width: $breakpoint-xl) {
@@ -173,6 +176,10 @@ $breakpoint-xs: px-to-rem(384) !default;
 @media (max-width: $breakpoint-sm) {
 }
 
-/** 384px oder schmaler */
+/** 450px oder schmaler */
 @media (max-width: $breakpoint-xs) {
+}
+
+/** 384px oder schmaler */
+@media (max-width: $breakpoint-xxs) {
 }
