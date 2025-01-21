@@ -207,11 +207,12 @@
   padding: px-to-rem(20) px-to-rem(20);
   scrollbar-color: var(--primary-color) rgb(28, 28, 28);
   overflow-y: auto;
-  max-height: 90vh;
+  max-height: 80vh;
+  height: 100%;
 
   &.modal-active {
-    min-height: 90dvh;
-    max-height: 90dvh;
+    min-height: 80dvh;
+    max-height: 80dvh;
   }
 }
 
