@@ -14,11 +14,23 @@ header {
   .left-side {
     @include display-flex(center);
     gap: px-to-rem(50);
+
+    app-site-navigation {
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
   }
 
   .right-side {
     @include display-flex(center);
     gap: px-to-rem(50);
+
+    app-color-toggle {
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
+    }
 
     span {
       height: px-to-rem(40);
