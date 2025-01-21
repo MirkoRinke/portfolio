@@ -21,6 +21,20 @@
 
     transition: background-color 0.3s ease-in-out;
 
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: px-to-rem(10);
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: px-to-rem(0);
+    }
+
     &:hover {
       transition: background-color 0s ease-in-out;
       background-color: var(--secondary-color-10);
@@ -42,6 +56,24 @@
       @include display-flex(center, start);
       grid-column: span 2;
       gap: px-to-rem(10);
+    }
+
+    .tutor {
+      @media (max-width: $breakpoint-xs) {
+        display: none;
+      }
+    }
+
+    .platform {
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+
+    .date {
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
     }
   }
 }

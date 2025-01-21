@@ -103,8 +103,8 @@ export const CERTIFICATES: Certificate[] = [
     visibility: true,
   },
   {
-    titleDE: 'Git Komplettkurs: Vom Anfänger zum Profi',
-    titleEN: 'Git Complete Course: From Beginner to Professional',
+    titleDE: 'Git Komplettkurs - Vom Anfänger zum Profi',
+    titleEN: 'Git Complete Course - From Beginner to Professional',
     icon: 'GIT',
     platform: 'Udemy',
     tutor: 'Jannis Seemann',
@@ -125,8 +125,8 @@ export const CERTIFICATES: Certificate[] = [
     visibility: true,
   },
   {
-    titleDE: 'Fortgeschrittenes CSS: Animationen, Flexbox, SASS, SVG, 3D',
-    titleEN: 'Advanced CSS: Animations, Flexbox, SASS, SVG, 3D',
+    titleDE: 'Fortgeschrittenes CSS - Animationen, Flexbox, SASS, SVG, 3D',
+    titleEN: 'Advanced CSS - Animations, Flexbox, SASS, SVG, 3D',
     icon: 'CSS',
     platform: 'Udemy',
     tutor: 'Jannis Seemann',

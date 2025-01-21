@@ -21,7 +21,7 @@ section {
     .modal {
       @include window-default-style();
       margin-inline: auto;
-      width: fit-content;
+      max-width: fit-content;
 
       .title-bar {
         @include title-bar-default-style;

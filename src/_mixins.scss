@@ -99,9 +99,10 @@
 
 @mixin title-default-style() {
   @include font-settings();
-  max-width: 50%;
   overflow-x: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: px-to-rem(20);
 }
 
 @mixin controls {
