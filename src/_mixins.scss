@@ -99,6 +99,9 @@
 
 @mixin title-default-style() {
   @include font-settings();
+  max-width: 50%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 @mixin controls {
@@ -115,6 +118,11 @@
       width: px-to-rem(20);
       fill: var(--primary-color);
 
+      @media (max-width: $breakpoint-xs) {
+        height: px-to-rem(15);
+        width: px-to-rem(15);
+      }
+
       &:hover {
         fill: var(--primary-color-hover);
         cursor: pointer;
@@ -124,48 +132,70 @@
 }
 
 @mixin tap-default-style() {
-  @include button-preset();
-  @include font-settings();
-  @include display-flex(center, space-between);
-  gap: px-to-rem(10);
-  white-space: nowrap;
-
-  background-color: var(--primary-color-10);
-  border-radius: px-to-rem(5);
-  height: px-to-rem(20);
-  max-width: px-to-rem(200);
+  gap: 0 px-to-rem(20);
   width: 100%;
 
-  @media (max-width: $breakpoint-lg) {
-    width: fit-content;
-    gap: 0;
+  @media (max-width: $breakpoint-xxs) {
+    gap: px-to-rem(10);
   }
 
-  .title-area {
-    @include display-flex(center, center);
-    gap: px-to-rem(15);
+  .tap {
+    @include button-preset();
+    @include font-settings();
+    @include display-flex(center, space-between);
+    gap: px-to-rem(10);
+    white-space: nowrap;
 
-    & p {
-      @media (max-width: $breakpoint-lg) {
-        display: none;
+    background-color: var(--primary-color-10);
+    border-radius: px-to-rem(5);
+    height: px-to-rem(20);
+    max-width: px-to-rem(200);
+    width: 100%;
+
+    @media (max-width: $breakpoint-lg) {
+      width: fit-content;
+      gap: 0;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      padding: px-to-rem(5) px-to-rem(10);
+    }
+
+    @media (max-width: $breakpoint-xxs) {
+      padding: px-to-rem(2.5) px-to-rem(5);
+    }
+
+    .title-area {
+      @include display-flex(center, center);
+      gap: px-to-rem(15);
+
+      &::ng-deep .title-icon {
+        @include display-flex(center, center);
+        height: px-to-rem(20);
+        width: px-to-rem(20);
+        fill: var(--secondary-color);
+
+        @media (max-width: $breakpoint-xs) {
+          height: px-to-rem(15);
+          width: px-to-rem(15);
+        }
+      }
+
+      & p {
+        @media (max-width: $breakpoint-lg) {
+          display: none;
+        }
       }
     }
-  }
 
-  &::ng-deep .title-icon {
-    @include display-flex(center, center);
-    height: px-to-rem(20);
-    width: px-to-rem(20);
-    fill: var(--secondary-color);
-  }
+    &:hover {
+      cursor: pointer;
+      background-color: var(--primary-color-hover);
+    }
 
-  &:hover {
-    cursor: pointer;
-    background-color: var(--primary-color-hover);
-  }
-
-  &.active {
-    background-color: var(--primary-color-50);
+    &.active {
+      background-color: var(--primary-color-50);
+    }
   }
 }
 

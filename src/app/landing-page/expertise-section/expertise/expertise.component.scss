@@ -11,12 +11,7 @@
 
     .taps {
       @include display-flex(center, start);
-      gap: 0 px-to-rem(20);
-      width: 100%;
-
-      .tap {
-        @include tap-default-style;
-      }
+      @include tap-default-style;
     }
   }
 

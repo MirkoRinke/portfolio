@@ -13,7 +13,7 @@ section {
   .content {
     @include max-content-settings;
     @include display-flex(center, center);
-    gap: 5%;
+    gap: 4%;
     min-height: 100%;
     padding-block: px-to-rem(100);
 
@@ -26,7 +26,7 @@ section {
     .icons-left,
     .icons-right {
       @include display-flex(center, center, column);
-      gap: px-to-rem(150);
+      gap: px-to-rem(140);
 
       &::ng-deep .SCSS,
       &::ng-deep .HTML {

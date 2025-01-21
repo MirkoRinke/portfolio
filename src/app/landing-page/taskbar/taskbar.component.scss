@@ -37,46 +37,7 @@
 
       .taps {
         @include display-flex(center, start);
-        gap: 0 px-to-rem(20);
-        flex: 1;
-
-        @media (max-width: $breakpoint-sm) {
-          gap: 0 px-to-rem(10);
-        }
-
-        .tap {
-          @include tap-default-style;
-
-          & {
-            justify-content: start;
-            gap: 0 px-to-rem(10);
-          }
-
-          @media (max-width: $breakpoint-lg) {
-            max-width: fit-content;
-          }
-
-          @media (max-width: $breakpoint-sm) {
-            padding: px-to-rem(5) px-to-rem(10);
-          }
-
-          &::ng-deep .tap-icon {
-            fill: var(--secondary-color);
-            height: px-to-rem(20);
-            width: px-to-rem(20);
-
-            @media (max-width: $breakpoint-sm) {
-              height: px-to-rem(15);
-              width: px-to-rem(15);
-            }
-          }
-
-          & p {
-            @media (max-width: $breakpoint-lg) {
-              display: none;
-            }
-          }
-        }
+        @include tap-default-style;
       }
 
       .short-info {

@@ -31,23 +31,25 @@ languageService.texts.general.ariaLabels;
             ariaLabels.taps.secondText
           "
         >
-          <span
-            [innerHTML]="
-              svgIconsService.returnIcon(
-                taskbar.taps['tap' + $index],
-                'tap-icon'
-              )
-            "
-            [attr.aria-label]="
-              ariaLabels.taps.firstText +
-              ' ' +
-              taskbar.taps['tap' + $index] +
-              ' ' +
-              ariaLabels.taps.secondText
-            "
-            role="img"
-          ></span>
-          <p>{{ taskbar.taps["tap" + $index] }}</p>
+          <div class="title-area">
+            <span
+              [innerHTML]="
+                svgIconsService.returnIcon(
+                  taskbar.taps['tap' + $index],
+                  'title-icon'
+                )
+              "
+              [attr.aria-label]="
+                ariaLabels.taps.firstText +
+                ' ' +
+                taskbar.taps['tap' + $index] +
+                ' ' +
+                ariaLabels.taps.secondText
+              "
+              role="img"
+            ></span>
+            <p>{{ taskbar.taps["tap" + $index] }}</p>
+          </div>
         </div>
         }
       </div>
