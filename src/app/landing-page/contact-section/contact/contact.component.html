@@ -45,49 +45,50 @@ languageService.texts.contact; @if(windowService.ifWindowOpen) {
           {{ contact.contactFormSubmitted }}
         </button>
         }
-        <div class="name-wrapper">
-          <label for="name">{{ contact.contactFormName }}</label>
-          <input
-            [ngClass]="
-              ifNameValid ? 'placeholder-valid' : 'placeholder-invalid'
-            "
-            [(ngModel)]="contactData.name"
-            type="text"
-            [id]="modalActive ? 'name-modal' : 'name'"
-            name="name"
-            placeholder="{{
-              ifNameValid ? contact.placeholderName : contact.requiredName
-            }}"
-            autocomplete="name"
-            class="form-input"
-            required
-            pattern="[A-Za-z\s]{2,}"
-            [attr.aria-label]="ariaLabels.nameInput"
-          />
-        </div>
-        <div class="eMail-wrapper">
-          <label for="email">{{ contact.contactFormEmail }}</label>
-          <input
-            [ngClass]="
-              ifEmailValid ? 'placeholder-valid' : 'placeholder-invalid'
-            "
-            [(ngModel)]="contactData.email"
-            #email="ngModel"
-            type="email"
-            [id]="modalActive ? 'email-modal' : 'email'"
-            name="email"
-            placeholder="{{
-              ifEmailValid ? contact.placeholderEmail : contact.requiredEmail
-            }}"
-            autocomplete="email"
-            class="form-input"
-            required
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-            [attr.aria-label]="ariaLabels.eMailInput"
-          />
+        <div class="input-wrapper">
+          <div class="name-wrapper">
+            <label for="name">{{ contact.contactFormName }}</label>
+            <input
+              [ngClass]="
+                ifNameValid ? 'placeholder-valid' : 'placeholder-invalid'
+              "
+              [(ngModel)]="contactData.name"
+              type="text"
+              [id]="modalActive ? 'name-modal' : 'name'"
+              name="name"
+              placeholder="{{
+                ifNameValid ? contact.placeholderName : contact.requiredName
+              }}"
+              autocomplete="name"
+              class="form-input"
+              required
+              pattern="^[A-Za-zÄäÖöÜüß\s'-]{2,}$"
+              [attr.aria-label]="ariaLabels.nameInput"
+            />
+          </div>
+          <div class="eMail-wrapper">
+            <label for="email">{{ contact.contactFormEmail }}</label>
+            <input
+              [ngClass]="
+                ifEmailValid ? 'placeholder-valid' : 'placeholder-invalid'
+              "
+              [(ngModel)]="contactData.email"
+              #email="ngModel"
+              type="email"
+              [id]="modalActive ? 'email-modal' : 'email'"
+              name="email"
+              placeholder="{{
+                ifEmailValid ? contact.placeholderEmail : contact.requiredEmail
+              }}"
+              autocomplete="email"
+              class="form-input"
+              required
+              pattern="^[a-zA-Z0-9ÄäÖöÜüß._%+-]+@[a-zA-Z0-9ÄäÖöÜüß.-]+\.[a-zA-Z]{2,}$"
+              [attr.aria-label]="ariaLabels.eMailInput"
+            />
+          </div>
         </div>
       </div>
-
       <div class="email-body">
         <div class="to-wrapper">
           <p class="send-to-me">{{ contact.sendTo }}</p>

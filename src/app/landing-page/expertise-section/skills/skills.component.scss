@@ -18,6 +18,10 @@
     padding: px-to-rem(20);
     border-radius: px-to-rem(10);
 
+    // @media (max-width: $breakpoint-sm) {
+    //   margin-inline: auto;
+    // }
+
     transition: background-color 0.3s ease-in-out;
 
     &:hover {
