@@ -207,7 +207,12 @@
   padding: px-to-rem(20) px-to-rem(20);
   scrollbar-color: var(--primary-color) rgb(28, 28, 28);
   overflow-y: auto;
-  max-height: 80vh;
+  max-height: 90vh;
+
+  &.modal-active {
+    min-height: 90dvh;
+    max-height: 90dvh;
+  }
 }
 
 @mixin desktop-icon-style($position: center) {

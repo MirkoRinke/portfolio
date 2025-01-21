@@ -19,10 +19,6 @@
     p {
       @include font-settings();
     }
-
-    &.modal-active {
-      min-height: 80dvh;
-    }
   }
 }
 

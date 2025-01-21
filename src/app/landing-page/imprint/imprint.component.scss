@@ -15,11 +15,6 @@
 
   .content {
     @include window-content;
-
-    &.modal-active {
-      min-height: 80dvh;
-      max-height: 80dvh;
-    }
   }
 }
 
