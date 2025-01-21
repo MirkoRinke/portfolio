@@ -135,7 +135,7 @@ export const projectsDE: Project[] = [
       {
         title: 'Verkaufsautomat',
         description:
-          'Nutze gesammelte Münzen an Verkaufsautomaten, um wichtige Gegenstände wie Tabasco-Salsa zu erwerben und deine Spielfigur zu verbessern.',
+          'Nutze gesammelte Münzen an Verkaufsautomaten, um wichtige Gegenstände wie Tabasco-Salsa zu erwerben.',
       },
     ],
     technologies: [

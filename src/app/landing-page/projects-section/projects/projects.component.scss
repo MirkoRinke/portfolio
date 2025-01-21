@@ -20,6 +20,7 @@
     @include display-flex(start, space-between, column);
     padding: px-to-rem(20) px-to-rem(20);
     height: px-to-rem(800);
+    max-height: 80dvh;
 
     app-project {
       width: 100%;
