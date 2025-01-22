@@ -1,11 +1,15 @@
 @let ariaLabels = languageService.texts.expertise.ariaLabels.certificates;
 
-<div class="certificates">
+<div
+  class="certificates"
+  [style.height]="60 * (certificates.length / 2) + 'px'"
+>
   @for (certificate of certificates; track $index) { @if
   (certificate.visibility) {
   <button
     (click)="modalService.openModal(certificates, $index, 'certificate')"
     class="certificate"
+    [id]="$index == 0 ? 'first-certificate' : null"
     [attr.aria-label]="
       ariaLabels.openCertificate +
       ' ' +
@@ -37,9 +41,6 @@
         }}
       </p>
     </div>
-    <p class="tutor">{{ certificate.tutor }}</p>
-    <p class="platform">{{ certificate.platform }}</p>
-    <p class="date">{{ certificate.date }}</p>
   </button>
 
   } }

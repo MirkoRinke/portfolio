@@ -3,37 +3,32 @@
 @use "../../../../var" as *;
 
 .certificates {
-  @include display-flex(start, space-between, column);
+  @include display-flex(start, flex-start, column);
+  flex-wrap: wrap;
   gap: px-to-rem(5);
   width: 100%;
+  min-height: 100%;
+
+  @media (max-width: $breakpoint-md) {
+    flex-wrap: unset;
+    height: auto !important; // I prefer using !important here instead of managing it via JavaScript to ensure all @media related styles remain within CSS.
+  }
 
   .certificate {
     @include button-preset;
     @include font-settings;
     @include display-grid(center);
-    grid-template-columns: repeat(5, 1fr);
     text-align: left;
-    gap: px-to-rem(25);
     padding: px-to-rem(10) px-to-rem(20);
     border-radius: px-to-rem(10);
-    max-width: calc(100% - px-to-rem(40));
+    max-width: calc(49% - px-to-rem(40));
     width: 100%;
 
-    transition: background-color 0.3s ease-in-out;
-
     @media (max-width: $breakpoint-md) {
-      grid-template-columns: repeat(4, 1fr);
+      max-width: calc(100% - px-to-rem(40));
     }
 
-    @media (max-width: $breakpoint-sm) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: px-to-rem(10);
-    }
-
-    @media (max-width: $breakpoint-xs) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: px-to-rem(0);
-    }
+    transition: background-color 0.3s ease-in-out;
 
     &:hover {
       transition: background-color 0s ease-in-out;
@@ -54,26 +49,7 @@
 
     .course {
       @include display-flex(center, start);
-      grid-column: span 2;
       gap: px-to-rem(10);
-    }
-
-    .tutor {
-      @media (max-width: $breakpoint-xs) {
-        display: none;
-      }
-    }
-
-    .platform {
-      @media (max-width: $breakpoint-sm) {
-        display: none;
-      }
-    }
-
-    .date {
-      @media (max-width: $breakpoint-md) {
-        display: none;
-      }
     }
   }
 }
