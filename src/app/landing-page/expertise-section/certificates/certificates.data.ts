@@ -28,7 +28,7 @@ export const CERTIFICATES: Certificate[] = [
     tutor: 'Maximilian Schwarzmüller',
     date: '',
     image: './certificates/udemy/',
-    visibility: true,
+    visibility: false,
   },
   {
     titleDE: 'Chrome DevTools verstehen und verwenden',
@@ -38,7 +38,7 @@ export const CERTIFICATES: Certificate[] = [
     tutor: 'Stephan Haewß',
     date: '',
     image: './certificates/udemy/',
-    visibility: true,
+    visibility: false,
   },
   {
     titleDE: 'Clean Code',
@@ -133,6 +133,28 @@ export const CERTIFICATES: Certificate[] = [
     date: '04.2024',
     image:
       './certificates/udemy/fortgeschrittenes_css_animationen_flexbox_svg_3d_sass.webp',
+    visibility: true,
+  },
+  {
+    titleDE: 'Baue Webseiten mit HTML5 & CSS3',
+    titleEN: 'Build Websites with HTML5 & CSS3',
+    icon: 'HTML',
+    platform: 'Udemy',
+    tutor: 'Jannis Seemann',
+    date: '01.2024',
+    image:
+      './certificates/udemy/baue_webseiten_mit_html5_css3_vom_anfaenger_zum_profi!.webp',
+    visibility: true,
+  },
+  {
+    titleDE: 'Baue Webseiten mit HTML5 & CSS3',
+    titleEN: 'Build Websites with HTML5 & CSS3',
+    icon: 'HTML',
+    platform: 'Udemy',
+    tutor: 'Jannis Seemann',
+    date: '01.2024',
+    image:
+      './certificates/udemy/baue_webseiten_mit_html5_css3_vom_anfaenger_zum_profi!.webp',
     visibility: true,
   },
   {
