@@ -55,6 +55,10 @@
         @include display-flex();
         gap: px-to-rem(60);
 
+        @media (max-width: $breakpoint-xxs) {
+          gap: px-to-rem(20);
+        }
+
         a {
           @include display-flex(center, center);
           @include font-settings();
@@ -62,8 +66,8 @@
 
           &::ng-deep .icon-link {
             @include display-flex(center, center);
-            height: px-to-rem(30);
-            width: px-to-rem(30);
+            height: clamp(20px, 5vw, 30px);
+            width: clamp(20px, 5vw, 30px);
             fill: var(--secondary-color);
           }
 
