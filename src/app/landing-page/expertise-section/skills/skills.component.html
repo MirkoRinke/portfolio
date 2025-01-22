@@ -1,6 +1,6 @@
 <div class="skills">
-  @for (skill of skills.concat(learningSkills); track $index) { @if
-  (skill.visibility) {
+  @for (skill of frontendSkills.concat(backendSkills,uiUxSkills,learningSkills);
+  track $index) { @if (skill.visibility) {
   <div class="{{ skill.status + '-icon' }}">
     <div
       [innerHTML]="

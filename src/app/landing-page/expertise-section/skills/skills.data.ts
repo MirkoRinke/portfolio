@@ -6,7 +6,7 @@ export interface Skill {
   visibility: boolean;
 }
 
-export const TECH_SKILLS: Skill[] = [
+export const FRONTEND_SKILLS: Skill[] = [
   {
     name: 'HTML',
     icon: 'HTML',
@@ -56,6 +56,9 @@ export const TECH_SKILLS: Skill[] = [
     status: 'skill',
     visibility: true,
   },
+];
+
+export const BACKEND_SKILLS: Skill[] = [
   {
     name: 'REST API',
     icon: 'API',
@@ -70,6 +73,9 @@ export const TECH_SKILLS: Skill[] = [
     status: 'skill',
     visibility: true,
   },
+];
+
+export const UI_UX_SKILLS: Skill[] = [
   {
     name: 'Figma',
     icon: 'figma',
@@ -79,7 +85,7 @@ export const TECH_SKILLS: Skill[] = [
   },
 ];
 
-export const LEARNING_SKILLS: Skill[] = [
+export const LEARNING_SKILLS_FE: Skill[] = [
   {
     name: 'React',
     icon: 'react',
@@ -94,6 +100,9 @@ export const LEARNING_SKILLS: Skill[] = [
     status: 'learning',
     visibility: true,
   },
+];
+
+export const LEARNING_SKILLS_BE: Skill[] = [
   {
     name: 'Node js',
     icon: 'node',
@@ -115,17 +124,20 @@ export const LEARNING_SKILLS: Skill[] = [
     status: 'learning',
     visibility: true,
   },
-  {
-    name: 'Affinity Designer',
-    icon: 'affinityDesigner',
-    alt: 'Affinity Designer',
-    status: 'learning',
-    visibility: true,
-  },
+];
+
+export const LEARNING_SKILLS_UI_UX: Skill[] = [
   {
     name: 'Material Design',
     icon: 'materialDesign',
     alt: 'Material Design Logo',
+    status: 'learning',
+    visibility: true,
+  },
+  {
+    name: 'Affinity Designer',
+    icon: 'affinityDesigner',
+    alt: 'Affinity Designer',
     status: 'learning',
     visibility: true,
   },
