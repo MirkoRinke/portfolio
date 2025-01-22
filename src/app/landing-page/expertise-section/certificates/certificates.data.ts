@@ -28,7 +28,7 @@ export const CERTIFICATES: Certificate[] = [
     tutor: 'Maximilian Schwarzmüller',
     date: '',
     image: './certificates/udemy/',
-    visibility: false,
+    visibility: true,
   },
   {
     titleDE: 'Chrome DevTools verstehen und verwenden',
@@ -38,7 +38,7 @@ export const CERTIFICATES: Certificate[] = [
     tutor: 'Stephan Haewß',
     date: '',
     image: './certificates/udemy/',
-    visibility: false,
+    visibility: true,
   },
   {
     titleDE: 'Clean Code',
