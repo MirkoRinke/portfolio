@@ -5,21 +5,43 @@
 .skills,
 .learningSkills {
   @include display-grid(center, center);
-  grid-template-columns: repeat(auto-fill, minmax(px-to-rem(165), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(px-to-rem(160), 1fr));
   gap: px-to-rem(25) px-to-rem(25);
   padding: 0 px-to-rem(10);
   margin-inline: auto;
+
+  @media (max-width: $breakpoint-xs) {
+    grid-template-columns: repeat(auto-fill, minmax(px-to-rem(120), 1fr));
+    gap: px-to-rem(20) px-to-rem(20);
+  }
+
+  @media (max-width: $breakpoint-xxs) {
+    grid-template-columns: repeat(auto-fill, minmax(px-to-rem(100), 1fr));
+    gap: px-to-rem(5) px-to-rem(5);
+  }
 
   .skill-icon,
   .learning-icon {
     @include display-flex(center, start, column);
     gap: px-to-rem(10);
-    height: px-to-rem(165);
-    width: px-to-rem(165);
+    height: px-to-rem(160);
+    width: px-to-rem(160);
     padding: px-to-rem(20);
     border-radius: px-to-rem(10);
 
     transition: background-color 0.3s ease-in-out;
+
+    @media (max-width: $breakpoint-xs) {
+      height: px-to-rem(120);
+      width: px-to-rem(120);
+      gap: px-to-rem(10);
+    }
+
+    @media (max-width: $breakpoint-xxs) {
+      height: px-to-rem(100);
+      width: px-to-rem(100);
+      gap: px-to-rem(5);
+    }
 
     &:hover {
       transition: background-color 0s ease-in-out;
@@ -30,6 +52,16 @@
       height: px-to-rem(80);
       width: px-to-rem(80);
       fill: var(--secondary-color);
+
+      @media (max-width: $breakpoint-xs) {
+        height: px-to-rem(40);
+        width: px-to-rem(40);
+      }
+
+      @media (max-width: $breakpoint-xxs) {
+        height: px-to-rem(30);
+        width: px-to-rem(30);
+      }
     }
   }
 
