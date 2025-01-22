@@ -4,10 +4,9 @@
 
 .modal-content {
   @include display-flex();
-  max-width: px-to-rem(1000);
+  max-width: px-to-rem(900);
   height: 100%;
   position: relative;
-
   img {
     width: 100%;
     height: auto;
