@@ -33,7 +33,7 @@ export const CERTIFICATES: Certificate[] = [
   {
     titleDE: 'Chrome DevTools verstehen und verwenden',
     titleEN: 'Understand and use Chrome DevTools',
-    icon: 'dot',
+    icon: 'chrome',
     platform: 'Udemy',
     tutor: 'Stephan Haewß',
     date: '',
