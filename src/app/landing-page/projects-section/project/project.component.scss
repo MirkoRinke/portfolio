@@ -9,6 +9,10 @@
   min-width: 100%;
   height: 100%;
 
+  @media (max-width: $breakpoint-md) {
+    gap: px-to-rem(40);
+  }
+
   .top {
     @include display-flex(start, space-between);
     min-width: 100%;
