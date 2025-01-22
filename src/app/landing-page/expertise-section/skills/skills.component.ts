@@ -6,6 +6,7 @@ import {
   type Skill,
   FRONTEND_SKILLS,
   BACKEND_SKILLS,
+  TOOL_SKILLS,
   UI_UX_SKILLS,
   LEARNING_SKILLS_FE,
   LEARNING_SKILLS_BE,
@@ -21,6 +22,7 @@ import {
 export class SkillsComponent {
   frontendSkills: Skill[] = FRONTEND_SKILLS;
   backendSkills: Skill[] = BACKEND_SKILLS;
+  toolSkills: Skill[] = TOOL_SKILLS;
   uiUxSkills: Skill[] = UI_UX_SKILLS;
 
   learningSkills!: Skill[];
