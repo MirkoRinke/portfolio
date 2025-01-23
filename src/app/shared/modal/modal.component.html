@@ -72,7 +72,10 @@
     } @else if (modalService.activeModal === "privacyPolicy") {
     <app-privacy-policy [modalActive]="true"></app-privacy-policy>
     } @else if (modalService.activeModal === "menu") {
-    <app-menu [modalActive]="true"></app-menu>
+    <app-menu
+      (click)="modalService.closeModalWrapper($event)"
+      [modalActive]="true"
+    ></app-menu>
     }
   </div>
 </section>

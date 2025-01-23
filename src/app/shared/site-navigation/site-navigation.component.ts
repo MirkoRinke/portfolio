@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
 import { LanguageService } from '../services/language.service';
 
-import { RouterModule, Router, NavigationEnd } from '@angular/router';
+import { ModalService } from '../services/modal.service';
+
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-site-navigation',
@@ -12,16 +14,16 @@ import { RouterModule, Router, NavigationEnd } from '@angular/router';
   templateUrl: './site-navigation.component.html',
   styleUrl: './site-navigation.component.scss',
 })
-export class SiteNavigationComponent implements OnInit {
-  currentFragment: string = '';
+export class SiteNavigationComponent {
+  @Input() modalActive!: boolean;
 
-  constructor(public languageService: LanguageService, private router: Router) {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        this.currentFragment = this.router.url.split('#')[1] || '';
-      }
-    });
+  constructor(
+    public languageService: LanguageService,
+    private router: Router,
+    public modalService: ModalService
+  ) {}
+
+  currentFragment() {
+    return this.router.url.split('#')[1] || '';
   }
-
-  ngOnInit(): void {}
 }

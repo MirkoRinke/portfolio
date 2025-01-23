@@ -1,0 +1,38 @@
+@use "../../../functions" as *;
+@use "../../../mixins" as *;
+@use "../../../var" as *;
+
+.menu {
+  @include window-default-style();
+  max-width: px-to-rem(600);
+  width: 100%;
+  margin-inline: auto;
+
+  .title-bar {
+    @include title-bar-default-style;
+
+    .title {
+      @include title-default-style();
+    }
+  }
+
+  .content {
+    @include window-content;
+    @include display-flex(center, center, column);
+    gap: px-to-rem(50);
+
+    app-site-navigation {
+      min-width: 100%;
+    }
+
+    &.modal-active {
+      min-height: fit-content;
+      max-height: fit-content;
+    }
+  }
+}
+
+.desktop-icons {
+  @include button-preset();
+  @include desktop-icon-style(right);
+}

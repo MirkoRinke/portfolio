@@ -2,7 +2,7 @@
 @use "../../../mixins" as *;
 @use "../../../var" as *;
 
-nav {
+.site-navigation {
   ul {
     @include display-flex();
     gap: px-to-rem(30);
@@ -24,6 +24,41 @@ nav {
 
         &.active {
           color: var(--primary-color-hover);
+        }
+      }
+    }
+  }
+}
+
+.modalActive {
+  ul {
+    @include display-flex(center, center, column);
+    gap: px-to-rem(20);
+
+    li {
+      @include display-flex(center, center);
+      list-style-type: none;
+      min-width: 100%;
+
+      a {
+        @include font-settings;
+        white-space: nowrap;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: px-to-rem(5) 0;
+
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          transition: color 0.3s ease-in-out;
+          color: var(--primary-color-hover);
+          cursor: pointer;
+        }
+
+        &.active {
+          background-color: var(--primary-color-hover);
+          color: var(--secondary-color);
         }
       }
     }

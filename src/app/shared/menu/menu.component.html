@@ -1,1 +1,22 @@
-<p>menu works!</p>
+<div class="menu">
+  <div class="title-bar">
+    <h3 class="title">Placeholder</h3>
+    <div class="controls">
+      <app-window-controls
+        [windowService]="windowService"
+        [svgIconsService]="svgIconsService"
+        [languageService]="languageService"
+        [modalService]="modalService"
+        [modal]="'unset'"
+        [index]="0"
+        [activeModal]="'menu'"
+      ></app-window-controls>
+    </div>
+  </div>
+  @if (windowService.ifContentOpen) {
+  <div class="content" [ngClass]="{ 'modal-active': modalActive }">
+    <app-site-navigation [modalActive]="true"></app-site-navigation>
+    <app-color-toggle></app-color-toggle>
+  </div>
+  }
+</div>
