@@ -23,11 +23,11 @@
     max-width: calc(49% - px-to-rem(40));
     width: 100%;
 
+    transition: background-color 0.3s ease-in-out;
+
     @media (max-width: $breakpoint-md) {
       max-width: calc(100% - px-to-rem(40));
     }
-
-    transition: background-color 0.3s ease-in-out;
 
     &:hover {
       transition: background-color 0s ease-in-out;
