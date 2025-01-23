@@ -5,6 +5,7 @@ import { ColorToggleComponent } from '../color-toggle/color-toggle.component';
 
 import { SvgIconsService } from '../services/svg.icons.service';
 import { LanguageService } from '../services/language.service';
+import { ModalService } from '../services/modal.service';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +20,7 @@ import { LanguageService } from '../services/language.service';
 export class HeaderComponent {
   constructor(
     public svgIconsService: SvgIconsService,
-    public languageService: LanguageService
+    public languageService: LanguageService,
+    public modalService: ModalService
   ) {}
 }

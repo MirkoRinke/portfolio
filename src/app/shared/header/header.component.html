@@ -8,6 +8,14 @@
   <div class="right-side">
     <app-color-toggle></app-color-toggle>
     <span
+      (click)="modalService.openModal('unset', 1, 'menu')"
+      class="menu-icon"
+      [innerHTML]="svgIconsService.returnIcon('menu')"
+      [attr.aria-label]="generalAriaLabels.logo"
+      role="img"
+    ></span>
+    <span
+      class="main-logo"
       [innerHTML]="svgIconsService.returnIcon('logo', 'logo')"
       [attr.aria-label]="generalAriaLabels.logo"
       role="img"

@@ -32,12 +32,31 @@ header {
       }
     }
 
-    span {
-      height: px-to-rem(40);
+    .menu-icon {
+      // display: none;
+      &::ng-deep .menu {
+        fill: var(--secondary-color);
+        height: px-to-rem(30);
 
+        &:hover {
+          fill: var(--primary-color-hover);
+          cursor: pointer;
+        }
+      }
+
+      @media (max-width: $breakpoint-lg) {
+        display: block;
+      }
+    }
+
+    .main-logo {
       &::ng-deep .logo {
         fill: var(--secondary-color);
         height: px-to-rem(40);
+
+        @media (max-width: $breakpoint-lg) {
+          display: none;
+        }
       }
     }
   }
