@@ -1,6 +1,6 @@
 <!-- TODO aria attributes -->
 
-<div class="color-toggle">
+<div [ngClass]="modalActive ? 'color-toggle modalActive' : 'color-toggle'">
   <span
     [ngClass]="{ active: currentColor === 'violett' }"
     (click)="setColor('violett')"

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ColorToggleComponent {
   currentColor: string | null = null;
+
+  @Input() modalActive: boolean = false;
 
   ngOnInit() {
     this.currentColor = localStorage.getItem('currentColor');

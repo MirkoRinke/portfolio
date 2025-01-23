@@ -16,7 +16,7 @@
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
     <app-site-navigation [modalActive]="true"></app-site-navigation>
-    <app-color-toggle></app-color-toggle>
+    <app-color-toggle [modalActive]="true"></app-color-toggle>
   </div>
   }
 </div>

@@ -37,3 +37,11 @@
     background-color: rgb(92, 61, 138);
   }
 }
+
+.modalActive {
+  .color {
+    width: px-to-rem(30);
+    height: px-to-rem(30);
+    border-radius: unset;
+  }
+}
