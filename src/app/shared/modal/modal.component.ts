@@ -17,6 +17,7 @@ import { ProjectsComponent } from '../../landing-page/projects-section/projects/
 import { ContactComponent } from '../../landing-page/contact-section/contact/contact.component';
 import { ImprintComponent } from '../../landing-page/imprint/imprint.component';
 import { PrivacyPolicyComponent } from '../../landing-page/privacy-policy/privacy-policy.component';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-modal',
@@ -30,6 +31,7 @@ import { PrivacyPolicyComponent } from '../../landing-page/privacy-policy/privac
     ContactComponent,
     ImprintComponent,
     PrivacyPolicyComponent,
+    MenuComponent,
   ],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',
