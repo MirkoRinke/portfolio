@@ -1,0 +1,18 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+.time-info {
+  @include font-settings();
+  @include display-flex(end, center, column);
+  min-width: px-to-rem(70);
+  padding-right: px-to-rem(2);
+
+  @media (max-width: $breakpoint-xxs) {
+    display: none;
+  }
+
+  &:hover {
+    color: var(--primary-color-hover);
+  }
+}
