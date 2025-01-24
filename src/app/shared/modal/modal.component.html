@@ -1,6 +1,7 @@
 <!-- TODO aria attributes -->
 
-@if (modalService.ifModalOpen && modalService.modal !== 'unset') {
+@let activeInfoBox = modalService.activeModal; @if (modalService.ifModalOpen &&
+modalService.modal !== 'unset') {
 <section
   [ngClass]="modalService.activeModal !== 'menu' ? 'showBG' : ''"
   (click)="modalService.closeModalWrapper($event)"
@@ -47,42 +48,46 @@
 <section
   [ngClass]="modalService.activeModal !== 'menu' ? 'showBG' : ''"
   (click)="modalService.closeModalWrapper($event)"
+  [ngSwitch]="switchCase"
 >
   <div class="modal-wrapper">
-    @if (modalService.activeModal === "portrait") {
     <app-portrait
+      *ngSwitchCase="'portrait'"
       (click)="modalService.closeModalWrapper($event)"
       [modalActive]="true"
     ></app-portrait>
-    } @else if (modalService.activeModal.includes('infoBox') ) { @let
-    activeInfoBox = modalService.activeModal;
     <app-info-box
+      *ngSwitchCase="'infoBox'"
       [title]="languageService.texts.aboutMe.infoBox[activeInfoBox].title"
       [textarea]="languageService.texts.aboutMe.infoBox[activeInfoBox].textarea"
       [index]="utilityService.getNumbersFromEnd(activeInfoBox)"
       [modalActive]="true"
-      [attr.aria-label]="[
+      [attr.aria-label]="
         languageService.texts.aboutMe.ariaLabels.infoBox.description +
-          ' ' +
-          languageService.texts.aboutMe.infoBox[activeInfoBox].title
-      ]"
+        ' ' +
+        languageService.texts.aboutMe.infoBox[activeInfoBox].title
+      "
     ></app-info-box>
-    } @else if (modalService.activeModal === "expertise") {
-    <app-expertise [modalActive]="true"></app-expertise>
-    } @else if (modalService.activeModal === "projects") {
-    <app-projects [modalActive]="true"></app-projects>
-    } @else if (modalService.activeModal === "contact") {
-    <app-contact [modalActive]="true"></app-contact>
-    } @else if (modalService.activeModal === "imprint") {
-    <app-imprint [modalActive]="true"></app-imprint>
-    } @else if (modalService.activeModal === "privacyPolicy") {
-    <app-privacy-policy [modalActive]="true"></app-privacy-policy>
-    } @else if (modalService.activeModal === "menu") {
+    <app-expertise
+      *ngSwitchCase="'expertise'"
+      [modalActive]="true"
+    ></app-expertise>
+    <app-projects
+      *ngSwitchCase="'projects'"
+      [modalActive]="true"
+    ></app-projects>
+    <app-contact *ngSwitchCase="'contact'" [modalActive]="true"></app-contact>
+    <app-imprint *ngSwitchCase="'imprint'" [modalActive]="true"></app-imprint>
+    <app-privacy-policy
+      *ngSwitchCase="'privacyPolicy'"
+      [modalActive]="true"
+    ></app-privacy-policy>
     <app-menu
+      *ngSwitchCase="'menu'"
       (click)="modalService.closeModalWrapper($event)"
       [modalActive]="true"
     ></app-menu>
-    }
+    <p *ngSwitchDefault>PLACEHOLDER</p>
   </div>
 </section>
 }

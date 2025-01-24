@@ -46,4 +46,10 @@ export class ModalComponent {
     public modalService: ModalService,
     public utilityService: UtilityService
   ) {}
+
+  get switchCase() {
+    return this.modalService.activeModal.startsWith('infoBox')
+      ? 'infoBox'
+      : this.modalService.activeModal;
+  }
 }
