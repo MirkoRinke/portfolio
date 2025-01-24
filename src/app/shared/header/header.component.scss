@@ -48,11 +48,22 @@ header {
       display: none;
       &::ng-deep .menu {
         fill: var(--secondary-color);
-        height: px-to-rem(30);
+        height: px-to-rem(60);
+
+        transition: fill 0.3s ease-in-out;
+
+        path:nth-child(3) {
+          fill: var(--primary-color);
+        }
 
         &:hover {
+          transition: fill 0.3s ease-in-out;
           fill: var(--primary-color-hover);
           cursor: pointer;
+
+          path:nth-child(3) {
+            fill: var(--secondary-color);
+          }
         }
       }
 
