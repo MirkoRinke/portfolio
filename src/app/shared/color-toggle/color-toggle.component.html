@@ -7,6 +7,7 @@
     class="color violett"
     [attr.aria-label]="ariaLabels.violett"
     [attr.aria-pressed]="currentColor === 'violett'"
+    type="button"
   ></button>
   <button
     [ngClass]="{ active: currentColor === 'blue' }"
@@ -14,6 +15,7 @@
     class="color blue"
     [attr.aria-label]="ariaLabels.blue"
     [attr.aria-pressed]="currentColor === 'blue'"
+    type="button"
   ></button>
   <button
     [ngClass]="{ active: currentColor === null }"
@@ -21,5 +23,6 @@
     class="color turquoise"
     [attr.aria-label]="ariaLabels.turquoise"
     [attr.aria-pressed]="currentColor === null"
+    type="button"
   ></button>
 </div>
