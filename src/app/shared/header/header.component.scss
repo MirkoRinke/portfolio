@@ -33,7 +33,7 @@ header {
     }
 
     .menu-icon {
-      // display: none;
+      display: none;
       &::ng-deep .menu {
         fill: var(--secondary-color);
         height: px-to-rem(30);

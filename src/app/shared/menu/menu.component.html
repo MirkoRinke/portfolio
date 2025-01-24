@@ -1,6 +1,8 @@
+@let menu = languageService.texts.menu;
+
 <div class="menu">
   <div class="title-bar">
-    <h3 class="title">Placeholder</h3>
+    <h3 class="title">{{ menu.title }}</h3>
     <div class="controls">
       <app-window-controls
         [windowService]="windowService"

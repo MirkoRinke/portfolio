@@ -2,6 +2,7 @@ export interface Texts {
   index: IndexTexts;
   navigation: navigationTexts;
   hero: HeroTexts;
+  menu: MenuTexts;
   aboutMe: aboutMeTexts;
   projects: projectsTexts;
   expertise: Expertise;
@@ -65,6 +66,10 @@ interface aboutMeTexts {
       description: string;
     };
   };
+}
+
+interface MenuTexts {
+  title: string;
 }
 
 interface Expertise {
@@ -205,6 +210,9 @@ export const textsDE: Texts = {
     ariaLabels: {
       contactMe: 'Kontaktiere mich Button',
     },
+  },
+  menu: {
+    title: 'menu.bat',
   },
   aboutMe: {
     portrait: {
@@ -367,6 +375,9 @@ export const textsEN: Texts = {
     ariaLabels: {
       contactMe: 'Contact me Button',
     },
+  },
+  menu: {
+    title: 'menu.bat',
   },
   aboutMe: {
     portrait: {
