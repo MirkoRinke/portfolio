@@ -1,4 +1,4 @@
-<!-- TODO aria attributes -->
+@let ariaLabels = languageService.texts.navigation.ariaLabels;
 
 <nav [ngClass]="modalActive ? 'modalActive' : 'site-navigation'">
   <ul>
@@ -8,6 +8,8 @@
         fragment="hero"
         (click)="modalService.closeModal()"
         [ngClass]="{ active: currentFragment() === 'hero' }"
+        [attr.aria-label]="ariaLabels.links.home"
+        [attr.aria-current]="currentFragment() === 'hero' ? 'page' : null"
         >{{ languageService.texts.navigation.home }}</a
       >
     </li>
@@ -17,6 +19,8 @@
         fragment="about-me"
         (click)="modalService.closeModal()"
         [ngClass]="{ active: currentFragment() === 'about-me' }"
+        [attr.aria-label]="ariaLabels.links.aboutMe"
+        [attr.aria-current]="currentFragment() === 'about-me' ? 'page' : null"
         >{{ languageService.texts.navigation.aboutMe }}</a
       >
     </li>
@@ -26,7 +30,9 @@
         fragment="expertise"
         (click)="modalService.closeModal()"
         [ngClass]="{ active: currentFragment() === 'expertise' }"
-        >{{ languageService.texts.navigation.skills }}</a
+        [attr.aria-label]="ariaLabels.links.expertise"
+        [attr.aria-current]="currentFragment() === 'expertise' ? 'page' : null"
+        >{{ languageService.texts.navigation.expertise }}</a
       >
     </li>
     <li>
@@ -35,6 +41,8 @@
         fragment="projects"
         (click)="modalService.closeModal()"
         [ngClass]="{ active: currentFragment() === 'projects' }"
+        [attr.aria-label]="ariaLabels.links.projects"
+        [attr.aria-current]="currentFragment() === 'projects' ? 'page' : null"
         >{{ languageService.texts.navigation.projects }}</a
       >
     </li>
@@ -44,6 +52,8 @@
         fragment="contact"
         (click)="modalService.closeModal()"
         [ngClass]="{ active: currentFragment() === 'contact' }"
+        [attr.aria-label]="ariaLabels.links.contact"
+        [attr.aria-current]="currentFragment() === 'contact' ? 'page' : null"
         >{{ languageService.texts.navigation.contact }}</a
       >
     </li>

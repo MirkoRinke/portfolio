@@ -22,11 +22,18 @@ interface IndexTexts {
 interface navigationTexts {
   home: string;
   aboutMe: string;
-  skills: string;
+  expertise: string;
   projects: string;
   contact: string;
   ariaLabels: {
     menu: string;
+    links: {
+      home: string;
+      aboutMe: string;
+      expertise: string;
+      projects: string;
+      contact: string;
+    };
   };
 }
 
@@ -227,11 +234,18 @@ export const textsDE: Texts = {
   navigation: {
     home: 'Startseite',
     aboutMe: 'Über mich',
-    skills: 'Fähigkeiten',
+    expertise: 'Expertise',
     projects: 'Projekte',
     contact: 'Kontakt',
     ariaLabels: {
       menu: 'Menü öffnen',
+      links: {
+        home: 'Link zur Startseite',
+        aboutMe: 'Link zu Über mich',
+        expertise: 'Link zu Fähigkeiten',
+        projects: 'Link zu Projekte',
+        contact: 'Link zu Kontakt',
+      },
     },
   },
   colorToggle: {
@@ -416,11 +430,18 @@ export const textsEN: Texts = {
   navigation: {
     home: 'Home',
     aboutMe: 'About me',
-    skills: 'Skills',
+    expertise: 'Expertise',
     projects: 'Projects',
     contact: 'Contact',
     ariaLabels: {
       menu: 'Open Menu',
+      links: {
+        home: 'Link to Home',
+        aboutMe: 'Link to About me',
+        expertise: 'Link to Skills',
+        projects: 'Link to Projects',
+        contact: 'Link to Contact',
+      },
     },
   },
   colorToggle: {
