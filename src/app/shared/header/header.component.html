@@ -3,12 +3,11 @@
 <header>
   <div class="left-side">
     <span
-      class="sub-logo"
+      class="main-logo"
       [innerHTML]="svgIconsService.returnIcon('logo', 'logo')"
       [attr.aria-label]="generalAriaLabels.logo"
       role="img"
     ></span>
-    <app-language-toggle></app-language-toggle>
     <app-site-navigation></app-site-navigation>
   </div>
   <div class="right-side">
@@ -20,11 +19,6 @@
       [attr.aria-label]="generalAriaLabels.logo"
       role="img"
     ></span>
-    <span
-      class="main-logo"
-      [innerHTML]="svgIconsService.returnIcon('logo', 'logo')"
-      [attr.aria-label]="generalAriaLabels.logo"
-      role="img"
-    ></span>
+    <app-language-toggle></app-language-toggle>
   </div>
 </header>

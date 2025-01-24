@@ -15,19 +15,26 @@ header {
     @include display-flex(center);
     gap: px-to-rem(50);
 
-    .sub-logo {
-      display: none;
+    .main-logo {
       &::ng-deep .logo {
         fill: var(--secondary-color);
-        height: px-to-rem(30);
-      }
-      @media (max-width: $breakpoint-lg) {
-        display: block;
+        height: px-to-rem(40);
+
+        transition: fill 0.3s ease-in-out;
+
+        &:hover {
+          path:nth-child(4),
+          path:nth-child(5),
+          path:nth-child(6),
+          path:nth-child(7) {
+            transition: fill 0.3s ease-in-out;
+            fill: var(--primary-color);
+          }
+        }
       }
     }
 
-    app-site-navigation,
-    app-language-toggle {
+    app-site-navigation {
       @media (max-width: $breakpoint-lg) {
         display: none;
       }
@@ -38,7 +45,8 @@ header {
     @include display-flex(center);
     gap: px-to-rem(50);
 
-    app-color-toggle {
+    app-color-toggle,
+    app-language-toggle {
       @media (max-width: $breakpoint-lg) {
         display: none;
       }
@@ -69,16 +77,6 @@ header {
 
       @media (max-width: $breakpoint-lg) {
         display: block;
-      }
-    }
-
-    .main-logo {
-      &::ng-deep .logo {
-        fill: var(--secondary-color);
-        height: px-to-rem(40);
-      }
-      @media (max-width: $breakpoint-lg) {
-        display: none;
       }
     }
   }
