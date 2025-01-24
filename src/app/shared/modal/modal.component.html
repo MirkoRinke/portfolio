@@ -1,7 +1,10 @@
 <!-- TODO aria attributes -->
 
 @if (modalService.ifModalOpen && modalService.modal !== 'unset') {
-<section (click)="modalService.closeModalWrapper($event)">
+<section
+  [ngClass]="modalService.activeModal !== 'menu' ? 'showBG' : ''"
+  (click)="modalService.closeModalWrapper($event)"
+>
   <div class="modal-wrapper" (click)="modalService.closeModalWrapper($event)">
     <div class="modal">
       <div class="title-bar">
@@ -41,7 +44,10 @@
   </div>
 </section>
 } @else if ( modalService.ifModalOpen && modalService.modal === 'unset') {
-<section (click)="modalService.closeModalWrapper($event)">
+<section
+  [ngClass]="modalService.activeModal !== 'menu' ? 'showBG' : ''"
+  (click)="modalService.closeModalWrapper($event)"
+>
   <div class="modal-wrapper">
     @if (modalService.activeModal === "portrait") {
     <app-portrait

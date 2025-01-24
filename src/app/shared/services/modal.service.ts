@@ -19,7 +19,9 @@ export class ModalService {
     if (this.modal !== 'unset') this.index = index;
     this.activeModal = activeModal;
     this.ifModalOpen = true;
-    this.utilityService.disabledScroll();
+    this.activeModal !== 'menu'
+      ? this.utilityService.disabledScroll()
+      : this.utilityService.addScrollListeners();
   }
 
   prevModal(modal: any, index: number, activeModal: string) {
@@ -54,6 +56,8 @@ export class ModalService {
 
   closeModal() {
     this.ifModalOpen = false;
-    this.utilityService.enableScroll();
+    this.activeModal !== 'menu'
+      ? this.utilityService.enableScroll()
+      : this.utilityService.removeScrollListeners();
   }
 }

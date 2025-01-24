@@ -16,6 +16,26 @@ export class UtilityService {
     document.body.style.paddingRight = '';
   }
 
+  preventScroll = (event: Event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+  };
+
+  addScrollListeners() {
+    window.addEventListener('scroll', this.preventScroll, { passive: false });
+    window.addEventListener('wheel', this.preventScroll, { passive: false });
+    window.addEventListener('touchmove', this.preventScroll, {
+      passive: false,
+    });
+  }
+
+  removeScrollListeners() {
+    window.removeEventListener('scroll', this.preventScroll);
+    window.removeEventListener('wheel', this.preventScroll);
+    window.removeEventListener('touchmove', this.preventScroll);
+  }
+
   objectKeys(obj: any) {
     return Object.keys(obj);
   }

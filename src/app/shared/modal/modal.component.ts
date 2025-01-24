@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { LanguageService } from '../services/language.service';
 import { SvgIconsService } from '../../shared/services/svg.icons.service';
@@ -22,6 +23,7 @@ import { MenuComponent } from '../menu/menu.component';
 @Component({
   selector: 'app-modal',
   imports: [
+    CommonModule,
     WindowControlsComponent,
     CertificateModalComponent,
     PortraitComponent,
