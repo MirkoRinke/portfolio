@@ -4,9 +4,8 @@ infoBoxPath = languageService.texts.aboutMe.infoBox;
 <section>
   <app-portrait></app-portrait>
   <div class="info">
-    @for (item of
-    utilityService.objectKeys(languageService.texts.aboutMe.infoBox); track
-    $index) { @let infoBox = infoBoxPath['infoBox' + $index];
+    @for (item of utilityService.objectKeys(infoBoxPath); track $index) { @let
+    infoBox = infoBoxPath['infoBox' + $index];
     <app-info-box
       [title]="infoBox.title"
       [textarea]="infoBox.textarea"
