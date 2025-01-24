@@ -1,4 +1,4 @@
-<!-- TODO aria attributes -->
+@let generalAriaLabels = languageService.texts.general.ariaLabels.controls;
 
 <div class="controls">
   <button
@@ -8,9 +8,8 @@
         : modalService.closeModal()
     "
     [innerHTML]="svgIconsService.returnIcon('minimize', 'icon')"
-    [attr.aria-label]="
-      languageService.texts.general.ariaLabels.controls.minimize
-    "
+    [attr.aria-label]="generalAriaLabels.minimize"
+    type="button"
   ></button>
   <button
     (click)="
@@ -21,9 +20,8 @@
         : windowService.openContent()
     "
     [innerHTML]="svgIconsService.returnIcon('maximize', 'icon')"
-    [attr.aria-label]="
-      languageService.texts.general.ariaLabels.controls.maximize
-    "
+    [attr.aria-label]="generalAriaLabels.maximize"
+    type="button"
   ></button>
   <button
     (click)="
@@ -32,6 +30,7 @@
         : modalService.closeModal()
     "
     [innerHTML]="svgIconsService.returnIcon('close', 'icon')"
-    [attr.aria-label]="languageService.texts.general.ariaLabels.controls.close"
+    [attr.aria-label]="generalAriaLabels.close"
+    type="button"
   ></button>
 </div>
