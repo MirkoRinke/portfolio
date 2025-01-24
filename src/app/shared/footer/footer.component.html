@@ -1,20 +1,29 @@
-<!-- TODO aria attributes -->
+@let ariaLabels =languageService.texts.footer.ariaLabels;
 
 <footer>
   <div class="content">
-    <div class="copyright">
+    <div
+      class="copyright"
+      [attr.aria-label]="ariaLabels.copyright + ' ' + currentYear"
+    >
       <span
         [innerHTML]="svgIconsService.returnIcon('copyright', 'copyright')"
       ></span>
       <p>Mirko Rinke {{ currentYear }}</p>
     </div>
-    <div class="links">
-      <p (click)="modalService.openModal('unset', 1, 'imprint')">
+    <nav class="links" [attr.aria-label]="ariaLabels.navigation">
+      <button
+        (click)="modalService.openModal('unset', 1, 'imprint')"
+        [attr.aria-label]="ariaLabels.links.imprint"
+      >
         {{ languageService.texts.footer.imprint }}
-      </p>
-      <p (click)="modalService.openModal('unset', 1, 'privacyPolicy')">
+      </button>
+      <button
+        (click)="modalService.openModal('unset', 1, 'privacyPolicy')"
+        [attr.aria-label]="ariaLabels.links.privacyPolicy"
+      >
         {{ languageService.texts.footer.privacyPolicy }}
-      </p>
-    </div>
+      </button>
+    </nav>
   </div>
 </footer>

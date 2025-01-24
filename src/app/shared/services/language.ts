@@ -171,6 +171,14 @@ interface TaskbarTexts {
 interface FooterTexts {
   imprint: string;
   privacyPolicy: string;
+  ariaLabels: {
+    links: {
+      imprint: string;
+      privacyPolicy: string;
+    };
+    copyright: string;
+    navigation: string;
+  };
 }
 
 interface GeneralTexts {
@@ -343,6 +351,14 @@ export const textsDE: Texts = {
   footer: {
     imprint: 'Impressum',
     privacyPolicy: 'Datenschutzerklärung',
+    ariaLabels: {
+      links: {
+        imprint: 'Link zum Impressum',
+        privacyPolicy: 'Link zur Datenschutzerklärung',
+      },
+      copyright: 'Copyright Mirko Rinke',
+      navigation: 'Footer Navigation"',
+    },
   },
   general: {
     links: {
@@ -515,6 +531,14 @@ export const textsEN: Texts = {
   footer: {
     imprint: 'Imprint',
     privacyPolicy: 'Privacy Policy',
+    ariaLabels: {
+      links: {
+        imprint: 'Link to Imprint',
+        privacyPolicy: 'Link to Privacy Policy',
+      },
+      copyright: 'Copyright Mirko Rinke',
+      navigation: 'Footer Navigation',
+    },
   },
   general: {
     links: {

@@ -41,10 +41,15 @@ footer {
 
     .links {
       @include display-flex(center, center);
-      @include font-settings();
+
       gap: 0 px-to-rem(20);
 
-      & p:hover {
+      & button {
+        @include button-preset();
+        @include font-settings();
+      }
+
+      & button:hover {
         color: var(--primary-color-hover);
         cursor: pointer;
       }
