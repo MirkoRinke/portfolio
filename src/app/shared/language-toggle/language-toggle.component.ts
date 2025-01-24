@@ -10,6 +10,8 @@ import { LanguageService } from '../../shared/services/language.service';
   styleUrl: './language-toggle.component.scss',
 })
 export class LanguageToggleComponent {
+  @Input() modalActive: boolean = false;
+
   constructor(public languageService: LanguageService) {}
 
   switchLanguage(language: string) {

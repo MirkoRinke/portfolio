@@ -4,7 +4,7 @@
 
 .menu {
   @include window-default-style();
-  max-width: px-to-rem(600);
+  max-width: px-to-rem(400);
   width: 100%;
   margin-inline: auto;
 
@@ -19,7 +19,7 @@
   .content {
     @include window-content;
     @include display-flex(center, center, column);
-    gap: px-to-rem(50);
+    gap: px-to-rem(30);
 
     app-site-navigation {
       min-width: 100%;

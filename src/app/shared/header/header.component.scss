@@ -15,7 +15,19 @@ header {
     @include display-flex(center);
     gap: px-to-rem(50);
 
-    app-site-navigation {
+    .sub-logo {
+      display: none;
+      &::ng-deep .logo {
+        fill: var(--secondary-color);
+        height: px-to-rem(30);
+      }
+      @media (max-width: $breakpoint-lg) {
+        display: block;
+      }
+    }
+
+    app-site-navigation,
+    app-language-toggle {
       @media (max-width: $breakpoint-lg) {
         display: none;
       }
@@ -53,10 +65,9 @@ header {
       &::ng-deep .logo {
         fill: var(--secondary-color);
         height: px-to-rem(40);
-
-        @media (max-width: $breakpoint-lg) {
-          display: none;
-        }
+      }
+      @media (max-width: $breakpoint-lg) {
+        display: none;
       }
     }
   }

@@ -1,8 +1,11 @@
 <!-- TODO aria attributes -->
 
 <div
-  class="select-language"
-  [ngClass]="{ active: languageService.getLanguage() === 'de' }"
+  [ngClass]="{
+    'select-language': true,
+    modalActive: modalActive,
+    active: languageService.getLanguage() === 'de'
+  }"
 >
   <button (click)="switchLanguage('de')">DE</button>
   <button (click)="switchLanguage('en')">EN</button>

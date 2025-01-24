@@ -13,6 +13,7 @@ import { ModalService } from '../../shared/services/modal.service';
 import { WindowControlsComponent } from '../../shared/window-controls/window-controls.component';
 import { SiteNavigationComponent } from '../site-navigation/site-navigation.component';
 import { ColorToggleComponent } from '../color-toggle/color-toggle.component';
+import { LanguageToggleComponent } from '../language-toggle/language-toggle.component';
 
 @Component({
   selector: 'app-menu',
@@ -21,6 +22,7 @@ import { ColorToggleComponent } from '../color-toggle/color-toggle.component';
     WindowControlsComponent,
     SiteNavigationComponent,
     ColorToggleComponent,
+    LanguageToggleComponent,
   ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',

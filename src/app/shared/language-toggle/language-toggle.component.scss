@@ -5,7 +5,7 @@
 .select-language {
   @include display-flex(center, center);
   border: 1px solid var(--primary-color);
-  border-radius: px-to-rem(100);
+  border-radius: px-to-rem(5);
   position: relative;
 
   &::before {
@@ -14,7 +14,7 @@
     height: 105%;
     width: 50%;
     background-color: var(--primary-color);
-    border-radius: px-to-rem(100);
+    border-radius: px-to-rem(5);
     transition: all 0.3s ease-in-out;
     left: 50%;
   }
