@@ -12,6 +12,7 @@ languageService.texts.general.ariaLabels.desktopIcon;
         (click)="tapService.activateTap(tap, 'expertise'); ngOnChanges()"
         [attr.aria-pressed]="tapService.activeTapExpertise === tap"
         [attr.aria-label]="expertise.ariaLabels.taps[tap]"
+        type="button"
       >
         <div class="title-area">
           <div
@@ -56,5 +57,6 @@ languageService.texts.general.ariaLabels.desktopIcon;
     ' ' +
     generalAriaLabels.secondText
   "
+  type="button"
 ></button>
 }

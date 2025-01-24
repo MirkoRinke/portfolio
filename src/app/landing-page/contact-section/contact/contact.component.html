@@ -37,7 +37,7 @@ languageService.texts.contact; @if(windowService.ifWindowOpen) {
           {{ contact.contactFormSubmit }}
         </button>
         } @else {
-        <button class="submitted-button" disabled>
+        <button class="submitted-button" disabled type="button">
           <div
             [innerHTML]="svgIconsService.returnIcon('eMail')"
             [attr.aria-hidden]="true"
@@ -174,5 +174,6 @@ languageService.texts.contact; @if(windowService.ifWindowOpen) {
     ' ' +
     generalAriaLabels.secondText
   "
+  type="button"
 ></button>
 }
