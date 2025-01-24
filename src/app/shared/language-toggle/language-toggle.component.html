@@ -1,4 +1,4 @@
-<!-- TODO aria attributes -->
+@let ariaLabels = languageService.texts.languageToggle.ariaLabels;
 
 <div
   [ngClass]="{
@@ -7,6 +7,26 @@
     active: languageService.getLanguage() === 'de'
   }"
 >
-  <button (click)="switchLanguage('de')">DE</button>
-  <button (click)="switchLanguage('en')">EN</button>
+  <button
+    [attr.aria-label]="ariaLabels.de"
+    [attr.aria-pressed]="languageService.getLanguage() === 'de'"
+    [attr.aria-current]="
+      languageService.getLanguage() === 'de' ? 'true' : 'false'
+    "
+    type="button"
+    (click)="switchLanguage('de')"
+  >
+    DE
+  </button>
+  <button
+    [attr.aria-label]="ariaLabels.en"
+    [attr.aria-pressed]="languageService.getLanguage() === 'en'"
+    [attr.aria-current]="
+      languageService.getLanguage() === 'en' ? 'true' : 'false'
+    "
+    type="button"
+    (click)="switchLanguage('en')"
+  >
+    EN
+  </button>
 </div>

@@ -2,6 +2,7 @@ export interface Texts {
   index: IndexTexts;
   navigation: navigationTexts;
   colorToggle: ColorToggleTexts;
+  languageToggle: languageToggleTexts;
   hero: HeroTexts;
   menu: MenuTexts;
   aboutMe: aboutMeTexts;
@@ -34,6 +35,13 @@ interface ColorToggleTexts {
     turquoise: string;
     blue: string;
     violett: string;
+  };
+}
+
+interface languageToggleTexts {
+  ariaLabels: {
+    de: string;
+    en: string;
   };
 }
 
@@ -233,6 +241,12 @@ export const textsDE: Texts = {
       violett: 'Farbmodus wechseln zu Violett',
     },
   },
+  languageToggle: {
+    ariaLabels: {
+      de: 'Sprache wechseln zu Deutsch',
+      en: 'Sprache wechseln zu Englisch',
+    },
+  },
   hero: {
     subHeading: 'Frontend-Entwickler',
     mainHeading: 'Mirko Rinke',
@@ -414,6 +428,12 @@ export const textsEN: Texts = {
       turquoise: 'Change color mode to Turquoise (Default)',
       blue: 'Change color mode to Blue',
       violett: 'Change color mode to Violett',
+    },
+  },
+  languageToggle: {
+    ariaLabels: {
+      de: 'Change language to German',
+      en: 'Change language to English',
     },
   },
   hero: {
