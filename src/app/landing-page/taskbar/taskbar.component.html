@@ -7,7 +7,8 @@ languageService.texts.general.ariaLabels;
   <div class="taskbar">
     <div class="content">
       <span
-        (click)="modalService.openModal('unset', 1, 'menu')"
+        [routerLink]="['']"
+        fragment="hero"
         [innerHTML]="svgIconsService.returnIcon('logo')"
         [attr.aria-label]="generalAriaLabels.logo"
         role="img"
