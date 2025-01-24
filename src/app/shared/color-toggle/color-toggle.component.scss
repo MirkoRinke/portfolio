@@ -3,6 +3,7 @@
 @use "../../../var" as *;
 
 .color-toggle {
+  @include button-preset();
   @include display-flex();
 
   .color {

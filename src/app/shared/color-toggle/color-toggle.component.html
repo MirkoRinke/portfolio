@@ -1,19 +1,25 @@
-<!-- TODO aria attributes -->
+@let ariaLabels =languageService.texts.colorToggle.ariaLabels;
 
 <div [ngClass]="modalActive ? 'color-toggle modalActive' : 'color-toggle'">
-  <span
+  <button
     [ngClass]="{ active: currentColor === 'violett' }"
     (click)="setColor('violett')"
     class="color violett"
-  ></span>
-  <span
+    [attr.aria-label]="ariaLabels.violett"
+    [attr.aria-pressed]="currentColor === 'violett'"
+  ></button>
+  <button
     [ngClass]="{ active: currentColor === 'blue' }"
     (click)="setColor('blue')"
     class="color blue"
-  ></span>
-  <span
+    [attr.aria-label]="ariaLabels.blue"
+    [attr.aria-pressed]="currentColor === 'blue'"
+  ></button>
+  <button
     [ngClass]="{ active: currentColor === null }"
     (click)="setColor('default')"
     class="color turquoise"
-  ></span>
+    [attr.aria-label]="ariaLabels.turquoise"
+    [attr.aria-pressed]="currentColor === null"
+  ></button>
 </div>

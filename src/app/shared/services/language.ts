@@ -1,6 +1,7 @@
 export interface Texts {
   index: IndexTexts;
   navigation: navigationTexts;
+  colorToggle: ColorToggleTexts;
   hero: HeroTexts;
   menu: MenuTexts;
   aboutMe: aboutMeTexts;
@@ -23,6 +24,14 @@ interface navigationTexts {
   skills: string;
   projects: string;
   contact: string;
+}
+
+interface ColorToggleTexts {
+  ariaLabels: {
+    turquoise: string;
+    blue: string;
+    violett: string;
+  };
 }
 
 interface HeroTexts {
@@ -203,6 +212,13 @@ export const textsDE: Texts = {
     projects: 'Projekte',
     contact: 'Kontakt',
   },
+  colorToggle: {
+    ariaLabels: {
+      turquoise: 'Farbmodus wechseln zu Türkis (Standard)',
+      blue: 'Farbmodus wechseln zu Blau',
+      violett: 'Farbmodus wechseln zu Violett',
+    },
+  },
   hero: {
     subHeading: 'Frontend-Entwickler',
     mainHeading: 'Mirko Rinke',
@@ -367,6 +383,13 @@ export const textsEN: Texts = {
     skills: 'Skills',
     projects: 'Projects',
     contact: 'Contact',
+  },
+  colorToggle: {
+    ariaLabels: {
+      turquoise: 'Change color mode to Turquoise (Default)',
+      blue: 'Change color mode to Blue',
+      violett: 'Change color mode to Violett',
+    },
   },
   hero: {
     subHeading: 'Frontend Developer',
