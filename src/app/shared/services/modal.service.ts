@@ -59,5 +59,6 @@ export class ModalService {
     this.activeModal !== 'menu'
       ? this.utilityService.enableScroll()
       : this.utilityService.removeScrollListeners();
+    this.activeModal = '';
   }
 }

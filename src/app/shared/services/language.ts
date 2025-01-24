@@ -24,6 +24,9 @@ interface navigationTexts {
   skills: string;
   projects: string;
   contact: string;
+  ariaLabels: {
+    menu: string;
+  };
 }
 
 interface ColorToggleTexts {
@@ -219,6 +222,9 @@ export const textsDE: Texts = {
     skills: 'Fähigkeiten',
     projects: 'Projekte',
     contact: 'Kontakt',
+    ariaLabels: {
+      menu: 'Menü öffnen',
+    },
   },
   colorToggle: {
     ariaLabels: {
@@ -399,6 +405,9 @@ export const textsEN: Texts = {
     skills: 'Skills',
     projects: 'Projects',
     contact: 'Contact',
+    ariaLabels: {
+      menu: 'Open Menu',
+    },
   },
   colorToggle: {
     ariaLabels: {

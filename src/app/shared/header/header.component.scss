@@ -53,6 +53,7 @@ header {
     }
 
     .menu-icon {
+      @include button-preset();
       display: none;
       &::ng-deep .menu {
         fill: var(--secondary-color);

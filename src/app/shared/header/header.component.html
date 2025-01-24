@@ -1,4 +1,5 @@
-@let generalAriaLabels = languageService.texts.general.ariaLabels;
+@let generalAriaLabels = languageService.texts.general.ariaLabels; @let
+ariaLabels = languageService.texts.navigation.ariaLabels;
 
 <header>
   <div class="left-side">
@@ -12,13 +13,14 @@
   </div>
   <div class="right-side">
     <app-color-toggle></app-color-toggle>
-    <span
+    <button
       (click)="modalService.openModal('unset', 1, 'menu')"
       class="menu-icon"
       [innerHTML]="svgIconsService.returnIcon('menu')"
-      [attr.aria-label]="generalAriaLabels.logo"
-      role="img"
-    ></span>
+      [attr.aria-label]="ariaLabels.menu"
+      [attr.aria-haspopup]="true"
+      [attr.aria-expanded]="modalService.activeModal === 'menu'"
+    ></button>
     <app-language-toggle></app-language-toggle>
   </div>
 </header>
