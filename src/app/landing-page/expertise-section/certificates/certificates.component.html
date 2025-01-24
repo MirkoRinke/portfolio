@@ -7,7 +7,7 @@
   @for (certificate of certificates; track $index) { @if
   (certificate.visibility) {
   <button
-    (click)="modalService.openModal(certificates, $index, 'certificate')"
+    (click)="modalService.openModal($index, 'certificate')"
     class="certificate"
     [id]="$index == 0 ? 'first-certificate' : null"
     [attr.aria-label]="

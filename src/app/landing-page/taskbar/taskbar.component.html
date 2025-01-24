@@ -17,13 +17,7 @@ languageService.texts.general.ariaLabels;
       <div class="taps">
         @for (item of utilityService.objectKeys(taskbar.taps) ; track $index) {
         <div
-          (click)="
-            modalService.openModal(
-              'unset',
-              $index,
-              taskbar.taps['tap' + $index]
-            )
-          "
+          (click)="modalService.openModal($index, taskbar.taps['tap' + $index])"
           class="tap"
           [attr.aria-label]="
             ariaLabels.taps.firstText +

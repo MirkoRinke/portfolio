@@ -14,7 +14,7 @@ ariaLabels = languageService.texts.navigation.ariaLabels;
   <div class="right-side">
     <app-color-toggle></app-color-toggle>
     <button
-      (click)="modalService.openModal('unset', 1, 'menu')"
+      (click)="modalService.openModal(1, 'menu')"
       class="menu-icon"
       [innerHTML]="svgIconsService.returnIcon('menu')"
       [attr.aria-label]="ariaLabels.menu"

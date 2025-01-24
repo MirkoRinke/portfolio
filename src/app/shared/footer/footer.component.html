@@ -13,7 +13,7 @@
     </div>
     <nav class="links" [attr.aria-label]="ariaLabels.navigation">
       <button
-        (click)="modalService.openModal('unset', 1, 'imprint')"
+        (click)="modalService.openModal(1, 'imprint')"
         [attr.aria-label]="ariaLabels.links.imprint"
         [attr.aria-haspopup]="true"
         [attr.aria-expanded]="modalService.activeModal === 'imprint'"
@@ -22,7 +22,7 @@
         {{ languageService.texts.footer.imprint }}
       </button>
       <button
-        (click)="modalService.openModal('unset', 1, 'privacyPolicy')"
+        (click)="modalService.openModal(1, 'privacyPolicy')"
         [attr.aria-label]="ariaLabels.links.privacyPolicy"
         [attr.aria-haspopup]="true"
         [attr.aria-expanded]="modalService.activeModal === 'privacyPolicy'"

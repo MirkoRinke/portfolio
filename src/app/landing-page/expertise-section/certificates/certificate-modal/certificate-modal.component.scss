@@ -2,40 +2,54 @@
 @use "../../../../../mixins" as *;
 @use "../../../../../var" as *;
 
-.modal-content {
-  @include display-flex();
-  max-width: px-to-rem(900);
-  height: 100%;
-  position: relative;
-  img {
-    width: 100%;
-    height: auto;
-    margin-inline: auto;
-  }
+.certificate {
+  @include window-default-style();
+  max-width: fit-content;
+  margin-inline: auto;
 
-  .left {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    height: 100%;
-    width: 50%;
+  .title-bar {
+    @include title-bar-default-style;
 
-    &:hover {
-      cursor: var(--cursor-arrow-back);
+    .title {
+      @include title-default-style();
     }
   }
 
-  .right {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+  .content {
+    @include display-flex();
+    max-width: px-to-rem(900);
     height: 100%;
-    width: 50%;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+      margin-inline: auto;
+    }
 
-    &:hover {
-      cursor: var(--cursor-arrow-forward);
+    .left {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 100%;
+      width: 50%;
+
+      &:hover {
+        cursor: var(--cursor-arrow-back);
+      }
+    }
+
+    .right {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 100%;
+      width: 50%;
+
+      &:hover {
+        cursor: var(--cursor-arrow-forward);
+      }
     }
   }
 }

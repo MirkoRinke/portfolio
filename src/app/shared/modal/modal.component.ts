@@ -7,10 +7,6 @@ import { WindowService } from '../../shared/services/window.service';
 import { ModalService } from '../../shared/services/modal.service';
 import { UtilityService } from '../services/utility.service';
 
-import { WindowControlsComponent } from '../window-controls/window-controls.component';
-
-import { CertificateModalComponent } from '../../landing-page/expertise-section/certificates/certificate-modal/certificate-modal.component';
-
 import { PortraitComponent } from '../../landing-page/about-me-section/portrait/portrait.component';
 import { InfoBoxComponent } from '../../landing-page/about-me-section/info-box/info-box.component';
 import { ExpertiseComponent } from '../../landing-page/expertise-section/expertise/expertise.component';
@@ -19,13 +15,12 @@ import { ContactComponent } from '../../landing-page/contact-section/contact/con
 import { ImprintComponent } from '../../landing-page/imprint/imprint.component';
 import { PrivacyPolicyComponent } from '../../landing-page/privacy-policy/privacy-policy.component';
 import { MenuComponent } from '../menu/menu.component';
+import { CertificateModalComponent } from '../../landing-page/expertise-section/certificates/certificate-modal/certificate-modal.component';
 
 @Component({
   selector: 'app-modal',
   imports: [
     CommonModule,
-    WindowControlsComponent,
-    CertificateModalComponent,
     PortraitComponent,
     InfoBoxComponent,
     ExpertiseComponent,
@@ -34,6 +29,7 @@ import { MenuComponent } from '../menu/menu.component';
     ImprintComponent,
     PrivacyPolicyComponent,
     MenuComponent,
+    CertificateModalComponent,
   ],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',
@@ -48,6 +44,7 @@ export class ModalComponent {
   ) {}
 
   get switchCase() {
+    if (!this.modalService.activeModal) return;
     return this.modalService.activeModal.startsWith('infoBox')
       ? 'infoBox'
       : this.modalService.activeModal;

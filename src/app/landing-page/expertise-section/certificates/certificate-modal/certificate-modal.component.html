@@ -2,29 +2,48 @@
 languageService.texts.expertise.certificates.certificateModal; @let ariaLabels =
 languageService.texts.expertise.ariaLabels.certificateModal;
 
-<div class="modal-content">
-  <span
-    class="left"
-    (click)="
-      modalService.prevModal(modalService.modal, index - 1, 'certificate')
-    "
-    [attr.aria-label]="ariaLabels.previous"
-  ></span>
-  <img
-    [src]="modal[index].image"
-    [alt]="
-      (languageService.getLanguage() === 'de'
-        ? modal[index].titleDE
-        : modal[index].titleEN) +
-      ' ' +
-      certificateModal.content
-    "
-  />
-  <span
-    class="right"
-    (click)="
-      modalService.nextModal(modalService.modal, index + 1, 'certificate')
-    "
-    [attr.aria-label]="ariaLabels.next"
-  ></span>
+<div class="certificate">
+  <div class="title-bar">
+    <h3 class="title">
+      {{
+        languageService.getLanguage() === "de"
+          ? certificates[index].titleDE
+          : certificates[index].titleEN
+      }}
+    </h3>
+    <div class="controls">
+      <app-window-controls
+        [windowService]="windowService"
+        [svgIconsService]="svgIconsService"
+        [languageService]="languageService"
+        [modalService]="modalService"
+        [index]="0"
+        [activeModal]="'infoBox' + index"
+      ></app-window-controls>
+    </div>
+  </div>
+  @if (windowService.ifContentOpen) {
+  <div class="content" [ngClass]="{ 'modal-active': modalActive }">
+    <span
+      class="left"
+      (click)="prevCertificate(certificates, index - 1)"
+      [attr.aria-label]="ariaLabels.previous"
+    ></span>
+    <img
+      [src]="certificates[index].image"
+      [alt]="
+        (languageService.getLanguage() === 'de'
+          ? certificates[index].titleDE
+          : certificates[index].titleEN) +
+        ' ' +
+        certificateModal.content
+      "
+    />
+    <span
+      class="right"
+      (click)="nextCertificate(certificates, index + 1)"
+      [attr.aria-label]="ariaLabels.next"
+    ></span>
+  </div>
+  }
 </div>

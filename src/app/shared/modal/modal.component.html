@@ -1,50 +1,6 @@
 <!-- TODO aria attributes -->
 
-@let activeInfoBox = modalService.activeModal; @if (modalService.ifModalOpen &&
-modalService.modal !== 'unset') {
-<section
-  [ngClass]="modalService.activeModal !== 'menu' ? 'showBG' : ''"
-  (click)="modalService.closeModalWrapper($event)"
->
-  <div class="modal-wrapper" (click)="modalService.closeModalWrapper($event)">
-    <div class="modal">
-      <div class="title-bar">
-        <h3 class="title">
-          @if (modalService.activeModal === "certificate") {
-          {{
-            languageService.getLanguage() === "de"
-              ? modalService.modal[modalService.index].titleDE
-              : modalService.modal[modalService.index].titleEN
-          }}
-          } @else {
-          {{ modalService.modal.title }}
-          }
-        </h3>
-        <div class="controls">
-          <app-window-controls
-            [windowService]="windowService"
-            [svgIconsService]="svgIconsService"
-            [languageService]="languageService"
-            [modalService]="modalService"
-          ></app-window-controls>
-        </div>
-      </div>
-      @if (windowService.ifContentOpen) {
-      <div class="content">
-        @if (modalService.activeModal === "certificate") {
-        <app-certificate-modal
-          [modal]="modalService.modal"
-          [index]="modalService.index"
-        ></app-certificate-modal>
-        } @else {
-        <p>PLACEHOLDER</p>
-        }
-      </div>
-      }
-    </div>
-  </div>
-</section>
-} @else if ( modalService.ifModalOpen && modalService.modal === 'unset') {
+@let activeInfoBox = modalService.activeModal; @if (modalService.ifModalOpen) {
 <section
   [ngClass]="modalService.activeModal !== 'menu' ? 'showBG' : ''"
   (click)="modalService.closeModalWrapper($event)"
@@ -87,6 +43,15 @@ modalService.modal !== 'unset') {
       (click)="modalService.closeModalWrapper($event)"
       [modalActive]="true"
     ></app-menu>
+
+    <app-certificate-modal
+      *ngSwitchCase="'certificate'"
+      (click)="modalService.closeModalWrapper($event)"
+      [modalActive]="true"
+      [index]="modalService.index"
+    >
+    </app-certificate-modal>
+
     <p *ngSwitchDefault>PLACEHOLDER</p>
   </div>
 </section>

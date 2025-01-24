@@ -10,7 +10,6 @@ languageService.texts.contact; @if(windowService.ifWindowOpen) {
         [svgIconsService]="svgIconsService"
         [languageService]="languageService"
         [modalService]="modalService"
-        [modal]="'unset'"
         [index]="0"
         [activeModal]="'contact'"
       ></app-window-controls>
@@ -150,7 +149,7 @@ languageService.texts.contact; @if(windowService.ifWindowOpen) {
         <p class="agree-text">
           {{ contact.contactFormPrivacyPolicyText1 }}
           <span
-            (click)="modalService.openModal('unset', 1, 'privacyPolicy')"
+            (click)="modalService.openModal(1, 'privacyPolicy')"
             class="privacy-link"
             [attr.aria-label]="ariaLabels.privacyPolicyLink"
             >{{ contact.contactFormPrivacyPolicyText2 }}</span

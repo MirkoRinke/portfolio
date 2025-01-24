@@ -19,14 +19,13 @@ export class WindowControlsComponent {
   @Input() modalService!: ModalService;
   @Input() tapService!: TapService;
 
-  @Input() modal!: any;
   @Input() index!: number;
   @Input() activeModal!: string;
 
   @Input() activeTap!: string;
 
   openModal() {
-    this.modalService.openModal(this.modal, this.index, this.activeModal);
+    this.modalService.openModal(this.index, this.activeModal);
     if (this.activeModal === 'expertise') {
       this.tapService.activateTap(this.activeTap, this.activeTap);
     }
