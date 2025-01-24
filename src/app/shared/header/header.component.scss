@@ -58,7 +58,7 @@ header {
 
         &:hover {
           transition: fill 0.3s ease-in-out;
-          fill: var(--primary-color-hover);
+          fill: var(--primary-color);
           cursor: pointer;
 
           path:nth-child(3) {
