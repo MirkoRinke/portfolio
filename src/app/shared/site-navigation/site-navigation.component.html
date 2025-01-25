@@ -7,7 +7,9 @@
         [routerLink]="['']"
         fragment="hero"
         (click)="modalService.closeModal()"
-        [ngClass]="{ active: currentFragment() === 'hero' }"
+        [ngClass]="{
+          active: currentFragment() === 'hero' || currentFragment() === ''
+        }"
         [attr.aria-label]="ariaLabels.links.home"
         [attr.aria-current]="currentFragment() === 'hero' ? 'page' : null"
         >{{ languageService.texts.navigation.home }}</a
