@@ -1,5 +1,3 @@
-<!-- TODO aria attributes -->
-
 @let activeInfoBox = modalService.activeModal; @if (modalService.ifModalOpen) {
 <section
   [ngClass]="modalService.activeModal !== 'menu' ? 'showBG' : ''"
@@ -18,12 +16,8 @@
       [textarea]="languageService.texts.aboutMe.infoBox[activeInfoBox].textarea"
       [index]="utilityService.getNumbersFromEnd(activeInfoBox)"
       [modalActive]="true"
-      [attr.aria-label]="
-        languageService.texts.aboutMe.ariaLabels.infoBox.description +
-        ' ' +
-        languageService.texts.aboutMe.infoBox[activeInfoBox].title
-      "
-    ></app-info-box>
+    >
+    </app-info-box>
     <app-expertise
       *ngSwitchCase="'expertise'"
       [modalActive]="true"
@@ -43,16 +37,13 @@
       (click)="modalService.closeModalWrapper($event)"
       [modalActive]="true"
     ></app-menu>
-
     <app-certificate-modal
       *ngSwitchCase="'certificate'"
       (click)="modalService.closeModalWrapper($event)"
-      [modalActive]="true"
       [index]="modalService.index"
-    >
-    </app-certificate-modal>
-
-    <p *ngSwitchDefault>PLACEHOLDER</p>
+      [modalActive]="true"
+    ></app-certificate-modal>
+    <p *ngSwitchDefault>404 Modal not found</p>
   </div>
 </section>
 }
