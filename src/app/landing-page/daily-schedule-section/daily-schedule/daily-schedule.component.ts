@@ -12,12 +12,12 @@ import { ModalService } from '../../../shared/services/modal.service';
 import { environment } from '../../../../environments/environment';
 
 @Component({
-  selector: 'app-github-graph',
+  selector: 'app-daily-schedule',
   imports: [CommonModule, WindowControlsComponent],
-  templateUrl: './github-graph.component.html',
-  styleUrl: './github-graph.component.scss',
+  templateUrl: './daily-schedule.component.html',
+  styleUrl: './daily-schedule.component.scss',
 })
-export class GithubGraphComponent implements OnInit {
+export class DailyScheduleComponent implements OnInit {
   @Input() modalActive!: boolean;
 
   GITHUB_USERNAME = environment.githubUserName;

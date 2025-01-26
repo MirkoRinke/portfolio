@@ -16,7 +16,7 @@ import { ImprintComponent } from '../../landing-page/imprint/imprint.component';
 import { PrivacyPolicyComponent } from '../../landing-page/privacy-policy/privacy-policy.component';
 import { MenuComponent } from '../menu/menu.component';
 import { CertificateModalComponent } from '../../landing-page/expertise-section/certificates/certificate-modal/certificate-modal.component';
-import { GithubGraphComponent } from '../../landing-page/github-graph-section/github-graph/github-graph.component';
+import { DailyScheduleComponent } from '../../landing-page/daily-schedule-section/daily-schedule/daily-schedule.component';
 
 @Component({
   selector: 'app-modal',
@@ -31,7 +31,7 @@ import { GithubGraphComponent } from '../../landing-page/github-graph-section/gi
     PrivacyPolicyComponent,
     MenuComponent,
     CertificateModalComponent,
-    GithubGraphComponent,
+    DailyScheduleComponent,
   ],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',

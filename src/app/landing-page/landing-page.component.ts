@@ -6,7 +6,7 @@ import { ModalComponent } from '../shared/modal/modal.component';
 import { ProjectsSectionComponent } from './projects-section/projects-section.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { TaskbarComponent } from './taskbar/taskbar.component';
-import { GithubGraphSectionComponent } from './github-graph-section/github-graph-section.component';
+import { GithubGraphSectionComponent } from './daily-schedule-section/daily-schedule-section.component';
 
 @Component({
   selector: 'app-landing-page',
