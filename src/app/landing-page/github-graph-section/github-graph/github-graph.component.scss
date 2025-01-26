@@ -30,11 +30,20 @@
         gap: px-to-rem(30);
         flex-wrap: wrap;
 
+        @media (max-width: $breakpoint-md) {
+          flex-direction: column;
+        }
+
         .text {
           @include display-flex(start, center, column);
           gap: px-to-rem(30);
           max-width: calc(50% - px-to-rem(30));
           min-width: calc(50% - px-to-rem(30));
+
+          @media (max-width: $breakpoint-md) {
+            max-width: 100%;
+            min-width: 100%;
+          }
 
           & h3 {
             @include font-settings(18, 700, var(--primary-color));
