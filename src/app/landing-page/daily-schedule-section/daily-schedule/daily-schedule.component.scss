@@ -18,9 +18,17 @@
     @include display-flex(center, start, column);
     gap: px-to-rem(100);
 
+    @media (max-width: $breakpoint-md) {
+      gap: px-to-rem(50);
+    }
+
     .top {
       @include display-flex(start, space-between, column);
       gap: px-to-rem(50);
+
+      @media (max-width: $breakpoint-md) {
+        gap: px-to-rem(25);
+      }
 
       & h2 {
         @include font-settings(48, 700, var(--primary-color));
