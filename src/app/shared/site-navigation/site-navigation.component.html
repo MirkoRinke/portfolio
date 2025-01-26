@@ -29,6 +29,19 @@
     <li>
       <a
         [routerLink]="['']"
+        fragment="daily_schedule"
+        (click)="modalService.closeModal()"
+        [ngClass]="{ active: currentFragment() === 'daily_schedule' }"
+        [attr.aria-label]="ariaLabels.links.dailySchedule"
+        [attr.aria-current]="
+          currentFragment() === 'daily_schedule' ? 'page' : null
+        "
+        >{{ languageService.texts.navigation.dailySchedule }}</a
+      >
+    </li>
+    <li>
+      <a
+        [routerLink]="['']"
         fragment="expertise"
         (click)="modalService.closeModal()"
         [ngClass]="{ active: currentFragment() === 'expertise' }"

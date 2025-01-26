@@ -22,6 +22,7 @@ interface IndexTexts {
 interface navigationTexts {
   home: string;
   aboutMe: string;
+  dailySchedule: string;
   expertise: string;
   projects: string;
   contact: string;
@@ -30,6 +31,7 @@ interface navigationTexts {
     links: {
       home: string;
       aboutMe: string;
+      dailySchedule: string;
       expertise: string;
       projects: string;
       contact: string;
@@ -234,6 +236,7 @@ export const textsDE: Texts = {
   navigation: {
     home: 'Startseite',
     aboutMe: 'Über mich',
+    dailySchedule: 'Tagesablauf',
     expertise: 'Expertise',
     projects: 'Projekte',
     contact: 'Kontakt',
@@ -242,6 +245,7 @@ export const textsDE: Texts = {
       links: {
         home: 'Link zur Startseite',
         aboutMe: 'Link zu Über mich',
+        dailySchedule: 'Link zu Tagesablauf',
         expertise: 'Link zu Fähigkeiten',
         projects: 'Link zu Projekte',
         contact: 'Link zu Kontakt',
@@ -430,6 +434,7 @@ export const textsEN: Texts = {
   navigation: {
     home: 'Home',
     aboutMe: 'About me',
+    dailySchedule: 'Daily Schedule',
     expertise: 'Expertise',
     projects: 'Projects',
     contact: 'Contact',
@@ -438,6 +443,7 @@ export const textsEN: Texts = {
       links: {
         home: 'Link to Home',
         aboutMe: 'Link to About me',
+        dailySchedule: 'Link to Daily Schedule',
         expertise: 'Link to Skills',
         projects: 'Link to Projects',
         contact: 'Link to Contact',
