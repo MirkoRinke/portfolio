@@ -1,8 +1,9 @@
-@let generalAriaLabels =languageService.texts.general.ariaLabels.desktopIcon;
+@let dailySchedule = languageService.texts.dailySchedule; @let generalAriaLabels
+=languageService.texts.general.ariaLabels.desktopIcon;
 @if(windowService.ifWindowOpen) {
 <div class="github-graph">
   <div class="title-bar">
-    <h3 class="title">daily_schedule.repeat</h3>
+    <h3 class="title">{{ dailySchedule.title }}</h3>
     <div class="controls">
       <app-window-controls
         [windowService]="windowService"
@@ -17,43 +18,18 @@
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
     <div class="top">
-      <h2>Daily Coding Adventures</h2>
+      <h2>{{ dailySchedule.heading }}</h2>
       <div class="textarea">
+        @for (detail of dailySchedule.details; track $index) {
         <div class="text">
-          <h3>Innovative Lösungen</h3>
+          <h3>{{ detail.title }}</h3>
           <p>
-            Programmieren ist für mich wie Gaming jede Zeile Code und jede
-            Aufgabe fühlt sich an wie ein neues Level, das darauf wartet,
-            gemeistert zu werden.
+            {{ detail.description }}
           </p>
         </div>
-        <div class="text">
-          <h3>Völlig im Code Versunken</h3>
-          <p>
-            Ich liebe es, mich stundenlang in Projekte zu vertiefen, Probleme zu
-            lösen und kreative Wege zu finden und komplexe Herausforderungen zu
-            bewältigen.
-          </p>
-        </div>
-        <div class="text">
-          <h3>Herausforderungen bewältigen</h3>
-          <p>
-            Jede Herausforderung ist eine Gelegenheit, kreativ zu werden und
-            neue Lösungswege zu entdecken.
-          </p>
-        </div>
-        <div class="text">
-          <h3>Kontinuierliches Lernen</h3>
-          <p>
-            Jeden Tag setze ich mir das Ziel, Neues zu lernen, meine Grenzen zu
-            erweitern und mich durch neue Herausforderungen weiterzuentwickeln.
-          </p>
-        </div>
+        }
       </div>
-
-      <div></div>
     </div>
-
     <div id="github-calendar" class="github-calendar">
       @for (week of weeks; track $index) { @for (day of week; track $index) {
       <div

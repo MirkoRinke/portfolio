@@ -16,7 +16,7 @@
   .content {
     @include window-content;
     @include display-flex(center, start, column);
-    gap: px-to-rem(50);
+    gap: px-to-rem(100);
 
     .top {
       @include display-flex(start, space-between, column);
@@ -37,9 +37,8 @@
 
         .text {
           @include display-flex(start, center, column);
-          gap: px-to-rem(30);
-          max-width: calc(50% - px-to-rem(30));
-          min-width: calc(50% - px-to-rem(30));
+          gap: px-to-rem(10);
+          width: calc(50% - px-to-rem(30));
 
           @media (max-width: $breakpoint-md) {
             max-width: 100%;

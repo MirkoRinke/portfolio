@@ -209,7 +209,7 @@
       @include display-flex(start, center, column);
       @include font-settings();
       gap: px-to-rem(10);
-      width: calc(50% - 10px);
+      width: calc(50% - px-to-rem(20));
 
       @media (max-width: $breakpoint-sm) {
         width: 100%;

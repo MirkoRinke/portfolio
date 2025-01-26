@@ -6,6 +6,7 @@ export interface Texts {
   hero: HeroTexts;
   menu: MenuTexts;
   aboutMe: aboutMeTexts;
+  dailySchedule: DailyScheduleTexts;
   projects: projectsTexts;
   expertise: Expertise;
   contact: ContactTexts;
@@ -95,6 +96,15 @@ interface aboutMeTexts {
       description: string;
     };
   };
+}
+
+interface DailyScheduleTexts {
+  title: string;
+  heading: string;
+  details: {
+    title: string;
+    description: string;
+  }[];
 }
 
 interface MenuTexts {
@@ -306,6 +316,32 @@ export const textsDE: Texts = {
       },
     },
   },
+  dailySchedule: {
+    title: 'tagesablauf.repeat',
+    heading: 'Tägliche Coding-Abenteuer',
+    details: [
+      {
+        title: 'Innovative Lösungen',
+        description:
+          'Programmieren ist für mich wie Gaming jede Zeile Code und jede Aufgabe fühlt sich an wie ein neues Level, das darauf wartet, gemeistert zu werden.',
+      },
+      {
+        title: 'Völlig im Code Versunken',
+        description:
+          'Ich liebe es, mich stundenlang in Projekte zu vertiefen, Probleme zu lösen und kreative Wege zu finden und komplexe Herausforderungen zu bewältigen.',
+      },
+      {
+        title: 'Herausforderungen bewältigen',
+        description:
+          'Jede Herausforderung ist eine Gelegenheit, kreativ zu werden und neue Lösungswege zu entdecken.',
+      },
+      {
+        title: 'Kontinuierliches Lernen',
+        description:
+          'Jeden Tag setze ich mir das Ziel, Neues zu lernen, meine Grenzen zu erweitern und mich durch neue Herausforderungen weiterzuentwickeln.',
+      },
+    ],
+  },
   expertise: {
     title: 'Expertise',
     certificates: {
@@ -503,6 +539,32 @@ export const textsEN: Texts = {
         description: 'Information Box about',
       },
     },
+  },
+  dailySchedule: {
+    title: 'daily_schedule.repeat',
+    heading: 'Daily Coding Adventures',
+    details: [
+      {
+        title: 'Innovative Solutions',
+        description:
+          'Coding feels like gaming to me—every line of code and every task is like a new level waiting to be conquered.',
+      },
+      {
+        title: 'Deep Focus on Code',
+        description:
+          'I love immersing myself in projects for hours, solving problems, and finding creative ways to tackle complex challenges.',
+      },
+      {
+        title: 'Overcoming Challenges',
+        description:
+          'Every challenge is an opportunity to think outside the box and discover new approaches.',
+      },
+      {
+        title: 'Continuous Learning',
+        description:
+          'Each day, I aim to learn something new, push my boundaries, and grow by embracing new challenges.',
+      },
+    ],
   },
   expertise: {
     title: 'Expertise',
