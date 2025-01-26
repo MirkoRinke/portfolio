@@ -37,7 +37,15 @@
         [style.backgroundColor]="
           day.contributionCount === 0 ? 'transparent' : day.color
         "
-        [title]="day.date + ': ' + day.contributionCount + ' contributions'"
+        [title]="
+          day.contributionCount === 0
+            ? ''
+            : day.date +
+              ': ' +
+              day.contributionCount +
+              ' ' +
+              dailySchedule.contributions
+        "
       ></div>
       } }
     </div>
@@ -48,11 +56,11 @@
 <button
   class="desktop-icons"
   (click)="windowService.openWindow()"
-  [innerHTML]="svgIconsService.returnIcon('document', 'desktop-icon')"
+  [innerHTML]="svgIconsService.returnIcon('schedule', 'desktop-icon')"
   [attr.aria-label]="
     generalAriaLabels.firstText +
     ' ' +
-    'github-graph-window' +
+    dailySchedule.title +
     ' ' +
     generalAriaLabels.secondText
   "

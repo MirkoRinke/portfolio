@@ -101,6 +101,7 @@ interface aboutMeTexts {
 interface DailyScheduleTexts {
   title: string;
   heading: string;
+  contributions: string;
   details: {
     title: string;
     description: string;
@@ -319,6 +320,7 @@ export const textsDE: Texts = {
   dailySchedule: {
     title: 'tagesablauf.repeat',
     heading: 'Tägliche Coding-Abenteuer',
+    contributions: 'Beiträge',
     details: [
       {
         title: 'Innovative Lösungen',
@@ -543,6 +545,7 @@ export const textsEN: Texts = {
   dailySchedule: {
     title: 'daily_schedule.repeat',
     heading: 'Daily Coding Adventures',
+    contributions: 'Contributions',
     details: [
       {
         title: 'Innovative Solutions',
