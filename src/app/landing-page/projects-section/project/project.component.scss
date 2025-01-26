@@ -216,7 +216,7 @@
       }
 
       h3 {
-        @include font-settings(24, 700, var(--primary-color));
+        @include font-settings(18, 700, var(--primary-color));
       }
 
       p {
