@@ -42,7 +42,7 @@ footer {
     .links {
       @include display-flex(center, center);
 
-      gap: 0 px-to-rem(20);
+      gap: 0 px-to-rem(10);
 
       & button {
         @include button-preset();

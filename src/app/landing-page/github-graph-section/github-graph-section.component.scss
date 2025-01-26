@@ -4,22 +4,5 @@
 
 section {
   @include max-content-settings();
-  @include display-flex(center, center);
-
-  .github-calendar {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(7, 1fr);
-    grid-auto-columns: fit-content;
-    gap: px-to-rem(2);
-    justify-content: start;
-
-    &::ng-deep .day {
-      height: clamp(px-to-rem(3), 0.9vw, px-to-rem(15));
-      aspect-ratio: 1 / 1;
-
-      border-radius: px-to-rem(2);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-  }
+  padding-block: px-to-rem(50);
 }

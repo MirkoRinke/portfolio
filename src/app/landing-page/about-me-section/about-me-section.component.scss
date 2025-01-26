@@ -20,7 +20,7 @@ section {
 
   .info {
     @include display-flex(start, center, column);
-    gap: px-to-rem(30);
+    gap: px-to-rem(50);
 
     width: 100%;
 

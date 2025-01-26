@@ -1,0 +1,75 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+.github-graph {
+  @include window-default-style();
+
+  .title-bar {
+    @include title-bar-default-style;
+
+    .title {
+      @include title-default-style();
+    }
+  }
+
+  .content {
+    @include window-content;
+    @include display-flex(center, start, column); //!
+
+    .top {
+      @include display-flex(start, space-between, column);
+      gap: px-to-rem(50);
+
+      & h2 {
+        @include font-settings(48, 700, var(--primary-color));
+      }
+
+      .textarea {
+        @include display-flex(center);
+        gap: px-to-rem(30);
+        flex-wrap: wrap;
+
+        .text {
+          @include display-flex(start, center, column);
+          gap: px-to-rem(30);
+          max-width: calc(50% - px-to-rem(30));
+          min-width: calc(50% - px-to-rem(30));
+
+          & h3 {
+            @include font-settings(18, 700, var(--primary-color));
+          }
+
+          & p {
+            @include font-settings();
+          }
+        }
+      }
+    }
+
+    .github-calendar {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-rows: repeat(7, 1fr);
+      grid-auto-columns: fit-content;
+      gap: px-to-rem(2);
+      justify-content: start;
+
+      @media (max-width: $breakpoint-xxs) {
+        gap: px-to-rem(1.1);
+      }
+
+      &::ng-deep .day {
+        height: clamp(px-to-rem(3), 0.9vw, px-to-rem(18));
+        aspect-ratio: 1 / 1;
+
+        border: 1px solid var(--primary-color-25);
+      }
+    }
+  }
+}
+
+.desktop-icons {
+  @include button-preset();
+  @include desktop-icon-style(right);
+}

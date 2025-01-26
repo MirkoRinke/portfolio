@@ -278,19 +278,19 @@ export const textsDE: Texts = {
     },
     infoBox: {
       infoBox0: {
-        title: 'moderne_arbeit.txt',
+        title: 'moderne-loesungen.txt',
         textarea:
-          'Derzeit konzentriere ich mich auf die Remote-Arbeit, da sie mir die Flexibilität und das Umfeld bietet, die meine Produktivität steigern. Ich schätze eine gesunde Work-Life-Balance und die Möglichkeit, meine eigene Zeit zu managen, die die Remote-Arbeit bietet.',
+          'Ich liebe es, Ideen in die digitale Welt zu bringen. Mit modernen Webtechnologien gestalte ich benutzerfreundliche, ästhetische Oberflächen, die es ermöglichen, Ideen in einfache und funktionale Weblösungen umzusetzen.',
       },
       infoBox1: {
-        title: 'persoenliches_wachstum.txt',
+        title: 'modernes_arbeiten.txt',
         textarea:
-          'Ich bin aufgeschlossen und suche ständig nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.',
+          'Aktuell liegt mein Fokus auf Remote-Arbeit. Ich schätze die Flexibilität, meine Zeit selbst zu managen, sowie die ausgewogene Work-Life-Balance, die diese Arbeitsweise ermöglicht.',
       },
       infoBox2: {
-        title: 'programmierphilosophie.txt',
+        title: 'teamwork_und_eigenständigkeit.txt',
         textarea:
-          'In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung.',
+          'Ich arbeite gerne im Team, um gemeinsam innovative Lösungen zu entwickeln, schätze aber auch die Möglichkeit, eigenständig an Projekten zu arbeiten und meine eigenen Ideen umzusetzen.',
       },
     },
     ariaLabels: {
@@ -474,19 +474,19 @@ export const textsEN: Texts = {
     },
     infoBox: {
       infoBox0: {
-        title: 'modern_work.txt',
+        title: 'modern-solutions.txt',
         textarea:
-          'Currently, I am focusing on remote work, as it provides me with the flexibility and environment that boost my productivity. I value a healthy work-life balance and the ability to manage my own time, which remote work allows.',
+          'I love bringing ideas to life in the digital world. Using modern web technologies, I create user-friendly, aesthetic interfaces that turn concepts into simple and functional web solutions.',
       },
       infoBox1: {
-        title: 'personal_growth.txt',
+        title: 'remote-work.txt',
         textarea:
-          'I am open-minded and always looking for new challenges to constantly improve my knowledge and skills.',
+          'Currently, I focus on remote work. I value the flexibility to manage my own time and the healthy work-life balance that this way of working offers.',
       },
       infoBox2: {
-        title: 'programming_philosophy.txt',
+        title: 'teamwork_and_independence.txt',
         textarea:
-          'In my profession, programming isn’t just about writing code; it’s a creative form of problem-solving.',
+          'I enjoy collaborating in a team to develop innovative solutions, but I also appreciate the opportunity to work independently on projects and bring my own ideas to life.',
       },
     },
     ariaLabels: {

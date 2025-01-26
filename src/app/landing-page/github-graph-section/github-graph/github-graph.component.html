@@ -1,0 +1,85 @@
+@let generalAriaLabels =languageService.texts.general.ariaLabels.desktopIcon;
+@if(windowService.ifWindowOpen) {
+<div class="github-graph">
+  <div class="title-bar">
+    <h3 class="title">daily_schedule.repeat</h3>
+    <div class="controls">
+      <app-window-controls
+        [windowService]="windowService"
+        [svgIconsService]="svgIconsService"
+        [languageService]="languageService"
+        [modalService]="modalService"
+        [index]="0"
+        [activeModal]="'github-graph'"
+      ></app-window-controls>
+    </div>
+  </div>
+  @if (windowService.ifContentOpen) {
+  <div class="content" [ngClass]="{ 'modal-active': modalActive }">
+    <div class="top">
+      <h2>My Daily Coding Adventures</h2>
+      <div class="textarea">
+        <div class="text">
+          <h3>Innovative Lösungen</h3>
+          <p>
+            Programmieren ist für mich wie Gaming jede Zeile Code und jede
+            Aufgabe fühlt sich an wie ein neues Level, das darauf wartet,
+            gemeistert zu werden.
+          </p>
+        </div>
+        <div class="text">
+          <h3>Völlig im Code Versunken</h3>
+          <p>
+            Ich liebe es, mich stundenlang in Projekte zu vertiefen, Probleme zu
+            lösen und kreative Wege zu finden und komplexe Herausforderungen zu
+            bewältigen.
+          </p>
+        </div>
+        <div class="text">
+          <h3>Herausforderungen bewältigen</h3>
+          <p>
+            Jede Herausforderung ist eine Gelegenheit, kreativ zu werden und
+            neue Lösungswege zu entdecken.
+          </p>
+        </div>
+        <div class="text">
+          <h3>Kontinuierliches Lernen</h3>
+          <p>
+            Jeden Tag setze ich mir das Ziel, Neues zu lernen, meine Grenzen zu
+            erweitern und mich durch neue Herausforderungen weiterzuentwickeln.
+          </p>
+        </div>
+      </div>
+
+      <div></div>
+    </div>
+
+    <div id="github-calendar" class="github-calendar">
+      @for (week of weeks; track $index) { @for (day of week; track $index) {
+      <div
+        class="day"
+        [style.backgroundColor]="
+          day.contributionCount === 0 ? 'transparent' : day.color
+        "
+        [title]="day.date + ': ' + day.contributionCount + ' contributions'"
+      ></div>
+      } }
+    </div>
+  </div>
+  }
+</div>
+} @else {
+<button
+  class="desktop-icons"
+  (click)="windowService.openWindow()"
+  [innerHTML]="svgIconsService.returnIcon('document', 'desktop-icon')"
+  [attr.aria-label]="
+    generalAriaLabels.firstText +
+    ' ' +
+    'github-graph-window' +
+    ' ' +
+    generalAriaLabels.secondText
+  "
+  type="button"
+></button>
+}
