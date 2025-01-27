@@ -79,8 +79,16 @@
       &::ng-deep .day {
         height: clamp(px-to-rem(3), 0.9vw, px-to-rem(18));
         aspect-ratio: 1 / 1;
-
+        border-radius: px-to-rem(3);
         border: 1px solid var(--primary-color-25);
+
+        @media (max-width: $breakpoint-sm) {
+          border-radius: px-to-rem(2);
+        }
+
+        @media (max-width: $breakpoint-xs) {
+          border-radius: px-to-rem(1);
+        }
       }
     }
   }
