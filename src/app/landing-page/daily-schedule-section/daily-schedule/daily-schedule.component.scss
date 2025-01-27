@@ -63,31 +63,39 @@
         }
       }
     }
+    .github-wrapper {
+      @include display-flex(start, center, column);
+      gap: px-to-rem(5);
 
-    .github-calendar {
-      display: grid;
-      grid-auto-flow: column;
-      grid-template-rows: repeat(7, 1fr);
-      grid-auto-columns: fit-content;
-      gap: px-to-rem(2);
-      justify-content: start;
-
-      @media (max-width: $breakpoint-xxs) {
-        gap: px-to-rem(1.1);
+      h1 {
+        @include font-settings(18, 700, var(--primary-color));
       }
 
-      &::ng-deep .day {
-        height: clamp(px-to-rem(3), 0.9vw, px-to-rem(18));
-        aspect-ratio: 1 / 1;
-        border-radius: px-to-rem(3);
-        border: 1px solid var(--primary-color-25);
+      .github-calendar {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(7, 1fr);
+        grid-auto-columns: fit-content;
+        gap: px-to-rem(2);
+        justify-content: start;
 
-        @media (max-width: $breakpoint-sm) {
-          border-radius: px-to-rem(2);
+        @media (max-width: $breakpoint-xxs) {
+          gap: px-to-rem(1.1);
         }
 
-        @media (max-width: $breakpoint-xs) {
-          border-radius: px-to-rem(1);
+        &::ng-deep .day {
+          height: clamp(px-to-rem(3), 0.9vw, px-to-rem(18));
+          aspect-ratio: 1 / 1;
+          border-radius: px-to-rem(3);
+          border: 1px solid var(--primary-color-25);
+
+          @media (max-width: $breakpoint-sm) {
+            border-radius: px-to-rem(2);
+          }
+
+          @media (max-width: $breakpoint-xs) {
+            border-radius: px-to-rem(1);
+          }
         }
       }
     }

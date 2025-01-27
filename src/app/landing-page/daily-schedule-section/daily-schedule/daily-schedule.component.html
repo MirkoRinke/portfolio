@@ -32,24 +32,27 @@
         }
       </div>
     </div>
-    <div id="github-calendar" class="github-calendar">
-      @for (week of weeks; track $index) { @for (day of week; track $index) {
-      <div
-        class="day"
-        [style.backgroundColor]="
-          day.contributionCount === 0 ? 'transparent' : day.color
-        "
-        [title]="
-          day.contributionCount === 0
-            ? ''
-            : day.date +
-              ': ' +
-              day.contributionCount +
-              ' ' +
-              dailySchedule.contributions
-        "
-      ></div>
-      } }
+    <div class="github-wrapper">
+      <h1>{{ dailySchedule.githubGraphTitle }}</h1>
+      <div id="github-calendar" class="github-calendar">
+        @for (week of weeks; track $index) { @for (day of week; track $index) {
+        <div
+          class="day"
+          [style.backgroundColor]="
+            day.contributionCount === 0 ? 'transparent' : day.color
+          "
+          [title]="
+            day.contributionCount === 0
+              ? ''
+              : day.date +
+                ': ' +
+                day.contributionCount +
+                ' ' +
+                dailySchedule.contributions
+          "
+        ></div>
+        } }
+      </div>
     </div>
   </div>
   }
