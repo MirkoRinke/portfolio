@@ -39,7 +39,7 @@ export class ContactComponent {
   showFeedback: boolean = false;
 
   http: HttpClient = inject(HttpClient);
-  mailTest: boolean = false;
+  mailTest: boolean = environment.production;
 
   contactData: ContactData = {
     name: '',
