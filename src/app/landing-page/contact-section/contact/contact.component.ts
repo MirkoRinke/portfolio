@@ -7,6 +7,8 @@ import { LanguageService } from '../../../shared/services/language.service';
 import { ModalService } from '../../../shared/services/modal.service';
 import { WindowControlsComponent } from '../../../shared/window-controls/window-controls.component';
 
+import { environment } from '../../../../environments/environment';
+
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -47,7 +49,7 @@ export class ContactComponent {
   };
 
   post = {
-    endPoint: './sendMail.php',
+    endPoint: environment.contactUrl,
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

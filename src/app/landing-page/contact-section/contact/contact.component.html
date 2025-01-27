@@ -61,7 +61,7 @@ languageService.texts.contact; @if(windowService.ifWindowOpen) {
               autocomplete="name"
               class="form-input"
               required
-              pattern="^[A-Za-zÄäÖöÜüß\s'-]{2,}$"
+              pattern="^[A-Za-zÄäÖöÜüß\s'\-]{2,}$"
               [attr.aria-label]="ariaLabels.nameInput"
             />
           </div>
@@ -82,7 +82,7 @@ languageService.texts.contact; @if(windowService.ifWindowOpen) {
               autocomplete="email"
               class="form-input"
               required
-              pattern="^[a-zA-Z0-9ÄäÖöÜüß._%+-]+@[a-zA-Z0-9ÄäÖöÜüß.-]+\.[a-zA-Z]{2,}$"
+              pattern="^[a-zA-Z0-9ÄäÖöÜüß._%+\-]+@[a-zA-Z0-9ÄäÖöÜüß.\-]+\.[a-zA-Z]{2,}$"
               [attr.aria-label]="ariaLabels.eMailInput"
             />
           </div>

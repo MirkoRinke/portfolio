@@ -1,9 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { CommonModule } from '@angular/common';
-
 import { WindowControlsComponent } from '../../../shared/window-controls/window-controls.component';
-
 import { WindowService } from '../../../shared/services/window.service';
 import { SvgIconsService } from '../../../shared/services/svg.icons.service';
 import { LanguageService } from '../../../shared/services/language.service';
@@ -20,27 +17,6 @@ import { environment } from '../../../../environments/environment';
 export class DailyScheduleComponent implements OnInit {
   @Input() modalActive!: boolean;
 
-  GITHUB_USERNAME = environment.githubUserName;
-  ACCESS_TOKEN = environment.githubAccessToken;
-
-  query = `
-      {
-        user(login: "${this.GITHUB_USERNAME}") {
-          contributionsCollection {
-            contributionCalendar {
-              weeks {
-                contributionDays {
-                  date
-                  contributionCount
-                  color
-                }
-              }
-            }
-          }
-        }
-      }
-    `;
-
   weeks: any[][] = [];
 
   constructor(
@@ -55,14 +31,15 @@ export class DailyScheduleComponent implements OnInit {
   }
 
   async githubContributions() {
-    const response = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${this.ACCESS_TOKEN}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ query: this.query }),
-    });
+    const response = await fetch(
+      environment.githubContributionsUrl + environment.githubUserName,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
     const data = await response.json();
     return data;
   }
@@ -75,8 +52,6 @@ export class DailyScheduleComponent implements OnInit {
   }
 
   extractContributionDays(data: any) {
-    console.log(data);
-
     return data.data.user.contributionsCollection.contributionCalendar.weeks.flatMap(
       (week: any) => week.contributionDays
     );
