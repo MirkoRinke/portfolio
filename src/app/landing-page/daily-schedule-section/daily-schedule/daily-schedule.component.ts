@@ -41,6 +41,7 @@ export class DailyScheduleComponent implements OnInit {
       }
     );
     const data = await response.json();
+    console.log(data);
     return data;
   }
 
@@ -66,7 +67,7 @@ export class DailyScheduleComponent implements OnInit {
 
   groupDaysIntoWeeks(days: any[]) {
     const weeks = [];
-    for (let i = 0; i + 7 <= days.length; i += 7) {
+    for (let i = 0; i < days.length; i += 7) {
       weeks.push(days.slice(i, i + 7));
     }
     return weeks;
