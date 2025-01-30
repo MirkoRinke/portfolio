@@ -41,7 +41,6 @@ export class DailyScheduleComponent implements OnInit {
       }
     );
     const data = await response.json();
-    console.log(data);
     return data;
   }
 

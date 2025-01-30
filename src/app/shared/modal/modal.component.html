@@ -47,6 +47,12 @@
       [index]="modalService.index"
       [modalActive]="true"
     ></app-certificate-modal>
+    <app-snake
+      *ngSwitchCase="'snake.exe'"
+      (click)="modalService.closeModalWrapper($event)"
+      [modalActive]="true"
+    >
+    </app-snake>
     <p *ngSwitchDefault>404 Modal not found</p>
   </div>
 </section>

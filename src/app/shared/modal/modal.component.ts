@@ -17,6 +17,7 @@ import { PrivacyPolicyComponent } from '../../landing-page/privacy-policy/privac
 import { MenuComponent } from '../menu/menu.component';
 import { CertificateModalComponent } from '../../landing-page/expertise-section/certificates/certificate-modal/certificate-modal.component';
 import { DailyScheduleComponent } from '../../landing-page/daily-schedule-section/daily-schedule/daily-schedule.component';
+import { SnakeComponent } from '../../landing-page/snake/snake.component';
 
 @Component({
   selector: 'app-modal',
@@ -32,6 +33,7 @@ import { DailyScheduleComponent } from '../../landing-page/daily-schedule-sectio
     MenuComponent,
     CertificateModalComponent,
     DailyScheduleComponent,
+    SnakeComponent,
   ],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.scss',
