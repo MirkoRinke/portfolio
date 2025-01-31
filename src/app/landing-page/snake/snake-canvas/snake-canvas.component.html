@@ -1,0 +1,24 @@
+<div class="game">
+  <canvas
+    id="gameCanvas"
+    [attr.width]="canvasWidth"
+    [attr.height]="canvasHeight"
+  ></canvas>
+  <button
+    [ngClass]="{ isGameRunning: isGameRunning }"
+    (click)="startGame()"
+    id="startButton"
+  >
+    <div
+      [innerHTML]="svgIconsService.returnIcon('snake.exe', 'snake')"
+      [attr.aria-hidden]="true"
+    ></div>
+    {{
+      hasWon === undefined
+        ? "Start Game"
+        : hasWon === true
+        ? "You won, play again"
+        : "Game Over, Play Again"
+    }}
+  </button>
+</div>

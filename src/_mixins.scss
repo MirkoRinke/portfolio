@@ -54,7 +54,7 @@
   @include golden-ratio-padding($padding-factor);
 }
 
-@mixin button-style($icon: false) {
+@mixin button-style($icon: "") {
   gap: px-to-rem(10);
   background-color: var(--primary-color-25);
   border-radius: px-to-rem(10);
@@ -62,11 +62,11 @@
   filter: drop-shadow(0 px-to-rem(4) px-to-rem(4) rgba(0, 0, 0, 1));
   transition: background-color 0.3s ease-in-out;
 
-  @if ($icon) {
+  @if ($icon != "") {
     div {
       height: px-to-rem(20);
 
-      &::ng-deep .eMail {
+      &::ng-deep .#{$icon} {
         height: px-to-rem(20);
         fill: var(--secondary-color);
       }

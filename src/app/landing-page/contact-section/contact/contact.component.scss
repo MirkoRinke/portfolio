@@ -44,7 +44,7 @@
           @include button-preset();
           @include display-flex(center, center);
           @include font-settings();
-          @include button-style(true);
+          @include button-style("eMail");
           min-width: px-to-rem(150);
           position: relative;
 

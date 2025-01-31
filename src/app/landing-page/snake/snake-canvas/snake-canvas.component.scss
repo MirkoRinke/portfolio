@@ -1,0 +1,33 @@
+@use "../../../../functions" as *;
+@use "../../../../mixins" as *;
+@use "../../../../var" as *;
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  canvas {
+    position: relative;
+    max-height: px-to-rem(600);
+    height: 100%;
+    max-width: px-to-rem(600);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  button {
+    @include button-preset();
+    @include button-style("snake");
+    @include display-flex(center);
+    @include font-settings();
+    position: absolute;
+
+    &.isGameRunning {
+      display: none;
+    }
+  }
+}

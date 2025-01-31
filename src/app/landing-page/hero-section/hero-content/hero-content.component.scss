@@ -23,7 +23,7 @@
     @include button-preset;
     @include display-flex(center);
     @include font-settings();
-    @include button-style(true);
+    @include button-style("eMail");
     margin-top: px-to-rem(100);
   }
 }

@@ -4,6 +4,9 @@
 
 .snake {
   @include window-default-style();
+  max-width: calc(px-to-rem(600) + px-to-rem(2)); // + 2px border
+
+  margin-inline: auto;
 
   .title-bar {
     @include title-bar-default-style;
@@ -15,6 +18,12 @@
 
   .content {
     @include window-content;
+    padding: 0;
+
+    &.modal-active {
+      min-height: fit-content;
+      max-height: fit-content;
+    }
   }
 }
 
