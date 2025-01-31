@@ -1,3 +1,7 @@
+<!-- TODO aria attributes -->
+
+@let snake = languageService.texts.snake;
+
 <div class="game">
   <canvas id="game-canvas" width="600" height="600"></canvas>
   <button
@@ -11,31 +15,30 @@
     ></div>
     {{
       hasWon === undefined
-        ? "Start Game"
+        ? snake.button.start
         : hasWon === true
-        ? "You won, play again"
-        : "Game Over, Play Again"
+        ? snake.button.restart
+        : snake.button.gameOver
     }}
   </button>
-
-  <div class="controls-menu">
+  <div class="controls-menu" [ngClass]="{ textActive: !showControls }">
     @if (showControls) {
     <div class="game-controls">
-      <button class="up" (touchstart)="changeDirection('UP')">
+      <button class="up">
         <div [innerHTML]="svgIconsService.returnIcon('up', 'arrow')"></div>
       </button>
-      <button class="left" (touchstart)="changeDirection('LEFT')">
+      <button class="left">
         <div [innerHTML]="svgIconsService.returnIcon('left', 'arrow')"></div>
       </button>
-      <button class="right" (touchstart)="changeDirection('RIGHT')">
+      <button class="right">
         <div [innerHTML]="svgIconsService.returnIcon('right', 'arrow')"></div>
       </button>
-      <button class="down" (touchstart)="changeDirection('DOWN')">
+      <button class="down">
         <div [innerHTML]="svgIconsService.returnIcon('down', 'arrow')"></div>
       </button>
     </div>
     } @else {
-    <p>Mobile Steuerung anzeigen</p>
+    <p>{{ snake.touchscreen }}</p>
     }
     <button (click)="toggleControls()" class="show-controls">
       <div

@@ -1,8 +1,16 @@
-import { Component, OnInit, Output, EventEmitter, NgZone } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  Output,
+  EventEmitter,
+  NgZone,
+} from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
 import { SvgIconsService } from '../../../shared/services/svg.icons.service';
+import { LanguageService } from '../../../shared/services/language.service';
 
 @Component({
   selector: 'app-snake-canvas',
@@ -10,7 +18,7 @@ import { SvgIconsService } from '../../../shared/services/svg.icons.service';
   templateUrl: './snake-canvas.component.html',
   styleUrls: ['./snake-canvas.component.scss'],
 })
-export class SnakeCanvasComponent implements OnInit {
+export class SnakeCanvasComponent implements OnInit, OnDestroy {
   @Output() scoreChange = new EventEmitter<number>();
 
   canvas!: HTMLCanvasElement;
@@ -36,9 +44,15 @@ export class SnakeCanvasComponent implements OnInit {
 
   showControls = false;
 
+  upButton!: HTMLElement;
+  leftButton!: HTMLElement;
+  rightButton!: HTMLElement;
+  downButton!: HTMLElement;
+
   constructor(
     private ngZone: NgZone,
-    public svgIconsService: SvgIconsService
+    public svgIconsService: SvgIconsService,
+    public languageService: LanguageService
   ) {}
 
   ngOnInit() {
@@ -52,8 +66,73 @@ export class SnakeCanvasComponent implements OnInit {
     });
   }
 
+  touchstartReference() {
+    this.upButton = document.querySelector('.up')!;
+    this.leftButton = document.querySelector('.left')!;
+    this.rightButton = document.querySelector('.right')!;
+    this.downButton = document.querySelector('.down')!;
+  }
+
+  addTouchstartListeners() {
+    this.touchstartReference();
+    if (
+      this.upButton &&
+      this.leftButton &&
+      this.rightButton &&
+      this.downButton
+    ) {
+      this.upButton.addEventListener(
+        'touchstart',
+        this.changeDirection.bind(this, 'UP'),
+        { passive: true }
+      );
+      this.leftButton.addEventListener(
+        'touchstart',
+        this.changeDirection.bind(this, 'LEFT'),
+        { passive: true }
+      );
+      this.rightButton.addEventListener(
+        'touchstart',
+        this.changeDirection.bind(this, 'RIGHT'),
+        { passive: true }
+      );
+      this.downButton.addEventListener(
+        'touchstart',
+        this.changeDirection.bind(this, 'DOWN'),
+        { passive: true }
+      );
+    }
+  }
+
+  removeTouchstartListeners() {
+    if (
+      this.upButton &&
+      this.leftButton &&
+      this.rightButton &&
+      this.downButton
+    ) {
+      this.upButton.removeEventListener(
+        'touchstart',
+        this.changeDirection.bind(this, 'UP')
+      );
+      this.leftButton.removeEventListener(
+        'touchstart',
+        this.changeDirection.bind(this, 'LEFT')
+      );
+      this.rightButton.removeEventListener(
+        'touchstart',
+        this.changeDirection.bind(this, 'RIGHT')
+      );
+      this.downButton.removeEventListener(
+        'touchstart',
+        this.changeDirection.bind(this, 'DOWN')
+      );
+    }
+  }
+
   ngOnDestroy() {
     window.removeEventListener('keydown', this.handleKeyDown.bind(this));
+    this.removeTouchstartListeners();
   }
 
   setSnakeColor() {
@@ -215,5 +294,9 @@ export class SnakeCanvasComponent implements OnInit {
 
   toggleControls() {
     this.showControls = !this.showControls;
+    setTimeout(() => {
+      if (this.showControls) this.addTouchstartListeners();
+      else this.removeTouchstartListeners();
+    }, 100);
   }
 }

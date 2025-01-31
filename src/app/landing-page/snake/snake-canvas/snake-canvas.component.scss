@@ -31,12 +31,16 @@
   }
 
   .controls-menu {
-    @include display-flex(center, start);
+    @include display-flex(center, center);
     border-top: px-to-rem(1) solid var(--primary-color);
     min-height: px-to-rem(50);
     position: relative;
     width: 100%;
-    padding-inline: px-to-rem(10);
+
+    &.textActive {
+      justify-content: end;
+      padding-right: px-to-rem(80);
+    }
 
     .game-controls {
       display: grid;
@@ -75,6 +79,10 @@
         grid-column: 2;
         grid-row: 3;
       }
+    }
+
+    p {
+      @include font-settings();
     }
 
     .show-controls {

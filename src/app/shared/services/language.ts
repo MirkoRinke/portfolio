@@ -12,6 +12,7 @@ export interface Texts {
   contact: ContactTexts;
   taskbar: TaskbarTexts;
   footer: FooterTexts;
+  snake: SnakeTexts;
   general: GeneralTexts;
 }
 
@@ -211,6 +212,16 @@ interface FooterTexts {
     copyright: string;
     navigation: string;
   };
+}
+
+interface SnakeTexts {
+  title: string;
+  button: {
+    start: string;
+    gameOver: string;
+    restart: string;
+  };
+  touchscreen: string;
 }
 
 interface GeneralTexts {
@@ -438,6 +449,15 @@ export const textsDE: Texts = {
       navigation: 'Footer Navigation"',
     },
   },
+  snake: {
+    title: 'snake.exe',
+    button: {
+      start: 'Spiel starten',
+      gameOver: 'Spiel vorbei, nochmal spielen',
+      restart: 'Du hast gewonnen, nochmal spielen',
+    },
+    touchscreen: 'Touchscreen Steuerung',
+  },
   general: {
     links: {
       github: 'https://github.com/MirkoRinke',
@@ -663,6 +683,15 @@ export const textsEN: Texts = {
       copyright: 'Copyright Mirko Rinke',
       navigation: 'Footer Navigation',
     },
+  },
+  snake: {
+    title: 'snake.exe',
+    button: {
+      start: 'Start Game',
+      gameOver: 'Game Over, Play Again',
+      restart: 'You won, play again',
+    },
+    touchscreen: 'Touchscreen controls',
   },
   general: {
     links: {
