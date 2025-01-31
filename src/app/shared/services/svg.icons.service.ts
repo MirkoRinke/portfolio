@@ -69,6 +69,38 @@ export class SvgIconsService {
         </svg>
       `,
 
+      up: /*html*/ `
+      <svg class="${className}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g transform="matrix(2.4,0,0,-2.4,-16.8,42)">
+            <path d="M12,15L7,10L17,10L12,15Z"/>
+          </g>
+        </svg>
+      `,
+
+      down: /*html*/ `
+      <svg class="${className}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g transform="matrix(2.4,0,0,2.4,-16.8,-18)">
+            <path d="M12,15L7,10L17,10L12,15Z"/>
+          </g>
+        </svg>
+      `,
+
+      left: /*html*/ `
+      <svg class="${className}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g transform="matrix(1.46958e-16,2.4,-2.4,1.46958e-16,42,-16.8)">
+            <path d="M12,15L7,10L17,10L12,15Z"/>
+          </g>
+        </svg>
+      `,
+
+      right: /*html*/ `
+      <svg class="${className}" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <g transform="matrix(-1.46958e-16,2.4,2.4,1.46958e-16,-18,-16.8)">
+            <path d="M12,15L7,10L17,10L12,15Z"/>
+          </g>
+        </svg>
+      `,
+
       arrowScroll: /*html*/ `
       <svg class="${className}" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.5 1C4.5 0.723858 4.27614 0.5 4 0.5C3.72386 0.5 3.5 0.723858 3.5 1H4.5ZM3.64645 13.3536C3.84171 13.5488 4.15829 13.5488 4.35355 13.3536L7.53553 10.1716C7.7308 9.97631 7.7308 9.65973 7.53553 9.46447C7.34027 9.2692 7.02369 9.2692 6.82843 9.46447L4 12.2929L1.17157 9.46447C0.976311 9.2692 0.659728 9.2692 0.464466 9.46447C0.269204 9.65973 0.269204 9.97631 0.464466 10.1716L3.64645 13.3536ZM3.5 1V13H4.5V1H3.5Z"/>

@@ -15,6 +15,7 @@
     max-width: 100%;
     max-height: 100%;
     aspect-ratio: 1 / 1;
+    padding: px-to-rem(4);
   }
 
   .start-button {
@@ -29,40 +30,63 @@
     }
   }
 
-  .game-controls {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: px-to-rem(10);
-    margin-block: px-to-rem(20);
+  .controls-menu {
+    @include display-flex(center, start);
+    border-top: px-to-rem(1) solid var(--primary-color);
+    min-height: px-to-rem(50);
+    position: relative;
+    width: 100%;
+    padding-inline: px-to-rem(10);
 
-    button {
+    .game-controls {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: px-to-rem(10);
+      margin-block: px-to-rem(20);
+      width: fit-content;
+      margin-inline: auto;
+
+      button {
+        @include button-preset();
+        @include button-style("arrow");
+        @include display-flex(center, center);
+        @include font-settings();
+        width: px-to-rem(30);
+        height: px-to-rem(30);
+      }
+
+      .up {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .left {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .right {
+        grid-column: 3;
+        grid-row: 2;
+      }
+
+      .down {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    }
+
+    .show-controls {
       @include button-preset();
-      @include button-style("snake");
+      @include button-style("arrow");
       @include display-flex(center, center);
       @include font-settings();
-      width: px-to-rem(30);
-      height: px-to-rem(30);
-    }
-
-    .up {
-      grid-column: 2;
-      grid-row: 1;
-    }
-
-    .left {
-      grid-column: 1;
-      grid-row: 2;
-    }
-
-    .right {
-      grid-column: 3;
-      grid-row: 2;
-    }
-
-    .down {
-      grid-column: 2;
-      grid-row: 3;
+      width: px-to-rem(15);
+      height: px-to-rem(15);
+      position: absolute;
+      right: px-to-rem(10);
+      bottom: px-to-rem(10);
     }
   }
 }

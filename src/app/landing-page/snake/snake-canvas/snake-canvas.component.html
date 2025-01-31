@@ -17,12 +17,34 @@
         : "Game Over, Play Again"
     }}
   </button>
-  <div class="game-controls">
-    <button class="up" (touchstart)="changeDirection('UP')">&#9650;</button>
-    <button class="left" (touchstart)="changeDirection('LEFT')">&#9664;</button>
-    <button class="right" (touchstart)="changeDirection('RIGHT')">
-      &#9654;
+
+  <div class="controls-menu">
+    @if (showControls) {
+    <div class="game-controls">
+      <button class="up" (touchstart)="changeDirection('UP')">
+        <div [innerHTML]="svgIconsService.returnIcon('up', 'arrow')"></div>
+      </button>
+      <button class="left" (touchstart)="changeDirection('LEFT')">
+        <div [innerHTML]="svgIconsService.returnIcon('left', 'arrow')"></div>
+      </button>
+      <button class="right" (touchstart)="changeDirection('RIGHT')">
+        <div [innerHTML]="svgIconsService.returnIcon('right', 'arrow')"></div>
+      </button>
+      <button class="down" (touchstart)="changeDirection('DOWN')">
+        <div [innerHTML]="svgIconsService.returnIcon('down', 'arrow')"></div>
+      </button>
+    </div>
+    } @else {
+    <p>Mobile Steuerung anzeigen</p>
+    }
+    <button (click)="toggleControls()" class="show-controls">
+      <div
+        [innerHTML]="
+          showControls
+            ? svgIconsService.returnIcon('up', 'arrow')
+            : svgIconsService.returnIcon('down', 'arrow')
+        "
+      ></div>
     </button>
-    <button class="down" (touchstart)="changeDirection('DOWN')">&#9660;</button>
   </div>
 </div>

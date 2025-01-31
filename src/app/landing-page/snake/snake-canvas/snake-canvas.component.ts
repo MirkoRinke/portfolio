@@ -34,6 +34,8 @@ export class SnakeCanvasComponent implements OnInit {
   snakeColor: string = 'rgb(61, 207, 182)';
   foodColor: string = 'rgb(255, 255, 255)';
 
+  showControls = false;
+
   constructor(
     private ngZone: NgZone,
     public svgIconsService: SvgIconsService
@@ -64,7 +66,7 @@ export class SnakeCanvasComponent implements OnInit {
 
   startGame() {
     this.isGameRunning = true;
-    this.food = { x: this.getRandomPosition(), y: this.getRandomPosition() };
+    this.food = this.getRandomPosition();
     this.score = 0;
     this.snake = [{ x: this.canvas.width / 2, y: this.canvas.height / 2 }];
     this.direction = 'RIGHT';
@@ -96,11 +98,23 @@ export class SnakeCanvasComponent implements OnInit {
     }
   }
 
-  getRandomPosition() {
-    return (
-      Math.floor(Math.random() * (this.canvas.width / this.boxSize)) *
-      this.boxSize
-    );
+  getRandomPosition(): { x: number; y: number } {
+    let position: { x: number; y: number };
+    let isOnSnake: boolean;
+    do {
+      position = {
+        x:
+          Math.floor(Math.random() * (this.canvas.width / this.boxSize)) *
+          this.boxSize,
+        y:
+          Math.floor(Math.random() * (this.canvas.height / this.boxSize)) *
+          this.boxSize,
+      };
+      isOnSnake = this.snake.some(
+        (segment) => segment.x === position.x && segment.y === position.y
+      );
+    } while (isOnSnake);
+    return position;
   }
 
   drawSnake() {
@@ -167,7 +181,7 @@ export class SnakeCanvasComponent implements OnInit {
       Math.abs(head.x - this.food.x) < tolerance &&
       Math.abs(head.y - this.food.y) < tolerance
     ) {
-      this.food = { x: this.getRandomPosition(), y: this.getRandomPosition() };
+      this.food = this.getRandomPosition();
       this.score += 1;
       this.ngZone.run(() => {
         this.scoreChange.emit(this.score);
@@ -197,5 +211,9 @@ export class SnakeCanvasComponent implements OnInit {
       this.nextDirection = 'UP';
     if (direction === 'DOWN' && this.direction !== 'UP')
       this.nextDirection = 'DOWN';
+  }
+
+  toggleControls() {
+    this.showControls = !this.showControls;
   }
 }
