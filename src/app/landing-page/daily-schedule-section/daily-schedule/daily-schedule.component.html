@@ -19,8 +19,8 @@
   </div>
   @if (windowService.ifContentOpen) {
   <div class="content" [ngClass]="{ 'modal-active': modalActive }">
+    <h2>{{ dailySchedule.heading }}</h2>
     <div class="top">
-      <h2>{{ dailySchedule.heading }}</h2>
       <div class="textarea">
         @for (detail of dailySchedule.details; track $index) {
         <div class="text">
