@@ -3,7 +3,12 @@
 @let snake = languageService.texts.snake;
 
 <div class="game">
-  <canvas id="game-canvas" width="600" height="600"></canvas>
+  <canvas
+    [ngClass]="{ active: isGameRunning }"
+    id="game-canvas"
+    width="600"
+    height="600"
+  ></canvas>
   <button
     [ngClass]="{ isGameRunning: isGameRunning }"
     (click)="startGame()"

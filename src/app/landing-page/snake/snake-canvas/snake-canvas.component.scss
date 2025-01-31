@@ -16,6 +16,12 @@
     max-height: 100%;
     aspect-ratio: 1 / 1;
     padding: px-to-rem(4);
+
+    &.active {
+      &:hover {
+        cursor: none;
+      }
+    }
   }
 
   .start-button {
