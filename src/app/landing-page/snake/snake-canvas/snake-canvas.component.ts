@@ -14,8 +14,6 @@ export class SnakeCanvasComponent implements OnInit {
   @Output() scoreChange = new EventEmitter<number>();
 
   canvas!: HTMLCanvasElement;
-  canvasWidth!: number;
-  canvasHeight!: number;
   ctx!: CanvasRenderingContext2D;
   gameInterval: any;
 
@@ -28,7 +26,7 @@ export class SnakeCanvasComponent implements OnInit {
   nextDirection = 'RIGHT';
 
   score = 0;
-  winningScore = 20; // Default value is 399
+  winningScore = 399; // Default value is 399
 
   isGameRunning = false;
   hasWon!: boolean;
@@ -42,14 +40,10 @@ export class SnakeCanvasComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.canvas = document.getElementById('gameCanvas') as HTMLCanvasElement;
-    const rect = this.canvas.getBoundingClientRect();
-    this.canvasWidth = rect.width;
-    this.canvasHeight = rect.height;
-
+    this.canvas = document.getElementById('game-canvas') as HTMLCanvasElement;
     this.ctx = this.canvas.getContext('2d') as CanvasRenderingContext2D;
-    this.snake = [{ x: this.canvasWidth / 2, y: this.canvasHeight / 2 }];
-    this.boxSize = Math.min(this.canvasWidth, this.canvasHeight) / 20;
+    this.snake = [{ x: this.canvas.width / 2, y: this.canvas.height / 2 }];
+    this.boxSize = Math.min(this.canvas.width, this.canvas.height) / 20;
     this.setSnakeColor();
     this.ngZone.runOutsideAngular(() => {
       window.addEventListener('keydown', this.handleKeyDown.bind(this));
@@ -72,7 +66,7 @@ export class SnakeCanvasComponent implements OnInit {
     this.isGameRunning = true;
     this.food = { x: this.getRandomPosition(), y: this.getRandomPosition() };
     this.score = 0;
-    this.snake = [{ x: this.canvasWidth / 2, y: this.canvasHeight / 2 }];
+    this.snake = [{ x: this.canvas.width / 2, y: this.canvas.height / 2 }];
     this.direction = 'RIGHT';
     this.nextDirection = 'RIGHT';
     this.canvas.style.display = 'block';
@@ -168,7 +162,7 @@ export class SnakeCanvasComponent implements OnInit {
   }
 
   checkEatingFood(head: { x: number; y: number }) {
-    const tolerance = this.boxSize / 2;
+    const tolerance = this.boxSize / 1.9;
     if (
       Math.abs(head.x - this.food.x) < tolerance &&
       Math.abs(head.y - this.food.y) < tolerance
@@ -191,6 +185,17 @@ export class SnakeCanvasComponent implements OnInit {
     if (event.key === 'ArrowUp' && this.direction !== 'DOWN')
       this.nextDirection = 'UP';
     if (event.key === 'ArrowDown' && this.direction !== 'UP')
+      this.nextDirection = 'DOWN';
+  }
+
+  changeDirection(direction: string) {
+    if (direction === 'RIGHT' && this.direction !== 'LEFT')
+      this.nextDirection = 'RIGHT';
+    if (direction === 'LEFT' && this.direction !== 'RIGHT')
+      this.nextDirection = 'LEFT';
+    if (direction === 'UP' && this.direction !== 'DOWN')
+      this.nextDirection = 'UP';
+    if (direction === 'DOWN' && this.direction !== 'UP')
       this.nextDirection = 'DOWN';
   }
 }
