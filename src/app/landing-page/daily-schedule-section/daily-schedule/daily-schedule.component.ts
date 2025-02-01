@@ -19,6 +19,8 @@ export class DailyScheduleComponent implements OnInit {
 
   weeks: any[][] = [];
 
+  delayed: boolean = false;
+
   constructor(
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
@@ -28,6 +30,9 @@ export class DailyScheduleComponent implements OnInit {
 
   ngOnInit() {
     this.createCalendar();
+    setTimeout(() => {
+      this.delayed = true;
+    }, 200);
   }
 
   async githubContributions() {
@@ -70,5 +75,19 @@ export class DailyScheduleComponent implements OnInit {
       weeks.push(days.slice(i, i + 7));
     }
     return weeks;
+  }
+
+  convertDate(date: string) {
+    if (this.languageService.getLanguage() === 'de') {
+      return new Date(date).toLocaleDateString('de-DE', {
+        month: 'short',
+        day: 'numeric',
+      });
+    } else {
+      return new Date(date).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+      });
+    }
   }
 }

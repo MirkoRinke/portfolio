@@ -30,6 +30,7 @@
         }
       </div>
     </div>
+    @if (delayed) {
     <div class="github-wrapper">
       <h1>{{ dailySchedule.githubGraphTitle }}</h1>
       <div id="github-calendar" class="github-calendar">
@@ -40,18 +41,19 @@
             day.contributionCount === 0 ? 'transparent' : day.color
           "
           [title]="
-            day.date +
-            ': ' +
             day.contributionCount +
             ' ' +
             (day.contributionCount === 1
               ? dailySchedule.contribution
-              : dailySchedule.contributions)
+              : dailySchedule.contributions) +
+            ': ' +
+            this.convertDate(day.date)
           "
         ></div>
         } }
       </div>
     </div>
+    }
   </div>
   }
 </div>
