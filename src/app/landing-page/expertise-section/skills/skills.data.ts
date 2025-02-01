@@ -94,21 +94,21 @@ export const LEARNING_SKILLS_FE: Skill[] = [
     icon: 'react',
     alt: 'React Logo',
     status: 'learning',
-    visibility: true,
+    visibility: false,
   },
   {
     name: 'Vue Js',
     icon: 'vue',
     alt: 'Vue Js Logo',
     status: 'learning',
-    visibility: true,
+    visibility: false,
   },
   {
     name: 'Tailwind CSS',
     icon: 'tailwindCss',
     alt: 'Tailwind CSS Logo',
     status: 'learning',
-    visibility: true,
+    visibility: false,
   },
   {
     name: 'Svelte',
@@ -174,7 +174,7 @@ export const LEARNING_SKILLS_BE: Skill[] = [
     icon: 'python',
     alt: 'Python Logo',
     status: 'learning',
-    visibility: true,
+    visibility: false,
   },
   {
     name: 'Django',
