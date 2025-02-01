@@ -102,6 +102,7 @@ interface aboutMeTexts {
 interface DailyScheduleTexts {
   title: string;
   heading: string;
+  contribution: string;
   contributions: string;
   githubGraphTitle: string;
   details: {
@@ -332,6 +333,7 @@ export const textsDE: Texts = {
   dailySchedule: {
     title: 'tagesablauf.repeat',
     heading: 'Tägliche Coding-Abenteuer',
+    contribution: 'Beitrag',
     contributions: 'Beiträge',
     githubGraphTitle: '365 Tage Codeflow',
     details: [
@@ -567,6 +569,7 @@ export const textsEN: Texts = {
   dailySchedule: {
     title: 'daily_schedule.repeat',
     heading: 'Daily Coding Adventures',
+    contribution: 'Contribution',
     contributions: 'Contributions',
     githubGraphTitle: '365 Days of Codeflow',
     details: [

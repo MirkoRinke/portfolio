@@ -42,13 +42,13 @@
             day.contributionCount === 0 ? 'transparent' : day.color
           "
           [title]="
-            day.contributionCount === 0
-              ? ''
-              : day.date +
-                ': ' +
-                day.contributionCount +
-                ' ' +
-                dailySchedule.contributions
+            day.date +
+            ': ' +
+            day.contributionCount +
+            ' ' +
+            (day.contributionCount === 1
+              ? dailySchedule.contribution
+              : dailySchedule.contributions)
           "
         ></div>
         } }
