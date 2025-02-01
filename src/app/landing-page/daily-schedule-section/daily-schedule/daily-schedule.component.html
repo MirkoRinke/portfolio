@@ -1,5 +1,3 @@
-<!-- TODO aria attributes -->
-
 @let dailySchedule = languageService.texts.dailySchedule; @let generalAriaLabels
 =languageService.texts.general.ariaLabels.desktopIcon;
 @if(windowService.ifWindowOpen) {
@@ -42,6 +40,15 @@
             day.contributionCount === 0 ? 'transparent' : day.color
           "
           [title]="
+            day.date +
+            ': ' +
+            day.contributionCount +
+            ' ' +
+            (day.contributionCount === 1
+              ? dailySchedule.contribution
+              : dailySchedule.contributions)
+          "
+          [attr.aria-label]="
             day.date +
             ': ' +
             day.contributionCount +
