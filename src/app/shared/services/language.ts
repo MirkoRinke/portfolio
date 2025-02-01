@@ -223,6 +223,16 @@ interface SnakeTexts {
     restart: string;
   };
   touchscreen: string;
+  ariaLabels: {
+    controls: {
+      moveUP: string;
+      moveDown: string;
+      moveLeft: string;
+      moveRight: string;
+    };
+    showControls: string;
+    hideControls: string;
+  };
 }
 
 interface GeneralTexts {
@@ -459,6 +469,16 @@ export const textsDE: Texts = {
       restart: 'Du hast gewonnen, nochmal spielen',
     },
     touchscreen: 'Touchscreen Steuerung',
+    ariaLabels: {
+      controls: {
+        moveUP: 'Nach oben bewegen',
+        moveDown: 'Nach unten bewegen',
+        moveLeft: 'Nach links bewegen',
+        moveRight: 'Nach rechts bewegen',
+      },
+      showControls: 'Touchscreen Steuerung anzeigen',
+      hideControls: 'Touchscreen Steuerung verbergen',
+    },
   },
   general: {
     links: {
@@ -695,6 +715,16 @@ export const textsEN: Texts = {
       restart: 'You won, play again',
     },
     touchscreen: 'Touchscreen controls',
+    ariaLabels: {
+      controls: {
+        moveUP: 'Move up',
+        moveDown: 'Move down',
+        moveLeft: 'Move left',
+        moveRight: 'Move right',
+      },
+      showControls: 'Show touchscreen controls',
+      hideControls: 'Hide touchscreen controls',
+    },
   },
   general: {
     links: {

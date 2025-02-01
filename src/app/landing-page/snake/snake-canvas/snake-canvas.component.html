@@ -1,6 +1,5 @@
-<!-- TODO aria attributes -->
-
-@let snake = languageService.texts.snake;
+@let snake = languageService.texts.snake; @let ariaLabels =
+languageService.texts.snake.ariaLabels;
 
 <div class="game">
   <canvas
@@ -13,6 +12,10 @@
     [ngClass]="{ isGameRunning: isGameRunning }"
     (click)="startGame()"
     class="start-button"
+    type="button"
+    [attr.aria-label]="
+      isGameRunning ? snake.button.restart : snake.button.start
+    "
   >
     <div
       [innerHTML]="svgIconsService.returnIcon('snake.exe', 'snake')"
@@ -29,29 +32,48 @@
   <div class="controls-menu" [ngClass]="{ textActive: !showControls }">
     @if (showControls) {
     <div class="game-controls">
-      <button class="up">
-        <div [innerHTML]="svgIconsService.returnIcon('up', 'arrow')"></div>
+      <button class="up" [attr.aria-label]="ariaLabels.controls.moveUP">
+        <div
+          [innerHTML]="svgIconsService.returnIcon('up', 'arrow')"
+          [attr.aria-hidden]="true"
+        ></div>
       </button>
-      <button class="left">
-        <div [innerHTML]="svgIconsService.returnIcon('left', 'arrow')"></div>
+      <button class="left" [attr.aria-label]="ariaLabels.controls.moveLeft">
+        <div
+          [innerHTML]="svgIconsService.returnIcon('left', 'arrow')"
+          [attr.aria-hidden]="true"
+        ></div>
       </button>
-      <button class="right">
-        <div [innerHTML]="svgIconsService.returnIcon('right', 'arrow')"></div>
+      <button class="right" [attr.aria-label]="ariaLabels.controls.moveRight">
+        <div
+          [innerHTML]="svgIconsService.returnIcon('right', 'arrow')"
+          [attr.aria-hidden]="true"
+        ></div>
       </button>
-      <button class="down">
-        <div [innerHTML]="svgIconsService.returnIcon('down', 'arrow')"></div>
+      <button class="down" [attr.aria-label]="ariaLabels.controls.moveDown">
+        <div
+          [innerHTML]="svgIconsService.returnIcon('down', 'arrow')"
+          [attr.aria-hidden]="true"
+        ></div>
       </button>
     </div>
     } @else {
     <p>{{ snake.touchscreen }}</p>
     }
-    <button (click)="toggleControls()" class="show-controls">
+    <button
+      (click)="toggleControls()"
+      class="show-controls"
+      [attr.aria-label]="
+        showControls ? ariaLabels.hideControls : ariaLabels.showControls
+      "
+    >
       <div
         [innerHTML]="
           showControls
             ? svgIconsService.returnIcon('up', 'arrow')
             : svgIconsService.returnIcon('down', 'arrow')
         "
+        [attr.aria-hidden]="true"
       ></div>
     </button>
   </div>
