@@ -1,6 +1,6 @@
 @let dailySchedule = languageService.texts.dailySchedule; @let generalAriaLabels
-=languageService.texts.general.ariaLabels.desktopIcon;
-@if(windowService.ifWindowOpen) {
+= languageService.texts.general.ariaLabels.desktopIcon; @let githubService =
+githubContributionsService; @if(windowService.ifWindowOpen) {
 <div class="github-graph">
   <div class="title-bar">
     <h3 class="title">{{ dailySchedule.title }}</h3>
@@ -30,11 +30,12 @@
         }
       </div>
     </div>
-    @if (delayed) {
+    @if (githubService.delayed) {
     <div class="github-wrapper">
       <h1>{{ dailySchedule.githubGraphTitle }}</h1>
       <div id="github-calendar" class="github-calendar">
-        @for (week of weeks; track $index) { @for (day of week; track $index) {
+        @for (week of githubService.weeks; track $index) { @for (day of week;
+        track $index) {
         <div
           class="day"
           [style.backgroundColor]="
@@ -47,7 +48,7 @@
               ? dailySchedule.contribution
               : dailySchedule.contributions) +
             ': ' +
-            this.convertDate(day.date)
+            githubService.convertDate(day.date)
           "
         ></div>
         } }

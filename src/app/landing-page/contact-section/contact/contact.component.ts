@@ -7,7 +7,7 @@ import { LanguageService } from '../../../shared/services/language.service';
 import { ModalService } from '../../../shared/services/modal.service';
 import { WindowControlsComponent } from '../../../shared/window-controls/window-controls.component';
 
-import { environment } from '../../../../environments/environment';
+import { environments } from '../../../../environments/environments';
 
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -39,7 +39,7 @@ export class ContactComponent {
   showFeedback: boolean = false;
 
   http: HttpClient = inject(HttpClient);
-  mailTest: boolean = environment.production;
+  mailTest: boolean = environments.production;
 
   contactData: ContactData = {
     name: '',
@@ -49,7 +49,7 @@ export class ContactComponent {
   };
 
   post = {
-    endPoint: environment.contactUrl,
+    endPoint: environments.contactUrl,
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
