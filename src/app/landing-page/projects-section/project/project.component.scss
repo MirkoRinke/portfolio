@@ -31,27 +31,31 @@
       width: 100%;
       height: 100%;
 
+      @media (max-width: $breakpoint-lg) {
+        padding-right: 5%;
+      }
+
       @media (max-width: $breakpoint-md) {
         order: 2;
         max-width: 100%;
-      }
-
-      h2 {
-        @include font-settings(48, 700, var(--primary-color));
-      }
-
-      p {
-        @include font-settings();
       }
 
       .description {
         @include display-flex(start, start, column);
         gap: px-to-rem(30);
 
+        h2 {
+          @include font-settings(48, 700, var(--primary-color));
+        }
+
         .textarea {
           @include display-flex(start, start, column);
           @include font-settings();
           gap: px-to-rem(20);
+
+          p {
+            @include font-settings();
+          }
         }
       }
 
@@ -64,6 +68,10 @@
           @include display-flex(end);
           gap: px-to-rem(60);
 
+          @media (max-width: $breakpoint-lg) {
+            gap: px-to-rem(40);
+          }
+
           @media (max-width: $breakpoint-xxs) {
             gap: px-to-rem(20);
           }
@@ -72,7 +80,6 @@
             @include display-flex(center, center);
             @include font-settings();
             gap: px-to-rem(10);
-            margin-bottom: px-to-rem(10);
 
             &::ng-deep .icon-link {
               @include display-flex(center, center);
@@ -92,6 +99,9 @@
         }
 
         .QR {
+          // @include display-flex(center, center, column);
+          // margin-bottom: px-to-rem(5);
+
           &::ng-deep .QR-code {
             @include display-flex(center, center);
             height: clamp(80px, 5vw, 100px);
@@ -102,6 +112,10 @@
               display: none;
             }
           }
+
+          // & p {
+          //   @include font-settings();
+          // }
         }
       }
     }
