@@ -2,7 +2,7 @@
 languageService.projects[index].ariaLabels; @let generalAriaLabels =
 languageService.texts.general.ariaLabels;
 
-<div class="project">
+<div #projectWrapper class="project">
   <div class="top">
     <div class="left">
       <div class="description">
@@ -54,15 +54,16 @@ languageService.texts.general.ariaLabels;
           >
           }
         </div>
+        @if (project.title !== 'In Development' &&
+        checkVisibilityService.isVisible) {
         <div class="QR">
-          @if (project.title !== 'In Development') {
           <span
             [innerHTML]="
               svgIconsService.returnIcon(project.icon + 'QR', 'QR-code')
             "
           ></span>
-          }
         </div>
+        }
       </div>
     </div>
     <div class="right">
