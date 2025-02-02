@@ -44,4 +44,14 @@ export class UtilityService {
     const match = inputString.match(/(\d+)$/);
     return match ? parseInt(match[0], 10) : NaN;
   }
+
+  trimCharsFromStart(link: string, numChars: number): string {
+    if (link.length <= numChars) return link;
+    return link.substring(numChars);
+  }
+
+  trimCharsFromEnd(link: string, numChars: number): string {
+    if (link.length <= numChars) return link;
+    return link.substring(0, link.length - numChars);
+  }
 }
