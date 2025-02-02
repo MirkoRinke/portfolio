@@ -55,32 +55,52 @@
         }
       }
 
-      .links {
-        @include display-flex();
-        gap: px-to-rem(60);
+      .external-links {
+        @include display-flex(end, space-between);
+        gap: px-to-rem(20);
+        width: 100%;
 
-        @media (max-width: $breakpoint-xxs) {
-          gap: px-to-rem(20);
+        .links {
+          @include display-flex(end);
+          gap: px-to-rem(60);
+
+          @media (max-width: $breakpoint-xxs) {
+            gap: px-to-rem(20);
+          }
+
+          a {
+            @include display-flex(center, center);
+            @include font-settings();
+            gap: px-to-rem(10);
+            margin-bottom: px-to-rem(10);
+
+            &::ng-deep .icon-link {
+              @include display-flex(center, center);
+              height: clamp(20px, 5vw, 30px);
+              width: clamp(20px, 5vw, 30px);
+              fill: var(--secondary-color);
+            }
+
+            &:hover {
+              color: var(--primary-color-hover);
+            }
+
+            &:hover ::ng-deep .icon-link {
+              fill: var(--primary-color-hover);
+            }
+          }
         }
 
-        a {
-          @include display-flex(center, center);
-          @include font-settings();
-          gap: px-to-rem(10);
-
-          &::ng-deep .icon-link {
+        .QR {
+          &::ng-deep .QR-code {
             @include display-flex(center, center);
-            height: clamp(20px, 5vw, 30px);
-            width: clamp(20px, 5vw, 30px);
-            fill: var(--secondary-color);
-          }
+            height: clamp(80px, 5vw, 100px);
+            width: clamp(80px, 5vw, 100px);
+            fill: var(--secondary-color-80);
 
-          &:hover {
-            color: var(--primary-color-hover);
-          }
-
-          &:hover ::ng-deep .icon-link {
-            fill: var(--primary-color-hover);
+            @media (max-width: $breakpoint-xs) {
+              display: none;
+            }
           }
         }
       }

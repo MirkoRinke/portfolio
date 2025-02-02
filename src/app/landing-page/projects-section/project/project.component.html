@@ -12,42 +12,57 @@ languageService.texts.general.ariaLabels;
           <p>{{ project.description }}</p>
         </div>
       </div>
-      <div class="links">
-        @if (project.title !== 'In Development') {
-        <a
-          href="{{ project.links.live }}"
-          target="_blank"
-          [attr.aria-label]="ariaLabels.live"
-          ><span
-            [innerHTML]="svgIconsService.returnIcon('live', 'icon-link')"
-          ></span>
-          Live</a
-        >
-        }
-        <a
-          href="{{ project.links.github }}"
-          target="_blank"
-          [attr.aria-label]="ariaLabels.github"
-          ><span
-            [innerHTML]="svgIconsService.returnIcon('github', 'icon-link')"
-          ></span>
-          Github</a
-        >
-        @if (project.title === 'In Development') {
-        <a
-          href="{{ project.organization.link }}"
-          target="_blank"
-          [attr.aria-label]="
-            ariaLabels.organization + ' ' + project.organization.name
-          "
-          ><span
+
+      <div class="external-links">
+        <div class="links">
+          @if (project.title !== 'In Development') {
+          <a
+            href="{{ project.links.live }}"
+            target="_blank"
+            [attr.aria-label]="ariaLabels.live"
+            ><span
+              [innerHTML]="svgIconsService.returnIcon('live', 'icon-link')"
+            ></span>
+            Live</a
+          >
+          }
+          <a
+            href="{{ project.links.github }}"
+            target="_blank"
+            [attr.aria-label]="ariaLabels.github"
+            ><span
+              [innerHTML]="svgIconsService.returnIcon('github', 'icon-link')"
+            ></span>
+            Github</a
+          >
+          @if (project.title === 'In Development') {
+          <a
+            href="{{ project.organization.link }}"
+            target="_blank"
+            [attr.aria-label]="
+              ariaLabels.organization + ' ' + project.organization.name
+            "
+            ><span
+              [innerHTML]="
+                svgIconsService.returnIcon(
+                  project.organization.icon,
+                  'icon-link'
+                )
+              "
+            ></span>
+            {{ project.organization.name }}</a
+          >
+          }
+        </div>
+        <div class="QR">
+          @if (project.title !== 'In Development') {
+          <span
             [innerHTML]="
-              svgIconsService.returnIcon(project.organization.icon, 'icon-link')
+              svgIconsService.returnIcon(project.icon + 'QR', 'QR-code')
             "
           ></span>
-          {{ project.organization.name }}</a
-        >
-        }
+          }
+        </div>
       </div>
     </div>
     <div class="right">
