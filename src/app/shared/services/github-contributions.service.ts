@@ -9,16 +9,11 @@ import { environments } from '../../../environments/environments';
 export class GithubContributionsService {
   weeks: any[][] = [];
 
-  delayed: boolean = false;
-
   constructor(public languageService: LanguageService) {}
 
   initCreateCalendar() {
     if (this.weeks.length === 0) {
       this.createCalendar();
-      setTimeout(() => {
-        this.delayed = true;
-      }, 200);
     }
   }
 

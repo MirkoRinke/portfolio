@@ -1,7 +1,7 @@
 @let dailySchedule = languageService.texts.dailySchedule; @let generalAriaLabels
 = languageService.texts.general.ariaLabels.desktopIcon; @let githubService =
 githubContributionsService; @if(windowService.ifWindowOpen) {
-<div class="github-graph">
+<div #githubWrapper class="github-graph">
   <div class="title-bar">
     <h3 class="title">{{ dailySchedule.title }}</h3>
     <div class="controls">
@@ -30,7 +30,7 @@ githubContributionsService; @if(windowService.ifWindowOpen) {
         }
       </div>
     </div>
-    @if (githubService.delayed) {
+    @if (checkVisibilityService.isVisible) {
     <div class="github-wrapper">
       <h1>{{ dailySchedule.githubGraphTitle }}</h1>
       <div id="github-calendar" class="github-calendar">
