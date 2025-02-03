@@ -272,13 +272,25 @@ export class SnakeCanvasComponent implements OnInit, OnDestroy {
   }
 
   handleKeyDown(event: KeyboardEvent) {
-    if (event.key === 'ArrowRight' && this.direction !== 'LEFT')
+    if (
+      (event.key === 'ArrowRight' || event.key === 'd') &&
+      this.direction !== 'LEFT'
+    )
       this.nextDirection = 'RIGHT';
-    if (event.key === 'ArrowLeft' && this.direction !== 'RIGHT')
+    if (
+      (event.key === 'ArrowLeft' || event.key === 'a') &&
+      this.direction !== 'RIGHT'
+    )
       this.nextDirection = 'LEFT';
-    if (event.key === 'ArrowUp' && this.direction !== 'DOWN')
+    if (
+      (event.key === 'ArrowUp' || event.key === 'w') &&
+      this.direction !== 'DOWN'
+    )
       this.nextDirection = 'UP';
-    if (event.key === 'ArrowDown' && this.direction !== 'UP')
+    if (
+      (event.key === 'ArrowDown' || event.key === 's') &&
+      this.direction !== 'UP'
+    )
       this.nextDirection = 'DOWN';
   }
 

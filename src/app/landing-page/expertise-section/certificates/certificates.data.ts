@@ -146,26 +146,4 @@ export const CERTIFICATES: Certificate[] = [
       './certificates/udemy/baue_webseiten_mit_html5_css3_vom_anfaenger_zum_profi!.webp',
     visibility: true,
   },
-  {
-    titleDE: 'Baue Webseiten mit HTML5 & CSS3',
-    titleEN: 'Build Websites with HTML5 & CSS3',
-    icon: 'HTML',
-    platform: 'Udemy',
-    tutor: 'Jannis Seemann',
-    date: '01.2024',
-    image:
-      './certificates/udemy/baue_webseiten_mit_html5_css3_vom_anfaenger_zum_profi!.webp',
-    visibility: true,
-  },
-  {
-    titleDE: 'Baue Webseiten mit HTML5 & CSS3',
-    titleEN: 'Build Websites with HTML5 & CSS3',
-    icon: 'HTML',
-    platform: 'Udemy',
-    tutor: 'Jannis Seemann',
-    date: '01.2024',
-    image:
-      './certificates/udemy/baue_webseiten_mit_html5_css3_vom_anfaenger_zum_profi!.webp',
-    visibility: true,
-  },
 ];
