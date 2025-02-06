@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 
 import { LanguageService } from '../services/language.service';
 
+import { UtilityService } from '../services/utility.service';
+
 import { ModalService } from '../services/modal.service';
 
 import { RouterModule, Router } from '@angular/router';
@@ -19,6 +21,7 @@ export class SiteNavigationComponent {
 
   constructor(
     public languageService: LanguageService,
+    public utilityService: UtilityService,
     private router: Router,
     public modalService: ModalService
   ) {}

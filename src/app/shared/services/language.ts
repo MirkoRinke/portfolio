@@ -22,15 +22,19 @@ interface IndexTexts {
 }
 
 interface navigationTexts {
-  home: string;
-  aboutMe: string;
-  dailySchedule: string;
-  expertise: string;
-  projects: string;
-  contact: string;
+  links: {
+    [key: string]: string;
+    home: string;
+    aboutMe: string;
+    dailySchedule: string;
+    expertise: string;
+    projects: string;
+    contact: string;
+  };
   ariaLabels: {
     menu: string;
     links: {
+      [key: string]: string;
       home: string;
       aboutMe: string;
       dailySchedule: string;
@@ -268,12 +272,14 @@ export const textsDE: Texts = {
       'Willkommen auf meinem Portfolio. Hier finden Sie Informationen über meine Projekte, Fähigkeiten und Erfahrungen im Bereich Softwareentwicklung.',
   },
   navigation: {
-    home: 'Startseite',
-    aboutMe: 'Über mich',
-    dailySchedule: 'Tagesablauf',
-    expertise: 'Expertise',
-    projects: 'Projekte',
-    contact: 'Kontakt',
+    links: {
+      home: 'Startseite',
+      aboutMe: 'Über mich',
+      dailySchedule: 'Tagesablauf',
+      expertise: 'Expertise',
+      projects: 'Projekte',
+      contact: 'Kontakt',
+    },
     ariaLabels: {
       menu: 'Menü öffnen',
       links: {
@@ -514,12 +520,14 @@ export const textsEN: Texts = {
       'Welcome to my portfolio. Here you will find information about my projects, skills and experiences in software development.',
   },
   navigation: {
-    home: 'Home',
-    aboutMe: 'About me',
-    dailySchedule: 'Daily Schedule',
-    expertise: 'Expertise',
-    projects: 'Projects',
-    contact: 'Contact',
+    links: {
+      home: 'Home',
+      aboutMe: 'About me',
+      dailySchedule: 'Daily Schedule',
+      expertise: 'Expertise',
+      projects: 'Projects',
+      contact: 'Contact',
+    },
     ariaLabels: {
       menu: 'Open Menu',
       links: {

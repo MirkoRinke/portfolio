@@ -1,76 +1,22 @@
-@let ariaLabels = languageService.texts.navigation.ariaLabels;
+@let ariaLabels = languageService.texts.navigation.ariaLabels; @let navigation =
+languageService.texts.navigation.links;
 
 <nav [ngClass]="modalActive ? 'modalActive' : 'site-navigation'">
   <ul>
+    @for (item of utilityService.objectKeys(navigation); track $index) {
     <li>
       <a
         [routerLink]="['']"
-        fragment="hero"
+        [fragment]="item"
         (click)="modalService.closeModal()"
         [ngClass]="{
-          active: currentFragment() === 'hero' || currentFragment() === ''
+          active: currentFragment() === item || currentFragment() === ''
         }"
-        [attr.aria-label]="ariaLabels.links.home"
-        [attr.aria-current]="currentFragment() === 'hero' ? 'page' : null"
-        >{{ languageService.texts.navigation.home }}</a
+        [attr.aria-label]="ariaLabels.links[item]"
+        [attr.aria-current]="currentFragment() === item ? 'page' : null"
+        >{{ navigation[item] }}</a
       >
     </li>
-    <li>
-      <a
-        [routerLink]="['']"
-        fragment="about-me"
-        (click)="modalService.closeModal()"
-        [ngClass]="{ active: currentFragment() === 'about-me' }"
-        [attr.aria-label]="ariaLabels.links.aboutMe"
-        [attr.aria-current]="currentFragment() === 'about-me' ? 'page' : null"
-        >{{ languageService.texts.navigation.aboutMe }}</a
-      >
-    </li>
-    <li>
-      <a
-        [routerLink]="['']"
-        fragment="daily_schedule"
-        (click)="modalService.closeModal()"
-        [ngClass]="{ active: currentFragment() === 'daily_schedule' }"
-        [attr.aria-label]="ariaLabels.links.dailySchedule"
-        [attr.aria-current]="
-          currentFragment() === 'daily_schedule' ? 'page' : null
-        "
-        >{{ languageService.texts.navigation.dailySchedule }}</a
-      >
-    </li>
-    <li>
-      <a
-        [routerLink]="['']"
-        fragment="expertise"
-        (click)="modalService.closeModal()"
-        [ngClass]="{ active: currentFragment() === 'expertise' }"
-        [attr.aria-label]="ariaLabels.links.expertise"
-        [attr.aria-current]="currentFragment() === 'expertise' ? 'page' : null"
-        >{{ languageService.texts.navigation.expertise }}</a
-      >
-    </li>
-    <li>
-      <a
-        [routerLink]="['']"
-        fragment="projects"
-        (click)="modalService.closeModal()"
-        [ngClass]="{ active: currentFragment() === 'projects' }"
-        [attr.aria-label]="ariaLabels.links.projects"
-        [attr.aria-current]="currentFragment() === 'projects' ? 'page' : null"
-        >{{ languageService.texts.navigation.projects }}</a
-      >
-    </li>
-    <li>
-      <a
-        [routerLink]="['']"
-        fragment="contact"
-        (click)="modalService.closeModal()"
-        [ngClass]="{ active: currentFragment() === 'contact' }"
-        [attr.aria-label]="ariaLabels.links.contact"
-        [attr.aria-current]="currentFragment() === 'contact' ? 'page' : null"
-        >{{ languageService.texts.navigation.contact }}</a
-      >
-    </li>
+    }
   </ul>
 </nav>
