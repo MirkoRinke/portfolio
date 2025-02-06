@@ -10,7 +10,11 @@ languageService.texts.navigation.links;
         [fragment]="item"
         (click)="modalService.closeModal()"
         [ngClass]="{
-          active: currentFragment() === item || currentFragment() === ''
+          active:
+            currentFragment() === item ||
+            (item == 'home'
+              ? currentFragment() === ''
+              : currentFragment() === item)
         }"
         [attr.aria-label]="ariaLabels.links[item]"
         [attr.aria-current]="currentFragment() === item ? 'page' : null"
