@@ -41,6 +41,17 @@ export const CERTIFICATES: Certificate[] = [
     visibility: false,
   },
   {
+    titleDE: 'PHP Der ultimative Komplettkurs für Webentwicklung mit PHP',
+    titleEN: 'PHP The ultimate complete course for web development with PHP',
+    icon: 'PHP',
+    platform: 'Udemy',
+    tutor: 'Jannis Seemann',
+    date: '02.2025',
+    image:
+      './certificates/udemy/php_der_ultimative_komplettkurs_fuer_webentwicklung_mit_php.webp',
+    visibility: true,
+  },
+  {
     titleDE: 'Clean Code',
     titleEN: 'Clean Code',
     icon: 'cleanCode',
