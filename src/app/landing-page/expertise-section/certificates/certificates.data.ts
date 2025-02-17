@@ -41,6 +41,16 @@ export const CERTIFICATES: Certificate[] = [
     visibility: false,
   },
   {
+    titleDE: 'Laravel Kurs für Einsteiger',
+    titleEN: 'Laravel course for beginners',
+    icon: 'laravel',
+    platform: 'Udemy',
+    tutor: 'Andreas Pabst',
+    date: '02.2025',
+    image: './certificates/udemy/laravel_kurs_fuer_einsteiger.webp',
+    visibility: true,
+  },
+  {
     titleDE: 'PHP Der ultimative Komplettkurs für Webentwicklung mit PHP',
     titleEN: 'PHP The ultimate complete course for web development with PHP',
     icon: 'PHP',
