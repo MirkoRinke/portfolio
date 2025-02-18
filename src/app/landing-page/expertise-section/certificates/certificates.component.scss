@@ -43,7 +43,8 @@
     }
 
     &::ng-deep .developerAkademie {
-      fill: rgb(253, 91, 79);
+      fill: none;
+      stroke: rgb(253, 91, 79);
     }
 
     .course {
