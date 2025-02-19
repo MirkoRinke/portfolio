@@ -429,7 +429,8 @@ export const textsDE: Texts = {
     placeholderName: 'Ihr Name',
     placeholderEmail: 'Ihre E-Mail',
     placeholderSubject: 'Betreff der Nachricht',
-    placeholderMessage: 'Hallo Mirko, ich bin interessiert an...',
+    placeholderMessage:
+      'Hi Mirko, ich hätte Interesse an einer Zusammenarbeit im Bereich...',
     requiredName: 'Min. 2 Buchstaben',
     requiredEmail: 'E-Mail erforderlich',
     requiredSubject: 'Betreff benötigt',
@@ -677,7 +678,8 @@ export const textsEN: Texts = {
     placeholderName: 'Your Name',
     placeholderEmail: 'Your E-Mail',
     placeholderSubject: 'Subject of the message',
-    placeholderMessage: 'Hello Mirko, I am interested in...',
+    placeholderMessage:
+      'Hi Mirko, I would be interested in a collaboration in the field of...',
     requiredName: 'Min. 2 letters',
     requiredEmail: 'E-Mail is required',
     requiredSubject: 'Subject is required',
