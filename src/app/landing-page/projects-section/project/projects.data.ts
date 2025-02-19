@@ -64,7 +64,7 @@ export const projectsDE: Project[] = [
       {
         title: 'Einfaches Management',
         description:
-          'Verschieben Sie Aufgaben nahtlos zwischen Phasen wie "To-Do", "In Progress" und "Done" mit nur einem Klick.',
+          'Verschieben Sie Aufgaben nahtlos zwischen Spalten wie "To-Do", "In Progress" und "Done" mit nur einem Klick.',
       },
       {
         title: 'Optimierte Workflows',
@@ -113,9 +113,9 @@ export const projectsDE: Project[] = [
     title: 'El Pollo Loco',
     icon: 'elPolloLoco',
     visibility: true,
-    about: 'Worum geht es in diesem Projekt?',
+    about: 'Pepes Abenteuer gegen das verrückte Huhn.',
     description:
-      'Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
+      'Tauchen Sie ein in die aufregende Welt von El Pollo Loco, einem fesselnden Jump&Run-Abenteuer mit einer Prise mexikanischen Flairs. In diesem objektorientierten Spiel schlüpfen Sie in die Rolle von Pepe, einem mutigen Helden mit einer besonderen Mission.',
     keyFeatures: [
       {
         title: 'Gameplay',
@@ -172,12 +172,12 @@ export const projectsDE: Project[] = [
   },
   {
     id: 2,
-    title: 'Pokedex',
+    title: 'Pokédex',
     icon: 'pokedex',
     visibility: true,
-    about: 'Worum geht es in diesem Projekt?',
+    about: 'Entdecken Sie die Welt der Pokémon mit einem interaktiven Pokédex!',
     description:
-      'Pokedex-Anwendung zum Suchen nach Pokemon und Abrufen detaillierter Informationen über sie. Die Daten werden von einer externen API abgerufen.',
+      'Erkunde ein faszinierendes Universum voller einzigartiger Kreaturen mit dieser Pokédex-Anwendung! Sie ermöglicht dir, die vielfältige Welt der Pokémon zu entdecken. Dank aktueller Daten aus einer externen API kannst du schnell nach deinen Lieblings-Pokémon suchen und umfassende Informationen wie Statistiken, Fähigkeiten und Typen abrufen.',
     keyFeatures: [
       {
         title: 'Suchfunktion',
@@ -229,9 +229,9 @@ export const projectsDE: Project[] = [
       icon: ' ',
     },
     ariaLabels: {
-      tap: 'Öffne Pokedex Tab',
-      github: 'Öffne Pokedex GitHub Repository',
-      live: 'Öffne Pokedex Live Version',
+      tap: 'Öffne Pokédex Tab',
+      github: 'Öffne Pokédex GitHub Repository',
+      live: 'Öffne Pokédex Live Version',
       organization: '',
       keyFeature: 'Kernfunktion',
     },
@@ -242,7 +242,7 @@ export const projectsDE: Project[] = [
     icon: 'inDevelopment',
     visibility: true,
     about:
-      'Ein strukturiertes und kontinuierlich wachsendes Repository meiner Projekte',
+      'Ein strukturiertes und kontinuierlich wachsendes Repository meiner Projekte.',
     description:
       'Dieses Portfolio zeigt meine laufenden Arbeiten und Projekte. Es umfasst einen Überblick über meine Fähigkeiten und Zertifikate, die meine kontinuierliche Weiterentwicklung im Bereich der Webentwicklung dokumentieren.',
     keyFeatures: [
@@ -291,9 +291,9 @@ export const projectsDE: Project[] = [
       live: 'https://mirkorinke.dev',
     },
     organization: {
-      name: 'CodeNex',
-      link: 'https://github.com/CodeNex',
-      icon: 'codeNex',
+      name: '',
+      link: '',
+      icon: '',
     },
     ariaLabels: {
       tap: 'Öffne In Development Tab',
@@ -329,7 +329,7 @@ export const projectsEN: Project[] = [
       {
         title: 'Simple Management',
         description:
-          'Seamlessly move tasks between stages like "To-Do," "In Progress," and "Done" with just one click.',
+          'Seamlessly move tasks between columns like "To-Do," "In Progress," and "Done" with just one click.',
       },
       {
         title: 'Optimized Workflows',
@@ -378,9 +378,9 @@ export const projectsEN: Project[] = [
     title: 'El Pollo Loco',
     icon: 'elPolloLoco',
     visibility: true,
-    about: 'What is this project about?',
+    about: "Pepe's adventure against the crazy hen.",
     description:
-      'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      'Immerse yourself in the exciting world of El Pollo Loco, a captivating jump&run adventure with a touch of Mexican flair. In this object-oriented game, you take on the role of Pepe, a brave hero with a special mission.',
     keyFeatures: [
       {
         title: 'Gameplay',
@@ -437,12 +437,12 @@ export const projectsEN: Project[] = [
   },
   {
     id: 2,
-    title: 'Pokedex',
+    title: 'Pokédex',
     icon: 'pokedex',
     visibility: true,
-    about: 'What is this project about?',
+    about: 'Discover the world of Pokémon with an interactive Pokédex!',
     description:
-      'Pokedex application to search for Pokemon and get detailed information about them. The data is fetched from an external API.',
+      'Explore a fascinating universe filled with unique creatures with this Pokédex application! It allows you to discover the diverse world of Pokémon. Thanks to current data from an external API, you can quickly search for your favorite Pokémon and retrieve comprehensive information such as statistics, abilities, and types.',
     keyFeatures: [
       {
         title: 'Search Function',
@@ -494,9 +494,9 @@ export const projectsEN: Project[] = [
       icon: ' ',
     },
     ariaLabels: {
-      tap: 'Open Pokedex Tab',
-      github: 'Open Pokedex GitHub Repository',
-      live: 'Open Pokedex Live Version',
+      tap: 'Open Pokédex Tab',
+      github: 'Open Pokédex GitHub Repository',
+      live: 'Open Pokédex Live Version',
       organization: '',
       keyFeature: 'Key Feature',
     },
@@ -506,7 +506,7 @@ export const projectsEN: Project[] = [
     title: 'In Development',
     icon: 'inDevelopment',
     visibility: true,
-    about: 'A structured and continuously growing repository of my projects',
+    about: 'A structured and continuously growing repository of my projects.',
     description:
       'This portfolio showcases my ongoing work and projects. It provides an overview of my skills and certifications, which document my continuous development in the field of web development.',
     keyFeatures: [

@@ -306,7 +306,7 @@ export const textsDE: Texts = {
     },
   },
   hero: {
-    subHeading: 'Frontend-Entwickler',
+    subHeading: 'Flexibel, kreativ, lösungsorientiert',
     mainHeading: 'Mirko Rinke',
     contactMe: 'Kontaktiere mich',
     ariaLabels: {
@@ -322,19 +322,19 @@ export const textsDE: Texts = {
     },
     infoBox: {
       infoBox0: {
-        title: 'moderne-loesungen.txt',
+        title: 'visionen_verwirklichen.txt',
         textarea:
-          'Ich liebe es, Ideen in die digitale Welt zu bringen. Mit modernen Webtechnologien gestalte ich benutzerfreundliche, ästhetische Oberflächen, die es ermöglichen, Ideen in einfache und funktionale Weblösungen umzusetzen.',
+          'Durch den Einsatz modernster Technologien bringe ich Ideen digital zum Leben und entwickle benutzerfreundliche sowie ästhetisch ansprechende Weblösungen, die Komplexes einfach wirken lassen.',
       },
       infoBox1: {
-        title: 'modernes_arbeiten.txt',
+        title: 'remote_lifestyle.txt',
         textarea:
-          'Aktuell liegt mein Fokus auf Remote-Arbeit. Ich schätze die Flexibilität, meine Zeit selbst zu managen, sowie die ausgewogene Work-Life-Balance, die diese Arbeitsweise ermöglicht.',
+          'Ich genieße die Flexibilität ortsunabhängiger Arbeit und die Work-Life-Balance, die sie ermöglicht.',
       },
       infoBox2: {
-        title: 'teamwork_und_eigenständigkeit.txt',
+        title: 'fokus_und_teamarbeit.txt',
         textarea:
-          'Ich arbeite gerne im Team, um gemeinsam innovative Lösungen zu entwickeln, schätze aber auch die Möglichkeit, eigenständig an Projekten zu arbeiten und meine eigenen Ideen umzusetzen.',
+          'Ich arbeite gerne eigenständig und fokussiert, bringe aber ebenso gerne meine Ideen in einem kreativen Team ein, um Projekte gemeinsam voranzubringen.',
       },
     },
     ariaLabels: {
@@ -347,7 +347,7 @@ export const textsDE: Texts = {
     },
   },
   dailySchedule: {
-    title: 'tagesablauf.repeat',
+    title: 'code.flow',
     heading: 'Tägliche Coding-Abenteuer',
     contribution: 'Beitrag',
     contributions: 'Beiträge',
@@ -356,17 +356,17 @@ export const textsDE: Texts = {
       {
         title: 'Innovative Lösungen',
         description:
-          'Programmieren ist für mich wie Gaming jede Zeile Code und jede Aufgabe fühlt sich an wie ein neues Level, das darauf wartet, gemeistert zu werden.',
+          'Programmieren ist wie Gaming für mich. Jede Zeile Code bringt mich ein Level weiter und neue Aufgaben warten darauf, gemeistert zu werden.',
       },
       {
         title: 'Völlig im Code Versunken',
         description:
-          'Ich liebe es, mich stundenlang in Projekte zu vertiefen, Probleme zu lösen und kreative Wege zu finden und komplexe Herausforderungen zu bewältigen.',
+          'Stundenlang tief im Code zu sein ist für mich pure Freude. Probleme lösen und kreative Wege finden treiben mich an.',
       },
       {
         title: 'Herausforderungen bewältigen',
         description:
-          'Jede Herausforderung ist eine Gelegenheit, kreativ zu werden und neue Lösungswege zu entdecken.',
+          'Jede Herausforderung ist eine Chance, kreativ zu denken und innovative Lösungen zu entdecken.',
       },
       {
         title: 'Kontinuierliches Lernen',
@@ -554,7 +554,7 @@ export const textsEN: Texts = {
     },
   },
   hero: {
-    subHeading: 'Frontend Developer',
+    subHeading: 'Flexible, creative, solution-oriented',
     mainHeading: 'Mirko Rinke',
     contactMe: 'Contact me',
     ariaLabels: {
@@ -570,19 +570,19 @@ export const textsEN: Texts = {
     },
     infoBox: {
       infoBox0: {
-        title: 'modern-solutions.txt',
+        title: 'realizing_visions.txt',
         textarea:
-          'I love bringing ideas to life in the digital world. Using modern web technologies, I create user-friendly, aesthetic interfaces that turn concepts into simple and functional web solutions.',
+          'By using state-of-the-art technologies, I bring ideas to life digitally and develop user-friendly and aesthetically appealing web solutions that make complex things seem simple.',
       },
       infoBox1: {
-        title: 'remote-work.txt',
+        title: 'remote_lifestyle.txt',
         textarea:
-          'Currently, I focus on remote work. I value the flexibility to manage my own time and the healthy work-life balance that this way of working offers.',
+          'I enjoy the flexibility of remote work and the work-life balance it enables.',
       },
       infoBox2: {
-        title: 'teamwork_and_independence.txt',
+        title: 'focus_and_teamwork.txt',
         textarea:
-          'I enjoy collaborating in a team to develop innovative solutions, but I also appreciate the opportunity to work independently on projects and bring my own ideas to life.',
+          'I enjoy working independently and focused, but I also like to contribute my ideas in a creative team to advance projects together.',
       },
     },
     ariaLabels: {
@@ -595,7 +595,7 @@ export const textsEN: Texts = {
     },
   },
   dailySchedule: {
-    title: 'daily_schedule.repeat',
+    title: 'code.flow',
     heading: 'Daily Coding Adventures',
     contribution: 'Contribution',
     contributions: 'Contributions',
@@ -604,22 +604,22 @@ export const textsEN: Texts = {
       {
         title: 'Innovative Solutions',
         description:
-          'Coding feels like gaming to me—every line of code and every task is like a new level waiting to be conquered.',
+          'Programming is like gaming to me. Every line of code brings me a level up and new tasks are waiting to be mastered.',
       },
       {
         title: 'Deep Focus on Code',
         description:
-          'I love immersing myself in projects for hours, solving problems, and finding creative ways to tackle complex challenges.',
+          'Being deep in the code for hours is pure joy for me. Solving problems and finding creative ways drives me.',
       },
       {
         title: 'Overcoming Challenges',
         description:
-          'Every challenge is an opportunity to think outside the box and discover new approaches.',
+          'Every challenge is an opportunity to think creatively and discover innovative solutions.',
       },
       {
         title: 'Continuous Learning',
         description:
-          'Each day, I aim to learn something new, push my boundaries, and grow by embracing new challenges.',
+          'Every day I set myself the goal of learning something new, expanding my limits and developing myself through new challenges.',
       },
     ],
   },

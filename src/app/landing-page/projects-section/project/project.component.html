@@ -35,7 +35,7 @@ languageService.texts.general.ariaLabels;
             ></span>
             Github</a
           >
-          @if (project.title === 'In Development') {
+          @if (project.organization.name !== "") {
           <a
             href="{{ project.organization.link }}"
             target="_blank"

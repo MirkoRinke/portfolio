@@ -8,8 +8,8 @@
   min-width: 100%;
 
   h1 {
-    @include font-settings(48);
-    @include dynamic-font(48, 4);
+    @include font-settings(32);
+    @include dynamic-font(24, 3, 10);
     white-space: nowrap;
   }
 
