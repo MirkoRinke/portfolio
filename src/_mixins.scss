@@ -98,10 +98,24 @@
 
 @mixin title-default-style() {
   @include font-settings();
+  @include display-flex(center, start);
+  gap: px-to-rem(10);
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   padding-right: px-to-rem(20);
+
+  &::ng-deep .title-icon {
+    @include display-flex(center, center);
+    height: px-to-rem(20);
+    width: px-to-rem(20);
+    fill: var(--secondary-color);
+
+    @media (max-width: $breakpoint-xs) {
+      height: px-to-rem(15);
+      width: px-to-rem(15);
+    }
+  }
 }
 
 @mixin controls {
