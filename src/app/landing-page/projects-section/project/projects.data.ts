@@ -89,6 +89,10 @@ export const projectsDE: Project[] = [
         title: 'Firebase',
         icon: 'firebase',
       },
+      {
+        title: 'Teamwork',
+        icon: 'teamwork',
+      },
     ],
     imagePath: './projects/join.webp',
     links: {
@@ -96,9 +100,9 @@ export const projectsDE: Project[] = [
       live: 'https://join.mirkorinke.dev',
     },
     organization: {
-      name: ' ',
-      link: ' ',
-      icon: ' ',
+      name: '',
+      link: '',
+      icon: '',
     },
     ariaLabels: {
       tap: 'Öffne Join Tab',
@@ -158,9 +162,9 @@ export const projectsDE: Project[] = [
       live: 'https://el-pollo-loco.mirkorinke.dev',
     },
     organization: {
-      name: ' ',
-      link: ' ',
-      icon: ' ',
+      name: '',
+      link: '',
+      icon: '',
     },
     ariaLabels: {
       tap: 'Öffne El Pollo Loco Tab',
@@ -224,9 +228,9 @@ export const projectsDE: Project[] = [
       live: 'https://pokedex.mirkorinke.dev',
     },
     organization: {
-      name: ' ',
-      link: ' ',
-      icon: ' ',
+      name: '',
+      link: '',
+      icon: '',
     },
     ariaLabels: {
       tap: 'Öffne Pokédex Tab',
@@ -361,9 +365,9 @@ export const projectsEN: Project[] = [
       live: 'https://join.mirkorinke.dev',
     },
     organization: {
-      name: ' ',
-      link: ' ',
-      icon: ' ',
+      name: '',
+      link: '',
+      icon: '',
     },
     ariaLabels: {
       tap: 'Open Join Tab',
@@ -423,9 +427,9 @@ export const projectsEN: Project[] = [
       live: 'https://el-pollo-loco.mirkorinke.dev',
     },
     organization: {
-      name: ' ',
-      link: ' ',
-      icon: ' ',
+      name: '',
+      link: '',
+      icon: '',
     },
     ariaLabels: {
       tap: 'Open El Pollo Loco Tab',
@@ -489,9 +493,9 @@ export const projectsEN: Project[] = [
       live: 'https://pokedex.mirkorinke.dev',
     },
     organization: {
-      name: ' ',
-      link: ' ',
-      icon: ' ',
+      name: '',
+      link: '',
+      icon: '',
     },
     ariaLabels: {
       tap: 'Open Pokédex Tab',
