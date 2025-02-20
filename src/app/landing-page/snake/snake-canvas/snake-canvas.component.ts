@@ -139,9 +139,11 @@ export class SnakeCanvasComponent implements OnInit, OnDestroy {
   setSnakeColor() {
     if (localStorage.getItem('currentColor') === 'violett')
       this.snakeColor = 'rgb(102, 71, 148)';
+    else if (localStorage.getItem('currentColor') === 'turquoise')
+      this.snakeColor = 'rgb(61, 207, 182)';
     else if (localStorage.getItem('currentColor') === 'blue')
       this.snakeColor = 'rgb(74, 144, 226)';
-    else this.snakeColor = 'rgb(61, 207, 182)';
+    else this.snakeColor = 'rgb(255, 105, 180)';
   }
 
   startGame() {

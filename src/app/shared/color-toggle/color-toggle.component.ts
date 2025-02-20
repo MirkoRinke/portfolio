@@ -12,6 +12,10 @@ import { LanguageService } from '../services/language.service';
 export class ColorToggleComponent {
   currentColor: string | null = null;
 
+  availableColors: string[] = ['blue', 'turquoise', 'violett'];
+
+  defaultColor: string = 'violett';
+
   @Input() modalActive: boolean = false;
 
   constructor(public languageService: LanguageService) {}
@@ -19,27 +23,21 @@ export class ColorToggleComponent {
   ngOnInit() {
     this.currentColor = localStorage.getItem('currentColor');
     if (this.currentColor) {
-      this.applyColor(this.currentColor);
-    }
-  }
-
-  setColor(color: string) {
-    if (color === 'default') {
-      this.resetColor();
+      this.setColor(this.currentColor);
     } else {
-      this.applyColor(color);
+      this.setColor(this.defaultColor);
     }
   }
 
-  resetColor() {
+  resetColor(color: string) {
     if (this.currentColor) {
       document.body.classList.remove(this.currentColor);
-      this.currentColor = null;
+      this.currentColor = color;
       localStorage.removeItem('currentColor');
     }
   }
 
-  applyColor(color: string) {
+  setColor(color: string) {
     if (this.currentColor) {
       document.body.classList.remove(this.currentColor);
     }

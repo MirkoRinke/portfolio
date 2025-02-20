@@ -47,8 +47,9 @@ interface navigationTexts {
 
 interface ColorToggleTexts {
   ariaLabels: {
-    turquoise: string;
+    [key: string]: string;
     blue: string;
+    turquoise: string;
     violett: string;
   };
 }
@@ -294,8 +295,8 @@ export const textsDE: Texts = {
   },
   colorToggle: {
     ariaLabels: {
-      turquoise: 'Farbmodus wechseln zu Türkis (Standard)',
       blue: 'Farbmodus wechseln zu Blau',
+      turquoise: 'Farbmodus wechseln zu Türkis',
       violett: 'Farbmodus wechseln zu Violett',
     },
   },
@@ -543,8 +544,8 @@ export const textsEN: Texts = {
   },
   colorToggle: {
     ariaLabels: {
-      turquoise: 'Change color mode to Turquoise (Default)',
       blue: 'Change color mode to Blue',
+      turquoise: 'Change color mode to Turquoise',
       violett: 'Change color mode to Violett',
     },
   },
