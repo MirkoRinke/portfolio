@@ -7,13 +7,13 @@
   gap: px-to-rem(10);
   min-width: 100%;
 
-  h1 {
+  h2 {
     @include font-settings(32);
     @include dynamic-font(24, 3, 10);
     white-space: nowrap;
   }
 
-  h2 {
+  h1 {
     @include font-settings(128);
     @include dynamic-font(128, 10);
     white-space: nowrap;
