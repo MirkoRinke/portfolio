@@ -64,7 +64,9 @@ export class SnakeCanvasComponent implements OnInit, OnDestroy {
     this.ngZone.runOutsideAngular(() => {
       window.addEventListener('keydown', this.handleKeyDown.bind(this));
     });
-    if (window.innerWidth < 450) this.showControls = true;
+    if (window.innerWidth < 450) {
+      this.toggleControls();
+    }
   }
 
   touchstartReference() {
