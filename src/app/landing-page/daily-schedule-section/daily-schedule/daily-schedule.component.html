@@ -44,7 +44,9 @@ githubContributionsService; @if(windowService.ifWindowOpen) {
         <div
           class="day"
           [style.backgroundColor]="
-            day.contributionCount === 0 ? 'transparent' : day.color
+            day.contributionCount === 0
+              ? 'transparent'
+              : githubService.setColor(day.color)
           "
           [title]="
             day.contributionCount +
