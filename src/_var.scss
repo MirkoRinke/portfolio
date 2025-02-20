@@ -2,46 +2,58 @@
 
 /* Colors */
 
-:root {
-  --background-color: rgb(28, 28, 28);
-  --background-color-80: rgba(28, 28, 28, 0.8);
-  --background-color-50: rgba(28, 28, 28, 0.5);
-  --background-color-25: rgba(28, 28, 28, 0.25);
-  --background-color-10: rgba(28, 28, 28, 0.1);
+@mixin color-theme() {
+  --primary-color-rgb: 102, 71, 148;
+  --secondary-color-rgb: 255, 255, 255;
+  --background-color-rgb: 10, 10, 15;
+
+  --invalid: rgba(236, 123, 123, 0.8);
+
+  --primary-color: rgb(var(--primary-color-rgb));
+  --primary-color-80: rgba(var(--primary-color-rgb), 0.8);
+  --primary-color-50: rgba(var(--primary-color-rgb), 0.5);
+  --primary-color-25: rgba(var(--primary-color-rgb), 0.25);
+  --primary-color-10: rgba(var(--primary-color-rgb), 0.1);
+  --primary-color-hover: rgba(var(--primary-color-rgb), 0.8);
+
+  --secondary-color: rgb(var(--secondary-color-rgb));
+  --secondary-color-80: rgba(var(--secondary-color-rgb), 0.8);
+  --secondary-color-50: rgba(var(--secondary-color-rgb), 0.5);
+  --secondary-color-25: rgba(var(--secondary-color-rgb), 0.25);
+  --secondary-color-10: rgba(var(--secondary-color-rgb), 0.1);
+  --secondary-color-hover: rgba(var(--secondary-color-rgb), 0.8);
+
+  --background-color: rgb(var(--background-color-rgb));
+  --background-color-80: rgba(var(--background-color-rgb), 0.8);
+  --background-color-50: rgba(var(--background-color-rgb), 0.5);
+  --background-color-25: rgba(var(--background-color-rgb), 0.25);
+  --background-color-10: rgba(var(--background-color-rgb), 0.1);
+
   --hero-background: linear-gradient(
     45deg,
-    rgb(28, 28, 28) 23%,
-    rgb(8, 70, 59) 100%
+    rgb(var(--background-color-rgb)) 23%,
+    rgba(var(--primary-color-rgb), 0.4) 100%
   );
-  --modal-background: linear-gradient(
-    45deg,
-    rgb(28, 28, 28) 23%,
-    rgb(8, 70, 59) 100%
-  );
-  --menu-background: linear-gradient(
-    45deg,
-    rgb(28, 28, 28) 23%,
-    rgb(8, 70, 59) 100%
-  );
-  --skills-background: radial-gradient(
-    circle at 20% 50%,
-    rgba(8, 70, 59, 0.3) 0%,
-    #1c1c1c 20%
-  );
+}
 
-  --primary-color: rgb(61, 207, 182);
-  --primary-color-80: rgba(61, 207, 182, 0.8);
-  --primary-color-50: rgba(61, 207, 182, 0.5);
-  --primary-color-25: rgba(61, 207, 182, 0.25);
-  --primary-color-10: rgba(61, 207, 182, 0.1);
-  --primary-color-hover: rgba(61, 207, 182, 0.8);
-  --secondary-color: rgb(255, 255, 255);
-  --secondary-color-80: rgba(255, 255, 255, 0.8);
-  --secondary-color-50: rgba(255, 255, 255, 0.5);
-  --secondary-color-25: rgba(255, 255, 255, 0.25);
-  --secondary-color-10: rgba(255, 255, 255, 0.1);
-  --secondary-color-hover: rgba(255, 255, 255, 0.8);
-  --invalid: rgba(236, 123, 123, 0.8);
+:root {
+  @include color-theme();
+}
+
+.violett {
+  @include color-theme();
+  --background-color-rgb: 10, 10, 15;
+  --primary-color-rgb: 102, 71, 148;
+
+  --cursor-url: url("../public/violett.svg"), auto;
+  --cursor-arrow-back: url("../public/arrow-back-violett.svg"), auto;
+  --cursor-arrow-forward: url("../public/arrow-forward-violett.svg"), auto;
+}
+
+.turquoise {
+  @include color-theme();
+  --background-color-rgb: 28, 28, 28;
+  --primary-color-rgb: 61, 207, 182;
 
   --cursor-url: url("../public/turquoise.svg"), auto;
   --cursor-arrow-back: url("../public/arrow-back-turquoise.svg"), auto;
@@ -49,95 +61,13 @@
 }
 
 .blue {
-  --background-color: rgb(15, 20, 40);
-  --background-color-80: rgba(15, 20, 40, 0.8);
-  --background-color-50: rgba(15, 20, 40, 0.5);
-  --background-color-25: rgba(15, 20, 40, 0.25);
-  --background-color-10: rgba(15, 20, 40, 0.1);
-  --hero-background: linear-gradient(
-    45deg,
-    rgb(15, 20, 42) 23%,
-    rgb(58, 90, 135) 100%
-  );
-  --modal-background: linear-gradient(
-    45deg,
-    rgb(15, 20, 42) 23%,
-    rgb(58, 90, 135) 100%
-  );
-  --menu-background: linear-gradient(
-    45deg,
-    rgb(15, 20, 42) 23%,
-    rgb(58, 90, 135) 100%
-  );
-  --skills-background: radial-gradient(
-    circle at 20% 50%,
-    rgba(58, 90, 135, 0.3) 0%,
-    #0f142a 20%
-  );
-
-  --primary-color: rgb(74, 144, 226);
-  --primary-color-80: rgba(74, 144, 226, 0.8);
-  --primary-color-50: rgba(74, 144, 226, 0.5);
-  --primary-color-25: rgba(74, 144, 226, 0.25);
-  --primary-color-10: rgba(74, 144, 226, 0.1);
-  --primary-color-hover: rgba(74, 144, 226, 0.8);
-  --secondary-color: rgb(255, 255, 255);
-  --secondary-color-80: rgba(255, 255, 255, 0.8);
-  --secondary-color-50: rgba(255, 255, 255, 0.5);
-  --secondary-color-25: rgba(255, 255, 255, 0.25);
-  --secondary-color-10: rgba(255, 255, 255, 0.1);
-  --secondary-color-hover: rgba(255, 255, 255, 0.8);
-  --invalid: rgba(186, 70, 70, 0.8);
+  @include color-theme();
+  --background-color-rgb: 15, 20, 40;
+  --primary-color-rgb: 74, 144, 226;
 
   --cursor-url: url("../public/blue.svg"), auto;
   --cursor-arrow-back: url("../public/arrow-back-blue.svg"), auto;
   --cursor-arrow-forward: url("../public/arrow-forward-blue.svg"), auto;
-}
-
-.violett {
-  --background-color: rgb(10, 10, 15);
-  --background-color-80: rgba(10, 10, 15, 0.8);
-  --background-color-50: rgba(10, 10, 15, 0.5);
-  --background-color-25: rgba(10, 10, 15, 0.25);
-  --background-color-10: rgba(10, 10, 15, 0.1);
-  --hero-background: linear-gradient(
-    45deg,
-    rgb(10, 10, 15) 23%,
-    rgb(61, 42, 91) 100%
-  );
-  --modal-background: linear-gradient(
-    45deg,
-    rgb(10, 10, 15) 23%,
-    rgb(61, 42, 91) 100%
-  );
-  --menu-background: linear-gradient(
-    45deg,
-    rgb(10, 10, 15) 23%,
-    rgb(61, 42, 91) 100%
-  );
-  --skills-background: radial-gradient(
-    circle at 20% 50%,
-    rgba(61, 42, 91, 0.3) 0%,
-    #0a0a0f 20%
-  );
-
-  --primary-color: rgb(102, 71, 148);
-  --primary-color-80: rgba(102, 71, 148, 0.8);
-  --primary-color-50: rgba(102, 71, 148, 0.5);
-  --primary-color-25: rgba(102, 71, 148, 0.25);
-  --primary-color-10: rgba(102, 71, 148, 0.1);
-  --primary-color-hover: rgba(102, 71, 148, 0.8);
-  --secondary-color: rgb(255, 255, 255);
-  --secondary-color-80: rgba(255, 255, 255, 0.8);
-  --secondary-color-50: rgba(255, 255, 255, 0.5);
-  --secondary-color-25: rgba(255, 255, 255, 0.25);
-  --secondary-color-10: rgba(255, 255, 255, 0.1);
-  --secondary-color-hover: rgba(255, 255, 255, 0.8);
-  --invalid: rgba(196, 80, 80, 0.8);
-
-  --cursor-url: url("../public/violett.svg"), auto;
-  --cursor-arrow-back: url("../public/arrow-back-violett.svg"), auto;
-  --cursor-arrow-forward: url("../public/arrow-forward-violett.svg"), auto;
 }
 
 /* @media breakpoints */
