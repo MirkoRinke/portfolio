@@ -42,8 +42,8 @@
 
 .violett {
   @include color-theme();
-  --background-color-rgb: 10, 10, 15;
   --primary-color-rgb: 102, 71, 148;
+  --background-color-rgb: 10, 10, 25;
 
   --cursor-url: url("../public/violett.svg"), auto;
   --cursor-arrow-back: url("../public/arrow-back-violett.svg"), auto;
@@ -52,8 +52,8 @@
 
 .turquoise {
   @include color-theme();
-  --background-color-rgb: 28, 28, 28;
   --primary-color-rgb: 61, 207, 182;
+  --background-color-rgb: 28, 28, 28;
 
   --cursor-url: url("../public/turquoise.svg"), auto;
   --cursor-arrow-back: url("../public/arrow-back-turquoise.svg"), auto;
@@ -62,8 +62,8 @@
 
 .blue {
   @include color-theme();
-  --background-color-rgb: 15, 20, 40;
   --primary-color-rgb: 74, 144, 226;
+  --background-color-rgb: 15, 20, 40;
 
   --cursor-url: url("../public/blue.svg"), auto;
   --cursor-arrow-back: url("../public/arrow-back-blue.svg"), auto;
