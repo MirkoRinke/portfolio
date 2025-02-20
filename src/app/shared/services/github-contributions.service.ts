@@ -101,15 +101,6 @@ export class GithubContributionsService {
     }
   }
 
-  // usedColors: string[] = [];
-
-  // addUniqueColor(colorHex: string) {
-  //   if (!this.usedColors.includes(colorHex)) {
-  //     this.usedColors.push(colorHex);
-  //   }
-  //   console.log('Used Colors:', this.usedColors);
-  // }
-
   convertDate(date: string) {
     if (this.languageService.getLanguage() === 'de') {
       return new Date(date).toLocaleDateString('de-DE', {
