@@ -14,6 +14,11 @@ section {
     gap: px-to-rem(50);
   }
 
+  @media (max-height: $breakpoint-xs) and (orientation: landscape) {
+    flex-direction: row;
+    gap: 5%;
+  }
+
   app-portrait {
     width: 100%;
   }
@@ -23,6 +28,10 @@ section {
     gap: px-to-rem(50);
 
     width: 100%;
+
+    @media (max-height: $breakpoint-xs) and (orientation: landscape) {
+      width: 50%;
+    }
 
     app-info-box {
       @include display-flex(center, end);
