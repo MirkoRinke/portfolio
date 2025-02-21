@@ -54,4 +54,10 @@ export class UtilityService {
     if (link.length <= numChars) return link;
     return link.substring(0, link.length - numChars);
   }
+
+  vibrate() {
+    if (navigator.vibrate) {
+      navigator.vibrate(100);
+    }
+  }
 }

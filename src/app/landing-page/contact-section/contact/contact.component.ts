@@ -6,6 +6,7 @@ import { WindowService } from '../../../shared/services/window.service';
 import { LanguageService } from '../../../shared/services/language.service';
 import { ModalService } from '../../../shared/services/modal.service';
 import { WindowControlsComponent } from '../../../shared/window-controls/window-controls.component';
+import { UtilityService } from '../../../shared/services/utility.service';
 
 import { environments } from '../../../../environments/environments';
 
@@ -63,7 +64,8 @@ export class ContactComponent {
     public svgIconsService: SvgIconsService,
     public windowService: WindowService,
     public languageService: LanguageService,
-    public modalService: ModalService
+    public modalService: ModalService,
+    public utilityService: UtilityService
   ) {}
 
   onSubmit(ngForm: NgForm) {
@@ -80,6 +82,7 @@ export class ContactComponent {
             ngForm.resetForm();
             this.clearForm();
             this.showFeedbackMessage();
+            this.utilityService.vibrate();
           },
           error: (error) => {
             console.error(error);
