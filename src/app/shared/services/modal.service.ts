@@ -17,9 +17,7 @@ export class ModalService {
     this.index = index;
     this.activeModal = activeModal;
     this.ifModalOpen = true;
-    this.activeModal !== 'menu'
-      ? this.utilityService.disabledScroll()
-      : this.utilityService.addScrollListeners();
+    this.utilityService.disabledScroll();
   }
 
   closeModalWrapper(event: Event) {
@@ -28,9 +26,7 @@ export class ModalService {
 
   closeModal() {
     this.ifModalOpen = false;
-    this.activeModal !== 'menu'
-      ? this.utilityService.enableScroll()
-      : this.utilityService.removeScrollListeners();
+    this.utilityService.enableScroll();
     this.activeModal = '';
   }
 }
