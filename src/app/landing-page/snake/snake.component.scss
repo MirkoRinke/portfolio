@@ -13,6 +13,10 @@
 
     .title {
       @include title-default-style();
+
+      @media (max-height: $breakpoint-sm) and (orientation: landscape) {
+        visibility: hidden;
+      }
     }
   }
 

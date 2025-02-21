@@ -2,6 +2,20 @@
 @use "../../../../mixins" as *;
 @use "../../../../var" as *;
 
+.info {
+  display: none;
+
+  & p {
+    @include font-settings();
+    text-align: center;
+    margin-block: px-to-rem(20);
+  }
+
+  @media (max-height: $breakpoint-sm) and (orientation: landscape) {
+    display: block;
+  }
+}
+
 .game {
   display: flex;
   justify-content: center;
@@ -9,6 +23,10 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
+
+  @media (max-height: $breakpoint-sm) and (orientation: landscape) {
+    display: none;
+  }
 
   canvas {
     position: relative;
