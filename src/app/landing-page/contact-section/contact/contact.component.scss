@@ -22,6 +22,10 @@
       height: unset;
     }
 
+    @media (max-height: $breakpoint-xs) {
+      max-height: px-to-rem(600);
+    }
+
     .contact-form {
       @include display-flex(start, start, column);
       width: 100%;
