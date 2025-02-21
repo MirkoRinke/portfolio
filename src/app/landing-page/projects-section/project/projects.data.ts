@@ -144,16 +144,16 @@ export const projectsDE: Project[] = [
     ],
     technologies: [
       {
-        title: 'JavaScript',
-        icon: 'javaScript',
-      },
-      {
         title: 'HTML',
         icon: 'HTML',
       },
       {
-        title: 'CSS',
-        icon: 'CSS',
+        title: 'SCSS',
+        icon: 'SCSS',
+      },
+      {
+        title: 'JavaScript',
+        icon: 'javaScript',
       },
     ],
     imagePath: './projects/el-pollo-loco.webp',
@@ -206,16 +206,16 @@ export const projectsDE: Project[] = [
     ],
     technologies: [
       {
-        title: 'JavaScript',
-        icon: 'javaScript',
-      },
-      {
         title: 'HTML',
         icon: 'HTML',
       },
       {
-        title: 'CSS',
-        icon: 'CSS',
+        title: 'SCSS',
+        icon: 'SCSS',
+      },
+      {
+        title: 'JavaScript',
+        icon: 'javaScript',
       },
       {
         title: 'Rest-API',
@@ -413,16 +413,16 @@ export const projectsEN: Project[] = [
     ],
     technologies: [
       {
-        title: 'JavaScript',
-        icon: 'javaScript',
-      },
-      {
         title: 'HTML',
         icon: 'HTML',
       },
       {
-        title: 'CSS',
-        icon: 'CSS',
+        title: 'SCSS',
+        icon: 'SCSS',
+      },
+      {
+        title: 'JavaScript',
+        icon: 'javaScript',
       },
     ],
     imagePath: './projects/el-pollo-loco.webp',
@@ -475,16 +475,16 @@ export const projectsEN: Project[] = [
     ],
     technologies: [
       {
-        title: 'JavaScript',
-        icon: 'javaScript',
-      },
-      {
         title: 'HTML',
         icon: 'HTML',
       },
       {
-        title: 'CSS',
-        icon: 'CSS',
+        title: 'SCSS',
+        icon: 'SCSS',
+      },
+      {
+        title: 'JavaScript',
+        icon: 'javaScript',
       },
       {
         title: 'Rest API',
