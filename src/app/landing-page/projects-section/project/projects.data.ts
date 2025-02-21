@@ -281,6 +281,10 @@ export const projectsDE: Project[] = [
         icon: 'SCSS',
       },
       {
+        title: 'Typescript',
+        icon: 'typeScript',
+      },
+      {
         title: 'Angular',
         icon: 'angular',
       },
