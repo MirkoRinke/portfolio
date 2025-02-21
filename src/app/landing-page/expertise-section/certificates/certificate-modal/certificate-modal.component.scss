@@ -4,11 +4,12 @@
 
 .certificate {
   @include window-default-style();
-  max-width: fit-content;
+  max-width: 95dvh;
   margin-inline: auto;
 
   .title-bar {
     @include title-bar-default-style;
+    max-width: 100%;
 
     .title {
       @include title-default-style();
@@ -19,11 +20,13 @@
     @include display-flex();
     max-width: px-to-rem(900);
     height: 100%;
+
     position: relative;
+
     img {
       width: 100%;
       height: auto;
-      max-height: 80dvh;
+      max-height: 95dvh;
       margin-inline: auto;
     }
 
