@@ -4,7 +4,7 @@
 
 section {
   background-image: var(--hero-background);
-  height: 100vh;
+  min-height: 100vh;
 
   @media (min-height: $breakpoint-xl) and (orientation: landscape) {
     height: px-to-rem(1200);
@@ -16,6 +16,8 @@ section {
     gap: 4%;
     min-height: 100%;
     padding-block: px-to-rem(100);
+
+    position: relative;
 
     &::ng-deep .hero-icons {
       height: clamp(px-to-rem(25), 6vw, px-to-rem(100));
