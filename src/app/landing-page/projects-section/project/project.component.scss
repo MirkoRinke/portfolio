@@ -25,6 +25,10 @@
       gap: px-to-rem(20);
     }
 
+    @media (max-height: $breakpoint-xs) and (orientation: landscape) {
+      flex-direction: row;
+    }
+
     .left {
       @include display-flex(flex-start, space-between, column);
       gap: px-to-rem(30);
@@ -40,6 +44,10 @@
       @media (max-width: $breakpoint-md) {
         order: 2;
         max-width: 100%;
+      }
+
+      @media (max-height: $breakpoint-xs) and (orientation: landscape) {
+        order: 1;
       }
 
       .description {
@@ -126,6 +134,11 @@
       @media (max-width: $breakpoint-md) {
         order: 1;
         max-width: 100%;
+      }
+
+      @media (max-height: $breakpoint-xs) and (orientation: landscape) {
+        order: 2;
+        max-width: 50%;
       }
 
       .image-wrapper {
