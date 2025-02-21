@@ -19,7 +19,7 @@
 
   .content {
     @include window-content;
-    @include display-flex(center, center, column);
+    @include display-flex(center, start, column);
     gap: px-to-rem(30);
 
     app-site-navigation {
