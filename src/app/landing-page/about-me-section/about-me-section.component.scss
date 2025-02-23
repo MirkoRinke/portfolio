@@ -10,6 +10,11 @@ section {
   padding-bottom: px-to-rem(50);
 
   @media (max-width: $breakpoint-md) {
+    flex-direction: row;
+    gap: 5%;
+  }
+
+  @media (max-width: $breakpoint-sm) {
     flex-direction: column;
     gap: px-to-rem(50);
   }
@@ -20,7 +25,11 @@ section {
   }
 
   app-portrait {
-    width: 100%;
+    width: 60%;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
   }
 
   .info {
@@ -28,6 +37,14 @@ section {
     gap: px-to-rem(50);
 
     width: 100%;
+
+    @media (max-width: $breakpoint-md) {
+      width: 45%;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
 
     @media (max-height: $breakpoint-xs) and (orientation: landscape) {
       width: 50%;
