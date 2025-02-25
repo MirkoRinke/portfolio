@@ -362,6 +362,10 @@ export const projectsEN: Project[] = [
         title: 'Firebase',
         icon: 'firebase',
       },
+      {
+        title: 'Teamwork',
+        icon: 'teamwork',
+      },
     ],
     imagePath: './projects/join.webp',
     links: {
