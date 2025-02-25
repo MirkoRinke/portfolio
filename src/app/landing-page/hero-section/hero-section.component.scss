@@ -4,17 +4,13 @@
 
 section {
   background-image: var(--hero-background);
-  min-height: 100vh;
-
-  @media (min-height: $breakpoint-xl) and (orientation: landscape) {
-    height: px-to-rem(1200);
-  }
+  min-height: 100dvh;
 
   .content {
     @include max-content-settings;
     @include display-flex(center, center);
     gap: 4%;
-    min-height: 100%;
+    min-height: 100dvh;
     padding-block: px-to-rem(100);
 
     position: relative;
