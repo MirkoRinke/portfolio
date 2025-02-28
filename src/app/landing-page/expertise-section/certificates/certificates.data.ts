@@ -41,6 +41,17 @@ export const CERTIFICATES: Certificate[] = [
     visibility: false,
   },
   {
+    titleDE: 'API Entwicklung mit PHP Laravel - Best Practice RESTFul APIs',
+    titleEN: 'API development with PHP Laravel - Best Practice RESTFul APIs',
+    icon: 'API',
+    platform: 'Udemy',
+    tutor: 'Andreas Pabst',
+    date: '02.2025',
+    image:
+      './certificates/udemy/api_entwicklung_mit_php_laravel_best_practice_restful_apis.webp',
+    visibility: true,
+  },
+  {
     titleDE: 'Laravel Kurs für Einsteiger',
     titleEN: 'Laravel course for beginners',
     icon: 'laravel',
