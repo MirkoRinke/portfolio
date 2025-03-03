@@ -170,6 +170,13 @@ export const LEARNING_SKILLS_BE: Skill[] = [
     visibility: true,
   },
   {
+    name: 'MySQL',
+    icon: 'mysql',
+    alt: 'MySQL Logo',
+    status: 'learning',
+    visibility: true,
+  },
+  {
     name: 'Python',
     icon: 'python',
     alt: 'Python Logo',
