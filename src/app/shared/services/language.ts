@@ -362,17 +362,17 @@ export const textsDE: Texts = {
       {
         title: 'Völlig im Code Versunken',
         description:
-          'Stundenlang tief im Code zu sein ist für mich pure Freude. Probleme lösen und kreative Wege finden treiben mich an.',
-      },
-      {
-        title: 'Herausforderungen bewältigen',
-        description:
-          'Jede Herausforderung ist eine Chance, kreativ zu denken und innovative Lösungen zu entdecken.',
+          'Es gibt kaum etwas Besseres, als völlig in Code zu versinken. Stunden vergehen, ohne dass ich es merke, wenn ich an einer kniffligen Aufgabe arbeite.',
       },
       {
         title: 'Kontinuierliches Lernen',
         description:
-          'Jeden Tag setze ich mir das Ziel, Neues zu lernen, meine Grenzen zu erweitern und mich durch neue Herausforderungen weiterzuentwickeln.',
+          'In der Programmierung gibt es keinen Stillstand, und genau das gefällt mir. Jeden Tag gibt es etwas Neues zu entdecken, sei es eine andere Herangehensweise, ein neues Framework oder einfach ein smarterer Weg, etwas zu lösen.',
+      },
+      {
+        title: 'Von der Idee zur Umsetzung',
+        description:
+          'Mir macht es Spaß, aus einer vagen Idee ein funktionierendes Produkt zu entwickeln. Schritt für Schritt arbeite ich an jedem Detail, um die Idee in etwas Greifbares zu verwandeln, das schließlich einen echten Mehrwert bietet.',
       },
     ],
   },
@@ -606,22 +606,22 @@ export const textsEN: Texts = {
       {
         title: 'Innovative Solutions',
         description:
-          'Programming is like gaming to me. Every line of code brings me a level up and new tasks are waiting to be mastered.',
+          'Programming is like gaming for me. Every line of code brings me to a new level, and new challenges are waiting to be mastered.',
       },
       {
-        title: 'Deep Focus on Code',
+        title: 'Completely Immersed in Code',
         description:
-          'Being deep in the code for hours is pure joy for me. Solving problems and finding creative ways drives me.',
-      },
-      {
-        title: 'Overcoming Challenges',
-        description:
-          'Every challenge is an opportunity to think creatively and discover innovative solutions.',
+          'There is hardly anything better than getting completely lost in code. Hours pass without me noticing when I am working on a tricky task.',
       },
       {
         title: 'Continuous Learning',
         description:
-          'Every day I set myself the goal of learning something new, expanding my limits and developing myself through new challenges.',
+          'In programming, there is no standstill, and that is exactly what I enjoy. Every day offers something new to discover whether it is a different approach, a new framework, or simply a smarter way to solve something.',
+      },
+      {
+        title: 'From Idea to Implementation',
+        description:
+          'I enjoy turning a vague idea into a working product. Step by step, I work on every detail to transform the idea into something tangible that ultimately provides real value.',
       },
     ],
   },
