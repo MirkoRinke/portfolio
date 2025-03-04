@@ -11,16 +11,6 @@ export interface Certificate {
 
 export const CERTIFICATES: Certificate[] = [
   {
-    titleDE: 'Developer Akademie',
-    titleEN: 'Developer Akademie',
-    icon: 'developerAkademie',
-    platform: 'Developer Akademie',
-    tutor: 'Developer Akademie',
-    date: '12.2024',
-    image: './certificates/developer_akademie.webp',
-    visibility: true,
-  },
-  {
     titleDE: 'Angular – The Complete Guide',
     titleEN: 'Angular – The Complete Guide',
     icon: 'angular',
@@ -112,6 +102,16 @@ export const CERTIFICATES: Certificate[] = [
     date: '12.2024',
     image:
       './certificates/linkedin/abschlusszertifikat_affinity_designer_grundkurs.webp',
+    visibility: true,
+  },
+  {
+    titleDE: 'Developer Akademie - Praxisorientierter Frontend Kurs',
+    titleEN: 'Developer Akademie - Practice-oriented frontend course',
+    icon: 'developerAkademie',
+    platform: 'Developer Akademie',
+    tutor: 'Developer Akademie',
+    date: '12.2024',
+    image: './certificates/developer_akademie.webp',
     visibility: true,
   },
   {
