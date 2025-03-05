@@ -22,6 +22,7 @@ import { PrivacyPolicyContentComponent } from './privacy-policy-content/privacy-
   ],
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.scss',
+  providers: [WindowService],
 })
 export class PrivacyPolicyComponent {
   @Input() modalActive!: boolean;
