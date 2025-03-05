@@ -23,7 +23,7 @@ import { CheckVisibilityService } from '../../../shared/services/check-visibilit
   imports: [CommonModule, WindowControlsComponent],
   templateUrl: './daily-schedule.component.html',
   styleUrl: './daily-schedule.component.scss',
-  providers: [CheckVisibilityService],
+  providers: [CheckVisibilityService, WindowService],
 })
 export class DailyScheduleComponent implements OnInit, AfterViewInit {
   @Input() modalActive!: boolean;
