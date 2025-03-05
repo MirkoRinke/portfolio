@@ -18,6 +18,7 @@ import { ImprintContentComponent } from './imprint-content/imprint-content.compo
   imports: [CommonModule, WindowControlsComponent, ImprintContentComponent],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss',
+  providers: [WindowService],
 })
 export class ImprintComponent {
   @Input() modalActive!: boolean;
