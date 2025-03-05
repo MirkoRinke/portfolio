@@ -27,6 +27,7 @@ export interface ContactData {
   imports: [CommonModule, WindowControlsComponent, FormsModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
+  providers: [WindowService],
 })
 export class ContactComponent {
   @Input() modalActive!: boolean;
