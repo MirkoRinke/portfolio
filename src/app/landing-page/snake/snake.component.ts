@@ -18,6 +18,7 @@ import { SnakeCanvasComponent } from './snake-canvas/snake-canvas.component';
   imports: [CommonModule, WindowControlsComponent, SnakeCanvasComponent],
   templateUrl: './snake.component.html',
   styleUrl: './snake.component.scss',
+  providers: [WindowService],
 })
 export class SnakeComponent {
   @Input() modalActive!: boolean;
