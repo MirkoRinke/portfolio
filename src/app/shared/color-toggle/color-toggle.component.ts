@@ -14,7 +14,7 @@ export class ColorToggleComponent {
 
   availableColors: string[] = ['blue', 'turquoise', 'violett'];
 
-  defaultColor: string = 'violett';
+  defaultColor: string = 'blue';
 
   @Input() modalActive: boolean = false;
 
