@@ -11,6 +11,7 @@ import {
   LEARNING_SKILLS_FE,
   LEARNING_SKILLS_BE,
   LEARNING_SKILLS_UI_UX,
+  LEARNING_TOOL_SKILLS,
 } from './skills.data';
 
 @Component({
@@ -29,11 +30,13 @@ export class SkillsComponent {
   learningSkillsFE: Skill[] = LEARNING_SKILLS_FE;
   learningSkillsBE: Skill[] = LEARNING_SKILLS_BE;
   learningSkillsUI_UX: Skill[] = LEARNING_SKILLS_UI_UX;
+  learningToolSkills: Skill[] = LEARNING_TOOL_SKILLS;
 
   constructor(public svgIconsService: SvgIconsService) {
     this.learningSkills = this.learningSkillsFE.concat(
       this.learningSkillsBE,
-      this.learningSkillsUI_UX
+      this.learningSkillsUI_UX,
+      this.learningToolSkills
     );
   }
 }
