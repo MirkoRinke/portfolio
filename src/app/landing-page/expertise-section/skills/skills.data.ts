@@ -299,3 +299,13 @@ export const LEARNING_SKILLS_UI_UX: Skill[] = [
     visibility: false,
   },
 ];
+
+export const LEARNING_TOOL_SKILLS: Skill[] = [
+  {
+    name: 'Postman',
+    icon: 'postman',
+    alt: 'Postman Logo',
+    status: 'learning',
+    visibility: true,
+  },
+];
