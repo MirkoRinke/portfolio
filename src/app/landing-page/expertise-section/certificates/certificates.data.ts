@@ -11,6 +11,16 @@ export interface Certificate {
 
 export const CERTIFICATES: Certificate[] = [
   {
+    titleDE: 'Postman von Grund auf – REST API testen',
+    titleEN: 'Postman from scratch - Test REST API',
+    icon: 'postman',
+    platform: 'Udemy',
+    tutor: 'Rafał Podraza',
+    date: '03.2025',
+    image: './certificates/udemy/postman_von_grund_auf_rest_api_testen.webp',
+    visibility: true,
+  },
+  {
     titleDE: 'API Entwicklung mit PHP Laravel - Best Practice RESTFul APIs',
     titleEN: 'API development with PHP Laravel - Best Practice RESTFul APIs',
     icon: 'API',
