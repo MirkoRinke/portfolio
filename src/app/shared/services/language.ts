@@ -362,7 +362,7 @@ export const textsDE: Texts = {
       {
         title: 'Völlig im Code Versunken',
         description:
-          'Es gibt kaum etwas Besseres, als völlig in Code zu versinken. Stunden vergehen, ohne dass ich es merke, wenn ich an einer kniffligen Aufgabe arbeite.',
+          'Es gibt kaum etwas Besseres, als komplett in die Programmierung einzutauchen. Stunden vergehen, ohne dass ich es merke, wenn ich an einer kniffligen Aufgabe arbeite.',
       },
       {
         title: 'Kontinuierliches Lernen',
@@ -372,7 +372,7 @@ export const textsDE: Texts = {
       {
         title: 'Von der Idee zur Umsetzung',
         description:
-          'Mir macht es Spaß, aus einer vagen Idee ein funktionierendes Produkt zu entwickeln. Schritt für Schritt arbeite ich an jedem Detail, um die Idee in etwas Greifbares zu verwandeln, das schließlich einen echten Mehrwert bietet.',
+          'Mir macht es Spaß, aus einer vagen Idee ein funktionierendes Produkt zu entwickeln. Schritt für Schritt arbeite ich an jedem Detail, um die Idee in etwas Greifbares zu verwandeln.',
       },
     ],
   },
@@ -611,7 +611,7 @@ export const textsEN: Texts = {
       {
         title: 'Completely Immersed in Code',
         description:
-          'There is hardly anything better than getting completely lost in code. Hours pass without me noticing when I am working on a tricky task.',
+          'There is hardly anything better than completely immersing yourself in programming. Hours pass without me noticing when I am working on a tricky task.',
       },
       {
         title: 'Continuous Learning',
@@ -621,7 +621,7 @@ export const textsEN: Texts = {
       {
         title: 'From Idea to Implementation',
         description:
-          'I enjoy turning a vague idea into a working product. Step by step, I work on every detail to transform the idea into something tangible that ultimately provides real value.',
+          'I enjoy turning a vague idea into a working product. Step by step, I work on every detail to transform the idea into something tangible.',
       },
     ],
   },
