@@ -47,9 +47,9 @@ export const projectsDE: Project[] = [
     icon: 'join',
     visibility: true,
     about:
-      'Verwalten Sie Ihre Projekte mühelos mit einem benutzerfreundlichen Task-Manager, der vom Kanban-System inspiriert ist.',
+      'Ein praktischer Task-Manager nach dem Kanban-Prinzip für die Organisation von Projekten.',
     description:
-      'Das Tool bietet eine intuitive Benutzeroberfläche, mit der Sie Aufgaben erstellen, organisieren und zwischen Spalten mit einfacher Drag-and-Drop-Funktionalität verschieben können.',
+      'Das Tool bietet eine einfach zu bedienende Oberfläche, mit der Sie Aufgaben erstellen, organisieren und zwischen Spalten mit einfacher Drag-and-Drop-Funktionalität verschieben können.',
     keyFeatures: [
       {
         title: 'Klare Struktur',
@@ -67,9 +67,9 @@ export const projectsDE: Project[] = [
           'Verschieben Sie Aufgaben nahtlos zwischen Spalten wie "To-Do", "In Progress" und "Done" mit nur einem Klick.',
       },
       {
-        title: 'Optimierte Workflows',
+        title: 'Übersichtliche Workflows',
         description:
-          'Verfolgen Sie den Fortschritt in Echtzeit, bleiben Sie auf dem Laufenden über Fristen und steigern Sie die Produktivität des Teams.',
+          'Behalten Sie den Überblick über Fortschritte und Fristen und verbessern Sie die Zusammenarbeit im Team.',
       },
     ],
     technologies: [
@@ -179,9 +179,9 @@ export const projectsDE: Project[] = [
     title: 'Pokédex',
     icon: 'pokedex',
     visibility: true,
-    about: 'Entdecken Sie die Welt der Pokémon mit einem interaktiven Pokédex!',
+    about: 'Dein digitales Nachschlagewerk für alle Pokémon.',
     description:
-      'Erkunde ein faszinierendes Universum voller einzigartiger Kreaturen mit dieser Pokédex-Anwendung! Sie ermöglicht dir, die vielfältige Welt der Pokémon zu entdecken. Dank aktueller Daten aus einer externen API kannst du schnell nach deinen Lieblings-Pokémon suchen und umfassende Informationen wie Statistiken, Fähigkeiten und Typen abrufen.',
+      'Mit Daten aus einer externen API kannst du nach Pokémon suchen und Informationen wie Statistiken, Fähigkeiten und Typen abrufen. Eine virtuelle Version des aus der Serie bekannten Pokédex.',
     keyFeatures: [
       {
         title: 'Suchfunktion',
@@ -245,9 +245,9 @@ export const projectsDE: Project[] = [
     title: 'In Development',
     icon: 'inDevelopment',
     visibility: true,
-    about: 'Meine digitale Visitenkarte als interaktive Desktop-Erfahrung.',
+    about: 'Mein Portfolio als interaktive Desktop-Umgebung.',
     description:
-      'Mein persönliches Portfolio, entwickelt mit Angular und TypeScript. Es präsentiert meine Projekte in einem einzigartigen, betriebssystem ähnlichen Interface mit interaktiven Fenstern und ermöglicht den Zugriff auf meine Fähigkeiten und Zertifikate in einer übersichtlichen Darstellung.',
+      'Das Design orientiert sich an einem Betriebssystem und ermöglicht eine intuitive Erkundung meiner Projekte, Fähigkeiten und Zertifikate.',
     keyFeatures: [
       {
         title: 'Design ähnlich einem OS',
@@ -319,7 +319,7 @@ export const projectsEN: Project[] = [
     icon: 'join',
     visibility: true,
     about:
-      'Effortlessly manage your projects with a user-friendly task manager inspired by the Kanban system.',
+      'A practical task manager based on the Kanban principle for organizing projects.',
     description:
       'The tool offers an intuitive interface, allowing you to create, organize, and move tasks between columns with simple drag-and-drop functionality.',
     keyFeatures: [
@@ -339,9 +339,9 @@ export const projectsEN: Project[] = [
           'Seamlessly move tasks between columns like "To-Do," "In Progress," and "Done" with just one click.',
       },
       {
-        title: 'Optimized Workflows',
+        title: 'Clear Workflows',
         description:
-          'Track progress in real-time, stay updated on deadlines, and boost team productivity.',
+          'Keep track of progress and deadlines and improve collaboration within the team.',
       },
     ],
     technologies: [
@@ -451,9 +451,9 @@ export const projectsEN: Project[] = [
     title: 'Pokédex',
     icon: 'pokedex',
     visibility: true,
-    about: 'Discover the world of Pokémon with an interactive Pokédex!',
+    about: 'Your digital reference for all Pokémon.',
     description:
-      'Explore a fascinating universe filled with unique creatures with this Pokédex application! It allows you to discover the diverse world of Pokémon. Thanks to current data from an external API, you can quickly search for your favorite Pokémon and retrieve comprehensive information such as statistics, abilities, and types.',
+      'With data from an external API, you can search for Pokémon and retrieve information such as statistics, abilities, and types. A virtual version of the Pokédex known from the series.',
     keyFeatures: [
       {
         title: 'Search Function',
@@ -473,7 +473,7 @@ export const projectsEN: Project[] = [
       {
         title: 'Keyboard Navigation',
         description:
-          'Navigate the entire website with the keyboard, increasing accessibility and making the application more accessible to all users.',
+          'Navigate the entire website using only your keyboard, making the application usable for people with different needs.',
       },
     ],
     technologies: [
@@ -517,9 +517,9 @@ export const projectsEN: Project[] = [
     title: 'In Development',
     icon: 'inDevelopment',
     visibility: true,
-    about: 'My digital business card as an interactive desktop experience.',
+    about: 'My portfolio presented as an interactive desktop environment.',
     description:
-      'My personal portfolio, developed with Angular and TypeScript. It showcases my projects in a unique, operating system-like interface with interactive windows and provides access to my skills and certificates in a clear representation.',
+      'The design is inspired by an operating system and allows for intuitive exploration of my projects, skills, and certificates.',
     keyFeatures: [
       {
         title: 'OS-like Design',
