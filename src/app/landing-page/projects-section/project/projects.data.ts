@@ -5,7 +5,7 @@ export interface Project {
   visibility: boolean;
   about: string;
   description: string;
-  keyFeatures: keyFeatures[];
+  keyFeatures: KeyFeatures[];
   technologies: Technology[];
   imagePath: string;
   links: Links;
@@ -19,7 +19,7 @@ export interface Project {
   };
 }
 
-export interface keyFeatures {
+export interface KeyFeatures {
   title: string;
   description: string;
 }
@@ -119,27 +119,27 @@ export const projectsDE: Project[] = [
     visibility: true,
     about: 'Pepes Abenteuer gegen das verrückte Huhn.',
     description:
-      'Tauchen Sie ein in die aufregende Welt von El Pollo Loco, einem fesselnden Jump&Run-Abenteuer mit einer Prise mexikanischen Flairs. In diesem objektorientierten Spiel schlüpfen Sie in die Rolle von Pepe, einem mutigen Helden mit einer besonderen Mission.',
+      'El Pollo Loco ist ein einfaches Jump&Run-Spiel mit mexikanischem Thema. Das Projekt diente als Übung für objektorientierte Programmierung in JavaScript und enthält grundlegende Spielelemente wie Bewegung, Kollisionserkennung und einfache Gegner.',
     keyFeatures: [
       {
         title: 'Gameplay',
         description:
-          'Erlebe ein spannendes Spielerlebnis mit Spring-, Lauf- und Wurfmechaniken. Das Spiel bietet die Elemente eines Sidescrollers, bei dem Geschick und Timing gefragt sind.',
+          'Das Spiel bietet grundlegende Spring-, Lauf- und Wurfmechaniken in einem klassischen Sidescroller-Format.',
       },
       {
         title: 'Feinde',
         description:
-          'Begegne Feinden mit einzigartigen Verhaltensweisen und Angriffsmustern, die deine Strategie fordern und anpassen lassen.',
+          'Einfache Gegnertypen mit grundlegenden Bewegungen, die dem Spieler Schaden zufügen können.',
       },
       {
-        title: 'Münzsammlung',
+        title: 'Ressourcenmanagement',
         description:
-          'Sammle Münzen in den Levels, um sie gegen zusätzliche Tabasco-Salsa an Verkaufsautomaten einzutauschen.',
+          'Sammle Münzen in der Spielwelt, um sie gegen Tabasco-Salsa einzutauschen.',
       },
       {
-        title: 'Verkaufsautomat',
+        title: 'Kampfsystem',
         description:
-          'Nutze gesammelte Münzen an Verkaufsautomaten, um wichtige Gegenstände wie Tabasco-Salsa zu erwerben.',
+          'Bekämpfe Feinde mit Tabasco-Salsa als Wurfwaffe, wobei gutes Timing hilfreich ist.',
       },
     ],
     technologies: [
@@ -196,12 +196,12 @@ export const projectsDE: Project[] = [
       {
         title: 'Namenszuweisung',
         description:
-          'Geben Sie Ihren Namen ein und erhalten Sie ein einzigartiges Pokémon aus einer Liste von 1.025 Pokémon zugewiesen.',
+          'Ein spielerisches Feature, das basierend auf Ihrem Namen ein passendes Pokémon ermittelt und Ihnen als persönlichen Begleiter zuweist.',
       },
       {
         title: 'Tastaturnavigation',
         description:
-          'Navigieren Sie die gesamte Website mit der Tastatur für eine verbesserte Benutzererfahrung.',
+          'Navigieren Sie die gesamte Website mit der Tastatur, was die Barrierefreiheit erhöht und die Anwendung für alle Nutzer zugänglicher macht.',
       },
     ],
     technologies: [
@@ -245,30 +245,29 @@ export const projectsDE: Project[] = [
     title: 'In Development',
     icon: 'inDevelopment',
     visibility: true,
-    about:
-      'Ein strukturiertes und kontinuierlich wachsendes Repository meiner Projekte.',
+    about: 'Meine digitale Visitenkarte als interaktive Desktop-Erfahrung.',
     description:
-      'Dieses Portfolio zeigt meine laufenden Arbeiten und Projekte. Es umfasst einen Überblick über meine Fähigkeiten und Zertifikate, die meine kontinuierliche Weiterentwicklung im Bereich der Webentwicklung dokumentieren.',
+      'Mein persönliches Portfolio, entwickelt mit Angular und TypeScript. Es präsentiert meine Projekte in einem einzigartigen, betriebssystem ähnlichen Interface mit interaktiven Fenstern und ermöglicht den Zugriff auf meine Fähigkeiten und Zertifikate in einer übersichtlichen Darstellung.',
     keyFeatures: [
       {
         title: 'Design ähnlich einem OS',
         description:
-          'Fenster-ähnliches Design für verschiedene Sektionen und Elemente.',
+          'Desktop-inspiriertes Interface mit Fenstern, Icons und Navigationsleiste, das ein Betriebssystem simuliert.',
       },
       {
         title: 'Meine Skills und Zertifikate',
         description:
-          'Übersichtliche Darstellung meiner Skills und Zertifikate.',
+          'Darstellung meiner technischen Fähigkeiten sowie Zugriff auf eine separate Ansicht mit meinen erworbenen Zertifikaten.',
       },
       {
         title: 'Darstellung meiner Projekte',
         description:
-          'Browser-ähnliches Fenster mit Taps für meine Projekte. Sowie einer Tap für Projekte in Entwicklung.',
+          'Browser-ähnliches Fenster mit interaktiven Tabs für jeden Projektbereich und detaillierten Beschreibungen.',
       },
       {
         title: 'Interaktive Benutzeroberfläche',
         description:
-          'Interaktive Benutzeroberfläche Fenster können minimiert, maximiert und geschlossen werden.',
+          'Dynamisches Interface mit Fenstern, die minimiert, maximiert und geschlossen werden können, für eine intuitive Navigation.',
       },
     ],
     technologies: [
@@ -281,7 +280,7 @@ export const projectsDE: Project[] = [
         icon: 'SCSS',
       },
       {
-        title: 'Typescript',
+        title: 'TypeScript',
         icon: 'typeScript',
       },
       {
@@ -382,7 +381,7 @@ export const projectsEN: Project[] = [
       github: 'Open Join GitHub Repository',
       live: 'Open Join Live Version',
       organization: '',
-      keyFeature: 'Kernfunktion',
+      keyFeature: 'Key Feature',
     },
   },
   {
@@ -392,27 +391,27 @@ export const projectsEN: Project[] = [
     visibility: true,
     about: "Pepe's adventure against the crazy hen.",
     description:
-      'Immerse yourself in the exciting world of El Pollo Loco, a captivating jump&run adventure with a touch of Mexican flair. In this object-oriented game, you take on the role of Pepe, a brave hero with a special mission.',
+      'El Pollo Loco is a simple Mexican-themed jump-and-run game. The project served as an exercise for object-oriented programming in JavaScript and includes basic game elements like movement, collision detection, and simple enemies.',
     keyFeatures: [
       {
         title: 'Gameplay',
         description:
-          'Experience an exciting gaming adventure with jump, run, and throw mechanics. The game features sidescroller elements where skill and timing are essential.',
+          'The game offers basic jump, run, and throw mechanics in a classic sidescroller format.',
       },
       {
         title: 'Enemies',
         description:
-          'Encounter enemies with unique behaviors and attack patterns that challenge and adapt your strategy.',
+          'Simple enemy types with basic movements that can damage the player.',
       },
       {
-        title: 'Coin Collection',
+        title: 'Resource Management',
         description:
-          'Collect coins hidden throughout levels to exchange them for additional Tabasco sauce at vending machines.',
+          'Collect coins in the game world to exchange them for Tabasco salsa.',
       },
       {
-        title: 'Vending Machine',
+        title: 'Combat System',
         description:
-          'Use collected coins at vending machines to acquire essential items like Tabasco sauce to strengthen your character.',
+          'Fight enemies with Tabasco salsa as a throwing weapon, with good timing being helpful.',
       },
     ],
     technologies: [
@@ -469,12 +468,12 @@ export const projectsEN: Project[] = [
       {
         title: 'Name Assignment',
         description:
-          'Enter your name to receive a unique Pokémon assigned to you from a list of 1,025 Pokémon.',
+          'A playful feature that determines a suitable Pokémon based on your name and assigns it to you as a personal companion.',
       },
       {
         title: 'Keyboard Navigation',
         description:
-          'Navigate the entire website using the keyboard for an enhanced user experience.',
+          'Navigate the entire website with the keyboard, increasing accessibility and making the application more accessible to all users.',
       },
     ],
     technologies: [
@@ -491,7 +490,7 @@ export const projectsEN: Project[] = [
         icon: 'javaScript',
       },
       {
-        title: 'Rest API',
+        title: 'Rest-API',
         icon: 'API',
       },
     ],
@@ -518,27 +517,29 @@ export const projectsEN: Project[] = [
     title: 'In Development',
     icon: 'inDevelopment',
     visibility: true,
-    about: 'A structured and continuously growing repository of my projects.',
+    about: 'My digital business card as an interactive desktop experience.',
     description:
-      'This portfolio showcases my ongoing work and projects. It provides an overview of my skills and certifications, which document my continuous development in the field of web development.',
+      'My personal portfolio, developed with Angular and TypeScript. It showcases my projects in a unique, operating system-like interface with interactive windows and provides access to my skills and certificates in a clear representation.',
     keyFeatures: [
       {
-        title: 'OS-Like Design',
-        description: 'Window-like design for various sections and elements.',
-      },
-      {
-        title: 'My Skills and Certifications',
-        description: 'Clear representation of my skills and certifications.',
-      },
-      {
-        title: 'Project Showcase',
+        title: 'OS-like Design',
         description:
-          'Browser-like window with tabs for my projects, including a tab for projects in development.',
+          'Desktop-inspired interface with windows, icons, and a navigation bar simulating an operating system.',
+      },
+      {
+        title: 'My Skills and Certificates',
+        description:
+          'Representation of my technical skills as well as access to a separate view with my acquired certificates.',
+      },
+      {
+        title: 'Presentation of My Projects',
+        description:
+          'Browser-like window with interactive tabs for each project area and detailed descriptions.',
       },
       {
         title: 'Interactive User Interface',
         description:
-          'Interactive user interface where windows can be minimized, maximized, and closed.',
+          'Dynamic interface with windows that can be minimized, maximized, and closed for intuitive navigation.',
       },
     ],
     technologies: [
@@ -549,6 +550,10 @@ export const projectsEN: Project[] = [
       {
         title: 'SCSS',
         icon: 'SCSS',
+      },
+      {
+        title: 'TypeScript',
+        icon: 'typeScript',
       },
       {
         title: 'Angular',
@@ -565,15 +570,15 @@ export const projectsEN: Project[] = [
       live: 'https://mirkorinke.dev',
     },
     organization: {
-      name: 'CodeNex',
-      link: 'https://github.com/CodeNex',
-      icon: 'codeNex',
+      name: '',
+      link: '',
+      icon: '',
     },
     ariaLabels: {
       tap: 'Open In Development Tab',
       github: 'Open In Development GitHub Repository',
       live: 'Open In Development Live Version',
-      organization: 'Open CodeNex GitHub Repository',
+      organization: '',
       keyFeature: 'Key Feature',
     },
   },
