@@ -307,7 +307,7 @@ export const textsDE: Texts = {
     },
   },
   hero: {
-    subHeading: 'Flexibel, kreativ, lösungsorientiert',
+    subHeading: 'Code schreiben, Probleme lösen, Kaffee trinken',
     mainHeading: 'Mirko Rinke',
     contactMe: 'Kontaktiere mich',
     ariaLabels: {
@@ -323,7 +323,7 @@ export const textsDE: Texts = {
     },
     infoBox: {
       infoBox0: {
-        title: 'visionen_verwirklichen.txt',
+        title: 'projekte_umsetzen.txt',
         textarea:
           'Durch den Einsatz modernster Technologien bringe ich Ideen digital zum Leben und entwickle benutzerfreundliche sowie ästhetisch ansprechende Weblösungen, die Komplexes einfach wirken lassen.',
       },
@@ -355,9 +355,9 @@ export const textsDE: Texts = {
     githubGraphTitle: '365 Tage Codeflow',
     details: [
       {
-        title: 'Innovative Lösungen',
+        title: 'Von der Idee zur Umsetzung',
         description:
-          'Programmieren ist wie Gaming für mich. Jede Zeile Code bringt mich ein Level weiter und neue Aufgaben warten darauf, gemeistert zu werden.',
+          'Mir macht es Spaß, aus einer vagen Idee ein funktionierendes Produkt zu entwickeln. Schritt für Schritt arbeite ich an jedem Detail, um die Idee in etwas Greifbares zu verwandeln.',
       },
       {
         title: 'Völlig im Code Versunken',
@@ -365,14 +365,14 @@ export const textsDE: Texts = {
           'Es gibt kaum etwas Besseres, als komplett in die Programmierung einzutauchen. Stunden vergehen, ohne dass ich es merke, wenn ich an einer kniffligen Aufgabe arbeite.',
       },
       {
+        title: 'Level für Level vorankommen',
+        description:
+          'Programmieren ist wie Gaming für mich. Jede Zeile Code bringt mich ein Level weiter und neue Aufgaben warten darauf, gemeistert zu werden.',
+      },
+      {
         title: 'Kontinuierliches Lernen',
         description:
           'In der Programmierung gibt es keinen Stillstand, und genau das gefällt mir. Jeden Tag gibt es etwas Neues zu entdecken, sei es eine andere Herangehensweise, ein neues Framework oder einfach ein smarterer Weg, etwas zu lösen.',
-      },
-      {
-        title: 'Von der Idee zur Umsetzung',
-        description:
-          'Mir macht es Spaß, aus einer vagen Idee ein funktionierendes Produkt zu entwickeln. Schritt für Schritt arbeite ich an jedem Detail, um die Idee in etwas Greifbares zu verwandeln.',
       },
     ],
   },
@@ -525,7 +525,7 @@ export const textsEN: Texts = {
     links: {
       home: 'Home',
       aboutMe: 'About me',
-      dailySchedule: 'Daily Schedule',
+      dailySchedule: 'My Coding Day',
       expertise: 'Expertise',
       projects: 'Projects',
       contact: 'Contact',
@@ -535,7 +535,7 @@ export const textsEN: Texts = {
       links: {
         home: 'Link to Home',
         aboutMe: 'Link to About me',
-        dailySchedule: 'Link to Daily Schedule',
+        dailySchedule: 'Link to My Coding Day',
         expertise: 'Link to Skills',
         projects: 'Link to Projects',
         contact: 'Link to Contact',
@@ -556,7 +556,7 @@ export const textsEN: Texts = {
     },
   },
   hero: {
-    subHeading: 'Flexible, creative, solution-oriented',
+    subHeading: 'Writing code, solving problems, drinking coffee',
     mainHeading: 'Mirko Rinke',
     contactMe: 'Contact me',
     ariaLabels: {
@@ -572,9 +572,9 @@ export const textsEN: Texts = {
     },
     infoBox: {
       infoBox0: {
-        title: 'realizing_visions.txt',
+        title: 'developing_projects.txt',
         textarea:
-          'By using state-of-the-art technologies, I bring ideas to life digitally and develop user-friendly and aesthetically appealing web solutions that make complex things seem simple.',
+          'I use current web technologies to develop practical and appealing applications that also clearly represent complex functions.',
       },
       infoBox1: {
         title: 'remote_lifestyle.txt',
@@ -604,9 +604,9 @@ export const textsEN: Texts = {
     githubGraphTitle: '365 Days of Codeflow',
     details: [
       {
-        title: 'Innovative Solutions',
+        title: 'From Idea to Implementation',
         description:
-          'Programming is like gaming for me. Every line of code brings me to a new level, and new challenges are waiting to be mastered.',
+          'I enjoy turning a vague idea into a working product. Step by step, I work on every detail to transform the idea into something tangible.',
       },
       {
         title: 'Completely Immersed in Code',
@@ -614,14 +614,14 @@ export const textsEN: Texts = {
           'There is hardly anything better than completely immersing yourself in programming. Hours pass without me noticing when I am working on a tricky task.',
       },
       {
-        title: 'Continuous Learning',
+        title: 'Leveling Up Step by Step',
         description:
-          'In programming, there is no standstill, and that is exactly what I enjoy. Every day offers something new to discover whether it is a different approach, a new framework, or simply a smarter way to solve something.',
+          'Programming is like gaming for me. Every line of code brings me a level up and new tasks are waiting to be mastered.',
       },
       {
-        title: 'From Idea to Implementation',
+        title: 'Continuous Learning',
         description:
-          'I enjoy turning a vague idea into a working product. Step by step, I work on every detail to transform the idea into something tangible.',
+          'There is no standstill in programming, and that is exactly what I like. Every day there is something new to discover, be it a different approach, a new framework or simply a smarter way to solve something.',
       },
     ],
   },
