@@ -307,7 +307,7 @@ export const textsDE: Texts = {
     },
   },
   hero: {
-    subHeading: 'Code schreiben, Probleme lösen, Kaffee trinken',
+    subHeading: 'Neugier, Geduld, Beharrlichkeit',
     mainHeading: 'Mirko Rinke',
     contactMe: 'Kontaktiere mich',
     ariaLabels: {
@@ -556,7 +556,7 @@ export const textsEN: Texts = {
     },
   },
   hero: {
-    subHeading: 'Writing code, solving problems, drinking coffee',
+    subHeading: 'Curiosity, Patience, Persistence',
     mainHeading: 'Mirko Rinke',
     contactMe: 'Contact me',
     ariaLabels: {
