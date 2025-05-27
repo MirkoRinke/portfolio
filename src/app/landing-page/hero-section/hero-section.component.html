@@ -2,28 +2,22 @@
   <div class="content">
     <div class="icons-left">
       <span
-        [innerHTML]="svgIconsService.returnIcon('SCSS', 'SCSS hero-icons')"
+        [innerHTML]="
+          svgIconsService.returnIcon('typeScript', 'typeScript hero-icons')
+        "
         [attr.aria-hidden]="true"
         [attr.role]="'img'"
-        [attr.alt]="'SCSS Icon'"
+        [attr.alt]="'TypeScript Icon'"
       ></span>
       <span
-        [innerHTML]="svgIconsService.returnIcon('HTML', 'HTML hero-icons')"
+        [innerHTML]="svgIconsService.returnIcon('API', 'API hero-icons')"
         [attr.aria-hidden]="true"
         [attr.role]="'img'"
-        [attr.alt]="'HTML Icon'"
+        [attr.alt]="'API Icon'"
       ></span>
     </div>
     <div class="central-section">
       <div class="icons-top">
-        <span
-          [innerHTML]="
-            svgIconsService.returnIcon('typeScript', 'typeScript hero-icons')
-          "
-          [attr.aria-hidden]="true"
-          [attr.role]="'img'"
-          [attr.alt]="'TypeScript Icon'"
-        ></span>
         <span
           [innerHTML]="
             svgIconsService.returnIcon('angular', 'angular hero-icons')
@@ -32,21 +26,29 @@
           [attr.role]="'img'"
           [attr.alt]="'Angular Icon'"
         ></span>
+        <span
+          [innerHTML]="
+            svgIconsService.returnIcon('laravel', 'laravel hero-icons')
+          "
+          [attr.aria-hidden]="true"
+          [attr.role]="'img'"
+          [attr.alt]="'Laravel Icon'"
+        ></span>
       </div>
       <app-hero-section-content></app-hero-section-content>
     </div>
     <div class="icons-right">
       <span
-        [innerHTML]="svgIconsService.returnIcon('react', 'react hero-icons')"
+        [innerHTML]="svgIconsService.returnIcon('PHP', 'PHP hero-icons')"
         [attr.aria-hidden]="true"
         [attr.role]="'img'"
-        [attr.alt]="'React Icon'"
+        [attr.alt]="'PHP Icon'"
       ></span>
       <span
-        [innerHTML]="svgIconsService.returnIcon('vue', 'vue hero-icons')"
+        [innerHTML]="svgIconsService.returnIcon('mysql', 'mysql hero-icons')"
         [attr.aria-hidden]="true"
         [attr.role]="'img'"
-        [attr.alt]="'Vue Icon'"
+        [attr.alt]="'MYSQL Icon'"
       ></span>
     </div>
   </div>
