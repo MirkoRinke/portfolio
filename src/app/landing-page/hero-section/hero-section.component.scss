@@ -26,14 +26,17 @@ section {
       @include display-flex(center, center, column);
       gap: px-to-rem(140);
 
-      &::ng-deep .SCSS,
-      &::ng-deep .HTML {
+      &::ng-deep .typeScript,
+      &::ng-deep .API {
         transform: rotate(-10deg) translateY(px-to-rem(0));
       }
 
-      &::ng-deep .react,
-      &::ng-deep .vue {
+      &::ng-deep .PHP {
         transform: rotate(15deg) translateY(px-to-rem(0));
+      }
+
+      &::ng-deep .mysql {
+        transform: rotate(-10deg) translateY(px-to-rem(0));
       }
     }
 
@@ -45,11 +48,11 @@ section {
         @include display-flex(center, space-between);
         min-width: 85%;
 
-        &::ng-deep .typeScript {
+        &::ng-deep .angular {
           transform: rotate(-5deg) translateX(px-to-rem(20));
         }
 
-        &::ng-deep .angular {
+        &::ng-deep .laravel {
           transform: rotate(15deg) translateY(px-to-rem(-25));
         }
       }
