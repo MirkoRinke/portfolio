@@ -11,6 +11,17 @@ export interface Certificate {
 
 export const CERTIFICATES: Certificate[] = [
   {
+    titleDE: 'Die komplette SQL Masterclass',
+    titleEN: 'The complete SQL Masterclass',
+    icon: 'database',
+    platform: 'Udemy',
+    tutor: 'Jannis Seemann',
+    date: '07.2025',
+    image:
+      './certificates/udemy/die_komplette_sql_masterclass_vom_anfaenger_zum_profi.webp',
+    visibility: true,
+  },
+  {
     titleDE: 'Postman von Grund auf – REST API testen',
     titleEN: 'Postman from scratch - Test REST API',
     icon: 'postman',
