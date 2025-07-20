@@ -45,10 +45,12 @@
         [attr.alt]="'PHP Icon'"
       ></span>
       <span
-        [innerHTML]="svgIconsService.returnIcon('mysql', 'mysql hero-icons')"
+        [innerHTML]="
+          svgIconsService.returnIcon('database', 'database hero-icons')
+        "
         [attr.aria-hidden]="true"
         [attr.role]="'img'"
-        [attr.alt]="'MYSQL Icon'"
+        [attr.alt]="'Database Icon'"
       ></span>
     </div>
   </div>

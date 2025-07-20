@@ -35,8 +35,8 @@ section {
         transform: rotate(15deg) translateY(px-to-rem(0));
       }
 
-      &::ng-deep .mysql {
-        transform: rotate(-10deg) translateY(px-to-rem(0));
+      &::ng-deep .database {
+        transform: rotate(10deg) translateY(px-to-rem(0));
       }
     }
 
