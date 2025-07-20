@@ -49,13 +49,34 @@ export const FRONTEND_SKILLS: Skill[] = [
     status: 'skill',
     visibility: true,
   },
-];
-
-export const BACKEND_SKILLS: Skill[] = [
   {
     name: 'REST API',
     icon: 'API',
     alt: 'REST API Logo',
+    status: 'skill',
+    visibility: true,
+  },
+];
+
+export const BACKEND_SKILLS: Skill[] = [
+  {
+    name: 'PHP',
+    icon: 'PHP',
+    alt: 'PHP Logo',
+    status: 'skill',
+    visibility: true,
+  },
+  {
+    name: 'Laravel',
+    icon: 'laravel',
+    alt: 'Laravel Logo',
+    status: 'skill',
+    visibility: true,
+  },
+  {
+    name: 'MySQL',
+    icon: 'mysql',
+    alt: 'MySQL Logo',
     status: 'skill',
     visibility: true,
   },
@@ -163,23 +184,9 @@ export const LEARNING_SKILLS_FE: Skill[] = [
 
 export const LEARNING_SKILLS_BE: Skill[] = [
   {
-    name: 'PHP',
-    icon: 'PHP',
-    alt: 'PHP Logo',
-    status: 'learning',
-    visibility: true,
-  },
-  {
-    name: 'Laravel',
-    icon: 'laravel',
-    alt: 'Laravel Logo',
-    status: 'learning',
-    visibility: true,
-  },
-  {
-    name: 'MySQL',
-    icon: 'mysql',
-    alt: 'MySQL Logo',
+    name: 'symfony',
+    icon: 'symfony',
+    alt: 'Symfony Logo',
     status: 'learning',
     visibility: true,
   },
