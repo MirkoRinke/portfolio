@@ -11,6 +11,17 @@ export interface Certificate {
 
 export const CERTIFICATES: Certificate[] = [
   {
+    titleDE: 'Symfony - Der umfassende Grundkurs für Einsteiger',
+    titleEN: 'Symfony - The comprehensive basic course for beginners',
+    icon: 'symfony',
+    platform: 'Udemy',
+    tutor: 'Fabian Heihoff',
+    date: '07.2025',
+    image:
+      './certificates/udemy/symfony_der_umfassende_grundkurs_fuer_einsteiger.webp',
+    visibility: true,
+  },
+  {
     titleDE: 'Die komplette SQL Masterclass',
     titleEN: 'The complete SQL Masterclass',
     icon: 'database',
