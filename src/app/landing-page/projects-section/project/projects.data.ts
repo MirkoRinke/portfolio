@@ -578,7 +578,7 @@ export const projectsEN: Project[] = [
     title: 'El Pollo Loco',
     tapTitle: 'El Pollo Loco',
     icon: 'elPolloLoco',
-    visibility: false,
+    visibility: true,
     about: "Pepe's adventure against the crazy hen.",
     description:
       'El Pollo Loco is a simple Mexican-themed jump-and-run game. The project served as an exercise for object-oriented programming in JavaScript and includes basic game elements like movement, collision detection, and simple enemies.',
