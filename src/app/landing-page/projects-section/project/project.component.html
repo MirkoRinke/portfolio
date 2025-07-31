@@ -15,7 +15,7 @@ languageService.texts.general.ariaLabels;
 
       <div class="external-links">
         <div class="links">
-          @if (project.title !== 'In Development') {
+          @if (project.tapTitle !== 'In Development') {
           <a
             href="{{ project.links.live }}"
             target="_blank"
@@ -54,7 +54,7 @@ languageService.texts.general.ariaLabels;
           >
           }
         </div>
-        @if (project.title !== 'In Development' &&
+        @if (project.tapTitle !== 'In Development' &&
         checkVisibilityService.isVisible) {
         <div class="QR">
           <span
@@ -67,6 +67,8 @@ languageService.texts.general.ariaLabels;
       </div>
     </div>
     <div class="right">
+      @if (project.tapTitle !== 'In Development' &&
+      checkVisibilityService.isVisible) {
       <a
         class="image-wrapper"
         href="{{ project.links.live }} "
@@ -78,6 +80,14 @@ languageService.texts.general.ariaLabels;
           [src]="project.imagePath"
         />
       </a>
+      } @else {
+      <span class="image-wrapper" [attr.aria-label]="ariaLabels.live">
+        <img
+          [alt]="generalAriaLabels.image + ' ' + project.title"
+          [src]="project.imagePath"
+        />
+      </span>
+      }
     </div>
   </div>
   <div class="middle">
