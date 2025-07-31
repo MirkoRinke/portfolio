@@ -403,7 +403,7 @@ export const projectsEN: Project[] = [
       {
         title: 'Security & Privacy',
         description:
-          'Authentication is securely handled via Sanctum with email verification. Public content is accessible without login, while private notes are only visible to the creator.',
+          'Authentication works through Sanctum with email verification. Public content is accessible without login, while private notes remain visible only to you as the creator.',
       },
     ],
     technologies: [
