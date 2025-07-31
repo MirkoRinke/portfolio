@@ -444,8 +444,8 @@ export const projectsEN: Project[] = [
   },
   {
     id: 3,
-    title: 'My portfolio',
-    tapTitle: 'My portfolio',
+    title: 'My Portfolio',
+    tapTitle: 'My Portfolio',
     icon: 'myPortfolio',
     visibility: true,
     about: 'My portfolio presented as an interactive desktop environment.',
