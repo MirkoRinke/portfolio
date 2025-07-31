@@ -319,7 +319,7 @@ export const textsDE: Texts = {
   },
   aboutMe: {
     portrait: {
-      title: 'platzhalter.bmp',
+      title: 'portrait.bmp',
     },
     infoBox: {
       infoBox0: {
@@ -568,7 +568,7 @@ export const textsEN: Texts = {
   },
   aboutMe: {
     portrait: {
-      title: 'placeholder.bmp',
+      title: 'portrait.bmp',
     },
     infoBox: {
       infoBox0: {
