@@ -15,7 +15,7 @@ languageService.texts.projects.ariaLabels; @if (windowService.ifWindowOpen) {
         [attr.aria-label]="
           ariaLabels.taps.firstText +
           ' ' +
-          projects[$index].title +
+          projects[$index].tapTitle +
           ' ' +
           ariaLabels.taps.secondText
         "
@@ -27,7 +27,7 @@ languageService.texts.projects.ariaLabels; @if (windowService.ifWindowOpen) {
               svgIconsService.returnIcon(projects[$index].icon, 'title-icon')
             "
           ></div>
-          <p>{{ projects[$index].title }}</p>
+          <p>{{ projects[$index].tapTitle }}</p>
         </div>
       </button>
       } }
