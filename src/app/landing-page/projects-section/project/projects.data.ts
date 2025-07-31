@@ -1,6 +1,7 @@
 export interface Project {
   id: number;
   title: string;
+  tapTitle: string;
   icon: string;
   visibility: boolean;
   about: string;
@@ -42,8 +43,136 @@ export interface Organization {
 
 export const projectsDE: Project[] = [
   {
-    id: 0,
+    id: 4,
+    title: 'DevNotes',
+    tapTitle: 'In Development',
+    icon: 'inDevelopment',
+    visibility: true,
+    about:
+      'Ein vielseitiges Notizen-Portal für Entwickler, um Wissen, Code-Snippets und Ressourcen einfach zu organisieren und zu teilen.',
+    description:
+      'Das Tool bietet eine übersichtliche, benutzerfreundliche Oberfläche zum Anlegen privater und öffentlicher Notizen. Öffentliche Notizen können kommentiert und mit anderen Entwicklern diskutiert werden.',
+    keyFeatures: [
+      {
+        title: 'Klare Struktur',
+        description:
+          'Organisiere deine Entwicklernotizen mit öffentlichen und privaten Einträgen. Dank Versionierung behältst du jederzeit den Überblick.',
+      },
+      {
+        title: 'Effizientes Meldesystem',
+        description:
+          'Meldefunktionen für Posts, Kommentare und Profile erlauben Nutzern, problematische Inhalte direkt zu melden.',
+      },
+      {
+        title: 'Zusammenarbeit & Community',
+        description:
+          'Kommentiere und like öffentliche Notizen anderer Entwickler, folge spannenden Nutzern und diskutiere spezifische Themen.',
+      },
+      {
+        title: 'Sicherheit & Datenschutz',
+        description:
+          'Die Authentifizierung erfolgt über Sanctum mit E-Mail-Verifizierung. Öffentliche Inhalte sind ohne Login zugänglich, während private Notizen nur für den Ersteller sichtbar sind.',
+      },
+    ],
+    technologies: [
+      {
+        title: 'Angular',
+        icon: 'angular',
+      },
+      {
+        title: 'Laravel',
+        icon: 'laravel',
+      },
+      {
+        title: 'MySQL',
+        icon: 'mysql',
+      },
+      {
+        title: 'Figma',
+        icon: 'figma',
+      },
+    ],
+    imagePath: './projects/devnotes.webp',
+    links: {
+      github: 'https://github.com/MirkoRinke/',
+      live: '',
+    },
+    organization: {
+      name: '',
+      link: '',
+      icon: '',
+    },
+    ariaLabels: {
+      tap: 'Öffne DevNotes Tab',
+      github: 'Öffne DevNotes GitHub Repository',
+      live: 'Öffne DevNotes Live Version',
+      organization: '',
+      keyFeature: 'Kernfunktion',
+    },
+  },
+  {
+    id: 3,
+    title: 'Mein Portfolio',
+    tapTitle: 'Mein Portfolio',
+    icon: 'myPortfolio',
+    visibility: true,
+    about: 'Mein Portfolio als interaktive Desktop-Umgebung.',
+    description:
+      'Das Design orientiert sich an einem Betriebssystem und ermöglicht eine intuitive Erkundung meiner Projekte, Fähigkeiten und Zertifikate.',
+    keyFeatures: [
+      {
+        title: 'Design ähnlich einem OS',
+        description:
+          'Desktop-inspiriertes Interface mit Fenstern, Icons und Navigationsleiste, das ein Betriebssystem simuliert.',
+      },
+      {
+        title: 'Meine Skills und Zertifikate',
+        description:
+          'Darstellung meiner technischen Fähigkeiten sowie Zugriff auf eine separate Ansicht mit meinen erworbenen Zertifikaten.',
+      },
+      {
+        title: 'Darstellung meiner Projekte',
+        description:
+          'Browser-ähnliches Fenster mit interaktiven Tabs für jeden Projektbereich und detaillierten Beschreibungen.',
+      },
+      {
+        title: 'Interaktive Benutzeroberfläche',
+        description:
+          'Dynamisches Interface mit Fenstern, die minimiert, maximiert und geschlossen werden können, für eine intuitive Navigation.',
+      },
+    ],
+    technologies: [
+      {
+        title: 'Angular',
+        icon: 'angular',
+      },
+      {
+        title: 'Figma',
+        icon: 'figma',
+      },
+    ],
+    imagePath: './projects/in-development.webp',
+    links: {
+      github: 'https://github.com/MirkoRinke/',
+      live: 'https://mirkorinke.dev',
+    },
+    organization: {
+      name: '',
+      link: '',
+      icon: '',
+    },
+    ariaLabels: {
+      tap: 'Öffne Mein Portfolio Tab',
+      github: 'Öffne Mein Portfolio GitHub Repository',
+      live: 'Öffne Mein Portfolio Live Version',
+      organization: '',
+      keyFeature: 'Kernfunktion',
+    },
+  },
+  {
+    id: 2,
     title: 'Join',
+    tapTitle: 'Join',
     icon: 'join',
     visibility: true,
     about:
@@ -115,6 +244,7 @@ export const projectsDE: Project[] = [
   {
     id: 1,
     title: 'El Pollo Loco',
+    tapTitle: 'El Pollo Loco',
     icon: 'elPolloLoco',
     visibility: true,
     about: 'Pepes Abenteuer gegen das verrückte Huhn.',
@@ -175,8 +305,9 @@ export const projectsDE: Project[] = [
     },
   },
   {
-    id: 2,
+    id: 0,
     title: 'Pokédex',
+    tapTitle: 'Pokédex',
     icon: 'pokedex',
     visibility: true,
     about: 'Dein digitales Nachschlagewerk für alle Pokémon.',
@@ -240,49 +371,109 @@ export const projectsDE: Project[] = [
       keyFeature: 'Kernfunktion',
     },
   },
+];
+
+export const projectsEN: Project[] = [
   {
-    id: 3,
-    title: 'In Development',
+    id: 4,
+    title: 'DevNotes',
+    tapTitle: 'In Development',
     icon: 'inDevelopment',
     visibility: true,
-    about: 'Mein Portfolio als interaktive Desktop-Umgebung.',
+    about:
+      'A versatile notes portal for developers to easily organize and share knowledge, code snippets, and resources.',
     description:
-      'Das Design orientiert sich an einem Betriebssystem und ermöglicht eine intuitive Erkundung meiner Projekte, Fähigkeiten und Zertifikate.',
+      'The tool offers a clear, user-friendly interface for creating private and public notes. Public notes can be commented on and discussed with other developers.',
     keyFeatures: [
       {
-        title: 'Design ähnlich einem OS',
+        title: 'Clear Structure',
         description:
-          'Desktop-inspiriertes Interface mit Fenstern, Icons und Navigationsleiste, das ein Betriebssystem simuliert.',
+          'Organize your developer notes with public and private entries. Versioning ensures you always have an overview.',
       },
       {
-        title: 'Meine Skills und Zertifikate',
+        title: 'Efficient Reporting System',
         description:
-          'Darstellung meiner technischen Fähigkeiten sowie Zugriff auf eine separate Ansicht mit meinen erworbenen Zertifikaten.',
+          'Reporting functions for posts, comments, and profiles allow users to report problematic content directly.',
       },
       {
-        title: 'Darstellung meiner Projekte',
+        title: 'Collaboration & Community',
         description:
-          'Browser-ähnliches Fenster mit interaktiven Tabs für jeden Projektbereich und detaillierten Beschreibungen.',
+          'Comment and like public notes from other developers, follow interesting users, and discuss specific topics.',
       },
       {
-        title: 'Interaktive Benutzeroberfläche',
+        title: 'Security & Privacy',
         description:
-          'Dynamisches Interface mit Fenstern, die minimiert, maximiert und geschlossen werden können, für eine intuitive Navigation.',
+          'Authentication is securely handled via Sanctum with email verification. Public content is accessible without login, while private notes are only visible to the creator.',
       },
     ],
     technologies: [
       {
-        title: 'HTML',
-        icon: 'HTML',
+        title: 'Angular',
+        icon: 'angular',
       },
       {
-        title: 'SCSS',
-        icon: 'SCSS',
+        title: 'Laravel',
+        icon: 'laravel',
       },
       {
-        title: 'TypeScript',
-        icon: 'typeScript',
+        title: 'MySQL',
+        icon: 'mysql',
       },
+      {
+        title: 'Figma',
+        icon: 'figma',
+      },
+    ],
+    imagePath: './projects/devnotes.webp',
+    links: {
+      github: 'https://github.com/MirkoRinke/',
+      live: '',
+    },
+    organization: {
+      name: '',
+      link: '',
+      icon: '',
+    },
+    ariaLabels: {
+      tap: 'Open DevNotes Tab',
+      github: 'Open DevNotes GitHub Repository',
+      live: 'Open DevNotes Live Version',
+      organization: '',
+      keyFeature: 'Key Feature',
+    },
+  },
+  {
+    id: 3,
+    title: 'My portfolio',
+    tapTitle: 'My portfolio',
+    icon: 'myPortfolio',
+    visibility: true,
+    about: 'My portfolio presented as an interactive desktop environment.',
+    description:
+      'The design is inspired by an operating system and allows for intuitive exploration of my projects, skills, and certificates.',
+    keyFeatures: [
+      {
+        title: 'OS-like Design',
+        description:
+          'Desktop-inspired interface with windows, icons, and a navigation bar simulating an operating system.',
+      },
+      {
+        title: 'My Skills and Certificates',
+        description:
+          'Representation of my technical skills as well as access to a separate view with my acquired certificates.',
+      },
+      {
+        title: 'Presentation of My Projects',
+        description:
+          'Browser-like window with interactive tabs for each project area and detailed descriptions.',
+      },
+      {
+        title: 'Interactive User Interface',
+        description:
+          'Dynamic interface with windows that can be minimized, maximized, and closed for intuitive navigation.',
+      },
+    ],
+    technologies: [
       {
         title: 'Angular',
         icon: 'angular',
@@ -303,19 +494,17 @@ export const projectsDE: Project[] = [
       icon: '',
     },
     ariaLabels: {
-      tap: 'Öffne In Development Tab',
-      github: 'Öffne In Development GitHub Repository',
-      live: 'Öffne In Development Live Version',
+      tap: 'Open My Portfolio Tab',
+      github: 'Open My Portfolio GitHub Repository',
+      live: 'Open My Portfolio Live Version',
       organization: '',
-      keyFeature: 'Kernfunktion',
+      keyFeature: 'Key Feature',
     },
   },
-];
-
-export const projectsEN: Project[] = [
   {
-    id: 0,
+    id: 2,
     title: 'Join',
+    tapTitle: 'Join',
     icon: 'join',
     visibility: true,
     about:
@@ -387,8 +576,9 @@ export const projectsEN: Project[] = [
   {
     id: 1,
     title: 'El Pollo Loco',
+    tapTitle: 'El Pollo Loco',
     icon: 'elPolloLoco',
-    visibility: true,
+    visibility: false,
     about: "Pepe's adventure against the crazy hen.",
     description:
       'El Pollo Loco is a simple Mexican-themed jump-and-run game. The project served as an exercise for object-oriented programming in JavaScript and includes basic game elements like movement, collision detection, and simple enemies.',
@@ -447,8 +637,9 @@ export const projectsEN: Project[] = [
     },
   },
   {
-    id: 2,
+    id: 0,
     title: 'Pokédex',
+    tapTitle: 'Pokédex',
     icon: 'pokedex',
     visibility: true,
     about: 'Your digital reference for all Pokémon.',
@@ -508,76 +699,6 @@ export const projectsEN: Project[] = [
       tap: 'Open Pokédex Tab',
       github: 'Open Pokédex GitHub Repository',
       live: 'Open Pokédex Live Version',
-      organization: '',
-      keyFeature: 'Key Feature',
-    },
-  },
-  {
-    id: 3,
-    title: 'In Development',
-    icon: 'inDevelopment',
-    visibility: true,
-    about: 'My portfolio presented as an interactive desktop environment.',
-    description:
-      'The design is inspired by an operating system and allows for intuitive exploration of my projects, skills, and certificates.',
-    keyFeatures: [
-      {
-        title: 'OS-like Design',
-        description:
-          'Desktop-inspired interface with windows, icons, and a navigation bar simulating an operating system.',
-      },
-      {
-        title: 'My Skills and Certificates',
-        description:
-          'Representation of my technical skills as well as access to a separate view with my acquired certificates.',
-      },
-      {
-        title: 'Presentation of My Projects',
-        description:
-          'Browser-like window with interactive tabs for each project area and detailed descriptions.',
-      },
-      {
-        title: 'Interactive User Interface',
-        description:
-          'Dynamic interface with windows that can be minimized, maximized, and closed for intuitive navigation.',
-      },
-    ],
-    technologies: [
-      {
-        title: 'HTML',
-        icon: 'HTML',
-      },
-      {
-        title: 'SCSS',
-        icon: 'SCSS',
-      },
-      {
-        title: 'TypeScript',
-        icon: 'typeScript',
-      },
-      {
-        title: 'Angular',
-        icon: 'angular',
-      },
-      {
-        title: 'Figma',
-        icon: 'figma',
-      },
-    ],
-    imagePath: './projects/in-development.webp',
-    links: {
-      github: 'https://github.com/MirkoRinke/',
-      live: 'https://mirkorinke.dev',
-    },
-    organization: {
-      name: '',
-      link: '',
-      icon: '',
-    },
-    ariaLabels: {
-      tap: 'Open In Development Tab',
-      github: 'Open In Development GitHub Repository',
-      live: 'Open In Development Live Version',
       organization: '',
       keyFeature: 'Key Feature',
     },
