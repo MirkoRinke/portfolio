@@ -66,7 +66,7 @@ export class ContactComponent {
     public windowService: WindowService,
     public languageService: LanguageService,
     public modalService: ModalService,
-    public utilityService: UtilityService
+    public utilityService: UtilityService,
   ) {}
 
   onSubmit(ngForm: NgForm) {
@@ -88,7 +88,7 @@ export class ContactComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          // complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       console.info('Form Submitted Successfully (Test Mode)');
