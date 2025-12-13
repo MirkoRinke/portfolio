@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { CommonModule } from '@angular/common';
+
 
 import { SvgIconsService } from '../../shared/services/svg.icons.service';
 import { LanguageService } from '../../shared/services/language.service';
@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-taskbar',
-  imports: [CommonModule, ClockComponent, RouterModule],
+  imports: [ClockComponent, RouterModule],
   templateUrl: './taskbar.component.html',
   styleUrls: ['./taskbar.component.scss'],
 })

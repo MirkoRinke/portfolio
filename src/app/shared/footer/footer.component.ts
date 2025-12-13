@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
-import { CommonModule } from '@angular/common';
+
 
 import { SvgIconsService } from '../../shared/services/svg.icons.service';
 import { WindowService } from '../../shared/services/window.service';
@@ -10,7 +10,7 @@ import { DateTimeService } from '../../shared/services/date-time.service';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
