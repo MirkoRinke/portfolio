@@ -50,6 +50,10 @@
     .course {
       @include display-flex(center, start);
       gap: px-to-rem(10);
+
+      .title {
+        @include singleline-ellipsis();
+      }
     }
   }
 }

@@ -1,48 +1,45 @@
 @let ariaLabels = languageService.texts.expertise.ariaLabels.certificates;
 
-<div
-  class="certificates"
-  [style.height]="50 * (certificates.length / 2) + 'px'"
->
-  @for (certificate of certificates; track $index) { @if
-  (certificate.visibility) {
-  <button
-    (click)="modalService.openModal($index, 'certificate')"
-    class="certificate"
-    [id]="$index == 0 ? 'first-certificate' : null"
-    [attr.aria-label]="
-      ariaLabels.openCertificate +
-      ' ' +
-      (languageService.getLanguage() == 'de'
-        ? certificate.titleDE
-        : certificate.titleEN)
-    "
-    type="button"
-  >
-    <div class="course">
-      <div
-        [innerHTML]="
-          svgIconsService.returnIcon(
-            certificate.icon,
-            certificate.icon + ' icon'
-          )
-        "
-        role="img"
+<div class="certificates" [style.height]="styleHeight">
+  @for (certificate of certificates; track $index) {
+    @if (certificate.visibility) {
+      <button
+        (click)="modalService.openModal($index, 'certificate')"
+        class="certificate"
+        [id]="$index == 0 ? 'first-certificate' : null"
         [attr.aria-label]="
-          languageService.getLanguage() == 'de'
-            ? certificate.titleDE + ' Icon'
-            : certificate.titleEN + ' Icon'
-        "
-      ></div>
-      <p class="title">
-        {{
-          languageService.getLanguage() == "de"
+          ariaLabels.openCertificate +
+          ' ' +
+          (languageService.getLanguage() == 'de'
             ? certificate.titleDE
-            : certificate.titleEN
-        }}
-      </p>
-    </div>
-  </button>
-
-  } }
+            : certificate.titleEN)
+        "
+        type="button"
+      >
+        <div class="course">
+          <div
+            [innerHTML]="
+              svgIconsService.returnIcon(
+                certificate.icon,
+                certificate.icon + ' icon'
+              )
+            "
+            role="img"
+            [attr.aria-label]="
+              languageService.getLanguage() == 'de'
+                ? certificate.titleDE + ' Icon'
+                : certificate.titleEN + ' Icon'
+            "
+          ></div>
+          <p class="title">
+            {{
+              languageService.getLanguage() == "de"
+                ? certificate.titleDE
+                : certificate.titleEN
+            }}
+          </p>
+        </div>
+      </button>
+    }
+  }
 </div>

@@ -16,10 +16,12 @@ import { LanguageService } from '../../../shared/services/language.service';
 })
 export class CertificatesComponent {
   certificates: Certificate[] = CERTIFICATES;
+  styleHeight: string =
+    50 * (this.certificates.filter((c) => c.visibility).length / 2) + 'px';
 
   constructor(
     public svgIconsService: SvgIconsService,
     public modalService: ModalService,
-    public languageService: LanguageService
+    public languageService: LanguageService,
   ) {}
 }
