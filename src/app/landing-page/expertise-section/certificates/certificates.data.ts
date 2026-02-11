@@ -9,7 +9,92 @@ export interface Certificate {
   visibility: boolean;
 }
 
+// {
+//   titleDE: '',
+//   titleEN: '',
+//   icon: '',
+//   platform: '',
+//   tutor: '',
+//   date: '',
+//   image: '',
+//   visibility: false,
+// },
 export const CERTIFICATES: Certificate[] = [
+  {
+    titleDE: 'Angular – The Complete Guide',
+    titleEN: 'Angular – The Complete Guide',
+    icon: 'angular',
+    platform: 'Udemy',
+    tutor: 'Maximilian Schwarzmüller',
+    date: '',
+    image: './certificates/udemy/',
+    visibility: false,
+  },
+  {
+    titleDE: 'Chrome DevTools verstehen und verwenden',
+    titleEN: 'Understand and use Chrome DevTools',
+    icon: 'chrome',
+    platform: 'Udemy',
+    tutor: 'Stephan Haewß',
+    date: '',
+    image: './certificates/udemy/',
+    visibility: false,
+  },
+  {
+    titleDE: 'Schnelleinstieg in die Python Programmierung für Anfänger',
+    titleEN: 'Quick start in Python programming for beginners',
+    icon: 'python',
+    platform: 'Udemy',
+    tutor: 'Jan Schaffranek',
+    date: '02.2026',
+    image:
+      './certificates/udemy/schnelleinstieg_in_die_python_programmierung_fuer_anfaenger.webp',
+    visibility: true,
+  },
+  {
+    titleDE: 'Django - Der umfangreiche Einsteigerkurs zur Webentwicklung',
+    titleEN: 'Django - The comprehensive beginners course for web development',
+    icon: 'django',
+    platform: 'Udemy',
+    tutor: 'Fabian Heihoff',
+    date: '10.2025',
+    image:
+      './certificates/udemy/django_der_umfangreiche_einsteigerkurs_zur_webentwicklung.webp',
+    visibility: true,
+  },
+  {
+    titleDE: 'Electron - Einstieg in die Entwicklung von Desktop Apps',
+    titleEN: 'Electron - Introduction to desktop app development',
+    icon: 'electron',
+    platform: 'Udemy',
+    tutor: 'Fabian Heihoff',
+    date: '10.2025',
+    image:
+      './certificates/udemy/electron_einstieg_in_die_entwicklung_von_desktop_apps.webp',
+    visibility: true,
+  },
+  {
+    titleDE: 'Next.js - Das React Framework für moderne Webanwendungen',
+    titleEN: 'Next.js - The React framework for modern web applications',
+    icon: 'next_js',
+    platform: 'Udemy',
+    tutor: 'Fabian Heihoff',
+    date: '09.2025',
+    image:
+      './certificates/udemy/next_js_das_react_framework_fuer_moderne_webanwendungen.webp',
+    visibility: true,
+  },
+  {
+    titleDE: 'Der komplette WordPress - Kurs für Einsteiger',
+    titleEN: 'The complete WordPress course for beginners',
+    icon: 'wordpress',
+    platform: 'Udemy',
+    tutor: 'Meta Brains',
+    date: '09.2025',
+    image:
+      './certificates/udemy/der_komplette_wordpress_kurs_fuer_einsteiger.webp',
+    visibility: false,
+  },
   {
     titleDE: 'Symfony - Der umfassende Grundkurs für Einsteiger',
     titleEN: 'Symfony - The comprehensive basic course for beginners',
@@ -52,26 +137,6 @@ export const CERTIFICATES: Certificate[] = [
     image:
       './certificates/udemy/api_entwicklung_mit_php_laravel_best_practice_restful_apis.webp',
     visibility: true,
-  },
-  {
-    titleDE: 'Angular – The Complete Guide',
-    titleEN: 'Angular – The Complete Guide',
-    icon: 'angular',
-    platform: 'Udemy',
-    tutor: 'Maximilian Schwarzmüller',
-    date: '',
-    image: './certificates/udemy/',
-    visibility: false,
-  },
-  {
-    titleDE: 'Chrome DevTools verstehen und verwenden',
-    titleEN: 'Understand and use Chrome DevTools',
-    icon: 'chrome',
-    platform: 'Udemy',
-    tutor: 'Stephan Haewß',
-    date: '',
-    image: './certificates/udemy/',
-    visibility: false,
   },
   {
     titleDE: 'Laravel Kurs für Einsteiger',
@@ -134,7 +199,7 @@ export const CERTIFICATES: Certificate[] = [
     date: '12.2024',
     image:
       './certificates/linkedin/abschlusszertifikat_affinity_designer_grundkurs.webp',
-    visibility: true,
+    visibility: false,
   },
   {
     titleDE: 'Developer Akademie - Praxisorientierter Frontend Kurs',
