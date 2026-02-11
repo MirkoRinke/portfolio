@@ -292,3 +292,15 @@
     -webkit-text-fill-color: var(--secondary-color-80);
   }
 }
+
+@mixin singleline-ellipsis($max-width: 100%) {
+  @if math.unit($max-width) == "px" {
+    $max-width-value: math.div($max-width, 1px);
+    max-width: px-to-rem($max-width-value);
+  } @else {
+    max-width: $max-width;
+  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
