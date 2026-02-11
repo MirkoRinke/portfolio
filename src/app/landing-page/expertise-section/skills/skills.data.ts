@@ -184,25 +184,25 @@ export const LEARNING_SKILLS_FE: Skill[] = [
 
 export const LEARNING_SKILLS_BE: Skill[] = [
   {
-    name: 'symfony',
-    icon: 'symfony',
-    alt: 'Symfony Logo',
-    status: 'learning',
-    visibility: true,
-  },
-  {
     name: 'Python',
     icon: 'python',
     alt: 'Python Logo',
     status: 'learning',
-    visibility: false,
+    visibility: true,
   },
   {
     name: 'Django',
     icon: 'django',
     alt: 'Django Logo',
     status: 'learning',
-    visibility: false,
+    visibility: true,
+  },
+  {
+    name: 'symfony',
+    icon: 'symfony',
+    alt: 'Symfony Logo',
+    status: 'learning',
+    visibility: true,
   },
   {
     name: 'Node js',
@@ -246,6 +246,34 @@ export const LEARNING_SKILLS_BE: Skill[] = [
     status: 'learning',
     visibility: false,
   },
+  {
+    name: 'Rust',
+    icon: 'rust',
+    alt: 'Rust Logo',
+    status: 'learning',
+    visibility: false,
+  },
+  {
+    name: 'C#',
+    icon: 'csharp',
+    alt: 'C# Logo',
+    status: 'learning',
+    visibility: false,
+  },
+  {
+    name: 'C++',
+    icon: 'c++',
+    alt: 'C++ Logo',
+    status: 'learning',
+    visibility: false,
+  },
+  {
+    name: 'C',
+    icon: 'c',
+    alt: 'C Logo',
+    status: 'learning',
+    visibility: false,
+  },
 ];
 
 export const LEARNING_SKILLS_UI_UX: Skill[] = [
@@ -254,7 +282,7 @@ export const LEARNING_SKILLS_UI_UX: Skill[] = [
     icon: 'affinityDesigner',
     alt: 'Affinity Designer',
     status: 'learning',
-    visibility: true,
+    visibility: false,
   },
   {
     name: 'Material Design',
