@@ -184,6 +184,13 @@ export const LEARNING_SKILLS_FE: Skill[] = [
 
 export const LEARNING_SKILLS_BE: Skill[] = [
   {
+    name: 'C#',
+    icon: 'csharp',
+    alt: 'C# Logo',
+    status: 'learning',
+    visibility: true,
+  },
+  {
     name: 'Python',
     icon: 'python',
     alt: 'Python Logo',
