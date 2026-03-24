@@ -325,17 +325,17 @@ export const textsDE: Texts = {
       infoBox0: {
         title: 'projekte_umsetzen.txt',
         textarea:
-          'Durch den Einsatz modernster Technologien bringe ich Ideen digital zum Leben und entwickle benutzerfreundliche sowie ästhetisch ansprechende Weblösungen, die Komplexes einfach wirken lassen.',
+          'Ich realisiere Projekte mit dem Auge fürs Detail. Mein Ziel ist es, benutzerfreundliche sowie technisch durchdachte Lösungen zu entwickeln, die Komplexes einfach wirken lassen.',
       },
       infoBox1: {
-        title: 'remote_lifestyle.txt',
+        title: 'growth_mindset.txt',
         textarea:
-          'Ich genieße die Flexibilität ortsunabhängiger Arbeit und die Work-Life-Balance, die sie ermöglicht.',
+          'Technische Herausforderungen sehe ich als Chance zur Weiterentwicklung. Ich gehe Probleme strukturiert und lösungsorientiert an, behalte dabei stets das Projektziel im Auge und setze auf nachhaltige, saubere Ergebnisse.',
       },
       infoBox2: {
         title: 'fokus_und_teamarbeit.txt',
         textarea:
-          'Ich arbeite gerne eigenständig und fokussiert, bringe aber ebenso gerne meine Ideen in einem kreativen Team ein, um Projekte gemeinsam voranzubringen.',
+          'Ich arbeite gerne eigenständig und fokussiert, bringe mich aber ebenso engagiert in ein Team ein, um durch gemeinsamen Austausch und Code-Reviews Projekte erfolgreich voranzubringen.',
       },
     },
     ariaLabels: {
@@ -357,22 +357,22 @@ export const textsDE: Texts = {
       {
         title: 'Von der Idee zur Umsetzung',
         description:
-          'Mir macht es Spaß, aus einer vagen Idee ein funktionierendes Produkt zu entwickeln. Schritt für Schritt arbeite ich an jedem Detail, um die Idee in etwas Greifbares zu verwandeln.',
+          'Mir macht es Spaß, aus einer vagen Idee ein funktionierendes Produkt zu entwickeln. Schritt für Schritt arbeite ich an jedem Detail, um Konzepte in performante und benutzerfreundliche Webanwendungen zu verwandeln.',
       },
       {
         title: 'Völlig im Code Versunken',
         description:
-          'Es gibt kaum etwas Besseres, als komplett in die Programmierung einzutauchen. Stunden vergehen, ohne dass ich es merke, wenn ich an einer kniffligen Aufgabe arbeite.',
+          'Es gibt kaum etwas Besseres, als vollkommen in die Programmierung einzutauchen. Ich liebe diesen Fokus-Zustand, in dem ich auch für komplexe Backend-Logik oder Frontend-Details konzentriert die beste Lösung entwickle.',
       },
       {
         title: 'Level für Level vorankommen',
         description:
-          'Programmieren ist wie Gaming für mich. Jede Zeile Code bringt mich ein Level weiter und neue Aufgaben warten darauf, gemeistert zu werden.',
+          'Programmieren ist für mich wie Gaming: Man taucht in den Flow ein und löst Level für Level. Komplexe Logik-Rätsel sind mein Antrieb, stets die effizienteste und sauberste Lösung zu finden.',
       },
       {
         title: 'Kontinuierliches Lernen',
         description:
-          'In der Programmierung gibt es keinen Stillstand, und genau das gefällt mir. Jeden Tag gibt es etwas Neues zu entdecken, sei es eine andere Herangehensweise, ein neues Framework oder einfach ein smarterer Weg, etwas zu lösen.',
+          'In der Softwareentwicklung gibt es keinen Stillstand. Jeden Tag entdecke ich neue Wege, Prozesse zu optimieren – sei es durch moderne Frameworks, neue Architektur-Patterns oder smartere Algorithmen.',
       },
     ],
   },
@@ -574,17 +574,17 @@ export const textsEN: Texts = {
       infoBox0: {
         title: 'developing_projects.txt',
         textarea:
-          'I use current web technologies to develop practical and appealing applications that also clearly represent complex functions.',
+          'I bring projects to life with an eye for detail. My goal is to develop user-friendly and technically sophisticated solutions that make the complex appear simple.',
       },
       infoBox1: {
-        title: 'remote_lifestyle.txt',
+        title: 'growth_mindset.txt',
         textarea:
-          'I enjoy the flexibility of remote work and the work-life balance it enables.',
+          'I view technical challenges as an opportunity for growth. I approach problems in a structured and solution-oriented manner, always keeping the project goals in mind while delivering sustainable and clean results.',
       },
       infoBox2: {
         title: 'focus_and_teamwork.txt',
         textarea:
-          'I enjoy working independently and focused, but I also like to contribute my ideas in a creative team to advance projects together.',
+          'I enjoy working independently and with focus, but I am equally committed to contributing to a team, driving projects forward through collaboration and code reviews.',
       },
     },
     ariaLabels: {
@@ -606,22 +606,22 @@ export const textsEN: Texts = {
       {
         title: 'From Idea to Implementation',
         description:
-          'I enjoy turning a vague idea into a working product. Step by step, I work on every detail to transform the idea into something tangible.',
+          'I enjoy developing a functional product from a vague idea. Step by step, I work on every detail to transform concepts into high-performance and user-friendly web applications.',
       },
       {
-        title: 'Completely Immersed in Code',
+        title: 'Fully Immersed in Code',
         description:
-          'There is hardly anything better than completely immersing yourself in programming. Hours pass without me noticing when I am working on a tricky task.',
+          'There is hardly anything better than completely immersing myself in programming. I love this state of focus, where I develop the best solutions for complex backend logic or frontend details with concentration.',
       },
       {
-        title: 'Leveling Up Step by Step',
+        title: 'Advancing Level by Level',
         description:
-          'Programming is like gaming for me. Every line of code brings me a level up and new tasks are waiting to be mastered.',
+          'For me, programming is like gaming: you dive into the flow and solve it level by level. Complex logic puzzles are my drive to always find the most efficient and cleanest solution.',
       },
       {
         title: 'Continuous Learning',
         description:
-          'There is no standstill in programming, and that is exactly what I like. Every day there is something new to discover, be it a different approach, a new framework or simply a smarter way to solve something.',
+          'In software development, there is no standstill. Every day I discover new ways to optimize processes – be it through modern frameworks, new architecture patterns, or smarter algorithms.',
       },
     ],
   },
