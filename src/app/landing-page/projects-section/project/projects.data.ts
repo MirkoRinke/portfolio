@@ -138,7 +138,7 @@ export const projectsDE: Project[] = [
       {
         title: 'Interaktive Benutzeroberfläche',
         description:
-          'Managen Sie Fenster dynamisch: Minimieren, maximieren oder verschieben Sie diese für eine flüssige Navigation.',
+          'Managen Sie Fenster dynamisch: Minimieren, maximieren oder schließen Sie diese für eine flüssige Navigation.',
       },
     ],
     technologies: [
@@ -470,7 +470,7 @@ export const projectsEN: Project[] = [
       {
         title: 'Interactive User Interface',
         description:
-          'Manage windows dynamically: minimize, maximize, or move them for a fluid and modern navigation experience.',
+          'Manage windows dynamically: minimize, maximize, or close them for smooth navigation.',
       },
     ],
     technologies: [
