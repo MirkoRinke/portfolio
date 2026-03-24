@@ -367,12 +367,12 @@ export const textsDE: Texts = {
       {
         title: 'Level für Level vorankommen',
         description:
-          'Programmieren ist für mich wie Gaming: Man taucht in den Flow ein und löst Level für Level. Komplexe Logik-Rätsel sind mein Antrieb, stets die effizienteste und sauberste Lösung zu finden.',
+          'Programmieren ist für mich wie Gaming. Ich tauche voll in den Flow ein und löse Level für Level. Komplexe Logik-Rätsel sind dabei mein Antrieb, stets die effizienteste und sauberste Lösung zu finden.',
       },
       {
         title: 'Kontinuierliches Lernen',
         description:
-          'In der Softwareentwicklung gibt es keinen Stillstand. Jeden Tag entdecke ich neue Wege, Prozesse zu optimieren – sei es durch moderne Frameworks, neue Architektur-Patterns oder smartere Algorithmen.',
+          'In der Softwareentwicklung gibt es keinen Stillstand. Jeden Tag entdecke ich neue Wege, Prozesse zu optimieren sei es durch moderne Frameworks, neue Architektur-Patterns oder smartere Algorithmen.',
       },
     ],
   },
@@ -616,12 +616,12 @@ export const textsEN: Texts = {
       {
         title: 'Advancing Level by Level',
         description:
-          'For me, programming is like gaming: you dive into the flow and solve it level by level. Complex logic puzzles are my drive to always find the most efficient and cleanest solution.',
+          'Programming is like gaming to me. I fully immerse myself in the flow and solve level by level. Complex logic puzzles are my drive to always find the most efficient and cleanest solution.',
       },
       {
         title: 'Continuous Learning',
         description:
-          'In software development, there is no standstill. Every day I discover new ways to optimize processes – be it through modern frameworks, new architecture patterns, or smarter algorithms.',
+          'In software development, there is no standstill. Every day I discover new ways to optimize processes be it through modern frameworks, new architecture patterns, or smarter algorithms.',
       },
     ],
   },
