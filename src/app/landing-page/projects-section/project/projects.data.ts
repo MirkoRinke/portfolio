@@ -51,27 +51,27 @@ export const projectsDE: Project[] = [
     about:
       'Ein vielseitiges Notizen-Portal für Entwickler, um Wissen, Code-Snippets und Ressourcen einfach zu organisieren und zu teilen.',
     description:
-      'Das Tool bietet eine übersichtliche, benutzerfreundliche Oberfläche zum Anlegen privater und öffentlicher Notizen. Öffentliche Notizen können kommentiert und mit anderen Entwicklern diskutiert werden.',
+      'Erleben Sie ein modernes Full-Stack-Portal, das als „Second Brain“ für Entwickler fungiert. Organisieren Sie Code-Snippets und Wissen in einer sicheren Umgebung und tauschen Sie sich über öffentliche Beiträge mit der Community aus.',
     keyFeatures: [
       {
         title: 'Klare Struktur',
         description:
-          'Organisiere deine Entwicklernotizen mit öffentlichen und privaten Einträgen. Dank Versionierung behältst du jederzeit den Überblick.',
-      },
-      {
-        title: 'Effizientes Meldesystem',
-        description:
-          'Meldefunktionen für Posts, Kommentare und Profile erlauben Nutzern, problematische Inhalte direkt zu melden.',
-      },
-      {
-        title: 'Zusammenarbeit & Community',
-        description:
-          'Kommentiere und like öffentliche Notizen anderer Entwickler, folge spannenden Nutzern und diskutiere spezifische Themen.',
+          'Verwalten Sie Ihre Notizen effizient mit privaten und öffentlichen Einträgen. Dank Versionierung behalten Sie jederzeit Zugriff auf frühere Stände.',
       },
       {
         title: 'Sicherheit & Datenschutz',
         description:
-          'Die Authentifizierung erfolgt über Sanctum mit E-Mail-Verifizierung. Öffentliche Inhalte sind ohne Login zugänglich, während private Notizen nur für den Ersteller sichtbar sind.',
+          'Sichere Authentifizierung via Laravel Sanctum. Externe Ressourcen werden erst nach Zustimmung geladen (Privacy-by-Design).',
+      },
+      {
+        title: 'Zusammenarbeit & Community',
+        description:
+          'Interagieren Sie mit der Community durch Kommentare und Likes. Folgen Sie Profilen, um über neue Beiträge informiert zu bleiben.',
+      },
+      {
+        title: 'Effizientes Meldesystem',
+        description:
+          'Integrierte Meldefunktionen für Posts und Profile ermöglichen es Nutzern, problematische Inhalte direkt an die Moderation zu senden.',
       },
     ],
     technologies: [
@@ -118,12 +118,12 @@ export const projectsDE: Project[] = [
     visibility: true,
     about: 'Mein Portfolio als interaktive Desktop-Umgebung.',
     description:
-      'Das Design orientiert sich an einem Betriebssystem und ermöglicht eine intuitive Erkundung meiner Projekte, Fähigkeiten und Zertifikate.',
+      'Erleben Sie mein Portfolio als interaktive Desktop-Umgebung. Das Design simuliert ein modernes Betriebssystem und ermöglicht eine intuitive Erkundung meiner Projekte, Fähigkeiten und Zertifikate durch ein modulares Fenstersystem.',
     keyFeatures: [
       {
         title: 'Design ähnlich einem OS',
         description:
-          'Desktop-inspiriertes Interface mit Fenstern, Icons und Navigationsleiste, das ein Betriebssystem simuliert.',
+          'Einzigartiges OS-Interface mit Fenstern, Icons und einer Taskleiste, das die Bedienung eines Desktop-Betriebssystems direkt im Browser simuliert.',
       },
       {
         title: 'Meine Skills und Zertifikate',
@@ -138,7 +138,7 @@ export const projectsDE: Project[] = [
       {
         title: 'Interaktive Benutzeroberfläche',
         description:
-          'Dynamisches Interface mit Fenstern, die minimiert, maximiert und geschlossen werden können, für eine intuitive Navigation.',
+          'Managen Sie Fenster dynamisch: Minimieren, maximieren oder verschieben Sie diese für eine flüssige Navigation.',
       },
     ],
     technologies: [
@@ -178,7 +178,7 @@ export const projectsDE: Project[] = [
     about:
       'Ein praktischer Task-Manager nach dem Kanban-Prinzip für die Organisation von Projekten.',
     description:
-      'Das Tool bietet eine einfach zu bedienende Oberfläche, mit der Sie Aufgaben erstellen, organisieren und zwischen Spalten mit einfacher Drag-and-Drop-Funktionalität verschieben können.',
+      'Dieses in enger Teamarbeit entwickelte Projekt bietet eine intuitive Oberfläche, um Aufgaben effizient zu organisieren. Nutzen Sie das Kanban-Prinzip, um Workflows im Team zu strukturieren und Fortschritte in Echtzeit zu verfolgen.',
     keyFeatures: [
       {
         title: 'Klare Struktur',
@@ -188,7 +188,7 @@ export const projectsDE: Project[] = [
       {
         title: 'Teamzusammenarbeit',
         description:
-          'Weisen Sie Aufgaben Teammitgliedern zu, um Verantwortlichkeiten klar zu definieren und halten Sie alle auf dem gleichen Stand.',
+          'Koordinieren Sie Aufgaben im Team, definieren Sie klare Verantwortlichkeiten und halten Sie durch die zentrale Plattform alle Beteiligten stets auf dem gleichen Stand.',
       },
       {
         title: 'Einfaches Management',
@@ -198,7 +198,7 @@ export const projectsDE: Project[] = [
       {
         title: 'Übersichtliche Workflows',
         description:
-          'Behalten Sie den Überblick über Fortschritte und Fristen und verbessern Sie die Zusammenarbeit im Team.',
+          'Behalten Sie Fristen im Blick und optimieren Sie die Team-Kommunikation durch ein zentrales und übersichtliches Task-Board.',
       },
     ],
     technologies: [
@@ -383,27 +383,27 @@ export const projectsEN: Project[] = [
     about:
       'A versatile notes portal for developers to easily organize and share knowledge, code snippets, and resources.',
     description:
-      'The tool offers a clear, user-friendly interface for creating private and public notes. Public notes can be commented on and discussed with other developers.',
+      'Experience a modern full-stack portal designed as a "Second Brain" for developers. Organize code snippets and knowledge in a secure environment and engage with the community through public posts.',
     keyFeatures: [
       {
         title: 'Clear Structure',
         description:
-          'Organize your developer notes with public and private entries. Versioning ensures you always have an overview.',
-      },
-      {
-        title: 'Efficient Reporting System',
-        description:
-          'Reporting functions for posts, comments, and profiles allow users to report problematic content directly.',
-      },
-      {
-        title: 'Collaboration & Community',
-        description:
-          'Comment and like public notes from other developers, follow interesting users, and discuss specific topics.',
+          'Manage your notes efficiently with private and public entries. Integrated versioning ensures access to previous states at any time.',
       },
       {
         title: 'Security & Privacy',
         description:
-          'Authentication works through Sanctum with email verification. Public content is accessible without login, while private notes remain visible only to you as the creator.',
+          'Secure authentication via Laravel Sanctum. External resources are only loaded upon consent (Privacy-by-Design).',
+      },
+      {
+        title: 'Collaboration & Community',
+        description:
+          'Interact with the community through comments and likes. Follow profiles to stay updated on new posts.',
+      },
+      {
+        title: 'Efficient Reporting',
+        description:
+          'Integrated reporting functions for posts and profiles allow users to flag problematic content directly for moderation.',
       },
     ],
     technologies: [
@@ -450,12 +450,12 @@ export const projectsEN: Project[] = [
     visibility: true,
     about: 'My portfolio presented as an interactive desktop environment.',
     description:
-      'The design is inspired by an operating system and allows for intuitive exploration of my projects, skills, and certificates.',
+      'Experience my portfolio as an interactive desktop environment. The design simulates a modern operating system and allows for intuitive exploration of my projects, skills, and certificates through a modular window system.',
     keyFeatures: [
       {
-        title: 'OS-like Design',
+        title: 'OS-inspired Design',
         description:
-          'Desktop-inspired interface with windows, icons, and a navigation bar simulating an operating system.',
+          'A unique OS interface featuring windows, icons, and a taskbar that simulates a desktop operating system directly within your browser.',
       },
       {
         title: 'My Skills and Certificates',
@@ -470,7 +470,7 @@ export const projectsEN: Project[] = [
       {
         title: 'Interactive User Interface',
         description:
-          'Dynamic interface with windows that can be minimized, maximized, and closed for intuitive navigation.',
+          'Manage windows dynamically: minimize, maximize, or move them for a fluid and modern navigation experience.',
       },
     ],
     technologies: [
@@ -510,7 +510,7 @@ export const projectsEN: Project[] = [
     about:
       'A practical task manager based on the Kanban principle for organizing projects.',
     description:
-      'The tool offers an intuitive interface, allowing you to create, organize, and move tasks between columns with simple drag-and-drop functionality.',
+      'Developed through close teamwork, this project offers an intuitive interface for efficient task organization. Use the Kanban principle to structure team workflows and track progress in real-time.',
     keyFeatures: [
       {
         title: 'Clear Structure',
@@ -528,9 +528,9 @@ export const projectsEN: Project[] = [
           'Seamlessly move tasks between columns like "To-Do," "In Progress," and "Done" with just one click.',
       },
       {
-        title: 'Clear Workflows',
+        title: 'Transparent Workflows',
         description:
-          'Keep track of progress and deadlines and improve collaboration within the team.',
+          'Optimize workflows, keep track of deadlines, and simplify communication through the shared task board.',
       },
     ],
     technologies: [
