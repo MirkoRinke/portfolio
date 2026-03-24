@@ -1,59 +1,53 @@
-# Portfolio
+# 💻 OS-Interactive Portfolio – Mirko Rinke
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+**Status:** ✅ **Production Ready**
+An interactive web portfolio that brings the user experience of a modern desktop operating system directly to the browser.
 
-## Development server
+![](https://github.com/MirkoRinke/portfolio/blob/main/preview.webp)
+<p align="center">
+  <small>Experience my portfolio as a modular desktop environment with windows, taskbar, and functional icons.</small>
+</p>
 
-To start a local development server, run:
+-----
 
-```bash
-ng serve
-```
+### 💡 The Concept: Interactive Immersion
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This project is more than just a digital business card. It is a fully functional Angular application that demonstrates how complex UI states and window management logic can be implemented on the web. The design simulates an operating system to allow for an intuitive and engaging exploration of my projects and skills.
 
-## Code scaffolding
+### 🛠️ Technical Highlights & Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+  * **Dynamic Window Management:**
+      * The entire application is based on a modular window system.
+      * Users can freely minimize, maximize, or close windows.
+      * Within the windows, a tab system ensures structured navigation between different contents.
+  * **Integrated Certificate Viewer:**
+      * Earned qualifications and participations are embedded as interactive documents.
+      * These can be opened and viewed in detail within their own windows.
+  * **Performance & Optimization:**
+      * High emphasis was placed on performance and clean code. The application is optimized for fast loading times and smooth transitions, ensuring a high-quality user experience.
+  * **Taskbar & Functional Quick-Links:**
+      * The taskbar serves as a central anchor point for quick access to external profiles like GitHub.
+  * **Easter Egg – Snake Integration:**
+      * A fully functional Snake game is accessible directly via the taskbar, showing that even playful logic can be implemented in a clean and performant way.
 
-```bash
-ng generate component component-name
-```
+### 🧰 Tech Stack
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+  * **Frontend:** Angular (Framework for state management and window logic).
+  * **Styling:** SCSS (Modern UI components and responsive layouts).
+  * **Design:** Figma (Full UI/UX design concept prior to technical implementation).
 
-```bash
-ng generate --help
-```
+-----
 
-## Building
+### 📘 Summary
 
-To build the project run:
+My portfolio demonstrates my expertise in modern frontend architectures. It combines clean software structuring with a high standard of design, usability, and technical performance.
 
-```bash
-ng build
-```
+-----
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### 🚀 Live Demo
 
-## Running unit tests
+Ready to explore? Click below to start the interactive OS experience:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### 👉 [Visit My Portfolio](https://mirkorinke.dev/)
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+-----
