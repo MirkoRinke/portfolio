@@ -1,6 +1,6 @@
-@let project = languageService.projects[index]; @let ariaLabels =
-languageService.projects[index].ariaLabels; @let generalAriaLabels =
-languageService.texts.general.ariaLabels;
+@let project = languageService.projects[index];
+@let ariaLabels = languageService.projects[index].ariaLabels;
+@let generalAriaLabels = languageService.texts.general.ariaLabels;
 
 <div #projectWrapper class="project">
   <div class="top">
@@ -15,112 +15,156 @@ languageService.texts.general.ariaLabels;
 
       <div class="external-links">
         <div class="links">
-          @if (project.tapTitle !== 'In Development') {
-          <a
-            href="{{ project.links.live }}"
-            target="_blank"
-            [attr.aria-label]="ariaLabels.live"
-            ><span
-              [innerHTML]="svgIconsService.returnIcon('live', 'icon-link')"
-            ></span>
-            Live</a
-          >
+          <div class="github-links">
+            @if (project.links.githubFrontend !== "") {
+              <a
+                href="{{ project.links.githubFrontend }}"
+                target="_blank"
+                [attr.aria-label]="ariaLabels.githubFrontend"
+                ><span
+                  [innerHTML]="
+                    svgIconsService.returnIcon('github', 'icon-link')
+                  "
+                ></span>
+                {{
+                  project.links.githubBackend !== "" ? "Frontend" : "GitHub"
+                }}</a
+              >
+            }
+
+            @if (project.links.githubBackend !== "") {
+              <a
+                href="{{ project.links.githubBackend }}"
+                target="_blank"
+                [attr.aria-label]="ariaLabels.githubBackend"
+                ><span
+                  [innerHTML]="
+                    svgIconsService.returnIcon('github', 'icon-link')
+                  "
+                ></span>
+                {{
+                  project.links.githubBackend !== "" ? "Backend" : "GitHub"
+                }}</a
+              >
+            }
+          </div>
+
+          <div class="live-figma-links">
+            @if (project.tapTitle !== "In Development") {
+              <a
+                href="{{ project.links.live }}"
+                target="_blank"
+                [attr.aria-label]="ariaLabels.live"
+                ><span
+                  [innerHTML]="svgIconsService.returnIcon('live', 'icon-link')"
+                ></span>
+                Live</a
+              >
+            }
+
+            @if (project.links.figma !== "") {
+              <a
+                href="{{ project.links.figma }}"
+                target="_blank"
+                [attr.aria-label]="ariaLabels.figma"
+                ><span
+                  [innerHTML]="svgIconsService.returnIcon('figma', 'icon-link')"
+                ></span>
+                Figma</a
+              >
+            }
+          </div>
+
+          @if (project.organization.name !== "") {
+            <a
+              href="{{ project.organization.link }}"
+              target="_blank"
+              [attr.aria-label]="
+                ariaLabels.organization + ' ' + project.organization.name
+              "
+              ><span
+                [innerHTML]="
+                  svgIconsService.returnIcon(
+                    project.organization.icon,
+                    'icon-link'
+                  )
+                "
+              ></span>
+              {{ project.organization.name }}</a
+            >
           }
-          <a
-            href="{{ project.links.github }}"
-            target="_blank"
-            [attr.aria-label]="ariaLabels.github"
-            ><span
-              [innerHTML]="svgIconsService.returnIcon('github', 'icon-link')"
-            ></span>
-            Github</a
-          >
-          @if (project.organization.name !== '') {
-          <a
-            href="{{ project.organization.link }}"
-            target="_blank"
-            [attr.aria-label]="
-              ariaLabels.organization + ' ' + project.organization.name
-            "
-            ><span
+        </div>
+        @if (
+          project.tapTitle !== "In Development" &&
+          checkVisibilityService.isVisible
+        ) {
+          <div class="QR">
+            <span
               [innerHTML]="
-                svgIconsService.returnIcon(
-                  project.organization.icon,
-                  'icon-link'
-                )
+                svgIconsService.returnIcon(project.icon + 'QR', 'QR-code')
               "
             ></span>
-            {{ project.organization.name }}</a
-          >
-          }
-        </div>
-        @if (project.tapTitle !== 'In Development' &&
-        checkVisibilityService.isVisible) {
-        <div class="QR">
-          <span
-            [innerHTML]="
-              svgIconsService.returnIcon(project.icon + 'QR', 'QR-code')
-            "
-          ></span>
-        </div>
+          </div>
         }
       </div>
     </div>
     <div class="right">
-      @if (project.tapTitle !== 'In Development' &&
-      checkVisibilityService.isVisible) {
-      <a
-        class="image-wrapper"
-        href="{{ project.links.live }} "
-        target="_blank"
-        [attr.aria-label]="ariaLabels.live"
-      >
-        <img
-          [alt]="generalAriaLabels.image + ' ' + project.title"
-          [src]="project.imagePath"
-        />
-      </a>
+      @if (
+        project.tapTitle !== "In Development" &&
+        checkVisibilityService.isVisible
+      ) {
+        <a
+          class="image-wrapper"
+          href="{{ project.links.live }} "
+          target="_blank"
+          [attr.aria-label]="ariaLabels.live"
+        >
+          <img
+            [alt]="generalAriaLabels.image + ' ' + project.title"
+            [src]="project.imagePath"
+          />
+        </a>
       } @else {
-      <span class="image-wrapper" [attr.aria-label]="ariaLabels.live">
-        <img
-          [alt]="generalAriaLabels.image + ' ' + project.title"
-          [src]="project.imagePath"
-        />
-      </span>
+        <span class="image-wrapper" [attr.aria-label]="ariaLabels.live">
+          <img
+            [alt]="generalAriaLabels.image + ' ' + project.title"
+            [src]="project.imagePath"
+          />
+        </span>
       }
     </div>
   </div>
   <div class="middle">
     @for (keyFeatures of project.keyFeatures; track $index) {
-    <div
-      class="keyFeature"
-      [attr.aria-label]="
-        ariaLabels.keyFeature + ' ' + project.keyFeatures[$index].title
-      "
-    >
-      <h3>{{ project.keyFeatures[$index].title }}</h3>
-      <p>
-        {{ project.keyFeatures[$index].description }}
-      </p>
-    </div>
+      <div
+        class="keyFeature"
+        [attr.aria-label]="
+          ariaLabels.keyFeature + ' ' + project.keyFeatures[$index].title
+        "
+      >
+        <h3>{{ project.keyFeatures[$index].title }}</h3>
+        <p>
+          {{ project.keyFeatures[$index].description }}
+        </p>
+      </div>
     }
   </div>
   <div class="bottom">
     <div class="technologies">
       @for (technology of project.technologies; track $index) {
-      <div class="technology">
-        <div
-          [attr.aria-label]="project.technologies[$index].title + ' icon'"
-          [attr.aria-hidden]="true"
-          [innerHTML]="
-            svgIconsService.returnIcon(
-              project.technologies[$index].icon,
-              'icon'
-            )
-          "
-        ></div>
-        <p>{{ project.technologies[$index].title }}</p>
-      </div>
+        <div class="technology">
+          <div
+            [attr.aria-label]="project.technologies[$index].title + ' icon'"
+            [attr.aria-hidden]="true"
+            [innerHTML]="
+              svgIconsService.returnIcon(
+                project.technologies[$index].icon,
+                'icon'
+              )
+            "
+          ></div>
+          <p>{{ project.technologies[$index].title }}</p>
+        </div>
       }
     </div>
   </div>

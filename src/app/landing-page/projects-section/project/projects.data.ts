@@ -13,8 +13,10 @@ export interface Project {
   organization: Organization;
   ariaLabels: {
     tap: string;
-    github: string;
+    githubFrontend: string;
+    githubBackend: string;
     live: string;
+    figma: string;
     organization: string;
     keyFeature: string;
   };
@@ -31,8 +33,10 @@ export interface Technology {
 }
 
 export interface Links {
-  github: string;
+  githubFrontend: string;
+  githubBackend: string;
   live: string;
+  figma: string;
 }
 
 export interface Organization {
@@ -94,8 +98,11 @@ export const projectsDE: Project[] = [
     ],
     imagePath: './projects/devnotes.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/',
+      githubFrontend: 'https://github.com/MirkoRinke/devnotes_frontend',
+      githubBackend: 'https://github.com/MirkoRinke/devnotes',
       live: '',
+      figma:
+        'https://www.figma.com/design/uh5qiWkHHvvj4DlvcY3eZ1/Devnotes?node-id=2-2&t=7faYQgdmTXczPkLM-1',
     },
     organization: {
       name: '',
@@ -104,8 +111,10 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne DevNotes Tab',
-      github: 'Öffne DevNotes GitHub Repository',
+      githubFrontend: 'Öffne DevNotes GitHub Frontend Repository',
+      githubBackend: 'Öffne DevNotes GitHub Backend Repository',
       live: 'Öffne DevNotes Live Version',
+      figma: 'Öffne DevNotes Figma Design',
       organization: '',
       keyFeature: 'Kernfunktion',
     },
@@ -151,10 +160,13 @@ export const projectsDE: Project[] = [
         icon: 'figma',
       },
     ],
-    imagePath: './projects/in-development.webp',
+    imagePath: './projects/portfolio.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/',
+      githubFrontend: 'https://github.com/MirkoRinke/portfolio',
+      githubBackend: '',
       live: 'https://mirkorinke.dev',
+      figma:
+        'https://www.figma.com/design/MatiE7E1hTyhPByuGylS4K/Portfolio?node-id=0-1&t=iEW3AqQkgwJV8B4C-1',
     },
     organization: {
       name: '',
@@ -163,8 +175,10 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne Mein Portfolio Tab',
-      github: 'Öffne Mein Portfolio GitHub Repository',
+      githubFrontend: 'Öffne Mein Portfolio GitHub Frontend Repository',
+      githubBackend: 'Öffne Mein Portfolio GitHub Backend Repository',
       live: 'Öffne Mein Portfolio Live Version',
+      figma: 'Öffne Mein Portfolio Figma Design',
       organization: '',
       keyFeature: 'Kernfunktion',
     },
@@ -225,8 +239,10 @@ export const projectsDE: Project[] = [
     ],
     imagePath: './projects/join.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
+      githubFrontend: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
+      githubBackend: '',
       live: 'https://join.mirkorinke.dev',
+      figma: '',
     },
     organization: {
       name: '',
@@ -235,8 +251,10 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne Join Tab',
-      github: 'Öffne Join GitHub Repository',
+      githubFrontend: 'Öffne Join GitHub Frontend Repository',
+      githubBackend: 'Öffne Join GitHub Backend Repository',
       live: 'Öffne Join Live Version',
+      figma: 'Öffne Join Figma Design',
       organization: '',
       keyFeature: 'Kernfunktion',
     },
@@ -288,8 +306,11 @@ export const projectsDE: Project[] = [
     ],
     imagePath: './projects/el-pollo-loco.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
+      githubFrontend:
+        'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
+      githubBackend: '',
       live: 'https://el-pollo-loco.mirkorinke.dev',
+      figma: '',
     },
     organization: {
       name: '',
@@ -298,8 +319,10 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne El Pollo Loco Tab',
-      github: 'Öffne El Pollo Loco GitHub Repository',
+      githubFrontend: 'Öffne El Pollo Loco GitHub Frontend Repository',
+      githubBackend: 'Öffne El Pollo Loco GitHub Backend Repository',
       live: 'Öffne El Pollo Loco Live Version',
+      figma: 'Öffne El Pollo Loco Figma Design',
       organization: '',
       keyFeature: 'Kernfunktion',
     },
@@ -355,8 +378,11 @@ export const projectsDE: Project[] = [
     ],
     imagePath: './projects/pokedex.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
+      githubFrontend:
+        'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
+      githubBackend: '',
       live: 'https://pokedex.mirkorinke.dev',
+      figma: '',
     },
     organization: {
       name: '',
@@ -365,8 +391,10 @@ export const projectsDE: Project[] = [
     },
     ariaLabels: {
       tap: 'Öffne Pokédex Tab',
-      github: 'Öffne Pokédex GitHub Repository',
+      githubFrontend: 'Öffne Pokédex GitHub Frontend Repository',
+      githubBackend: 'Öffne Pokédex GitHub Backend Repository',
       live: 'Öffne Pokédex Live Version',
+      figma: 'Öffne Pokédex Figma Design',
       organization: '',
       keyFeature: 'Kernfunktion',
     },
@@ -426,8 +454,11 @@ export const projectsEN: Project[] = [
     ],
     imagePath: './projects/devnotes.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/',
+      githubFrontend: 'https://github.com/MirkoRinke/devnotes_frontend',
+      githubBackend: 'https://github.com/MirkoRinke/devnotes',
       live: '',
+      figma:
+        'https://www.figma.com/design/uh5qiWkHHvvj4DlvcY3eZ1/Devnotes?node-id=2-2&t=7faYQgdmTXczPkLM-1',
     },
     organization: {
       name: '',
@@ -436,8 +467,10 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open DevNotes Tab',
-      github: 'Open DevNotes GitHub Repository',
+      githubFrontend: 'Open DevNotes GitHub Frontend Repository',
+      githubBackend: 'Open DevNotes GitHub Backend Repository',
       live: 'Open DevNotes Live Version',
+      figma: 'Open DevNotes Figma Design',
       organization: '',
       keyFeature: 'Key Feature',
     },
@@ -483,10 +516,13 @@ export const projectsEN: Project[] = [
         icon: 'figma',
       },
     ],
-    imagePath: './projects/in-development.webp',
+    imagePath: './projects/portfolio.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/',
+      githubFrontend: 'https://github.com/MirkoRinke/portfolio',
+      githubBackend: '',
       live: 'https://mirkorinke.dev',
+      figma:
+        'https://www.figma.com/design/MatiE7E1hTyhPByuGylS4K/Portfolio?node-id=0-1&t=iEW3AqQkgwJV8B4C-1',
     },
     organization: {
       name: '',
@@ -495,8 +531,10 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open My Portfolio Tab',
-      github: 'Open My Portfolio GitHub Repository',
+      githubFrontend: 'Open My Portfolio GitHub Frontend Repository',
+      githubBackend: 'Open My Portfolio GitHub Backend Repository',
       live: 'Open My Portfolio Live Version',
+      figma: 'Open My Portfolio Figma Design',
       organization: '',
       keyFeature: 'Key Feature',
     },
@@ -557,8 +595,10 @@ export const projectsEN: Project[] = [
     ],
     imagePath: './projects/join.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
+      githubFrontend: 'https://github.com/MirkoRinke/Developer-Akademie-Join',
+      githubBackend: '',
       live: 'https://join.mirkorinke.dev',
+      figma: '',
     },
     organization: {
       name: '',
@@ -567,8 +607,10 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open Join Tab',
-      github: 'Open Join GitHub Repository',
+      githubFrontend: 'Open Join GitHub Frontend Repository',
+      githubBackend: 'Open Join GitHub Backend Repository',
       live: 'Open Join Live Version',
+      figma: 'Open Join Figma Design',
       organization: '',
       keyFeature: 'Key Feature',
     },
@@ -620,8 +662,11 @@ export const projectsEN: Project[] = [
     ],
     imagePath: './projects/el-pollo-loco.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
+      githubFrontend:
+        'https://github.com/MirkoRinke/Developer-Akademie-el-pollo-loco',
+      githubBackend: '',
       live: 'https://el-pollo-loco.mirkorinke.dev',
+      figma: '',
     },
     organization: {
       name: '',
@@ -630,8 +675,10 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open El Pollo Loco Tab',
-      github: 'Open El Pollo Loco GitHub Repository',
+      githubFrontend: 'Open El Pollo Loco GitHub Frontend Repository',
+      githubBackend: 'Open El Pollo Loco GitHub Backend Repository',
       live: 'Open El Pollo Loco Live Version',
+      figma: 'Open El Pollo Loco Figma Design',
       organization: '',
       keyFeature: 'Key Feature',
     },
@@ -687,8 +734,11 @@ export const projectsEN: Project[] = [
     ],
     imagePath: './projects/pokedex.webp',
     links: {
-      github: 'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
+      githubFrontend:
+        'https://github.com/MirkoRinke/Developer-Akademie-pokedex',
+      githubBackend: '',
       live: 'https://pokedex.mirkorinke.dev',
+      figma: '',
     },
     organization: {
       name: '',
@@ -697,8 +747,10 @@ export const projectsEN: Project[] = [
     },
     ariaLabels: {
       tap: 'Open Pokédex Tab',
-      github: 'Open Pokédex GitHub Repository',
+      githubFrontend: 'Open Pokédex GitHub Frontend Repository',
+      githubBackend: 'Open Pokédex GitHub Backend Repository',
       live: 'Open Pokédex Live Version',
+      figma: 'Open Pokédex Figma Design',
       organization: '',
       keyFeature: 'Key Feature',
     },

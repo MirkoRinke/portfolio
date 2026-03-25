@@ -75,35 +75,34 @@
         width: 100%;
 
         .links {
-          @include display-flex(end);
-          gap: px-to-rem(60);
+          @include display-flex(center, center, column);
+          gap: px-to-rem(20);
 
-          @media (max-width: $breakpoint-lg) {
-            gap: px-to-rem(40);
-          }
-
-          @media (max-width: $breakpoint-xxs) {
+          .live-figma-links,
+          .github-links {
+            @include display-flex(start);
             gap: px-to-rem(20);
-          }
+            width: 100%;
 
-          a {
-            @include display-flex(center, center);
-            @include font-settings();
-            gap: px-to-rem(10);
-
-            &::ng-deep .icon-link {
+            a {
               @include display-flex(center, center);
-              height: clamp(20px, 5vw, 30px);
-              width: clamp(20px, 5vw, 30px);
-              fill: var(--secondary-color);
-            }
+              @include font-settings();
+              gap: px-to-rem(10);
 
-            &:hover {
-              color: var(--primary-color-hover);
-            }
+              &::ng-deep .icon-link {
+                @include display-flex(center, center);
+                height: clamp(20px, 5vw, 30px);
+                width: clamp(20px, 5vw, 30px);
+                fill: var(--secondary-color);
+              }
 
-            &:hover ::ng-deep .icon-link {
-              fill: var(--primary-color-hover);
+              &:hover {
+                color: var(--primary-color-hover);
+              }
+
+              &:hover ::ng-deep .icon-link {
+                fill: var(--primary-color-hover);
+              }
             }
           }
         }
